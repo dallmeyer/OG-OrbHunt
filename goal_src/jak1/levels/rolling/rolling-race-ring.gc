@@ -933,6 +933,7 @@
     )
   )
 
+(define-extern mod-rotate-race-ring (function race-ring none))
 (defmethod init-from-entity! ((this race-ring) (arg0 entity-actor))
   (let ((a0-1 arg0))
     (if (not (entity-actor-lookup a0-1 'next-actor 0))
@@ -985,7 +986,9 @@
         )
       )
     )
+
   (+! (-> this rot-y) (res-lump-float arg0 'rotoffset))
+  (mod-rotate-race-ring this)
   (set-vector! (-> this cyl axis) (cos (-> this rot-y)) 0.0 (- (sin (-> this rot-y))) 1.0)
   (vector+float*! (the-as vector (-> this cyl)) (-> this root trans) (-> this cyl axis) -2048.0)
   (set! (-> this cyl radius) 24576.0)
@@ -1005,18 +1008,28 @@
      )
     ((and (last-ring? this) (= (get-task-status (-> this entity extra perm task)) (task-status need-resolution)))
      (let ((s5-2 (new 'stack-no-clear 'vector)))
-       (logclear! (-> this draw status) (draw-status hidden))
-       (ja-post)
-       (vector<-cspace! s5-2 (-> this node-list data 5))
-       (logior! (-> this draw status) (draw-status hidden))
-       (birth-pickup-at-point
-         s5-2
-         (pickup-type fuel-cell)
-         (the float (-> this entity extra perm task))
-         #f
-         this
-         (the-as fact-info #f)
-         )
+      (logclear! (-> this draw status) (draw-status hidden))
+      (ja-post)
+      (case (-> this name) :comp name=
+        (('race-ring-24)  ;; purple rings
+          (set-vector! s5-2 -327.0  24.04 -1578.35 1.0)
+          )
+        ;; (('race-ring-53)  ;; blue rings
+        ;;   (set-vector! s5-2 -329.93  24.89 -1575.64 1.0)
+        ;;   )
+        (else ;; shouldn't happen?
+          (vector<-cspace! s5-2 (-> this node-list data 5))
+          )
+        )
+      (logior! (-> this draw status) (draw-status hidden))
+      (birth-pickup-at-point
+        s5-2
+        (pickup-type fuel-cell)
+        (the float (-> this entity extra perm task))
+        #f
+        this
+        (the-as fact-info #f)
+        )
        )
      )
     ((and (last-ring? this) (!= (get-task-status (-> this entity extra perm task)) (task-status invalid)))

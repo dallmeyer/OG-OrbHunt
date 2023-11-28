@@ -1058,7 +1058,10 @@
   :virtual #t
   :code (behavior ()
     (loop
-      (quaternion-rotate-y! (-> self root quat) (-> self root quat) (* 40049.777 (seconds-per-frame)))
+      (if (> (-> self bob-amount) 0.0)
+        ;; don't spin if "frozen"
+        (quaternion-rotate-y! (-> self root quat) (-> self root quat) (* 40049.777 (seconds-per-frame)))
+        )
       (let ((f30-0 (-> self bob-amount)))
         (when (< 0.0 f30-0)
           (set! (-> self root trans y)
@@ -1904,6 +1907,7 @@
   (none)
   )
 
+(define-extern mod-override-child-fuel-cell-movie-pos (function vector fuel-cell process none))
 (defbehavior fuel-cell-init-by-other fuel-cell ((arg0 vector) (arg1 vector) (arg2 fact-info) (arg3 entity-actor))
   (let ((s3-0 (-> arg2 pickup-type))
         (f30-0 (-> arg2 pickup-spawn-amount))
@@ -1925,6 +1929,8 @@
   (logclear! (-> self fact options) (fact-options can-collect))
   (update-transforms! (-> self root))
   (let ((gp-1 (res-lump-struct (-> self entity) 'movie-pos structure :time (the-as float -1000000000.0))))
+    (mod-override-child-fuel-cell-movie-pos (the-as vector gp-1) self (-> arg3 extra process))
+
     (cond
       ((and *debug-segment* (< (-> *fuel-cell-tune-pos* w) 1000000000.0))
        (set! (-> self jump-pos quad) (-> *fuel-cell-tune-pos* quad))
@@ -1997,6 +2003,7 @@
 
 (defbehavior fuel-cell-init-as-clone fuel-cell ((arg0 handle) (arg1 int))
   (initialize self)
+  (mod-override-child-fuel-cell-movie-pos (-> self root trans) self (handle->process arg0))
   (set! (-> self fact pickup-type) (pickup-type fuel-cell))
   (set! (-> self fact pickup-amount) (the float arg1))
   (initialize-params self 0 (the-as float 1024.0))
@@ -2864,8 +2871,9 @@
   ()
   )
 
-
+(define-extern mod-override-init-position (function process-drawable entity-actor none))
 (defmethod init-from-entity! ((this ventblue) (arg0 entity-actor))
+  (mod-override-init-position this arg0)
   (initialize this arg0 (pickup-type eco-blue))
   (none)
   )

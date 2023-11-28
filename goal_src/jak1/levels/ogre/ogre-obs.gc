@@ -810,6 +810,11 @@
     (ja-post)
     (loop
       (suspend)
+      (when (and (-> self entity) (logtest? (-> self entity extra perm status) (entity-perm-status complete)))
+        (set! (-> self dead-joint-count) 8)
+        (ogre-bridge-update-joints)
+        (go ogre-bridge-activate)
+        )
       )
     )
   )
@@ -832,7 +837,9 @@
       )
     (ja-no-eval :group! ogre-bridge-assemble-ja :num! (seek!) :frame-num 0.0)
     (until (ja-done? 0)
-      (if (rand-vu-percent? 0.2)
+      (if (and (rand-vu-percent? 0.2)
+               (not (and (-> self entity) (logtest? (-> self entity extra perm status) (entity-perm-status complete))))
+               )
           (spawn-projectile-blue *target*)
           )
       (suspend)
@@ -1095,9 +1102,7 @@
     )
   (cond
     ((and (-> this entity) (logtest? (-> this entity extra perm status) (entity-perm-status complete)))
-     (set! (-> this dead-joint-count) 8)
-     (ogre-bridge-update-joints)
-     (go ogre-bridge-activated)
+      (go ogre-bridge-idle)
      )
     (else
       (go ogre-bridge-idle)

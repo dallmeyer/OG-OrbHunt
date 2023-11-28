@@ -328,7 +328,7 @@
    )
   (:methods
     (deactivate (_type_) _type_)
-    (is-object-visible? (_type_ int) symbol)
+    (is-object-visible? (_type_ int entity) symbol)
     (level-method-11 () none)
     (unload! (_type_) _type_)
     (bsp-name (_type_) symbol)

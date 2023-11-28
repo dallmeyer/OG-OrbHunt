@@ -211,6 +211,8 @@
 
    (flava-hack int64)
 
+   (baby-mode? symbol)  ;; allows custom checkpoints/respawn like practice mod if enabled
+   (baby-mode-count uint8)  ;; count of baby-mode resets
    ;; TODO - save/restore original settings (language/sound/etc)
    )
 
@@ -314,6 +316,8 @@
   (set! (-> obj aspect-custom-y) 3)
   (set! (-> obj discord-rpc?) #t)
   (set! (-> obj speedrunner-mode?) #f)
+  (set! (-> obj baby-mode?) #f)
+  (set! (-> obj baby-mode-count) 0)
   (set! (-> obj debug-font-scale) 1.0)
   (set! (-> obj debug-font-scale-auto?) #t)
 
@@ -339,7 +343,7 @@
   (set-frame-rate! obj 60 call-handlers)
 
   (set! (-> obj use-vis?) #f)
-  (set! (-> obj aspect-ratio-auto?) #t)
+  (set! (-> obj aspect-ratio-auto?) #f)
   (set! (-> obj vsync?) #t)
   (set! (-> obj letterbox?) #t)
 
@@ -417,7 +421,7 @@
   (set! (-> obj hinttitles?) #t)
   (set! (-> obj subtitle-speaker?) 'auto)
   (reset-camera obj call-handlers)
-
+  (set! (-> obj baby-mode?) #f)
   (set! (-> obj territory) *default-territory*)
   0)
 

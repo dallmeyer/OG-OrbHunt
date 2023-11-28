@@ -1642,6 +1642,11 @@
 ;; the DGO file
 (custom-level-cgo "TSZ.DGO" "test-zone/testzone.gd")
 
+;; it should point to the .jsonc file that specifies the level.
+(build-custom-level "crystal-cave")
+;; the DGO file
+(custom-level-cgo "CRC.DGO" "crystal-cave/crystalc.gd")
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Game Engine Code
 ;;;;;;;;;;;;;;;;;;;;;
@@ -2074,6 +2079,38 @@
 (goal-src "pc/subtitle.gc" "text" "pckernel" "hint-control" "loader-h" "gsound" "ambient")
 (goal-src "pc/progress-pc.gc" "progress" "pckernel")
 (goal-src "pc/hud-classes-pc.gc" "pckernel" "hud" "battlecontroller" "generic-obs")
+
+(goal-src-sequence
+  "engine/"
+   :deps ;; no idea what these depend on, make it depend on the whole engine
+   ("$OUT/obj/ticky.o"
+    "$OUT/obj/jungle-mirrors.o"
+    "$OUT/obj/plant-boss.o"
+    "$OUT/obj/plat-flip.o"
+    "$OUT/obj/pelican.o"
+    "$OUT/obj/mistycannon.o"
+    "$OUT/obj/rolling-race-ring.o"
+    "$OUT/obj/sun-exit-chamber.o")
+   "game/mods/mods_training.gc"
+   "game/mods/mods_village1.gc"
+   "game/mods/mods_jungle.gc"
+   "game/mods/mods_beach.gc"
+   "game/mods/mods_misty.gc"
+   "game/mods/mods_firecanyon.gc"
+   "game/mods/mods_village2.gc"
+   "game/mods/mods_sunken.gc"
+   "game/mods/mods_swamp.gc"
+   "game/mods/mods_rolling.gc"
+   "game/mods/mods_ogre.gc"
+   "game/mods/mods_village3.gc"
+   "game/mods/mods_snowy.gc"
+   "game/mods/mods_cave.gc"
+   "game/mods/mods_lavatube.gc"
+   "game/mods/mods_citadel.gc"
+   "game/mods/mods_crystalcave.gc"
+   "game/mods/mods.gc"
+  )
+  
 (goal-src "pc/debug/anim-tester-x.gc" "pckernel" "gstring" "joint" "process-drawable" "art-h" "effect-control")
 (goal-src "pc/debug/entity-debug.gc" "debug" "main-h" "entity" "pckernel" "font")
 (goal-src "pc/debug/default-menu-pc.gc" "anim-tester-x" "part-tester" "entity-debug")

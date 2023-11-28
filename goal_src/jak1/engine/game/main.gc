@@ -549,6 +549,7 @@
   0
   )
 
+;; (define *actor-view-toggle* #t)
 (defbehavior display-loop process ()
   "the main 'display loop' in GOAL. v-sync is done in this function, so all frames start and end here."
 
@@ -558,7 +559,7 @@
   (let ((disp *display*))
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ;; Pre loop initialization
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
     ;; the size is 0, so this doesn't actually do anything.
     ;; (dma-send-to-spr (the-as uint #x70000000) (the-as uint *terrain-context*) (the-as uint 0) #t)
@@ -574,11 +575,12 @@
 
 
     (while *run*
-   
-      (runs-every-frame) ;; trigger hook for mod base
-      
+
       ;; start immediately after all process updates finish.
       (profiler-instant-event "display-loop-top")
+
+      (runs-every-frame) ;; trigger hook for mod base
+      ;; (if (cpad-pressed? 0 l2) (set! *actor-view-toggle* (not *actor-view-toggle*)))
 
       ;; drawing effects to be used in foreground drawing.
       (with-profiler "foreground-effects"
@@ -653,9 +655,9 @@
       (add-ee-profile-frame 'draw :g #x80)
 
       (with-profiler "menu"
-        (#when PC_PORT
-          (if (and *display-sha* *debug-segment*)
-            (draw-build-revision)))
+        ;; (#when PC_PORT
+        ;;   (if (and *display-sha* *debug-segment*)
+            ;; (draw-build-revision)))
         (*menu-hook*)
         (add-ee-profile-frame 'draw :g #x40)
 

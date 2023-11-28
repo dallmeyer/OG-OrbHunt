@@ -694,6 +694,12 @@
            (go target-board-hit (the-as vector 'shove) (-> self attack-info-rec))
            )
          )
+        ;; barg - get jetboard boosts on race tracks ^_^
+        (('turbo-pickup)
+          (vector+float*! (-> self control transv) (-> self control transv) (-> self control c-R-w vector 2) 80960.0)
+          (sound-play "turbo-pickup")
+          (sound-play "board-boost")
+          )
         (else
           (target-standard-event-handler arg0 arg1 arg2 arg3)
           )

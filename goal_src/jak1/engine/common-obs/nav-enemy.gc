@@ -1635,6 +1635,7 @@ nav-enemy-default-event-handler
                                )
   )
 
+(define-extern mod-override-path (function nav-enemy none))
 (defmethod init-defaults! ((this nav-enemy) (arg0 nav-enemy-info))
   (set! (-> this rand-gen) (new 'process 'random-generator))
   (set! (-> this rand-gen seed) (the-as uint #x666edd1e))
@@ -1660,6 +1661,7 @@ nav-enemy-default-event-handler
   (set! (-> this nav gap-event) 'jump)
   (nav-control-method-26 (-> this nav))
   (set! (-> this path) (new 'process 'path-control this 'path 0.0))
+  (mod-override-path this)
   (logior! (-> this path flags) (path-control-flag display draw-line draw-point draw-text))
   (set! (-> this enemy-info)
         (new 'process 'fact-info-enemy this (pickup-type eco-pill-random) (-> *FACT-bank* default-pill-inc))

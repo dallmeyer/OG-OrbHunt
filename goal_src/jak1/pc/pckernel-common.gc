@@ -122,7 +122,7 @@
 
 (defmethod commit-to-file pc-settings ((obj pc-settings))
   "commits the current settings to the file"
-  (format (clear *pc-temp-string-1*) "~S/pc-settings.gc" *pc-settings-folder*)
+  (format (clear *pc-temp-string-1*) "~S/orb_hunt-pc-settings.gc" *pc-settings-folder*)
   (pc-mkdir-file-path *pc-temp-string-1*)
   (write-to-file obj *pc-temp-string-1*)
   (none))
@@ -262,6 +262,8 @@
     (+ (* (shr (logand bcd #xf0) 4) 10) (logand bcd #x0f))
   )
 
+(define-extern baby-mode-update (function none))
+
 (defun real-movie? ()
   "are we in an actual cutscene and should letterbox the view?"
   (and (nonzero? movie?) (movie?)))
@@ -277,6 +279,10 @@
 
   ;; update auto-splitter info
   (update-speedrun obj)
+
+  (when (-> *pc-settings* baby-mode?)
+    (baby-mode-update)
+    )
 
   (when (not (-> obj use-vis?))
     (update-video-hacks obj)
@@ -693,6 +699,8 @@
     (("discord-rpc?") (set! (-> obj discord-rpc?) (file-stream-read-symbol file)))
     (("speedrunner-mode?") (set! (-> obj speedrunner-mode?) (file-stream-read-symbol file)))
     (("cutscene-skips?") (file-stream-read-symbol file)) ;; TODO remove
+    (("baby-mode?") (set! (-> obj baby-mode?) (file-stream-read-symbol file)))
+    (("baby-mode-count") (set! (-> obj baby-mode-count) (file-stream-read-int file)))
     (("first-camera-h-inverted?") (set! (-> obj first-camera-h-inverted?) (file-stream-read-symbol file)))
     (("first-camera-v-inverted?") (set! (-> obj first-camera-v-inverted?) (file-stream-read-symbol file)))
     (("third-camera-h-inverted?") (set! (-> obj third-camera-h-inverted?) (file-stream-read-symbol file)))
@@ -813,7 +821,8 @@
 
 (defmethod load-settings pc-settings ((obj pc-settings))
   "load"
-  (format (clear *pc-temp-string-1*) "~S/pc-settings.gc" *pc-settings-folder*)
+
+  (format (clear *pc-temp-string-1*) "~S/orb_hunt-pc-settings.gc" *pc-settings-folder*)
   (if (pc-filepath-exists? *pc-temp-string-1*)
     (begin
       (format 0 "[PC] PC Settings found at '~S'...loading!~%" *pc-temp-string-1*)

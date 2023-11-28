@@ -469,6 +469,7 @@
    max-vel: velocity limit
    damping: this is 1 - damping really. 0 means don't move, 1 means oscillate forever.
    accel: gain."
+
   (set! (-> this value) init-val)
   (set! (-> this target) init-val)
   (set! (-> this vel) 0.0)

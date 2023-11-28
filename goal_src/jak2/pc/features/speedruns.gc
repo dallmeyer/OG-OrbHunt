@@ -43,6 +43,40 @@
     (set! (-> *pc-settings* cheats) (the-as pc-cheats #x0)))
   (none))
 
+(define-extern draw-baby-mode (function none))
+(defun baby-mode-update ()
+  (when (-> *pc-settings* baby-mode?)
+    ;; Draw info to the screen
+    (draw-baby-mode)
+
+    ;; TODO
+    ;; call post-init function
+    ;; (when (and *practice-spawn-post-init*
+    ;;             *target*
+    ;;             (-> *setting-control* current allow-pause)
+    ;;             (>= (- (-> *display* base-frame-counter) (-> *game-info* blackout-time)) (seconds 0.1))
+    ;;             )
+    ;;   (*practice-spawn-post-init*)
+    ;;   (set! *practice-spawn-post-init* #f)
+    ;;   )
+
+    ;; (when (cpad-hold? 0 l2)
+    ;;   ;; Check for fast reset combo
+    ;;   (when (cpad-pressed? 0 up)
+    ;;     (format #t "player triggered reset combo~%")
+    ;;     (speedrun-practice-spawn)
+    ;;     )
+      
+    ;;   ;; Check for temp checkpoint combo
+    ;;   (when (cpad-pressed? 0 down)
+    ;;     (format #t "player triggered temp checkpoint combo~%")
+    ;;     (speedrun-practice-store-temp-checkpoint)
+    ;;     )
+    ;;   )
+    )
+  (none)
+  )
+
 (defmethod hide-run-info! ((this speedrun-info))
   (set! (-> this display-run-info?) #f)
   (none))

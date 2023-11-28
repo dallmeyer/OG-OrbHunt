@@ -177,6 +177,17 @@
   )
 
 ;; maps level-info indices to the appropriate offset in *level-task-data*
+
+;; as our custom level has the index 22 in level-info.gc,
+;; it has to be in the 22nd spot in this array, the value has to be the index of the custom level's
+;; task info entry in the *level-task-data* array (citadel's index is 15,
+;; so the first custom level after that would be 16).
+;; if you want to have multiple levels account for one page in the progress menu,
+;; you add the same index twice and have multiple entries in *level-task-data*,
+;; this is how levels like spider cave keep track of progress in a single progress menu page.
+;;
+;; IMPORTANT: make sure that your level's index in level-info.gc is not bigger than the size
+;; of this array.
 (define *level-task-data-remap*
    (new 'static 'boxed-array :type int32
     (level-task-data-index training)
@@ -202,6 +213,10 @@
     (level-task-data-index citadel) ;; finalboss?
     (level-task-data-index misty) ;; demo?
     (level-task-data-index misty) ;; intro?
+    0
+    0
+    0
+    16 ;; crystal-cave
     )
   )
 
@@ -964,9 +979,9 @@
                         :task-id (game-task rolling-buzzer)
                         :task-name
                         (new 'static 'array text-id 4
-                             (text-id generic-buzzer)
-                             (text-id generic-buzzer)
-                             (text-id generic-buzzer)
+                             (text-id rolling-buzzer)
+                             (text-id rolling-buzzer)
+                             (text-id rolling-buzzer)
                              (text-id zero)
                              )
                         )
@@ -1003,9 +1018,9 @@
                         :task-id (game-task ogre-secret)
                         :task-name
                         (new 'static 'array text-id 4
-                             (text-id hidden-power-cell)
-                             (text-id hidden-power-cell)
-                             (text-id hidden-power-cell)
+                             (text-id tnt-dodged)
+                             (text-id tnt-dodged)
+                             (text-id tnt-dodged)
                              (text-id zero)
                              )
                         )
@@ -1376,6 +1391,73 @@
                         )
                    )
               )
+          ;; the tasks for our custom level
+          ;; since this is the 16th (starting from zero) entry in this array,
+          ;; we have to add 16 as an entry to the *level-task-data-remap* array
+          ;; - level-name-id is the text id of the level name string
+          ;; - text-group-index is the index of the text file group that the level's strings reside in,
+          ;;   however, all text strings are merged into a single file so it shouldn't matter what you put here
+          ;; - nb-of-tasks determines the number of tasks this level-tasks-info holds
+          ;; - buzzer-task-index is the index of the scout fly task for this level
+          (new 'static 'level-tasks-info
+              :level-name-id (text-id crystalc-level)
+              :text-group-index 7
+              :nb-of-tasks 5
+              :buzzer-task-index 4
+              :task-info
+              (new 'static 'array task-info-data 8
+                   (new 'static 'task-info-data
+                        :task-id (game-task crystalc-middle)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id crystalc-middle)
+                             (text-id crystalc-middle)
+                             (text-id crystalc-middle)
+                             (text-id zero)
+                             )
+                        )
+                   (new 'static 'task-info-data
+                        :task-id (game-task crystalc-river)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id crystalc-river)
+                             (text-id crystalc-river)
+                             (text-id crystalc-river)
+                             (text-id zero)
+                             )
+                        )
+                   (new 'static 'task-info-data
+                        :task-id (game-task crystalc-ship)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id crystalc-ship)
+                             (text-id crystalc-ship)
+                             (text-id crystalc-ship)
+                             (text-id zero)
+                             )
+                        )
+                    (new 'static 'task-info-data
+                        :task-id (game-task crystalc-shrooms)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id crystalc-shrooms)
+                             (text-id crystalc-shrooms)
+                             (text-id crystalc-shrooms)
+                             (text-id zero)
+                             )
+                        )
+                    (new 'static 'task-info-data
+                        :task-id (game-task crystalc-buzzer)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id crystalc-buzzer)
+                             (text-id crystalc-buzzer)
+                             (text-id crystalc-buzzer)
+                             (text-id zero)
+                             )
+                        )
+                   )
+              )
          )
   )
 
@@ -1394,7 +1476,7 @@
          )
   )
 
-(define *game-counts* (the-as game-count-info #f))
+;;(define *game-counts* (the-as game-count-info #f))
 
 
 

@@ -6,7 +6,7 @@
   This file runs the game-specific version of the pckernel.
   See pckernel-common.gc for the bulk of the pckernel.
 
- |#
+|#
 
 (define-extern get-active-mission-description (function discord-info string))
 
@@ -186,30 +186,30 @@
 (defmethod set-game-setting! ((obj pc-settings-jak2) (setting symbol) (value symbol))
   (case setting
     (('video-mode)
-      (set! (-> *setting-control* user-current video-mode) #f)
-      (set! (-> *setting-control* user-default video-mode) value)
-      )
+     (set! (-> *setting-control* user-current video-mode) #f)
+     (set! (-> *setting-control* user-default video-mode) value))
+      
     (('aspect-ratio)
-      (set! (-> *setting-control* user-default aspect-ratio) value)
-      )
+     (set! (-> *setting-control* user-default aspect-ratio) value))
+      
     (else
-      (format #t "unknown setting  ~A (~A) to set-game-setting!" setting value))
-    )
-  )
+      (format #t "unknown setting  ~A (~A) to set-game-setting!" setting value))))
+    
+  
 
 (defmethod get-game-setting ((obj pc-settings-jak2) (setting symbol))
   (case setting
     (('video-mode)
-      (-> *setting-control* user-default video-mode)
-      )
+     (-> *setting-control* user-default video-mode))
+      
     (('aspect-ratio)
-      (-> *setting-control* user-default aspect-ratio)
-      )
+     (-> *setting-control* user-default aspect-ratio))
+      
     (else
       (format #t "unknown setting  ~A to get-game-setting" setting)
-      #f)
-    )
-  )
+      #f)))
+    
+  
 
 (defmethod set-game-language! ((obj pc-settings-jak2) (lang language-enum))
   (set! (-> *setting-control* user-default language) lang)
@@ -252,11 +252,11 @@
            (and *progress-process*
                 (= 'title (-> *progress-process* 0 state-stack 0))))
         ;; in title screen.
-        (set! (-> info level) (symbol->string 'title))
-        (set! (-> info status) "In title screen"))
+       (set! (-> info level) (symbol->string 'title))
+       (set! (-> info status) "In title screen"))
       (else
-        (set! (-> info level) (aif (-> *load-state* vis-nick) (symbol->string it) "unknown")))
-      )
+        (set! (-> info level) (aif (-> *load-state* vis-nick) (symbol->string it) "unknown"))))
+      
     (set! (-> info cutscene?) (real-movie?))
     (set! (-> info time-of-day) (-> *time-of-day-context* time))
     (set! (-> info percent-complete) (calculate-percentage *game-info*))
@@ -278,15 +278,15 @@
   "update the graphics hacks used for the progress menu. ugh."
 
   (set! (-> (get-video-params) relative-x-scale) (-> obj aspect-ratio-reciprocal))
-  (set! (-> (get-video-params) relative-x-scale-reciprical) (-> obj aspect-ratio-scale))
-  )
+  (set! (-> (get-video-params) relative-x-scale-reciprical) (-> obj aspect-ratio-scale)))
+  
 
 
 (defmethod eligible-for-fast-elevator? ((obj pc-settings-jak2) (proc process))
   "is this a valid process for a fast elevator?"
   (and (-> obj fast-elevator?) (not (or (string= (-> proc name) "drill-lift-1")
-                                        (string= (-> proc name) "drill-lift-2"))))
-  )
+                                        (string= (-> proc name) "drill-lift-2")))))
+  
 
 (defmethod get-airlock-speed ((obj pc-settings-jak2))
   "return the current speed modifier for airlocks"

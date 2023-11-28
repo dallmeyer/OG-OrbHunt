@@ -359,6 +359,7 @@
   "pov-camera.o"
   "powerups.o"
   "crates.o"
+  "mods.o"
   "hud.o"
   "hud-classes.o"
   "progress-static.o"

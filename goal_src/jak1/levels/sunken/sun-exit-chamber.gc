@@ -662,7 +662,10 @@
     (local-vars (v0-1 object))
     (case message
       (('trigger)
-       (go exit-chamber-rise)
+       (if (not (handle->process (-> self fcell-handle))) ;; only rise if cell collected, otherwise reset button
+        (go exit-chamber-rise)
+        (send-event (ppointer->process (-> self button)) 'untrigger)
+        )
        (return #t)
        v0-1
        )
@@ -673,7 +676,7 @@
              (let ((v1-10 (new 'stack-no-clear 'vector)))
                (set-vector! v1-10 0.0 64102.4 0.0 1.0)
                (vector+! v1-10 v1-10 (-> self last-pos))
-               (send-event a0-5 'set-movie-pos v1-10)
+              ;;  (send-event a0-5 'set-movie-pos v1-10)
                )
              )
            )
@@ -700,6 +703,12 @@
           )
       (suspend)
       )
+    )
+  :trans (behavior ()
+    (if (and (-> self button) (handle->process (-> self fcell-handle)))
+      (send-event (ppointer->process (-> self button)) 'untrigger)  ;; reset button if we haven't collected fuel cell
+      )
+    (none)
     )
   )
 
@@ -849,7 +858,7 @@
              (let ((v1-8 (new 'stack-no-clear 'vector)))
                (set-vector! v1-8 0.0 64102.4 0.0 1.0)
                (vector+! v1-8 v1-8 (-> self last-pos))
-               (send-event a0-5 'set-movie-pos v1-8)
+              ;;  (send-event a0-5 'set-movie-pos v1-8)
                )
              )
            )
