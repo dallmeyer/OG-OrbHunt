@@ -2386,7 +2386,7 @@
 
 
 (deftype breakaway (process-drawable)
-  ((root-override collide-shape-moving  :offset 112)
+  ((root collide-shape-moving  :offset 112)
    )
   :heap-base #x40
   :method-count-assert 22
@@ -2429,7 +2429,7 @@
 (defstate breakaway-about-to-fall (breakaway)
   :code (behavior ()
     (sound-play "falling-bones")
-    (launch-particles (-> *part-id-table* 281) (-> self root-override trans))              
+    (launch-particles (-> *part-id-table* 281) (-> self root trans))              
     (let ((gp-1 #f)
           (s5-1 (-> *display* base-frame-counter))
           )
@@ -2463,7 +2463,7 @@
       (until (ja-done? 0)
         (+! f30-0 (* f28-0 (-> *display* seconds-per-frame)))
         (+! f28-0 (* f26-0 (-> *display* seconds-per-frame)))
-        (+! (-> self root-override trans y) f30-0)
+        (+! (-> self root trans y) f30-0)
         (suspend)
         (ja :num! (seek! (ja-aframe 32.0 0) 0.4))
         )
@@ -2494,7 +2494,7 @@
       )
     (set! (-> s4-0 nav-radius) (* 0.75 (-> s4-0 root-prim local-sphere w)))
     (backup-collide-with-as s4-0)
-    (set! (-> obj root-override) s4-0)
+    (set! (-> obj root) s4-0)
     )
   (set! (-> obj link) (new 'process 'actor-link-info obj))
   (process-drawable-from-entity! obj (the-as entity-actor arg0))

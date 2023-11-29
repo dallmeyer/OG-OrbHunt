@@ -15,7 +15,7 @@
       (let ((obj (the pelican (process-by-ename "pelican-1"))))
         (set-vector-meters! (-> obj state-vector) -256.17  28.28 -465.54)  ;; "nesting" on high plateau above grotto
         (when (and (name= (-> obj state name) 'pelican-wait-at-nest)
-                  (vector= (-> obj root-override trans) (-> obj state-vector)))
+                  (vector= (-> obj root trans) (-> obj state-vector)))
             (set! (-> obj root rot x) 0.01) ;; level out
             (set! (-> obj root rot z) -0.01) ;; level out
           )

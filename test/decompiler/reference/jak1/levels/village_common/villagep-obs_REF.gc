@@ -889,7 +889,7 @@
 
 ;; definition of type village-cam
 (deftype village-cam (process)
-  ((root-override  trsq)
+  ((root  trsq)
    (range          meters)
    (index          int32)
    (state-time     time-frame)
@@ -904,7 +904,7 @@
   (let ((t9-0 (method-of-type process inspect)))
     (t9-0 this)
     )
-  (format #t "~T~Troot: ~A~%" (-> this root-override))
+  (format #t "~T~Troot: ~A~%" (-> this root))
   (format #t "~T~Trange: (meters ~m)~%" (-> this range))
   (format #t "~T~Tindex: ~D~%" (-> this index))
   (format #t "~T~Tstate-time: ~D~%" (-> this state-time))
@@ -914,8 +914,8 @@
 ;; definition for method 7 of type village-cam
 ;; INFO: Return type mismatch process vs village-cam.
 (defmethod relocate ((this village-cam) (arg0 int))
-  (if (nonzero? (-> this root-override))
-      (&+! (-> this root-override) arg0)
+  (if (nonzero? (-> this root))
+      (&+! (-> this root) arg0)
       )
   (the-as village-cam ((method-of-type process relocate) this arg0))
   )
@@ -928,7 +928,7 @@
     (loop
       (let ((v1-5
               (and (and *target*
-                        (>= (-> self range) (vector-vector-distance (-> self root-override trans) (-> *target* control trans)))
+                        (>= (-> self range) (vector-vector-distance (-> self root trans) (-> *target* control trans)))
                         )
                    (and (-> *setting-control* current play-hints)
                         (< 0.0 (-> *setting-control* current dialog-volume))
@@ -961,7 +961,7 @@
                (suspend)
                (set! v1-18
                      (or (not *target*)
-                         (< (-> self range) (vector-vector-distance (-> self root-override trans) (-> *target* control trans)))
+                         (< (-> self range) (vector-vector-distance (-> self root trans) (-> *target* control trans)))
                          )
                      )
                )
@@ -1175,10 +1175,10 @@
 (defmethod init-from-entity! ((this village-cam) (arg0 entity-actor))
   "Copy defaults from the entity."
   (logior! (-> this mask) (process-mask actor-pause))
-  (set! (-> this root-override) (new 'process 'trsq))
-  (set! (-> this root-override trans quad) (-> arg0 extra trans quad))
-  (quaternion-copy! (-> this root-override quat) (-> arg0 quat))
-  (vector-identity! (-> this root-override scale))
+  (set! (-> this root) (new 'process 'trsq))
+  (set! (-> this root trans quad) (-> arg0 extra trans quad))
+  (quaternion-copy! (-> this root quat) (-> arg0 quat))
+  (vector-identity! (-> this root scale))
   (set! (-> this range) (res-lump-float arg0 'cam-notice-dist :default 81920.0))
   (set! (-> this index) (res-lump-value arg0 'index int))
   (go (method-of-object this idle))

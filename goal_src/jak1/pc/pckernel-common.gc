@@ -692,7 +692,7 @@
     (("ps2-shadow?") (set! (-> obj ps2-shadow?) (file-stream-read-symbol file)))
     (("ps2-lod-dist?") (set! (-> obj ps2-lod-dist?) (file-stream-read-symbol file)))
     (("force-envmap?") (set! (-> obj force-envmap?) (file-stream-read-symbol file)))
-    (("force-actors?") (set! (-> obj ps2-actor-vis?) (not (file-stream-read-symbol file))))
+    (("ps2-actor-vis?") (set! (-> obj ps2-actor-vis?) (not (file-stream-read-symbol file))))
     (("music-fade?") (file-stream-read-symbol file)) ;; TODO remove
     (("use-vis?") (set! (-> obj use-vis?) (file-stream-read-symbol file)))
     (("hinttitles?") (set! (-> obj hinttitles?) (file-stream-read-symbol file)))
@@ -788,7 +788,7 @@
   (format file "  (first-camera-v-inverted? ~A)~%" (-> obj first-camera-v-inverted?))
   (format file "  (third-camera-h-inverted? ~A)~%" (-> obj third-camera-h-inverted?))
   (format file "  (third-camera-v-inverted? ~A)~%" (-> obj third-camera-v-inverted?))
-  (format file "  (force-actors? ~A)~%" (not (-> obj ps2-actor-vis?)))
+  (format file "  (ps2-actor-vis? ~A)~%" (not (-> obj ps2-actor-vis?)))
   (format file "  (music-fadein? ~A)~%" (-> obj music-fadein?))
   (format file "  (music-fadeout? ~A)~%" (-> obj music-fadeout?))
   (format file "  (hinttitles? ~A)~%" (-> obj hinttitles?))

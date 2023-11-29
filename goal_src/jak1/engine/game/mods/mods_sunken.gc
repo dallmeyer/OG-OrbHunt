@@ -32,7 +32,7 @@
     ;;   (let ((obj (the square-platform (process-by-ename "square-platform-8")))
     ;;         (vec (static-vector-meters 619.42 -140.0 -1744.79)))
         ;; (vector-copy! (-> obj root trans) vec)
-        ;; (vector-copy! (-> obj root-override trans) vec)
+        ;; (vector-copy! (-> obj root trans) vec)
     ;;     (vector-copy! (-> obj basetrans) vec)
     ;;     )
     ;;   )
@@ -40,7 +40,7 @@
     ;;   (let ((obj (the square-platform (process-by-ename "square-platform-9")))
     ;;         (vec (static-vector-meters 634.2 -140.0 -1752.8)))
         ;; (vector-copy! (-> obj root trans) vec)
-        ;; (vector-copy! (-> obj root-override trans) vec)
+        ;; (vector-copy! (-> obj root trans) vec)
       ;;   (vector-copy! (-> obj basetrans) vec)
       ;;   )
       ;; )
@@ -301,12 +301,12 @@
     ;; square-platform-7
     ;; (('square-platform-8) ;; going right instead of straight across
     ;;   (set-vector-meters! (-> (the-as square-platform obj) root trans) 619.42 -140.0 -1744.79)
-    ;;   (set-vector-meters! (-> (the-as square-platform obj) root-override trans) 619.42 -140.0 -1744.79)
+    ;;   (set-vector-meters! (-> (the-as square-platform obj) root trans) 619.42 -140.0 -1744.79)
     ;;   (set-vector-meters! (-> (the-as square-platform obj) basetrans) 619.42 -140.0 -1744.79)
     ;;   )
     ;; (('square-platform-9) ;; on right instead of across
     ;;   (set-vector-meters! (-> (the-as square-platform obj) root trans) 634.2 -140.0 -1752.8)
-    ;;   (set-vector-meters! (-> (the-as square-platform obj) root-override trans) 634.2 -140.0 -1752.8)
+    ;;   (set-vector-meters! (-> (the-as square-platform obj) root trans) 634.2 -140.0 -1752.8)
     ;;   (set-vector-meters! (-> (the-as square-platform obj) basetrans) 634.2 -140.0 -1752.8)
     ;;   )
 
