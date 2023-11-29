@@ -298,9 +298,14 @@
 ;; Set up the build system to build the level geometry
 ;; this path is relative to the custom_levels/jak2 folder
 ;; it should point to the .jsonc file that specifies the level.
-(build-custom-level "test-zone")
-;; the DGO file
-(custom-level-cgo "TSZ.DGO" "test-zone/testzone.gd")
+(build-custom-level "orbs-ctygena")
+(custom-level-cgo "OC0.DGO" "orbs-ctygena/orbs-ctygena.gd")
+
+(build-custom-level "orbs-prison")
+(custom-level-cgo "O00.DGO" "orbs-prison/orbs-prison.gd")
+
+(build-custom-level "orbs-forexita")
+(custom-level-cgo "O01.DGO" "orbs-forexita/orbs-forexita.gd")
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; ANIMATIONS

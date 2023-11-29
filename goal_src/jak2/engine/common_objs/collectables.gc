@@ -1558,6 +1558,11 @@ This commonly includes things such as:
 - collision information
 - loading the skeleton group / bones
 - sounds"
+  (let ((entity-pickup-amount (res-lump-float arg0 'pickup-amount)))
+    (when (and entity-pickup-amount (> entity-pickup-amount 0.0))
+      (set! (-> this pickup-amount) entity-pickup-amount)
+      )
+    )
   (initialize-allocations this)
   (process-drawable-from-entity! this (-> this entity))
   (initialize-options this 0 1024.0 (the-as fact-info #f))
