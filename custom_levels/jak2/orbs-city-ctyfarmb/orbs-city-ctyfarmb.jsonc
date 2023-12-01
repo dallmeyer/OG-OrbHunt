@@ -1,16 +1,16 @@
 {
   // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
   // the name of this file, and the folder this file is in must have the same name.
-  "long_name": "orbs-city-ctygena",
+  "long_name": "orbs-city-ctyfarmb",
   // The file name, should be upper case and 8 characters or less.
-  "iso_name": "OC0",
+  "iso_name": "OC9",
   // The nickname, should be exactly 3 characters
-  "nickname": "oc0", // 3 char name, all lowercase
+  "nickname": "oc9", // 3 char name, all lowercase
   // Background mesh file.
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_levels/jak2/orbs-city-ctygena/orbs-city-ctygena.glb",
+  "gltf_file": "custom_levels/jak2/orbs-city-ctyfarmb/orbs-city-ctyfarmb.glb",
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -46,15 +46,65 @@
    "textures": [],
 
   "actors" : [
-    // 'ctygena (canals near farm)
+    // 'ctyfarmb (b/t bazaar and port)
     {
-      "trans": [ -311.7,   24.6,    -357.85 ], // up on high ledge at first turn from farm, jump from zoomer ez
+      "trans": [ -167.32,  30.5,    935.36  ], // #t  atop pipes near sprinkler (jump from hose into abbah bounce against wall, then up and over)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-311.7,   24.6,    -357.85, 10], // bounding sphere
+      "bsphere": [-167.32,  30.5,    935.36, 10], // bounding sphere
       "lump": {
-        "name":"ctygena-skill-1"
+        "name": "ctyfarmb-skill-1"
+      }
+    },
+    {
+      "trans": [ -404.64,  9.2,     1155.76 ], // #t  in center pumpkin near port
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-404.64,  9.2,     1155.7, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-2"
+      }
+    },
+    {
+      "trans": [ -444.33,  12.3,    1195.2  ], // #t  in corner crack near port
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-444.33,  12.3,    1195.2, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-3"
+      }
+    },
+    {
+      "trans": [ -371.36,  9.6,     920.16  ], // #t  inside lurker escape pipe
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-371.36,  9.6,     920.16, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-4"
+      }
+    },
+    {
+      "trans": [ -82.3,    12.2,    1031.47 ], // #t  in crack between rocks by yakows, bazaar side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-82.3,    12.2,    1031.4, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-5"
+      }
+    },
+    {
+      "trans": [ -36.61,   25.2,    938.81  ], // #t ; in tree behind rock near bazaar
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-36.61,   25.2,    938.81, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-6"
       }
     }
     // {

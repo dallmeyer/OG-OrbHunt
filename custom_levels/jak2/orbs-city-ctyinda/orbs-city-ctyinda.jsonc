@@ -1,16 +1,16 @@
 {
   // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
   // the name of this file, and the folder this file is in must have the same name.
-  "long_name": "orbs-city-ctygena",
+  "long_name": "orbs-city-ctyinda",
   // The file name, should be upper case and 8 characters or less.
-  "iso_name": "OC0",
+  "iso_name": "OCA",
   // The nickname, should be exactly 3 characters
-  "nickname": "oc0", // 3 char name, all lowercase
+  "nickname": "oca", // 3 char name, all lowercase
   // Background mesh file.
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_levels/jak2/orbs-city-ctygena/orbs-city-ctygena.glb",
+  "gltf_file": "custom_levels/jak2/orbs-city-ctyinda/orbs-city-ctyinda.glb",
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -46,27 +46,127 @@
    "textures": [],
 
   "actors" : [
-    // 'ctygena (canals near farm)
+    // 'ctyinda) ;; (port side)
     {
-      "trans": [ -311.7,   24.6,    -357.85 ], // up on high ledge at first turn from farm, jump from zoomer ez
+      "trans": [ 936.0,    28.5,    808.4   ], // #t above pipes in corner - boosted from walkway or jump from zoomer
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-311.7,   24.6,    -357.85, 10], // bounding sphere
+      "bsphere": [936.0,    28.5,    808.4 , 10], // bounding sphere
       "lump": {
-        "name":"ctygena-skill-1"
+        "name": "ctyinda-skill-1"
+      }
+    },
+    {
+      "trans": [ 857.37,   8.8,     1160.71 ], // #t jak 3 crate spot, in corner before hallway to port
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [857.37,   8.8,     1160.7, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-2"
+      }
+    },
+    {
+      "trans": [ 717.60,   8.6,     1166.99 ], // #t behind generators against wall, along hallway to port
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [717.60,   8.6,     1166.9, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-3"
+      }
+    },
+    {
+      "trans": [ 796.8,    35.0,    1213.5  ], // #f other side of hallway from ^, abbah bounce off vent up high
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [796.8,    35.0,    1213.5, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-4"
+      }
+    },
+    {
+      "trans": [ 809.30,   8.65,    1066.34 ], // #t in pocket next to ramp near hallway to port
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [809.30,   8.65,    1066.3, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-5"
+      }
+    },
+    {
+      "trans": [ 1018.34,  22.0,    961.06  ], // #t behind some pipes in middle of map, visible from walkway (abbah from below)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1018.34,  22.0,    961.06, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-6"
+      }
+    },
+    {
+      "trans": [ 1158.93,  8.7,     806.08  ], // #t jak3-esque corner spot, this one at dead end with vent
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1158.93,  8.7,     806.08, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-7"
+      }
+    },
+    {
+      "trans": [ 1116.5,   33.0,    817.15  ], // #t same area as ^, abbah bounce from vent or zoomer jump up 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1116.5,   33.0,    817.15, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-8"
+      }
+    },
+    {
+      "trans": [ 1067.33,  11.0,    758.0   ], // #t deadend/hairpin turn onto ramp; behind pipe on left
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1067.33,  11.0,    758.0 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-9"
+      }
+    },
+    {
+      "trans": [ 1066.1,   28.3,    766.18  ], // #t  up above ^ skill-9
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1066.1,   28.3,    766.18, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-10"
+      }
+    },
+    {
+      "trans": [ 842.0,    37.3,    978.00  ], // #f  up above vent not far from consite (abbah on vent)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [842.0,    37.3,    978.00, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-11"
+      }
+    },
+    {
+      "trans": [ 956.61,  45.62, 1001.85  ], // (HOVER) aim between pipe and wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [956.61,  45.62, 1001.85, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-hover-1",
+        "pickup-amount": ["float", 3.0]  // goldge
       }
     }
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
   ]
 }

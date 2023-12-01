@@ -1,16 +1,16 @@
 {
   // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
   // the name of this file, and the folder this file is in must have the same name.
-  "long_name": "orbs-city-ctygena",
+  "long_name": "orbs-city-ctygenb",
   // The file name, should be upper case and 8 characters or less.
-  "iso_name": "OC0",
+  "iso_name": "OC2",
   // The nickname, should be exactly 3 characters
-  "nickname": "oc0", // 3 char name, all lowercase
+  "nickname": "oc2", // 3 char name, all lowercase
   // Background mesh file.
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_levels/jak2/orbs-city-ctygena/orbs-city-ctygena.glb",
+  "gltf_file": "custom_levels/jak2/orbs-city-ctygenb/orbs-city-ctygenb.glb",
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -46,15 +46,85 @@
    "textures": [],
 
   "actors" : [
-    // 'ctygena (canals near farm)
+    // 'ctygenb (canals connecting ctygena, ctyslumb, stadium, with palshaft entrance)
     {
-      "trans": [ -311.7,   24.6,    -357.85 ], // up on high ledge at first turn from farm, jump from zoomer ez
+      "trans": [ 175.68,   29.5,    -183.14 ], // #t up/behind pipes near palshaft entrance
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-311.7,   24.6,    -357.85, 10], // bounding sphere
+      "bsphere": [175.68,   29.5,    -183.1, 10], // bounding sphere
       "lump": {
-        "name":"ctygena-skill-1"
+        "name": "ctygenb-skill-1"
+      }
+    },
+    {
+      "trans": [ 147.0,    24.6,    -125.2  ], // #t behind vents on roof near palshaft entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [147.0,    24.6,    -125.2, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenb-skill-2"
+      }
+    },
+    {
+      "trans": [ 133.29,   8.6,     -260.96 ], // #t jak3 spot, behind pipe near canal tunnel
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [133.29,   8.6,     -260.9, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenb-skill-3"
+      }
+    },
+    {
+      "trans": [ 224.86,   8.6,     -203.92 ], // #t jak3 spot? behind pipe by canals towards stadium
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [224.86,   8.6,     -203.9, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenb-skill-4"
+      }
+    },
+    {
+      "trans": [ 273.13,   8.6,     -45.18  ], // #t tucked away in corner, path to slums
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [273.13,   8.6,     -45.18, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenb-skill-5"
+      }
+    },
+    {
+      "trans": [ 339.38,   8.60,    -4.60   ], // #t dev picture (another corner with infinite jump)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [339.38,   8.60,    -4.60 , 10], // bounding sphere
+      "lump": {
+        "name": "ctygenb-skill-6"
+      }
+    },
+    {
+      "trans": [ 5.55,     8.80,    -159.25 ], // #t tucked in another corner, on path to ctygena (infin jump, or walk up this one)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [5.55,     8.80,    -159.2, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenb-skill-7"
+      }
+    },
+    {
+      "trans": [ 287.9,    14.5,    -108.6  ], // #t  not far from slums, behind pipe at 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [287.9,    14.5,    -108.6, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenb-skill-8"
       }
     }
     // {

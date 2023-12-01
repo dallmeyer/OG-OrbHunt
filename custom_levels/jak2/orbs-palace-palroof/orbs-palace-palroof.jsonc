@@ -1,16 +1,16 @@
 {
   // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
   // the name of this file, and the folder this file is in must have the same name.
-  "long_name": "orbs-city",
+  "long_name": "orbs-palace-palroof",
   // The file name, should be upper case and 8 characters or less.
-  "iso_name": "O01",
+  "iso_name": "O0H",
   // The nickname, should be exactly 3 characters
-  "nickname": "o01", // 3 char name, all lowercase
+  "nickname": "o0h", // 3 char name, all lowercase
   // Background mesh file.
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_levels/jak2/orbs-city/orbs-city.glb",
+  "gltf_file": "custom_levels/jak2/orbs-palace-palroof/orbs-palace-palroof.glb",
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -47,26 +47,66 @@
 
   "actors" : [
     {
-      "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
+      "trans": [ 166.12,   442.99,  532.45  ], // #t high corner above glass, abbah bounce in corner over invis wall for next or
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
+      "bsphere": [166.12,   442.99,  532.45, 10], // bounding sphere
       "lump": {
-        "name":"city-skill-01"
+        "name": "palroof-skill-1"
       }
     },
-    // HOVER CELLS
     {
-      "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
+      "trans": [ 159.16,   445.43,  571.50  ], // #t on wall above glass ceiling, follow from ^ and abbah bounce agai
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
+      "bsphere": [159.16,   445.43,  571.50, 10], // bounding sphere
       "lump": {
-        "name":"city-skill-02",
-        "pickup-amount": ["float", 3.0]  // goldge
+        "name": "palroof-skill-2"
+      }
+    },
+    {
+      "trans": [ 173.6,    463.6,   563.65  ], // #t another abbah bounce up from ^, walk along edg
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [173.6,    463.6,   563.65, 10], // bounding sphere
+      "lump": {
+        "name": "palroof-skill-3"
+      }
+    },
+    {
+      "trans": [ 180.7,    460.2,   526.0   ], // #t follow from ^ to next roof, boosted from corner to corne
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [180.7,    460.2,   526.0 , 10], // bounding sphere
+      "lump": {
+        "name": "palroof-skill-4"
+      }
+    },
+    {
+      "trans": [ 219.53,   426.8,   534.36  ], // #t on roof in praxis 1st phase, spin cancel jump on slant to get u
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [219.53,   426.8,   534.36, 10], // bounding sphere
+      "lump": {
+        "name": "palroof-skill-5"
       }
     }
+    // HOVER CELLS
+    // {
+    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
+    //   "etype": "skill",  // actor type
+    //   "game_task": 0, // associated game task (for powercells, etc)
+    //   "quat" : [0, 0, 0, 1], // quaternion
+    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
+    //   "lump": {
+    //     "name":"city-skill-02",
+    //     "pickup-amount": ["float", 3.0]  // goldge
+    //   }
+    // }
   ]
 }

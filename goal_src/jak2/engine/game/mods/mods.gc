@@ -224,6 +224,705 @@
   (none))
   
 
+  ;;  (('palcab) ;; (cable bridge to palace) ===
+  ;; {
+  ;;   "trans": [ 223.5,    385.13,  149.0   ], // #t  left side of rotating hexagon
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [223.5,    385.13,  149.0 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "palcab-skill-1"
+  ;;     }
+  ;;   },
+  ;;     )
+  ;;  (('palroof) ;; palboss ===
+  ;; {
+  ;;   "trans": [ 166.12,   442.99,  532.45  ], // #t high corner above glass, abbah bounce in corner over invis wall for next or
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [166.12,   442.99,  532.45, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "palroof-skill-1"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 159.16,   445.43,  571.50  ], // #t on wall above glass ceiling, follow from ^ and abbah bounce agai
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [159.16,   445.43,  571.50, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "palroof-skill-2"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 173.6,    463.6,   563.65  ], // #t another abbah bounce up from ^, walk along edg
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [173.6,    463.6,   563.65, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "palroof-skill-3"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 180.7,    460.2,   526.0   ], // #t follow from ^ to next roof, boosted from corner to corne
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [180.7,    460.2,   526.0 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "palroof-skill-4"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 219.53,   426.8,   534.36  ], // #t on roof in praxis 1st phase, spin cancel jump on slant to get u
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [219.53,   426.8,   534.36, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "palroof-skill-5"
+  ;;     }
+  ;;   },
+  ;;     )
+  ;;  (('throne)
+  ;; {
+  ;;   "trans": [ 122.92,   340.6,   531.25  ], // #t  in gap under walkway to thron
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [122.92,   340.6,   531.25, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "throne-skill-1"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 103.0,    374.5,   499.15  ], // #t  window above throne (abbah duh
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [103.0,    374.5,   499.15, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "throne-skill-2"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 183.74,   345.5,   549.98  ], // #t  corner before drop down to palen
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [183.74,   345.5,   549.98, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "throne-skill-3"
+  ;;     }
+  ;;   },
+  ;;     )
+  ;;  (('palent))  ;; palace interior with guards
+      
+      
+  ;;   ;; ====== ORBS / CASTLE ======
+  ;;  (('caspad)  ;; landing pad connecting atoll, dig, castle
+  ;; {
+  ;;   "trans": [ 301.1,    43.2,    -1700.2   ], // #t  up above tree/rock near dig entranc
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [301.1,    43.2,    -1700.2 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "caspad-skill-1"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 218.02,   34.14,   -1724.96  ], // #t  in crack of rocks between dig/castl
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [218.02,   34.14,   -1724.96, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "caspad-skill-2"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 236.98,   48.8,    -1709.0   ], // #t  up & right from skill-2 (abbah
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [236.98,   48.8,    -1709.0 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "caspad-skill-3"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 209.75,   45.8,    -1730.5   ], // #t  up & left from skill-2 (abbah
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [209.75,   45.8,    -1730.5 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "caspad-skill-4"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 190.1,    58.8,    -1713.6   ], // #t  up & left from skill-4 (or maybe abbah?
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [190.1,    58.8,    -1713.6 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "caspad-skill-5"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 127.4,    66.2,    -1698.9   ], // #t  atop tall rock towards castle entrance (abbah
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [127.4,    66.2,    -1698.9 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "caspad-skill-6"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 83.42,    75.16,   -1704.72  ], // #t  atop rocks right right outside castle entrance (abbah
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [83.42,    75.16,   -1704.72, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "caspad-skill-7"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 216.53,   37.08,   -1570.87  ], // #t  in crack in rocks between castle and atol
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [216.53,   37.08,   -1570.87, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "caspad-skill-8"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 203.31,   53.4,    -1568.01  ], // #t  up/right from skill-
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [203.31,   53.4,    -1568.01, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "caspad-skill-9"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 189.67,   72.7,    -1554.08  ], // #t up from skill-9 (abbah
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [189.67,   72.7,    -1554.08, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "caspad-skill-10"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 202.31,   83.6,    -1546.70  ], // #t low-poly leaves are solid, free orb near skill-1
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [202.31,   83.6,    -1546.70, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "caspad-skill-11"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 79.62,    121.5,   -1519.64  ], // #t low-poly leaves, way in the back towards castl
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [79.62,    121.5,   -1519.64, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "caspad-skill-12"
+  ;;     }
+  ;;   },
+  ;;     )
+  ;;  (('castle))  ;; 
+      
+  ;;   ;; ====== ORBS / RUINS ======
+  ;;  (('ruins))
+      
+  ;;  (('sagehut)
+  ;; {
+  ;;   "trans": [ 1054.7,   38.8,    -545.0    ], // #t near keira transpa
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [1054.7,   38.8,    -545.0  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "sagehut-skill-1"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 1041.0,   32.5,    -527.5    ], // #t below wooden platforms (for portal
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [1041.0,   32.5,    -527.5  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "sagehut-skill-2"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 1070.6,   50.9,    -568.6    ], // #t left of jak 1 warp gat
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [1070.6,   50.9,    -568.6  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "sagehut-skill-3"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 1086.58,  38.5,    -569.07   ], // #t behind planters on lower back edge (just go around lol
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [1086.58,  38.5,    -569.07 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "sagehut-skill-3"
+  ;;     }
+  ;;   },
+  ;;     )
+  ;;   ;; ====== ORBS / ATOLL ======
+  ;;  (('atoll  'atoll-ext))
+      
+      
+  ;;   ;; ====== ORBS / SEWER ======
+  ;;  (('sewer 'sewerb))
+      
+  ;;  (('sewesc 'sewescb))
+      
+  ;;   ;; ====== ORBS / STRIP ======
+  ;;  (('strip))
+      
+  ;;   ;; ====== ORBS / MOUNTAIN ======
+  ;;  (('mountain 'mtnext))
+      
+  ;;  (('mincan))  ;; little area where they put all the precursor crap together
+      
+  ;;   ;; ====== ORBS / FOREST ======
+  ;;  (('forest))   ;; entrance side?
+      
+  ;;  (('forestb))   ;; sage/tree side?
+      
+  ;;   ;; ====== ORBS / DRILL ======
+  ;;  (('drill)) ;; eggs section?
+      
+  ;;  (('drillmtn)) ;; background???
+      
+  ;;  (('drillmid)) ;; gun on rails section?
+      
+  ;;  (('drillb))  ;; mech suit area
+      
+  ;;   ;; ====== ORBS / TOMB ======
+  ;;  (('tomba)) ;; central chamber
+      
+  ;;  (('tombb)) ;; left tomb
+      
+  ;;  (('tombc)) ;; right tomb
+      
+  ;;  (('tombd)) ;; entrance
+      
+  ;;  (('tombe)) ;; daxter spider chase
+      
+  ;;  (('tombboss)) ;; praxis 2
+  ;;   ;; 255.85 -69.420 1411.91)) ;; where daxter exits chase in boss room (tomb-boss-door changed to open if boss completed)
+      
+  ;;   ;; ====== ORBS / DIG ======
+  ;;  (('dig1)  ;; with guards and explosive barrels
+  ;; {
+  ;;   "trans": [ 233.26, -69.1, -1831.89 ], // #t left once in main room, extended over lava under cag
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [233.26, -69.1, -1831.8, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "dig1-skill-1"
+  ;;     }
+  ;;   },
+  ;;     )
+  ;;  (('dig3a)) ;; first room with metalheads and totem
+      
+  ;;  (('dig3b)) ;; back room with metalheads and buttons
+      
+  ;;   ;; ====== ORBS / CANYON ======
+  ;;   ;; fake level - see MOUNTAIN
+  ;;   ;; ====== ORBS / CONSITE ======
+  ;;  (('consite 'consiteb))
+      
+  ;;   ;; ====== ORBS / UNDER ======
+  ;;  (('under 'underb))
+      
+  ;;   ;; ====== ORBS / NEST ======
+  ;;  (('nest))  ;; outside
+      
+  ;;  (('nestb)) ;; inside
+      
+  ;;   ;; ====== ORBS / DEFAULT ======
+  ;;  (('village1) ;; ===
+  ;; {
+  ;;   "trans": [ -26.5,    22.0,    -83.7   ], // #t  top of farmers hu
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-26,.5,    22.0    -83.7 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-1"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -30.3,    8.7,     -68.4   ], // #t  tucked under farmers hut roo
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-30,.3,    8.7     -68.4 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-2"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 6.5,      23.2,    -108.3  ], // #t  tree towards fire canyo
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [6.5,      23.2,    -108.3, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-3"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 84.6,     28.0,    30.0    ], // #t  ledge above oracl
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [84.6,     28.0,    30.0  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-4"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 79.7,     18.0,    -41.5   ], // #t  outer ledge on path to oracl
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [79.7,     18.0,    -41.5 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-5"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -25.5,    4.7,     -66.6   ], // #t  fireplace in farmers hu
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-25,.5,    4.7     -66.6 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-6"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 88.18,    18.57,   18.87   ], // #t  behind oracle mout
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [88.18,    18.57,   18.87 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-7"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -107.9,   35.0,    219.7   ], // #t  behind samos hu
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-107,.9,   35.0    219.7 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-8"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -182.85,  32.9,    213.01  ], // #t  on rocks/ferns near samos hut, need to come from behin
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-182,.85,  32.9    213.01, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-9"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -90.6,    49.90,   34.6    ], // #t on honeycomb on mayor windmill (abbah; replacement for on pillars supporting samos hut
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-90,.6,    49.90   34.6  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-10"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -72.2,    25.5,    141.4   ], // #t in tree coming from samos hu
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-72,.2,    25.5    141.4 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-11"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -75.5,    1.8,     109.7   ], // #t in broken boa
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-75,.5,    1.8     109.7 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-12"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -125.0,   21.5,    42.7    ], // #t mayors roof in the bac
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-125,.0,   21.5    42.7  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-13"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -58.0,    15.6,    -34.2   ], // #t in cage in bird ladys hous
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-58,.0,    15.6    -34.2 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-14"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -50.3,    11.5,    36.9    ], // #t by uncles be
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-50,.3,    11.5    36.9  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-15"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -63.5,    16.3,    71.5    ], // #t in net in fisherman
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-63,.5,    16.3    71.5  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-16"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 13.8,     12.2,    20.5    ], // #t near blue eco spaw
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [13.8,     12.2,    20.5  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-17"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 74.9,     6.5,     25.0    ], // #t below oracl
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [74.9,     6.5,     25.0  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-18"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -141.4,   9.8,     -13.5   ], // #t behind sculptors hous
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-141,.4,   9.8     -13.5 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-19"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -103.6,   1.5,     -38.5   ], // #t corner by stairs to beac
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-103,.6,   1.5     -38.5 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-20"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 117.1,    7.8,     -51.2   ], // #t upper corner ledge in water between yakows/oracl
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [117.1,    7.8,     -51.2 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-21"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 73.5,     14.5,    -169.0  ], // #t ledge in crop fiel
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [73.5,     14.5,    -169.0, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-22"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 48.6,     20.5,    -85.1   ], // #t ledge above yakows towards oracl
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [48.6,     20.5,    -85.1 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-23"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 134.4,    12.0,    -20.3   ], // #t behind sculptors rock (replacement for under fishermans boat
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [134.4,    12.0,    -20.3 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-24"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -43.7,    3.7,     25.5    ], // #t behind uncle hous
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-43,.7,    3.7     25.5  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-25"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -157.0,   14.8,    -87.8   ], // #t high ledge towards beac
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-157,.0,   14.8    -87.8 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-26"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 123.5,    21.8,    -52.74  ], // #t abbah bounce up to ledge above skill-21 (replacement for high ledge towards beach 2
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [123.5,    21.8,    -52.74, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-27"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -126.2,   12.5,    -96.0   ], // #t high ledge towards beach 
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-126,.2,   12.5    -96.0 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-28"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -101.5,   11.8,    -73.0   ], // #t corner ledge towards beac
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-101,.5,   11.8    -73.0 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-29"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -121.87,  12.05,   49.9    ], // #f back left room of mayors hous
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-121,.87,  12.05   49.9  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-30"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -146.2,   35.0,    211.5   ], // #t near keir
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-146,.2,   35.0    211.5 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-31"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -118.0,   46.5,    208.0   ], // #t in samos hut, left of warp gat
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-118,.0,   46.5    208.0 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-32"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -105.4,   13.3,    73.15   ], // #f in fountai
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-105,.4,   13.3    73.15 , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-33"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ -122.1,   19.0,    14.5    ], // #t tree by mayor/sculpto
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [-122,.1,   19.0    14.5  , 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-34"
+  ;;     }
+  ;;   },
+  ;; {
+  ;;   "trans": [ 207.5,    12.2,    -122.0  ], // #t near mirror
+  ;;     "etype": "skill",  // actor type
+  ;;     "game_task": 0, // associated game task (for powercells, etc)
+  ;;     "quat" : [0, 0, 0, 1], // quaternion
+  ;;     "bsphere": [207.5,    12.2,    -122.0, 10], // bounding sphere
+  ;;     "lump": {
+  ;;       "name": "village1-skill-35"
+  ;;     }
+  ;;   },
+
+
+
 (defun mod-spawn-new-entities ((level symbol))
   (format 0 "spawning extra mod entities for level ~A~%" level)
   (case level

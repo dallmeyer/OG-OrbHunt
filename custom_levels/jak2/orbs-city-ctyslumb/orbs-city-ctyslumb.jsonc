@@ -1,16 +1,16 @@
 {
   // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
   // the name of this file, and the folder this file is in must have the same name.
-  "long_name": "orbs-city-ctygena",
+  "long_name": "orbs-city-ctyslumb",
   // The file name, should be upper case and 8 characters or less.
-  "iso_name": "OC0",
+  "iso_name": "OC5",
   // The nickname, should be exactly 3 characters
-  "nickname": "oc0", // 3 char name, all lowercase
+  "nickname": "oc5", // 3 char name, all lowercase
   // Background mesh file.
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_levels/jak2/orbs-city-ctygena/orbs-city-ctygena.glb",
+  "gltf_file": "custom_levels/jak2/orbs-city-ctyslumb/orbs-city-ctyslumb.glb",
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -46,15 +46,55 @@
    "textures": [],
 
   "actors" : [
-    // 'ctygena (canals near farm)
+    // 'ctyslumb (near prison exit)
     {
-      "trans": [ -311.7,   24.6,    -357.85 ], // up on high ledge at first turn from farm, jump from zoomer ez
+      "trans": [ 548.85,   40.5,    -0.73   ], // #t  immediately up left from prison exit (can get back up ejecting from zoomer), grab then with jump + abbah bounce, or return with jetboard
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-311.7,   24.6,    -357.85, 10], // bounding sphere
+      "bsphere": [548.85,   40.5,    -0.73 , 10], // bounding sphere
       "lump": {
-        "name":"ctygena-skill-1"
+        "name": "ctyslumb-skill-1"
+      }
+    },
+    {
+      "trans": [ 501.0,    9.1,     -192.0  ], // #t  behind burning can towards ctyslumc (water slums)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [501.0,    9.1,     -192.0, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-2"
+      }
+    },
+    {
+      "trans": [ 693.0,    35.05,   -310.3  ], // #t  up high near billboards, jump from vehicle to pipes
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [693.0,    35.05,   -310.3, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-3"
+      }
+    },
+    {
+      "trans": [ 430.0,    9.3,     -18.9   ], // #t  inside end of pipe near green barrier
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [430.0,    9.3,     -18.9 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-4"
+      }
+    },
+    {
+      "trans": [ 636.2,    43.3,    -172.4  ], // #t ; climb pipe (first intersection after prison exit)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [636.2,    43.3,    -172.4, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-2"
       }
     }
     // {

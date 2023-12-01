@@ -1,16 +1,16 @@
 {
   // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
   // the name of this file, and the folder this file is in must have the same name.
-  "long_name": "orbs-city",
+  "long_name": "orbs-castle-caspad",
   // The file name, should be upper case and 8 characters or less.
-  "iso_name": "O01",
+  "iso_name": "O0K",
   // The nickname, should be exactly 3 characters
-  "nickname": "o01", // 3 char name, all lowercase
+  "nickname": "o0k", // 3 char name, all lowercase
   // Background mesh file.
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_levels/jak2/orbs-city/orbs-city.glb",
+  "gltf_file": "custom_levels/jak2/orbs-castle-caspad/orbs-castle-caspad.glb",
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -46,27 +46,138 @@
    "textures": [],
 
   "actors" : [
+    // 'caspad (landing pad connecting atoll, dig, castle)
     {
-      "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
+      "trans": [ 301.1,    43.2,    -1700.2   ], // #t  up above tree/rock near dig entranc
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
+      "bsphere": [301.1,    43.2,    -1700.2 , 10], // bounding sphere
       "lump": {
-        "name":"city-skill-01"
+        "name": "caspad-skill-1"
       }
     },
-    // HOVER CELLS
     {
-      "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
+      "trans": [ 218.02,   34.14,   -1724.96  ], // #t  in crack of rocks between dig/castl
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
+      "bsphere": [218.02,   34.14,   -1724.96, 10], // bounding sphere
       "lump": {
-        "name":"city-skill-02",
-        "pickup-amount": ["float", 3.0]  // goldge
+        "name": "caspad-skill-2"
+      }
+    },
+    {
+      "trans": [ 236.98,   48.8,    -1709.0   ], // #t  up & right from skill-2 (abbah
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [236.98,   48.8,    -1709.0 , 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-3"
+      }
+    },
+    {
+      "trans": [ 209.75,   45.8,    -1730.5   ], // #t  up & left from skill-2 (abbah
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [209.75,   45.8,    -1730.5 , 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-4"
+      }
+    },
+    {
+      "trans": [ 190.1,    58.8,    -1713.6   ], // #t  up & left from skill-4 (or maybe abbah?
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [190.1,    58.8,    -1713.6 , 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-5"
+      }
+    },
+    {
+      "trans": [ 127.4,    66.2,    -1698.9   ], // #t  atop tall rock towards castle entrance (abbah
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [127.4,    66.2,    -1698.9 , 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-6"
+      }
+    },
+    {
+      "trans": [ 83.42,    75.16,   -1704.72  ], // #t  atop rocks right right outside castle entrance (abbah
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [83.42,    75.16,   -1704.72, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-7"
+      }
+    },
+    {
+      "trans": [ 216.53,   37.08,   -1570.87  ], // #t  in crack in rocks between castle and atol
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [216.53,   37.08,   -1570.87, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-8"
+      }
+    },
+    {
+      "trans": [ 203.31,   53.4,    -1568.01  ], // #t  up/right from skill-
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [203.31,   53.4,    -1568.01, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-9"
+      }
+    },
+    {
+      "trans": [ 189.67,   72.7,    -1554.08  ], // #t up from skill-9 (abbah
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [189.67,   72.7,    -1554.08, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-10"
+      }
+    },
+    {
+      "trans": [ 202.31,   83.6,    -1546.70  ], // #t low-poly leaves are solid, free orb near skill-1
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [202.31,   83.6,    -1546.70, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-11"
+      }
+    },
+    {
+      "trans": [ 79.62,    121.5,   -1519.64  ], // #t low-poly leaves, way in the back towards castl
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [79.62,    121.5,   -1519.64, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-12"
       }
     }
+    // HOVER CELLS
+    // {
+    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
+    //   "etype": "skill",  // actor type
+    //   "game_task": 0, // associated game task (for powercells, etc)
+    //   "quat" : [0, 0, 0, 1], // quaternion
+    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
+    //   "lump": {
+    //     "name":"city-skill-02",
+    //     "pickup-amount": ["float", 3.0]  // goldge
+    //   }
+    // }
   ]
 }

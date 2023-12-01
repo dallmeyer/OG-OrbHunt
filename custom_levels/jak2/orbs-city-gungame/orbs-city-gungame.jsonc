@@ -1,16 +1,16 @@
 {
   // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
   // the name of this file, and the folder this file is in must have the same name.
-  "long_name": "orbs-city-ctygena",
+  "long_name": "orbs-city-gungame",
   // The file name, should be upper case and 8 characters or less.
-  "iso_name": "OC0",
+  "iso_name": "OCJ",
   // The nickname, should be exactly 3 characters
-  "nickname": "oc0", // 3 char name, all lowercase
+  "nickname": "ocj", // 3 char name, all lowercase
   // Background mesh file.
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_levels/jak2/orbs-city-ctygena/orbs-city-ctygena.glb",
+  "gltf_file": "custom_levels/jak2/orbs-city-gungame/orbs-city-gungame.glb",
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -46,15 +46,64 @@
    "textures": [],
 
   "actors" : [
-    // 'ctygena (canals near farm)
     {
-      "trans": [ -311.7,   24.6,    -357.85 ], // up on high ledge at first turn from farm, jump from zoomer ez
+      "trans": [ 456.60,   23.0,    1299.11 ], // #t up above pipes on right wall of lobb
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-311.7,   24.6,    -357.85, 10], // bounding sphere
+      "bsphere": [456.60,   23.0,    1299.1, 10], // bounding sphere
       "lump": {
-        "name":"ctygena-skill-1"
+        "name": "gungame-skill-1"
+      }
+    },
+    {
+      "trans": [ 419.0,    9.2,     1302.0  ], // #t behind lockers in corner of lobb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [419.0,    9.2,     1302.0, 10], // bounding sphere
+      "lump": {
+        "name": "gungame-skill-2"
+      }
+    },
+    {
+      "trans": [ 410.50,   21.2,    1267.3  ], // #t up high in beginning of left path (nearby pillar is infin jump
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [410.50,   21.2,    1267.3, 10], // bounding sphere
+      "lump": {
+        "name": "gungame-skill-3"
+      }
+    },
+    {
+      "trans": [ 464.5,    20.86,   1200.4  ], // #t up behind pipes at last 90 turn (jump from pipes or infin jump pillar
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [464.5,    20.86,   1200.4, 10], // bounding sphere
+      "lump": {
+        "name": "gungame-skill-4"
+      }
+    },
+    {
+      "trans": [ 441.0,    18.8,    1252.8  ], // #f top of pipe towards end of pat
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [441.0,    18.8,    1252.8, 10], // bounding sphere
+      "lump": {
+        "name": "gungame-skill-5"
+      }
+    },
+    {
+      "trans": [ 437.95,   18.0,    1218.84 ], // #t  up in corner of one of the closets where dummies spaw
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [437.95,   18.0,    1218.8, 10], // bounding sphere
+      "lump": {
+        "name": "gungame-skill-6"
       }
     }
     // {

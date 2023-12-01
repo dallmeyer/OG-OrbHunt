@@ -1,16 +1,16 @@
 {
   // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
   // the name of this file, and the folder this file is in must have the same name.
-  "long_name": "orbs-city-ctygena",
+  "long_name": "orbs-city-ctyindb",
   // The file name, should be upper case and 8 characters or less.
-  "iso_name": "OC0",
+  "iso_name": "OCB",
   // The nickname, should be exactly 3 characters
-  "nickname": "oc0", // 3 char name, all lowercase
+  "nickname": "ocb", // 3 char name, all lowercase
   // Background mesh file.
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_levels/jak2/orbs-city-ctygena/orbs-city-ctygena.glb",
+  "gltf_file": "custom_levels/jak2/orbs-city-ctyindb/orbs-city-ctyindb.glb",
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -46,15 +46,55 @@
    "textures": [],
 
   "actors" : [
-    // 'ctygena (canals near farm)
+    // 'ctyindb (between slums/bazaar/ctyinda)
     {
-      "trans": [ -311.7,   24.6,    -357.85 ], // up on high ledge at first turn from farm, jump from zoomer ez
+      "trans": [ 1067.76,  8.6,     494.14  ], // #t in corner above sewers entrance
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-311.7,   24.6,    -357.85, 10], // bounding sphere
+      "bsphere": [1067.76,  8.6,     494.14, 10], // bounding sphere
       "lump": {
-        "name":"ctygena-skill-1"
+        "name": "ctyindb-skill-1"
+      }
+    },
+    {
+      "trans": [ 842.1,    8.6,     465.7   ], // #t between ramp and wall near bazaar
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [842.1,    8.6,     465.7 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-2"
+      }
+    },
+    {
+      "trans": [ 1151.34,  10.8,    714.0   ], // #t behind pipes couple turns past sewers towards path to port
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1151.34,  10.8,    714.0 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-3"
+      }
+    },
+    {
+      "trans": [ 896.9,    16.4,    408.6   ], // #f atop ctyindb-part-52 (one of the lights within walkway pillars, in corner you never visit)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [896.9,    16.4,    408.6 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-4"
+      }
+    },
+    {
+      "trans": [ 1100.6,   13.7,    518.44  ], // #t  between generator/pipes in deload-into-sewers corner by ctyslum
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1100.6,   13.7,    518.44, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-5"
       }
     }
     // {

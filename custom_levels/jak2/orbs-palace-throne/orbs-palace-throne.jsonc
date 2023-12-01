@@ -1,16 +1,16 @@
 {
   // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
   // the name of this file, and the folder this file is in must have the same name.
-  "long_name": "orbs-city",
+  "long_name": "orbs-palace-throne",
   // The file name, should be upper case and 8 characters or less.
-  "iso_name": "O01",
+  "iso_name": "O0I",
   // The nickname, should be exactly 3 characters
-  "nickname": "o01", // 3 char name, all lowercase
+  "nickname": "o0i", // 3 char name, all lowercase
   // Background mesh file.
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_levels/jak2/orbs-city/orbs-city.glb",
+  "gltf_file": "custom_levels/jak2/orbs-palace-throne/orbs-palace-throne.glb",
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -47,26 +47,46 @@
 
   "actors" : [
     {
-      "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
+      "trans": [ 122.92,   340.6,   531.25  ], // #t  in gap under walkway to thron
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
+      "bsphere": [122.92,   340.6,   531.25, 10], // bounding sphere
       "lump": {
-        "name":"city-skill-01"
+        "name": "throne-skill-1"
       }
     },
-    // HOVER CELLS
     {
-      "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
+      "trans": [ 103.0,    374.5,   499.15  ], // #t  window above throne (abbah duh
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
+      "bsphere": [103.0,    374.5,   499.15, 10], // bounding sphere
       "lump": {
-        "name":"city-skill-02",
-        "pickup-amount": ["float", 3.0]  // goldge
+        "name": "throne-skill-2"
+      }
+    },
+    {
+      "trans": [ 183.74,   345.5,   549.98  ], // #t  corner before drop down to palen
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [183.74,   345.5,   549.98, 10], // bounding sphere
+      "lump": {
+        "name": "throne-skill-3"
       }
     }
+    // HOVER CELLS
+    // {
+    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
+    //   "etype": "skill",  // actor type
+    //   "game_task": 0, // associated game task (for powercells, etc)
+    //   "quat" : [0, 0, 0, 1], // quaternion
+    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
+    //   "lump": {
+    //     "name":"city-skill-02",
+    //     "pickup-amount": ["float", 3.0]  // goldge
+    //   }
+    // }
   ]
 }

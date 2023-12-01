@@ -4,5 +4,5 @@
 ;; the actual file name still needs to be 8.3
 ("OC0.DGO"
  (
-  "orbs-city-ctygena.go"
+  "orbs-city-vinroom.go"
   ))
