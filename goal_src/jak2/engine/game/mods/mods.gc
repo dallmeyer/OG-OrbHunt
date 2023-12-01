@@ -404,22 +404,22 @@
   ;;   (spawn-skill 693.65   46.0    199.09  #t "forresca-skill-1")  ;; way up behind cylinder in right corner (computer > HJ from lil pipe to left pipe > DEEP extended to right pipes > standpoint on cylinder > higher on pipes > GG)
   ;;   )  
     ;; ====== ORBS / STADIUM ======
-   (('garage)  ;; keira garage
-    (spawn-skill 126.4    12.5    -442.7  #f "garage-skill-1")  ;; in box inside barrel in back of garage
-    (spawn-skill 105.5    24.5    -407.7  #t "garage-skill-2")  ;; above lamp
-    )
-   (('stadium)
-    (spawn-skill 171.35   31.00   -511.70 #t "stadium-skill-1") ;; outside, up behind sculpture's head on left side
-    )
-   (('skatea)
-    (spawn-skill  12.5    12.0    -692.6  #t "skatea-skill-1")  ;; behind glass wall at start, go around or over
-    (spawn-skill  -72.35  -6.99   -465.50 #t "skatea-skill-2")  ;; behind some ramps and things against wall opposite entrance
-      )
-   (('stadiumb))
+  ;;  (('garage)  ;; keira garage
+  ;;   (spawn-skill 126.4,    12.5,    -442.7  #f "garage-skill-1")  ;; in box inside barrel in back of garage
+  ;;   (spawn-skill 105.5,    24.5,    -407.7  #t "garage-skill-2")  ;; above lamp
+  ;;   )
+  ;;  (('stadium)
+  ;;   (spawn-skill 171.35   31.00   -511.70 #t "stadium-skill-1") ;; outside, up behind sculpture's head on left side
+  ;;   )
+  ;;  (('skatea)
+  ;;   (spawn-skill  12.5,    12.0,    -692.6  #t "skatea-skill-1")  ;; behind glass wall at start, go around or over
+  ;;   (spawn-skill  -72.35,  -6.99,   -465.50 #t "skatea-skill-2")  ;; behind some ramps and things against wall opposite entrance
+  ;;     )
+  ;;  (('stadiumb))
       
-   (('stadiumc))
+  ;;  (('stadiumc))
       
-   (('stadiumd))
+  ;;  (('stadiumd))
       
     ;; ====== ORBS / PALACE ======
    (('palcab) ;; (cable bridge to palace) ===

@@ -298,14 +298,249 @@
 ;; Set up the build system to build the level geometry
 ;; this path is relative to the custom_levels/jak2 folder
 ;; it should point to the .jsonc file that specifies the level.
-(build-custom-level "orbs-ctygena")
-(custom-level-cgo "OC0.DGO" "orbs-ctygena/orbs-ctygena.gd")
 
-(build-custom-level "orbs-prison")
-(custom-level-cgo "O00.DGO" "orbs-prison/orbs-prison.gd")
 
-(build-custom-level "orbs-forexita")
-(custom-level-cgo "O01.DGO" "orbs-forexita/orbs-forexita.gd")
+;; (build-custom-level "orbs-city-vinroom")
+;; (custom-level-cgo "OC0.DGO" "orbs-city-vinroom/orbs-city-vinroom.gd")
+
+(build-custom-level "orbs-city-ctygena")
+(custom-level-cgo "OC1.DGO" "orbs-city-ctygena/orbs-city-ctygena.gd")
+
+;; (build-custom-level "orbs-city-ctygenb")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctygenb/orbs-city-ctygenb.gd")
+
+;; (build-custom-level "orbs-city-ctygenc")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctygenc/orbs-city-ctygenc.gd")
+
+;; (build-custom-level "orbs-city-ctysluma")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctysluma/orbs-city-ctysluma.gd")
+
+;; (build-custom-level "orbs-city-ctyslumb")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctyslumb/orbs-city-ctyslumb.gd")
+
+;; (build-custom-level "orbs-city-ctyslumc")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctyslumc/orbs-city-ctyslumc.gd")
+
+;; (build-custom-level "orbs-city-ctyport")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctyport/orbs-city-ctyport.gd")
+
+;; (build-custom-level "orbs-city-ctyfarma")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctyfarma/orbs-city-ctyfarma.gd")
+
+;; (build-custom-level "orbs-city-ctyfarmb")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctyfarmb/orbs-city-ctyfarmb.gd")
+
+;; (build-custom-level "orbs-city-ctyinda")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctyinda/orbs-city-ctyinda.gd")
+
+;; (build-custom-level "orbs-city-ctyindb")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctyindb/orbs-city-ctyindb.gd")
+
+;; (build-custom-level "orbs-city-ctymarka")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctymarka/orbs-city-ctymarka.gd")
+
+;; (build-custom-level "orbs-city-ctymarkb")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctymarkb/orbs-city-ctymarkb.gd")
+
+;; (build-custom-level "orbs-city-ctypal")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-ctypal/orbs-city-ctypal.gd")
+
+;; (build-custom-level "orbs-city-onintent")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-onintent/orbs-city-onintent.gd")
+
+;; (build-custom-level "orbs-city-oracle")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-oracle/orbs-city-oracle.gd")
+
+;; (build-custom-level "orbs-city-hideout")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-hideout/orbs-city-hideout.gd")
+
+;; (build-custom-level "orbs-city-hiphog")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-hiphog/orbs-city-hiphog.gd")
+
+;; (build-custom-level "orbs-city-gungame")
+;; (custom-level-cgo "OXX.DGO" "orbs-city-gungame/orbs-city-gungame.gd")
+
+
+(build-custom-level "orbs-fortress-prison")
+(custom-level-cgo "O00.DGO" "orbs-fortress-prison/orbs-fortress-prison.gd")
+
+(build-custom-level "orbs-fortress-forexita")
+(custom-level-cgo "O01.DGO" "orbs-fortress-forexita/orbs-fortress-forexita.gd")
+
+(build-custom-level "orbs-fortress-forexitb")
+(custom-level-cgo "O02.DGO" "orbs-fortress-forexitb/orbs-fortress-forexitb.gd")
+
+(build-custom-level "orbs-fortress-forresca")
+(custom-level-cgo "O03.DGO" "orbs-fortress-forresca/orbs-fortress-forresca.gd")
+
+(build-custom-level "orbs-fortress-forrescb")
+(custom-level-cgo "O04.DGO" "orbs-fortress-forrescb/orbs-fortress-forrescb.gd")
+
+(build-custom-level "orbs-fortress-fordumpa")
+(custom-level-cgo "O05.DGO" "orbs-fortress-fordumpa/orbs-fortress-fordumpa.gd")
+
+(build-custom-level "orbs-fortress-fordumpb")
+(custom-level-cgo "O06.DGO" "orbs-fortress-fordumpb/orbs-fortress-fordumpb.gd")
+
+(build-custom-level "orbs-fortress-fordumpc")
+(custom-level-cgo "O07.DGO" "orbs-fortress-fordumpc/orbs-fortress-fordumpc.gd")
+
+(build-custom-level "orbs-fortress-fordumpd")
+(custom-level-cgo "O08.DGO" "orbs-fortress-fordumpd/orbs-fortress-fordumpd.gd")
+
+
+(build-custom-level "orbs-stadium-stadium")
+(custom-level-cgo "O09.DGO" "orbs-stadium-stadium/orbs-stadium-stadium.gd")
+
+(build-custom-level "orbs-stadium-stadiumb")
+(custom-level-cgo "O0A.DGO" "orbs-stadium-stadiumb/orbs-stadium-stadiumb.gd")
+
+(build-custom-level "orbs-stadium-stadiumc")
+(custom-level-cgo "O0B.DGO" "orbs-stadium-stadiumc/orbs-stadium-stadiumc.gd")
+
+(build-custom-level "orbs-stadium-stadiumd")
+(custom-level-cgo "O0C.DGO" "orbs-stadium-stadiumd/orbs-stadium-stadiumd.gd")
+
+(build-custom-level "orbs-stadium-skatea")
+(custom-level-cgo "O0D.DGO" "orbs-stadium-skatea/orbs-stadium-skatea.gd")
+
+(build-custom-level "orbs-stadium-garage")
+(custom-level-cgo "O0E.DGO" "orbs-stadium-garage/orbs-stadium-garage.gd")
+
+
+;; (build-custom-level "orbs-palace-palcab")
+;; (custom-level-cgo "OXX.DGO" "orbs-palace-palcab/orbs-palace-palcab.gd")
+
+;; (build-custom-level "orbs-palace-palshaft")
+;; (custom-level-cgo "OXX.DGO" "orbs-palace-palshaft/orbs-palace-palshaft.gd")
+
+;; (build-custom-level "orbs-palace-palroof")
+;; (custom-level-cgo "OXX.DGO" "orbs-palace-palroof/orbs-palace-palroof.gd")
+
+;; (build-custom-level "orbs-palace-throne")
+;; (custom-level-cgo "OXX.DGO" "orbs-palace-throne/orbs-palace-throne.gd")
+
+;; (build-custom-level "orbs-palace-palent")
+;; (custom-level-cgo "OXX.DGO" "orbs-palace-palent/orbs-palace-palent.gd")
+
+
+;; (build-custom-level "orbs-castle-caspad")
+;; (custom-level-cgo "OXX.DGO" "orbs-castle-caspad/orbs-castle-caspad.gd")
+
+;; (build-custom-level "orbs-castle-castle")
+;; (custom-level-cgo "OXX.DGO" "orbs-castle-castle/orbs-castle-castle.gd")
+
+;; (build-custom-level "orbs-castle-casboss")
+;; (custom-level-cgo "OXX.DGO" "orbs-castle-casboss/orbs-castle-casboss.gd")
+
+
+;; (build-custom-level "orbs-ruins-ruins")
+;; (custom-level-cgo "OXX.DGO" "orbs-ruins-ruins/orbs-ruins-ruins.gd")
+
+;; (build-custom-level "orbs-ruins-sagehut")
+;; (custom-level-cgo "OXX.DGO" "orbs-ruins-sagehut/orbs-ruins-sagehut.gd")
+
+
+;; (build-custom-level "orbs-atoll-atoll")
+;; (custom-level-cgo "OXX.DGO" "orbs-atoll-atoll/orbs-atoll-atoll.gd")
+
+
+;; (build-custom-level "orbs-sewer-sewer")
+;; (custom-level-cgo "OXX.DGO" "orbs-sewer-sewer/orbs-sewer-sewer.gd")
+
+;; (build-custom-level "orbs-sewer-sewerb")
+;; (custom-level-cgo "OXX.DGO" "orbs-sewer-sewerb/orbs-sewer-sewerb.gd")
+
+;; (build-custom-level "orbs-sewer-sewesc")
+;; (custom-level-cgo "OXX.DGO" "orbs-sewer-sewesc/orbs-sewer-sewesc.gd")
+
+;; (build-custom-level "orbs-sewer-sewescb")
+;; (custom-level-cgo "OXX.DGO" "orbs-sewer-sewescb/orbs-sewer-sewescb.gd")
+
+
+;; (build-custom-level "orbs-strip-strip")
+;; (custom-level-cgo "OXX.DGO" "orbs-strip-strip/orbs-strip-strip.gd")
+
+
+;; (build-custom-level "orbs-mountain-mountain")
+;; (custom-level-cgo "OXX.DGO" "orbs-mountain-mountain/orbs-mountain-mountain.gd")
+
+;; (build-custom-level "orbs-mountain-mincan")
+;; (custom-level-cgo "OXX.DGO" "orbs-mountain-mincan/orbs-mountain-mincan.gd")
+
+
+;; (build-custom-level "orbs-forest-forest")
+;; (custom-level-cgo "OXX.DGO" "orbs-forest-forest/orbs-forest-forest.gd")
+
+;; (build-custom-level "orbs-forest-forestb")
+;; (custom-level-cgo "OXX.DGO" "orbs-forest-forestb/orbs-forest-forestb.gd")
+
+
+;; (build-custom-level "orbs-drill-drill")
+;; (custom-level-cgo "OXX.DGO" "orbs-drill-drill/orbs-drill-drill.gd")
+
+;; (build-custom-level "orbs-drill-drillmid")
+;; (custom-level-cgo "OXX.DGO" "orbs-drill-drillmid/orbs-drill-drillmid.gd")
+
+;; (build-custom-level "orbs-drill-drillb")
+;; (custom-level-cgo "OXX.DGO" "orbs-drill-drillb/orbs-drill-drillb.gd")
+
+
+;; (build-custom-level "orbs-tomb-tomba")
+;; (custom-level-cgo "OXX.DGO" "orbs-tomb-tomba/orbs-tomb-tomba.gd")
+
+;; (build-custom-level "orbs-tomb-tombb")
+;; (custom-level-cgo "OXX.DGO" "orbs-tomb-tombb/orbs-tomb-tombb.gd")
+
+;; (build-custom-level "orbs-tomb-tombc")
+;; (custom-level-cgo "OXX.DGO" "orbs-tomb-tombc/orbs-tomb-tombc.gd")
+
+;; (build-custom-level "orbs-tomb-tombd")
+;; (custom-level-cgo "OXX.DGO" "orbs-tomb-tombd/orbs-tomb-tombd.gd")
+
+;; (build-custom-level "orbs-tomb-tombe")
+;; (custom-level-cgo "OXX.DGO" "orbs-tomb-tombe/orbs-tomb-tombe.gd")
+
+;; (build-custom-level "orbs-tomb-tombboss")
+;; (custom-level-cgo "OXX.DGO" "orbs-tomb-tombboss/orbs-tomb-tombboss.gd")
+
+
+;; (build-custom-level "orbs-dig-dig1")
+;; (custom-level-cgo "OXX.DGO" "orbs-dig-dig1/orbs-dig-dig1.gd")
+
+;; (build-custom-level "orbs-dig-dig3a")
+;; (custom-level-cgo "OXX.DGO" "orbs-dig-dig3a/orbs-dig-dig3a.gd")
+
+;; (build-custom-level "orbs-dig-dig3b")
+;; (custom-level-cgo "OXX.DGO" "orbs-dig-dig3b/orbs-dig-dig3b.gd")
+
+
+;; (build-custom-level "orbs-consite-consite")
+;; (custom-level-cgo "OXX.DGO" "orbs-consite-consite/orbs-consite-consite.gd")
+
+;; (build-custom-level "orbs-consite-consiteb")
+;; (custom-level-cgo "OXX.DGO" "orbs-consite-consiteb/orbs-consite-consiteb.gd")
+
+
+;; (build-custom-level "orbs-under-under")
+;; (custom-level-cgo "OXX.DGO" "orbs-under-under/orbs-under-under.gd")
+
+;; (build-custom-level "orbs-under-underb")
+;; (custom-level-cgo "OXX.DGO" "orbs-under-underb/orbs-under-underb.gd")
+
+
+;; (build-custom-level "orbs-nest-nest")
+;; (custom-level-cgo "OXX.DGO" "orbs-nest-nest/orbs-nest-nest.gd")
+
+;; (build-custom-level "orbs-nest-nestb")
+;; (custom-level-cgo "OXX.DGO" "orbs-nest-nestb/orbs-nest-nestb.gd")
+
+
+;; (build-custom-level "orbs-default-village1")
+;; (custom-level-cgo "OXX.DGO" "orbs-default-village1/orbs-default-village1.gd")
+
+;; (build-custom-level "orbs-default-halfpipe")
+;; (custom-level-cgo "OXX.DGO" "orbs-default-halfpipe/orbs-default-halfpipe.gd")
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; ANIMATIONS

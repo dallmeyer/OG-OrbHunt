@@ -1,0 +1,111 @@
+{
+  // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
+  // the name of this file, and the folder this file is in must have the same name.
+  "long_name": "orbs-fortress-forexita",
+  // The file name, should be upper case and 8 characters or less.
+  "iso_name": "O01",
+  // The nickname, should be exactly 3 characters
+  "nickname": "o01", // 3 char name, all lowercase
+  // Background mesh file.
+  // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
+  // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
+  // only have 1.
+  "gltf_file": "custom_levels/jak2/orbs-fortress-forexita/orbs-fortress-forexita.glb",
+
+  // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
+  "automatic_wall_detection": true,
+  "automatic_wall_angle": 45.0,
+
+  // if your mesh has triangles with incorrect orientation, set this to make all collision mesh triangles double sided
+  // this makes collision 2x slower and bigger, so only use if really needed
+  "double_sided_collide": false,
+
+  // available res-lump tag data types:
+  // int32, float, meters, vector, vector4m (meters)
+  //
+  // examples:
+  //
+  // adds a float tag 'spring-height' with value of 200 meters (1 meter = 4096.0 units):
+  // "spring-height": ["meters", 200.0]
+  //
+  // adds a vector tag 'movie-pos':
+  // "movie-pos": ["vector", [4096000.0, -176128.0, 1353973.76, 1.0]]
+
+   // The base actor id for your custom level. If you have multiple levels, this should be unique!
+   "base_id": 3000,
+
+  // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
+  // Removed so that the release builds don't have to double-decompile the game
+  //"art_groups": ["prsn-torture-ag"],
+  "art_groups": [],
+
+   // Any textures you want to include in your custom level.
+   // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
+   // To get a list of all the textures, you can extract all of the game's textures
+   // by setting "save_texture_pngs" to true in the decompiler config.
+   "textures": [],
+
+  "actors" : [
+    // 'forexita (3rd room until shooting you from below)
+    {
+      "trans": [ 561.5, 95.0, 126.05], // way up between pipes on left where you learn to crouch jump (boosted from nearby pipe climb)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 561.5, 95.0, 126.05, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-1"
+      }
+    },
+    {
+      "trans": [ 586.0, 77.0, 91.48 ], // against wall above machines near first guard (jump off small pipe) 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 586.0, 77.0, 91.48 , 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-2"
+      }
+    },
+    {
+      "trans": [ 689.9, 93.0, 111.55], // way up on pipes above swingpole
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 689.9, 93.0, 111.55, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-3"
+      }
+    },
+    {
+      "trans": [ 725.33, 57.0, 180.1 ], // in pit below where original orb is, but behind metal tubing on right
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 725.33, 57.0, 180.1 , 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-4"
+      }
+    },
+    {
+      "trans": [ 750.21, 91.3, 167.9 ], // end of hallway before next section, way up on pipes
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 750.21, 91.3, 167.9 , 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-5"
+      }
+    },
+    {
+      "trans": [ 676.46, 99.24, 169.99], // farther up from ^ and then backtrack
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 676.46, 99.24, 169.99, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-6"
+      }
+    }
+  ]
+}
