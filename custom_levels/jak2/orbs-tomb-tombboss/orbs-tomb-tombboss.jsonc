@@ -1,16 +1,16 @@
 {
   // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
   // the name of this file, and the folder this file is in must have the same name.
-  "long_name": "orbs-city",
+  "long_name": "orbs-tomb-tombboss",
   // The file name, should be upper case and 8 characters or less.
-  "iso_name": "O01",
+  "iso_name": "O17",
   // The nickname, should be exactly 3 characters
-  "nickname": "o01", // 3 char name, all lowercase
+  "nickname": "o17", // 3 char name, all lowercase
   // Background mesh file.
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_levels/jak2/orbs-city/orbs-city.glb",
+  "gltf_file": "custom_levels/jak2/orbs-tomb-tombboss/orbs-tomb-tombboss.glb",
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -46,27 +46,29 @@
    "textures": [],
 
   "actors" : [
-    {
-      "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
-      "lump": {
-        "name":"city-skill-01"
-      }
-    },
-    // HOVER CELLS
-    {
-      "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-      "lump": {
-        "name":"city-skill-02",
-        "pickup-amount": ["float", 3.0]  // goldge
-      }
-    }
+    // praxis 2
+    // 255.85 -69.420 1411.91)) ;; where daxter exits chase in boss room (tomb-boss-door changed to open if boss completed)
+    // {
+    //   "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
+    //   "etype": "skill",  // actor type
+    //   "game_task": 0, // associated game task (for powercells, etc)
+    //   "quat" : [0, 0, 0, 1], // quaternion
+    //   "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
+    //   "lump": {
+    //     "name":"city-skill-01"
+    //   }
+    // },
+    // // HOVER CELLS
+    // {
+    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
+    //   "etype": "skill",  // actor type
+    //   "game_task": 0, // associated game task (for powercells, etc)
+    //   "quat" : [0, 0, 0, 1], // quaternion
+    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
+    //   "lump": {
+    //     "name":"city-skill-02",
+    //     "pickup-amount": ["float", 3.0]  // goldge
+    //   }
+    // }
   ]
 }

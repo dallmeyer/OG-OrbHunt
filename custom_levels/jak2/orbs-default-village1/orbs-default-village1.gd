@@ -4,5 +4,5 @@
 ;; the actual file name still needs to be 8.3
 ("O01.DGO"
  (
-  "orbs-city.go"
+  "orbs-default-village1.go"
   ))
