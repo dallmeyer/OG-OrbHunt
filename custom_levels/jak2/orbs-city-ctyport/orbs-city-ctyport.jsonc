@@ -107,6 +107,17 @@
         "name":"ctyport-skill-hover-1",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+    {
+      "trans": [ -226.26,  71.72, 1670.38  ], // way up on pipe, near hiphog (HOVER or boost zoomer jump during race)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-226.26,  71.72, 1670.38, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-hover-2",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
   ]
 }

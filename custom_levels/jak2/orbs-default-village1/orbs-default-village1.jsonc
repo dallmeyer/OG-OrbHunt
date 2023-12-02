@@ -276,16 +276,16 @@
         "name": "village1-skill-23"
       }
     },
-    // {
-    //   "trans": [ 134.4,    12.0,    -20.3   ], // #t behind sculptors rock (replacement for under fishermans boat
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [134.4,    12.0,    -20.3 , 10], // bounding sphere
-    //   "lump": {
-    //     "name": "village1-skill-24"
-    //   }
-    // },
+    {
+      "trans": [ -134.4,    12.0,    -20.3   ], // #t behind sculptors rock (replacement for under fishermans boat
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-134.4,    12.0,    -20.3 , 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-24"
+      }
+    },
     {
       "trans": [ -43.7,    3.7,     25.5    ], // #t behind uncle hous
       "etype": "skill",  // actor type
@@ -394,6 +394,16 @@
       "bsphere": [207.5,    12.2,    -122.0, 10], // bounding sphere
       "lump": {
         "name": "village1-skill-35"
+      }
+    },
+    {
+      "trans": [-69.39,  31.01, -12.19    ], // above birdladys hut (abah from left corner pocket)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-69.39,  31.01, -12.19, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-36"
       }
     }
     // HOVER CELLS
