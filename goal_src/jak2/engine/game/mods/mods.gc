@@ -330,13 +330,13 @@
     ;; none
     ;; ====== ORBS / ATOLL ======
     ;; === atoll/atoll-ext ===
-    ;; skill-10
-    ;; skill-11
-    ;; skill-12
-    ;; skill-13
-    ;; skill-21
-    ;; skill-22
-    ;; skill-23
+    (('skill-10) (set-vector-meters! (-> arg0 extra trans)  580.42   8.48 -968.32)) ;; in small pipe left of big pipe where orig
+    (('skill-11) (set-vector-meters! (-> arg0 extra trans)  609.50  -3.00 -834.61)) ;; in water against wall, around to right at entrance
+    (('skill-12) (set-vector-meters! (-> arg0 extra trans)  558.53  65.46 -826.02)) ;; directly above entrance, just climb then abah
+    (('skill-13) (set-vector-meters! (-> arg0 extra trans)  343.92  42.52 -848.49)) ;; to the right up along wall from ^, couple boosteds to slippery standpoint to extended
+    (('skill-21) (set-vector-meters! (-> arg0 extra trans)  564.15  43.91 -952.54)) ;; up on inner wall near pipes at start, abah or prob other ways
+    (('skill-22) (set-vector-meters! (-> arg0 extra trans)  579.39  58.49 -971.51)) ;; in tree up high on inner wall, follow from ^
+    (('skill-23) (set-vector-meters! (-> arg0 extra trans)  478.69  54.34 -1009.29)) ;; up on pipe near inner wall, next to first(?) big metalhead spawn
     ;; ====== ORBS / SEWER ======
     ;; === sewer/sewerb ===
     ;; skill-124
