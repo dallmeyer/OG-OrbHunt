@@ -106,6 +106,77 @@
       "lump": {
         "name": "forexita-skill-6"
       }
+    },
+    // hover orbs
+    {
+      "trans": [ 566.58, 114.77, 166.99], // up on pipes, left wall right after checkpoint
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 566.58, 114.77, 166.99, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-hover-1"
+      }
+    },
+    {
+      "trans": [ 597.42, 137.93, 168.43], // top of chain/pulley, hover from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 597.42, 137.93, 168.43, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-hover-2"
+      }
+    },
+    {
+      "trans": [ 600.77, 137.23, 156.64], // top of chain/pulley, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 600.77, 137.23, 156.64, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-hover-3"
+      }
+    },
+    {
+      "trans": [ 596.08, 138.90, 145.06], // top of chain/pulley, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 596.08, 138.90, 145.06, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-hover-4"
+      }
+    },
+    {
+      "trans": [610.40, 136.95, 134.60], // top of chain/pulley, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 610.40, 136.95, 134.60, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-hover-5"
+      }
+    },
+    {
+      "trans": [595.91, 138.89, 123.59], // top of chain/pulley, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 595.91, 138.89, 123.59, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-hover-6"
+      }
+    },
+    {
+      "trans": [616.12, 104.30, 180.97], // top of pipe above first crates (hover or fall from above... or maybe do painful pipe jumps)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 616.12, 104.30, 180.97, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-hover-7"
+      }
     }
   ]
 }

@@ -1,6 +1,18 @@
 ;;-*-Lisp-*-
 (in-package goal)
 
+(define-extern speedrun-practice-spawn (function none)) ;; defined at end of this file
+(define-extern speedrun-practice-store-temp-checkpoint (function none)) ;; defined at end of this file
+(define *practice-spawn-post-init* (the-as (function none) #f))
+
+(define *last-real-continue-point* (the-as continue-point #f))
+(defun generic-post-init ()
+  (when *last-real-continue-point*
+    (set! (-> *game-info* current-continue) *last-real-continue-point*)
+    )
+  (none)
+  )
+
 (define *speedrun-info* (new 'static 'speedrun-info))
 
 (defmethod set-category! ((this speedrun-info) (category speedrun-category))
@@ -49,31 +61,127 @@
     ;; Draw info to the screen
     (draw-baby-mode)
 
-    ;; TODO
     ;; call post-init function
-    ;; (when (and *practice-spawn-post-init*
-    ;;             *target*
-    ;;             (-> *setting-control* current allow-pause)
-    ;;             (>= (- (-> *display* base-frame-counter) (-> *game-info* blackout-time)) (seconds 0.1))
-    ;;             )
-    ;;   (*practice-spawn-post-init*)
-    ;;   (set! *practice-spawn-post-init* #f)
-    ;;   )
+    (when (and *target*
+               (progress-allowed?)
+               (or (not *progress-process*) (gone? (-> *progress-process* 0)))
+               (>= (- (-> *display* base-clock frame-counter) (-> *game-info* blackout-time)) (seconds 0.1))
+               )
+      (when *practice-spawn-post-init*
+        (*practice-spawn-post-init*)
+        (set! *practice-spawn-post-init* #f)
+        )
 
-    ;; (when (cpad-hold? 0 l2)
-    ;;   ;; Check for fast reset combo
-    ;;   (when (cpad-pressed? 0 up)
-    ;;     (format #t "player triggered reset combo~%")
-    ;;     (speedrun-practice-spawn)
-    ;;     )
-      
-    ;;   ;; Check for temp checkpoint combo
-    ;;   (when (cpad-pressed? 0 down)
-    ;;     (format #t "player triggered temp checkpoint combo~%")
-    ;;     (speedrun-practice-store-temp-checkpoint)
-    ;;     )
-    ;;   )
+      (when (cpad-hold? 0 r3)
+        (cond
+          ((cpad-pressed? 0 up)
+            (format 0 "player tried to load tmp checkpoint~%")
+            (speedrun-practice-spawn)
+            )
+          ((cpad-pressed? 0 down)
+            (format 0 "player tried to save tmp checkpoint~%")
+            (speedrun-practice-store-temp-checkpoint)
+            )
+          )
+        )
+      )
     )
+  (none)
+  )  
+
+(define *tmp-continue-point* (new 'static 'continue-point
+                             :name "tmp"
+                             :level #f
+                             :trans (new 'static 'vector :w 1.0)
+                             :quat (new 'static 'vector :w 1.0)
+                             :camera-trans (new 'static 'vector :w 1.0)
+                             :camera-rot (new 'static 'inline-array vector3s 3)
+                             :on-goto #f
+                             :vis-nick #f
+                             :want (new 'static 'inline-array level-buffer-state 6
+                                    (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                                    (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                                    (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                                    (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                                    (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                                    (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+                             :want-sound (new 'static 'array symbol 3 #f #f #f))
+    )
+
+(defun speedrun-practice-temp-checkpoint ()
+  (when (-> *tmp-continue-point* level)
+    (cond
+      ;; (*tmp-flut?* (set! *practice-spawn-post-init* get-on-flutflut))
+      ;; (*tmp-zoomer?* (set! *practice-spawn-post-init* get-on-zoomer))
+      (else (set! *practice-spawn-post-init* generic-post-init))
+      )
+    ;; commented out to prevent malding 
+    ;; (if (cpad-hold? 0 r2)  ;; fully reset game if r2 held too
+    ;;   (initialize! *game-info* 'game (the-as game-save #f) "default")
+    ;;   )
+    (when (not (string= (-> *game-info* current-continue name) "tmp"))
+      (set! *last-real-continue-point* (-> *game-info* current-continue))
+      )
+    (set! (-> *game-info* current-continue) *tmp-continue-point*)
+    (cheats-sound-play #f)
+    (initialize! *game-info* 'dead (the-as game-save #f) (the-as string #f))
+    ;; (speedrun-reset-common-settings)
+    )
+  (none)
+  )
+
+(defun continue-point-copy! ((dst continue-point) (src continue-point))
+  (set! (-> dst level) (-> src level))
+  (set! (-> dst quat quad) (-> src quat quad))
+  (set! (-> dst vis-nick) (-> src vis-nick))
+  (dotimes (idx 6)
+    (set! (-> dst want idx name)  (-> src want idx name))
+    (set! (-> dst want idx display?)  (-> src want idx display?))
+    (set! (-> dst want idx force-vis?)  (-> src want idx force-vis?))
+    (set! (-> dst want idx force-inside?)  (-> src want idx force-inside?))
+    )
+  (dotimes (idx 3)
+    (set! (-> dst want-sound idx)  (-> src want-sound idx))
+    )
+  (none)
+  )
+
+(defun camera-rot-copy! ((dst continue-point) (src matrix))
+  (set! (-> dst camera-rot 0 x) (-> src vector 0 x))
+  (set! (-> dst camera-rot 0 y) (-> src vector 0 y))
+  (set! (-> dst camera-rot 0 z) (-> src vector 0 z))
+  (set! (-> dst camera-rot 1 x) (-> src vector 1 x))
+  (set! (-> dst camera-rot 1 y) (-> src vector 1 y))
+  (set! (-> dst camera-rot 1 z) (-> src vector 1 z))
+  (set! (-> dst camera-rot 2 x) (-> src vector 2 x))
+  (set! (-> dst camera-rot 2 y) (-> src vector 2 y))
+  (set! (-> dst camera-rot 2 z) (-> src vector 2 z))
+  (none)
+  )
+
+(defun speedrun-practice-store-temp-checkpoint ()
+  (case (-> *target* state)
+    ;; only store temp checkpoint if in one of these states
+    ((target-look-around target-stance target-wade-stance target-swim-stance)
+      ;; assume current continue is good enough for the current location
+      (continue-point-copy! *tmp-continue-point* (-> *game-info* current-continue))
+      (vector-copy! (-> *tmp-continue-point* trans) (-> *target* root trans))
+      (vector-copy! (-> *tmp-continue-point* quat) (-> *target* root quat))
+      (vector-copy! (-> *tmp-continue-point* camera-trans) (-> *camera-combiner* trans))
+      (camera-rot-copy! *tmp-continue-point* (-> *camera-combiner* inv-camera-rot))
+
+      (cheats-sound-play #t)
+      )
+    )
+  (none)
+  )
+
+(defun speedrun-practice-spawn ()
+  ;; reset any previous post-target-init callback
+  (set! *practice-spawn-post-init* #f)
+
+  (speedrun-practice-temp-checkpoint)
+      
   (none)
   )
 
