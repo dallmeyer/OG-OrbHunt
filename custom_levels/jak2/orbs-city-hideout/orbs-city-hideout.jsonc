@@ -47,13 +47,14 @@
 
   "actors" : [
     {
-      "trans": [ 1199.4,   4.25,    52.6    ], // #f in furnac
+      "trans": [ 1199.4,   4.2,    52.5    ], // in furnac
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [1199.4,   4.25,    52.6  , 10], // bounding sphere
+      "bsphere": [1199.4,   4.2,    52.5  , 10], // bounding sphere
       "lump": {
-        "name": "hideout-skill-1"
+        "name": "hideout-skill-1",
+        "no-bob": ["float", 1.0] // no bob
       }
     },
     {

@@ -47,13 +47,14 @@
 
   "actors" : [
     {
-      "trans": [ 1120.5,   31.05,   1120.6  ], // #f  in center hologram (jetboard lulz)
+      "trans": [ 1120.5,   31.05,   1120.6  ], // in center hologram (jetboard lulz)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [1120.5,   31.05,   1120.6, 10], // bounding sphere
       "lump": {
-        "name": "vinroom-skill-1"
+        "name": "vinroom-skill-1",
+        "no-bob": ["float", 1.0] // no bob
       }
     }
     // {

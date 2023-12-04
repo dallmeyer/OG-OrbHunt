@@ -48,23 +48,25 @@
   "actors" : [
     // 'ctymarka (bazaar between ctyfarma/b, ctypal. brutter)) ===
     {
-      "trans": [ -118.2,   22.53,   486.9   ], // #f  above fish on brutter kiosk
+      "trans": [ -118.2,   22.53,   486.9   ], // above fish on brutter kiosk
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-118.2,   22.53,   486.9 , 10], // bounding sphere
       "lump": {
-        "name": "ctymarka-skill-1"
+        "name": "ctymarka-skill-1",
+        "no-bob": ["float", 1.0] // no bob
       }
     },
     {
-      "trans": [ -167.9,   12.0,    517.3   ], // #f  in bowl on wall before brutter
+      "trans": [ -167.9,   12.0,    517.3   ], //  in bowl on wall before brutter
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-167.9,   12.0,    517.3 , 10], // bounding sphere
       "lump": {
-        "name": "ctymarka-skill-2"
+        "name": "ctymarka-skill-2",
+        "no-bob": ["float", 1.0] // no bob
       }
     },
     {
@@ -88,13 +90,14 @@
       }
     },
     {
-      "trans": [ -27.8,    9.8,     726.5   ], // #f  in bucket on wall near ctypal
+      "trans": [ -27.8,    9.8,     726.5   ], //  in bucket on wall near ctypal
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-27.8,    9.8,     726.5 , 10], // bounding sphere
       "lump": {
-        "name": "ctymarka-skill-5"
+        "name": "ctymarka-skill-5",
+        "no-bob": ["float", 1.0] // no bob
       }
     },
     {

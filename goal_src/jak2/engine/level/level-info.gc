@@ -10921,7 +10921,7 @@
     :deactivate-func #f
     :kill-func #f
     :borrow-size (new 'static 'array uint16 2 #x60e 160)
-    :borrow-level (new 'static 'array symbol 2 #f 'orbs-city-oracle)
+    :borrow-level (new 'static 'array symbol 2 #f 'orbs-city-hideout)
     :borrow-display? (new 'static 'array symbol 2 #f 'display)
     :texture-anim-tfrag #f
     :texture-anim-pris #f

@@ -87,31 +87,31 @@
     //   }
     // },
     {
-      "trans": [477.68, 136.75, -1008.2],  // on valve WAY up high, follow ^
+      "trans": [477.9, 137.5, -1008.2],  // on valve WAY up high, follow ^
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [477.68, 136.75, -1008.2, 10], // bounding sphere
+      "bsphere": [477.9, 137.5, -1008.2, 10], // bounding sphere
       "lump": {
         "name":"atoll-skill-5"
       }
     },
     {
-      "trans": [484.28, 144.89, -1018.85],  // corner of pipe up from ^
+      "trans": [484.28, 145.1, -1018.85],  // corner of pipe up from ^
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [484.28, 144.89, -1018.85, 10], // bounding sphere
+      "bsphere": [484.28, 145.1, -1018.85, 10], // bounding sphere
       "lump": {
         "name":"atoll-skill-6"
       }
     },
     {
-      "trans": [444.34, 164.72, -1012.24],  // at the windmill axis, up from ^
+      "trans": [444.34, 164.4, -1012.24],  // at the windmill axis, up from ^
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [444.34, 164.72, -1012.24, 10], // bounding sphere
+      "bsphere": [444.34, 164.4, -1012.24, 10], // bounding sphere
       "lump": {
         "name":"atoll-skill-7"
       }
@@ -203,7 +203,8 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [521.91,  64.75, -1213.74, 10], // bounding sphere
       "lump": {
-        "name":"atoll-skill-16"
+        "name":"atoll-skill-16",
+        "pickup-amount": ["float", 2.0]  // abah hint
       }
     },
     {

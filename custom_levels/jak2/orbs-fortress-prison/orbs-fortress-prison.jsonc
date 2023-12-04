@@ -119,13 +119,68 @@
     },
     // HOVER ORBS
     {
-      "trans": [ 472.03,  26.99,  97.95  ], // on lamp above torture machine
+      "trans": [ 472.1,  27.5,  97.5  ], // on lamp above torture machine
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [472.03,  26.99,  97.95, 10], // bounding sphere
+      "bsphere": [472.1,  27.5,  97.5, 10], // bounding sphere
       "lump": {
         "name":"prison-skill-hover-1",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 445.10,  28.17, 112.57  ], // corner among pipes, hover or boosted from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [445.10,  28.17, 112.57, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-hover-2",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 488.47,  38.92, 119.14 ], // up on pipes, farther along from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [488.47,  38.92, 119.14, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-hover-3",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 445.76,  52.3, 108.73 ], // up on pipes, up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [445.76,  52.3, 108.73, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-hover-4",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 432.69,  41.0,  73.15  ], // up high on ledge of doorway where chambers exit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [432.69,  41.0,  73.15, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-hover-5",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 481.29,  41.24,  48.84 ], // upper ledge above prison cells
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [481.29,  41.24,  48.84, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-hover-6",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     }

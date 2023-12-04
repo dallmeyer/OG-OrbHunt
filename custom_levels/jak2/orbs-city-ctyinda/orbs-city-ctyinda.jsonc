@@ -78,13 +78,14 @@
       }
     },
     {
-      "trans": [ 796.8,    35.0,    1213.5  ], // #f other side of hallway from ^, abbah bounce off vent up high
+      "trans": [ 796.8,    35.0,    1213.5  ], // other side of hallway from ^, abbah bounce off vent up high
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [796.8,    35.0,    1213.5, 10], // bounding sphere
       "lump": {
-        "name": "ctyinda-skill-4"
+        "name": "ctyinda-skill-4",
+        "no-bob": ["float", 1.0] // no bob
       }
     },
     {
@@ -148,13 +149,14 @@
       }
     },
     {
-      "trans": [ 842.0,    37.3,    978.00  ], // #f  up above vent not far from consite (abbah on vent)
+      "trans": [ 842.0,    37.3,    978.00  ], //  up above vent not far from consite (abbah on vent)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [842.0,    37.3,    978.00, 10], // bounding sphere
       "lump": {
-        "name": "ctyinda-skill-11"
+        "name": "ctyinda-skill-11",
+        "no-bob": ["float", 1.0] // no bob
       }
     },
     {

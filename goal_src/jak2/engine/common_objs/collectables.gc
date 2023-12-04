@@ -1558,16 +1558,23 @@ This commonly includes things such as:
 - collision information
 - loading the skeleton group / bones
 - sounds"
-  (let ((entity-pickup-amount (res-lump-float arg0 'pickup-amount)))
+  (let ((entity-pickup-amount (res-lump-float arg0 'pickup-amount))
+        (entity-no-bob (res-lump-float arg0 'no-bob))
+        (bob-amount 1024.0)
+        )
     (when (and entity-pickup-amount (> entity-pickup-amount 0.0))
       (set! (-> this pickup-amount) entity-pickup-amount)
       )
+    (initialize-allocations this)
+    (when (and entity-no-bob (> entity-no-bob 0.0))
+      (logior! (-> this fact options) (actor-option force-bob))
+      (set! bob-amount 0.0)
+      )
+    (process-drawable-from-entity! this (-> this entity))
+    (initialize-options this 0 bob-amount (the-as fact-info #f))
+    (update-transforms (-> this root))
+    (go-to-initial-state this)
     )
-  (initialize-allocations this)
-  (process-drawable-from-entity! this (-> this entity))
-  (initialize-options this 0 1024.0 (the-as fact-info #f))
-  (update-transforms (-> this root))
-  (go-to-initial-state this)
   (none)
   )
 
@@ -1929,6 +1936,10 @@ This commonly includes things such as:
       (nav-mesh-connect-from-ent this)
       )
   (cond
+    ((= (-> this pickup-amount) 2.0)  ;; abah hint
+     (set-vector! (-> this draw color-mult) 0.0 0.0 0.8 1.0)
+     (set-vector! (-> this draw color-emissive) 0.2 0.2 1.0 1.0)
+     )
     ((>= (-> this pickup-amount) (-> *FACT-bank* super-skill-inc))
      (set-vector! (-> this draw color-mult) 0.8 0.8 0.0 1.0)
      (set-vector! (-> this draw color-emissive) 0.0 1.0 0.2 1.0)

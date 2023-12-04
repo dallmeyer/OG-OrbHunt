@@ -78,13 +78,14 @@
       }
     },
     {
-      "trans": [ 896.9,    16.4,    408.6   ], // #f atop ctyindb-part-52 (one of the lights within walkway pillars, in corner you never visit)
+      "trans": [ 896.9,    16.4,    408.6   ], //  atop ctyindb-part-52 (one of the lights within walkway pillars, in corner you never visit)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [896.9,    16.4,    408.6 , 10], // bounding sphere
       "lump": {
-        "name": "ctyindb-skill-4"
+        "name": "ctyindb-skill-4",
+        "no-bob": ["float", 1.0] // no bob
       }
     },
     {

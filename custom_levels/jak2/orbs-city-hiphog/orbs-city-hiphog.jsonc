@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ -84.02,   9.6,     1308.33 ], // #t  wrestling arena (jetboard lulz
+      "trans": [ -84.02,   9.6,     1308.33 ], // #t  wrestling arena (jetboard lulz)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -57,23 +57,25 @@
       }
     },
     {
-      "trans": [ -106.1,   10.05,   1289.6  ], // #f  mirror or
+      "trans": [ -106.1,   10.05,   1289.6  ], // mirror or
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-106.1,   10.05,   1289.6, 10], // bounding sphere
       "lump": {
-        "name": "hiphog-skill-2"
+        "name": "hiphog-skill-2",
+        "no-bob": ["float", 1.0] // no bob
       }
     },
     {
-      "trans": [ -80.4,    9.35,    1324.90 ], // #f ; behind whack a mol
+      "trans": [ -80.4,    9.35,    1324.90 ], // behind whack a mole
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-80.4,    9.35,    1324.9, 10], // bounding sphere
       "lump": {
-        "name": "hiphog-skill-3"
+        "name": "hiphog-skill-3",
+        "no-bob": ["float", 1.0] // no bob
       }
     }
     // {

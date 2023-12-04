@@ -1777,6 +1777,9 @@ into 7 sections, which might explain the weird sizes in the center.
    except for if the require-force-inside flag is set in the bsp-header, in which case
    it requires the level to be marked as force-inside?"
   (cond
+    ((string= (-> *game-info* current-continue name) "tmp")
+      #t ;; hack - we're reloading to custom continue outside of bsp
+      )
     ((not (-> this bsp))
      #f
      )

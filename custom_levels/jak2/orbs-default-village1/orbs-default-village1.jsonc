@@ -327,7 +327,7 @@
       }
     },
     {
-      "trans": [ -101.5,   11.8,    -73.0   ], // #t corner ledge towards beac
+      "trans": [ -101.5,   11.8,    -73.0   ], // #t corner ledge towards beach
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -337,17 +337,18 @@
       }
     },
     {
-      "trans": [ -121.87,  12.05,   49.9    ], // #f back left room of mayors hous
+      "trans": [ -121.87,  12.05,   49.9    ], // back left room of mayors house
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-121.87,  12.05,   49.9  , 10], // bounding sphere
       "lump": {
-        "name": "village1-skill-30"
+        "name": "village1-skill-30",
+        "no-bob": ["float", 1.0] // no bob
       }
     },
     {
-      "trans": [ -146.2,   35.0,    211.5   ], // #t near keir
+      "trans": [ -146.2,   35.0,    211.5   ], // #t near keira
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -357,7 +358,7 @@
       }
     },
     {
-      "trans": [ -118.0,   46.5,    208.0   ], // #t in samos hut, left of warp gat
+      "trans": [ -118.0,   46.5,    208.0   ], // #t in samos hut, left of warp gate
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -367,17 +368,18 @@
       }
     },
     {
-      "trans": [ -105.4,   13.3,    73.15   ], // #f in fountai
+      "trans": [ -105.4,   13.3,    73.15   ], // in fountai
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-105.4,   13.3,    73.15 , 10], // bounding sphere
       "lump": {
-        "name": "village1-skill-33"
+        "name": "village1-skill-33",
+        "no-bob": ["float", 1.0] // no bob
       }
     },
     {
-      "trans": [ -122.1,   19.0,    14.5    ], // #t tree by mayor/sculpto
+      "trans": [ -122.1,   19.0,    14.5    ], // #t tree by mayor/sculptor
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion

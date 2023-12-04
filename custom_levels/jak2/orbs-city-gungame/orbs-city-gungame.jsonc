@@ -87,13 +87,14 @@
       }
     },
     {
-      "trans": [ 441.0,    18.8,    1252.8  ], // #f top of pipe towards end of pat
+      "trans": [ 441.0,    18.8,    1252.8  ], // top of pipe towards end of pat
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [441.0,    18.8,    1252.8, 10], // bounding sphere
       "lump": {
-        "name": "gungame-skill-5"
+        "name": "gungame-skill-5",
+        "no-bob": ["float", 1.0] // no bob
       }
     },
     {

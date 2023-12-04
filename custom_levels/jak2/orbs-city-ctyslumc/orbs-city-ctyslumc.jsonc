@@ -68,13 +68,14 @@
       }
     },
     {
-      "trans": [ 707.35,   50.6,    -454.33 ], // #f  top of oracle building - hover (can extended frontflip from top of adjacent roof)
+      "trans": [ 707.35,   50.6,    -454.33 ], // top of oracle building - hover (can extended frontflip from top of adjacent roof)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [707.35,   50.6,    -454.3, 10], // bounding sphere
       "lump": {
-        "name": "ctyslumc-skill-3"
+        "name": "ctyslumc-skill-3",
+        "no-bob": ["float", 1.0] // no bob
       }
     },
     {
