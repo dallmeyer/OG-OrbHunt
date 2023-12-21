@@ -226,18 +226,92 @@
       "lump": {
         "name":"atoll-skill-18"
       }
-    }
+    },
+    {
+      "trans": [691.92,  36.03, -1058.22],  // on pipe of windmill (tricky abah)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [691.92,  36.03, -1058.22, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-19"
+      }
+    },
+    {
+      "trans": [452.66,  -2.98, -947.98],  // in water under walkway left of start - dumb ND collision, go around left then dive under
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [452.66,  -2.98, -947.98, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-20"
+      }
+    },
+    {
+      "trans": [425.01,   5.88, -977.04],  // path under first platform that you lower during sig mish
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [425.01,   5.88, -977.04, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-21"
+      }
+    },
     // HOVER CELLS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
+    {
+      "trans": [ 689.04,  63.03, -1043.38  ], // top of windmill on right
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [689.04,  63.03, -1043.38, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [852.94,  -1.37, -1051.96], // in water behind rock island way out towards ruins(?)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [852.94,  -1.37, -1051.96, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [838.52,  11.28, -1167.44], // on rock island left from ^ (others are "oob" because water ends)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [838.52,  11.28, -1167.44, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [714.68,  -2.12, -1143.16], // in water gap in rocks on 2nd windmill (can you get here without hover maybe?)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [714.68,  -2.12, -1143.16, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [731.28,  63.98, -1134.13], // up high on 2nd windmill
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [731.28,  63.98, -1134.13, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-hover-05",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
   ]
 }
