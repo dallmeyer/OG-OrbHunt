@@ -359,7 +359,6 @@
   "pov-camera.o"
   "powerups.o"
   "crates.o"
-  "mods.o"
   "hud.o"
   "hud-classes.o"
   "progress-static.o"
@@ -465,5 +464,6 @@
   "entity-debug.o" ;; added
   "mod-settings.o" ;; added
   "mod-common-functions.o" ;; added
+  "mods.o"
   "mod-custom-code.o" ;; added
  ))

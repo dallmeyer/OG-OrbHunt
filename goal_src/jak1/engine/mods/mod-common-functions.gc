@@ -299,14 +299,21 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 (set! (-> *setting-control* default play-hints) #f)
 )
 
+(defun toggleCollisionRenderer()
+  (if *collision-renderer*
+    (disableCollisionRenderer)
+    (enableCollisionRenderer)
+    )
+  )
+
 ;;This turns on collision render when called
-(defun turnonCollisionmode()
+(defun enableCollisionRenderer()
   (set! *collision-renderer* #t)
   (logclear! *vu1-enable-user-menu* (vu1-renderer-mask tfrag trans-tfrag tie tie-near))
 )
 
 ;;This turns off collision render when called
-(defun turnoffCollisionmode()
+(defun disableCollisionRenderer()
   (set! *collision-renderer* #f)
   (logior! *vu1-enable-user-menu* (vu1-renderer-mask tfrag trans-tfrag tie tie-near))
 )

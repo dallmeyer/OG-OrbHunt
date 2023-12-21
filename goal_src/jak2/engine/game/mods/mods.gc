@@ -204,7 +204,7 @@
                                  (bucket-id debug-no-zbuf1))
       (if (= *baby-mode-orb-dist* #f)
         (draw-string-xy (string-format "Closest Orb: N/A")
-                        buf 5 395 (font-color transparent) (font-flags kerning shadow))
+                        buf 5 395 (font-color transparent) (font-flags pc-hack kerning shadow))
         ;; color based on distance
         (let ((fc (cond
                    ((< *baby-mode-orb-dist* (meters 10.0)) (font-color orange))
@@ -214,9 +214,9 @@
                    ((< *baby-mode-orb-dist* (meters 50.0)) (font-color cyan))
                    (else (font-color blue)))))
                   
-          (draw-string-xy (string-format "Closest Orb: ~Mm"
+          (draw-string-xy (string-format "Closest Orb: ~,,2Mm"
                                          *baby-mode-orb-dist*)
-                          buf 5 395 fc (font-flags kerning shadow))))))
+                          buf 5 395 fc (font-flags pc-hack kerning shadow))))))
           
         
       
@@ -560,6 +560,9 @@
   
 
 (defun mod-run-each-frame ()
+  ;; GENERAL
+
+
   ;; === prison (first 2 rooms) ===
   ;; check for fake button press to unlock cells
   (prison-door-button-check "prison-part-374" "prsn-cell-door-4")
@@ -587,6 +590,11 @@
   (stdmb-hatch-check "stdmb-race-hatch-2")
 
   ;; (move-actor-str-target-offset "ctyport-part-86" 0.0 1.5 0.0)  ;; jakpoop
+
+  (when (and *debug-segment* (cpad-pressed? 0 l3) (cpad-hold? 0 r3))
+    ;; fuk ur subtitles we use this for collision renderer toggle
+    (toggleCollisionRenderer)
+    )
 
   (none))
   

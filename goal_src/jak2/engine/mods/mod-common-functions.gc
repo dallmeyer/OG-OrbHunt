@@ -226,19 +226,24 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   )
 )
 
+;;This turns on collision render when called
+(defun enableCollisionRenderer()
+  (set! *collision-renderer* #t)
+  (logclear! (-> *display* vu1-enable-user-menu) (vu1-renderer-mask shrubbery tfrag tfrag-trans tfrag-water tie tie-envmap))
+)
 
+;;This turns off collision render when called
+(defun disableCollisionRenderer()
+  (set! *collision-renderer* #f)
+  (logior! (-> *display* vu1-enable-user-menu) (vu1-renderer-mask shrubbery tfrag tfrag-trans tfrag-water tie tie-envmap))
+)
 
-;; ;;This turns on collision render when called
-;; (defun turnonCollisionmode()
-;;   (set! *collision-renderer* #t)
-;;   (logclear! *vu1-enable-user-menu* (vu1-renderer-mask tfrag trans-tfrag tie tie-near))
-;; )
-
-;; ;;This turns off collision render when called
-;; (defun turnoffCollisionmode()
-;;   (set! *collision-renderer* #f)
-;;   (logior! *vu1-enable-user-menu* (vu1-renderer-mask tfrag trans-tfrag tie tie-near))
-;; )
+(defun toggleCollisionRenderer()
+  (if *collision-renderer*
+    (disableCollisionRenderer)
+    (enableCollisionRenderer)
+    )
+  )
 
 ;; ;;This makes it thunder in the current level
 ;; (defun thunderTime()

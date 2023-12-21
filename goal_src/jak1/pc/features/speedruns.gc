@@ -475,7 +475,7 @@
                   ((< *baby-mode-orb-dist* (meters 50.0)) (font-color cyan))
                   (else (font-color blue))
                   )))
-          (draw-string-xy (string-format "Closest Orb: ~Mm"
+          (draw-string-xy (string-format "Closest Orb: ~,,2Mm"
                                          *baby-mode-orb-dist*)
                           buf 0 210 fc (font-flags kerning))
           )

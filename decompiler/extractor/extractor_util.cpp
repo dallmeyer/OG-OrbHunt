@@ -81,7 +81,7 @@ extractor_iso_database() {
           // we put both of them together because they have the same serial and ELF.
           {"SCUS-97265",             // serial from ELF name
            {{18445016742498932084U,  // hash of ELF
-             {"Jak II",              // canonical name
+             {"Orb Hunt II",              // canonical name
               GAME_TERRITORY_SCEA,
               593,                                           // number of files
               {4835330407820245819U, 5223305410190549348U},  // iso hash
@@ -91,7 +91,7 @@ extractor_iso_database() {
           // Jak 2 PAL
           {"SCES-51608",             // serial from ELF name
            {{18188891052467821088U,  // hash of ELF
-             {"Jak II: Renegade",    // canonical name
+             {"Orb Hunt II: Renegade",    // canonical name
               GAME_TERRITORY_SCEE,
               593,                     // number of files
               {8410801891219727031U},  // iso hash
@@ -101,7 +101,7 @@ extractor_iso_database() {
           // Jak 2 NTSC-J
           {"SCPS-15057",                // serial from ELF name
            {{7409991384254810731U,      // hash of ELF
-             {"ジャックＸダクスター2",  // canonical name
+             {"オーブハント2",  // canonical name
               GAME_TERRITORY_SCEI,
               593,                     // number of files
               {1686904681401593185U},  // iso hash
@@ -111,7 +111,7 @@ extractor_iso_database() {
           // Jak 2 NTSC-K
           {"SCKA-20010",            // serial from ELF name
            {{8398029689314218575U,  // hash of ELF
-             {"Jak II",             // canonical name
+             {"Orb Hunt II",             // canonical name
               GAME_TERRITORY_SCEI,
               593,                     // number of files
               {4637199624374114440U},  // iso hash
