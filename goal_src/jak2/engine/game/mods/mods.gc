@@ -242,8 +242,12 @@
               
          ;; ... and button and door both exist, and player is close enough ...
          (when (and button door (-> button root) (-> button root trans))
-           (let ((button-vec (-> button root trans)))
-             (when (<= (vector-vector-distance (-> *target* root trans) button-vec) (meters 2.0))
+           (let ((button-vec (-> button root trans))
+                 (target-vec (new 'stack 'vector))
+                 )
+             (vector-copy! target-vec (-> *target* root trans))
+             (+! (-> target-vec y) (meters 1.5))
+             (when (<= (vector-vector-distance target-vec button-vec) (meters 2.0))
                ;; ... then we (try to) open door ...
                (when (send-event door 'open)
                  ;; ... if successful we play sounds and turn off lights
@@ -557,11 +561,28 @@
 
 (defun mod-run-each-frame ()
   ;; === prison (first 2 rooms) ===
+  ;; check for fake button press to unlock cells
   (prison-door-button-check "prison-part-374" "prsn-cell-door-4")
   (prison-door-button-check "prison-part-375" "prsn-cell-door-3")
   (prison-door-button-check "prison-part-376" "prsn-cell-door-2")
   (prison-door-button-check "prison-part-377" "prsn-cell-door-1")
   (prison-door-button-check "prison-part-378" "prsn-cell-door-5")
+  ;; prevent softlock - you could get stuck in 2 right rooms, but if you get orb then unlock door
+  (let ((door (process-by-ename "prsn-cell-door-2"))
+        (orb (process-by-ename "prison-skill-7"))
+        (button (the part-spawner (process-by-ename "prison-part-376")))
+        )
+    (when (and door (not orb))
+      (when (send-event door 'open)
+        ;; ... if successful we play sounds and turn off lights
+        (sound-play "smack-surface")
+        (sound-play "timer-warn")
+        (set! (-> button part data 0 flags) (the sp-launch-state-flags 0))
+        (set! (-> button part data 1 flags) (the sp-launch-state-flags 0))
+        (set! (-> button part data 2 flags) (the sp-launch-state-flags 0))
+        )
+      )
+    )
   ;; === stadiumb (class 3) ===
   (stdmb-hatch-check "stdmb-race-hatch-2")
 
