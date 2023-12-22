@@ -1125,7 +1125,7 @@
         )
       (#when PC_PORT
         (update *pc-settings*)
-        (if (and *display-sha* *debug-segment*)
+        (if (and #f *display-sha* *debug-segment*)
             (draw-build-revision)))
       )
     )

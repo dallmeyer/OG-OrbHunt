@@ -47,11 +47,11 @@
 
   "actors" : [
     {
-      "trans": [ 509.25,  58.71, -968.68],  // on inner wall up around pipes, left from start
+      "trans": [ 509.25,  58.99, -968.68],  // on inner wall up around pipes, left from start
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [509.25,  58.71, -968.68, 10], // bounding sphere
+      "bsphere": [509.25,  58.99, -968.68, 10], // bounding sphere
       "lump": {
         "name":"atoll-skill-1"
       }
@@ -76,16 +76,16 @@
         "name":"atoll-skill-3"
       }
     },
-    // {
-    //   "trans": [410.85, 104.16, -989.57],  // 
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [410.85, 104.16, -989.57, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"atoll-skill-4"
-    //   }
-    // },
+    {
+      "trans": [464.95,  49.15, -971.76],  // up on pipe just before first metalhead sig shoots
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [464.95,  49.15, -971.76, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-4"
+      }
+    },
     {
       "trans": [477.9, 137.5, -1008.2],  // on valve WAY up high, follow ^
       "etype": "skill",  // actor type
@@ -418,7 +418,7 @@
       }
     },
     {
-      "trans": [425.26,  18.58, -1210.36], // in crack in wall, back of "valley" near exit to castle/dig
+      "trans": [425.26,  18.58, -1210.36], // in crack in wall, back of "valley" near exit to caspad
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -428,7 +428,7 @@
       }
     },
     {
-      "trans": [408.94,  16.04, -1269.72], // hidden among trees, right before rail exit to castle/dig
+      "trans": [408.94,  16.04, -1269.72], // hidden among trees, right before rail exit to caspad
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -438,7 +438,7 @@
       }
     },
     {
-      "trans": [534.17,  45.27, -1006.26], // hidden among trees along center cliffs, not far from where sig mish ends
+      "trans": [534.17,  45.27, -1006.26], // hidden among trees up on center cliffs, not far from where sig mish ends
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -447,6 +447,347 @@
         "name":"atoll-skill-40"
       }
     },
+    {
+      "trans": [433.64,  60.68, -1122.70], // near 3rd metalhead sig kills
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [433.64,  60.68, -1122.70, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-41"
+      }
+    },
+    {
+      "trans": [436.11,  97.76, -1122.72], // above ^, on pipe standpoint
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [436.11,  97.76, -1122.72, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-42"
+      }
+    },
+    {
+      "trans": [438.45, 105.84, -1120.06], // above ^, on pipe standpoint
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [438.45, 105.84, -1120.06, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-43"
+      }
+    },
+    {
+      "trans": [431.04, 144.80, -1154.17], // above ^, as hint for jump to ^^34
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [431.04, 144.80, -1154.17, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-44"
+      }
+    },
+    {
+      "trans": [431.46, 120.5, -1188.47], // out from ^ on top of trees, as hint for jump to ^^34
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [431.46, 120.5, -1188.47, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-45"
+      }
+    },
+    {
+      "trans": [298.14,  17.09, -1076.03], // rear windmill, behind ferns
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [298.14,  17.09, -1076.03, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-46"
+      }
+    },
+    {
+      "trans": [290.80,  52.58, -1072.42], // rear windmill, up top
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [290.80,  52.58, -1072.42, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-47"
+      }
+    },
+    {
+      "trans": [369.32,  13.9, -1032.70], // behind grass against wall, right after x5 juice goons
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [369.32,  13.9, -1032.70, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-48"
+      }
+    },
+    {
+      "trans": [419.31,  21.23, -987.04], // behind ferns on wall right before x5 juice goons
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [419.31,  21.23, -987.04, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-49"
+      }
+    },
+    {
+      "trans": [401.57,  53.31, -990.46], // in crack in upper wall, get here from pipes
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [401.57,  53.31, -990.46, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-50"
+      }
+    },
+    {
+      "trans": [376.64,  46.85, -987.08], // on corner of cliff above pipes, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [376.64,  46.85, -987.08, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-51"
+      }
+    },
+    {
+      "trans": [426.20,  43.19, -1216.52], // behind ferns, backwards from crates before ashelin
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [426.20,  43.19, -1216.52, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-52"
+      }
+    },
+    {
+      "trans": [462.03,  -0.59, -1345.95], // behind island with rails towards caspad
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [462.03,  -0.59, -1345.95, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-53"
+      }
+    },
+    {
+      "trans": [431.92,   5.02, -1373.27], // behind ferns at entrance to caste/dig
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [431.92,   5.02, -1373.27, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-54"
+      }
+    },
+    {
+      "trans": [472.44,  27.98, -1395.49], // behind tree on right at entrance to caspad
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [472.44,  27.98, -1395.49, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-55"
+      }
+    },
+    {
+      "trans": [504.34,  39.31, -1397.10], // behind trees, right from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [504.34,  39.31, -1397.10, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-56"
+      }
+    },
+    {
+      "trans": [475.45,  62.08, -1399.12], // behind ferns, back left and up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [475.45,  62.08, -1399.12, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-57"
+      }
+    },
+    {
+      "trans": [452.32,  46.96, -1409.82], // behind tree, back left from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [452.32,  46.96, -1409.82, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-58"
+      }
+    },
+    {
+      "trans": [418.13,  48.60, -1426.01], // atop stone pillar down path, left from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [418.13,  48.60, -1426.01, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-59"
+      }
+    },
+    {
+      "trans": [402.14,  52.60, -1422.70], // atop stone pillar down path, left from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [402.14,  52.60, -1422.70, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-60"
+      }
+    },
+    {
+      "trans": [399.23,  48.36, -1466.14], // in crevice in wall, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [399.23,  48.36, -1466.14, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-61"
+      }
+    },
+    {
+      "trans": [406.70,  57.70, -1468.25], // in crevice in wall, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [406.70,  57.70, -1468.25, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-62"
+      }
+    },
+    {
+      "trans": [427.44,  66.30, -1471.73], // in crevice in wall, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [427.44,  66.30, -1471.73, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-63"
+      }
+    },
+    {
+      "trans": [439.15,  72.88, -1472.00], // top of wall on path to caspad, up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [439.15,  72.88, -1472.00, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-64"
+      }
+    },
+    {
+      "trans": [418.75,  76.40, -1436.32], // top of wall on path to caspad, up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [418.75,  76.40, -1436.32, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-65"
+      }
+    },
+    {
+      "trans": [408.96,  86.85, -1472.38], // behind tree on top of wall on path to caspad, up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [408.96,  86.85, -1472.38, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-66"
+      }
+    },
+    {
+      "trans": [418.52,  82.99, -1371.54], // behind tree on top of wall on path to caspad, up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [418.52,  82.99, -1371.54, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-67"
+      }
+    },
+    {
+      "trans": [409.26,  72.18, -1365.52], // in crevice along cliff outside path to caspad, left from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [409.26,  72.18, -1365.52, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-68"
+      }
+    },
+    {
+      "trans": [364.31,  74.65, -1357.47], // along cliff outside path to caspad, left from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [364.31,  74.65, -1357.47, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-69"
+      }
+    },
+    {
+      "trans": [301.90,  75.91, -1379.41], // along cliff outside path to caspad, far left from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [301.90,  75.91, -1379.41, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-70"
+      }
+    },
+    {
+      "trans": [358.12,  26.79, -1362.08], // random gap lower on cliff left of path to caspad
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [358.12,  26.79, -1362.08, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-71"
+      }
+    },
+    {
+      "trans": [490.16,  74.57, -1462.91], // top wall on path to caspad, right side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [490.16,  74.57, -1462.91, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-72"
+      }
+    },
+    {
+      "trans": [471.74,  91.33, -1495.80], // top wall on path to caspad, above cave entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [471.74,  91.33, -1495.80, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-73"
+      }
+    },
+    {
+      "trans": [481.09,  60.00, -1499.86], // below ^, above cave entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [481.09,  60.00, -1499.86, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-74"
+      }
+    },
+    
     // HOVER CELLS
     {
       "trans": [852.94,  -1.37, -1051.96], // in water behind rock island way out towards ruins(?)
@@ -455,7 +796,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [852.94,  -1.37, -1051.96, 10], // bounding sphere
       "lump": {
-        "name":"atoll-skill-hover-02",
+        "name":"atoll-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     },
@@ -466,7 +807,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [838.52,  11.28, -1167.44, 10], // bounding sphere
       "lump": {
-        "name":"atoll-skill-hover-03",
+        "name":"atoll-skill-hover-02",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     }
