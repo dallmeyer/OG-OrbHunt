@@ -662,12 +662,12 @@
                   (time-elapsed? (the-as int (-> self birth-time)) (the-as time-frame (-> self collect-timeout)))
                   (not (and (-> self next-state) (= (-> self next-state name) 'pickup)))))
     (cond
-      ;; if this is a non-hover orb and you've hovered in the past 5 minutes, frick you
+      ;; if this is a non-hover orb and you've hovered in the past X minutes, frick you
       ((and (= (-> self type symbol) 'skill)
             (!= (-> self pickup-amount) (-> *FACT-bank* super-skill-inc))
             (hover-need-to-cooldown?)
             )
-        (add-process *gui-control* *target* (gui-channel guard) (gui-action play) "kg007" -99.0 0)
+        (add-process *gui-control* *target* (gui-channel guard) (gui-action play) "kg007" -50.0 0)
         )
       ;; otherwise try to get-pickup as usual
       ((send-event arg0 'get-pickup (-> self fact pickup-type) (-> self fact pickup-amount))            
