@@ -57,10 +57,10 @@
 
 (define-extern draw-baby-mode (function none))
 (defun baby-mode-update ()
-  (when (-> *pc-settings* baby-mode?)
-    ;; Draw info to the screen
-    (draw-baby-mode)
+  ;; Draw info to the screen
+  (draw-baby-mode)
 
+  (when (-> *pc-settings* baby-mode?)
     ;; call post-init function
     (when (and *target*
                (progress-allowed?)

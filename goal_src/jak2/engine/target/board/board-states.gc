@@ -1711,9 +1711,11 @@
   :post target-board-post
   )
 
+(define-extern *target-board-hold-tricks* int)
 (defstate target-board-hold (target)
   :event (-> target-board-jump event)
   :enter (behavior ((arg0 float) (arg1 float) (arg2 symbol))
+    (+! *target-board-hold-tricks* 1)
     (set! (-> self control unknown-word04) (the-as uint arg2))
     (forward-up-nopitch->quaternion
       (-> self control dir-targ)
@@ -1745,6 +1747,7 @@
     (set! (-> self control dynam gravity-length) 147456.0)
     )
   :exit (behavior ()
+    (set! *target-board-hold-tricks* 0)
     (set! (-> self board unknown-float01) 0.0)
     (set-time! (-> self board unknown-time-frame05))
     (let ((v1-3 (the-as sound-rpc-set-param (get-sound-buffer-entry))))
@@ -1801,6 +1804,7 @@
                   (ja :num! (loop!))
                   )
                  (else
+                   (+! *target-board-hold-tricks* 1)
                    (add-to-trick-list (-> self board) (board-tricks board-method) 500.0)
                    (set! (-> self board unknown-sound-id01) (sound-play "board-method"))
                    (ja-channel-push! 1 (seconds 0.08))
@@ -1820,6 +1824,7 @@
              (ja :num! (loop!))
              )
             ((< 40960.0 (target-height-above-ground))
+             (+! *target-board-hold-tricks* 1)
              (add-to-trick-list (-> self board) (board-tricks board-nosegrab) 500.0)
              (set! (-> self board unknown-sound-id01) (sound-play "board-nosegrab"))
              (ja-channel-push! 1 (seconds 0.08))

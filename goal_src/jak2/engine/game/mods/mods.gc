@@ -197,30 +197,43 @@
     
   (none))
   
-
+(defun-extern hover-need-to-cooldown? symbol)
 (defun draw-baby-mode ()
-  (when (and (pause-allowed?) (-> *pc-settings* baby-mode?))
+  (let ((hover-offset 0))
     (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
-                                 (bucket-id debug-no-zbuf1))
-      (if (= *baby-mode-orb-dist* #f)
-        (draw-string-xy (string-format "Closest Orb: N/A")
-                        buf 5 395 (font-color transparent) (font-flags pc-hack kerning shadow))
-        ;; color based on distance
-        (let ((fc (cond
-                   ((< *baby-mode-orb-dist* (meters 10.0)) (font-color orange))
-                   ((< *baby-mode-orb-dist* (meters 20.0)) (font-color progress-old-yellow))
-                   ((< *baby-mode-orb-dist* (meters 30.0)) (font-color flat-yellow))
-                   ((< *baby-mode-orb-dist* (meters 40.0)) (font-color progress-old-blue))
-                   ((< *baby-mode-orb-dist* (meters 50.0)) (font-color cyan))
-                   (else (font-color blue)))))
-                  
-          (draw-string-xy (string-format "Closest Orb: ~,,2Mm"
-                                         *baby-mode-orb-dist*)
-                          buf 5 395 fc (font-flags pc-hack kerning shadow))))))
-          
-        
-      
-    
+                                  (bucket-id debug-no-zbuf1))
+      (when (and (pause-allowed?) (-> *pc-settings* baby-mode?))
+        (+! hover-offset 1)
+        (cond
+          ((= *baby-mode-orb-dist* #f)
+            (draw-string-xy (string-format "Closest Orb: N/A")
+                            buf 5 395 (font-color transparent) (font-flags pc-hack kerning shadow))
+            )
+          (else
+            ;; color based on distance
+            (let ((fc (cond
+                      ((< *baby-mode-orb-dist* (meters 10.0)) (font-color orange))
+                      ((< *baby-mode-orb-dist* (meters 20.0)) (font-color progress-old-yellow))
+                      ((< *baby-mode-orb-dist* (meters 30.0)) (font-color flat-yellow))
+                      ((< *baby-mode-orb-dist* (meters 40.0)) (font-color progress-old-blue))
+                      ((< *baby-mode-orb-dist* (meters 50.0)) (font-color cyan))
+                      (else (font-color blue)))))
+                      
+              (draw-string-xy (string-format "Closest Orb: ~,,2Mm"
+                                            *baby-mode-orb-dist*)
+                              buf 5 395 fc (font-flags pc-hack kerning shadow))
+              )
+            )
+          )
+        )
+      (when (hover-need-to-cooldown?)
+        (draw-string-xy (string-format "Hover cooldown: ~Ds / ~D"
+                                (/ (- (+ *last-hover-time* (seconds 60)) (current-time)) TICKS_PER_SECOND) *target-board-hold-tricks*)
+                  buf 5 (- 395 (* 15 hover-offset)) (font-color orange) (font-flags pc-hack kerning shadow))
+        )
+      )
+    )
+  
   (none))
 
 
@@ -557,11 +570,28 @@
       (= (level-status *level* 'stadiumc) 'active)
       (= (level-status *level* 'stadiumd) 'active)))
       
-  
+(define *last-hover-time* (the time-frame #f))
+
+(defun hover-need-to-cooldown? ()
+  ;; need to cooldown if we have a last hover time and it isn't 1m ago
+  (if (and *last-hover-time*
+       (not (time-elapsed? *last-hover-time* (seconds 60)))
+       )
+    #t
+    #f
+    )
+  )
 
 (defun mod-run-each-frame ()
   ;; GENERAL
-
+  (cond
+    ((board-hovering?)
+      (set-time! *last-hover-time*)
+      )
+    ((not (hover-need-to-cooldown?))
+      (set! *last-hover-time* (the time-frame #f))
+      )
+    )
 
   ;; === prison (first 2 rooms) ===
   ;; check for fake button press to unlock cells
@@ -578,8 +608,8 @@
     (when (and door (not orb))
       (when (send-event door 'open)
         ;; ... if successful we play sounds and turn off lights
-        (sound-play "smack-surface")
-        (sound-play "timer-warn")
+        ;; (sound-play "smack-surface")
+        ;; (sound-play "timer-warn")
         (set! (-> button part data 0 flags) (the sp-launch-state-flags 0))
         (set! (-> button part data 1 flags) (the sp-launch-state-flags 0))
         (set! (-> button part data 2 flags) (the sp-launch-state-flags 0))

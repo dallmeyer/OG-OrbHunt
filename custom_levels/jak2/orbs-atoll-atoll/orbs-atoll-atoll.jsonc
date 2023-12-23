@@ -787,6 +787,16 @@
         "name":"atoll-skill-74"
       }
     },
+    {
+      "trans": [375.09,  9.5, -1140.73], // under walkway before sig 3rd kill (crawl from side)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [375.09,  9.5, -1140.73, 10], // bounding sphere
+      "lump": {
+        "name":"atoll-skill-75"
+      }
+    },
     
     // HOVER CELLS
     {

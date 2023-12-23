@@ -56,8 +56,8 @@
               :bounds (static-spherem 0 0 0 0.6)
               :shadow collectables-skill-shadow-mg
               :texture-level 6
-              :shadow-joint-index 0)
-              
+              :shadow-joint-index 3
+              )
 
 (deftype collectable (process-drawable)
   ((root             collide-shape-moving :override)
@@ -654,19 +654,28 @@
     
   #f)
   
-
+(defun-extern hover-need-to-cooldown? symbol)
 (defbehavior collectable-standard-event-handler collectable ((arg0 process) (arg1 int) (arg2 symbol) (arg3 event-message-block))
   (local-vars (v0-4 object))
   (when (and (or (= arg2 'touch) (= arg2 'attack))
-             (and (logtest? (-> self flags) (collectable-flag pickup))
+            (and (logtest? (-> self flags) (collectable-flag pickup))
                   (time-elapsed? (the-as int (-> self birth-time)) (the-as time-frame (-> self collect-timeout)))
-                  (not (and (-> self next-state) (= (-> self next-state name) 'pickup)))
-                  (send-event arg0 'get-pickup (-> self fact pickup-type) (-> self fact pickup-amount))))
-                  
-             
-    (logclear! (-> self mask) (process-mask actor-pause))
-    (process-contact-action arg0)
-    (go-virtual pickup #f (process->handle arg0))
+                  (not (and (-> self next-state) (= (-> self next-state name) 'pickup)))))
+    (cond
+      ;; if this is a non-hover orb and you've hovered in the past 5 minutes, frick you
+      ((and (= (-> self type symbol) 'skill)
+            (!= (-> self pickup-amount) (-> *FACT-bank* super-skill-inc))
+            (hover-need-to-cooldown?)
+            )
+        (add-process *gui-control* *target* (gui-channel guard) (gui-action play) "kg007" -99.0 0)
+        )
+      ;; otherwise try to get-pickup as usual
+      ((send-event arg0 'get-pickup (-> self fact pickup-type) (-> self fact pickup-amount))            
+        (logclear! (-> self mask) (process-mask actor-pause))
+        (process-contact-action arg0)
+        (go-virtual pickup #f (process->handle arg0))
+        )
+      )
     )
   (cond
     ((= arg2 'trans)

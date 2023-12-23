@@ -293,6 +293,7 @@
     )
   )
 
+(define-extern *last-hover-time* time-frame)
 (defmethod initialize! ((this game-info) (arg0 symbol) (arg1 game-save) (arg2 string))
   (local-vars (v0-3 int) (sv-96 game-task-node-info) (sv-112 symbol))
   (case arg0
@@ -355,6 +356,7 @@
     (('game)
      (+! (-> this task-counter) 1)
      (reset! (-> *display* total-game-clock))
+     (set! *last-hover-time* (the time-frame #f))
      (set! (-> this features) (game-feature sidekick))
      (set! (-> this debug-features) (game-feature board))
      (set! (-> this secrets) (game-secrets))
