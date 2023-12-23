@@ -226,10 +226,16 @@
             )
           )
         )
-      (when (hover-need-to-cooldown?)
-        (draw-string-xy (string-format "Hover cooldown: ~Ds / ~D"
+      (cond
+        ((hover-need-to-cooldown?)
+          (draw-string-xy (string-format "Hover cooldown: ~Ds / ~D"
                                 (/ (- (+ *last-hover-time* (seconds 60)) (current-time)) TICKS_PER_SECOND) *target-board-hold-tricks*)
-                  buf 5 (- 395 (* 15 hover-offset)) (font-color orange) (font-flags pc-hack kerning shadow))
+                          buf 5 (- 395 (* 15 hover-offset)) (font-color orange) (font-flags pc-hack kerning shadow))
+          )
+        ;; (else
+        ;;   (draw-string-xy (string-format "Hover cooldown: - / ~D" *target-board-hold-tricks*)
+        ;;                   buf 5 (- 395 (* 15 hover-offset)) (font-color orange) (font-flags pc-hack kerning shadow))
+        ;;   )
         )
       )
     )
