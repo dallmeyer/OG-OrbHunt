@@ -139,7 +139,10 @@
     (set! (-> dst want idx name) #f)
     (set! (-> dst want idx display?) #f)
 
-    (when (= (-> *level* level idx status) 'active)
+    (when (or (= (-> *level* level idx status) 'active)
+              (= (-> *level* level idx status) 'loaded)
+              (= (-> *level* level idx status) 'loading)
+              )
       (set! (-> dst want idx name) (-> *level* level idx name))
       (set! (-> dst want idx display?) (-> *level* level idx display?))
       

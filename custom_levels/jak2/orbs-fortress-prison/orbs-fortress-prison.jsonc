@@ -117,6 +117,46 @@
         "name": "prison-skill-7"
       }
     },
+    {
+      "trans": [ 511.25,   8.59,  96.00 ], // behind crates right before "please tell me you remember how 2 roll"
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 511.25,   8.59,  96.00, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-8"
+      }
+    },
+    {
+      "trans": [ 471.29,   3.78,  75.48], // drop down on lamp next to walkway to torture area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [471.29,   3.78,  75.48, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-9"
+      }
+    },
+    {
+      "trans": [ 550.5,  22.0,  95.7], // vent section between first and second room, hidden behind pipes
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [550.5,  22.0,  95.7, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-10"
+      }
+    },
+    {
+      "trans": [ 536.37,  31.16, 207.53], // atop vents, far end, in 2nd room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [536.37,  31.16, 207.53, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-11"
+      }
+    },
     // HOVER ORBS
     {
       "trans": [ 472.1,  27.5,  97.5  ], // on lamp above torture machine

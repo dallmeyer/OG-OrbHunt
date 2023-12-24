@@ -137,6 +137,117 @@
         "name": "forexita-skill-9"
       }
     },
+    {
+      "trans": [572.72,  76.73, 104.45], // in weird standpoint among pipes right after high jump hint, abah from here to higher shit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [572.72,  76.73, 104.45, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-10",
+        "pickup-amount": ["float", 2.0]  // abah hint
+      }
+    },
+    {
+      "trans": [568.73,  88.16, 102.36], // on machines above ^ (abah)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [568.73,  88.16, 102.36, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-11"
+      }
+    },
+    {
+      "trans": [560.50,  96.81,  93.80], // up in corner from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [560.50,  96.81,  93.80, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-12"
+      }
+    },
+    {
+      "trans": [593.07,  96.24,  99.32], // between pipes, over from ^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [593.07,  96.24,  99.32, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-13"
+      }
+    },
+    {
+      "trans": [608.75, 102.79,  91.31], // up high above machine, over from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [608.75, 102.79,  91.31, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-14"
+      }
+    },
+    {
+      "trans": [598.42,  46.91, 114.29], // behind pipes down low near death plane
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [598.42,  46.91, 114.29, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-15"
+      }
+    },
+    {
+      "trans": [679.11,  57.38, 107.46], // standpoint on pipe near deathplane before pole
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [679.11,  57.38, 107.46, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-16"
+      }
+    },
+    {
+      "trans": [669.23,  85.97, 103.26], // up high between pipes before pole (extended from nearby pipes)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [669.23,  85.97, 103.26, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-17"
+      }
+    },
+    {
+      "trans": [634.05,  73.33, 179.39], // in corner over void, tiny standpoint path along wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [634.05,  73.33, 179.39, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-18"
+      }
+    },
+    {
+      "trans": [689.61,  68.29, 145.0], // in corner after pole
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [689.61,  68.29, 145.0, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-19"
+      }
+    },
+    {
+      "trans": [580.69,  30.69, 119.43], // in lower corner under lift
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [580.69,  30.69, 119.43, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-20"
+      }
+    },
     // hover orbs
     {
       "trans": [ 566.58, 114.77, 166.99], // up on pipes, left wall right after checkpoint

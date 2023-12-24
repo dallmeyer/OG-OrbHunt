@@ -15801,8 +15801,8 @@
   (cons! *level-load-list* 'stadocc)
   )
 
-(defmacro orbs-borrow-level (index name visname nick mood-func)
-  "shorthand for setting up an orbs borrow level"
+(defmacro orbs-level (index name visname nick mood-func level-size)
+  "shorthand for setting up an orbs level"
   `(new 'static 'level-load-info
     :index ,index
     :name ,name
@@ -15811,7 +15811,7 @@
     :dbname ,name
     :taskname 'default
     :packages '()
-    :memory-mode (load-buffer-mode borrow)
+    :memory-mode (load-buffer-mode ,level-size)
     :music-bank #f
     :ambient-sounds '()
     :mood-func ,mood-func
@@ -15857,6 +15857,11 @@
     :ocean-alpha 1.0
     :extra-sound-bank #f
     )
+  )
+
+(defmacro orbs-borrow-level (index name visname nick mood-func)
+  "shorthand for setting up an orbs borrow level"
+ `(orbs-level ,index ,name ,visname ,nick ,mood-func borrow)
   )
 
 (define orbs-city-vinroom  (orbs-borrow-level #x9e 'orbs-city-vinroom  'orbs-city-vinroom-vis  'oc0 'update-mood-copy-ctywide))
