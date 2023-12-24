@@ -223,6 +223,43 @@
         "name":"prison-skill-hover-6",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+    
+    // GUIDE ORBS
+    {
+      "trans": [ 476.0,   15.5,  41.64], // hover guide
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [476.0,   15.5,  41.64, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-guide-1",
+        "no-bob": ["float", 1.0], // no bob
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [476.0,   13.1,  41.64], // no hover guide
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [476.0,   13.1,  41.64, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-guide-2",
+        "no-bob": ["float", 1.0] // no bob
+      }
+    },
+    {
+      "trans": [ 476.0,   10.7,  41.64], // abah guide
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [476.0,   10.7,  41.64, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-guide-3",
+        "no-bob": ["float", 1.0], // no bob
+        "pickup-amount": ["float", 2.0]  // abah
+      }
     }
   ]
 }
