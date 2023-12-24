@@ -78,11 +78,11 @@
       }
     },
     {
-      "trans": [ 725.33, 57.0, 180.1 ], // in pit below where original orb is, but behind metal tubing on right
+      "trans": [ 725.33, 57.3, 180.1 ], // in pit below where original orb is, but behind metal tubing on right
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 725.33, 57.0, 180.1 , 10], // bounding sphere
+      "bsphere": [ 725.33, 57.3, 180.1 , 10], // bounding sphere
       "lump": {
         "name": "forexita-skill-4"
       }
@@ -248,13 +248,43 @@
         "name": "forexita-skill-20"
       }
     },
-    // hover orbs
     {
-      "trans": [ 566.58, 114.77, 166.99], // up on pipes, left wall right after checkpoint
+      "trans": [559.95,  44.8, 194.46], // right above vent entrance to this area
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 566.58, 114.77, 166.99, 10], // bounding sphere
+      "bsphere": [559.95,  44.8, 194.46, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-21"
+      }
+    },
+    {
+      "trans": [617.8,  30.69, 119.5], // right side below lift
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [617.8,  30.69, 119.5, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-22"
+      }
+    },
+    {
+      "trans": [636.91,  94.7, 167.22], // 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [636.91,  94.7, 167.22, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-22"
+      }
+    },
+    // hover orbs
+    {
+      "trans": [ 566.58, 115.77, 166.99], // up on pipes, left wall right after checkpoint
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 566.58, 115.77, 166.99, 10], // bounding sphere
       "lump": {
         "name": "forexita-skill-hover-1",
         "pickup-amount": ["float", 3.0]  // goldge
