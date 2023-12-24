@@ -1947,7 +1947,7 @@ This commonly includes things such as:
   (cond
     ((= (-> this pickup-amount) 2.0)  ;; abah hint
      (set-vector! (-> this draw color-mult) 0.0 0.0 0.8 1.0)
-     (set-vector! (-> this draw color-emissive) 0.2 0.2 1.0 1.0)
+     (set-vector! (-> this draw color-emissive) 0.1 0.1 1.0 1.0)
      )
     ((>= (-> this pickup-amount) (-> *FACT-bank* super-skill-inc))
      (set-vector! (-> this draw color-mult) 0.8 0.8 0.0 1.0)

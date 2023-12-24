@@ -88,13 +88,63 @@
       }
     },
     {
+      "trans": [ 554.18,  31.20, -33.95 ], // on mid rooftops near prison exit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [554.18,  31.20, -33.95 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-5"
+      }
+    },
+    {
+      "trans": [620.73,  31.17, -61.71  ], // on roof near kor/kid (zoomer high jump)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [620.73,  31.17, -61.71, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-6"
+      }
+    },
+    {
+      "trans": [ 599.26,  42.59, -52.56 ], // behind clothesline on roof (abah up from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [599.26,  42.59, -52.56, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-7"
+      }
+    },
+    {
+      "trans": [ 613.59,  48.01, -82.98 ], // another roof up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [613.59,  48.01, -82.98, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-8"
+      }
+    },
+    {
+      "trans": [ 626.66,  38.02, -117.99 ], // end of roof just below^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [626.66,  38.02, -117.99, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-9"
+      }
+    },
+    {
       "trans": [ 636.2,    43.3,    -172.4  ], // #t ; climb pipe (first intersection after prison exit)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [636.2,    43.3,    -172.4, 10], // bounding sphere
       "lump": {
-        "name": "ctysluma-skill-2"
+        "name": "ctyslumb-skill-10"
       }
     }
     // {

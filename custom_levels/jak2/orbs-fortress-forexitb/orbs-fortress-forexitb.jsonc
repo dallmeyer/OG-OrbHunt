@@ -188,6 +188,26 @@
       "lump": {
         "name": "forexitb-skill-14"
       }
+    },
+    {
+      "trans": [743.78,  81.43, 119.84], // in pipes on right side of room getting shot from below
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [743.78,  81.43, 119.84 , 10], // bounding sphere
+      "lump": {
+        "name": "forexitb-skill-15"
+      }
+    },
+    {
+      "trans": [700.88,  83.76,  81.75], // between pipe and wall before 1st ground pound grate
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [700.88,  83.76,  81.75 , 10], // bounding sphere
+      "lump": {
+        "name": "forexitb-skill-16"
+      }
     }
   ]
 }

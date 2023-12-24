@@ -157,6 +157,16 @@
         "name": "prison-skill-11"
       }
     },
+    {
+      "trans": [435.68,  25.93,  58.39], // up above door from rescue friends 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [435.68,  25.93,  58.39, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-12"
+      }
+    },
     // HOVER ORBS
     {
       "trans": [ 472.1,  27.5,  97.5  ], // on lamp above torture machine

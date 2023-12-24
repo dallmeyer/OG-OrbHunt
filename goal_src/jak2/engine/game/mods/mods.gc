@@ -202,7 +202,7 @@
   (let ((hover-offset 0))
     (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
                                   (bucket-id debug-no-zbuf1))
-      (when (and (pause-allowed?) (-> *pc-settings* baby-mode?))
+      (when (and #f (pause-allowed?) (-> *pc-settings* baby-mode?))
         (+! hover-offset 1)
         (cond
           ((= *baby-mode-orb-dist* #f)

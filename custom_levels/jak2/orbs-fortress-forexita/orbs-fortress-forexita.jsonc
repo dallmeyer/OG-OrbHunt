@@ -269,13 +269,33 @@
       }
     },
     {
-      "trans": [636.91,  94.7, 167.22], // 
+      "trans": [636.91,  94.7, 167.22], // up in pipes on wall behind you heading to end of forexita
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [636.91,  94.7, 167.22, 10], // bounding sphere
       "lump": {
-        "name": "forexita-skill-22"
+        "name": "forexita-skill-23"
+      }
+    },
+    {
+      "trans": [725.59,  90.47, 180.71], // up on pipes on right side of hallway end of forexita
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [725.59,  90.47, 180.71, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-24"
+      }
+    },
+    {
+      "trans": [723.96,  88.16, 165.67], // up on skinny slippery pipe left side hallway end of forexita
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [723.96,  88.16, 165.67, 10], // bounding sphere
+      "lump": {
+        "name": "forexita-skill-25"
       }
     },
     // hover orbs
