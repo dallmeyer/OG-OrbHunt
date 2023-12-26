@@ -88,21 +88,21 @@
       }
     },
     {
-      "trans": [ 554.18,  31.20, -33.95 ], // on mid rooftops near prison exit
+      "trans": [ 554.18,  31.0, -33.95 ], // on mid rooftops near prison exit
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [554.18,  31.20, -33.95 , 10], // bounding sphere
+      "bsphere": [554.18,  31.0, -33.95 , 10], // bounding sphere
       "lump": {
         "name": "ctyslumb-skill-5"
       }
     },
     {
-      "trans": [620.73,  31.17, -61.71  ], // on roof near kor/kid (zoomer high jump)
+      "trans": [620.0,  31.17, -62.4  ], // on roof near kor/kid (zoomer high jump)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [620.73,  31.17, -61.71, 10], // bounding sphere
+      "bsphere": [620.0,  31.17, -62.4, 10], // bounding sphere
       "lump": {
         "name": "ctyslumb-skill-6"
       }
@@ -145,6 +145,56 @@
       "bsphere": [636.2,    43.3,    -172.4, 10], // bounding sphere
       "lump": {
         "name": "ctyslumb-skill-10"
+      }
+    },
+    {
+      "trans": [ 664.27,  38.45, -16.63 ], // on window up high outside of prison
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [664.27,  38.45, -16.63, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-11"
+      }
+    },
+    {
+      "trans": [ 662.2,   8.4, -23.3 ], // in corner/rubble below^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 662.2,   8.4, -23.3, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-12"
+      }
+    },
+    {
+      "trans": [579.44,  10.41, -355.66], // in crevice between buildings, behind island
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [579.44,  10.41, -355.66, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-13"
+      }
+    },
+    {
+      "trans": [641.3,  20.1, -228.51], // under awning on far side of first intersection
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [641.3,  20.1, -228.51, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-14"
+      }
+    },
+    {
+      "trans": [672.3,  31.77, -184.46], // on powerline up high, right side of path from prison
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [672.3,  31.77, -184.46, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-15"
       }
     }
     // {
