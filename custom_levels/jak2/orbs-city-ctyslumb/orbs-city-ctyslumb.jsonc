@@ -196,7 +196,78 @@
       "lump": {
         "name": "ctyslumb-skill-15"
       }
+    },
+    {
+      "trans": [688.4,  8.8, -262.2], // inside flaming can
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [688.4,  8.8, -262.2, 5], // bounding sphere (SMOL)
+      "lump": {
+        "name": "ctyslumb-skill-16"
+      }
+    },
+    {
+      "trans": [781.0,   8.59, -328.0], // behind pipe outside ruins entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [781.0,   8.59, -328.0, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-17"
+      }
+    },
+    {
+      "trans": [661.3,   8.45, -332.65], // behind flaming can on way to ruins
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [661.3,   8.45, -332.65, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-18"
+      }
+    },
+    {
+      "trans": [661.3,   8.45, -332.65], // left rooftops on path to ctysluma
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [661.3,   8.45, -332.65, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-19"
+      }
+    },
+    {
+      "trans": [728.51,  33.80, -182.06], // right rooftops on path to ctysluma
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [728.51,  33.80, -182.06, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-20"
+      }
+    },
+    {
+      "trans": [706.35,   8.59, -187.66], // in corner crevice on path to ctysluma
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [706.35,   8.59, -187.66, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-21"
+      }
+    },
+    {
+      "trans": [687.17,  10.28, -114.85], // behind scraps behind flaming can on path to ctysluma
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [687.17,  10.28, -114.85, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-22"
+      }
     }
+      
     // {
     //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
     //   "etype": "skill",  // actor type

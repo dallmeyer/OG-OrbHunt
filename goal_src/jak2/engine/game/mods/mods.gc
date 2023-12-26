@@ -630,6 +630,8 @@
   (when (and *debug-segment* (cpad-pressed? 0 l3) (cpad-hold? 0 r3))
     ;; fuk ur subtitles we use this for collision renderer toggle
     (toggleCollisionRenderer)
+    ;; hideskip noboard
+    (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack noboard)) #t)
     )
 
   (none))
