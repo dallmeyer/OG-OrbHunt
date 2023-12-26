@@ -266,6 +266,37 @@
       "lump": {
         "name": "ctyslumb-skill-22"
       }
+    },
+    {
+      "trans": [728.90,  19.2, -101.20], // on pipe right before ctysluma
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [728.90,  19.2, -101.20, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-23",
+        "amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 728.95,  41.9, -102.13], // rooftop above ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 728.95,  41.9, -102.13, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-24"
+      }
+    },
+    {
+      "trans": [ 704.74,  40.91, -335.70], // top of powerlines on path to ruins (standpoint on nearby corner)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 704.74,  40.91, -335.70, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-25"
+      }
     }
       
     // {
