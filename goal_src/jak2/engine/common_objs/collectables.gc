@@ -1873,9 +1873,21 @@ This commonly includes things such as:
   
 
 (deftype skill (money)
-  ()
+  ((minimap connection-minimap))
   )
 
+(defstate die (skill)
+  :virtual #t
+  :enter (behavior ()
+    (when (-> self minimap)
+      (logior! (-> self minimap flags) (minimap-flag fade-out))
+      (set! (-> self minimap) #f)
+      )
+    )
+  :code (behavior ()
+    (process-entity-status! self (entity-perm-status dead) #t)
+    )
+  )
 
 (defstate wait (skill)
   :virtual #t
@@ -1957,6 +1969,9 @@ This commonly includes things such as:
       (set-vector! (-> this draw color-mult) 0.8 0.8 0.8 1.0)
       (set-vector! (-> this draw color-emissive) 0.2 0.2 0.2 1.0)
       )
+    )
+  (when (-> *pc-settings* baby-mode?)
+    (set! (-> this minimap) (add-icon! *minimap* this (the uint (minimap-class orba)) (the-as int #f) (the-as vector #t) 0))
     )
   0
   (none))
