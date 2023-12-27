@@ -634,5 +634,35 @@
     (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack noboard)) #t)
     )
 
+
+  (cond
+    ((cpad-hold? 0 l3)
+      (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
+            (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
+            )
+        (when (not map-texture-status)
+          ;; load it
+          (enable-drawing *bigmap*)
+          (set! (-> *bigmap* loading-flag) #t)
+          (set-pending-file (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index)) (process->handle *dproc*) 0.0)
+          )
+        (when (not icon-texture-status)
+          ;; load it
+          (enable-drawing *bigmap*)
+          (set! (-> *bigmap* loading-flag) #t)
+          (set-pending-file (-> *bigmap* tpage) "progress-minimap" 0 (process->handle *dproc*) 0.0)
+          )
+
+        (when (and (= map-texture-status 'active) (= icon-texture-status 'active))
+          ;; loaded, draw it
+          (draw *bigmap* 1792 1840 2304 2256)
+          )
+        )
+      )
+    ((not *progress-process*)
+      (disable-drawing *bigmap*)
+      )
+    )
+
   (none))
   
