@@ -830,7 +830,7 @@
                                  :default-position (new 'static 'vector :w 1.0)
                                  :flags (minimap-flag bigmap)
                                  :name "orba"
-                                 :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x5))
+                                 :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x5)) ;; col 2, row 5
                                  :scale 1.0
                                  :color (new 'static 'rgba :r #x7f :g #x7f :b #x7f :a #x80))))
                                  

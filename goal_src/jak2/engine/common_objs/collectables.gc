@@ -665,6 +665,7 @@
       ;; if this is a non-hover orb and you've hovered in the past X minutes, frick you
       ((and (= (-> self type symbol) 'skill)
             (!= (-> self pickup-amount) (-> *FACT-bank* super-skill-inc))
+            (not (-> *pc-settings* baby-mode?))
             (hover-need-to-cooldown?)
             )
         (add-process *gui-control* *target* (gui-channel guard) (gui-action play) "kg007" -50.0 0)
