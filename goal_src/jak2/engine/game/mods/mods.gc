@@ -199,43 +199,43 @@
   
 (defun-extern hover-need-to-cooldown? symbol)
 (defun draw-baby-mode ()
-  (let ((hover-offset 0))
-    (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
-                                  (bucket-id debug-no-zbuf1))
-      (when (and #f (pause-allowed?) (-> *pc-settings* baby-mode?))
-        (+! hover-offset 1)
-        (cond
-          ((= *baby-mode-orb-dist* #f)
-            (draw-string-xy (string-format "Closest Orb: N/A")
-                            buf 5 395 (font-color transparent) (font-flags pc-hack kerning shadow))
-            )
-          (else
-            ;; color based on distance
-            (let ((fc (cond
-                      ((< *baby-mode-orb-dist* (meters 10.0)) (font-color orange))
-                      ((< *baby-mode-orb-dist* (meters 20.0)) (font-color progress-old-yellow))
-                      ((< *baby-mode-orb-dist* (meters 30.0)) (font-color flat-yellow))
-                      ((< *baby-mode-orb-dist* (meters 40.0)) (font-color progress-old-blue))
-                      ((< *baby-mode-orb-dist* (meters 50.0)) (font-color cyan))
-                      (else (font-color blue)))))
-                      
-              (draw-string-xy (string-format "Closest Orb: ~,,2Mm"
-                                            *baby-mode-orb-dist*)
-                              buf 5 395 fc (font-flags pc-hack kerning shadow))
+  (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
+                                (bucket-id debug-no-zbuf1))
+    (when (pause-allowed?)
+      (cond 
+        ((-> *pc-settings* baby-mode?)
+          ;; show closest orb text
+          (cond
+            ((= *baby-mode-orb-dist* #f)
+              (draw-string-xy (string-format "Closest Orb: N/A")
+                              buf 5 395 (font-color transparent) (font-flags pc-hack kerning shadow))
+              )
+            (else
+              ;; color based on distance
+              (let ((fc (cond
+                        ((< *baby-mode-orb-dist* (meters 10.0)) (font-color orange))
+                        ((< *baby-mode-orb-dist* (meters 20.0)) (font-color progress-old-yellow))
+                        ((< *baby-mode-orb-dist* (meters 30.0)) (font-color flat-yellow))
+                        ((< *baby-mode-orb-dist* (meters 40.0)) (font-color progress-old-blue))
+                        ((< *baby-mode-orb-dist* (meters 50.0)) (font-color cyan))
+                        (else (font-color blue)))))
+                        
+                (draw-string-xy (string-format "Closest Orb: ~,,2Mm"
+                                              *baby-mode-orb-dist*)
+                                buf 5 395 fc (font-flags pc-hack kerning shadow))
+                )
               )
             )
           )
-        )
-      (cond
         ((hover-need-to-cooldown?)
-          (draw-string-xy (string-format "Hover cooldown: ~Ds / ~D"
-                                (/ (- (+ *last-hover-time* (seconds 60)) (current-time)) TICKS_PER_SECOND) *target-board-hold-tricks*)
-                          buf 5 (- 395 (* 15 hover-offset)) (font-color orange) (font-flags pc-hack kerning shadow))
+          ;; show hover cooldown text
+          (draw-string-xy (string-format "Hover cooldown: ~Ds"
+                                (/ (- (+ *last-hover-time* (seconds 60)) (current-time)) TICKS_PER_SECOND))
+                          buf 5 395 (font-color orange) (font-flags pc-hack kerning shadow))
           )
-        ;; (else
-        ;;   (draw-string-xy (string-format "Hover cooldown: - / ~D" *target-board-hold-tricks*)
-        ;;                   buf 5 (- 395 (* 15 hover-offset)) (font-color orange) (font-flags pc-hack kerning shadow))
-        ;;   )
+        (else
+          
+          )
         )
       )
     )
@@ -634,33 +634,34 @@
     (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack noboard)) #t)
     )
 
-
-  (cond
-    ((cpad-hold? 0 l3)
-      (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
-            (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
+  (when (not *progress-process*)
+    (cond
+      ((and *target* (not (-> *minimap* ctywide)) (pause-allowed?) (cpad-hold? 0 l3) (not (cpad-hold? 0 r3)))
+        (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
+              (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
+              )
+          (when (not map-texture-status)
+            ;; load it
+            (enable-drawing *bigmap*)
+            (set! (-> *bigmap* loading-flag) #t)
+            (set-pending-file (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index)) (process->handle *dproc*) 0.0)
             )
-        (when (not map-texture-status)
-          ;; load it
-          (enable-drawing *bigmap*)
-          (set! (-> *bigmap* loading-flag) #t)
-          (set-pending-file (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index)) (process->handle *dproc*) 0.0)
-          )
-        (when (not icon-texture-status)
-          ;; load it
-          (enable-drawing *bigmap*)
-          (set! (-> *bigmap* loading-flag) #t)
-          (set-pending-file (-> *bigmap* tpage) "progress-minimap" 0 (process->handle *dproc*) 0.0)
-          )
+          (when (not icon-texture-status)
+            ;; load it
+            (enable-drawing *bigmap*)
+            (set! (-> *bigmap* loading-flag) #t)
+            (set-pending-file (-> *bigmap* tpage) "progress-minimap" 0 (process->handle *dproc*) 0.0)
+            )
 
-        (when (and (= map-texture-status 'active) (= icon-texture-status 'active))
-          ;; loaded, draw it
-          (draw *bigmap* 1792 1840 2304 2256)
+          (when (and (= map-texture-status 'active) (= icon-texture-status 'active))
+            ;; loaded, draw it
+            (draw *bigmap* 1792 1840 2304 2256)
+            )
           )
         )
-      )
-    ((not *progress-process*)
-      (disable-drawing *bigmap*)
+      (else
+        (disable-drawing *bigmap*)
+        )
       )
     )
 
