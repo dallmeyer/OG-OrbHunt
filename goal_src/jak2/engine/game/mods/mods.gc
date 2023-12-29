@@ -135,11 +135,11 @@
   (format 0 "trying to spawn ~A~%" name)
   (cond
     ((process-by-name name *active-pool*)
-     (format 0 "~A is already spawned, skipping"))
-      
+     (format 0 "~A is already spawned, skipping" name)
+     ) 
     (#f ;; TODO track collection
-      (format 0 "~A is already collected, skipping"))
-      
+      (format 0 "~A is already collected, skipping" name)
+      )
     (else
       (let ((fax (new 'static 'fact-info)))
         (set! (-> fax pickup-type) (pickup-type skill))
@@ -157,12 +157,6 @@
           (let ((proc (ppointer->process (birth-pickup-at-point-named vec (pickup-type skill) amount #t *active-pool* fax name))))
             ;; (copy-string<-string (-> proc name) ,name) ;; lol this overwrote the "skill" string for everyone
             (format 0 "spawned ~A~%" proc)))))))
-            
-          
-        
-      
-    
-  
 
 (define *baby-mode-orb-dist* (the-as float #f))
 (defun baby-mode-find-closest-orb ()
@@ -184,17 +178,6 @@
                                 (-> (the process-drawable (-> s0-0 extra process)) root trans))))
                     (if (or (= *baby-mode-orb-dist* #f) (< dist *baby-mode-orb-dist*))
                       (set! *baby-mode-orb-dist* dist)))))))))))
-                      
-                    
-                  
-                
-              
-            
-          ;; TODO check skills spawned the hacky way too
-          
-        
-      
-    
   (none))
   
 (defun-extern hover-need-to-cooldown? symbol)
@@ -242,14 +225,12 @@
   
   (none))
 
-
 (defun mod-spawn-new-entities ((level symbol))
   (format 0 "spawning extra mod entities for level ~A~%" level)
   (case level
     )
     
   (none))
-  
 
 (defun prison-door-button-check ((button-name string) (door-name string))
   (when *target*
@@ -294,14 +275,6 @@
                (when (send-event hatch 'open)
                  ;; ... if successful we play sound
                  (sound-play "timer-warn")))))))))
-                  
-                
-              
-            
-          
-        
-      
-    
   (none))
   
 
@@ -628,15 +601,21 @@
   ;; (move-actor-str-target-offset "ctyport-part-86" 0.0 1.5 0.0)  ;; jakpoop
 
   (when (and *debug-segment* (cpad-pressed? 0 l3) (cpad-hold? 0 r3))
-    ;; fuk ur subtitles we use this for collision renderer toggle
     (toggleCollisionRenderer)
+    ;; show bug report level info
+    (true! *display-bug-report*)
     ;; hideskip noboard
     (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack noboard)) #t)
     )
 
   (when (not *progress-process*)
     (cond
-      ((and *target* (not (-> *minimap* ctywide)) (pause-allowed?) (cpad-hold? 0 l3) (not (cpad-hold? 0 r3)))
+      ((and *target* 
+            (or (not (-> *minimap* ctywide)) *debug-segment*)
+            (pause-allowed?) 
+            (cpad-hold? 0 l3)
+            (not (cpad-hold? 0 r3))
+            )
         (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
               (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
               )

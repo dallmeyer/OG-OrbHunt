@@ -338,6 +338,94 @@
       "lump": {
         "name": "ctyslumb-skill-29"
       }
+    },
+    {
+      "trans": [544.71,  20.36, -253.68], // below v 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [544.71,  20.36, -253.68, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-30",
+        "pickup-amount": ["float", 2.0]  // abah hint
+      }
+    },
+    {
+      "trans": [538.72,  39.38, -251.11], // atop pipe in central area, kinda towards path to ctyslumc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [538.72,  39.38, -251.11, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-31"
+      }
+    },
+    {
+      "trans": [425.07,  33.7, -103.69], // rooftop at hairpin before ctyslumc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [425.07,  33.7, -103.69, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-32"
+      }
+    },    
+    {
+      "trans": [449.78,  20.42, -210.89], // below v 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [449.78,  20.42, -210.89, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-33",
+        "pickup-amount": ["float", 2.0]  // abah hint
+      }
+    },
+    {
+      "trans": [435.7,  38.3, -252.7], // behind clothes up high right before ctyslumc (abah from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [435.7,  38.3, -252.7, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-34"
+      }
+    },
+    {
+      "trans": [454.98,  20.5, -170.99], // above broken boards on path before ctyslumc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [454.98,  20.5, -170.99, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-35"
+      }
+    },
+    {
+      "trans": [527.89,   8.83,  -1.39], // in corner against palace wall, on way to ctygenb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [527.89,   8.83,  -1.39, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-36"
+      }
+    },
+
+    {
+      "trans": [601.41,  24.4, -295.74], // on island in central area
+      "etype": "crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [601.41,  24.4, -295.74, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-crate-1",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
     }
       
     // {

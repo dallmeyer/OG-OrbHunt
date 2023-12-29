@@ -1462,6 +1462,7 @@ This commonly includes things such as:
       )
     )
   :enter (behavior ()
+    (set! (-> self destroyed) #t)
     (let ((gp-0 (new 'stack 'joint-exploder-tuning (the-as uint 0))))
       (process-spawn
         joint-exploder
