@@ -399,6 +399,19 @@ This commonly includes things such as:
 (defmethod get-art-elem ((this tess-npc))
   "Checks various things such the current actor, task status, etc to determine the right art-group data to use
 @returns the appropriate [[art-element]] for the given NPC"
+
+  ;; custom level behavior - if ag-idx specified and valid, use that
+  (when (nonzero? (res-lump-value (-> this entity) 'force-idle int32 :time -1000000000.0))
+    (let ((ag-idx (res-lump-value (-> this entity) 'ag-idx int32 :time -1000000000.0)))
+      (when (and (< ag-idx (-> this draw art-group length))
+                 (-> this draw art-group data ag-idx) 
+                 )
+        (return (-> this draw art-group data ag-idx))
+        )
+      )
+    )
+
+  ;; vanilla behavior
   (case (-> this task actor)
     (((game-task-actor tess-alley))
      (if (task-node-closed? (game-task-node ruins-tower-resolution))

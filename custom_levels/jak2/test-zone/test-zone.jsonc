@@ -36,8 +36,7 @@
 
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
-  //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["tess-lhiphog+0-ag", "tess-highres-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -47,24 +46,18 @@
 
   "actors" : [
     {
-      "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
-      "etype": "skill",  // actor type
+      "trans": [    2.62,   0.85,  5.06 ],
+      "etype": "tess-npc",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
+      "quat" : [0, 1, 0, 0], // quaternion
+      "kill_mask": 4096,
+      "bsphere": [   2.62,   0.85,  5.06, 10], // bounding sphere
       "lump": {
-        "name":"prison-skill-01"
-      }
-    },
-    {
-      "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-      "lump": {
-        "name":"prison-skill-02",
-        "pickup-amount": ["float", 3.0]
+        "name": "test-tess",
+        "task-actor": ["int32", 35],  // (game-task-actor tess-hiphog)
+        "task-action": ["int32", 3],  // (game-task-action talk)
+        "force-idle": ["int32", 1],  // nonzero = true
+        "ag-idx": ["int32", 6]  // (-> this draw art-group data 6) for hiphog idle
       }
     }
   ]
