@@ -561,6 +561,7 @@
     )
   )
 
+(define *show-mini-bigmap* #f)
 (defun mod-run-each-frame ()
   ;; GENERAL
   (cond
@@ -608,38 +609,53 @@
     (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack noboard)) #t)
     )
 
+  ;; mini-bigmap stuff
   (when (not *progress-process*)
     (cond
+      ((hud-hidden?)
+        (false! *show-mini-bigmap*)
+        )
       ((and *target* 
-            (or (not (-> *minimap* ctywide)) *debug-segment*)
-            (pause-allowed?) 
-            (cpad-hold? 0 l3)
-            (not (cpad-hold? 0 r3))
+            (not (-> *minimap* ctywide))
+            *show-mini-bigmap*
             )
         (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
               (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
               )
-          (when (not map-texture-status)
-            ;; load it
-            (enable-drawing *bigmap*)
-            (set! (-> *bigmap* loading-flag) #t)
-            (set-pending-file (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index)) (process->handle *dproc*) 0.0)
-            )
-          (when (not icon-texture-status)
-            ;; load it
-            (enable-drawing *bigmap*)
-            (set! (-> *bigmap* loading-flag) #t)
-            (set-pending-file (-> *bigmap* tpage) "progress-minimap" 0 (process->handle *dproc*) 0.0)
-            )
+          ;; (when (not map-texture-status)
+          ;;   ;; load it
+          (enable-drawing *bigmap*)
+          ;;   (set! (-> *bigmap* loading-flag) #t)
+          ;;   (set-pending-file (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index)) (process->handle *dproc*) 0.0)
+          ;;   )
+          ;; (when (not icon-texture-status)
+          ;;   ;; load it
+          ;;   (enable-drawing *bigmap*)
+          ;;   (set! (-> *bigmap* loading-flag) #t)
+          ;;   (set-pending-file (-> *bigmap* tpage) "progress-minimap" 0 (process->handle *dproc*) 0.0)
+          ;;   )
 
           (when (and (= map-texture-status 'active) (= icon-texture-status 'active))
             ;; loaded, draw it
-            (draw *bigmap* 1792 1840 2304 2256)
+            ;; (draw *bigmap* 1792 1840 2304 2256)  ;; original "full" screen
+            ;; (draw *bigmap* 1984 1996 2112 2100) ;; middle
+            ;; (draw *bigmap* 1792 1840 1920 1944) ;; top left ish
+            ;; (draw *bigmap* 2176 1840 2304 1944) ;; top right ish
+            ;; (draw *bigmap* 1792 2152 1920 2256) ;; bottom left ish
+            (let ((x1 (+ 2048 (* (-> *pc-settings* aspect-ratio-scale) (- 2304 2048)))))
+              (draw *bigmap* ;; bottom right
+                (- x1 128)
+                2152 
+                x1  ;; + 128
+                2256  ;; + 104
+                )
+              )
             )
           )
         )
       (else
-        (disable-drawing *bigmap*)
+        ;; (false! (-> *bigmap* drawing-flag))
+        ;; (disable-drawing *bigmap*)
         )
       )
     )

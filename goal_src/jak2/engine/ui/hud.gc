@@ -609,6 +609,8 @@
   (none)
   )
 
+(define-extern *show-mini-bigmap* symbol)
+
 (defmethod update-values hud ((obj hud))
   (with-pp
     (let ((s5-0 #f))
@@ -663,7 +665,7 @@
             )
           )
         )
-      (if (and (not *progress-process*)
+      (when (and (not *progress-process*)
                (>= (- (current-time) (-> obj last-hide-time)) (seconds 0.05))
                (>= (- (-> *display* base-clock frame-counter) (-> *game-info* letterbox-time)) (seconds 0.1))
                (>= (- (-> *display* base-clock frame-counter) (-> *game-info* blackout-time)) (seconds 0.1))
@@ -687,6 +689,7 @@
                    )
                (check-ready-and-maybe-show obj #t)
                )
+          (true! *show-mini-bigmap*)
           (go hud-arriving)
           )
       )
@@ -962,7 +965,7 @@
   :event (-> hud-arriving event)
   :code (behavior ()
     (set! (-> self trigger-time) (current-time))
-    (while (and (< (- (current-time) (-> self trigger-time)) (seconds 2)) (check-ready-and-maybe-show self #f))
+    (while (and (< (- (current-time) (-> self trigger-time)) (seconds 3)) (check-ready-and-maybe-show self #f))
       (set! (-> self offset) 0.0)
       (suspend)
       )
@@ -1089,6 +1092,7 @@
 
 (defun hide-hud-quick ((arg0 symbol))
   (when *target*
+    (false! *show-mini-bigmap*)
     (let ((v1-3 (-> *hud-engine* alive-list next0)))
       *hud-engine*
       (let ((s5-0 (-> v1-3 next0)))
