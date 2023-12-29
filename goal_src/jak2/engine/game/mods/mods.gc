@@ -613,28 +613,18 @@
   (when (not *progress-process*)
     (cond
       ((hud-hidden?)
+        (disable-drawing *bigmap*)
         (false! *show-mini-bigmap*)
         )
       ((and *target* 
-            (not (-> *minimap* ctywide))
+            (!= (-> *bigmap* bigmap-index) 20)  ;; not showing ctywide
             *show-mini-bigmap*
+            (= (gui-status ready) (get-status *gui-control* (lookup-gui-connection-id *gui-control* (the string #f) (gui-channel hud-lower-right) (gui-action none))))
             )
+        (enable-drawing *bigmap*)
         (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
               (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
               )
-          ;; (when (not map-texture-status)
-          ;;   ;; load it
-          (enable-drawing *bigmap*)
-          ;;   (set! (-> *bigmap* loading-flag) #t)
-          ;;   (set-pending-file (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index)) (process->handle *dproc*) 0.0)
-          ;;   )
-          ;; (when (not icon-texture-status)
-          ;;   ;; load it
-          ;;   (enable-drawing *bigmap*)
-          ;;   (set! (-> *bigmap* loading-flag) #t)
-          ;;   (set-pending-file (-> *bigmap* tpage) "progress-minimap" 0 (process->handle *dproc*) 0.0)
-          ;;   )
-
           (when (and (= map-texture-status 'active) (= icon-texture-status 'active))
             ;; loaded, draw it
             ;; (draw *bigmap* 1792 1840 2304 2256)  ;; original "full" screen
@@ -652,10 +642,6 @@
               )
             )
           )
-        )
-      (else
-        ;; (false! (-> *bigmap* drawing-flag))
-        ;; (disable-drawing *bigmap*)
         )
       )
     )
