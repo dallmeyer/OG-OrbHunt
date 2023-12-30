@@ -269,10 +269,223 @@
         "name": "ctyslumc-skill-22"
       }
     },
+    {
+      "trans": [772.8,  20.10, -555.88], // upper/back of building in back near oracle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [772.8,  20.10, -555.88, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-23"
+      }
+    },
+    {
+      "trans": [716.07,  21.9, -573.4], // behind upper overhang, building across from oracle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [716.07,  21.9, -573.4, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-24"
+      }
+    },
+    {
+      "trans": [716.57,  47.17, -597.0], // in chimney of building oracle faces (need real good car launch)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [716.57,  47.17, -597.0, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-25",
+        "no-bob": ["float", 1.0]  // nonzero = nobob
+      }
+    },
+    {
+      "trans": [711.85,  21.40, -701.25], // rooftop on left building before seal building
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [711.85,  21.40, -701.25, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-26"
+      }
+    },
+    {
+      "trans": [770.00,  22.13, -672.57], // back of right building before seal building
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [770.00,  22.13, -672.57, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-27"
+      }
+    },
+    {
+      "trans": [768.08,  22.26, -746.64], // upper/back of seal building
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [768.08,  22.26, -746.64, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-28"
+      }
+    },
+    {
+      "trans": [593.77,  14.65, -664.48], // cubby left of door, 2nd building after exiting ruins
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [593.77,  14.65, -664.48, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-29"
+      }
+    },
+    {
+      "trans": [428.6,   6.88, -779.4], // behind wooden support, deep under dividing buildings / against city wall to ruins
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [428.6,   6.88, -779.4, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-30"
+      }
+    },
+    {
+      "trans": [447.22,   6.16, -732.17], // behind wood, deep under dividing buildings (more central than ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [447.22,   6.16, -732.17, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-31"
+      }
+    },
+    {
+      "trans": [455.82,  36.86, -756.73], // up above dividing buildings, closer to city wall by ruins (abah up from lower rooftop, maybe car launch?)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [455.82,  36.86, -756.73, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-32"
+      }
+    },
+    {
+      "trans": [472.79,  35.42, -684.49], // across rooftop and down from ^, abah hint for v
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [472.79,  35.42, -684.49, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-33",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [464.84,  54.09, -686.79], // way up on slums projects, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [464.84,  54.09, -686.79, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-34"
+      }
+    },
+    {
+      "trans": [476.36,  22.47, -681.6], // drop down from ^^, crouch then quick jump to spin
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [476.36,  22.47, -681.6, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-35"
+      }
+    },
+    {
+      "trans": [489.79,  11.12, -630.01], // in cubby between dividing buildings - lol you might need giant dark jak for this, since vehicles are blocked
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [489.79,  11.12, -630.01, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-36"
+      }
+    },
+    {
+      "trans": [568.72,  24.29, -619.96], // atop rooftops of dividing buildings, towards level center
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [568.72,  24.29, -619.96, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-37"
+      }
+    },
+    {
+      "trans": [563.63,  34.66, -595.75], // atop rooftops of dividing buildings, towards level center
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [563.63,  34.66, -595.75, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-38"
+      }
+    },
+    {
+      "trans": [542.52,  46.61, -624.11], // atop rooftops of dividing buildings, towards level center
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [542.52,  46.61, -624.11, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-39"
+      }
+    },
+    {
+      "trans": [499.37,  30.39, -628.71], // hidden behind wall atop rooftops of dividing buildings, towards level center
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [499.37,  30.39, -628.71, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-40"
+      }
+    },
+    {
+      "trans": [522.04,  47.84, -791.45], // abah on wall up/left from ruins entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [522.04,  47.84, -791.45, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-41"
+      }
+    },
+    {
+      "trans": [601.03,  47.84, -792.04], // abah on wall up/right from ruins entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [601.03,  47.84, -792.04, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-42"
+      }
+    },
+
     
+    {
+      "trans": [800.93,  86.95, -793.09], // top right corner of citywall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [800.93,  86.95, -793.09, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-hover-01"
+      }
+    },
 
     {
-      "trans": [461.18,  45.0, -316.30], // on high rooftop
+      "trans": [461.18,  45.0, -316.30], // on high rooftop near start
       "etype": "crate",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -287,7 +500,7 @@
       }
     },
     {
-      "trans": [758.60,  48.48, -473.16], // on high rooftop
+      "trans": [758.60,  48.48, -473.16], // on high rooftop near oracle
       "etype": "crate",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
