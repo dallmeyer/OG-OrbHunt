@@ -263,7 +263,7 @@
     
   
 
-(define *minimap-class-list* (new 'static 'inline-array minimap-class-node 72
+(define *minimap-class-list* (new 'static 'inline-array minimap-class-node 74 ;; (minimap-class max)
                                (new 'static 'minimap-class-node
                                  :default-position (new 'static 'vector :w 1.0)
                                  :flags (minimap-flag trail bigmap)
@@ -825,14 +825,32 @@
                                  :scale 1.0
                                  :color (new 'static 'rgba :r #x7f :b #x7f :a #x80))
                               
-                              ;; orbhunt added
+                               ;; orbhunt added
                                (new 'static 'minimap-class-node
                                  :default-position (new 'static 'vector :w 1.0)
                                  :flags (minimap-flag bigmap)
                                  :name "orba"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x5)) ;; col 2, row 5
                                  :scale 1.0
-                                 :color (new 'static 'rgba :r #x7f :g #x7f :b #x7f :a #x80))))
+                                 :color (new 'static 'rgba :r #x7f :g #x7f :b #x7f :a #x80))
+                                 
+                               (new 'static 'minimap-class-node
+                                 :default-position (new 'static 'vector :w 1.0)
+                                 :flags (minimap-flag bigmap)
+                                 :name "orba-blue"
+                                 :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x3 #x5)) ;; col 3, row 5
+                                 :scale 1.0
+                                 :color (new 'static 'rgba :r #x7f :g #x7f :b #x7f :a #x80))
+                                 
+                               (new 'static 'minimap-class-node
+                                 :default-position (new 'static 'vector :w 1.0)
+                                 :flags (minimap-flag bigmap)
+                                 :name "orba-gold"
+                                 :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x4 #x5)) ;; col 4, row 5
+                                 :scale 1.0
+                                 :color (new 'static 'rgba :r #x7f :g #x7f :b #x7f :a #x80))
+                                
+                               ))
                                  
                                
         

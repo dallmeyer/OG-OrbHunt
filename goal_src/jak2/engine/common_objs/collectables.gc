@@ -1874,7 +1874,7 @@ This commonly includes things such as:
   
 
 (deftype skill (money)
-  ((minimap connection-minimap))
+  ((minimap connection-minimap))  ;; added orbhunt
   )
 
 (defstate die (skill)
@@ -1957,22 +1957,26 @@ This commonly includes things such as:
   (if (-> this entity)
       (nav-mesh-connect-from-ent this)
       )
-  (cond
-    ((= (-> this pickup-amount) 2.0)  ;; abah hint
-     (set-vector! (-> this draw color-mult) 0.0 0.0 0.8 1.0)
-     (set-vector! (-> this draw color-emissive) 0.1 0.1 1.0 1.0)
-     )
-    ((>= (-> this pickup-amount) (-> *FACT-bank* super-skill-inc))
-     (set-vector! (-> this draw color-mult) 0.8 0.8 0.0 1.0)
-     (set-vector! (-> this draw color-emissive) 0.0 1.0 0.2 1.0)
-     )
-    (else
-      (set-vector! (-> this draw color-mult) 0.8 0.8 0.8 1.0)
-      (set-vector! (-> this draw color-emissive) 0.2 0.2 0.2 1.0)
+  (let ((map-class (minimap-class orba)))
+    (cond
+      ((= (-> this pickup-amount) 2.0)  ;; abah hint
+        (set! map-class (minimap-class orba-blue))
+        (set-vector! (-> this draw color-mult) 0.0 0.0 0.8 1.0)
+        (set-vector! (-> this draw color-emissive) 0.1 0.1 1.0 1.0)
+        )
+      ((>= (-> this pickup-amount) (-> *FACT-bank* super-skill-inc))
+        (set! map-class (minimap-class orba-gold))
+        (set-vector! (-> this draw color-mult) 0.8 0.8 0.0 1.0)
+        (set-vector! (-> this draw color-emissive) 0.0 1.0 0.2 1.0)
+        )
+      (else
+        (set-vector! (-> this draw color-mult) 0.8 0.8 0.8 1.0)
+        (set-vector! (-> this draw color-emissive) 0.2 0.2 0.2 1.0)
+        )
       )
-    )
-  (when (-> *pc-settings* baby-mode?)
-    (set! (-> this minimap) (add-icon! *minimap* this (the uint (minimap-class orba)) (the-as int #f) (the-as vector #t) 0))
+    (when (-> *pc-settings* baby-mode?)
+      (set! (-> this minimap) (add-icon! *minimap* this (the uint map-class) (the-as int #f) (the-as vector #t) 0))
+      )
     )
   0
   (none))

@@ -38,6 +38,7 @@
    (target              handle)
    (child-count         int32)
    (victory-anim        spool-anim)
+   (minimap             connection-minimap) ;; added orbhunt
    )
   (:state-methods
     hide
@@ -812,6 +813,12 @@
 
 (defstate die (crate)
   :virtual #t
+  :enter (behavior ()
+    (when (-> self minimap)
+      (logior! (-> self minimap flags) (minimap-flag fade-out))
+      (set! (-> self minimap) #f)
+      )
+    )
   :event (behavior ((proc process) (argc int) (message symbol) (block event-message-block))
     (case message
       (('touched)
@@ -1203,6 +1210,24 @@ This commonly includes things such as:
   (set! (-> this carry max-pull) 3686.4)
   (set! (-> this carry carry-radius) 3276.8)
   (set! (-> this target) (the-as handle #f))
+  ;; for babymode, add to minimap if containing orbs
+  (when (and (-> *pc-settings* baby-mode?) (= (-> this fact pickup-type) (pickup-type skill)))
+    (set! (-> this minimap) (add-icon! *minimap* this 
+      (the uint (cond
+        ((= (-> this fact pickup-amount) 2.0)  ;; abah hint
+          (minimap-class orba-blue)
+          )
+        ((>= (-> this fact pickup-amount) (-> *FACT-bank* super-skill-inc))
+          (minimap-class orba-gold)
+          )
+        (else
+          (minimap-class orba)
+          )
+        )) 
+      (the-as int #f)
+      (the-as vector #t)
+      0))
+    )
   (none)
   )
 

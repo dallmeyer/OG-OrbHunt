@@ -480,7 +480,8 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [800.93,  86.95, -793.09, 10], // bounding sphere
       "lump": {
-        "name": "ctyslumc-skill-hover-01"
+        "name": "ctyslumc-skill-hover-01",
+        "pickup-amount": ["float", 3.0] // goldge
       }
     },
 
