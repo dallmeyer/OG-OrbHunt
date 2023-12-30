@@ -179,6 +179,96 @@
         "name": "ctyslumc-skill-13"
       }
     },
+    {
+      "trans": [381.2,   5.49, -459.85 ], // along left wall, over missing water vol ^_^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [381.2,   5.49, -459.85 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-14"
+      }
+    },
+    {
+      "trans": [379.65,   8.84, -565.19], // hidden in back left corner in first area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [379.65,   8.84, -565.19 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-15"
+      }
+    },
+    {
+      "trans": [502.53,   4.15, -610.81], // behind random sheet of wood below building, end of first area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [502.53,   4.15, -610.81 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-16"
+      }
+    },
+    {
+      "trans": [589.45,  16.7, -537.40 ], // behind overhang in corner behind building, start of back area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [589.45,  16.7, -537.40 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-17"
+      }
+    },
+    {
+      "trans": [663.95,  18.8, -556.55], // on "balcony" of building in back, kinda facing oracle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [663.95,  18.8, -556.55, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-18"
+      }
+    },
+    {
+      "trans": [641.2,  31.28, -431.6], // in upper corner of buildings, right of oracle, behind sign
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [641.2,  31.28, -431.6, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-19"
+      }
+    },
+    {
+      "trans": [494.27,  22.2, -379.56], // upper/back of building on right in first area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [494.27,  22.2, -379.56, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-20"
+      }
+    },
+    {
+      "trans": [416.8,  16.9, -484.6], // under overhang on back of building on left in first area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [416.8,  16.9, -484.6, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-21"
+      }
+    },
+    {
+      "trans": [516.4,  23.2, -543.8], // behind overhang up high center side, just before back area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [516.4,  23.2, -543.8, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-skill-22"
+      }
+    },
     
 
     {
@@ -189,6 +279,21 @@
       "bsphere": [461.18,  45.0, -316.30, 10], // bounding sphere
       "lump": {
         "name": "ctyslumc-crate-1",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          3 // amount - hover req'd
+        ]
+      }
+    },
+    {
+      "trans": [758.60,  48.48, -473.16], // on high rooftop
+      "etype": "crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [758.60,  48.48, -473.16, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumc-crate-2",
         "eco-info": [
           "int32",
           22, // (pickup-type skill)

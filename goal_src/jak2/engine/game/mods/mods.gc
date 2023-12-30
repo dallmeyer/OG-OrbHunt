@@ -601,12 +601,22 @@
 
   ;; (move-actor-str-target-offset "ctyport-part-86" 0.0 1.5 0.0)  ;; jakpoop
 
+  ;; dev stuff
   (when (and *debug-segment* (cpad-pressed? 0 l3) (cpad-hold? 0 r3))
     (toggleCollisionRenderer)
-    ;; show bug report level info
-    (true! *display-bug-report*)
     ;; hideskip noboard
     (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack noboard)) #t)
+
+    ;; disable camera collision/line of sight
+    (if (logtest? (-> *camera* slave-options) 32)
+      (send-event *camera* 'toggle-slave-option (cam-slave-options COLLIDE))
+      )
+    (if (logtest? (-> *camera* slave-options) 512)
+      (send-event *camera* 'toggle-slave-option (cam-slave-options LINE_OF_SIGHT))
+      )         
+    
+    ;; show bug report level info
+    (true! *display-bug-report*)
     )
 
   ;; mini-bigmap stuff
