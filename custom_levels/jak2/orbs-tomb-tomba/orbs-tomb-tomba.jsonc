@@ -47,16 +47,37 @@
 
   "actors" : [
     // central chamber
-    // {
-    //   "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-01"
-    //   }
-    // },
+    {
+      "trans": [ 268.47, -71.60, 1262.78  ], // in crevice of big torch left of entrance to left tomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [268.47, -71.60, 1262.78, 10], // bounding sphere
+      "lump": {
+        "name":"tomba-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [262.22, -51.90, 1260.98], // way up, left side before entrance to left tomb (abah from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [262.22, -51.90, 1260.98, 10], // bounding sphere
+      "lump": {
+        "name":"tomba-skill-02"
+      }
+    },
+    {
+      "trans": [262.63, -37.25, 1272.37], // further up from ^, infin jump ceiling
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [262.63, -37.25, 1272.37, 10], // bounding sphere
+      "lump": {
+        "name":"tomba-skill-03"
+      }
+    }
     // // HOVER CELLS
     // {
     //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start

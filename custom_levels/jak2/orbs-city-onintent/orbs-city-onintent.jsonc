@@ -48,13 +48,24 @@
   "actors" : [
     // 'onintent
     {
-    "trans": [ 708.7,    9.0,     746.2   ], // #t ; on left behind pole (need to crouch
+    "trans": [ 707.82,  10.18, 743.17  ], // on left - tricky uppercut from outside over invis wall (enjoy softlock)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [707.82,  10.18, 743.17, 10], // bounding sphere
+      "lump": {
+        "name": "onintent-skill-1"
+      }
+    },
+    {
+    "trans": [ 708.7,    9.0,     746.2   ], // on pot on right - tricky uppercut from outside over invis wall
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [708.7,    9.0,     746.2 , 10], // bounding sphere
       "lump": {
-        "name": "onintent-skill-1"
+        "name": "onintent-skill-2",
+        "no-bob": ["float", 1.0]  // no-bob
       }
     }
     // {
