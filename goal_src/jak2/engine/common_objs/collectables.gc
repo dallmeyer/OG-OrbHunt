@@ -2501,6 +2501,8 @@ This commonly includes things such as:
          
        (when (logtest? (-> arg5 options) (actor-option force-bob))
         (logior! (-> sv-56 options) (actor-option force-bob)))
+
+      
         
        (set! sv-40 (process-spawn
                      skill

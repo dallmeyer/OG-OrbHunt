@@ -305,7 +305,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [536.1,  21.42, -137.0, 10], // bounding sphere
       "lump": {
-        "name": "ctyslumb-skill-26"
+        "name": "ctyslumb-skill-26" // TODO BARG - is this possible? lol
       }
     },
     {
@@ -420,6 +420,7 @@
       "bsphere": [601.41,  24.4, -295.74, 10], // bounding sphere
       "lump": {
         "name": "ctyslumb-crate-1",
+        "crate-type": "iron",
         "eco-info": [
           "int32",
           22, // (pickup-type skill)

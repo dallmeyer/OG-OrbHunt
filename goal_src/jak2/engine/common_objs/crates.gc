@@ -1075,6 +1075,10 @@
       )
     0
     (logior! (-> self draw status) (draw-control-status no-draw))
+    (when (= (-> self fact pickup-type) (pickup-type skill))
+      (logior! (-> self fact options) (actor-option fade-out))
+      (set! (-> self fact fade-time) (the-as time-frame 0)) 
+      )
     (drop-pickup (-> self fact) #t self (the-as fact-info #f) 0)
     (set! (-> self child-count) (+ (process-count self) -1))
     (process-entity-status! self (entity-perm-status bit-4) #t)
