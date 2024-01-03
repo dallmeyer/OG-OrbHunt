@@ -814,7 +814,7 @@
 (defstate die (crate)
   :virtual #t
   :enter (behavior ()
-    (when (-> self minimap)
+    (when (and (-> self minimap) (nonzero? (-> self minimap)))
       (logior! (-> self minimap flags) (minimap-flag fade-out))
       (set! (-> self minimap) #f)
       )
@@ -1227,7 +1227,7 @@ This commonly includes things such as:
         (else
           (minimap-class orba)
           )
-        )) 
+        ))
       (the-as int #f)
       (the-as vector #t)
       0))
