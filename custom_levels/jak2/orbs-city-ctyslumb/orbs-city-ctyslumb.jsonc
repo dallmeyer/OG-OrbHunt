@@ -275,7 +275,7 @@
       "bsphere": [728.90,  19.2, -101.20, 10], // bounding sphere
       "lump": {
         "name": "ctyslumb-skill-23",
-        "amount": ["float", 2.0] // abah hint
+        "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
@@ -326,7 +326,7 @@
       "bsphere": [435.76,  32.66,  -3.95, 10], // bounding sphere
       "lump": {
         "name": "ctyslumb-skill-28",
-        "amount": ["float", 2.0] // abah hint
+        "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
@@ -414,7 +414,7 @@
 
     {
       "trans": [601.41,  24.4, -295.74], // on island in central area
-      "etype": "crate",  // actor type
+      "etype": "skill-crate",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [601.41,  24.4, -295.74, 10], // bounding sphere

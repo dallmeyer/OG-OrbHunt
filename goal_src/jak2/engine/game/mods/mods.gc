@@ -184,7 +184,7 @@
 (defun draw-baby-mode ()
   (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
                                 (bucket-id debug-no-zbuf1))
-    (when (pause-allowed?)
+    (when (and (pause-allowed?) (not (paused?)))
       (cond 
         ((-> *pc-settings* baby-mode?)
           ;; show closest orb text

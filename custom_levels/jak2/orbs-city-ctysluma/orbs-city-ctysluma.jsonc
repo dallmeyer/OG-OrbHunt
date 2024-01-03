@@ -86,6 +86,36 @@
       "lump": {
         "name": "ctysluma-skill-4"
       }
+    },
+    {
+      "trans": [ 697.46,  31.18, -73.06 ], // upper corner right before ctyslumb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [697.46,  31.18, -73.06 , 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-5"
+      }
+    },
+    {
+      "trans": [ 726.97,  40.65, -66.75 ], // roof above ^ (abah, car high jump, your pick)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [726.97,  40.65, -66.75 , 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-6"
+      }
+    },
+    {
+      "trans": [ 739.84,  39.36, -65.63], // on balcony with clothes hanging, just over from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [739.84,  39.36, -65.63, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-7"
+      }
     }
     // {
     //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start

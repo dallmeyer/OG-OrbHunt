@@ -487,7 +487,7 @@
 
     {
       "trans": [461.18,  45.0, -316.30], // on high rooftop near start
-      "etype": "crate",  // actor type
+      "etype": "skill-crate",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [461.18,  45.0, -316.30, 10], // bounding sphere
@@ -502,7 +502,7 @@
     },
     {
       "trans": [758.60,  48.48, -473.16], // on high rooftop near oracle
-      "etype": "crate",  // actor type
+      "etype": "skill-crate",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [758.60,  48.48, -473.16, 10], // bounding sphere

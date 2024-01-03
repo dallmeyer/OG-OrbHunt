@@ -1405,3 +1405,8 @@ This commonly includes things such as:
     #f
     )
   )
+
+;; added orb-hunt - makes it easier to count up orbs per level
+(deftype skill-crate (crate)
+  ()
+  )
