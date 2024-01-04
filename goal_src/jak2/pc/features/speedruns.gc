@@ -55,10 +55,10 @@
     (set! (-> *pc-settings* cheats) (the-as pc-cheats #x0)))
   (none))
 
-(define-extern draw-baby-mode (function none))
-(defun baby-mode-update ()
+(define-extern draw-orb-hunt-text (function none))
+(defun orb-hunt-update ()
   ;; Draw info to the screen
-  (draw-baby-mode)
+  (draw-orb-hunt-text)
 
   (when (-> *pc-settings* baby-mode?)
     ;; call post-init function

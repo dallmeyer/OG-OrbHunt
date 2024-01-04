@@ -11,7 +11,7 @@
   (set-hud-piece-position!
     (-> this sprites 1)
     (the int (+ 492.0 (* 140.0 (-> this offset))))
-    (the int (+ 281.0 (* 140.0 (-> this offset))))
+    (- (the int (+ 281.0 (* 140.0 (-> this offset)))) 10) ;; changed orbhunt - give more room for orb count display
     )
   (set-as-offset-from! (the-as hud-sprite (-> this sprites)) (the-as vector4w (-> this sprites 1)) 11 -11)
   (set! (-> this sprites 0 color w)

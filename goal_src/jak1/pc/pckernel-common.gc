@@ -259,7 +259,7 @@
     (+ (* (shr (logand bcd #xf0) 4) 10) (logand bcd #x0f))
   )
 
-(define-extern baby-mode-update (function none))
+(define-extern orb-hunt-update (function none))
 
 (defun real-movie? ()
   "are we in an actual cutscene and should letterbox the view?"
@@ -277,7 +277,7 @@
   ;; update auto-splitter info
   (update-speedrun obj)
 
-  (baby-mode-update)
+  (orb-hunt-update)
 
   (when (not (-> obj use-vis?))
     (update-video-hacks obj)

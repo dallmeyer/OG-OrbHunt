@@ -511,7 +511,7 @@
                       buf 0 (- 220 (* 8 4)) (font-color flat-yellow) (font-flags shadow kerning))))
   (none))
 
-(defun baby-mode-update ()
+(defun orb-hunt-update ()
   (when (-> *pc-settings* baby-mode?)
     ;; Draw info to the screen
     (draw-baby-mode)

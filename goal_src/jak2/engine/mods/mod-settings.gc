@@ -45,3 +45,326 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 
 ;; Change #f to #t here to show the input display by default
 (define *show-input-display* #f)
+
+(define *level-load-info-level-id-remap* (new 'static 'boxed-array :type uint8 :length 246 :allocated-length 246
+  0 ;; none
+  0 ;; default -> none (lots of test levels use this index too)
+  0 ;; intro -> none
+  0 ;; demo -> none
+  0 ;; title -> ctysluma
+  1 ;; vinroom -> power station
+  2 ;; drillmid -> drill plat A (first area)
+  3 ;; drill -> drill plat B (on rails/ship area)
+  4 ;; drillb -> drill plat C (titan suit section)
+  0 ;; drillmtn -> none (?)
+  5 ;; sewer -> sewers
+  5 ;; sewerb -> sewers
+  5 ;; sewesc -> sewers
+  5 ;; sewescb -> sewers
+  6 ;; tomba -> center tomb
+  7 ;; tombb -> left tomb
+  8 ;; tombc -> right tomb
+  6 ;; tombd -> entrance?center tomb
+  7 ;; tombe (daxter chase) -> left tomb
+  0 ;; tombext -> none (?)
+  9 ;; tombboss
+  10 ;; under -> underport
+  10 ;; underb -> underport
+  11 ;; palcab
+  12 ;; palshaft
+  13 ;; palboss -> roof
+  13 ;; palroof -> roof
+  0 ;; palout -> none?
+  14 ;; throne 
+  0 ;; lbrnermk -> none
+  0 ;; lashthrn -> none
+  0 ;; lthrnout -> none
+  15 ;; palent
+  16 ;; prison
+  0 ;; ldjakbrn -> none
+  0 ;; lprsncst
+  17 ;; forexita
+  18 ;; forexitb
+  19 ;; forresca
+  20 ;; forrescb
+  21 ;; fordumpa
+  22 ;; fordumpb
+  23 ;; fordumpc
+  24 ;; fordumpd
+  25 ;; strip
+  26 ;; ruins
+  27 ;; sagehut
+  28 ;; atoll
+  28 ;; atollext
+  29 ;; mountain
+  29 ;; mtnext -> mountain
+  30 ;; forest
+  30 ;; forestb
+  31 ;; mincan
+  0 ;; ctywide -> none
+  0 ;; lwidea -> none
+  0 ;; lwideb -> none
+  0 ;; lwidec -> none
+  0 ;; ctykora -> none
+  0 ;; ctyasha -> none
+  32 ;; ctygena
+  33 ;; ctygenb
+  34 ;; ctygenc
+  35 ;; ctysluma
+  36 ;; ctyslumb
+  37 ;; ctyslumc
+  38 ;; ctyport
+  0 ;; ljkdxash
+  39 ;; ctyfarma
+  40 ;; ctyfarmb
+  41 ;; ctyinda
+  42 ;; consite
+  42 ;; consiteb
+  43 ;; ctyindb
+  44 ;; ctymarka
+  45 ;; ctymarkb
+  46 ;; ctypal
+  47 ;; stadium
+  48 ;; stadiumb
+  49 ;; stadiumc
+  50 ;; stadiumd
+  51 ;; skatea
+  52 ;; garage
+  0 ;; stadblmp
+  0 ;; lwidesta
+  0 ;; lerrol
+  0 ;; lkeirift
+  0 ;; lracelit
+  0 ;; lracebb
+  0 ;; lracebf
+  0 ;; lracecb
+  0 ;; lracecf
+  0 ;; lracedb
+  0 ;; lracedf
+  0 ;; lgarcsta
+  0 ;; lsamergd
+  0 ;; lerbrngd
+  0 ;; lsmysbrt
+  0 ;; lashgrd
+  53 ;; onintent
+  0 ;; ltentout
+  0 ;; ltentob
+  0 ;; kiosk
+  54 ;; oracle
+  55 ;; hideout
+  0 ;; ltrntess
+  0 ;; ltrnkrkd
+  0 ;; ltrnysam
+  0 ;; lysamsam
+  0 ;; lyskdcd
+  0 ;; lkiddoge
+  0 ;; lhelldog
+  0 ;; lpackage
+  0 ;; lsack
+  0 ;; lportrun
+  0 ;; lshuttle
+  0 ;; lmeetbrt
+  0 ;; lpower
+  0 ;; lerlchal
+  0 ;; lprtrace
+  0 ;; lbombbot
+  0 ;; lbbush
+  0 ;; lprotect
+  56 ;; hiphog
+  0 ;; ltess
+  0 ;; lhipout
+  0 ;; lwhack
+  0 ;; lguard
+  0 ;; lcguard
+  0 ;; lerltess
+  57 ;; gungame
+  58 ;; dig1
+  58 ;; dig3a
+  59 ;; dig3b
+  60 ;; caspad
+  61 ;; castle
+  62 ;; casboss
+  0 ;; casext
+  0 ;; cascity
+  63 ;; village1
+  0 ;; introcst
+  0 ;; lcitylow
+  0 ;; lintcstb
+  0 ;; ljakdax
+  64 ;; nest
+  65 ;; nestb
+  0 ;; outrocst
+  0 ;; portwall
+  0 ;; loutcstb
+  0 ;; island1
+  0 ;; skatepark
+  66 ;; halfpipe
+  0 ;; vistest
+  0 ;; woodstest
+  0 ;; tobytest
+  0 ;; chartest
+  0 ;; dptest
+  0 ;; ctyfence
+  1 ;; orbs-city-vinroom
+  32 ;; orbs-city-ctygena
+  33 ;; orbs-city-ctygenb
+  34 ;; orbs-city-ctygenc
+  35 ;; orbs-city-ctysluma
+  36 ;; orbs-city-ctyslumb
+  37 ;; orbs-city-ctyslumc
+  38 ;; orbs-city-ctyport
+  39 ;; orbs-city-ctyfarma
+  40 ;; orbs-city-ctyfarmb
+  41 ;; orbs-city-ctyinda
+  43 ;; orbs-city-ctyindb
+  44 ;; orbs-city-ctymarka
+  45 ;; orbs-city-ctymarkb
+  46 ;; orbs-city-ctypal
+  53 ;; orbs-city-onintent
+  54 ;; orbs-city-oracle
+  55 ;; orbs-city-hideout
+  56 ;; orbs-city-hiphog
+  57 ;; orbs-city-gungame
+  16 ;; orbs-fortress-prison
+  17 ;; orbs-fortress-forexita
+  18 ;; orbs-fortress-forexitb
+  19 ;; orbs-fortress-forresca
+  20 ;; orbs-fortress-forrescb
+  21 ;; orbs-fortress-fordumpa
+  22 ;; orbs-fortress-fordumpb
+  23 ;; orbs-fortress-fordumpc
+  24 ;; orbs-fortress-fordumpd
+  47 ;; orbs-stadium-stadium
+  48 ;; orbs-stadium-stadiumb
+  49 ;; orbs-stadium-stadiumc
+  50 ;; orbs-stadium-stadiumd
+  51 ;; orbs-stadium-skatea
+  52 ;; orbs-stadium-garage
+  11 ;; orbs-palace-palcab
+  12 ;; orbs-palace-palshaft
+  13 ;; orbs-palace-palroof
+  14 ;; orbs-palace-throne
+  15 ;; orbs-palace-palent
+  60 ;; orbs-castle-caspad
+  61 ;; orbs-castle-castle
+  62 ;; orbs-castle-casboss
+  26 ;; orbs-ruins-ruins
+  27 ;; orbs-ruins-sagehut
+  28 ;; orbs-atoll-atoll
+  5 ;; orbs-sewer-sewer ;; stuff everything into single sewer level, share for sewesc
+  25 ;; orbs-strip-strip
+  29 ;; orbs-mountain-mountain
+  31 ;; orbs-mountain-mincan
+  30 ;; orbs-forest-forest
+  30 ;; orbs-forest-forestb
+  3 ;; orbs-drill-drill ;; yea indexing is weird but correct here
+  2 ;; orbs-drill-drillmid
+  4 ;; orbs-drill-drillb
+  6 ;; orbs-tomb-tomba
+  7 ;; orbs-tomb-tombb
+  8 ;; orbs-tomb-tombc
+  6 ;; orbs-tomb-tombd
+  7 ;; orbs-tomb-tombe
+  9 ;; orbs-tomb-tombboss
+  58 ;; orbs-dig-dig3a ;; dig1 shares
+  59 ;; orbs-dig-dig3b
+  42 ;; orbs-consite-consite
+  42 ;; orbs-consite-consiteb
+  10 ;; orbs-under-under
+  10 ;; orbs-under-underb
+  64 ;; orbs-nest-nest
+  65 ;; orbs-nest-nestb
+  63 ;; orbs-default-village1
+  66 ;; orbs-default-halfpipe
+
+
+  ;; PS3 levels excluded
+  ;; 0 ;; 4aaron
+  ;; 0 ;; 4pal01
+  ;; 0 ;; andrew01
+  ;; 0 ;; bsbs
+  ;; 0 ;; eitest
+  ;; 0 ;; miketest
+  ;; 0 ;; tatetest
+  ;; 0 ;; teststdc
+  ;; 0 ;; teststdd
+  ;; 0 ;; wasall
+  ;; 0 ;; stadocc
+
+  ;; 0 ;; test-zone ;; out of place
+  ))
+
+(define *level-id-names* (new 'static 'boxed-array :type string :length 67 :allocated-length 67
+  "" ;; 0 (none)
+  "Power Station" ;; 1
+  "Drill Platform A" ;; 2
+  "Drill Platform B" ;; 3
+  "Drill Platform C" ;; 4
+  "Sewers" ;; 5
+  "Mars Tomb (Center)" ;; 6
+  "Mars Tomb (Left)" ;; 7
+  "Mars Tomb (Right)" ;; 8
+  "Mars Tomb (Boss)" ;; 9
+  "Underport" ;; 10
+  "Palace (Cables)" ;; 11
+  "Palace (Elevator/Lobby)" ;; 12
+  "Palace (Rooftop)" ;; 13
+  "Palace (Throne)" ;; 14
+  "Palace (Interior)" ;; 15
+  "Fortress (Prison)" ;; 16
+  "Fortress (Escape A)" ;; 17
+  "Fortress (Escape B)" ;; 18
+  "Fortress (Rescue A)" ;; 19
+  "Fortress (Rescue B)" ;; 20
+  "Fortress (Ammo Dump A)" ;; 21
+  "Fortress (Ammo Dump B)" ;; 22
+  "Fortress (Ammo Dump C)" ;; 23
+  "Fortress (Ammo Dump D)" ;; 24
+  "Strip Mine" ;; 25
+  "Dead Town" ;; 26
+  "Dead Town (Hut)" ;; 27
+  "Pumping Station" ;; 28
+  "Mountain Temple" ;; 29
+  "Haven Forest" ;; 30
+  "No Man's Canyon" ;; 31
+  "Main Town A" ;; 32
+  "Main Town B" ;; 33
+  "Main Town C" ;; 34
+  "Slums A" ;; 35
+  "Slums B" ;; 36
+  "Slums C" ;; 37
+  "Port" ;; 38
+  "Gardens A" ;; 39
+  "Gardens B" ;; 40
+  "Industrial Zone A" ;; 41
+  "Construction Site" ;; 42
+  "Industrial Zone B" ;; 43
+  "Bazaar A" ;; 44
+  "Bazaar B" ;; 45
+  "Haven City (Palace)" ;; 46
+  "Stadium (Exterior)" ;; 47
+  "Stadium (Class 1)" ;; 48
+  "Stadium (Class 2)" ;; 49
+  "Stadium (Class 3)" ;; 50
+  "Stadium (JET Board)" ;; 51
+  "Stadium (Garage)" ;; 52
+  "Onin's Tent" ;; 53
+  "Oracle" ;; 54
+  "Underground Hideout" ;; 55
+  "Hip Hog Heaven Saloon" ;; 56
+  "Gun Course" ;; 57
+  "Dig Site A" ;; 58
+  "Dig Site B" ;; 59
+  "Landing Pad" ;; 60
+  "Weapons Factory" ;; 61
+  "Weapons Factory (Rooftop)" ;; 62
+  "Sandover Village" ;; 63
+  "Metal Head Nest (Exterior)" ;; 64
+  "Metal Head Nest (Interior)" ;; 65
+  "Halfpipe" ;; 66
+  ))
+
+(defconstant LEVEL_ID_LEN 67)
+
+(define *level-orb-collected-counts* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
+(define *level-orb-total-counts* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))

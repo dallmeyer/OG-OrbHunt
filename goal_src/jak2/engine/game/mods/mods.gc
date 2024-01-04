@@ -181,7 +181,7 @@
   (none))
   
 (defun-extern hover-need-to-cooldown? symbol)
-(defun draw-baby-mode ()
+(defun draw-orb-hunt-text ()
   (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
                                 (bucket-id debug-no-zbuf1))
     (when (and (pause-allowed?) (not (paused?)))
@@ -191,7 +191,7 @@
           (cond
             ((= *baby-mode-orb-dist* #f)
               (draw-string-xy (string-format "Closest Orb: N/A")
-                              buf 5 395 (font-color transparent) (font-flags pc-hack kerning shadow))
+                              buf 5 400 (font-color transparent) (font-flags pc-hack kerning shadow))
               )
             (else
               ;; color based on distance
@@ -205,19 +205,69 @@
                         
                 (draw-string-xy (string-format "Closest Orb: ~,,2Mm"
                                               *baby-mode-orb-dist*)
-                                buf 5 395 fc (font-flags pc-hack kerning shadow))
+                                buf 5 400 fc (font-flags pc-hack kerning shadow))
                 )
               )
             )
           )
-        ((hover-need-to-cooldown?)
+        ((hover-need-to-cooldown?)  ;; not baby mode, and hover is on cooldown
           ;; show hover cooldown text
           (draw-string-xy (string-format "Hover cooldown: ~Ds"
                                 (/ (- (+ *last-hover-time* (seconds 60)) (current-time)) TICKS_PER_SECOND))
-                          buf 5 395 (font-color orange) (font-flags pc-hack kerning shadow))
+                          buf 5 400 (font-color orange) (font-flags pc-hack kerning shadow))
           )
         (else
           
+          )
+        )
+
+      ;; refresh orb counts for active levels
+      (dotimes (idx LEVEL_ID_LEN)
+        (set! (-> *level-orb-collected-counts* idx) 0)
+        (set! (-> *level-orb-total-counts* idx) 0)
+        )
+      (dotimes (s4-2 LEVEL_MAX)
+        (cond
+          ((= (-> *level* level s4-2 status) 'active)
+            (let ((lvl-idx (-> *level-load-info-level-id-remap* (-> *level* level s4-2 info index)))
+                  (entities (-> *level* level s4-2 entity)))
+              (dotimes (idx (-> entities length))
+                (let ((entity-link (-> entities data idx)))
+                  (when (and (-> entity-link entity) (nonzero? (-> entity-link entity)))
+                    (case (-> (the entity-actor (-> entity-link entity)) etype symbol) 
+                      (('skill)
+                        (+! (-> *level-orb-total-counts* lvl-idx) 1)
+                        (when (logtest? (-> entity-link status) (entity-perm-status dead))
+                          (+! (-> *level-orb-collected-counts* lvl-idx) 1)
+                          )
+                        )
+                      (('skill-crate)
+                        (+! (-> *level-orb-total-counts* lvl-idx) 1)
+                        (when (nonzero? (-> entity-link perm user-int8 1))
+                          (+! (-> *level-orb-collected-counts* lvl-idx) 1)
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      ;; print orb counts
+      (let ((row-offset 0)
+            (xpos (if (= 1.0 (-> *pc-settings* aspect-ratio-scale)) 507 1019))
+            )
+        (dotimes (idx LEVEL_ID_LEN)
+          (when (nonzero? (-> *level-orb-total-counts* idx))
+            (draw-string-xy (string-format "~S ~D / ~D~%"
+                                          (-> *level-id-names* idx)
+                                          (-> *level-orb-collected-counts* idx)
+                                          (-> *level-orb-total-counts* idx))
+                            buf xpos (- 400 (* 15 row-offset)) (font-color white) (font-flags right pc-hack kerning shadow))
+            (+! row-offset 1)
+            )
           )
         )
       )
@@ -563,7 +613,7 @@
 
 (define *show-mini-bigmap* #f)
 (defun mod-run-each-frame ()
-  ;; GENERAL
+  ;; hover check/cooldown stuff
   (cond
     ((board-hovering?)
       (set-time! *last-hover-time*)
@@ -627,27 +677,31 @@
         (false! *show-mini-bigmap*)
         )
       ((and *target* 
-            (!= (-> *bigmap* bigmap-index) 20)  ;; not showing ctywide
             *show-mini-bigmap*
-            (= (gui-status ready) (get-status *gui-control* (lookup-gui-connection-id *gui-control* (the string #f) (gui-channel hud-lower-right) (gui-action none))))
             )
-        (enable-drawing *bigmap*)
-        (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
-              (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
-              )
-          (when (and (= map-texture-status 'active) (= icon-texture-status 'active))
-            ;; loaded, draw it
-            ;; (draw *bigmap* 1792 1840 2304 2256)  ;; original "full" screen
-            ;; (draw *bigmap* 1984 1996 2112 2100) ;; middle
-            ;; (draw *bigmap* 1792 1840 1920 1944) ;; top left ish
-            ;; (draw *bigmap* 2176 1840 2304 1944) ;; top right ish
-            ;; (draw *bigmap* 1792 2152 1920 2256) ;; bottom left ish
-            (let ((x1 (+ 2048 (* (-> *pc-settings* aspect-ratio-scale) (- 2304 2048)))))
-              (draw *bigmap* ;; bottom right
-                (- x1 128)
-                2152 
-                x1  ;; + 128
-                2256  ;; + 104
+        (let ((x1 (+ 2048 (* (-> *pc-settings* aspect-ratio-scale) (- 2304 2048)))))
+          (when (and (-> *pc-settings* baby-mode?)
+                    (= (gui-status ready) (get-status *gui-control* (lookup-gui-connection-id *gui-control* (the string #f) (gui-channel hud-lower-right) (gui-action none))))
+                    (!= (-> *bigmap* bigmap-index) 20)  ;; not showing ctywide
+                    )
+            (enable-drawing *bigmap*)
+            (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
+                  (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
+                  )
+              (when (and (= map-texture-status 'active) (= icon-texture-status 'active))
+                ;; loaded, draw it
+                ;; (draw *bigmap* 1792 1840 2304 2256)  ;; original "full" screen
+                ;; (draw *bigmap* 1984 1996 2112 2100) ;; middle
+                ;; (draw *bigmap* 1792 1840 1920 1944) ;; top left ish
+                ;; (draw *bigmap* 2176 1840 2304 1944) ;; top right ish
+                ;; (draw *bigmap* 1792 2152 1920 2256) ;; bottom left ish
+                ;; mini-bigmap
+                (draw *bigmap* ;; bottom right
+                  (- x1 128)
+                  2112
+                  x1  ;; + 128
+                  2216  ;; + 104
+                  )
                 )
               )
             )

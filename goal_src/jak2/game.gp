@@ -448,16 +448,6 @@
 (build-custom-level "orbs-sewer-sewer")
 (custom-level-cgo "O0Q.DGO" "orbs-sewer-sewer/orbs-sewer-sewer.gd")
 
-(build-custom-level "orbs-sewer-sewerb")
-(custom-level-cgo "O0R.DGO" "orbs-sewer-sewerb/orbs-sewer-sewerb.gd")
-
-(build-custom-level "orbs-sewer-sewesc")
-(custom-level-cgo "O0S.DGO" "orbs-sewer-sewesc/orbs-sewer-sewesc.gd")
-
-(build-custom-level "orbs-sewer-sewescb")
-(custom-level-cgo "O0T.DGO" "orbs-sewer-sewescb/orbs-sewer-sewescb.gd")
-
-
 (build-custom-level "orbs-strip-strip")
 (custom-level-cgo "O0U.DGO" "orbs-strip-strip/orbs-strip-strip.gd")
 
@@ -504,9 +494,6 @@
 (build-custom-level "orbs-tomb-tombboss")
 (custom-level-cgo "O17.DGO" "orbs-tomb-tombboss/orbs-tomb-tombboss.gd")
 
-
-(build-custom-level "orbs-dig-dig1")
-(custom-level-cgo "O18.DGO" "orbs-dig-dig1/orbs-dig-dig1.gd")
 
 (build-custom-level "orbs-dig-dig3a")
 (custom-level-cgo "O19.DGO" "orbs-dig-dig3a/orbs-dig-dig3a.gd")
