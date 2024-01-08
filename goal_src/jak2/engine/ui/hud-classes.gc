@@ -8,6 +8,7 @@
 ;; DECOMP BEGINS
 
 (defmethod draw ((this hud-map))
+  (false! *show-mini-bigmap*) ;; changed orbhunt - ensure mini-bigmap is disabled
   (set-hud-piece-position!
     (-> this sprites 1)
     (the int (+ 492.0 (* 140.0 (-> this offset))))

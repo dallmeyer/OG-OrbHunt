@@ -612,6 +612,7 @@
   )
 
 (define *show-mini-bigmap* #f)
+(define *mini-bigmap-hide-time* (the time-frame #f))
 (defun mod-run-each-frame ()
   ;; hover check/cooldown stuff
   (cond
@@ -672,8 +673,9 @@
   ;; mini-bigmap stuff
   (when (not *progress-process*)
     (cond
-      ((hud-hidden?)
+      ((and *show-mini-bigmap* (or (hud-hidden?) (= (-> *bigmap* bigmap-index) 20))) ;; hud forced hidden or ctywide minimap maybe showing
         (disable-drawing *bigmap*)
+        (set! *mini-bigmap-hide-time* (current-time))
         (false! *show-mini-bigmap*)
         )
       ((and *target* 
@@ -688,19 +690,36 @@
             (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
                   (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
                   )
-              (when (and (= map-texture-status 'active) (= icon-texture-status 'active))
-                ;; loaded, draw it
-                ;; (draw *bigmap* 1792 1840 2304 2256)  ;; original "full" screen
-                ;; (draw *bigmap* 1984 1996 2112 2100) ;; middle
-                ;; (draw *bigmap* 1792 1840 1920 1944) ;; top left ish
-                ;; (draw *bigmap* 2176 1840 2304 1944) ;; top right ish
-                ;; (draw *bigmap* 1792 2152 1920 2256) ;; bottom left ish
-                ;; mini-bigmap
-                (draw *bigmap* ;; bottom right
-                  (- x1 128)
-                  2112
-                  x1  ;; + 128
-                  2216  ;; + 104
+              (cond
+                ((and (not (-> *bigmap* loading-flag)) (= map-texture-status 'active) (= icon-texture-status 'active))
+                  ;; loaded, draw it
+                  ;; (draw *bigmap* 1792 1840 2304 2256)  ;; original "full" screen
+                  ;; (draw *bigmap* 1984 1996 2112 2100) ;; middle
+                  ;; (draw *bigmap* 1792 1840 1920 1944) ;; top left ish
+                  ;; (draw *bigmap* 2176 1840 2304 1944) ;; top right ish
+                  ;; (draw *bigmap* 1792 2152 1920 2256) ;; bottom left ish
+                  ;; mini-bigmap
+                  (draw *bigmap* ;; bottom right
+                    (- x1 128)
+                    2112
+                    x1  ;; + 128
+                    2216  ;; + 104
+                    )
+                  )
+                (else
+                  ;; load shit
+                  (when (not (-> *bigmap* loading-flag))
+                    (format 0 "@@@@@@@@@@@@ not~%")
+                    (set-pending-file
+                      (-> *bigmap* bigmap-image)
+                      "world-map"
+                      (the-as int (-> *bigmap* load-index))
+                      (process->handle *dproc*)
+                      0.0
+                      )
+                    (set-pending-file (-> *bigmap* tpage) "progress-minimap" 0 (process->handle *dproc*) 0.0)
+                    (set! (-> *bigmap* loading-flag) #t)
+                    )
                   )
                 )
               )
@@ -712,3 +731,10 @@
 
   (none))
   
+;; (defun rand-vu-test () 
+;;   (format 0 "(rand-vu-int-range 0 99)")
+;;   (dotimes (i 1000)
+;;     (format 0 "~D~%" (rand-vu-int-count 100))
+;;     )
+;;   (none)
+;;   )

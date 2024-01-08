@@ -691,3 +691,12 @@
     (none)
     )
   )
+
+(defun rand-vu-test ((seed float)) 
+  (format 0 "(rand-vu-int-range 0 99)")
+  (rand-vu-init seed)
+  (dotimes (i 1000)
+    (format 0 "~D~%" (rand-vu-int-count 100))
+    )
+  (none)
+  )

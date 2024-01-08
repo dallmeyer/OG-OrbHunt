@@ -4670,6 +4670,30 @@
     :sky #t
     :use-camera-other #f
     :continues '((new 'static 'continue-point
+                  :name "atoll-ext-test"
+                  :level 'atoll
+                  :flags (continue-flags test)
+                  :trans (new 'static 'vector :x (meters 464.0196) :y (meters 2.4044) :z (meters -1330.3533) :w 1.0)
+                  :quat (new 'static 'vector :y -0.9998 :w -0.0175)
+                  :camera-trans (new 'static 'vector :x (meters 465.0196) :y (meters 2.4044) :z (meters -1331.3533)  :w 1.0)
+                  :camera-rot (new 'static 'inline-array vector3s 3
+                               (new 'static 'vector3s :data (new 'static 'array float 3 -0.9997 0.0 0.02))
+                               (new 'static 'vector3s :data (new 'static 'array float 3 -0.0024 0.9925 -0.1216))
+                               (new 'static 'vector3s :data (new 'static 'array float 3 -0.0198 -0.1216 -0.9923)))
+          
+                  :on-goto #f
+                  :vis-nick 'atoll
+                  :want (new 'static 'inline-array level-buffer-state 6
+                         (new 'static 'level-buffer-state :name 'atollext :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'atoll :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'orbs-atoll-atoll :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                  :want-sound (new 'static 'array symbol 3 'atoll1 'atoll2 'ctywide1))
+      
+                (new 'static 'continue-point
                   :name "atoll-start"
                   :level 'atoll
                   :flags (continue-flags test)

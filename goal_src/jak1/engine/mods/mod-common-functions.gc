@@ -299,12 +299,6 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 (set! (-> *setting-control* default play-hints) #f)
 )
 
-(defun toggleCollisionRenderer()
-  (if *collision-renderer*
-    (disableCollisionRenderer)
-    (enableCollisionRenderer)
-    )
-  )
 
 ;;This turns on collision render when called
 (defun enableCollisionRenderer()
@@ -318,6 +312,13 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   (logior! *vu1-enable-user-menu* (vu1-renderer-mask tfrag trans-tfrag tie tie-near))
 )
 
+(defun toggleCollisionRenderer()
+  (if *collision-renderer*
+    (disableCollisionRenderer)
+    (enableCollisionRenderer)
+    )
+  )
+  
 ;;This makes it thunder in the current level
 (defun thunderTime()
   (set! (-> (level-get-target-inside *level*) mood-func)update-mood-village2)
