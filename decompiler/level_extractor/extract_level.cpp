@@ -238,7 +238,7 @@ level_tools::BspHeader extract_bsp_from_level(const ObjectFileDB& db,
       ASSERT(!got_collide);
       got_collide = true;
       extract_collide_frags(as_collide_frags, all_ties, config,
-                            fmt::format("{}-{}-collide", dgo_name, i++), level_data, true);
+                            fmt::format("{}-{}-collide", dgo_name, i++), level_data, false);
     } else {
       lg::print("  unsupported tree {}\n", draw_tree->my_type());
     }
@@ -247,7 +247,7 @@ level_tools::BspHeader extract_bsp_from_level(const ObjectFileDB& db,
   if (bsp_header.collide_hash.num_items) {
     ASSERT(!got_collide);
     extract_collide_frags(bsp_header.collide_hash, all_ties, config,
-                          fmt::format("{}-{}-collide", dgo_name, i++), db.dts, level_data, true);
+                          fmt::format("{}-{}-collide", dgo_name, i++), db.dts, level_data, false);
   }
   level_data.level_name = level_name;
 
