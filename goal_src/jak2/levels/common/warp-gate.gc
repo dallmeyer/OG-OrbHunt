@@ -490,7 +490,26 @@
         (set! (-> this on-close) (the-as pair (car (cdr (cdr (cdr s5-0))))))
         )
       (else
-        (set! (-> this continue) #f)
+        (case-str (-> this name)
+          (("casboss-air-train-01")
+            (cond 
+              ((task-closed? "castle-boss-resolution")  ;; krew dead, show air-train
+                (logclear! (-> this draw status) (draw-control-status no-draw))
+                (set! (-> this continue) (get-continue-by-name *game-info* "caspad-warp"))
+                (set! (-> this on-activate) (the-as pair '(scene-play "caspad-air-train-out")))
+                (set! (-> this wait-for) (the-as pair #f))
+                (set! (-> this on-close) '(want-anim "caspad-air-train-out"))
+                )
+              (else ;; krew alive, hide air-train
+                (logior! (-> this draw status) (draw-control-status no-draw))
+                (set! (-> this continue) #f)
+                )
+              )
+            )
+          (else
+            (set! (-> this continue) #f)
+            )
+          )
         )
       )
     )
@@ -772,14 +791,17 @@
   (logior! (-> self mask) (process-mask actor-pause))
   ;; og:preserve-this added for revisiting nest
   (#when PC_PORT
-    (when (string= (-> self name) "air-train-1")
-      (set! (-> (the (pointer pair) (get-tag-index-data arg0 2)))
+    (case-str (-> self name)
+      (("air-train-1")  ;; ctyport
+        (set! (-> (the (pointer pair) (get-tag-index-data arg0 2))) ;; 'on-notice
             '(cond
               ((task-closed? "nest-boss-resolution") '("nest-warp" (scene-play '("city-air-train-in-nest" "nest-air-train-out")) #f (want-anim "city-air-train-in-nest")))
               ((task-closed? "nest-get-to-gun-introduction") '("nest-warp" (scene-play '("city-air-train-in-nest" "nest-air-train-out")) #f (want-anim "city-air-train-in-nest")))
               ((task-closed? "dig-find-totem-introduction") '("caspad-warp" (scene-play '("city-air-train-in-caspad" "caspad-air-train-out")) #f (want-anim "city-air-train-in-caspad")))
               ((task-closed? "dig-knock-down-introduction") '("caspad-warp" (scene-play '("city-air-train-in-caspad" "caspad-air-train-out")) #f (want-anim "city-air-train-in-caspad"))))
             )
+        )
+      ;; (("air-train-3")) ;; caspad
       )
     )
   (setup-fields self)
