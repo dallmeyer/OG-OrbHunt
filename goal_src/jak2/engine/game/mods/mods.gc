@@ -261,12 +261,18 @@
             )
         (dotimes (idx LEVEL_ID_LEN)
           (when (nonzero? (-> *level-orb-total-counts* idx))
-            (draw-string-xy (string-format "~S ~D / ~D~%"
-                                          (-> *level-id-names* idx)
-                                          (-> *level-orb-collected-counts* idx)
-                                          (-> *level-orb-total-counts* idx))
-                            buf xpos (- 400 (* 15 row-offset)) (font-color white) (font-flags right pc-hack kerning shadow))
-            (+! row-offset 1)
+            (let ((color-str (if (= (-> *level-orb-collected-counts* idx) (-> *level-orb-total-counts* idx))
+                          "~6L" ;; green if 100%
+                          ""
+                          )))
+              (draw-string-xy (string-format "~S ~S~D / ~D~%"
+                                            (-> *level-id-names* idx)
+                                            color-str
+                                            (-> *level-orb-collected-counts* idx)
+                                            (-> *level-orb-total-counts* idx))
+                              buf xpos (- 400 (* 15 row-offset)) (font-color white) (font-flags right pc-hack kerning shadow))
+              (+! row-offset 1)
+              )
             )
           )
         )
@@ -276,7 +282,7 @@
   (none))
 
 (defun mod-spawn-new-entities ((level symbol))
-  (format 0 "spawning extra mod entities for level ~A~%" level)
+  ;; (format 0 "spawning extra mod entities for level ~A~%" level)
   (case level
     )
     
@@ -649,14 +655,24 @@
     )
   ;; === stadiumb (class 3) ===
   (stdmb-hatch-check "stdmb-race-hatch-2")
+  
+  ;; === castle/casboss ===
+  ;; open up casboss after krew fight
+  (let (;; (trapdoor (entity-by-name "cas-trapdoor-1")) ;; comment out castle-boss-resolution checks in castle-obs
+        (door (entity-by-name "cas-front-door-4"))
+        (elev (entity-by-name "cboss-elevator-1"))
+        )
+    (when door (set! (cdr (res-lump-struct door 'on-notice pair)) '((task-closed? "castle-break-in-resolution") '(casboss))))
+    (when elev (logclear! (-> elev extra kill-mask) (task-mask  task1)))
+    )
 
   ;; (move-actor-str-target-offset "ctyport-part-86" 0.0 1.5 0.0)  ;; jakpoop
 
   ;; dev stuff
   (when (and *debug-segment* (cpad-pressed? 0 l3) (cpad-hold? 0 r3))
     (toggleCollisionRenderer)
-    ;; hideskip noboard
-    (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack noboard)) #t)
+    ;; hideskip nojak
+    (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack nojak)) #t)
 
     ;; disable camera collision/line of sight
     (if (logtest? (-> *camera* slave-options) 32)
@@ -709,7 +725,6 @@
                 (else
                   ;; load shit
                   (when (not (-> *bigmap* loading-flag))
-                    (format 0 "@@@@@@@@@@@@ not~%")
                     (set-pending-file
                       (-> *bigmap* bigmap-image)
                       "world-map"

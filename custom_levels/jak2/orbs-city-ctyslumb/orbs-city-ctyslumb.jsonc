@@ -411,6 +411,27 @@
         "name": "ctyslumb-skill-36"
       }
     },
+    {
+      "trans": [566.53,  44.26, -71.67], // on upper roof towards ctygenb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [566.53,  44.26, -71.67, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-37",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [527.89,   8.83,  -1.39], // in corner against palace wall, on way to ctygenb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [527.89,   8.83,  -1.39, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-38"
+      }
+    },
 
     {
       "trans": [601.41,  24.4, -295.74], // on island in central area
