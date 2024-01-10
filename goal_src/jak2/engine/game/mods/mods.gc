@@ -666,6 +666,15 @@
     (when elev (logclear! (-> elev extra kill-mask) (task-mask  task1)))
     )
 
+
+  ;; === nest/nestb ===
+  ;; lower riftring after credits for warp
+  (let ((ring (the process-drawable (process-by-ename "rift-ring-ingame-1"))))
+    (when (and ring (task-closed? "city-win-introduction"))
+      (set! (-> ring root trans y) (meters 41.0))
+      )
+    )
+
   ;; (move-actor-str-target-offset "ctyport-part-86" 0.0 1.5 0.0)  ;; jakpoop
 
   ;; dev stuff

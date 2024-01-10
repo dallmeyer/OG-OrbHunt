@@ -1209,12 +1209,12 @@
   (let ((v1-1 (level-get-target-inside *level*)))
     (format #t "~%(static-continue-point ~A ()~%" (symbol->string (-> v1-1 name)))
     )
-  (format #t "                       (target ~m ~m ~m " (-> arg0 trans x) (-> arg0 trans y) (-> arg0 trans z))
-  (format #t "~f ~f ~f ~f)~%" (-> arg0 quat x) (-> arg0 quat y) (-> arg0 quat z) (-> arg0 quat w))
+  (format #t "                       (target :x (meters ~m) :y (meters ~m) :z (meters ~m) " (-> arg0 trans x) (-> arg0 trans y) (-> arg0 trans z))
+  (format #t ":x ~f :y ~f :z ~f :w ~f)~%" (-> arg0 quat x) (-> arg0 quat y) (-> arg0 quat z) (-> arg0 quat w))
   (let ((gp-1 *math-camera*))
     (format
       #t
-      "                       (camera ~m ~m ~m ~f ~f ~f "
+      "                       (camera :x (meters ~m) :y (meters ~m) :z (meters ~m) ~% ~f ~f ~f ~%"
       (-> gp-1 trans x)
       (-> gp-1 trans y)
       (-> gp-1 trans z)
@@ -1224,7 +1224,7 @@
       )
     (format
       #t
-      "~f ~f ~f ~f ~f ~f)~%"
+      "~f ~f ~f ~% ~f ~f ~f)~%"
       (-> gp-1 inv-camera-rot vector 1 x)
       (-> gp-1 inv-camera-rot vector 1 y)
       (-> gp-1 inv-camera-rot vector 1 z)

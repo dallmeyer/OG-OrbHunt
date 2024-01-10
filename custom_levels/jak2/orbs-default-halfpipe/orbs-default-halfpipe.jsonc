@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["air-train-ag", "warp-gate-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -46,6 +46,28 @@
    "textures": [],
 
   "actors" : [
+    {
+      "trans": [  2.5, -50.15, 113.29], // 
+      "etype": "air-train",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0.6314, 0, 0.7754], // quaternion
+      "bsphere": [ 2.5, -50.15, 113.29, 10], // bounding sphere
+      "lump": {
+        "name":"halfpipe-air-train-01",
+        "distance": ["meters", 15.0]
+      }
+    },
+    {
+      "trans": [  2.5, -50.15, 113.29], // 
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0.6314, 0, 0.7754], // quaternion
+      "bsphere": [ 2.5, -50.15, 113.29, 10], // bounding sphere
+      "lump": {
+        "name":"halfpipe-warp-gate-01",
+        "distance": ["meters", 10.0]
+      }
+    }
     // {
     //   "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
     //   "etype": "skill",  // actor type

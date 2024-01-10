@@ -8784,6 +8784,30 @@
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
+                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3))
+                   
+                 (new 'static 'continue-point
+                   :name "stadium-warp"
+                   :level 'stadium
+                   :flags (continue-flags no-auto)
+                   :trans (new 'static 'vector :x (meters 357.0256) :y (meters 7.9999) :z (meters -738.8261) :w 1.0)
+                   :quat (new 'static 'vector :x -0.0000 :y 0.2114 :z 0.0001 :w 0.9773)
+                   :camera-trans (new 'static 'vector :x (meters 364.3399) :y (meters 12.7282) :z (meters -746.9658) :w 1.0)
+                   :camera-rot (new 'static 'inline-array vector3s 3
+                                (new 'static 'vector3s :data (new 'static 'array float 3  0.7873 -0.0000 0.6164))
+                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.0798 0.9915 0.1019))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.6112 -0.1294 0.7807)))
+          
+                   :on-goto #f
+                   :vis-nick 'stadium
+                   :want (new 'static 'inline-array level-buffer-state 6
+                          (new 'static 'level-buffer-state :name 'stadium :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'ctywide :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'orbs-stadium-stadium :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
                    :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3)))
         
       
@@ -12646,7 +12670,7 @@
     :deactivate-func #f
     :kill-func #f
     :borrow-size (new 'static 'array uint16 2 160 160)
-    :borrow-level (new 'static 'array symbol 2 #f 'orbs-dig-dig1)
+    :borrow-level (new 'static 'array symbol 2 #f 'orbs-dig-dig3a)
     :borrow-display? (new 'static 'array symbol 2 #f 'display)
     :base-task-mask (task-mask task0)
     :texture-anim-tfrag '*lava-texture-anim-array*
@@ -13180,7 +13204,31 @@
                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
-                  :want-sound (new 'static 'array symbol 3 'casboss1 'casboss2 'casboss3)))
+                  :want-sound (new 'static 'array symbol 3 'casboss1 'casboss2 'casboss3))
+                (new 'static 'continue-point
+                  :name "casboss-warp"
+                  :level 'casboss
+                  :flags (continue-flags test)
+                  :trans (new 'static 'vector :x (meters -246.9782) :y (meters 354.0758) :z (meters -1657.7806) :w 1.0)
+                  :quat (new 'static 'vector :y 0.9817 :w -0.1904)
+                  :camera-trans (new 'static 'vector :x (meters -244.9221) :y (meters 359.1725) :z (meters -1669.9194) :w 1.0)
+                  :camera-rot (new 'static 'inline-array vector3s 3
+                               (new 'static 'vector3s :data (new 'static 'array float 3 0.9714 -0.0000 0.2372))
+                               (new 'static 'vector3s :data (new 'static 'array float 3 -0.0346 0.9892 0.1420))
+                               (new 'static 'vector3s :data (new 'static 'array float 3 -0.2347 -0.1462 0.9610)))
+                  :on-goto #f
+                  :vis-nick 'casboss
+                  :want (new 'static 'inline-array level-buffer-state 6
+                         (new 'static 'level-buffer-state :name 'casboss :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'cascity :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'casext :display? 'special :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'orbs-castle-casboss :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                  :want-sound (new 'static 'array symbol 3 'casboss1 'casboss2 'casboss3))
+                  
+                  )
         
       
     :tasks '()
@@ -13362,6 +13410,30 @@
                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.4882 0.0 -0.8726))
                                (new 'static 'vector3s :data (new 'static 'array float 3 0.1537 0.9843 -0.086))
                                (new 'static 'vector3s :data (new 'static 'array float 3 0.859 -0.1762 -0.4806)))
+          
+                  :on-goto #f
+                  :vis-nick 'village1
+                  :want (new 'static 'inline-array level-buffer-state 6
+                         (new 'static 'level-buffer-state :name 'introcst :display? 'special :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'village1 :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'orbs-default-village1 :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                  :want-sound (new 'static 'array symbol 3 #f #f #f))
+
+                (new 'static 'continue-point
+                  :name "village1-warp"
+                  :level 'village1
+                  :flags (continue-flags scene-wait test)
+                  :trans (new 'static 'vector :x (meters -186.5272) :y (meters 40.8620) :z (meters 167.8928) :w 1.0)
+                  :quat (new 'static 'vector :x -0.0011 :y -0.1682 :z 0.0010 :w -0.9857)
+                  :camera-trans (new 'static 'vector :x (meters -189.1807) :y (meters 45.9818) :z (meters 179.9979) :w 1.0)
+                  :camera-rot (new 'static 'inline-array vector3s 3
+                               (new 'static 'vector3s :data (new 'static 'array float 3 -0.9594 0.0000 -0.2820))
+                               (new 'static 'vector3s :data (new 'static 'array float 3 0.0413 0.9891 -0.1406))
+                               (new 'static 'vector3s :data (new 'static 'array float 3 0.2789 -0.1466 -0.9490)))
           
                   :on-goto #f
                   :vis-nick 'village1
@@ -13947,8 +14019,32 @@
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
-                   :want-sound (new 'static 'array symbol 3 'nest4 'nest5 'nest6)))
-        
+                   :want-sound (new 'static 'array symbol 3 'nest4 'nest5 'nest6))
+                   
+                 (new 'static 'continue-point
+                   :name "nestb-warp"
+                   :level 'nestb
+                   :flags (continue-flags no-auto)
+                   :trans (new 'static 'vector :x (meters 182.8578) :y (meters 22.0513) :z (meters -441.6569) :w 1.0)
+                   :quat (new 'static 'vector :x 0.0002 :y 0.6870 :z -0.0014 :w 0.7266)
+                   :camera-trans (new 'static 'vector :x (meters 193.0370) :y (meters 27.1092) :z (meters -448.2928) :w 1.0)
+                   :camera-rot (new 'static 'inline-array vector3s 3
+                                (new 'static 'vector3s :data (new 'static 'array float 3  0.6101 -0.0000 0.7922))
+                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.1146 0.9894 0.0882))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.7839 -0.1446 0.6037)))
+          
+                   :on-goto #f
+                   :vis-nick 'nestb
+                   :want (new 'static 'inline-array level-buffer-state 6
+                          (new 'static 'level-buffer-state :name 'nest :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'nestb :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'orbs-nest-nestb :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                   :want-sound (new 'static 'array symbol 3 'nest4 'nest5 'nest6))
+                )
       
     :tasks '()
     :priority 100
@@ -14355,6 +14451,29 @@
                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.979 0.0 -0.2037))
                                (new 'static 'vector3s :data (new 'static 'array float 3 0.0545 0.9634 -0.2622))
                                (new 'static 'vector3s :data (new 'static 'array float 3 0.1963 -0.2678 -0.9432)))
+          
+                  :on-goto #f
+                  :vis-nick #f
+                  :want (new 'static 'inline-array level-buffer-state 6
+                         (new 'static 'level-buffer-state :name 'halfpipe :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'orbs-default-halfpipe :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                  :want-sound (new 'static 'array symbol 3 #f #f #f))
+                  
+                  (new 'static 'continue-point
+                  :name "halfpipe-warp"
+                  :level 'halfpipe
+                  :trans (new 'static 'vector :x (meters 10.1490) :y (meters -50.5019) :z (meters 103.8246) :w 1.0)
+                  :quat (new 'static 'vector :x 0.0000 :y -0.9857 :z -0.0004 :w 0.1679)
+                  :camera-trans (new 'static 'vector :x (meters 17.3753) :y (meters -45.3519) :z (meters 114.0243) :w 1.0)
+                  :camera-rot (new 'static 'inline-array vector3s 3
+                               (new 'static 'vector3s :data (new 'static 'array float 3  -0.8155 0.0000 0.5787))
+                               (new 'static 'vector3s :data (new 'static 'array float 3 -0.0702 0.9925 -0.0990))
+                               (new 'static 'vector3s :data (new 'static 'array float 3  -0.5744 -0.1214 -0.8094)))
           
                   :on-goto #f
                   :vis-nick #f

@@ -1737,7 +1737,7 @@ This commonly includes things such as:
     (when (task-node-closed? (game-task-node nest-boss-resolution))
       (script-eval '(begin
                       (kill "metalkor-1")
-                      (kill "rift-ring-ingame-1")
+                      ;; (kill "rift-ring-ingame-1")
                       (kill "crate-942")
                       (kill "crate-943")
                       (kill "crate-944")
