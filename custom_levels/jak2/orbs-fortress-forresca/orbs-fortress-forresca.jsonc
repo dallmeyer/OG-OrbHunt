@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["rift-ring-in-game-ag", "air-train-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -47,6 +47,28 @@
 
   "actors" : [
     // // 'forresca (rescue friends)
+    {
+      "trans": [730.9,   11.8, 249.5], // duh
+      "etype": "rift-ring-ingame",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0.0, 0, -1.0], // quaternion
+      "bsphere": [730.9,   11.8, 249.5, 10], // bounding sphere
+      "lump": {
+        "name":"forresca-rift-ring-ingame-01"
+      }
+    },
+    {
+      "trans": [730.9,   8.0, 249.5], // hidden behind rift ring
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0.0, 0, -1.0], // quaternion
+      "bsphere": [730.9,   8.0, 249.5, 10], // bounding sphere
+      "lump": {
+        "name":"forresca-warp-gate-01",
+        "distance": ["meters", 5.0]
+      }
+    },
+
     {
       "trans": [ 693.65,   46.0,    199.09], // way up behind cylinder in right corner (computer > HJ from lil pipe to left pipe > DEEP extended to right pipes > standpoint on cylinder > higher on pipes > GG)
       "etype": "skill",  // actor type

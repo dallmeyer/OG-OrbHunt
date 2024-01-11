@@ -541,13 +541,23 @@
               )
             )
           ;; village1 -> nestb
-          (("village1-warp-gate-01")  
+          (("village1-warp-gate-01")
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide so it looks like rift-ring is warp
             (set! (-> this continue) (get-continue-by-name *game-info* "nestb-warp"))
             (set! (-> this on-activate) '())
             (set! (-> this wait-for) '())
             (set! (-> this on-close) '())
             )
+          ;; forresca -> fordumpa
+          (("forresca-warp-gate-01")
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide so it looks like rift-ring is warp
+            (set! (-> this continue) (get-continue-by-name *game-info* "fordumpa-start"))
+            (set! (-> this on-activate) '())
+            (set! (-> this wait-for) '())
+            (set! (-> this on-close) '())
+            
+            )
+          ;; unknown
           (else
             (set! (-> this continue) #f)
             )

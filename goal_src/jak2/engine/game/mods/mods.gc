@@ -651,6 +651,8 @@
 (define *show-mini-bigmap* #f)
 (define *mini-bigmap-hide-time* (the time-frame #f))
 (defun mod-run-each-frame ()
+  (task-close! "nest-get-to-gun-introduction") ;; NG+ or something
+
   ;; hover check/cooldown stuff
   (cond
     ((board-hovering?)
@@ -662,6 +664,10 @@
     )
 
   ;; === prison (first 2 rooms) ===
+  ;; dont allow backtrack into forrescb
+  (let ((door (entity-by-name "fort-entry-gate-20")))
+    (when door (set! (cdr (res-lump-struct door 'on-notice pair)) '(#f '(forrescb))))
+    )
   ;; check for fake button press to unlock cells
   (prison-door-button-check "prison-part-374" "prsn-cell-door-4")
   (prison-door-button-check "prison-part-375" "prsn-cell-door-3")
@@ -694,9 +700,42 @@
         (elev (entity-by-name "cboss-elevator-1"))
         )
     (when door (set! (cdr (res-lump-struct door 'on-notice pair)) '((task-closed? "castle-break-in-resolution") '(casboss))))
-    (when elev (logclear! (-> elev extra kill-mask) (task-mask  task1)))
+    (when elev (logclear! (-> elev extra kill-mask) (task-mask task1)))
     )
 
+  ;; === drill/drillb ===
+  (let ((door (entity-by-name "drill-elevator-doors-4"))) ;; open locked door to drillb area
+    (when door (set! (cdr (res-lump-struct door 'on-notice pair)) '(#f '(drill drillmid drillmtn))))
+    )
+
+  ;; === palshaft/palent/throne ===
+  ;; wow what a shitshow, just to return to palent/throne
+  (let ((elev3 (entity-by-name "com-elevator-3"))
+        (door36 (entity-by-name "com-airlock-inner-36"))
+        (door25 (entity-by-name "com-airlock-outer-25"))
+        (door2 (entity-by-name "pal-throne-door-2"))
+        (door3 (entity-by-name "pal-throne-door-3"))
+        )
+    (when elev3 
+      (logclear! (-> elev3 extra kill-mask) (task-mask done task0 task1))
+      (set! (cdr (res-lump-struct elev3 'on-notice pair)) '("not-a-real-task"))
+      (set! (cdr (res-lump-struct elev3 'on-deactivate pair)) '((send-event self 'use-camera #f)))
+      )
+    (when door36 
+      (set! (cdr (res-lump-struct door36 'on-notice pair)) '(#f '(palent)))
+      )
+    (when door25 
+      (set! (cdr (res-lump-struct door25 'on-notice pair)) '(#f '(palshaft)))
+      (set! (cdr (res-lump-struct door25 'on-activate pair)) '(#f (want-load 'palshaft 'palent 'throne) (want-sound 'ctywide1 'palent1 'palent2)))
+      )
+    (when door2
+      (set! (cdr (res-lump-struct door2 'on-notice pair)) '(#f '(throne palout)))
+      (set! (cdr (res-lump-struct door2 'on-activate pair)) '(#f (want-load 'palent 'throne 'palout) (want-sound 'ctywide1 'palent1 'palent2)))
+      )
+    (when door3
+      (set! (cdr (res-lump-struct door3 'on-notice pair)) '(#f '(palent)))
+      )
+    )
 
   ;; === nest/nestb ===
   ;; lower riftring after credits for warp

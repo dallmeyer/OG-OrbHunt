@@ -361,7 +361,7 @@
      (set! (-> this debug-features) (game-feature board))
      (set! (-> this secrets) (game-secrets))
      (set! (-> this purchase-secrets) (game-secrets))
-     (set! (-> *pc-settings* baby-mode?) *debug-segment*)
+     (set! (-> *pc-settings* baby-mode?) *debug-segment*) ;; TODO - menu
      (set-continue!
        this
        (cond

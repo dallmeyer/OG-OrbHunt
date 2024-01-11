@@ -839,6 +839,11 @@ This commonly includes things such as:
        )
       )
     )
+  :trans (behavior ()
+    (when (and (name= (-> self name) "under-int-door-3") (task-closed? "under-sig-centipede2-start"))
+      (go-virtual open)
+      )
+    )
   :code sleep-code
   )
 

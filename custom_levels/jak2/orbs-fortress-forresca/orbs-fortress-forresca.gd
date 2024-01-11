@@ -4,5 +4,9 @@
 ;; the actual file name still needs to be 8.3
 ("O03.DGO"
  (
+  "metalkor-part.o"
+  "rift-ring-ingame.o"
+  "rift-ring-in-game-ag.go"
+  "warp-gate-ag.go"
   "orbs-fortress-forresca.go"
   ))
