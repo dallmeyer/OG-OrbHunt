@@ -181,70 +181,85 @@
   (none))
   
 (defun-extern hover-need-to-cooldown? symbol)
+(define *tmp-orb-hunt-str* (new 'global 'string 2048 (the-as string #f)))
 (defun draw-orb-hunt-text ()
   (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
                                 (bucket-id debug-no-zbuf1))
-    (when (and (pause-allowed?) (not (paused?)))
-      (cond 
-        ((-> *pc-settings* baby-mode?)
-          ;; show closest orb text
-          (cond
-            ((= *baby-mode-orb-dist* #f)
-              (draw-string-xy (string-format "Closest Orb: N/A")
-                              buf 5 400 (font-color transparent) (font-flags pc-hack kerning shadow))
-              )
-            (else
-              ;; color based on distance
-              (let ((fc (cond
+    ;; reset bucket settings prior to drawing - font won't do this for us, and
+    ;; draw-raw-image can sometimes mess them up. (intro sequence)
+    (dma-buffer-add-gs-set-flusha buf (alpha-1 (new 'static 'gs-alpha :b #x1 :d #x1)) (tex1-1 (new 'static 'gs-tex1 :mmag #x1 :mmin #x1)))
+
+    ;; init font-ctx for bottom-left corner
+    (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 5 400 0.0 (font-color default) (font-flags shadow kerning large))))
+      (set! (-> font-ctx scale) 0.325)
+
+      (when (and (pause-allowed?) (not (paused?)))
+        (clear *pc-encoded-temp-string*)
+        (cond 
+          ((-> *pc-settings* baby-mode?)
+            ;; show closest orb text
+            (cond
+              ((= *baby-mode-orb-dist* #f)
+                (pc-encode-utf8-string (string-format "Closest Orb: N/A")
+                                       *pc-encoded-temp-string*)
+                (set! (-> font-ctx color) (font-color transparent))
+                (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
+                )
+              (else
+                (pc-encode-utf8-string (string-format "Closest Orb: ~,,1Mm" *baby-mode-orb-dist*)
+                                       *pc-encoded-temp-string*)
+                ;; color based on distance
+                (set! (-> font-ctx color)
+                      (cond
                         ((< *baby-mode-orb-dist* (meters 10.0)) (font-color orange))
                         ((< *baby-mode-orb-dist* (meters 20.0)) (font-color progress-old-yellow))
                         ((< *baby-mode-orb-dist* (meters 30.0)) (font-color flat-yellow))
                         ((< *baby-mode-orb-dist* (meters 40.0)) (font-color progress-old-blue))
                         ((< *baby-mode-orb-dist* (meters 50.0)) (font-color cyan))
-                        (else (font-color blue)))))
-                        
-                (draw-string-xy (string-format "Closest Orb: ~,,2Mm"
-                                              *baby-mode-orb-dist*)
-                                buf 5 400 fc (font-flags pc-hack kerning shadow))
+                        (else (font-color blue))
+                        )
+                      )
+                (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
                 )
               )
             )
+          ((hover-need-to-cooldown?)  ;; not baby mode, and hover is on cooldown
+            ;; show hover cooldown text
+            (pc-encode-utf8-string (string-format "Hover cooldown: ~Ds" (/ (- (+ *last-hover-time* (seconds 60)) (current-time)) TICKS_PER_SECOND))
+                                   *pc-encoded-temp-string*)
+            (set! (-> font-ctx color) (font-color orange))
+            (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
+            )
+          (else
+            ;; not baby mode and haven't hovered - nada
+            )
           )
-        ((hover-need-to-cooldown?)  ;; not baby mode, and hover is on cooldown
-          ;; show hover cooldown text
-          (draw-string-xy (string-format "Hover cooldown: ~Ds"
-                                (/ (- (+ *last-hover-time* (seconds 60)) (current-time)) TICKS_PER_SECOND))
-                          buf 5 400 (font-color orange) (font-flags pc-hack kerning shadow))
-          )
-        (else
-          
-          )
-        )
 
-      ;; refresh orb counts for active levels
-      (dotimes (idx LEVEL_ID_LEN)
-        (set! (-> *level-orb-collected-counts* idx) 0)
-        (set! (-> *level-orb-total-counts* idx) 0)
-        )
-      (dotimes (s4-2 LEVEL_MAX)
-        (cond
-          ((= (-> *level* level s4-2 status) 'active)
-            (let ((lvl-idx (-> *level-load-info-level-id-remap* (-> *level* level s4-2 info index)))
-                  (entities (-> *level* level s4-2 entity)))
-              (dotimes (idx (-> entities length))
-                (let ((entity-link (-> entities data idx)))
-                  (when (and (-> entity-link entity) (nonzero? (-> entity-link entity)))
-                    (case (-> (the entity-actor (-> entity-link entity)) etype symbol) 
-                      (('skill)
-                        (+! (-> *level-orb-total-counts* lvl-idx) 1)
-                        (when (logtest? (-> entity-link status) (entity-perm-status dead))
-                          (+! (-> *level-orb-collected-counts* lvl-idx) 1)
+        ;; refresh orb counts for active levels
+        (dotimes (idx LEVEL_ID_LEN)
+          (set! (-> *level-orb-collected-counts* idx) 0)
+          (set! (-> *level-orb-total-counts* idx) 0)
+          )
+        (dotimes (s4-2 LEVEL_MAX)
+          (cond
+            ((= (-> *level* level s4-2 status) 'active)
+              (let ((lvl-idx (-> *level-load-info-level-id-remap* (-> *level* level s4-2 info index)))
+                    (entities (-> *level* level s4-2 entity)))
+                (dotimes (idx (-> entities length))
+                  (let ((entity-link (-> entities data idx)))
+                    (when (and (-> entity-link entity) (nonzero? (-> entity-link entity)))
+                      (case (-> (the entity-actor (-> entity-link entity)) etype symbol) 
+                        (('skill)
+                          (+! (-> *level-orb-total-counts* lvl-idx) 1)
+                          (when (logtest? (-> entity-link status) (entity-perm-status dead))
+                            (+! (-> *level-orb-collected-counts* lvl-idx) 1)
+                            )
                           )
-                        )
-                      (('skill-crate)
-                        (+! (-> *level-orb-total-counts* lvl-idx) 1)
-                        (when (nonzero? (-> entity-link perm user-int8 1))
-                          (+! (-> *level-orb-collected-counts* lvl-idx) 1)
+                        (('skill-crate)
+                          (+! (-> *level-orb-total-counts* lvl-idx) 1)
+                          (when (nonzero? (-> entity-link perm user-int8 1))
+                            (+! (-> *level-orb-collected-counts* lvl-idx) 1)
+                            )
                           )
                         )
                       )
@@ -254,25 +269,41 @@
               )
             )
           )
-        )
-      ;; print orb counts
-      (let ((row-offset 0)
-            (xpos (if (= 1.0 (-> *pc-settings* aspect-ratio-scale)) 507 1019))
-            )
-        (dotimes (idx LEVEL_ID_LEN)
-          (when (nonzero? (-> *level-orb-total-counts* idx))
-            (let ((color-str (if (= (-> *level-orb-collected-counts* idx) (-> *level-orb-total-counts* idx))
-                          "~6L" ;; green if 100%
-                          ""
-                          )))
-              (draw-string-xy (string-format "~S ~S~D / ~D~%"
-                                            (-> *level-id-names* idx)
-                                            color-str
-                                            (-> *level-orb-collected-counts* idx)
-                                            (-> *level-orb-total-counts* idx))
-                              buf xpos (- 400 (* 15 row-offset)) (font-color white) (font-flags right pc-hack kerning shadow))
-              (+! row-offset 1)
+        
+        ;; print orb counts
+        (clear *tmp-orb-hunt-str*)
+        (let ((row-offset 0)
+              (xpos (if (= 1.0 (-> *pc-settings* aspect-ratio-scale)) 507.0 1019.0))
               )
+          (dotimes (idx LEVEL_ID_LEN)
+            (when (nonzero? (-> *level-orb-total-counts* idx))
+              (let ((color-str
+                        (cond
+                          ((= (-> *level-orb-collected-counts* idx) (-> *level-orb-total-counts* idx)) "<COLOR_GREEN>") ;; green if 100%
+                          ((nonzero? (-> *level-orb-collected-counts* idx)) "<COLOR_ORANGE>") ;; nonzero, orange
+                          (else "<COLOR_FLAT-YELLOW>") ;; zero, slight yellow
+                          )))
+                (format *tmp-orb-hunt-str* (string-format "<COLOR_DEFAULT>~S ~S~D / ~D~%"
+                                              (-> *level-id-names* idx)
+                                              color-str
+                                              (-> *level-orb-collected-counts* idx)
+                                              (-> *level-orb-total-counts* idx)
+                                              ))
+                (+! row-offset 1)
+                )
+              )
+            )
+          
+          (when (nonzero? row-offset)
+            ;; (set! (-> font-ctx origin x) xpos)
+            (set! (-> font-ctx origin x) 507.0)
+            (set! (-> font-ctx origin y) (- 409.0 (* 9.0 row-offset)))
+            (set! (-> font-ctx color) (font-color white))
+            (logior! (-> font-ctx flags) (font-flags right))
+            
+            (clear *pc-encoded-temp-string*)
+            (pc-encode-utf8-string *tmp-orb-hunt-str* *pc-encoded-temp-string*)
+            (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
             )
           )
         )

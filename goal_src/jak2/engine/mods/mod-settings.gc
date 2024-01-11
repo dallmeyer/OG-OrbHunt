@@ -233,6 +233,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   21 ;; orbs-fortress-fordumpa
   22 ;; orbs-fortress-fordumpb
   23 ;; orbs-fortress-fordumpc
+  0  ;; orbs-fortress-fordumpd (removed)
   47 ;; orbs-stadium-stadium
   48 ;; orbs-stadium-stadiumb
   49 ;; orbs-stadium-stadiumc
@@ -306,7 +307,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Mars Tomb (Boss)" ;; 9
   "Underport" ;; 10
   "Palace (Cables)" ;; 11
-  "Palace (Elevator/Lobby)" ;; 12
+  "Palace (Shaft/Lobby)" ;; 12
   "Palace (Rooftop)" ;; 13
   "Palace (Throne)" ;; 14
   "Palace (Interior)" ;; 15
@@ -340,7 +341,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Industrial Zone B" ;; 43
   "Bazaar A" ;; 44
   "Bazaar B" ;; 45
-  "Haven City (Palace)" ;; 46
+  "Haven City (Palace Grounds)" ;; 46
   "Stadium (Exterior)" ;; 47
   "Stadium (Class 1)" ;; 48
   "Stadium (Class 2)" ;; 49
@@ -355,7 +356,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Dig Site A" ;; 58
   "Dig Site B" ;; 59
   "Landing Pad" ;; 60
-  "Weapons Factory" ;; 61
+  "Weapons Factory (Interior)" ;; 61
   "Weapons Factory (Rooftop)" ;; 62
   "Sandover Village" ;; 63
   "Metal Head Nest (Exterior)" ;; 64
