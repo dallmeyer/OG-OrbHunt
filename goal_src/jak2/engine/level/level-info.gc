@@ -4233,8 +4233,8 @@
                    :deactivate-func #f
                    :kill-func #f
                    :borrow-size (new 'static 'array uint16 2 160 160)
-                   :borrow-level (new 'static 'array symbol 2 #f 'orbs-fortress-fordumpd)
-                   :borrow-display? (new 'static 'array symbol 2 #f 'display)
+                   :borrow-level (new 'static 'array symbol 2 #f #f)
+                   :borrow-display? (new 'static 'array symbol 2 #f #f)
                    :base-task-mask (task-mask task0)
                    :texture-anim-tfrag #f
                    :texture-anim-pris #f
@@ -16142,7 +16142,6 @@
 (define orbs-fortress-fordumpa (orbs-borrow-level #xb7 'orbs-fortress-fordumpa 'orbs-fortress-fordumpa-vis 'o05 'update-mood-fordumpa))
 (define orbs-fortress-fordumpb (orbs-borrow-level #xb8 'orbs-fortress-fordumpb 'orbs-fortress-fordumpb-vis 'o06 'update-mood-fortress))
 (define orbs-fortress-fordumpc (orbs-borrow-level #xb9 'orbs-fortress-fordumpc 'orbs-fortress-fordumpc-vis 'o07 'update-mood-fordumpc))
-(define orbs-fortress-fordumpd (orbs-borrow-level #xba 'orbs-fortress-fordumpd 'orbs-fortress-fordumpd-vis 'o08 'update-mood-fortress))
 
 (define orbs-stadium-stadium  (orbs-borrow-level #xbb 'orbs-stadium-stadium  'orbs-stadium-stadium-vis  'o09 'update-mood-stadium))
 (define orbs-stadium-stadiumb (orbs-borrow-level #xbc 'orbs-stadium-stadiumb 'orbs-stadium-stadiumb-vis 'o0a 'update-mood-stadiumb))
@@ -16247,7 +16246,6 @@
   (cons! *level-load-list* 'orbs-stadium-stadiumc)
   (cons! *level-load-list* 'orbs-stadium-stadiumb)
   (cons! *level-load-list* 'orbs-stadium-stadium)
-  (cons! *level-load-list* 'orbs-fortress-fordumpd)
   (cons! *level-load-list* 'orbs-fortress-fordumpc)
   (cons! *level-load-list* 'orbs-fortress-fordumpb)
   (cons! *level-load-list* 'orbs-fortress-fordumpa)

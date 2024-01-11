@@ -385,9 +385,6 @@
 (build-custom-level "orbs-fortress-fordumpc")
 (custom-level-cgo "O07.DGO" "orbs-fortress-fordumpc/orbs-fortress-fordumpc.gd")
 
-(build-custom-level "orbs-fortress-fordumpd")
-(custom-level-cgo "O08.DGO" "orbs-fortress-fordumpd/orbs-fortress-fordumpd.gd")
-
 
 (build-custom-level "orbs-stadium-stadium")
 (custom-level-cgo "O09.DGO" "orbs-stadium-stadium/orbs-stadium-stadium.gd")
