@@ -4470,7 +4470,7 @@
                           (new 'static 'level-buffer-state :name 'ruins :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'sagehut :display? 'special :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'orbs-ruins-ruins :display? 'display :force-vis? #f :force-inside? #f)
-                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'orbs-ruins-sagehut :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
@@ -4494,7 +4494,7 @@
                           (new 'static 'level-buffer-state :name 'ruins :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'sagehut :display? 'special :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'orbs-ruins-ruins :display? 'display :force-vis? #f :force-inside? #f)
-                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'orbs-ruins-sagehut :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
@@ -4525,7 +4525,7 @@
                           (new 'static 'level-buffer-state :name 'ruins :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'sagehut :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'orbs-ruins-ruins :display? 'display :force-vis? #f :force-inside? #f)
-                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'orbs-ruins-sagehut :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
@@ -4549,7 +4549,7 @@
                           (new 'static 'level-buffer-state :name 'ruins :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'sagehut :display? 'special :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'orbs-ruins-ruins :display? 'display :force-vis? #f :force-inside? #f)
-                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'orbs-ruins-sagehut :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
@@ -16161,7 +16161,7 @@
 (define orbs-castle-casboss    (orbs-borrow-level #xc8 'orbs-castle-casboss    'orbs-castle-casboss-vis    'o0m 'update-mood-casboss))
 
 (define orbs-ruins-ruins       (orbs-borrow-level #xc9 'orbs-ruins-ruins       'orbs-ruins-ruins-vis       'o0n 'update-mood-ruins))
-(define orbs-ruins-sagehut     (orbs-borrow-level #xca 'orbs-ruins-sagehut     'orbs-ruins-sagehut-vis     'o0o 'update-mood-sagehut))
+(define orbs-ruins-sagehut     (orbs-borrow-level #xca 'orbs-ruins-sagehut     'orbs-ruins-sagehut-vis     'o0o 'update-mood-ruins))
 
 (define orbs-atoll-atoll       (orbs-borrow-level #xcb 'orbs-atoll-atoll       'orbs-atoll-atoll-vis       'o0p 'update-mood-atoll))
 

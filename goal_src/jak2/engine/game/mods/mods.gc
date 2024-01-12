@@ -740,7 +740,7 @@
   ;; === nest/nestb ===
   ;; lower riftring after credits for warp
   (let ((ring (the process-drawable (process-by-ename "rift-ring-ingame-1"))))
-    (when (and ring (task-closed? "city-win-introduction"))
+    (when (and ring (task-closed? "city-win-resolution"))
       (set! (-> ring root trans y) (meters 41.0))
       )
     )

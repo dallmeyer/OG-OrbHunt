@@ -158,6 +158,16 @@
         "name":"casboss-skill-10"
       }
     },
+    {
+      "trans": [-265.1, 366.46, -1678.0], // inside support beam
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-265.1, 366.46, -1678.0, 10], // bounding sphere
+      "lump": {
+        "name":"casboss-skill-11"
+      }
+    },
     // HOVER ORBS
     {
       "trans": [-284.75, 381.68, -1697.78], // level 1 of bomb scaffolding, on outside
