@@ -434,15 +434,17 @@
     (if (logtest? (-> self draw status) (draw-control-status on-screen))
         (set! (-> self visible-move?) #t)
         )
-    (when (and (want-cross-airlock? self) (begin
-                                            (let ((gp-0 (res-lump-struct (-> self entity) 'on-activate structure)))
-                                              (if gp-0
-                                                  (script-eval (the-as pair gp-0))
-                                                  )
-                                              )
-                                            (destination-loaded? self #f)
-                                            )
-               )
+    (when (or (and (want-cross-airlock? self)
+                   (begin
+                    (let ((gp-0 (res-lump-struct (-> self entity) 'on-activate structure)))
+                      (if gp-0 (script-eval (the-as pair gp-0)))
+                      )
+                    (destination-loaded? self #f)
+                    )
+                   )
+              ;; changed orbhunt - keep tombe/tombboss door open if tombe is loaded
+              (and (name= (-> self name) "tomb-wing-door-6") (level-get *level* 'tombe))
+              )
       (when (nonzero? (-> self sound-id))
         (let ((v1-17 (the-as sound-rpc-set-param (get-sound-buffer-entry))))
           (set! (-> v1-17 command) (sound-command set-param))
@@ -608,7 +610,9 @@
     (if (logtest? (-> self draw status) (draw-control-status on-screen))
         (set! (-> self visible-move?) #t)
         )
-    (when (!= (-> self entity etype symbol) 'tomb-boss-door)
+    ;; (when (!= (-> self entity etype symbol) 'tomb-boss-door)
+    (when (not (and (name= (-> self name) "tomb-wing-door-6") (level-get *level* 'tombe)))
+      ;; changed orbhunt - keep tombe/tombboss door open if tombe is loaded
       (if (not (want-cross-airlock? self))
           (go-virtual close #f)
           )

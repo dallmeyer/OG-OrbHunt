@@ -711,6 +711,31 @@
     (when door (set! (cdr (res-lump-struct door 'on-notice pair)) '(#f '(drill drillmid drillmtn))))
     )
 
+  ;; === tomb/tombboss ===
+  (let ((door (entity-by-name "tomb-boss-door-1"))) ;; open locked door to tombboss
+    (when door 
+      (set! (-> (res-lump-data door 'idle-distance (pointer float))) (meters 10.0))
+      (set! (-> (res-lump-data door 'distance (pointer float))) (meters 5.0))
+      (set! (cdr (res-lump-struct door 'on-notice pair)) '(((task-closed? "tomb-boss-resolution") '(tombboss)) ((task-closed? "tomb-boss-introduction") #f) ((task-closed? "tomb-boss-door") '(tombboss)) ((and (task-closed? "tomb-poles-resolution") (task-closed? "tomb-water-resolution")) (scene-play "tomb-boss-open") #f)))
+      (set! (cdr (res-lump-struct door 'on-activate pair)) '((task-closed? "tomb-boss-door") (want-load 'tomba 'tombboss 'tombext)))
+      )
+    )
+
+  (cond
+    ((in-bubble-m? 394.40 -138.27 1423.79 20.0)  ;; bottom of tombe trampolines, load tomba/b
+      (script-eval '(want-load 'tomba 'tombb 'tombe))
+      (script-eval '(want-display 'tomba))
+      (script-eval '(want-display 'tombb))  ;; tombb is the important one, since it gets swapped out for tombboss
+      (script-eval '(want-display 'tombe))
+      )
+    ((in-bubble-m? 394.40 -66.68 1423.79 20.0)  ;; top of tombe trampolines, load tomba/tombboss
+      (script-eval '(want-load 'tomba 'tombboss 'tombe))
+      (script-eval '(want-display 'tomba))
+      (script-eval '(want-display 'tombboss))  ;; tombboss is the important one, since it gets swapped out for tombb
+      (script-eval '(want-display 'tombe))
+      )
+    )
+
   ;; === palshaft/palent/throne ===
   ;; wow what a shitshow, just to return to palent/throne
   (let ((elev3 (entity-by-name "com-elevator-3"))
