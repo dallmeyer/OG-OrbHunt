@@ -652,7 +652,7 @@
   )
 
 (define *show-mini-bigmap* #f)
-(define *mini-bigmap-hide-time* (the time-frame #f))
+(define *mini-bigmap-toggle-time* (the time-frame #f))
 (defun mod-run-each-frame ()
   (task-close! "nest-get-to-gun-introduction") ;; NG+ or something
 
@@ -773,9 +773,13 @@
   ;; mini-bigmap stuff
   (when (not *progress-process*)
     (cond
-      ((and *show-mini-bigmap* (or (hud-hidden?) (= (-> *bigmap* bigmap-index) 20))) ;; hud forced hidden or ctywide minimap maybe showing
+      ((and *show-mini-bigmap*
+            (or ;; 10s timeout or hud forced hidden or ctywide minimap maybe showing
+                (time-elapsed? *mini-bigmap-toggle-time* (seconds 10.0))
+                (hud-hidden?)
+                (= (-> *bigmap* bigmap-index) 20)))
         (disable-drawing *bigmap*)
-        (set! *mini-bigmap-hide-time* (current-time))
+        (set! *mini-bigmap-toggle-time* (current-time))
         (false! *show-mini-bigmap*)
         )
       ((and *target* 
