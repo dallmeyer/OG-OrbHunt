@@ -4553,7 +4553,34 @@
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
-                   :want-sound (new 'static 'array symbol 3 'ruins1 'ruins2 'ruins3)))
+                   :want-sound (new 'static 'array symbol 3 'ruins1 'ruins2 'ruins3))
+                   
+                   
+        
+                 (new 'static 'continue-point
+                   :name "sagehut-warp"
+                   :level 'ruins
+                   :flags (continue-flags no-auto warp-gate)
+                   :trans (new 'static 'vector :x (meters 1069.5264) :y (meters 50.0776) :z (meters -559.4684) :w 1.0)
+                   :quat (new 'static 'vector :x -0.0000 :y 0.3052 :z -0.0001 :w -0.9522)
+                   :camera-trans (new 'static 'vector :x (meters 1058.4573) :y (meters 54.9977) :z (meters -555.9882) :w 1.0)
+                   :camera-rot (new 'static 'inline-array vector3s 3
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.2234 0.0000 -0.9747))
+                                (new 'static 'vector3s :data (new 'static 'array float 3 0.1401 0.9896 -0.0321))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  0.9645 -0.1438 -0.2211)))
+          
+                   :on-goto #f
+                   :vis-nick 'ruins
+                   :want (new 'static 'inline-array level-buffer-state 6
+                          (new 'static 'level-buffer-state :name 'ruins :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'sagehut :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'orbs-ruins-ruins :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'orbs-ruins-sagehut :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                   :want-sound (new 'static 'array symbol 3 'ruins1 'ruins2 'ruins3))
+                   )
         
       
     :tasks '()
@@ -13424,9 +13451,9 @@
                   :want-sound (new 'static 'array symbol 3 #f #f #f))
 
                 (new 'static 'continue-point
-                  :name "village1-warp"
+                  :name "village1-rift"
                   :level 'village1
-                  :flags (continue-flags scene-wait test)
+                  :flags (continue-flags warp-gate)
                   :trans (new 'static 'vector :x (meters -186.5272) :y (meters 40.8620) :z (meters 167.8928) :w 1.0)
                   :quat (new 'static 'vector :x -0.0011 :y -0.1682 :z 0.0010 :w -0.9857)
                   :camera-trans (new 'static 'vector :x (meters -189.1807) :y (meters 45.9818) :z (meters 179.9979) :w 1.0)
@@ -13434,6 +13461,30 @@
                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.9594 0.0000 -0.2820))
                                (new 'static 'vector3s :data (new 'static 'array float 3 0.0413 0.9891 -0.1406))
                                (new 'static 'vector3s :data (new 'static 'array float 3 0.2789 -0.1466 -0.9490)))
+          
+                  :on-goto #f
+                  :vis-nick 'village1
+                  :want (new 'static 'inline-array level-buffer-state 6
+                         (new 'static 'level-buffer-state :name 'introcst :display? 'special :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'village1 :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'orbs-default-village1 :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                  :want-sound (new 'static 'array symbol 3 #f #f #f))
+
+                (new 'static 'continue-point
+                  :name "village1-warp"
+                  :level 'village1
+                  :flags (continue-flags warp-gate)
+                  :trans (new 'static 'vector :x (meters -127.1531) :y (meters 46.2478) :z (meters 212.3207) :w 1.0)
+                  :quat (new 'static 'vector :x -0.0012 :y 0.8798 :z -0.0006 :w -0.4752)
+                  :camera-trans (new 'static 'vector :x (meters -136.6880) :y (meters 51.3505) :z (meters 204.5012) :w 1.0)
+                  :camera-rot (new 'static 'inline-array vector3s 3
+                               (new 'static 'vector3s :data (new 'static 'array float 3  0.6447 0.0000 -0.7644))
+                               (new 'static 'vector3s :data (new 'static 'array float 3 0.1160 0.9884 0.0978))
+                               (new 'static 'vector3s :data (new 'static 'array float 3  0.7555 -0.1518 0.6372)))
           
                   :on-goto #f
                   :vis-nick 'village1
@@ -14024,14 +14075,14 @@
                  (new 'static 'continue-point
                    :name "nestb-warp"
                    :level 'nestb
-                   :flags (continue-flags no-auto)
-                   :trans (new 'static 'vector :x (meters 182.8578) :y (meters 22.0513) :z (meters -441.6569) :w 1.0)
-                   :quat (new 'static 'vector :x 0.0002 :y 0.6870 :z -0.0014 :w 0.7266)
-                   :camera-trans (new 'static 'vector :x (meters 193.0370) :y (meters 27.1092) :z (meters -448.2928) :w 1.0)
+                   :flags (continue-flags no-auto warp-gate)
+                   :trans (new 'static 'vector :x (meters 175.0231) :y (meters 37.8431) :z (meters -442.1387) :w 1.0)
+                   :quat (new 'static 'vector :x -0.0001 :y -0.8701 :z -0.0001 :w -0.4928)
+                   :camera-trans (new 'static 'vector :x (meters 184.9494) :y (meters 42.6020) :z (meters -446.8829) :w 1.0)
                    :camera-rot (new 'static 'inline-array vector3s 3
-                                (new 'static 'vector3s :data (new 'static 'array float 3  0.6101 -0.0000 0.7922))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.1146 0.9894 0.0882))
-                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.7839 -0.1446 0.6037)))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  0.4204 -0.0000 0.9073))
+                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.1351 0.9888 0.0626))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.8971 -0.1489 0.4157)))
           
                    :on-goto #f
                    :vis-nick 'nestb

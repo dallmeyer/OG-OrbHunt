@@ -534,7 +534,7 @@
           (("nestb-warp-gate-01")
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide so it looks like rift-ring is warp
             (when (task-closed? "city-win-introduction")  ;; kor dead, allow use
-              (set! (-> this continue) (get-continue-by-name *game-info* "village1-warp"))
+              (set! (-> this continue) (get-continue-by-name *game-info* "village1-rift"))
               (set! (-> this on-activate) '())
               (set! (-> this wait-for) '())
               (set! (-> this on-close) '())
@@ -543,10 +543,34 @@
           ;; village1 -> nestb
           (("village1-warp-gate-01")
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide so it looks like rift-ring is warp
-            (set! (-> this continue) (get-continue-by-name *game-info* "nestb-warp"))
+            (when (task-closed? "city-win-introduction")  ;; kor dead, allow use
+              (set! (-> this continue) (get-continue-by-name *game-info* "nestb-warp"))
+              (set! (-> this on-activate) '())
+              (set! (-> this wait-for) '())
+              (set! (-> this on-close) '())
+              )
+            )
+          ;; sagehut -> village1
+          (("sagehut-warp-gate-01")
+            (cond 
+              ((task-closed? "city-win-introduction")  ;; kor dead, allow use
+                (set! (-> this continue) (get-continue-by-name *game-info* "village1-warp"))
+                (set! (-> this on-activate) '())
+                (set! (-> this wait-for) '())
+                (set! (-> this on-close) '())            
+                )
+              (else
+                (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide
+                )
+              )
+            )
+          ;; village1 -> sagehut
+          (("village1-warp-gate-02")
+            ;; no kor check - backup to make sure you can exit village1 if you somehow get here
+            (set! (-> this continue) (get-continue-by-name *game-info* "sagehut-warp"))
             (set! (-> this on-activate) '())
             (set! (-> this wait-for) '())
-            (set! (-> this on-close) '())
+            (set! (-> this on-close) '())            
             )
           ;; forresca -> fordumpa
           (("forresca-warp-gate-01")
@@ -1105,7 +1129,7 @@ This commonly includes things such as:
     (move-to-point! (-> self control) (-> self control unknown-vector37))
     (let ((s5-1 (current-time)))
       (while (or (not (time-elapsed? s5-1 (seconds 1)))
-                 (< 81920.0 (vector-vector-distance (camera-pos) (-> self control trans)))
+                 (< (meters 40.0) (vector-vector-distance (camera-pos) (-> self control trans)))
                  )
         (suspend)
         )

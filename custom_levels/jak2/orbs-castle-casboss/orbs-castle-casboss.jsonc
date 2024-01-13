@@ -223,6 +223,17 @@
         "name":"casboss-skill-hover-05",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+    {
+      "trans": [-237.36, 443.5, -1655.12], // way up at end of crane over bomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-237.36, 443.5, -1655.12, 10], // bounding sphere
+      "lump": {
+        "name":"casboss-skill-hover-06",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
   ]
 }

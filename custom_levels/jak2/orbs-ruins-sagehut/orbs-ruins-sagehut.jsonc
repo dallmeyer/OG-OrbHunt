@@ -45,7 +45,18 @@
    // by setting "save_texture_pngs" to true in the decompiler config.
    "textures": [],
 
-  "actors" : [
+  "actors" : [    
+    {
+      "trans": [1074.1898, 49.4499, -563.0100], // og
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [-0.0818, 0.3650, -0.2028, 0.9049], // quaternion
+      "bsphere": [1074.1898, 49.4499, -563.0100, 10], // bounding sphere
+      "lump": {
+        "name":"sagehut-warp-gate-01",
+        "distance": ["meters", 4.0]
+      }
+    },
     {
       "trans": [ 1054.7,   38.8,    -545.0    ], // #t near keira transpa
       "etype": "skill",  // actor type

@@ -58,14 +58,25 @@
       }
     },
     {
-      "trans": [-192.38,  45.15, 163.47], // hidden behind rift ring
+      "trans": [-192.38,  42.15, 163.47], // hidden behind rift ring
       "etype": "warp-gate",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0.6314, 0, 0.7754], // quaternion
-      "bsphere": [-192.38,  45.15, 163.47, 10], // bounding sphere
+      "bsphere": [-192.38,  42.15, 163.47, 10], // bounding sphere
       "lump": {
         "name":"village1-warp-gate-01",
         "distance": ["meters", 10.0]
+      }
+    },
+    {
+      "trans": [-122.9000, 46.8600, 214.3899], // og
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0.3007, 0, -0.9537], // quaternion
+      "bsphere": [-122.9000, 46.8600, 214.3899, 10], // bounding sphere
+      "lump": {
+        "name":"village1-warp-gate-02",
+        "distance": ["meters", 5.0]
       }
     },
     {

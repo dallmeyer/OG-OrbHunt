@@ -50,9 +50,12 @@
 
 ;; prints the position (root trans) of a process-drawable
 (defmacro pd-pos-m (procname)
-  `(let* ((obj (the process-drawable (process-by-ename ,procname)))
-          (vec (-> obj root trans)))
-    (format 0 "~m ~m ~m~%" (-> vec x) (-> vec y) (-> vec z) 4096.0)
+  `(let ((obj (the process-drawable (process-by-ename ,procname))))
+    (when obj
+      (let ((vec (-> obj root trans)))
+        (format 0 "~m ~m ~m~%" (-> vec x) (-> vec y) (-> vec z) 4096.0)
+        )
+      )
     (none)))
     
   
@@ -763,6 +766,8 @@
     
     ;; show bug report level info
     (true! *display-bug-report*)
+    ;; mark game won
+    (task-close! "city-win-resolution")
     )
 
   ;; mini-bigmap stuff
