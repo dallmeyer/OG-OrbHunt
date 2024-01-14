@@ -445,6 +445,9 @@
 (build-custom-level "orbs-sewer-sewer")
 (custom-level-cgo "O0Q.DGO" "orbs-sewer-sewer/orbs-sewer-sewer.gd")
 
+(build-custom-level "orbs-sewer-sewesc")
+(custom-level-cgo "O0T.DGO" "orbs-sewer-sewesc/orbs-sewer-sewesc.gd")
+
 (build-custom-level "orbs-strip-strip")
 (custom-level-cgo "O0U.DGO" "orbs-strip-strip/orbs-strip-strip.gd")
 

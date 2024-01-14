@@ -344,7 +344,8 @@
        '("sewer-c-connect-door.mb")
        (not (and (task-complete? *game-info* (game-task sewer-enemy))
                  (task-node-closed? (game-task-node sewer-board-introduction))
-                 (not (task-complete? *game-info* (game-task sewer-board)))
+                 (or (= (-> this name) 'sewer) (= (-> this name) 'sewerb))  ;; hide door in sewer, show in sewesc
+                ;;  (not (task-complete? *game-info* (game-task sewer-board)))
                  )
             )
        )
@@ -352,17 +353,20 @@
        '("sewer-hover-door.mb")
        (and (task-complete? *game-info* (game-task sewer-enemy))
             (task-node-closed? (game-task-node sewer-board-introduction))
-            (not (task-complete? *game-info* (game-task sewer-board)))
+            #f
+            ;; (not (task-complete? *game-info* (game-task sewer-board)))
             )
        )
      (cond
        ((= arg0 'debug)
         )
-       ((task-complete? *game-info* (game-task sewer-board))
+       ;; low water for sewesc[b]
+       ((or (= (-> this name) 'sewesc) (= (-> this name) 'sewescb)) ;; (task-complete? *game-info* (game-task sewer-board))
         (set! *ocean-height-hack* (ocean-height-hack sewer-lo))
         (set-height! *ocean-map-sewer* -368050.2)
         )
-       ((not (task-node-closed? (game-task-node sewer-board-drain)))
+       ;; high water for sewer[b]
+       (else ;; ((not (task-node-closed? (game-task-node sewer-board-drain)))
         (set! *ocean-height-hack* (ocean-height-hack zero))
         (set-height! *ocean-map-sewer* -216498.17)
         )

@@ -655,6 +655,7 @@
 (define *mini-bigmap-toggle-time* (the time-frame #f))
 (defun mod-run-each-frame ()
   (task-close! "nest-get-to-gun-introduction") ;; NG+ or something
+  (logior! (-> *game-info* features) (game-feature darkjak darkjak-bomb0 darkjak-bomb1 darkjak-invinc darkjak-giant)) ;; give dark jak stuff
 
   ;; hover check/cooldown stuff
   (cond

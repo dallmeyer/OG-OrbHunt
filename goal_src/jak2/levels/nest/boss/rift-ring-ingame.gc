@@ -208,7 +208,7 @@ This commonly includes things such as:
     (the-as pair 0)
     )
   (case-str (-> this name)
-    (("forresca-rift-ring-ingame-01" "dig1-rift-ring-ingame-01" "dig3a-rift-ring-ingame-01")
+    (("forresca-rift-ring-ingame-01" "dig1-rift-ring-ingame-01" "dig3a-rift-ring-ingame-01" "sewer-rift-ring-ingame-01" "sewesc-rift-ring-ingame-01")
       (set-vector! (-> this root scale) 0.16 0.16 0.16 0.16)  ;; mini rift ring
       (set! (-> this part) (create-launch-control (-> *part-group-id-table* 1301) this))  ;; less intense particles
       )

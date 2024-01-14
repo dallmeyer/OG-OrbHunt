@@ -1140,6 +1140,30 @@
                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
                   :want-sound (new 'static 'array symbol 3 'sewer1 'sewer2 'ctywide1))
+                  
+                (new 'static 'continue-point
+                  :name "sewer-warp"
+                  :level 'sewer
+                  :flags (continue-flags warp-gate)
+                  :trans (new 'static 'vector :x (meters 1207.5826) :y (meters -38.2053) :z (meters 463.6480) :w 1.0)
+                  :quat (new 'static 'vector :x -0.0014 :y 0.4263 :z -0.0004 :w -0.9045)
+                  :camera-trans (new 'static 'vector :x (meters 1195.1564) :y (meters -33.0676) :z (meters 462.7733) :w 1.0)
+                  :camera-rot (new 'static 'inline-array vector3s 3
+                               (new 'static 'vector3s :data (new 'static 'array float 3  0.1622 0.0000 -0.9867))
+                               (new 'static 'vector3s :data (new 'static 'array float 3 0.1404 0.9898 0.0230))
+                               (new 'static 'vector3s :data (new 'static 'array float 3  0.9767 -0.1423 0.1606)))
+          
+                  :on-goto #f
+                  :vis-nick 'sewer
+                  :want (new 'static 'inline-array level-buffer-state 6
+                         (new 'static 'level-buffer-state :name 'sewerb :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'sewer :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'orbs-sewer-sewer :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                  :want-sound (new 'static 'array symbol 3 'sewer1 'sewer2 'ctywide1))
         
                  (new 'static 'continue-point
                    :name "sewer-start-kiosk"
@@ -1294,7 +1318,7 @@
                   :want (new 'static 'inline-array level-buffer-state 6
                          (new 'static 'level-buffer-state :name 'sewescb :display? 'display :force-vis? #f :force-inside? #f)
                          (new 'static 'level-buffer-state :name 'sewesc :display? 'display :force-vis? #f :force-inside? #f)
-                         (new 'static 'level-buffer-state :name 'orbs-sewer-sewer :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'orbs-sewer-sewesc :display? 'display :force-vis? #f :force-inside? #f)
                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
@@ -1322,7 +1346,7 @@
                    :want (new 'static 'inline-array level-buffer-state 6
                           (new 'static 'level-buffer-state :name 'sewescb :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'sewesc :display? 'display :force-vis? #f :force-inside? #f)
-                          (new 'static 'level-buffer-state :name 'orbs-sewer-sewer :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'orbs-sewer-sewesc :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
@@ -1354,7 +1378,7 @@
                    :want (new 'static 'inline-array level-buffer-state 6
                           (new 'static 'level-buffer-state :name 'sewescb :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'sewesc :display? 'display :force-vis? #f :force-inside? #f)
-                          (new 'static 'level-buffer-state :name 'orbs-sewer-sewer :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'orbs-sewer-sewesc :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
@@ -1378,12 +1402,38 @@
                    :want (new 'static 'inline-array level-buffer-state 6
                           (new 'static 'level-buffer-state :name 'sewescb :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'sewesc :display? 'display :force-vis? #f :force-inside? #f)
-                          (new 'static 'level-buffer-state :name 'orbs-sewer-sewer :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'orbs-sewer-sewesc :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
-                   :want-sound (new 'static 'array symbol 3 'sewer4 'sewer5 'sewer6)))
+                   :want-sound (new 'static 'array symbol 3 'sewer4 'sewer5 'sewer6))
+                   
+                 (new 'static 'continue-point
+                  :name "sewesc-warp"
+                  :level 'sewesc
+                  :flags (continue-flags warp-gate)
+                  :trans (new 'static 'vector :x (meters 1207.5826) :y (meters -38.2053) :z (meters 463.6480) :w 1.0)
+                  :quat (new 'static 'vector :x -0.0014 :y 0.4263 :z -0.0004 :w -0.9045)
+                  :camera-trans (new 'static 'vector :x (meters 1195.1564) :y (meters -33.0676) :z (meters 462.7733) :w 1.0)
+                  :camera-rot (new 'static 'inline-array vector3s 3
+                               (new 'static 'vector3s :data (new 'static 'array float 3  0.1622 0.0000 -0.9867))
+                               (new 'static 'vector3s :data (new 'static 'array float 3 0.1404 0.9898 0.0230))
+                               (new 'static 'vector3s :data (new 'static 'array float 3  0.9767 -0.1423 0.1606)))
+          
+                  :on-goto #f
+                  :vis-nick 'sewesc
+                  :want (new 'static 'inline-array level-buffer-state 6
+                         (new 'static 'level-buffer-state :name 'sewescb :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'sewesc :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'orbs-sewer-sewesc :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                  :want-sound (new 'static 'array symbol 3 'sewer4 'sewer5 'ctywide1)) 
+                   
+                  )
         
       
     :tasks '()
@@ -1399,7 +1449,7 @@
     :deactivate-func #f
     :kill-func #f
     :borrow-size (new 'static 'array uint16 2 160 160)
-    :borrow-level (new 'static 'array symbol 2 #f 'orbs-sewer-sewer)
+    :borrow-level (new 'static 'array symbol 2 #f 'orbs-sewer-sewesc)
     :borrow-display? (new 'static 'array symbol 2 #f 'display)
     :base-task-mask (task-mask task0)
     :texture-anim-tfrag #f
@@ -16276,6 +16326,7 @@
 (define orbs-atoll-atoll       (orbs-borrow-level #xcb 'orbs-atoll-atoll       'orbs-atoll-atoll-vis       'o0p 'update-mood-atoll))
 
 (define orbs-sewer-sewer       (orbs-borrow-level #xcc 'orbs-sewer-sewer       'orbs-sewer-sewer-vis       'o0q 'update-mood-copy-sewerb))
+(define orbs-sewer-sewesc      (orbs-borrow-level #xe5 'orbs-sewer-sewesc      'orbs-sewer-sewesc-vis      'o0t 'update-mood-copy-sewerb))
 
 (define orbs-strip-strip       (orbs-borrow-level #xcd 'orbs-strip-strip       'orbs-strip-strip-vis       'o0u 'update-mood-strip))
 
@@ -16339,6 +16390,7 @@
   (cons! *level-load-list* 'orbs-mountain-mountain)
   (cons! *level-load-list* 'orbs-strip-strip)
   (cons! *level-load-list* 'orbs-sewer-sewer)
+  (cons! *level-load-list* 'orbs-sewer-sewesc)
   (cons! *level-load-list* 'orbs-atoll-atoll)
   (cons! *level-load-list* 'orbs-ruins-sagehut)
   (cons! *level-load-list* 'orbs-ruins-ruins)

@@ -596,6 +596,22 @@
             (set! (-> this wait-for) '())
             (set! (-> this on-close) '())
             )
+          ;; sewer -> sewesc
+          (("sewer-warp-gate-01")
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide so it looks like rift-ring is warp
+            (set! (-> this continue) (get-continue-by-name *game-info* "sewesc-warp"))
+            (set! (-> this on-activate) '())
+            (set! (-> this wait-for) '())
+            (set! (-> this on-close) '())            
+            )
+          ;; sewesc -> sewer
+          (("sewesc-warp-gate-01")
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide so it looks like rift-ring is warp
+            (set! (-> this continue) (get-continue-by-name *game-info* "sewer-warp"))
+            (set! (-> this on-activate) '())
+            (set! (-> this wait-for) '())
+            (set! (-> this on-close) '())
+            )
           ;; unknown
           (else
             (set! (-> this continue) #f)

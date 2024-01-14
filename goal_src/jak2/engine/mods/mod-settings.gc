@@ -46,7 +46,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;; Change #f to #t here to show the input display by default
 (define *show-input-display* #f)
 
-(define *level-load-info-level-id-remap* (new 'static 'boxed-array :type uint8 :length 247 :allocated-length 247
+(define *level-load-info-level-id-remap* (new 'static 'boxed-array :type uint8 :length 248 :allocated-length 248
   0 ;; none
   0 ;; default -> none (lots of test levels use this index too)
   0 ;; intro -> none
@@ -251,13 +251,13 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   26 ;; orbs-ruins-ruins
   27 ;; orbs-ruins-sagehut
   28 ;; orbs-atoll-atoll
-  5 ;; orbs-sewer-sewer ;; stuff everything into single sewer level, share for sewesc
+  5 ;; orbs-sewer-sewer ;; sewer/sewerb
   25 ;; orbs-strip-strip
   29 ;; orbs-mountain-mountain
   31 ;; orbs-mountain-mincan
   30 ;; orbs-forest-forest
   30 ;; orbs-forest-forestb
-  3 ;; orbs-drill-drill ;; yea indexing is weird but correct here
+  3 ;; orbs-drill-drill
   2 ;; orbs-drill-drillmid
   4 ;; orbs-drill-drillb
   6 ;; orbs-tomb-tomba
@@ -276,6 +276,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   65 ;; orbs-nest-nestb
   63 ;; orbs-default-village1
   66 ;; orbs-default-halfpipe
+  69 ;; orbs-sewer-sewesc ;; sewesc/sewescb
 
 
   ;; PS3 levels excluded
@@ -294,7 +295,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   ;; 0 ;; test-zone ;; out of place
   ))
 
-(defconstant LEVEL_ID_LEN 69)
+(defconstant LEVEL_ID_LEN 70)
 
 (define *level-id-names* (new 'static 'boxed-array :type string :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   "" ;; 0 (none)
@@ -302,7 +303,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Drill Platform A" ;; 2
   "Drill Platform B" ;; 3
   "Drill Platform C" ;; 4
-  "Sewers" ;; 5
+  "Sewers (Old)" ;; 5
   "Mars Tomb (Center)" ;; 6
   "Mars Tomb (Left)" ;; 7
   "Mars Tomb (Right)" ;; 8
@@ -366,6 +367,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Halfpipe" ;; 66
   "Mars Tomb (Daxter Chase)" ;; 67
   "Mars Tomb (Entrance)" ;; 68
+  "Sewers"
   ))
 
 (define *level-orb-collected-counts* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
