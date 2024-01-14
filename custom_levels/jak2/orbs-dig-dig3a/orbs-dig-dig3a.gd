@@ -4,5 +4,8 @@
 ;; the actual file name still needs to be 8.3
 ("O19.DGO"
  (
+  "metalkor-part.o"
+  "rift-ring-ingame.o"
+  "rift-ring-in-game-ag.go"
   "orbs-dig-dig3a.go"
   ))

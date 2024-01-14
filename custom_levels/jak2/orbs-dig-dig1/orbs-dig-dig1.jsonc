@@ -37,16 +37,37 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["rift-ring-in-game-ag", "air-train-ag"],
 
-   // Any textures you want to include in your custom level.
-   // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
-   // To get a list of all the textures, you can extract all of the game's textures
-   // by setting "save_texture_pngs" to true in the decompiler config.
-   "textures": [],
+  // Any textures you want to include in your custom level.
+  // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
+  // To get a list of all the textures, you can extract all of the game's textures
+  // by setting "save_texture_pngs" to true in the decompiler config.
+  "textures": [],
 
-  "actors" : [
+ "actors" : [
     // 'dig1 (with guards and explosive barrels)
+    {
+      "trans": [472.41, -53.5, -1813.43], // duh
+      "etype": "rift-ring-ingame",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.2344, 0, 0.9721], // quaternion
+      "bsphere": [472.41, -53.5, -1813.43, 10], // bounding sphere
+      "lump": {
+        "name":"dig1-rift-ring-ingame-01"
+      }
+    },
+    {
+      "trans": [472.41, -57.35, -1813.43], // hidden behind rift ring
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0.5219, 0, 0.8529], // quaternion
+      "bsphere": [472.41, -57.35, -1813.43, 10], // bounding sphere
+      "lump": {
+        "name":"dig1-warp-gate-01",
+        "distance": ["meters", 5.0]
+      }
+    },
     {
       "trans": [ 233.26, -69.1, -1831.89 ], // #t left once in main room, extended over lava under cag
       "etype": "skill",  // actor type
@@ -54,7 +75,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [233.26, -69.1, -1831.8, 10], // bounding sphere
       "lump": {
-        "name": "dig1-skill-1"
+        "name": "dig1-skill-01"
       }
     }
     // HOVER CELLS

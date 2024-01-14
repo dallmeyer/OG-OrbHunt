@@ -492,6 +492,9 @@
 (custom-level-cgo "O17.DGO" "orbs-tomb-tombboss/orbs-tomb-tombboss.gd")
 
 
+(build-custom-level "orbs-dig-dig1")
+(custom-level-cgo "O18.DGO" "orbs-dig-dig1/orbs-dig-dig1.gd")
+
 (build-custom-level "orbs-dig-dig3a")
 (custom-level-cgo "O19.DGO" "orbs-dig-dig3a/orbs-dig-dig3a.gd")
 

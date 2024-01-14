@@ -12676,12 +12676,38 @@
                   :want (new 'static 'inline-array level-buffer-state 6
                          (new 'static 'level-buffer-state :name 'dig1 :display? 'display :force-vis? #f :force-inside? #f)
                          (new 'static 'level-buffer-state :name 'caspad :display? 'display :force-vis? #f :force-inside? #f)
-                         (new 'static 'level-buffer-state :name 'orbs-dig-dig3a :display? 'display :force-vis? #f :force-inside? #f)  ;; intentional - share orbs with dig3a
+                         (new 'static 'level-buffer-state :name 'orbs-dig-dig1 :display? 'display :force-vis? #f :force-inside? #f)
                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
-                  :want-sound (new 'static 'array symbol 3 'dig1 'dig2 'dig3)))
+                  :want-sound (new 'static 'array symbol 3 'dig1 'dig2 'dig3))
+                  
+                (new 'static 'continue-point
+                  :name "dig1-warp"
+                  :level 'dig1
+                  :flags (continue-flags warp-gate)
+                  :trans (new 'static 'vector :x (meters 469.8959) :y (meters -57.8715) :z (meters -1808.8323) :w 1.0)
+                  :quat (new 'static 'vector :x 0.0000 :y 0.0111 :z -0.0001 :w -0.9999)
+                  :camera-trans (new 'static 'vector :x (meters 471.7583) :y (meters -52.9848) :z (meters -1797.4392) :w 1.0)
+                  :camera-rot (new 'static 'inline-array vector3s 3
+                               (new 'static 'vector3s :data (new 'static 'array float 3  -0.9823 0.0000 0.1869))
+                               (new 'static 'vector3s :data (new 'static 'array float 3 -0.0277 0.9888 -0.1459))
+                               (new 'static 'vector3s :data (new 'static 'array float 3  -0.1848 -0.1485 -0.9714)))
+          
+                  :on-goto '(begin (kill "crimson-guard-level-198" store #f) (kill "crimson-guard-level-199" store #f))
+                  :vis-nick 'dig1
+                  :want (new 'static 'inline-array level-buffer-state 6
+                         (new 'static 'level-buffer-state :name 'dig1 :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'caspad :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'orbs-dig-dig1 :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                  :want-sound (new 'static 'array symbol 3 'dig1 'dig2 'dig3))
+
+                  )
         
       
     :tasks '()
@@ -12697,7 +12723,7 @@
     :deactivate-func #f
     :kill-func #f
     :borrow-size (new 'static 'array uint16 2 160 160)
-    :borrow-level (new 'static 'array symbol 2 #f 'orbs-dig-dig3a)
+    :borrow-level (new 'static 'array symbol 2 #f 'orbs-dig-dig1)
     :borrow-display? (new 'static 'array symbol 2 #f 'display)
     :base-task-mask (task-mask task0)
     :texture-anim-tfrag '*lava-texture-anim-array*
@@ -12751,6 +12777,36 @@
                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.2993 0.0 0.9541))
                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.169 0.9841 -0.053))
                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.939 -0.1771 -0.2946)))
+          
+                  :on-goto '(begin
+                             (kill "flitter-255" store #f)
+                             (kill "flitter-256" store #f)
+                             (kill "flitter-257" store #f)
+                             (kill "flitter-258" store #f)
+                             (kill "flitter-259" store #f))
+           
+                  :vis-nick 'dig3a
+                  :want (new 'static 'inline-array level-buffer-state 6
+                         (new 'static 'level-buffer-state :name 'dig3a :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'caspad :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'orbs-dig-dig3a :display? 'display :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                  :want-sound (new 'static 'array symbol 3 'dig6 'dig7 'dig8))
+
+                (new 'static 'continue-point
+                  :name "dig3a-warp"
+                  :level 'dig3a
+                  :flags (continue-flags warp-gate)
+                  :trans (new 'static 'vector :x (meters 469.8959) :y (meters -57.8715) :z (meters -1808.8323) :w 1.0)
+                  :quat (new 'static 'vector :x 0.0000 :y 0.0111 :z -0.0001 :w -0.9999)
+                  :camera-trans (new 'static 'vector :x (meters 471.7583) :y (meters -52.9848) :z (meters -1797.4392) :w 1.0)
+                  :camera-rot (new 'static 'inline-array vector3s 3
+                               (new 'static 'vector3s :data (new 'static 'array float 3  -0.9823 0.0000 0.1869))
+                               (new 'static 'vector3s :data (new 'static 'array float 3 -0.0277 0.9888 -0.1459))
+                               (new 'static 'vector3s :data (new 'static 'array float 3  -0.1848 -0.1485 -0.9714)))
           
                   :on-goto '(begin
                              (kill "flitter-255" store #f)
@@ -12968,8 +13024,8 @@
                   :want (new 'static 'inline-array level-buffer-state 6
                          (new 'static 'level-buffer-state :name 'caspad :display? 'display :force-vis? #f :force-inside? #f)
                          (new 'static 'level-buffer-state :name 'orbs-castle-caspad :display? 'display :force-vis? #f :force-inside? #f)
-                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
-                         (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'dig3a :display? #f :force-vis? #f :force-inside? #f)
+                         (new 'static 'level-buffer-state :name 'orbs-dig-dig3a :display? #f :force-vis? #f :force-inside? #f)
                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
@@ -16194,6 +16250,9 @@
 (define orbs-fortress-fordumpb (orbs-borrow-level #xb8 'orbs-fortress-fordumpb 'orbs-fortress-fordumpb-vis 'o06 'update-mood-fortress))
 (define orbs-fortress-fordumpc (orbs-borrow-level #xb9 'orbs-fortress-fordumpc 'orbs-fortress-fordumpc-vis 'o07 'update-mood-fordumpc))
 
+;; fordumpd was here but its a fake level
+(define orbs-dig-dig1         (orbs-borrow-level #xba 'orbs-dig-dig1         'orbs-dig-dig1-vis         'o18 'update-mood-dig1))
+
 (define orbs-stadium-stadium  (orbs-borrow-level #xbb 'orbs-stadium-stadium  'orbs-stadium-stadium-vis  'o09 'update-mood-stadium))
 (define orbs-stadium-stadiumb (orbs-borrow-level #xbc 'orbs-stadium-stadiumb 'orbs-stadium-stadiumb-vis 'o0a 'update-mood-stadiumb))
 (define orbs-stadium-stadiumc (orbs-borrow-level #xbd 'orbs-stadium-stadiumc 'orbs-stadium-stadiumc-vis 'o0b 'update-mood-stadiumb))
@@ -16297,6 +16356,7 @@
   (cons! *level-load-list* 'orbs-stadium-stadiumc)
   (cons! *level-load-list* 'orbs-stadium-stadiumb)
   (cons! *level-load-list* 'orbs-stadium-stadium)
+  (cons! *level-load-list* 'orbs-dig-dig1)
   (cons! *level-load-list* 'orbs-fortress-fordumpc)
   (cons! *level-load-list* 'orbs-fortress-fordumpb)
   (cons! *level-load-list* 'orbs-fortress-fordumpa)
