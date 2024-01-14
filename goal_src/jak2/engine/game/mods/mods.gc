@@ -800,7 +800,7 @@
     (cond
       ((and *show-mini-bigmap*
             (or ;; 10s timeout or hud forced hidden or ctywide minimap maybe showing
-                (time-elapsed? *mini-bigmap-toggle-time* (seconds 10.0))
+                (time-elapsed? *mini-bigmap-toggle-time* (seconds 5.0))
                 (hud-hidden?)
                 (= (-> *bigmap* bigmap-index) 20)))
         (disable-drawing *bigmap*)
