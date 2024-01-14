@@ -68,18 +68,272 @@
       "lump": {
         "name":"tombboss-skill-02"
       }
-    }
+    },
+    {
+      "trans": [203.08, -75.65, 1461.87], // mar right hand
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [203.08, -75.65, 1461.87, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-03"
+      }
+    },
+    {
+      "trans": [180.83, -75.63, 1461.99], // mar left hand
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [180.83, -75.63, 1461.99, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-04"
+      }
+    },
+    {
+      "trans": [224.37, -39.29, 1489.28], // up from torch^ skill-02 (proxy)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [224.37, -39.29, 1489.28, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-05"
+      }
+    },
+    {
+      "trans": [246.11, -44.95, 1487.97], // just over from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [246.11, -44.95, 1487.97, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-06",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [254.38, -23.58, 1481.77], // facing mar, upper left wall, back corner (abah into infin ceiling from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [254.38, -23.58, 1481.77, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-07"
+      }
+    },
+    {
+      "trans": [254.21, -30.93, 1439.40], // facing mar, upper left wall, under central face (follow from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [254.21, -30.93, 1439.40, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-08"
+      }
+    },
+    {
+      "trans": [264.20, -14.5, 1438.10], // facing mar, upper left wall, inside/behind face (follow from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [264.20, -14.5, 1438.10, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-09"
+      }
+    },
+    {
+      "trans": [248.35,   3.1, 1434.99], // facing mar, upper left wall, near ceiling in middle (follow from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [248.35,   3.1, 1434.99, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-10"
+      }
+    },
+    {
+      "trans": [254.13, -23.58, 1397.49], // facing mar, upper left wall, above tombe area (follow from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [254.13, -23.58, 1397.49, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-11"
+      }
+    },
+    {
+      "trans": [260.71, -46.32, 1423.75], // upper edge of door from tombe (drop from ^ is easiest I bet?)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [260.71, -46.32, 1423.75, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-12"
+      }
+    },
+    {
+      "trans": [257.20, -71.5, 1396.17], // crack against wall near tombe door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [257.20, -71.5, 1396.17, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-13"
+      }
+    },
+    {
+      "trans": [170.66, -74.23, 1485.46 ], // mar left elbow
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [170.66, -74.23, 1485.46, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-14",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [163.47, -61.93, 1490.06], // torch above ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [163.47, -61.93, 1490.06, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-15"
+      }
+    },
+    {
+      "trans": [158.42, -39.29, 1489.23], // above torch^ (proxy)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [158.42, -39.29, 1489.23, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-16"
+      }
+    },
+    {
+      "trans": [184.94, -43.18, 1497.20], // mar left earring
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [184.94, -43.18, 1497.20, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-17"
+      }
+    },
+    {
+      "trans": [199.17, -43.18, 1497.06], // mar right earring
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [199.17, -43.18, 1497.06, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-18"
+      }
+    },
+    {
+      "trans": [192.21, -53.5, 1491.29], // mar neck
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [192.21, -53.5, 1491.29, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-19"
+      }
+    },
+    {
+      "trans": [191.89, -30.92, 1498.95], // top of mar head
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [191.89, -30.92, 1498.95, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-20"
+      }
+    },
+    {
+      "trans": [137.81, -45.40, 1487.97], // jump over from ^^^ skill-16
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [137.81, -45.40, 1487.97, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-21",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [128.47, -23.58, 1481.77], // facing mar, right left wall, back corner (abah into infin ceiling from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [128.47, -23.58, 1481.77, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-22"
+      }
+    },
+    {
+      "trans": [128.64, -30.93, 1439.40], // facing mar, right left wall, under central face (follow from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [128.64, -30.93, 1439.40, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-23"
+      }
+    },
+    {
+      "trans": [118.63, -14.5, 1438.10], // facing mar, upper right wall, inside/behind face (follow from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [118.63, -14.5, 1438.10, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-24"
+      }
+    },
+    {
+      "trans": [133.0,   3.1, 1434.99], // facing mar, upper right wall, near ceiling in middle (follow from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [133.0,   3.1, 1434.99, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-25"
+      }
+    },
+    {
+      "trans": [128.72, -23.58, 1398.49], // facing mar, upper right wall, opposite tombe door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [128.72, -23.58, 1398.49, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-26"
+      }
+    },
     // // HOVER CELLS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
+    {
+      "trans": [163.08, -21.35, 1390.34], // tricky ledge up high next to entrance door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [163.08, -21.35, 1390.34, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-hover-01",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [211.50, -41.24, 1391.91], // ledge mid next to entrance door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [211.50, -41.24, 1391.91, 10], // bounding sphere
+      "lump": {
+        "name":"tombboss-skill-hover-02",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    }
   ]
 }

@@ -714,8 +714,8 @@
   ;; === tomb/tombboss ===
   (let ((door (entity-by-name "tomb-boss-door-1"))) ;; open locked door to tombboss
     (when door 
-      (set! (-> (res-lump-data door 'idle-distance (pointer float))) (meters 10.0))
-      (set! (-> (res-lump-data door 'distance (pointer float))) (meters 5.0))
+      (set! (-> (res-lump-data door 'idle-distance (pointer float))) (meters 12.0))
+      (set! (-> (res-lump-data door 'distance (pointer float))) (meters 10.0))
       (set! (cdr (res-lump-struct door 'on-notice pair)) '(((task-closed? "tomb-boss-resolution") '(tombboss)) ((task-closed? "tomb-boss-introduction") #f) ((task-closed? "tomb-boss-door") '(tombboss)) ((and (task-closed? "tomb-poles-resolution") (task-closed? "tomb-water-resolution")) (scene-play "tomb-boss-open") #f)))
       (set! (cdr (res-lump-struct door 'on-activate pair)) '((task-closed? "tomb-boss-door") (want-load 'tomba 'tombboss 'tombext)))
       )
