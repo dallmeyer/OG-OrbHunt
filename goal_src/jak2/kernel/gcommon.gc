@@ -171,6 +171,11 @@
 ;; This defines the format function to point to the same thing as _format.
 (define format _format)
 
+(define-extern ORB_HUNT_DEBUG? symbol)
+(defmacro dbg-format (&rest args)
+  `(when ORB_HUNT_DEBUG? (format ,@args))
+  )
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; numeric types
 ;;;;;;;;;;;;;;;;;;;;;;;;;;

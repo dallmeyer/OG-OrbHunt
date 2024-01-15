@@ -166,6 +166,150 @@
       "lump": {
         "name": "caspad-skill-12"
       }
+    },
+    {
+      "trans": [ 257.0,  21.5, -1639.0], // under/between airtrain plat
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [257.0,  21.5, -1639.0, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-13"
+      }
+    },
+    {
+      "trans": [260.64,  29.89, -1665.80], // on light on airtrain plat
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [260.64,  29.89, -1665.80, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-14",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [258.36,  48.32, -1668.19], // top of pole above ^ (abah)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [258.36,  48.32, -1668.19, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-15"
+      }
+    },
+    {
+      "trans": [488.41,  51.42, -1504.66], // cave entrance from atoll (avoid invis ceiling)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [488.41,  51.42, -1504.66, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-16"
+      }
+    },
+    {
+      "trans": [451.92,  48.5, -1528.56], // cave near atoll, but on caspad side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [451.92,  48.5, -1528.56, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-17"
+      }
+    },
+    {
+      "trans": [487.7,  49.3, -1557.8], // cave near atoll, in back corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [487.7,  49.3, -1557.8, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-18"
+      }
+    },
+    {
+      "trans": [426.53,  38.40, -1568.08], // crevice in left cliff outside/facing cave to atoll
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [426.53,  38.40, -1568.08, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-19",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [430.38,  54.01, -1566.57], // on tall rock between cliff and pipe (abah from^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [430.38,  54.01, -1566.57, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-20"
+      }
+    },
+    {
+      "trans": [398.46,  46.1, -1532.67], // crevice in right cliff outside/facing cave to atoll (jump from high rock)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [398.46,  46.1, -1532.67, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-21",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [391.09,  57.73, -1527.62], // up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [391.09,  57.73, -1527.62, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-22"
+      }
+    },
+    {
+      "trans": [432.93,  55.38, -1532.91], // top of tall rock right outside cave to atoll
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [432.93,  55.38, -1532.91, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-23"
+      }
+    },
+    {
+      "trans": [413.92,  54.93, -1525.66], // crevice on right cliff outside/facing cave to atoll
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [413.92,  54.93, -1525.66, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-24",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [421.56,  71.61, -1520.96], // way up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [421.56,  71.61, -1520.96, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-25"
+      }
+    },
+    {
+      "trans": [329.72,  22.55, -1550.48], // behind rock against cliff towards atoll side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [329.72,  22.55, -1550.48, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-26"
+      }
     }
     // HOVER CELLS
     // {

@@ -724,3 +724,8 @@
 (defmacro time-elapsed? (time duration)
   `(>= (- (current-time) ,time) ,duration)
   )
+
+(defmacro g-time-elapsed? (time duration)
+  `(>= (- (get-current-time) ,time) ,duration)
+  )
+

@@ -8,7 +8,11 @@
 ;; DECOMP BEGINS
 
 (defmethod draw ((this hud-map))
-  (set! *mini-bigmap-toggle-time* (current-time))
+  (when *show-mini-bigmap*
+    ;; (disable-drawing *bigmap*)
+    (dbg-format 0 "disabling drawing 2~%")
+    (set! *mini-bigmap-toggle-time* (get-current-time))
+    )
   (false! *show-mini-bigmap*) ;; changed orbhunt - ensure mini-bigmap is disabled
   (set-hud-piece-position!
     (-> this sprites 1)

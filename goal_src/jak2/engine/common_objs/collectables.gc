@@ -1877,6 +1877,14 @@ This commonly includes things such as:
   ((minimap connection-minimap))  ;; added orbhunt
   )
 
+(defstate pickup (skill)
+  :virtual #t
+  :code (behavior ((arg0 symbol) (arg1 handle))
+    (process-entity-status! self (entity-perm-status dead) #t)
+    (auto-save-user)  ;; autosave on orb pickup
+    )
+  )
+
 (defstate die (skill)
   :virtual #t
   :enter (behavior ()

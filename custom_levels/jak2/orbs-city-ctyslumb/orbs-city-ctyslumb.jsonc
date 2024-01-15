@@ -228,13 +228,14 @@
       }
     },
     {
-      "trans": [661.3,   8.45, -332.65], // left rooftops on path to ctysluma
+      "trans": [763.58,  32.88, -210.76], // left rooftops on path to ctysluma
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [661.3,   8.45, -332.65, 10], // bounding sphere
+      "bsphere": [763.58,  32.88, -210.76, 10], // bounding sphere
       "lump": {
-        "name": "ctyslumb-skill-19"
+        "name": "ctyslumb-skill-19",
+        "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
@@ -423,13 +424,33 @@
       }
     },
     {
+      "trans": [570.60,  58.98, -67.04], // way up above ^ (abah)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [570.60,  58.98, -67.04, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-38"
+      }
+    },
+    {
       "trans": [527.89,   8.83,  -1.39], // in corner against palace wall, on way to ctygenb
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [527.89,   8.83,  -1.39, 10], // bounding sphere
       "lump": {
-        "name": "ctyslumb-skill-38"
+        "name": "ctyslumb-skill-39"
+      }
+    },
+    {
+      "trans": [774.16,  43.40, -204.42], // left wall on path to sluma, abah from ^^^skill-19
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [774.16,  43.40, -204.42, 10], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-skill-40"
       }
     },
 

@@ -1,6 +1,8 @@
 ;;-*-Lisp-*-
 (in-package goal)
 
+(define ORB_HUNT_DEBUG? #f)
+
 ;; more for testing purposes than anything
 (defun move-actor-str-target-offset ((actor-name string) (x float) (y float) (z float))
   (cond 
@@ -21,9 +23,6 @@
          (+! (-> entity-actor extra trans x) (meters x))
          (+! (-> entity-actor extra trans y) (meters y))
          (+! (-> entity-actor extra trans z) (meters z))))))
-          
-        
-      
     
   (none))
   
@@ -41,9 +40,6 @@
          (set-vector! (-> entity-actor trans) (meters x) (meters y) (meters z) 1.0)
          (set-vector! (-> entity-actor extra trans) (meters x) (meters y) (meters z) 1.0)))))
          ;; (set-vector! (-> (the process-drawable actor) root trans) (meters x) (meters y) (meters z) 1.0)
-          
-        
-      
     
   (none))
   
@@ -135,14 +131,11 @@
   
 
 (defun spawn-skill-internal ((x float) (y float) (z float) (bob? symbol) (name string) (amount float))
-  (format 0 "trying to spawn ~A~%" name)
+  (dbg-format 0 "trying to spawn ~A~%" name)
   (cond
     ((process-by-name name *active-pool*)
      (format 0 "~A is already spawned, skipping" name)
-     ) 
-    (#f ;; TODO track collection
-      (format 0 "~A is already collected, skipping" name)
-      )
+     )
     (else
       (let ((fax (new 'static 'fact-info)))
         (set! (-> fax pickup-type) (pickup-type skill))
@@ -159,7 +152,7 @@
           (set-vector-meters! vec x y z)
           (let ((proc (ppointer->process (birth-pickup-at-point-named vec (pickup-type skill) amount #t *active-pool* fax name))))
             ;; (copy-string<-string (-> proc name) ,name) ;; lol this overwrote the "skill" string for everyone
-            (format 0 "spawned ~A~%" proc)))))))
+            (dbg-format 0 "spawned ~A~%" proc)))))))
 
 (define *baby-mode-orb-dist* (the-as float #f))
 (defun baby-mode-find-closest-orb ()
@@ -777,7 +770,7 @@
   ;; (move-actor-str-target-offset "ctyport-part-86" 0.0 1.5 0.0)  ;; jakpoop
 
   ;; dev stuff
-  (when (and *debug-segment* (cpad-pressed? 0 l3) (cpad-hold? 0 r3))
+  (when (and *debug-segment* (cpad-pressed? 0 select) (not (paused?)))
     (toggleCollisionRenderer)
     ;; hideskip nojak
     (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack nojak)) #t)
@@ -792,23 +785,25 @@
     
     ;; show bug report level info
     (true! *display-bug-report*)
-    ;; mark game won
+    ;; mark game won and give cheats
     (task-close! "city-win-resolution")
+    (logior! (-> *game-info* secrets) (game-secrets endless-dark invulnerable endless-ammo))
     )
 
   ;; mini-bigmap stuff
   (when (not *progress-process*)
     (cond
       ((and *show-mini-bigmap*
-            (or ;; timeout or hud forced hidden or ctywide minimap maybe showing
-                (time-elapsed? *mini-bigmap-toggle-time* (seconds 5.0))
-                (hud-hidden?)
+            (or ;; timeout or ctywide minimap maybe showing
+                (g-time-elapsed? *mini-bigmap-toggle-time* (seconds 3.0))
                 (= (-> *bigmap* bigmap-index) 20)))
-        (disable-drawing *bigmap*)
-        (set! *mini-bigmap-toggle-time* (current-time))
+        (dbg-format 0 "disabling drawing ~D~%" (get-current-time))
+        ;; (disable-drawing *bigmap*)
+        (set! *mini-bigmap-toggle-time* (get-current-time))
         (false! *show-mini-bigmap*)
         )
-      ((and *target* 
+      ((and (not (hud-hidden?))
+            *target* 
             *show-mini-bigmap*
             )
         (let ((x1 (+ 2048 (* (-> *pc-settings* aspect-ratio-scale) (- 2304 2048)))))
@@ -816,10 +811,12 @@
                     (= (gui-status ready) (get-status *gui-control* (lookup-gui-connection-id *gui-control* (the string #f) (gui-channel hud-lower-right) (gui-action none))))
                     (!= (-> *bigmap* bigmap-index) 20)  ;; not showing ctywide
                     )
+            (dbg-format 0 "enabling drawing / ")
             (enable-drawing *bigmap*)
             (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
                   (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
                   )
+              (dbg-format 0 "~A ~A / " map-texture-status icon-texture-status)
               (cond
                 ((and (not (-> *bigmap* loading-flag)) (= map-texture-status 'active) (= icon-texture-status 'active))
                   ;; loaded, draw it
@@ -829,6 +826,7 @@
                   ;; (draw *bigmap* 2176 1840 2304 1944) ;; top right ish
                   ;; (draw *bigmap* 1792 2152 1920 2256) ;; bottom left ish
                   ;; mini-bigmap
+                  (dbg-format 0 "active -> draw / ")
                   (draw *bigmap* ;; bottom right
                     (- x1 128)
                     2112
@@ -839,6 +837,7 @@
                 (else
                   ;; load shit
                   (when (not (-> *bigmap* loading-flag))
+                    (dbg-format 0 "not loading -> set pending / ")
                     (set-pending-file
                       (-> *bigmap* bigmap-image)
                       "world-map"
@@ -846,12 +845,14 @@
                       (process->handle *dproc*)
                       0.0
                       )
+                    (dbg-format 0 "pending2 / ")
                     (set-pending-file (-> *bigmap* tpage) "progress-minimap" 0 (process->handle *dproc*) 0.0)
                     (set! (-> *bigmap* loading-flag) #t)
                     )
                   )
                 )
               )
+            (dbg-format 0 " ~Ds ~D ~%" (/ (- (get-current-time) *mini-bigmap-toggle-time*) TICKS_PER_SECOND) (get-current-time))
             )
           )
         )
