@@ -397,7 +397,7 @@
     ;; ====== ORBS / RUINS ======
     ;; === ruins === 
     ;; (('skill-1) (set-vector-meters! (-> arg0 extra trans)  )) ;; this weird one doesn't actually spawn? but move it for the lulz - 
-    (('skill-2) (set-vector-meters! (-> arg0 extra trans)  997.29  80.0 -656.2)) ;; atop wall in far back (hover)
+    (('skill-2) (set-vector-meters! (-> arg0 extra trans)  1085.02  21.69 -512.20)) ;; behind wall on path near sagehut
     ;; (('skill-3) (set-vector-meters! (-> arg0 extra trans)  )) ;; 
     ;; (('skill-4) (set-vector-meters! (-> arg0 extra trans)  )) ;;
     ;; (('skill-5) (set-vector-meters! (-> arg0 extra trans)  )) ;;
@@ -660,6 +660,27 @@
       )
     )
 
+  ;; loading hacks
+  (cond
+    ((in-bubble-m? 394.40 -138.27 1423.79 20.0)  ;; bottom of tombe trampolines, load tomba/b
+      (script-eval '(want-load 'tomba 'tombb 'tombe))
+      (script-eval '(want-display 'tomba))
+      (script-eval '(want-display 'tombb))  ;; tombb is the important one, since it gets swapped out for tombboss
+      (script-eval '(want-display 'tombe))
+      )
+    ((in-bubble-m? 394.40 -66.68 1423.79 20.0)  ;; top of tombe trampolines, load tomba/tombboss
+      (script-eval '(want-load 'tomba 'tombboss 'tombe))
+      (script-eval '(want-display 'tomba))
+      (script-eval '(want-display 'tombboss))  ;; tombboss is the important one, since it gets swapped out for tombb
+      (script-eval '(want-display 'tombe))
+      )
+    ((in-bubble-m? 1023.41  36.59 -483.86 100.0)  ;; near sagehut, make sure its loaded
+      (script-eval '(want-load 'ruins 'sagehut))
+      (script-eval '(want-display 'ruins))
+      (script-eval '(want-display 'sagehut))
+      )
+    )
+
   ;; === prison (first 2 rooms) ===
   ;; dont allow backtrack into forrescb
   (let ((door (entity-by-name "fort-entry-gate-20")))
@@ -712,21 +733,6 @@
       (set! (-> (res-lump-data door 'distance (pointer float))) (meters 10.0))
       (set! (cdr (res-lump-struct door 'on-notice pair)) '(((task-closed? "tomb-boss-resolution") '(tombboss)) ((task-closed? "tomb-boss-introduction") #f) ((task-closed? "tomb-boss-door") '(tombboss)) ((and (task-closed? "tomb-poles-resolution") (task-closed? "tomb-water-resolution")) (scene-play "tomb-boss-open") #f)))
       (set! (cdr (res-lump-struct door 'on-activate pair)) '((task-closed? "tomb-boss-door") (begin (want-load 'tomba 'tombboss 'tombext) (want-display 'tombboss 'display))))
-      )
-    )
-
-  (cond
-    ((in-bubble-m? 394.40 -138.27 1423.79 20.0)  ;; bottom of tombe trampolines, load tomba/b
-      (script-eval '(want-load 'tomba 'tombb 'tombe))
-      (script-eval '(want-display 'tomba))
-      (script-eval '(want-display 'tombb))  ;; tombb is the important one, since it gets swapped out for tombboss
-      (script-eval '(want-display 'tombe))
-      )
-    ((in-bubble-m? 394.40 -66.68 1423.79 20.0)  ;; top of tombe trampolines, load tomba/tombboss
-      (script-eval '(want-load 'tomba 'tombboss 'tombe))
-      (script-eval '(want-display 'tomba))
-      (script-eval '(want-display 'tombboss))  ;; tombboss is the important one, since it gets swapped out for tombb
-      (script-eval '(want-display 'tombe))
       )
     )
 
@@ -794,65 +800,40 @@
   (when (not *progress-process*)
     (cond
       ((and *show-mini-bigmap*
-            (or ;; timeout or ctywide minimap maybe showing
+            (or ;; timeout 
                 (g-time-elapsed? *mini-bigmap-toggle-time* (seconds 3.0))
-                (= (-> *bigmap* bigmap-index) 20)))
+                ;; (= (-> *bigmap* bigmap-index) 20)
+                ))
         (dbg-format 0 "disabling drawing ~D~%" (get-current-time))
-        ;; (disable-drawing *bigmap*)
+        (disable-drawing *bigmap*)
         (set! *mini-bigmap-toggle-time* (get-current-time))
         (false! *show-mini-bigmap*)
         )
-      ((and (not (hud-hidden?))
-            *target* 
-            *show-mini-bigmap*
+      ((and *show-mini-bigmap*
+            (allow-mini-bigmap?)
             )
         (let ((x1 (+ 2048 (* (-> *pc-settings* aspect-ratio-scale) (- 2304 2048)))))
-          (when (and (-> *pc-settings* baby-mode?)
-                    (= (gui-status ready) (get-status *gui-control* (lookup-gui-connection-id *gui-control* (the string #f) (gui-channel hud-lower-right) (gui-action none))))
-                    (!= (-> *bigmap* bigmap-index) 20)  ;; not showing ctywide
-                    )
-            (dbg-format 0 "enabling drawing / ")
-            (enable-drawing *bigmap*)
-            (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
-                  (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
-                  )
-              (dbg-format 0 "~A ~A / " map-texture-status icon-texture-status)
-              (cond
-                ((and (not (-> *bigmap* loading-flag)) (= map-texture-status 'active) (= icon-texture-status 'active))
-                  ;; loaded, draw it
-                  ;; (draw *bigmap* 1792 1840 2304 2256)  ;; original "full" screen
-                  ;; (draw *bigmap* 1984 1996 2112 2100) ;; middle
-                  ;; (draw *bigmap* 1792 1840 1920 1944) ;; top left ish
-                  ;; (draw *bigmap* 2176 1840 2304 1944) ;; top right ish
-                  ;; (draw *bigmap* 1792 2152 1920 2256) ;; bottom left ish
-                  ;; mini-bigmap
-                  (dbg-format 0 "active -> draw / ")
-                  (draw *bigmap* ;; bottom right
-                    (- x1 128)
-                    2112
-                    x1  ;; + 128
-                    2216  ;; + 104
-                    )
-                  )
-                (else
-                  ;; load shit
-                  (when (not (-> *bigmap* loading-flag))
-                    (dbg-format 0 "not loading -> set pending / ")
-                    (set-pending-file
-                      (-> *bigmap* bigmap-image)
-                      "world-map"
-                      (the-as int (-> *bigmap* load-index))
-                      (process->handle *dproc*)
-                      0.0
-                      )
-                    (dbg-format 0 "pending2 / ")
-                    (set-pending-file (-> *bigmap* tpage) "progress-minimap" 0 (process->handle *dproc*) 0.0)
-                    (set! (-> *bigmap* loading-flag) #t)
-                    )
+          (enable-drawing *bigmap*)
+          (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
+                (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
+                )
+            (cond
+              ((and (not (-> *bigmap* loading-flag)) (= (-> *bigmap* bigmap-image status) 'active) (= (-> *bigmap* tpage status) 'active))
+                ;; loaded, draw it
+                ;; (draw *bigmap* 1792 1840 2304 2256)  ;; original "full" screen
+                ;; (draw *bigmap* 1984 1996 2112 2100) ;; middle
+                ;; (draw *bigmap* 1792 1840 1920 1944) ;; top left ish
+                ;; (draw *bigmap* 2176 1840 2304 1944) ;; top right ish
+                ;; (draw *bigmap* 1792 2152 1920 2256) ;; bottom left ish
+                ;; mini-bigmap
+                (draw *bigmap* ;; bottom right
+                  (- x1 128)
+                  2112
+                  x1  ;; + 128
+                  2216  ;; + 104
                   )
                 )
               )
-            (dbg-format 0 " ~Ds ~D ~%" (/ (- (get-current-time) *mini-bigmap-toggle-time*) TICKS_PER_SECOND) (get-current-time))
             )
           )
         )

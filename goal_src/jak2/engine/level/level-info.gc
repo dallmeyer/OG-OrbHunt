@@ -2610,7 +2610,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id bigmap-id-11) ;; (bigmap-id bigmap-id-20) ;; changed to share palroof
     :ocean-near-translucent? #t
     :ocean-far? #t
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))

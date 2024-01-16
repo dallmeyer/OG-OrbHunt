@@ -1479,6 +1479,7 @@ additionally, some texture pages have a chunk system that allows more specific c
 (defmethod login-level-textures ((pool texture-pool) (lev level) (num-tpage-ids int) (tpage-ids (pointer texture-id)))
   "After all tpages are loaded, call this function to set up level textures.
    It'll call texture-page-login on each tpage, and set up texture-page field of level."
+  (dbg-format 0 "login-level-textures ~A ~%" lev)
 
   ;; the properly set up texture pages will be stored here. for now, set to #f
   (dotimes (v1-0 18)
@@ -2373,6 +2374,7 @@ additionally, some texture pages have a chunk system that allows more specific c
 
 (defmethod unload-page ((this texture-pool) (arg0 texture-page))
   "Unload the given texture-page from the texture-page-dir."
+  (dbg-format 0 "unload page ~A ~A ~%" this arg0)
   (local-vars (a0-2 int))
   (let ((v1-0 *texture-page-dir*))
     (dotimes (a0-1 (-> v1-0 length))

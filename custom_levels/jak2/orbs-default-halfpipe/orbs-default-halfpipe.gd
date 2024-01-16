@@ -6,6 +6,5 @@
  (
   "ctywide-part.o"
   "air-train-ag.go"
-  "warp-gate-ag.go"
   "orbs-default-halfpipe.go"
   ))

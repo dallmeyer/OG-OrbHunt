@@ -303,6 +303,7 @@
   )
 
 (defmethod unlink-file ((this external-art-buffer) (arg0 art-group))
+  (dbg-format 0 "unlink-file ~A ~A~%" this arg0)
   (when arg0
     (unlink-art! arg0)
     (set! (-> this art-group) #f)
