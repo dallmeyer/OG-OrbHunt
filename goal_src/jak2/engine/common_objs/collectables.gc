@@ -54,9 +54,9 @@
                (collectables-skill-lod2-mg (meters 999999)))
                
               :bounds (static-spherem 0 0 0 0.6)
-              :shadow collectables-skill-shadow-mg
+              ;; :shadow collectables-skill-shadow-mg
               :texture-level 6
-              :shadow-joint-index 3
+              ;; :shadow-joint-index 3
               )
 
 (deftype collectable (process-drawable)
