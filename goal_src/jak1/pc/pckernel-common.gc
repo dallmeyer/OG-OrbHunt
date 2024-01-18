@@ -819,8 +819,8 @@
   "load"
 
   (format (clear *pc-temp-string-1*) "~S/orb_hunt-pc-settings.gc" *pc-settings-folder*)
-  (if (pc-filepath-exists? *pc-temp-string-1*)
-    (begin
+  (cond
+    ((pc-filepath-exists? *pc-temp-string-1*)
       (format 0 "[PC] PC Settings found at '~S'...loading!~%" *pc-temp-string-1*)
       (unless (read-from-file obj *pc-temp-string-1*)
         (format 0 "[PC] PC Settings found at '~S' but could not be loaded, using defaults!~%" *pc-temp-string-1*)
