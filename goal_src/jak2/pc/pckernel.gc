@@ -588,7 +588,9 @@
                     ctymarka  ctymarkb
                     ctyfarma  ctyfarmb
                     ctyinda   ctyindb
-                    ctypal    ctyport   stadium)))
+                    ctypal    ctyport   stadium
+                    hiphog    hideout   onintent    garage    vinroom ;; added orbhunt for minimap
+                    )))
 
 
 (defmethod update-cheats ((obj pc-settings-jak2))

@@ -57,11 +57,11 @@
       }
     },
     {
-      "trans": [ -106.1,   10.05,   1289.6  ], // mirror or
+      "trans": [ -105.96,   10.05,   1289.6  ], // mirror or
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-106.1,   10.05,   1289.6, 10], // bounding sphere
+      "bsphere": [-105.96,   10.05,   1289.6, 10], // bounding sphere
       "lump": {
         "name": "hiphog-skill-2",
         "no-bob": ["float", 1.0] // no bob
@@ -76,6 +76,16 @@
       "lump": {
         "name": "hiphog-skill-3",
         "no-bob": ["float", 1.0] // no bob
+      }
+    },
+    {
+      "trans": [ -97.20,  15.0, 1314.0], // above trash can on left side (jetboard from outside)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-97.20,  15.0, 1314.0, 10], // bounding sphere
+      "lump": {
+        "name": "hiphog-skill-4"
       }
     }
     // {

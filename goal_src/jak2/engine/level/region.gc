@@ -608,6 +608,7 @@ otherwise, add the [[drawable-region-sphere]] to `region-start-prim-list` and in
       (let* ((a2-5 (-> (scratchpad-object region-prim-area) region-enter-list gp-2))
              (s5-2 (-> a2-5 on-enter))
              )
+        ;; (format 0 "region on-enter ~A~%" a2-5)
         (when s5-2
           (countdown (v1-47 (-> (scratchpad-object region-prim-area) region-start-count))
             (if (= a2-5 (-> (scratchpad-object region-prim-area) region-start-list v1-47))
@@ -629,6 +630,7 @@ otherwise, add the [[drawable-region-sphere]] to `region-start-prim-list` and in
       (let* ((a2-6 (-> (scratchpad-object region-prim-area) region-exit-list gp-3))
              (s5-3 (-> a2-6 on-exit))
              )
+        ;; (format 0 "region on-exit ~A~%" a2-6)
         (when s5-3
           (countdown (v1-64 (-> (scratchpad-object region-prim-area) region-inside-count))
             (if (= a2-6 (-> (scratchpad-object region-prim-area) region-inside-list v1-64))
@@ -648,7 +650,8 @@ otherwise, add the [[drawable-region-sphere]] to `region-start-prim-list` and in
     (let* ((a2-7 (-> (scratchpad-object region-prim-area) region-inside-list gp-4))
            (s5-4 (-> a2-7 on-inside))
            )
-      (if s5-4
+      (when s5-4
+          ;; (format 0 "region inside ~A~%" (-> a2-7 )
           (script-eval
             s5-4
             :key a2-7

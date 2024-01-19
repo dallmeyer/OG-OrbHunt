@@ -712,6 +712,39 @@
         )
       )
     )
+
+  ;; === hiphog ===
+  (let ((r (region-lookup-by-id 624))
+        (door (entity-by-name "hip-door-b-1"))
+        )
+    (when r 
+      (set! (cdr (-> r on-inside)) '((setting-pers calm mode 'run)))  ;; don't hide minimap
+      )
+    (when door
+      (set! (cdr (res-lump-struct door 'on-deactivate pair)) '((want-display 'hiphog 'display))) ;; aka dont hide ctywide
+      )
+    )
+
+  ;; === gungame ===
+  (let ((r646 (region-lookup-by-id 646))
+        (doora9 (entity-by-name "hip-door-a-9"))
+        (door4 (process-by-ename "gungame-door-4"))
+        (door5 (process-by-ename "gungame-door-5"))
+        )
+    (when r646 
+      (set! (-> r646 on-inside) #f)  ;; don't hide minimap
+      )
+    (when doora9
+      (set! (cdr (res-lump-struct doora9 'on-deactivate pair)) '(#f))  ;; don't hide ctyport (hides minimap)
+      )
+    (when (and door4 (send-event door4 'closed?))
+      (send-event door4 'open)
+      )
+    (when (and door5 (send-event door5 'closed?))
+      (send-event door5 'open)
+      )
+    )
+
   ;; === stadiumb (class 3) ===
   (stdmb-hatch-check "stdmb-race-hatch-2")
   
@@ -806,7 +839,7 @@
       ((and *show-mini-bigmap*
             (or ;; timeout 
                 (g-time-elapsed? *mini-bigmap-toggle-time* (seconds 3.0))
-                ;; (= (-> *bigmap* bigmap-index) 20)
+                (= (-> *bigmap* bigmap-index) 20)
                 ))
         (dbg-format 0 "disabling drawing ~D~%" (get-current-time))
         (disable-drawing *bigmap*)
