@@ -378,7 +378,7 @@
       "bsphere": [-121.87,  12.05,   49.9  , 10], // bounding sphere
       "lump": {
         "name": "village1-skill-30",
-        "no-bob": ["float", 1.0] // no bob
+        "bob-scale": ["float", -1.0] // no bob
       }
     },
     {
@@ -409,7 +409,7 @@
       "bsphere": [-105.4,   13.3,    73.15 , 10], // bounding sphere
       "lump": {
         "name": "village1-skill-33",
-        "no-bob": ["float", 1.0] // no bob
+        "bob-scale": ["float", -1.0] // no bob
       }
     },
     {

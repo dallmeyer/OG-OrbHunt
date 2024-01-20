@@ -54,7 +54,7 @@
       "bsphere": [1120.5,   31.05,   1120.6, 10], // bounding sphere
       "lump": {
         "name": "vinroom-skill-1",
-        "no-bob": ["float", 1.0] // no bob
+        "bob-scale": ["float", -1.0] // no bob
       }
     }
     // {

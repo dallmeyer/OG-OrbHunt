@@ -55,6 +55,16 @@
       "lump": {
         "name": "mincan-skill-01"
       }
+    },
+    {
+      "trans": [-558.09,  13.45, -191.47], //in water between tree roots/rocks
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-558.09,  13.45, -191.47, 10], // bounding sphere
+      "lump": {
+        "name": "mincan-skill-02"
+      }
     }
     // // HOVER CELLS
     // {

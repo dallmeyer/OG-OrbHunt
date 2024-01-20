@@ -64,7 +64,7 @@
       "bsphere": [-105.96,   10.05,   1289.6, 10], // bounding sphere
       "lump": {
         "name": "hiphog-skill-2",
-        "no-bob": ["float", 1.0] // no bob
+        "bob-scale": ["float", -1.0] // no bob
       }
     },
     {
@@ -75,7 +75,7 @@
       "bsphere": [-80.4,    9.35,    1324.9, 10], // bounding sphere
       "lump": {
         "name": "hiphog-skill-3",
-        "no-bob": ["float", 1.0] // no bob
+        "bob-scale": ["float", -1.0] // no bob
       }
     },
     {

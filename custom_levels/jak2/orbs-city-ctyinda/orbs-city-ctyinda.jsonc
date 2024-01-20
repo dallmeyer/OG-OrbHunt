@@ -85,7 +85,7 @@
       "bsphere": [796.8,    35.0,    1213.5, 10], // bounding sphere
       "lump": {
         "name": "ctyinda-skill-4",
-        "no-bob": ["float", 1.0] // no bob
+        "bob-scale": ["float", -1.0] // no bob
       }
     },
     {
@@ -156,7 +156,7 @@
       "bsphere": [842.0,    37.3,    978.00, 10], // bounding sphere
       "lump": {
         "name": "ctyinda-skill-11",
-        "no-bob": ["float", 1.0] // no bob
+        "bob-scale": ["float", -1.0] // no bob
       }
     },
     {

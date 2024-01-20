@@ -94,7 +94,7 @@
       "bsphere": [441.0,    18.8,    1252.8, 10], // bounding sphere
       "lump": {
         "name": "gungame-skill-5",
-        "no-bob": ["float", 1.0] // no bob
+        "bob-scale": ["float", -1.0] // no bob
       }
     },
     {

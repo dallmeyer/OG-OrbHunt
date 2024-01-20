@@ -1569,16 +1569,19 @@ This commonly includes things such as:
 - loading the skeleton group / bones
 - sounds"
   (let ((entity-pickup-amount (res-lump-float arg0 'pickup-amount))
-        (entity-no-bob (res-lump-float arg0 'no-bob))
+        (entity-bob-scale (res-lump-float arg0 'bob-scale))
         (bob-amount 1024.0)
         )
     (when (and entity-pickup-amount (> entity-pickup-amount 0.0))
       (set! (-> this pickup-amount) entity-pickup-amount)
       )
     (initialize-allocations this)
-    (when (and entity-no-bob (> entity-no-bob 0.0))
+    (when (and entity-bob-scale (nonzero? entity-bob-scale))  ;; zero = not set (use default); anything negative = no bob
       (logior! (-> this fact options) (actor-option force-bob))
-      (set! bob-amount 0.0)
+      (if (> entity-bob-scale 0)
+        (*! bob-amount entity-bob-scale)
+        (set! bob-amount 0.0) ;; anything negative = no bob
+        )
       )
     (process-drawable-from-entity! this (-> this entity))
     (initialize-options this 0 bob-amount (the-as fact-info #f))

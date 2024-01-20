@@ -75,7 +75,7 @@
       "bsphere": [707.35,   50.6,    -454.3, 10], // bounding sphere
       "lump": {
         "name": "ctyslumc-skill-3",
-        "no-bob": ["float", 1.0] // no bob
+        "bob-scale": ["float", -1.0] // no bob
       }
     },
     {
@@ -96,7 +96,7 @@
       "bsphere": [423.8,  32.68, -276.1, 10], // bounding sphere
       "lump": {
         "name": "ctyslumc-skill-5",
-        "no-bob": ["float", 1.0]  // no bob
+        "bob-scale": ["float", -1.0]  // no bob
       }
     },
     {
@@ -297,7 +297,7 @@
       "bsphere": [716.57,  47.17, -597.0, 10], // bounding sphere
       "lump": {
         "name": "ctyslumc-skill-25",
-        "no-bob": ["float", 1.0]  // nonzero = nobob
+        "bob-scale": ["float", -1.0]  // nobob
       }
     },
     {

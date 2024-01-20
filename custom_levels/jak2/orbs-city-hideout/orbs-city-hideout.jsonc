@@ -54,7 +54,7 @@
       "bsphere": [1199.4,   4.2,    52.5  , 10], // bounding sphere
       "lump": {
         "name": "hideout-skill-1",
-        "no-bob": ["float", 1.0] // no bob
+        "bob-scale": ["float", -1.0] // no bob
       }
     },
     {
@@ -75,6 +75,17 @@
       "bsphere": [1184.95,  5.25,    65.5  , 10], // bounding sphere
       "lump": {
         "name": "hideout-skill-3"
+      }
+    },
+    {
+      "trans": [ 1205.5,   4.3,  49.31   ], // behind boxes back left
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1205.5,   4.3,  49.31  , 10], // bounding sphere
+      "lump": {
+        "name": "hideout-skill-4",
+        "bob-scale": ["float", 0.4]
       }
     }  
     // {
