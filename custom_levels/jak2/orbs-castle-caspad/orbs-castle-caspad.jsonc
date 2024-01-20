@@ -1062,6 +1062,97 @@
         "name": "caspad-skill-99"
       }
     },
+    {
+      "trans": [330.10, -49.39, -1712.47], // bottom of dig elev
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [330.10, -49.39, -1712.47, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-100",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [323.45, -26.47, -1712.11], // bottom of dig elev, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [323.45, -26.47, -1712.11, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-101"
+      }
+    },
+    {
+      "trans": [351.44, -32.57, -1693.44], // on pole at bottom of dig elev, bounce/abah off elev
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [351.44, -32.57, -1693.44, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-102"
+      }
+    },
+    {
+      "trans": [355.55, -51.31, -1677.62], // "oob" crevice bottom of dig elev - uppercut from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [355.55, -51.31, -1677.62, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-103"
+      }
+    },
+    {
+      "trans": [372.23, -32.57, -1714.33], // on pole at bottom of dig elev 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [372.23, -32.57, -1714.33, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-104"
+      }
+    },
+    {
+      "trans": [ 58.03,  68.35, -1676.25], // lamp outside castle entrance, jump from skill-93^^^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 58.03,  68.35, -1676.25, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-105"
+      }
+    },
+    {
+      "trans": [ 40.37,  65.97, -1675.58], // lamp outside castle entrance, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 40.37,  65.97, -1675.58, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-106"
+      }
+    },
+    {
+      "trans": [ 40.72,  65.97, -1687.62], // lamp outside castle entrance, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 40.72,  65.97, -1687.62, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-107"
+      }
+    },
+    {
+      "trans": [ 58.20,  68.35, -1687.54], // lamp outside castle entrance, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 58.20,  68.35, -1687.54, 10], // bounding sphere
+      "lump": {
+        "name": "caspad-skill-108"
+      }
+    },
     
     // HOVER CELLS
     {
