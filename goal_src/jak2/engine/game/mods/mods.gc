@@ -390,8 +390,8 @@
     ;; ====== ORBS / CASTLE ======
     ;; === castle ===
     (('skill-126) (set-vector-meters! (-> arg0 extra trans) -26.54  64.99 -1692.65))  ;; on pipe in lobby
-    ;; skill-127
-    ;; skill-128
+    (('skill-127) (set-vector-meters! (-> arg0 extra trans) -185.77  44.37 -1857.17)) ;; in corner behind pipe near where it normally is (first big room)
+    (('skill-128) (set-vector-meters! (-> arg0 extra trans) -210.29  41.41 -1715.80)) ;; corner of path down at slime level
     ;; skill-129
     ;; skill-130
     ;; ====== ORBS / RUINS ======
@@ -813,7 +813,7 @@
   ;; (move-actor-str-target-offset "ctyport-part-86" 0.0 1.5 0.0)  ;; jakpoop
 
   ;; dev stuff
-  (when (and *debug-segment* (cpad-pressed? 0 select) (not (paused?)))
+  (when (and *debug-segment* (cpad-pressed? 0 select) (not (cpad-hold? 0 l3)) (not (paused?)))
     (toggleCollisionRenderer)
     ;; hideskip nojak
     (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack nojak)) #t)

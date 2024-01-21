@@ -95,6 +95,611 @@
       "lump": {
         "name":"castle-skill-05"
       }
+    },
+    {
+      "trans": [ -43.44,  37.63, -1675.24], // behind pipes elev bottom room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -43.44,  37.63, -1675.24, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-06"
+      }
+    },
+    {
+      "trans": [ -39.82,  48.98, -1671.05], // bottom elev room, on wooden structure in corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -39.82,  48.98, -1671.05, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-07"
+      }
+    },
+    {
+      "trans": [ -38.50,  33.5, -1681.81], // under elev :)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-38.50,  33.5, -1681.81, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-08"
+      }
+    },
+    {
+      "trans": [ -22.90,  42.4, -1707.2], // behind pipes on wall of bottom elev room (semi hint for below)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -22.90,  42.4, -1707.2, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-09"
+      }
+    },
+    {
+      "trans": [-42.16,  51.84, -1706.52], // up/left in corner of bottom elev room to actual castle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-42.16,  51.84, -1706.52, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-10"
+      }
+    },
+    {
+      "trans": [-28.12,  45.97, -1714.71], // on right pipes immediately in first guard room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-28.12,  45.97, -1714.71, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-11"
+      }
+    },
+    {
+      "trans": [-12.00,  55.69, -1727.56], // up higher on right pipes immediately in first guard room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-12.00,  55.69, -1727.56, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-12"
+      }
+    },
+    {
+      "trans": [-64.19,  59.62, -1750.92], // up high in ceiling moulding in first guard room (abah from below)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-64.19,  59.62, -1750.92, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-13"
+      }
+    },
+    {
+      "trans": [-59.7,  44.09, -1759.5], // nestled in coils on left in first guard room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-59.7,  44.09, -1759.5, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-14"
+      }
+    },
+    {
+      "trans": [-64.3,  29.51, -1770.20], // on drain near slime on left in first guard room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-64.3,  29.51, -1770.20, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-15"
+      }
+    },
+    {
+      "trans": [-9.5, 29.7, -1782.1], // behind some barrels in first guard room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-9.5, 29.7, -1782.1, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-16"
+      }
+    },
+    {
+      "trans": [-52.89,  34.9, -1799.5], // corner above barrels near button in first guard room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-52.89,  34.9, -1799.5, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-17",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [-48.17,  43.91, -1807.68], // up between electrical stuff, abah up and over from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-48.17,  43.91, -1807.68, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-18"
+      }
+    },
+    {
+      "trans": [-48.17,  43.91, -1807.68], // up on pipe in back, abah from lip
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-48.17,  43.91, -1807.68, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-18"
+      }
+    },
+    {
+      "trans": [ -6.54,  38.74, -1803.74], // on power box before elec gate
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -6.54,  38.74, -1803.74, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-19",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [-12.00,  55.69, -1792.40], // up higher on right pipes in first guard room, abah from^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-12.00,  55.69, -1792.40, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-20"
+      }
+    },
+    {
+      "trans": [-12.5,  30.17, -1826.37], // left side of elec gate
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-12.5,  30.17, -1826.37, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-21"
+      }
+    },
+    {
+      "trans": [-1.99,  32.91, -1815.80], // right side of elec gate
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-1.99,  32.91, -1815.80, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-22"
+      }
+    },
+    {
+      "trans": [ 11.37,  37.53, -1846.60], // on ledge on wall after elec gate
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  11.37,  37.53, -1846.60, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-23",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 11.43,  30.32, -1859.29], // back behind pipes in hallway after elec gate (abah up and over from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 11.43,  30.32, -1859.29, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-24"
+      }
+    },
+    {
+      "trans": [  4.04,  30.00, -1816.68], // corner right after elec gate
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   4.04,  30.00, -1816.68, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-25"
+      }
+    },
+    {
+      "trans": [  -55.60,  36.15, -1861.94], // corner behind first conveyor switch
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -55.60,  36.15, -1861.94, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-26"
+      }
+    },
+    {
+      "trans": [ -108.52,  50.63, -1842.53], // atop pipe early in first big room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -108.52,  50.63, -1842.53, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-27"
+      }
+    },
+    {
+      "trans": [-103.76,  54.15, -1853.44], // atop pipe early in first big room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-103.76,  54.15, -1853.44, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-28"
+      }
+    },
+    {
+      "trans": [ -60.2,  76.59, -1818.55], // up high in corner above crates early in first big room (abah from ledge)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -60.2,  76.59, -1818.55, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-29"
+      }
+    },
+    {
+      "trans": [-55.05,  62.13, -1847.63], // follow ledges from ^ around and uppercut back towards entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-55.05,  62.13, -1847.63, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-30"
+      }
+    },
+    {
+      "trans": [-75.68,  57.29, -1767.16], // ledges in other direction ^^, abah off random thing on floor
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-75.68,  57.29, -1767.16, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-31"
+      }
+    },
+    {
+      "trans": [-104.76,  58.81, -1770.19], // in cables above first robot dropper, uppercut from ledges^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-104.76,  58.81, -1770.19, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-32"
+      }
+    },
+    {
+      "trans": [-134.21,  53.15, -1784.61], // on skinny pipe just past first robot dropper
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-134.21,  53.15, -1784.61, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-33"
+      }
+    },
+    {
+      "trans": [-125.30,  57.28, -1784.81], // ledge right of first robot dropper, jump around from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-125.30,  57.28, -1784.81, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-34",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [-122.05,  71.87, -1782.28], // way up on top of tube, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-122.05,  71.87, -1782.28, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-35"
+      }
+    },
+    {
+      "trans": [-143.14,  44.6, -1857.02], // behind pipe, hint to crawl for (vanilla) skill-127
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-143.14,  44.6, -1857.02, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-36"
+      }
+    },
+    {
+      "trans": [ -178.1,  59.65, -1764.8], // support under converyor with saws (infin jump ceiling)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -178.1,  59.65, -1764.8, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-37"
+      }
+    },
+    {
+      "trans": [ -135.11,  48.23, -1761.79], // pipe on wall with no path
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-135.11,  48.23, -1761.79, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-38"
+      }
+    },
+    {
+      "trans": [-186.63,  41.48, -1776.51], // tricky drop down to low path near slime, conveyor w saws
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-186.63,  41.48, -1776.51, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-39"
+      }
+    },
+    {
+      "trans": [-148.58,  41.51, -1809.29], // on rotating platform tracks first big room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-148.58,  41.51, -1809.29, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-40"
+      }
+    },
+    {
+      "trans": [-180.01,  48.22, -1797.38], // behind barrels on mid platform in first big room 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-180.01,  48.22, -1797.38, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-41"
+      }
+    },
+    {
+      "trans": [-135.53,  40.55, -1831.49], // ledge grab over slime next to 2nd elev
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-135.53,  40.55, -1831.49, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-42"
+      }
+    },
+    {
+      "trans": [ -120.26,  46.81, -1838.85], // between pipes next to 2nd elev 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -120.26,  46.81, -1838.85, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-43"
+      }
+    },
+    {
+      "trans": [-129.43,  73.30, -1839.15], // in ceiling thing above 2nd elev
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-129.43,  73.30, -1839.15, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-44"
+      }
+    },
+    {
+      "trans": [-126.62,  66.24, -1860.90], // back in corner near top of 2nd elev
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-126.62,  66.24, -1860.90, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-45"
+      }
+    },
+    {
+      "trans": [-126.62,  80.58, -1846.67], // on overhang, jump/gp/slide from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-126.62,  80.58, -1846.67, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-46"
+      }
+    },
+    {
+      "trans": [-153.59,  63.38, -1812.55], // atop big tube with coils coming into it, jump from conveyor w saws
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-153.59,  63.38, -1812.55, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-47"
+      }
+    },    {
+      "trans": [-156.71,  77.20, -1787.51], // further up big tube from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-156.71,  77.20, -1787.51, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-48"
+      }
+    },
+    {
+      "trans": [-156.10,  88.37, -1773.11], // further up big tube from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-156.10,  88.37, -1773.11, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-49",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [-159.14,  98.25, -1765.95], // on mid big blue ball, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-159.14,  98.25, -1765.95, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-50"
+      }
+    },
+    {
+      "trans": [-153.02,  98.29, -1751.25], // other side of mid big blue ball from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-153.02,  98.29, -1751.25, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-51"
+      }
+    },
+    {
+      "trans": [-162.86,  61.33, -1758.44], // below mid big blue ball on tubing (side of saw conveyors)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-162.86,  61.33, -1758.44, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-52"
+      }
+    },
+    {
+      "trans": [-149.17,  61.33, -1758.82], // below mid big blue ball on tubing (opposite side)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-149.17,  61.33, -1758.82, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-53"
+      }
+    },
+    {
+      "trans": [-201.63,  56.98, -1775.16], // behind pipe in corner at end of saw conveyor
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-201.63,  56.98, -1775.16, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-54"
+      }
+    },
+    {
+      "trans": [-124.77,  40.74, -1749.59], // corner of path at slime level, near mid checkpoint
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-124.77,  40.74, -1749.59, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-55"
+      }
+    },
+    {
+      "trans": [-132.23,  41.32, -1780.33], // under pipe on path at slime level, back from ^ towards start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-132.23,  41.32, -1780.33, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-56"
+      }
+    },
+    {
+      "trans": [-131.75,  57.26, -1754.71], // on ledge near mid checkpoint
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-131.75,  57.26, -1754.71, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-57",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [-134.94,  72.85, -1751.30], // end of pipe up high near mid checkpoint`1, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-134.94,  72.85, -1751.30, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-58"
+      }
+    },
+    {
+      "trans": [-185.00,  72.96, -1857.54], // behind some pipes/meters before saw conveyor
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-185.00,  72.96, -1857.54, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-59"
+      }
+    },
+    {
+      "trans": [-178.49,  78.99, -1858.53], // up atop pipes above ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-178.49,  78.99, -1858.53, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-60"
+      }
+    },
+    {
+      "trans": [-210.15,  59.51, -1737.42], // below random platform where orb normally is
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-210.15,  59.51, -1737.42, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-61"
+      }
+    },
+    {
+      "trans": [-151.77,  61.33, -1713.29], // on tubing below 3rd big blue ball
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-151.77,  61.33, -1713.29, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-62"
+      }
+    },
+    {
+      "trans": [-160.15,  61.33, -1724.10], // on tubing below 3rd big blue ball (opposite side)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-160.15,  61.33, -1724.10, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-63"
+      }
+    },
+    {
+      "trans": [-193.53,  57.32, -1690.04], // corner ledge before exiting first big room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-193.53,  57.32, -1690.04, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-64"
+      }
     }
     // HOVER CELLS
     // {
