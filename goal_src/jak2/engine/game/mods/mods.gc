@@ -392,8 +392,8 @@
     (('skill-126) (set-vector-meters! (-> arg0 extra trans) -26.54  64.99 -1692.65))  ;; on pipe in lobby
     (('skill-127) (set-vector-meters! (-> arg0 extra trans) -185.77  44.37 -1857.17)) ;; in corner behind pipe near where it normally is (first big room)
     (('skill-128) (set-vector-meters! (-> arg0 extra trans) -210.29  41.41 -1715.80)) ;; corner of path down at slime level
-    ;; skill-129
-    ;; skill-130
+    (('skill-129) (set-vector-meters! (-> arg0 extra trans) -258.18  67.69 -1736.66)) ;; flat top of machine in early part of second big room
+    (('skill-130) (set-vector-meters! (-> arg0 extra trans) -227.53  80.59 -1802.55)) ;; under conveyor from 2nd robot dropper (up to where this last orb normally is)
     ;; ====== ORBS / RUINS ======
     ;; === ruins === 
     ;; (('skill-1) (set-vector-meters! (-> arg0 extra trans)  )) ;; this weird one doesn't actually spawn? but move it for the lulz - 

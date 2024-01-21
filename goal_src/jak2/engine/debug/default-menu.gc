@@ -5957,7 +5957,7 @@
   )
 
 (define *popup-menu-context* (new 'debug 'debug-menu-context))
-
+(define-extern startingDebugContinuePoint string)
 (defun popup-menu-context-make-default-menus ((arg0 debug-menu-context))
   (debug-menu-make-from-template
     arg0
