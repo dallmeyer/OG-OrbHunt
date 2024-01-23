@@ -360,6 +360,21 @@
                  (sound-play "timer-warn")))))))))
   (none))
   
+(defun skill-float-up ((orb skill) (rate meters) (min meters) (max meters))
+  (when (and (not (logtest? (-> *kernel-context* prevent-from-run) (-> orb mask)))
+             (logtest? (-> orb draw status) (draw-control-status on-screen))
+             )
+    (+! (-> orb root trans y) rate)
+    (when (> (-> orb root trans y) max)
+      (set! (-> orb root trans y) min)
+      )
+    ;; update base too
+    (set! (-> orb base y) (-> orb root trans y))
+    ;; count it as on screen
+    )
+  (none)
+  )
+
 
 (defun mod-override-init-position ((obj process-drawable) (arg0 entity-actor))
   (case (-> obj name) :comp name=
@@ -713,6 +728,14 @@
       )
     )
 
+  ;; === mountain/mincan ===
+  (let ((r (region-lookup-by-id 610))
+        )
+    (when r 
+      (set! (-> r on-exit) '(want-load 'mountain 'mincan))  ;; load mincan if you take shortcut
+      )
+    )
+
   ;; === hiphog ===
   (let ((r (region-lookup-by-id 624))
         (door (entity-by-name "hip-door-b-1"))
@@ -753,9 +776,11 @@
   (let (;; (trapdoor (entity-by-name "cas-trapdoor-1")) ;; comment out castle-boss-resolution checks in castle-obs
         (door (entity-by-name "cas-front-door-4"))
         (elev (entity-by-name "cboss-elevator-1"))
+        (orb84 (process-by-ename "castle-skill-84"))
         )
     (when door (set! (cdr (res-lump-struct door 'on-notice pair)) '((task-closed? "castle-break-in-resolution") '(casboss))))
     (when elev (logclear! (-> elev extra kill-mask) (task-mask task1)))
+    (when orb84 (skill-float-up (the skill orb84) (meters 0.0225) (meters 51.3) (meters 62.07)))  ;; float orb up tube
     )
 
   ;; === drill/drillb ===
