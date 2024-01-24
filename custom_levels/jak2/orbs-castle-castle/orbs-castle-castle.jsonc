@@ -1350,27 +1350,96 @@
         "name":"castle-skill-129"
       }
     },
-    // HOVER orbs
     {
-      "trans": [ -314.81,  85.37, -1752.08  ], // atop pipe on east wall of final room
+      "trans": [ -272.59,  80.94, -1707.16], // 2nd big room, on tube in early part - uppercut from dropdown platform over conveyor or smth
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-314.81,  85.37, -1752.08, 10], // bounding sphere
+      "bsphere": [ -272.59,  80.94, -1707.16, 10], // bounding sphere
       "lump": {
-        "name":"castle-skill-hover-01",
-        "pickup-amount": ["float", 3.0]  // goldge
+        "name":"castle-skill-130"
       }
     },
     {
-      "trans": [-320.16,  92.47, -1771.58 ], // up on lip of pipe in north east wall of final room
+      "trans": [-297.06, 108.29, -1790.49], // 2nd big room, on pipe - extended from 4th spinny valve for rail track
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -297.06, 108.29, -1790.49, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-131"
+      }
+    },
+    {
+      "trans": [-308.57,  62.21, -1745.92], // behind pipes and meters near east robot dropper, final room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -308.57,  62.21, -1745.92, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-132"
+      }
+    },
+    {
+      "trans": [-310.49,  62.38, -1761.98], // on pipes on east wall of final room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-310.49,  62.38, -1761.98, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-133",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [-309.09,  72.85, -1764.56], // on powerbox east wall final room, abah from^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-309.09,  72.85, -1764.56, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-134"
+      }
+    },
+    {
+      "trans": [-309.09,  72.85, -1764.56], // on pipe just up from^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-309.09,  72.85, -1764.56, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-135",
+        "pickup-amount": ["float", 2.0]  // abah hint
+      }
+    },
+    {
+      "trans": [ -320.11,  92.47, -1766.65 ], // up on lip of pipe in north east wall of final room, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-320.11,  92.47, -1766.65, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-136"
+      }
+    },
+    {
+      "trans": [-320.16,  92.47, -1771.58 ], // atop pipe on east wall of final room, uppercut from ^
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-320.16,  92.47, -1771.58, 10], // bounding sphere
       "lump": {
-        "name":"castle-skill-hover-02",
-        "pickup-amount": ["float", 3.0]  // goldge
+        "name":"castle-skill-137"
+      }
+    },
+    {
+      "trans": [-332.51,  82.02, -1762.52 ], // atop tube in middle of final room, uppercut from ^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-332.51,  82.02, -1762.52, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-138"
       }
     }
   ]
