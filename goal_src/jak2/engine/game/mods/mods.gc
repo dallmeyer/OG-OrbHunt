@@ -359,18 +359,38 @@
                  ;; ... if successful we play sound
                  (sound-play "timer-warn")))))))))
   (none))
+
+(defun random-orb-pos ((orb skill))
+  (case (-> orb name) :comp name= 
+    (('castle-skill-84)
+      (case (rand-vu-int-count 4)
+        ;; west (original)
+        ((0) (set-vector-meters! (-> orb root trans) -266.45  53.37 -1720.35))
+        ;; south
+        ((1) (set-vector-meters! (-> orb root trans) -257.70  53.37 -1711.35))
+        ;; east
+        ((2) (set-vector-meters! (-> orb root trans) -243.28  53.37 -1724.83))
+        ;; north
+        ((3) (set-vector-meters! (-> orb root trans) -258.47  53.37 -1734.51))
+        )
+      )
+    )
+  (none)
+  )
   
 (defun skill-float-up ((orb skill) (rate meters) (min meters) (max meters))
   (when (and (not (logtest? (-> *kernel-context* prevent-from-run) (-> orb mask)))
              (logtest? (-> orb draw status) (draw-control-status on-screen))
              )
     (+! (-> orb root trans y) rate)
-    (when (> (-> orb root trans y) max)
+    (when (> (-> orb root trans y) max) 
+      ;; possibly warp orb to different point
+      (random-orb-pos orb)
+      ;; reset height
       (set! (-> orb root trans y) min)
       )
-    ;; update base too
-    (set! (-> orb base y) (-> orb root trans y))
-    ;; count it as on screen
+    ;; sync base
+    (vector-copy! (-> orb base) (-> orb root trans))
     )
   (none)
   )

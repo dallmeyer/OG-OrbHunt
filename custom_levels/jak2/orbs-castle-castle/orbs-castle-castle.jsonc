@@ -1229,11 +1229,11 @@
       }
     },
     {
-      "trans": [-367.98,  76.59, -1815.84], // behind machines on immediate right, final room (get on top of machines high jump thru weird invis collision)
+      "trans": [-369.87,  76.59, -1822.97 ], // behind machines on immediate right, final room (get on top of machines high jump thru weird invis collision)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-367.98,  76.59, -1815.84, 10], // bounding sphere
+      "bsphere": [-369.87,  76.59, -1822.97 , 10], // bounding sphere
       "lump": {
         "name":"castle-skill-118"
       }
@@ -1288,8 +1288,9 @@
         "name":"castle-skill-123"
       }
     },
+    // below here is out of order from 2nd pass
     {
-      "trans": [ -191.59,  54.29, -1737.72], // under conveyor in 2nd big room, extended from slippery ledge on wall
+      "trans": [ -191.59,  54.29, -1737.72], // under conveyor in 1st big room, extended from slippery ledge on wall
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -1299,18 +1300,18 @@
       }
     },
     {
-      "trans": [ -123.81,  52.92, -1700.13], // barrels near mid checkpoint
+      "trans": [ -123.81,  52.7, -1700.13], // barrels near mid checkpoint
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-123.81,  52.92, -1700.13, 10], // bounding sphere
+      "bsphere": [-123.81,  52.7, -1700.13, 10], // bounding sphere
       "lump": {
         "name":"castle-skill-125",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [ -121.3,  57.5, -1695.36], // in corner behind powerbox/barrels, 2nd big room checkpoint, abah from ^ over invis wall
+      "trans": [ -121.3,  57.5, -1695.36], // in corner behind powerbox/barrels, 1st big room checkpoint, abah from ^ over invis wall
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -1318,18 +1319,59 @@
       "lump": {
         "name":"castle-skill-126"
       }
+    },
+    {
+      "trans": [ -336.88,  79.70, -1788.94], // final room, behind transistor(?) on left wall, boosted from entrance area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-336.88,  79.70, -1788.94, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-127"
+      }
+    },
+    {
+      "trans": [ -309.49,  66.5, -1727.76], // final room, behind pipes on east robot dropper
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-309.49,  66.5, -1727.76, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-128"
+      }
+    },
+    {
+      "trans": [  -334.7,  61.34, -1696.6], // final room, in between doors leading to elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -334.7,  61.34, -1696.6, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-129"
+      }
+    },
+    // HOVER orbs
+    {
+      "trans": [ -314.81,  85.37, -1752.08  ], // atop pipe on east wall of final room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-314.81,  85.37, -1752.08, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [-320.16,  92.47, -1771.58 ], // up on lip of pipe in north east wall of final room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-320.16,  92.47, -1771.58, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
-    // HOVER CELLS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-hover-01",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
   ]
 }
