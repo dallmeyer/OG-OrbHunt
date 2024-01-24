@@ -269,7 +269,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   58 ;; orbs-dig-dig3a
   59 ;; orbs-dig-dig3b
   42 ;; orbs-consite-consite
-  42 ;; orbs-consite-consiteb
+  71 ;; orbs-consite-consiteb
   10 ;; orbs-under-under
   70 ;; orbs-under-underb
   64 ;; orbs-nest-nest
@@ -295,7 +295,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   ;; 0 ;; test-zone ;; out of place
   ))
 
-(defconstant LEVEL_ID_LEN 71)
+(defconstant LEVEL_ID_LEN 72)
 
 (define *level-id-names* (new 'static 'boxed-array :type string :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   "" ;; 0 (none)
@@ -369,6 +369,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Mars Tomb (Entrance)" ;; 68
   "Sewers" ;; 69
   "Underport (Chamber)" ;; 70
+  "Construction Site (Entrance)" ;; 71
   ))
 
 (define *level-orb-collected-counts* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))

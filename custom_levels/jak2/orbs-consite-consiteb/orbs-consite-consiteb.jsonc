@@ -46,16 +46,26 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-01"
-    //   }
-    // },
+    {
+      "trans": [751.72,  16.96, 862.3  ], // up on barrels at entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [751.72,  16.96, 862.3, 10], // bounding sphere
+      "lump": {
+        "name":"consiteb-skill-01"
+      }
+    },
+    {
+      "trans": [757.35,  21.98, 913.0  ], // behind some wood in later section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [757.35,  21.98, 913.0, 10], // bounding sphere
+      "lump": {
+        "name":"consiteb-skill-02"
+      }
+    }
     // // HOVER CELLS
     // {
     //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
