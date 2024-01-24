@@ -652,11 +652,11 @@
       }
     },
     {
-      "trans": [-210.15,  59.51, -1737.42], // below random platform where orb normally is
+      "trans": [-210.15,  59.51, -1737.7], // below random platform where orb normally is
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-210.15,  59.51, -1737.42, 10], // bounding sphere
+      "bsphere": [-210.15,  59.51, -1737.7, 10], // bounding sphere
       "lump": {
         "name":"castle-skill-61"
       }
@@ -1286,6 +1286,37 @@
       "bsphere": [ -325.4,  62.0, -1777.7, 10], // bounding sphere
       "lump": {
         "name":"castle-skill-123"
+      }
+    },
+    {
+      "trans": [ -191.59,  54.29, -1737.72], // under conveyor in 2nd big room, extended from slippery ledge on wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -191.59,  54.29, -1737.72, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-124"
+      }
+    },
+    {
+      "trans": [ -123.81,  52.92, -1700.13], // barrels near mid checkpoint
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-123.81,  52.92, -1700.13, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-125",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -121.3,  57.5, -1695.36], // in corner behind powerbox/barrels, 2nd big room checkpoint, abah from ^ over invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -121.3,  57.5, -1695.36, 10], // bounding sphere
+      "lump": {
+        "name":"castle-skill-126"
       }
     }
     // HOVER CELLS
