@@ -106,6 +106,36 @@
       "lump": {
         "name": "ctyfarmb-skill-6"
       }
+    },
+    {
+      "trans": [ -418.72 , 12.9, 978.06  ], // in crevice of rocks, west yakows
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-418.72 , 12.9, 978.06, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-7"
+      }
+    },
+    {
+      "trans": [-444.99,  21.12, 907.73], // between wall and pipes in corner, west yakows
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-444.99,  21.12, 907.73, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-8"
+      }
+    },
+    {
+      "trans": [-296.6,  19.28, 1198.0], // between wall and pipes in corner south middle (above real fake wall)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-296.6,  19.28, 1198.0, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-9"
+      }
     }
     // {
     //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
