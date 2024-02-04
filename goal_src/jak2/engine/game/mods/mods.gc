@@ -50,6 +50,7 @@
     (when obj
       (let ((vec (-> obj root trans)))
         (format 0 "~m ~m ~m~%" (-> vec x) (-> vec y) (-> vec z) 4096.0)
+        (format 0 "~m, ~m, ~m~%" (-> vec x) (-> vec y) (-> vec z) 4096.0)
         )
       )
     (none)))
@@ -681,6 +682,18 @@
     #t
     #f
     )
+  )
+
+(defun skill-alt-actor-allow-pickup? ((skill collectable))
+  (let ((alt-actor (entity-actor-lookup (-> skill entity) 'alt-actor 0)))
+    (when (and alt-actor (-> alt-actor extra process) 
+               (not (name= (-> alt-actor extra process state name) 'die)))
+      ;; alt-actor is not dead, prevent pickup
+      (return #f)
+      )
+    )
+  ;; allow pickup
+  #t
   )
 
 (define *show-mini-bigmap* #f)
