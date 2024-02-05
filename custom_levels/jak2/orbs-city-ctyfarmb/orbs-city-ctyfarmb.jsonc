@@ -48,7 +48,7 @@
   "actors" : [
     // 'ctyfarmb (b/t bazaar and port)
     {
-      "trans": [ -167.32,  30.5,    935.36  ], // #t  atop pipes near sprinkler (jump from hose into abbah bounce against wall, then up and over)
+      "trans": [ -167.32,  30.5,    935.36  ], // #t  atop pipes near north sprinkler, abah from skill-3
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -64,17 +64,19 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-404.64,  9.2,     1155.7, 10], // bounding sphere
       "lump": {
-        "name": "ctyfarmb-skill-2"
+        "name": "ctyfarmb-skill-2",
+        "alt-actor": "farm-cabbage-42"
       }
     },
     {
-      "trans": [ -444.33,  12.3,    1195.2  ], // #t  in corner crack near port
+      "trans": [  -160.84,  20.16, 942.9], // on pipe where north sprinkler connects
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-444.33,  12.3,    1195.2, 10], // bounding sphere
+      "bsphere": [ -160.84,  20.16, 942.9, 10], // bounding sphere
       "lump": {
-        "name": "ctyfarmb-skill-3"
+        "name": "ctyfarmb-skill-3",
+        "pickup-amount": ["float", 2.0] // abah hint for skill-1
       }
     },
     {
@@ -135,6 +137,167 @@
       "bsphere": [-296.6,  19.28, 1198.0, 10], // bounding sphere
       "lump": {
         "name": "ctyfarmb-skill-9"
+      }
+    },
+    {
+      "trans": [-444.32,  12.03, 1195.09], // crevice in outer wall as it connects to ctyport
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-444.32,  12.03, 1195.09, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-10",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [-444.33,  31.63, 1194.63], // up towards top of wall in corner, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-444.33,  31.63, 1194.63, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-11"
+      }
+    },
+    {
+      "trans": [-424.0513, 10.62, 1098.8139], // "inside" chilirots near ctyport
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-424.0513, 10.62, 1098.8139, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-12",
+        "alt-actor": "farm-chilirots-59"
+      }
+    },
+    {
+      "trans": [-401.8748, 10.85, 1061.4674], // "inside" marrow near ctyport
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-401.8748, 10.85, 1061.4674, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-13",
+        "alt-actor": "farm-marrow-122"
+      }
+    },
+    {
+      "trans": [-447.9,  12.15, 1006.8], // between wall and end of yakow fence
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-447.9,  12.15, 1006.8, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-14"
+      }
+    },
+    {
+      "trans": [-333.1745, 10.51, 954.2900], // "inside" marrow near yakows
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-333.1745, 10.51, 954.2900, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-15",
+        "alt-actor": "farm-marrow-37"
+      }
+    },
+    {
+      "trans": [-257.06,  11.50, 919.11], // "inside" chilirots past yakows
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-257.06,  11.50, 919.11, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-16",
+        "alt-actor": "farm-chilirots-24"
+      }
+    },
+    {
+      "trans": [-166.42,  20.55, 906.12], // up/behind pipes on wall in corner near north sprinkler
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-166.42,  20.55, 906.12, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-17"
+      }
+    },
+    {
+      "trans": [-176.67,  21.81, 985.22], // up in tree in middle part
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-176.67,  21.81, 985.22, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-18"
+      }
+    },
+    {
+      "trans": [-286.8292, 8.91, 1065.4185], // "inside" beetree in middle part
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-286.8292, 8.91, 1065.4185, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-19",
+        "alt-actor": "farm-beetree-46"
+      }
+    },
+    {
+      "trans": [-303.5798, 8.83, 1091.4031], // "inside" small cabbage in middle part
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-303.5798, 8.83, 1091.4031, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-20",
+        "alt-actor": "farm-small-cabbage-29"
+      }
+    },
+    {
+      "trans": [-248.5606, 9.15, 1169.2907], // "inside" small cabbage in middle part
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-248.5606, 9.15, 1169.2907, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-21",
+        "alt-actor": "farm-cabbage-19"
+      }
+    },
+    {
+      "trans": [-81.2968, 10.76, 1151.7114], // "inside" chilirots in middle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-81.2968, 10.76, 1151.7114, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-22",
+        "alt-actor": "farm-chilirots-39"
+      }
+    },
+    {
+      "trans": [-115.0306, 11.4, 1035.8944], // special code to follow yakow-8 (hidden) until its attacked
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-115.0306, 11.4, 1035.8944, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-23",
+        "alt-actor": "yakow-8"
+      }
+    },
+    {
+      "trans": [-137.5865, 12.1, 1175.6287], // "inside" marrow in middle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-137.5865, 12.1, 1175.6287, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-24",
+        "alt-actor": "farm-marrow-90"
       }
     }
     // {

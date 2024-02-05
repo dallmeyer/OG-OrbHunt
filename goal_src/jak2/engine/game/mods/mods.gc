@@ -686,10 +686,21 @@
 
 (defun skill-alt-actor-check? ((skill collectable))
   (let ((alt-actor (entity-actor-lookup (-> skill entity) 'alt-actor 0)))
-    (when (and alt-actor (-> alt-actor extra process) 
-               (not (name= (-> alt-actor extra process state name) 'die)))
-      ;; alt-actor is not dead, prevent pickup
-      (return #f)
+    (when (and alt-actor (-> alt-actor extra process))
+      (case (-> alt-actor etype symbol)
+        (('yakow)
+          (when (zero? (-> (the yakow (-> alt-actor extra process)) incoming-attack-id))
+            ;; yakow hasnt been attacked yet, prevent pickup/hide
+            (return #f)
+            )          
+          )
+        (else
+          (when (not (name= (-> alt-actor extra process state name) 'die))
+            ;; alt-actor is not dead, prevent pickup/hide
+            (return #f)
+            )
+          )
+        )
       )
     )
   ;; allow pickup
@@ -766,6 +777,15 @@
         )
     (when r 
       (set! (-> r on-exit) '(want-load 'mountain 'mincan))  ;; load mincan if you take shortcut
+      )
+    )
+
+  ;; === ctyfarmb === 
+  ;; move orb to follow yakow if its not visible yet
+  (let ((orb (the skill (process-by-ename "ctyfarmb-skill-23")))
+        (yak (the yakow (process-by-ename "yakow-8"))))
+    (when (and orb yak (logtest? (-> orb draw status) (draw-control-status no-draw-bounds)))
+      (vector-copy! (-> orb root trans) (vector<-cspace! (new-stack-vector0) (-> yak node-list data 21)))
       )
     )
 

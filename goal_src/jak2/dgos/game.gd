@@ -464,6 +464,7 @@
   "elec-gate.o"
   "cty-guard-turret-button.o"
   "entity-debug.o" ;; added
+  "yakow.o" ;; added
   "mod-settings.o" ;; added
   "mod-common-functions.o" ;; added
   "mods.o"
