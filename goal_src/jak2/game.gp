@@ -462,9 +462,6 @@
 (build-custom-level "orbs-forest-forest")
 (custom-level-cgo "O0X.DGO" "orbs-forest-forest/orbs-forest-forest.gd")
 
-(build-custom-level "orbs-forest-forestb")
-(custom-level-cgo "O0Y.DGO" "orbs-forest-forestb/orbs-forest-forestb.gd")
-
 
 (build-custom-level "orbs-drill-drill")
 (custom-level-cgo "O0Z.DGO" "orbs-drill-drill/orbs-drill-drill.gd")

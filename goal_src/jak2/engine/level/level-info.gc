@@ -5574,8 +5574,8 @@
                   :deactivate-func #f
                   :kill-func #f
                   :borrow-size (new 'static 'array uint16 2 160 160)
-                  :borrow-level (new 'static 'array symbol 2 #f 'orbs-forest-forestb)
-                  :borrow-display? (new 'static 'array symbol 2 #f 'display)
+                  :borrow-level (new 'static 'array symbol 2 #f #f)
+                  :borrow-display? (new 'static 'array symbol 2 #f #f)
                   :base-task-mask (task-mask task0)
                   :texture-anim-tfrag #f
                   :texture-anim-pris #f
@@ -16334,7 +16334,6 @@
 (define orbs-mountain-mincan   (orbs-borrow-level #xcf 'orbs-mountain-mincan   'orbs-mountain-mincan-vis   'o0w 'update-mood-mincan))
 
 (define orbs-forest-forest     (orbs-borrow-level #xd0 'orbs-forest-forest     'orbs-forest-forest-vis     'o0x 'update-mood-forest))
-(define orbs-forest-forestb    (orbs-borrow-level #xd1 'orbs-forest-forestb    'orbs-forest-forestb-vis    'o0y 'update-mood-default))
 
 (define orbs-drill-drill       (orbs-borrow-level #xd2 'orbs-drill-drill       'orbs-drill-drill-vis       'o0z 'update-mood-drill))
 (define orbs-drill-drillmid    (orbs-borrow-level #xd3 'orbs-drill-drillmid    'orbs-drill-drillmid-vis    'o10 'update-mood-drill))
@@ -16384,7 +16383,6 @@
   (cons! *level-load-list* 'orbs-drill-drillb)
   (cons! *level-load-list* 'orbs-drill-drillmid)
   (cons! *level-load-list* 'orbs-drill-drill)
-  (cons! *level-load-list* 'orbs-forest-forestb)
   (cons! *level-load-list* 'orbs-forest-forest)
   (cons! *level-load-list* 'orbs-mountain-mincan)
   (cons! *level-load-list* 'orbs-mountain-mountain)
