@@ -139,14 +139,150 @@
       }
     },
     {
-      "trans": [-326.1365, 9.2, 195.1497], // "inside" beetree near mountain entrance
+      "trans": [-226.7594, 12.09, 173.0526], // "inside" marrow near mountain entrance
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-326.1365, 9.2, 195.1497, 10], // bounding sphere
+      "bsphere": [-226.7594, 12.09, 173.0526, 10], // bounding sphere
       "lump": {
         "name": "ctyfarma-skill-10",
-        "alt-actor": "farm-beetree-11"
+        "alt-actor": "farm-marrow-30"
+      }
+    },
+    {
+      "trans": [-170.5243, 8.9539, 198.3310], // "inside" chilirots near mountain entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-170.5243, 8.9539, 198.3310, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-11",
+        "alt-actor": "farm-beetree-21"
+      }
+    },
+    {
+      "trans": [-107.79,  22.39, 196.96], // between wall/pipe near sprinkler by mountain entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-107.79,  22.39, 196.96, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-12",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [-105.72,  35.88, 196.62], // atop tree on wall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-105.72,  35.88, 196.62, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-13"
+      }
+    },
+    {
+      "trans": [-143.9,  11.8, 196.0 ], // behind sprinkler near mountain entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-143.9,  11.8, 196.0 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-14"
+      }
+    },
+    {
+      "trans": [-340.0407, 9.09, 334.2722], // "inside" cabbage near ctymarka
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-340.0407, 9.09, 334.2722, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-15",
+        "alt-actor": "farm-cabbage-14"
+      }
+    },
+    {
+      "trans": [-216.21,  31.5, 329.39], // atop pipe/well on wall at 3 way intersction
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-216.21,  31.5, 329.39, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-16"
+      }
+    },
+    {
+      "trans": [-130.91,  22.14, 312.54], // inside tree at 3 way intersection
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-130.91,  22.14, 312.54, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-17"
+      }
+    },
+    {
+      "trans": [-94.41,  21.68, 254.8], // on pipes/behind well on wall near trailer w/ veggies
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-94.41,  21.68, 254.8, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-18"
+      }
+    },
+    {
+      "trans": [-116.15,  22.3, 159.86], // in corner behind pipe towards citygena
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-116.15,  22.3, 159.86, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-19"
+      }
+    },
+    {
+      "trans": [-214.7311, 8.81, 94.5843], // "inside" beetree near ctygena
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-214.7311, 8.81, 94.5843, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-20",
+        "alt-actor": "farm-beetree-5"
+      }
+    },
+    {
+      "trans": [-290.8568, 10.8, 91.4465], // "inside" chilirots near ctygena
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-290.8568, 10.8, 91.4465, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-21",
+        "alt-actor": "farm-chilirots-3"
+      }
+    },
+    {
+      "trans": [-327.8311, 10.61, 107.3315], // "inside" marrow near ctygena
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-327.8311, 10.61, 107.3315, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-22",
+        "alt-actor": "farm-marrow-11"
+      }
+    },
+    {
+      "trans": [-382.35,  10.83,  60.8], // behind rocks near ctygena
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-382.35,  10.83,  60.8, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarma-skill-23"
       }
     }
     // {

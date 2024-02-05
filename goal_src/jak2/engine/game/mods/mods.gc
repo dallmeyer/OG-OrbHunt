@@ -684,7 +684,7 @@
     )
   )
 
-(defun skill-alt-actor-allow-pickup? ((skill collectable))
+(defun skill-alt-actor-check? ((skill collectable))
   (let ((alt-actor (entity-actor-lookup (-> skill entity) 'alt-actor 0)))
     (when (and alt-actor (-> alt-actor extra process) 
                (not (name= (-> alt-actor extra process state name) 'die)))
