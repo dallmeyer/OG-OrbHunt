@@ -299,6 +299,37 @@
         "name": "ctyfarmb-skill-24",
         "alt-actor": "farm-marrow-90"
       }
+    },
+    {
+      "trans": [ -179.52,  17.77, 1105.12], // behind pipe on inside wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -179.52,  17.77, 1105.12, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-25"
+      }
+    },
+    {
+      "trans": [ -341.57,  23.51, 1186.22], // behind well on inside wall near ctyport
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-341.57,  23.51, 1186.22, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-26"
+      }
+    },
+    {
+      "trans": [-154.41,  17.15, 905.08], // behind pipes right near ctymarka
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-154.41,  17.15, 905.08, 10], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-skill-27",
+        "bob-scale": ["float", 0.4] // less bob
+      }
     }
     // {
     //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
