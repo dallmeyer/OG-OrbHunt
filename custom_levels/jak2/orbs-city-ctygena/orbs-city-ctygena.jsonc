@@ -309,6 +309,56 @@
       "lump": {
         "name": "ctygena-skill-26"
       }
+    },
+    {
+      "trans": [  -145.8600, 27.6944, -123.4900], // corner at u bend on path to ctygenc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -145.8600, 27.6944, -123.4900, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-27"
+      }
+    },
+    {
+      "trans": [   -236.4109, 18.6856, 44.6914], // in empty space above door almost at ctygenc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -236.4109, 18.6856, 44.6914, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-28"
+      }
+    },
+    {
+      "trans": [  -83.3182, 35.5134, -236.2076], // behind blue LED sign above red LED sign
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -83.3182, 35.5134, -236.2076, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-29"
+      }
+    },
+    {
+      "trans": [ -25.3604, 8.2818, -317.3695], // in corner right before ctygenb (north)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -25.3604, 8.2818, -317.3695, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-30"
+      }
+    },
+    {
+      "trans": [  -80.5283, 8.3464, -19.7391], // in corner right before ctygenb (south)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -80.5283, 8.3464, -19.7391, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-30"
+      }
     }
     // HOVER orbs
     // {
