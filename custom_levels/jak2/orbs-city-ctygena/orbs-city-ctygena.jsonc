@@ -187,6 +187,36 @@
       "lump": {
         "name": "ctygena-skill-14"
       }
+    },
+    {
+      "trans": [ -224.9156, 27.2858, -240.1972], // between blue LED sign and wall in middle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -224.9156, 27.2858, -240.1972, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-15"
+      }
+    },
+    {
+      "trans": [ -240.2202, -8.440, -207.9845], // under water in corner by path to ctygenc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -240.2202, -8.440, -207.9845, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-16"
+      }
+    },
+    {
+      "trans": [  -128.2049, 41.4856, -193.5741], // behind red LED sign in middle (deep car launch)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -128.2049, 41.4856, -193.5741, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-17"
+      }
     }
     // HOVER orbs
     // {

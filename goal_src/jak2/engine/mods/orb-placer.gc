@@ -155,17 +155,15 @@
   (none)
   )
 
-(defun orb-placer-list-maintenace ()
-  (let ((debug-menu-active? (and (-> *debug-menu-context* is-active)
-                                 (string= (-> *debug-menu-context* sel-menu (- (-> *debug-menu-context* sel-length) 1) name) "Select Orb"))))
-    ;; if debug menu inactive we'll refresh the list while we're iterating
-    (when (not debug-menu-active?) (debug-menu-remove-all-items *orb-placer-select-menu*))
+(defun orb-placer-list-maintenace ((update-debug-list? symbol))
+  (when update-debug-list? (debug-menu-remove-all-items *orb-placer-select-menu*))
 
-    (dotimes (i *orb-placer-count*)
-      (let ((orb-handle (-> *orb-placer-orbs* i))
-            (is-selected? (= i *orb-placer-selected-idx*)))
-        (when (and (nonzero? orb-handle) (handle->process orb-handle))
-          (let ((orb-proc (the skill (handle->process orb-handle))))
+  (dotimes (i *orb-placer-count*)
+    (let ((orb-handle (-> *orb-placer-orbs* i))
+          (is-selected? (= i *orb-placer-selected-idx*)))
+      (when (and (nonzero? orb-handle) (handle->process orb-handle))
+        (let ((orb-proc (the skill (handle->process orb-handle))))
+          (when (and orb-proc (!= (-> orb-proc next-state name) 'dead-state))
             ;; ensure correct highlighting
             (orb-placer-highlight 
               orb-proc
@@ -182,7 +180,7 @@
               (new 'static 'vector2h :y 16)
               )
 
-            (when (not debug-menu-active?)
+            (when update-debug-list?
               ;; append to debug menu list
               (let ((orb-menu-item (new-dm-flag (-> *orb-placer-temp-strs* i) i dm-orb-placer-select-func)))
                 (debug-menu-append-item *orb-placer-select-menu* orb-menu-item)
@@ -195,10 +193,10 @@
           )
         )
       )
+    )
 
-    (when (not debug-menu-active?)
-      (set! (-> *orb-placer-select-menu* items) (sort (-> *orb-placer-select-menu* items) debug-menu-node<?))
-      )
+  (when update-debug-list?
+    (set! (-> *orb-placer-select-menu* items) (sort (-> *orb-placer-select-menu* items) debug-menu-node<?))
     )
   (none)
   )
@@ -234,7 +232,7 @@
           (set! *orb-placer-selected-idx* *orb-placer-count*)
           (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
           (+! *orb-placer-count* 1)
-          (orb-placer-list-maintenace)
+          (orb-placer-list-maintenace #t)
           )
         )
       )
@@ -272,7 +270,7 @@
 (define *orb-offset-tmp-vec* (new 'global 'vector))
 (defun orb-placer-maintenance ()
   (when *debug-segment*
-    (orb-placer-list-maintenace)
+    (orb-placer-list-maintenace #f)
 
     (when (and (not (paused?)) *orb-placer-enabled?*)
       (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
