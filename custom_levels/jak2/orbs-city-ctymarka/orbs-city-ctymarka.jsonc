@@ -59,11 +59,11 @@
       }
     },
     {
-      "trans": [ -167.9,   12.0,    517.3   ], //  in bowl on wall before brutter
+      "trans": [ -167.9,   12.1,    517.35   ], //  in bowl on wall before brutter
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-167.9,   12.0,    517.3 , 10], // bounding sphere
+      "bsphere": [-167.9,   12.1,    517.35 , 10], // bounding sphere
       "lump": {
         "name": "ctymarka-skill-2",
         "bob-scale": ["float", -1.0] // no bob
@@ -128,6 +128,193 @@
       "bsphere": [-116.32,  15.22, 483.84, 10], // bounding sphere
       "lump": {
         "name": "ctymarka-skill-8"
+      }
+    },
+    {
+      "trans": [ -115.5055, 8.9834, 491.5827], // in brutter's oven
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -115.5055, 8.9834, 491.5827, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-9"
+      }
+    },
+    {
+      "trans": [  -36.9407, 9.6705, 463.2046], // behind breakable crap near brutter
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -36.9407, 9.6705, 463.2046, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-10"
+      }
+    },
+    {
+      "trans": [  -133.8520, 33.8404, 401.8402], // upper corner of roof near brutter
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -133.8520, 33.8404, 401.8402, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-11"
+      }
+    },
+    {
+      "trans": [  -227.8357, 9.6873, 418.9404], // inside breakable basket in section before brutter
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -227.8357, 9.6873, 418.9404, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-12",
+        "alt-actor": "market-basket-a-206"
+      }
+    },
+    {
+      "trans": [ -221.4138, 8.693, 620.3896], // inside breakable sack in north center block
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-221.4138, 8.693, 620.3896, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-13",
+        "alt-actor": "market-sack-a-248"
+      }
+    },
+    {
+      "trans": [  -369.5858, 18.1390, 409.7810], // up in corner between pillar and hanging rug thing, NW block
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -369.5858, 18.1390, 409.7810, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-14"
+      }
+    },
+    {
+      "trans": [  -363.0108, 36.3217, 532.9723], // up top banner on west side (infin jump from car launch)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -363.0108, 36.3217, 532.9723, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-15"
+      }
+    },
+    {
+      "trans": [ -348.9035, 10.4079, 621.4921], // inside breakable crate on west side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-348.9035, 10.4079, 621.4921, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-16",
+        "alt-actor": "market-crate-302"
+      }
+    },
+    {
+      "trans": [  -167.2212, 20.7731, 553.0538], // up in corner between 2 cloth awnings, north center block
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -167.2212, 20.7731, 553.0538, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-17"
+      }
+    },
+    {
+      "trans": [ -87.7797, 8.65, 562.7805], // inside breakable basket on east side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-87.7797, 8.65, 562.7805, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-18",
+        "alt-actor": "market-basker-b-224"
+      }
+    },
+    {
+      "trans": [ -15.6790, 26.0284, 659.3214], // corner of rooftop pinched against wall near ctypal
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -15.6790, 26.0284, 659.3214, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-19",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -11.3249, 44.3799, 659.3383], // up on high edge of wall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -11.3249, 44.3799, 659.3383, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-20"
+      }
+    },
+    {
+      "trans": [  -224.5164, 17.0246, 755.7536], // behind hanging herbs in south center block
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -224.5164, 17.0246, 755.7536, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-21"
+      }
+    },
+    {
+      "trans": [  -371.1823, 18.7782, 726.5623], // up in corner by ropes on west side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -371.1823, 18.7782, 726.5623, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-22"
+      }
+    },
+    {
+      "trans": [  -246.7652, 9.8005, 763.7217], // behind scythe, SW block
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -246.7652, 9.8005, 763.7217, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-23"
+      }
+    },
+    {
+      "trans": [ -95.7157, 9.706, 795.9418], // inside breakable crate near ctyfarmb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-95.7157, 9.706, 795.9418, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-24",
+        "alt-actor": "market-sack-b-139"
+      }
+    },
+    {
+      "trans": [  -208.50,  24.87, 809.53], // above flasing sign, near ctyfarmb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -208.50,  24.87, 809.53, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-25"
+      }
+    },
+    {
+      "trans": [  -151.0230, 14.5318, 653.2857], // above flasing sign, near ctyfarmb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -151.0230, 14.5318, 653.2857, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-26",
+        "bob-scale": ["float", 0.5]
       }
     }
     // {

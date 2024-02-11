@@ -369,7 +369,7 @@
   (set! (-> self anim-frame) 0.0)
   (set! (-> self pos-transition) 1.0)
   (init-defaults self)
-  (set-next-state self arg0 0)
+  (set-next-state self arg0 1)  ;; orb huunt - wakeup on bigmap
   (set! (-> *progress-state* starting-state) (-> self next))
   (set! (-> self current) (-> self next))
   (if (= arg0 'main)
@@ -377,7 +377,7 @@
       )
   (set! (-> self ring-angle) 0.0)
   (set! (-> self ring-want-angle) 0.0)
-  (set! (-> self option-index) 0)
+  (set! (-> self option-index) 1) ;; orb hunt - wakeup on bigmap
   (set! (-> self want-option-index) 0)
   (set! (-> self graphic-index) 0)
   (set! (-> self swing) 0.0)

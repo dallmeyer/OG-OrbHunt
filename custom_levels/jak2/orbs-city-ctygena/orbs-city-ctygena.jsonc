@@ -270,18 +270,17 @@
       }
     },
     {
-      "trans": [  -180.6653, 10.3070, 10.9670], // abah hint on path to ctygenc
+      "trans": [-200.57,  24.00,  38.86], // up on stable rooftop, on path to ctygenc
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -180.6653, 10.3070, 10.9670, 10], // bounding sphere
+      "bsphere": [-200.57,  24.00,  38.86, 10], // bounding sphere
       "lump": {
-        "name": "ctygena-skill-23",
-        "pickup-amount": ["float", 2.0] // abah hint
+        "name": "ctygena-skill-23"
       }
     },
     {
-      "trans": [  -181.0340, 30.2096, 5.8379], // up in corner/high roof, abah from^
+      "trans": [  -181.0340, 30.2096, 5.8379], // up in corner/high roof, boosted/extended over from ^
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion

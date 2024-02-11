@@ -1360,7 +1360,7 @@
       )
     (cond
       ((and *target* (focus-test? *target* board pilot))
-       (let ((f0-14 0.5)
+       (let ((f0-14 0.7)
              (f1-2 0.000008138021)
              (f2-0 122880.0)
              (v1-33 (-> *target* control transv))
@@ -1371,10 +1371,10 @@
          )
        )
       (else
-        (set! (-> this target-inv-scale) 0.5)
+        (set! (-> this target-inv-scale) 0.7)
         )
       )
-    (seek! (-> this offset y) (-> this target-inv-scale) (* 0.5 f30-2))
+    (seek! (-> this offset y) (-> this target-inv-scale) (* 0.7 f30-2))
     )
   (run-pending-updates! (-> this engine) (-> *display* base-clock frame-counter))
   (when (and (-> this ctywide) (and (= (-> this ctywide status) 'active) (!= (-> this offset w) 0.0)))
