@@ -137,6 +137,56 @@
       "lump": {
         "name": "ctygena-skill-9"
       }
+    },
+    {
+      "trans": [  -382.1683, 35.5673, -107.1970 ], // up on wall/awning opposite ^, car launch into abah cancel
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -382.1683, 35.5673, -107.1970, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-10"
+      }
+    },
+    {
+      "trans": [  -360.8417, 34.8489, -347.9881 ], // between overhangs, jump from ledge near RaC sign
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -360.8417, 34.8489, -347.9881, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-11"
+      }
+    },
+    {
+      "trans": [ -337.9721, 6.9419, -254.5649 ], // under bridge not far from ctyfarma
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -337.9721, 6.9419, -254.5649, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-12"
+      }
+    },
+    {
+      "trans": [ -225.5504, 31.4376, -330.4404], // up on overhang next to lamp, corner just past RaC sign
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -225.5504, 31.4376, -330.4404, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-13"
+      }
+    },
+    {
+      "trans": [  -242.0662, 2.0516, -328.0699], // between wall and second water ramp from ctyfarma
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -242.0662, 2.0516, -328.0699, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-14"
+      }
     }
     // HOVER orbs
     // {
