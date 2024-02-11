@@ -246,7 +246,7 @@
   (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
     (let ((orb (the skill (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
       (when orb
-        (format 0 " ~m ~m ~m~%" (-> orb base x) (-> orb base y) (-> orb base z))
+        (format 0 " ~m, ~m, ~m~%" (-> orb base x) (-> orb base y) (-> orb base z))
         )
       )
     )
@@ -259,7 +259,7 @@
     (let ((orb-handle (-> *orb-placer-orbs* i)))
       (when (and (nonzero? orb-handle) (handle->process orb-handle))
         (let ((orb (the skill (handle->process orb-handle))))
-          (format 0 " ~m ~m ~m~%" (-> orb base x) (-> orb base y) (-> orb base z))
+          (format 0 " ~m, ~m, ~m~%" (-> orb base x) (-> orb base y) (-> orb base z))
           )
         )
       )
@@ -345,7 +345,7 @@
                           ;; camera magic
                           (vector-matrix*! vec vec (matrix-local->world #t #f))
                           (vector-flatten! vec vec (-> *camera* local-down))
-                          (vector-float*! vec vec (* (-> pad stick0-speed) 1024.0))  ;; TODO scale?
+                          (vector-float*! vec vec (* (-> pad stick0-speed) 512.0))  ;; TODO scale?
                           
                           ;; actually move orb
                           (vector+! (-> orb root trans) (-> orb root trans) vec)
@@ -353,8 +353,25 @@
                           )
                         
 
-                        ;; Y (up/down)
                         (cond
+                          ;; fine tune/axis-aligned X/Z
+                          ((cpad-hold? 0 up)
+                            (+! (-> orb root trans x) (meters 0.05))
+                            (+! (-> orb base x) (meters 0.05))
+                            )
+                          ((cpad-hold? 0 down)
+                            (+! (-> orb root trans x) (meters -0.05))
+                            (+! (-> orb base x) (meters -0.05))
+                            )
+                          ((cpad-hold? 0 right)
+                            (+! (-> orb root trans z) (meters 0.05))
+                            (+! (-> orb base z) (meters 0.05))
+                            )
+                          ((cpad-hold? 0 left)
+                            (+! (-> orb root trans z) (meters -0.05))
+                            (+! (-> orb base z) (meters -0.05))
+                            )
+                          ;; Y (up/down)
                           ((cpad-hold? 0 r2)
                             (+! (-> orb root trans y) (meters 0.05))
                             (+! (-> orb base y) (meters 0.05))

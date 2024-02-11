@@ -106,6 +106,37 @@
       "lump": {
         "name": "ctygena-skill-6"
       }
+    },
+    {
+      "trans": [ -21.2396, 31.5682, -381.8826 ], // on upper awning, can stand on lower awning nearby or prob just car launch
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -21.2396, 31.5682, -381.8826, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-7"
+      }
+    },
+    {
+      "trans": [  -321.5053, 21.4583, -104.4964 ], // on awning near ctyfarma
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -321.5053, 21.4583, -104.4964, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-8",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   -319.8685, 35.1992, -97.7141 ], // up on wall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -319.8685, 35.1992, -97.7141, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-9"
+      }
     }
     // HOVER orbs
     // {
