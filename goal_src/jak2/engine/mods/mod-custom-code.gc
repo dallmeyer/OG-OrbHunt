@@ -38,6 +38,10 @@
         (input-display-on)
         (input-display-off)
         )
+
+      (when *debug-segment*
+        (orb-placer-maintenance)
+        )
       
       (none)
       )

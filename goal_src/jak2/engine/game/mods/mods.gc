@@ -123,11 +123,11 @@
 ;;   (none)
 ;;   )
 
-(defmacro spawn-skill (x y z bob? name)
+(defmacro spawn-skill-old (x y z bob? name)
   `(spawn-skill-internal ,x ,y ,z ,bob? ,name 1.0))
   
 
-(defmacro spawn-gold-skill (x y z bob? name)
+(defmacro spawn-gold-skill-old (x y z bob? name)
   `(spawn-skill-internal ,x ,y ,z ,bob? ,name (-> *FACT-bank* super-skill-inc)))
   
 

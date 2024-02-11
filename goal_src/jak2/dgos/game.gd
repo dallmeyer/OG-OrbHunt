@@ -468,5 +468,7 @@
   "mod-settings.o" ;; added
   "mod-common-functions.o" ;; added
   "mods.o"
+  "orb-placer.o"  ;; added
   "mod-custom-code.o" ;; added
+  "mod-debug.o" ;; added
  ))
