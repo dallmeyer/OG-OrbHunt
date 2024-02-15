@@ -538,9 +538,9 @@
     ;; ====== ORBS / CANYON ======
     ;; fake level - see MOUNTAIN
     ;; ====== ORBS / CONSITE ======
-    ;; === consite/consiteb ===
-    ;; skill-83
-    ;; skill-84
+    ;; === consite ===
+    (('skill-83) (set-vector-meters! (-> arg0 extra trans) 703.9286 -9.4515 904.7067)) ;; under walkway/behind barrels, not far from where it normally is
+    (('skill-84) (set-vector-meters! (-> arg0 extra trans) 578.3135 6.0213 828.8388)) ;; behind stable rock up on wall behind spools where it normally is
     ;; ====== ORBS / UNDER ======
     ;; === under/underb (mech suit area) ===
     ;; skill-87

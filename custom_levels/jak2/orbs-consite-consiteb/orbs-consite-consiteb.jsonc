@@ -65,6 +65,36 @@
       "lump": {
         "name":"consiteb-skill-02"
       }
+    },
+    {
+      "trans": [759.0416, 8.2735, 859.5614  ], // corner on right immediately upon enter
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [759.0416, 8.2735, 859.5614, 10], // bounding sphere
+      "lump": {
+        "name":"consiteb-skill-03"
+      }
+    },
+    {
+      "trans": [748.3945, 26.5422, 898.1990  ], // above pipes at top end of hallway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [748.3945, 26.5422, 898.1990, 10], // bounding sphere
+      "lump": {
+        "name":"consiteb-skill-04"
+      }
+    },
+    {
+      "trans": [739.4152, 31.4415, 907.3831], // above pipes right side of door to consite
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [739.4152, 31.4415, 907.3831, 10], // bounding sphere
+      "lump": {
+        "name":"consiteb-skill-05"
+      }
     }
     // // HOVER CELLS
     // {
