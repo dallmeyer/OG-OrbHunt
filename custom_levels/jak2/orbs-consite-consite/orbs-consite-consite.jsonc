@@ -237,6 +237,56 @@
       "lump": {
         "name":"consite-skill-19"
       }
+    },
+    {
+      "trans": [686.04,  18.80, 908.35], // on barrel on higher scaffolding near ramp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 686.04,  18.80, 908.35, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-20"
+      }
+    },
+    {
+      "trans": [686.5048, 36.4325, 922.0984], // up from ^, on edge of scaffolding you cant actually get to
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 686.5048, 36.4325, 922.0984, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-21"
+      }
+    },
+    {
+      "trans": [665.50,  14.61, 912.45], // near ^^, on the side of these platforms that are solid
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 665.50,  14.61, 912.45, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-22"
+      }
+    },
+    {
+      "trans": [712.4183, 1.45, 805.8723], // behind plank near top of staircase of barrels
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [712.4183, 1.45, 805.8723, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-23"
+      }
+    },
+    {
+      "trans": [732.9077, -7.0803, 810.8870], // in corner partially behind metal sheet
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [732.9077, -7.0803, 810.8870, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-24"
+      }
     }
     // // HOVER CELLS
     // {
