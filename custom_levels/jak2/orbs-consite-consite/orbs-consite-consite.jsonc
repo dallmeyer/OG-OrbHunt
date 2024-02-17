@@ -287,6 +287,211 @@
       "lump": {
         "name":"consite-skill-24"
       }
+    },
+    {
+      "trans": [724.2335, -9.4093, 904.8081], // behind barrels right below entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [724.2335, -9.4093, 904.8081, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-25"
+      }
+    },
+    {
+      "trans": [730.59,  -9.65, 872.25], // sEcReT aReA behind metal sheet, wall parallel/closest to consiteb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [730.59,  -9.65, 872.25, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-26"
+      }
+    },
+    {
+      "trans": [732.30,  25.25, 896.70], // on slippery ledge up/to side of entrance door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [732.30,  25.25, 896.70, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-27",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [732.30,  34.21, 903.62], // on ledge directly above entrance door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [732.30,  34.21, 903.62, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-28"
+      }
+    },
+    {
+      "trans": [733.39,  34.23, 948.44], // on small stable metal bit "OOB" near entrance door, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [733.39,  34.23, 948.44, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-29"
+      }
+    },
+    {
+      "trans": [733.44,  34.23, 969.54], // further out from ^, keep going...
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [733.44,  34.23, 969.54, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-30"
+      }
+    },
+    {
+      "trans": [717.77,  22.75, 1001.20], // boosted across to "OOB" support crap from^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [717.77,  22.75, 1001.20, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-31"
+      }
+    },
+    {
+      "trans": [700.34,  22.75, 1001.00], // keep going from^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [700.34,  22.75, 1001.00, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-32"
+      }
+    },
+    {
+      "trans": [689.64,  19.29, 1006.81], // keep going from^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [689.64,  19.29, 1006.81, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-33"
+      }
+    },
+    {
+      "trans": [700.99,  14.39, 1019.16], // lower back lip of pipe behind ^^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [700.99,  14.39, 1019.16, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-34"
+      }
+    },
+    {
+      "trans": [668.92,  22.75, 1005.32], // backside of ledges, follow from ^^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [668.92,  22.75, 1005.32, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-35",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [668.44,  36.87, 1015.35], // upper lip of pipe, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [668.44,  36.87, 1015.35, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-36",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [668.75,  50.83, 1006.81], // upper support ledges above ^^^, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [668.75,  50.83, 1006.81, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-37"
+      }
+    },
+    {
+      "trans": [624.17,  53.87, 1005.10], // further down upper support ledges from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [624.17,  53.87, 1005.10, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-38",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [623.23,  67.45, 1018.32], // lip of pipe way up, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [623.23,  67.45, 1018.32, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-39"
+      }
+    },
+    {
+      "trans": [613.09,  31.85, 978.67], // come back down from ^, big ol uppertcut to lip of pipe in "OOB" area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [613.09,  31.85, 978.67, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-40"
+      }
+    },
+    {
+      "trans": [605.64,  14.23, 955.27], // uppercut from ^ to next pipe lower lip
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [605.64,  14.23, 955.27, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-41"
+      }
+    },
+    {
+      "trans": [732.40,  -1.42, 843.73], // slippery ledge on wall near barrels+ + debris
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [732.40,  -1.42, 843.73, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-42",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [733.5772, 17.4990, 839.4168], // weird temp standpoint on wall, abah from^ and chain jump to v
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [733.5772, 17.4990, 839.4168, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-43"
+      }
+    },
+    {
+      "trans": [722.44,  18.91, 829.56], // up on solid plank on scaffolding, quick jump from standpoint^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [722.44,  18.91, 829.56, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-44"
+      }
     }
     // // HOVER CELLS
     // {

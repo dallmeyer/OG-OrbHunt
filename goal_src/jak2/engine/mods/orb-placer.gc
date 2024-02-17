@@ -160,7 +160,7 @@
 
   (dotimes (i *orb-placer-count*)
     (let ((orb-handle (-> *orb-placer-orbs* i))
-          (is-selected? (= i *orb-placer-selected-idx*)))
+          (is-selected? (and *orb-placer-enabled?* (= i *orb-placer-selected-idx*))))
       (when (and (nonzero? orb-handle) (handle->process orb-handle))
         (let ((orb-proc (the skill (handle->process orb-handle))))
           (when (and orb-proc (!= (-> orb-proc next-state name) 'dead-state))
