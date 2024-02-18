@@ -97,6 +97,26 @@
       "lump": {
         "name": "ctyindb-skill-5"
       }
+    },
+    {
+      "trans": [1164.63,  27.83, 416.12], // on pipe in corner near ctysluma, boosted from upper walkway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1164.63,  27.83, 416.12, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-6"
+      }
+    },
+    {
+      "trans": [1169.93,   8.59, 412.44], // up and over to bottom corner from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1169.93,   8.59, 412.44, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-7"
+      }
     }
     // {
     //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
