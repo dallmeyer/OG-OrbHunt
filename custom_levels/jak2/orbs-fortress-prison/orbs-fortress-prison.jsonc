@@ -167,6 +167,18 @@
         "name": "prison-skill-12"
       }
     },
+    {
+      "trans": [464.0226, 16.4137, 54.0892], // above warp, hint for earlier skill
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [464.0226, 16.4137, 54.0892, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-13",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    
     // HOVER ORBS
     {
       "trans": [ 472.1,  27.5,  97.5  ], // on lamp above torture machine

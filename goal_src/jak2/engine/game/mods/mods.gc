@@ -459,13 +459,13 @@
     ;; none
     ;; ====== ORBS / STRIP ======
     ;; === strip ===
-    ;; skill-108
-    ;; skill-109
-    ;; skill-110
-    ;; skill-111
-    ;; skill-112
-    ;; skill-113
-    ;; skill-114
+    (('skill-108) (set-vector-meters! (-> arg0 extra trans) 2282.14 112.25 116.32)) ;; up on back/upper section of building where carts start
+    (('skill-109) (set-vector-meters! (-> arg0 extra trans) 2295.75 103.80 105.48)) ;; on bend in cart track in back, jump off from ^
+    (('skill-110) (set-vector-meters! (-> arg0 extra trans) 2341.1848 103.2302 -9.8650)) ;; on back/top of support for cart track, near exit warp
+    (('skill-111) (set-vector-meters! (-> arg0 extra trans) 2531.7922 67.8196 23.0837)) ;; under dark eco left from start
+    (('skill-112) (set-vector-meters! (-> arg0 extra trans) 2530.01  68.55 -87.46)) ;; in dark eco behind dropped platform 
+    (('skill-113) (set-vector-meters! (-> arg0 extra trans) 2357.92  57.82  39.06)) ;; tiny standpoint on ledge below cart track
+    (('skill-114) (set-vector-meters! (-> arg0 extra trans) 2360.36  62.98  98.12)) ;; between wall and under support for cart track, closer to start of track
     ;; ====== ORBS / MOUNTAIN ======
     ;; === mountain/mtnext ===
     ;; skill-76
@@ -711,7 +711,8 @@
 (define *mini-bigmap-toggle-time* (the time-frame #f))
 (defun mod-run-each-frame ()
   (task-close! "nest-get-to-gun-introduction") ;; NG+ or something
-  (logior! (-> *game-info* features) (game-feature darkjak darkjak-bomb0 darkjak-bomb1 darkjak-invinc darkjak-giant)) ;; give dark jak stuff
+  (task-close! "city-oracle-level3-training") ;; close oracle stuff
+  (logior! (-> *game-info* features) (game-feature board darkjak darkjak-bomb0 darkjak-bomb1 darkjak-invinc darkjak-giant)) ;; give board and dark jak stuff
 
   ;; hover check/cooldown stuff
   (cond

@@ -106,6 +106,56 @@
       "lump": {
         "name": "gungame-skill-6"
       }
+    },
+    {
+      "trans": [ 441.6495, 21.1013, 1293.8140], // middle of entry room, lamps are infin jump
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [441.6495, 21.1013, 1293.8140, 10], // bounding sphere
+      "lump": {
+        "name": "gungame-skill-7"
+      }
+    },
+    {
+      "trans": [ 380.9314, 8.8534, 1242.2930], // tight space between walls, south hallway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [380.9314, 8.8534, 1242.2930, 10], // bounding sphere
+      "lump": {
+        "name": "gungame-skill-8"
+      }
+    },
+    {
+      "trans": [374.3707, 21.0822, 1202.1622], // lamp in center of west hallway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [374.3707, 21.0822, 1202.1622, 10], // bounding sphere
+      "lump": {
+        "name": "gungame-skill-9"
+      }
+    },
+    {
+      "trans": [ 403.9920, 21.8445, 1173.5394], // behind pipes, north hallway on west side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 403.9920, 21.8445, 1173.5394, 10], // bounding sphere
+      "lump": {
+        "name": "gungame-skill-10"
+      }
+    },
+    {
+      "trans": [ 479.2696, 21.0756, 1214.3334], // mini awning near ceiling, northeast corner (abah cancel from lower awning)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 479.2696, 21.0756, 1214.3334, 10], // bounding sphere
+      "lump": {
+        "name": "gungame-skill-11"
+      }
     }
     // {
     //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start

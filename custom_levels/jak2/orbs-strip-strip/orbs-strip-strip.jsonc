@@ -46,27 +46,526 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-01"
-    //   }
-    // },
-    // // HOVER CELLS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
+    {
+      "trans": [2313.34,  95.74, 129.84 ], // corner of building where carts start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2313.34,  95.74, 129.84, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 2312.06, 112.25, 130.31], // upper platform of building where carts start, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2312.06, 112.25, 130.31, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-02"
+      }
+    },
+    {
+      "trans": [2312.43, 125.91, 130.89 ], // up near slanted roof right above ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2312.43, 125.91, 130.89 , 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-03"
+      }
+    },
+    {
+      "trans": [2363.3596, 71.4894, 109.0264], // between rocks at bottom of support for cart tracks, starting side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2363.3596, 71.4894, 109.0264, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-04"
+      }
+    },
+    {
+      "trans": [2351.42,  65.5, 109.64 ], // far/lower rock under cart track, starting side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2351.42,  65.5, 109.64 , 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-05"
+      }
+    },
+    {
+      "trans": [2427.11,  68.28, 201.86], // on lower cliff drop down, far left side from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2427.11,  68.28, 201.86, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-06"
+      }
+    },
+    {
+      "trans": [2418.22,  74.95, 177.34 ], // behind/between crates far corner from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2418.22,  74.95, 177.34, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-07"
+      }
+    },
+    {
+      "trans": [2439.93,  64.99, 227.38], // in crack between rocks near pit, far left side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2439.93,  64.99, 227.38, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-08"
+      }
+    },
+    {
+      "trans": [2446.31,  89.98, 229.53], // above fence / under overpass with grindrail, far left side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2446.31,  89.98, 229.53, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-09"
+      }
+    },
+    {
+      "trans": [ 2427.0666, 86.1392, 221.9041], // hanging off end of girter, far left side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2427.0666, 86.1392, 221.9041, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-10"
+      }
+    },
+    {
+      "trans": [2299.3640, 100.2840, 167.4626], // in chute top of left side of building where carts start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2299.3640, 100.2840, 167.4626, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-11"
+      }
+    },
+    {
+      "trans": [2313.2583, 74.4458, 152.7381], // lower left side of building where carts start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2313.2583, 74.4458, 152.7381, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-12"
+      }
+    },
+    {
+      "trans": [2327.9355, 74.6636, 223.3985], // hanging off back of ledge far corner opposite start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2327.9355, 74.6636, 223.3985, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-13"
+      }
+    },
+    {
+      "trans": [2324.0532, 89.1447, 276.8321], // up and further back from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2324.0532, 89.1447, 276.8321, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-14"
+      }
+    },
+    {
+      "trans": [2395.12, 101.20, 251.73], // between moving ramp and lightpole, top level, far corner from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2395.12, 101.20, 251.73, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-15"
+      }
+    },
+    {
+      "trans": [2447.09, 107.22, 251.66], // cliff/under overpass near top level of far left side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2447.09, 107.22, 251.66, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-16"
+      }
+    },
+    {
+      "trans": [2515.0273, 110.5190, 273.6035], // behind crates against wall, top level far left side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2515.0273, 110.5190, 273.60356, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-17"
+      }
+    },
+    {
+      "trans": [2503.3691, 82.2306, 218.5965], // small gap between tree and rocks, far left side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2503.3691, 82.2306, 218.5965, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-18"
+      }
+    },
+    {
+      "trans": [2519.9548, 130.2376, 239.8008], // top of lightpole, far left side - boosted/extended from nearby ledge
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2519.9548, 130.2376, 239.8008, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-19"
+      }
+    },
+    {
+      "trans": [2614.75, 111.18, 176.94], // between handrail and wall, upper level / left from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2614.75, 111.18, 176.94, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-20"
+      }
+    },
+    {
+      "trans": [2569.2495, 72.0867, 110.6549], // behind rock on ground level looking into 2nd gap, left from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2569.2495, 72.0867, 110.6549, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-21"
+      }
+    },
+    {
+      "trans": [2595.52,  99.57, -37.39], // behind wall up/behind from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2595.52,  99.57, -37.39, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-22"
+      }
+    },
+    {
+      "trans": [2579.86,  73.27,  23.98], // behind rock on ground level, into 1st gap a bit, left from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2579.86,  73.27,  23.98, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-23"
+      }
+    },
+    {
+      "trans": [2645.1791, 96.9606, 74.6448], // in crevice between bunch of rocks in corner, near QP up top/back from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2645.1791, 96.9606, 74.6448, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-24"
+      }
+    },
+    {
+      "trans": [2617.33,  91.62,  12.15], //  back of first gap left from start, upper level - under weird invis overhang, come around back
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2617.33,  91.62,  12.15, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-25"
+      }
+    },
+    {
+      "trans": [2569.27, 107.16, -36.88], //  rooftop of small building right behind start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2569.27, 107.16, -36.88, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-26"
+      }
+    },
+    {
+      "trans": [2571.63,  87.20, -43.30], //  between pipes/base of small building^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2571.63,  87.20, -43.30, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-27"
+      }
+    },
+    {
+      "trans": [2580.42,  75.98, -81.98], //  crevice between rocks, on side of board surface slant between saw sections
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2580.42,  75.98, -81.98, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-28"
+      }
+    },
+    {
+      "trans": [2557.28, 101.88, -109.25], //  under light pole on small ledge, up/back from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2557.28, 101.88, -109.25, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-29"
+      }
+    },
+    {
+      "trans": [2484.88,  67.16, -87.02], // small ledge in gap right/ahead from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2484.88,  67.16, -87.02, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-30"
+      }
+    },
+    {
+      "trans": [2431.3425, 78.9988, -99.4193], // under tree ahead from start, under/before exit warp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2431.3425, 78.9988, -99.4193, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-31"
+      }
+    },
+    {
+      "trans": [2453.47,  72.52, -110.52], // idk behind/below some rocks back from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2453.47,  72.52, -110.52, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-32"
+      }
+    },
+    {
+      "trans": [2419.5432, 77.8748, -83.8394], // behind logs ahead from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2419.5432, 77.8748, -83.8394, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-33"
+      }
+    },
+    {
+      "trans": [2414.08,  84.81, -88.53], // crevice below slanted roof ahead from start/before exit warp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2414.08,  84.81, -88.53, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-34"
+      }
+    },
+    {
+      "trans": [2411.0505, 89.0, -96.7482], // crevice between building with exit warp and wall below QPs
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2411.0505, 89.0, -96.7482, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-35"
+      }
+    },
+    {
+      "trans": [2359.9785, 92.6914, -53.2507], // just inside control room on right
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2359.9785, 92.6914, -53.2507, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-36"
+      }
+    },
+    {
+      "trans": [ 2384.2246, 123.2201, -182.3771], // crevice between rocks, upper level right wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2384.2246, 123.2201, -182.3771, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-37"
+      }
+    },
+    {
+      "trans": [ 2456.90,  98.51, -152.80], // some corner in gap right/ahead from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2456.90,  98.51, -152.80, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-38"
+      }
+    },
+    {
+      "trans": [ 2523.1408, 106.1945, -147.3255], // under overpass / between pair of pipes, right/up from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2523.1408, 106.1945, -147.3255, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-39"
+      }
+    },
+    {
+      "trans": [  2462.2648, 109.6196, -202.2981], // in crevice on rock slab against wall, back of gap right/ahead from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2462.2648, 109.6196, -202.2981, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-40"
+      }
+    },
+    {
+      "trans": [ 2570.19, 121.11, -180.72], // behind crate/pipes in back hallway with grind rails
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2570.19, 121.11, -180.72, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-41"
+      }
+    },
+    {
+      "trans": [ 2578.1176, 127.8792, -217.1873], // crevice in rocks back in this back hallway^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2578.1176, 127.8792, -217.1873, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-42"
+      }
+    },
+    {
+      "trans": [ 2603.81, 120.77, -215.99], // gap between I beam/crate/rails in back hallway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2603.81, 120.77, -215.99, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-43"
+      }
+    },
+    {
+      "trans": [ 2620.32, 128.11, -168.21], // crevice in rocks back in this back hallway^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2620.32, 128.11, -168.21, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-44"
+      }
+    },
+    {
+      "trans": [ 2649.08, 133.37, -142.92], // on rocks behind smallest invis wall ever
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2649.08, 133.37, -142.92, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-45"
+      }
+    },
+    {
+      "trans": [ 2639.48, 135.17, -107.95], // small ledge up high, boosted from overpass where finish mission killing eggs
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2639.48, 135.17, -107.95, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-46"
+      }
+    },
+    {
+      "trans": [ 2639.48, 135.17, -107.95], // slippery ledge back right from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2639.48, 135.17, -107.95, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-47"
+      }
+    },
+
+
+
+
+
+    // HOVER CELLS
+    {
+      "trans": [2289.52, 143.56, 140.34 ], // top of lightpole on upper plat of building where carts start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2289.52, 143.56, 140.34 , 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [2311.10,  88.89, 302.86], // way far out in corner opposite start, tricky hover over invis wall into freefall back
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2311.10,  88.89, 302.86, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [2290.95,  73.12, -222.20], // way far out in corner ahead/right from start, hover over invis into freefall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2290.95,  73.12, -222.20, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [2294.42,  79.89, -112.73], // way far out, right side of building where carts end ahead from start, hover over invis into freefall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [2294.42,  79.89, -112.73, 10], // bounding sphere
+      "lump": {
+        "name":"strip-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
   ]
 }

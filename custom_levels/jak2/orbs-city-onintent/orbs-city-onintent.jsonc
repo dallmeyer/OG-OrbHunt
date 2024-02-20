@@ -58,7 +58,7 @@
       }
     },
     {
-    "trans": [ 708.7,    9.0,     746.2   ], // on pot on right - tricky uppercut from outside over invis wall
+    "trans": [ 708.7,    9.0,     746.2   ], // on pot on left - tricky uppercut from outside over invis wall
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -66,6 +66,16 @@
       "lump": {
         "name": "onintent-skill-2",
         "bob-scale": ["float", -1.0]  // no bob
+      }
+    },
+    {
+    "trans": [717.3490, 9.1150, 742.4205], // on right - tricky uppercut from outside over invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [717.3490, 9.1150, 742.4205 , 10], // bounding sphere
+      "lump": {
+        "name": "onintent-skill-3"
       }
     }
     // {

@@ -5985,7 +5985,7 @@
         (function "ctysluma"  #f ,(lambda () (start 'play (get-continue-by-name *game-info* "ctysluma-start"))))
         (function "ctyslumb"  #f ,(lambda () (start 'play (get-continue-by-name *game-info* "ctyslumb-start"))))
         (function "ctyslumc"  #f ,(lambda () (start 'play (get-continue-by-name *game-info* "ctyslumc-start"))))
-        (function "gungame"   #f ,(lambda () (start 'play (get-continue-by-name *game-info* "cryport-gungame"))))
+        (function "gungame"   #f ,(lambda () (start 'play (get-continue-by-name *game-info* "ctyport-gungame"))))
         (function "hideout"   #f ,(lambda () (start 'play (get-continue-by-name *game-info* "ctysluma-alley"))))
         (function "hiphog"    #f ,(lambda () (start 'play (get-continue-by-name *game-info* "ctyport-hiphog"))))
         (function "onintent"  #f ,(lambda () (start 'play (get-continue-by-name *game-info* "onintent-start"))))

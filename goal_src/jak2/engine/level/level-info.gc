@@ -3335,13 +3335,20 @@
     :continues '((new 'static 'continue-point
         :name "prison-start"
         :level 'prison
-        :trans (new 'static 'vector :x 1942413.2 :y 34479.31 :z 275525.62 :w 1.0)
-        :quat (new 'static 'vector :y 0.4562 :w 0.8898)
-        :camera-trans (new 'static 'vector :x 1921090.8 :y 53425.766 :z 237949.75 :w 1.0)
+        ;; :trans (new 'static 'vector :x 1942413.2 :y 34479.31 :z 275525.62 :w 1.0)
+        ;; :quat (new 'static 'vector :y 0.4562 :w 0.8898)
+        ;; :camera-trans (new 'static 'vector :x 1921090.8 :y 53425.766 :z 237949.75 :w 1.0)
+        ;; :camera-rot (new 'static 'inline-array vector3s 3
+        ;;   (new 'static 'vector3s :data (new 'static 'array float 3 0.869 0.0 -0.4947))
+        ;;   (new 'static 'vector3s :data (new 'static 'array float 3 0.0663 0.9909 0.1165))
+        ;;   (new 'static 'vector3s :data (new 'static 'array float 3 0.4903 -0.134 0.8611))
+        :trans (new 'static 'vector :x (meters 464.8415) :y (meters 7.9980) :z (meters 47.8684) :w 1.0)
+        :quat (new 'static 'vector :x 0.0008 :y 0.8552 :z 0.0012 :w 0.5181)
+        :camera-trans (new 'static 'vector :x (meters 453.1166) :y (meters 13.0833) :z (meters 44.2704) :w 1.0)
         :camera-rot (new 'static 'inline-array vector3s 3
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.869 0.0 -0.4947))
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.0663 0.9909 0.1165))
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.4903 -0.134 0.8611))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.2794  0.0000 -0.9601))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.1132  0.9930  0.0329))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.9534 -0.1179  0.2774))
           )
         :on-goto #f
         :vis-nick 'prison
@@ -3359,13 +3366,21 @@
         :name "game-start"
         :level 'prison
         :flags (continue-flags game-start)
-        :trans (new 'static 'vector :x 1942413.2 :y 34479.31 :z 275525.62 :w 1.0)
-        :quat (new 'static 'vector :y 0.4562 :w 0.8898)
-        :camera-trans (new 'static 'vector :x 1921090.8 :y 53425.766 :z 237949.75 :w 1.0)
+        ;; :trans (new 'static 'vector :x 1942413.2 :y 34479.31 :z 275525.62 :w 1.0)
+        ;; :quat (new 'static 'vector :y 0.4562 :w 0.8898)
+        ;; :camera-trans (new 'static 'vector :x 1921090.8 :y 53425.766 :z 237949.75 :w 1.0)
+        ;; :camera-rot (new 'static 'inline-array vector3s 3
+        ;;   (new 'static 'vector3s :data (new 'static 'array float 3 0.869 0.0 -0.4947))
+        ;;   (new 'static 'vector3s :data (new 'static 'array float 3 0.0663 0.9909 0.1165))
+        ;;   (new 'static 'vector3s :data (new 'static 'array float 3 0.4903 -0.134 0.8611))
+        ;;   )
+        :trans (new 'static 'vector :x (meters 464.8415) :y (meters 7.9980) :z (meters 47.8684) :w 1.0)
+        :quat (new 'static 'vector :x 0.0008 :y 0.8552 :z 0.0012 :w 0.5181)
+        :camera-trans (new 'static 'vector :x (meters 453.1166) :y (meters 13.0833) :z (meters 44.2704) :w 1.0)
         :camera-rot (new 'static 'inline-array vector3s 3
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.869 0.0 -0.4947))
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.0663 0.9909 0.1165))
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.4903 -0.134 0.8611))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.2794  0.0000 -0.9601))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.1132  0.9930  0.0329))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.9534 -0.1179  0.2774))
           )
         :on-goto #f
         :vis-nick 'prison
@@ -3384,13 +3399,20 @@
         :name "game-start-hero"
         :level 'prison
         :flags (continue-flags game-start hero-mode)
-        :trans (new 'static 'vector :x 1942413.2 :y 34479.31 :z 275525.62 :w 1.0)
-        :quat (new 'static 'vector :y 0.4562 :w 0.8898)
-        :camera-trans (new 'static 'vector :x 1921090.8 :y 53425.766 :z 237949.75 :w 1.0)
+        ;; :trans (new 'static 'vector :x 1942413.2 :y 34479.31 :z 275525.62 :w 1.0)
+        ;; :quat (new 'static 'vector :y 0.4562 :w 0.8898)
+        ;; :camera-trans (new 'static 'vector :x 1921090.8 :y 53425.766 :z 237949.75 :w 1.0)
+        ;; :camera-rot (new 'static 'inline-array vector3s 3
+        ;;   (new 'static 'vector3s :data (new 'static 'array float 3 0.869 0.0 -0.4947))
+        ;;   (new 'static 'vector3s :data (new 'static 'array float 3 0.0663 0.9909 0.1165))
+        ;;   (new 'static 'vector3s :data (new 'static 'array float 3 0.4903 -0.134 0.8611))
+        :trans (new 'static 'vector :x (meters 464.8415) :y (meters 7.9980) :z (meters 47.8684) :w 1.0)
+        :quat (new 'static 'vector :x 0.0008 :y 0.8552 :z 0.0012 :w 0.5181)
+        :camera-trans (new 'static 'vector :x (meters 453.1166) :y (meters 13.0833) :z (meters 44.2704) :w 1.0)
         :camera-rot (new 'static 'inline-array vector3s 3
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.869 0.0 -0.4947))
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.0663 0.9909 0.1165))
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.4903 -0.134 0.8611))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.2794  0.0000 -0.9601))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.1132  0.9930  0.0329))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.9534 -0.1179  0.2774))
           )
         :on-goto #f
         :vis-nick 'prison
@@ -3408,13 +3430,20 @@
         :name "prison-intro-start"
         :level 'prison
         :flags (continue-flags scene-wait change-continue)
-        :trans (new 'static 'vector :x 1942413.2 :y 34479.31 :z 275525.62 :w 1.0)
-        :quat (new 'static 'vector :y 0.4562 :w 0.8898)
-        :camera-trans (new 'static 'vector :x 1921090.8 :y 53425.766 :z 237949.75 :w 1.0)
+        ;; :trans (new 'static 'vector :x 1942413.2 :y 34479.31 :z 275525.62 :w 1.0)
+        ;; :quat (new 'static 'vector :y 0.4562 :w 0.8898)
+        ;; :camera-trans (new 'static 'vector :x 1921090.8 :y 53425.766 :z 237949.75 :w 1.0)
+        ;; :camera-rot (new 'static 'inline-array vector3s 3
+        ;;   (new 'static 'vector3s :data (new 'static 'array float 3 0.869 0.0 -0.4947))
+        ;;   (new 'static 'vector3s :data (new 'static 'array float 3 0.0663 0.9909 0.1165))
+        ;;   (new 'static 'vector3s :data (new 'static 'array float 3 0.4903 -0.134 0.8611))
+        :trans (new 'static 'vector :x (meters 464.8415) :y (meters 7.9980) :z (meters 47.8684) :w 1.0)
+        :quat (new 'static 'vector :x 0.0008 :y 0.8552 :z 0.0012 :w 0.5181)
+        :camera-trans (new 'static 'vector :x (meters 453.1166) :y (meters 13.0833) :z (meters 44.2704) :w 1.0)
         :camera-rot (new 'static 'inline-array vector3s 3
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.869 0.0 -0.4947))
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.0663 0.9909 0.1165))
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.4903 -0.134 0.8611))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.2794  0.0000 -0.9601))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.1132  0.9930  0.0329))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.9534 -0.1179  0.2774))
           )
         :on-goto #f
         :vis-nick 'prison
