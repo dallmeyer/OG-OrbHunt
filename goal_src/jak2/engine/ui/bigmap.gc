@@ -392,7 +392,6 @@
 
 (defmethod draw-city-map ((this bigmap) (arg0 dma-buffer))
   "Generate DMA to draw the city map. This has only 2 layers, but has scrolling."
-
   (let ((s4-0 (the-as (pointer uint32) (-> this bigmap-image art-group))))
     ;; og:preserve-this
     ; (texture-upload-dma this arg0 (the-as (pointer uint32) (+ (+ (-> s4-0 0) 16) (the-as uint s4-0))) 0 16 16 (gs-psm ct32))
@@ -503,7 +502,7 @@
             (set! f1-0 (- f1-0))
             )
         (set! (-> a2-1 x)    (+ (the float (-> this x0)) (* bigmap-scale 2.0 f1-0 (the float (-> a3-0 x)))))  ;; icon starts at bigmap.x0 + 2*scale*realpos.x
-        (set! (-> a2-1 y) (- (+ (the float (-> this y0)) (* bigmap-scale 2.0      (the float (-> a3-0 y)))) (-> this scroll y)))      ;; ... 
+        (set! (-> a2-1 y) (- (+ (the float (-> this y0)) (* bigmap-scale 2.0      (the float (-> a3-0 y)))) (* bigmap-scale (-> this scroll y))))      ;; ... consider scroll
         (let ((f1-2 (* 20.0 f1-0 f0-0))
               (f0-1 (* 20.0 f0-0))
               )
@@ -735,10 +734,21 @@
                              (alpha-1 (new 'static 'gs-alpha :b #x1 :d #x1))
                              (clamp-1 (new 'static 'gs-clamp :wms (gs-tex-wrap-mode clamp) :wmt (gs-tex-wrap-mode clamp)))
                              )
-      (if (= (-> this bigmap-index) 20)
+      (cond
+        ((= (-> this bigmap-index) 20)
+          (when (and (not *progress-process*)
+                     (or (= (-> (level-get-target-inside *level*) name) 'consite)
+                         (= (-> (level-get-target-inside *level*) name) 'consiteb)
+                         ))
+            ;; force certain scroll for consite mini-bigmap hack
+            (set! (-> this scroll y) 200.0)
+            )
           (draw-city-map this s4-1)
+          )
+        (else
           (draw-non-city-map this s4-1)
           )
+        )
       )
     (with-dma-buffer-add-bucket ((s4-2 (-> *display* frames (-> *display* on-screen) global-buf))
                                  (bucket-id tex-all-map)
@@ -800,7 +810,7 @@
               (-> (the-as matrix sv-104) trans)
               (+ (the float (-> this x0)) (* 2.0 bigmap-scale f30-0 (the float (-> this pos x))))
               0.0
-              (- (+ (the float (-> this y0)) (* 2.0 bigmap-scale (the float (-> this pos y)))) (-> this scroll y))
+              (- (+ (the float (-> this y0)) (* 2.0 bigmap-scale (the float (-> this pos y)))) (* bigmap-scale (-> this scroll y)))
               1.0
               )
             (set-vector! (-> this corner 0) 0.0 0.0 (* bigmap-scale -7.0) 1.0)
