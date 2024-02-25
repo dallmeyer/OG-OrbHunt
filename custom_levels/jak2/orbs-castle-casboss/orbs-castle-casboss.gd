@@ -4,7 +4,6 @@
 ;; the actual file name still needs to be 8.3
 ("O0M.DGO"
  (
-  "ctywide-part.o"
   "air-train-ag.go"
   "orbs-castle-casboss.go"
   ))

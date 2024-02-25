@@ -268,6 +268,16 @@
         "name":"ctygenb-skill-22"
       }
     },
+    {
+      "trans": [  258.9022, -3.8791, -267.5623], // in water in ramp support beams, open area before stadium
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 258.9022, -3.8791, -267.5623, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenb-skill-23"
+      }
+    },
 
     // HOVER ORBS
     {

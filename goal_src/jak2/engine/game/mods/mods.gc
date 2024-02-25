@@ -589,7 +589,8 @@
     (('burning-bush-8) ;; orbhunt - more related overrides in mod-override-burning-bush-get-on!
      (set-vector-meters! (-> arg0 extra trans) 336.18   7.87 1721.80)  ;; jak 3 moment
       ;; fix rotation. 2 is 'rotoffset. do this to display: (set-entity! *entity-debug-inspect* (entity-by-name "burning-bush-8"))
-     (set! (-> (the (pointer float) (get-tag-index-data arg0 2))) 32768.0)) 
+    ;;  (set! (-> (the (pointer float) (get-tag-index-data arg0 2))) 32768.0)
+     ) 
       
 
     ;; === ctrfarma (between bazaar and ctygen, with mountain/forest exit) ===
