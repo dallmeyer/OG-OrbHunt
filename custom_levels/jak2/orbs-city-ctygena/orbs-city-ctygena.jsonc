@@ -356,20 +356,62 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [  -80.5283, 8.3464, -19.7391, 10], // bounding sphere
       "lump": {
-        "name": "ctygena-skill-30"
+        "name": "ctygena-skill-31"
+      }
+    },    
+    {
+      "trans": [  52.4905, 16.9989, -118.3151], // over doors / behind green marquee before ctygenb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 52.4905, 16.9989, -118.3151, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-32"
+      }
+    },
+    {
+      "trans": [  49.7961, 27.4231, -84.4843], // up high in crevice, car launch or abah from red light before ctygenb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 49.7961, 27.4231, -84.4843, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-33"
+      }
+    },
+    {
+      "trans": [ -45.74,  24.00, -86.72], // on stable rooftop on south path to ctygenb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -45.74,  24.00, -86.72, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-34"
+      }
+    },
+    {
+      "trans": [ -167.0724, 11.0, -175.6542], // "inside" lamp on bridge in middle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -167.0724, 11.0, -175.6542, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-35",
+        "alt-actor": "ctyn-lamp-35"
+      }
+    },
+
+    // HOVER orbs
+    {
+      "trans": [ -94.23,  45.40, -88.42  ], // 3 on left at start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -94.23,  45.40, -88.42, 10], // bounding sphere
+      "lump": {
+        "name":"ctygena-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
       }
     }
-    // HOVER orbs
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
   ]
 }

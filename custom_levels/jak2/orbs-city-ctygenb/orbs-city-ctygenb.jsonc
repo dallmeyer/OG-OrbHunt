@@ -491,6 +491,16 @@
         "name": "ctygenb-skill-43"
       }
     },
+    {
+      "trans": [  87.98,   8.59, -27.06], // behind pillar in corner before path to ctyslumb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  87.98,   8.59, -27.06, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenb-skill-44"
+      }
+    },
 
     // CRATES
     {
