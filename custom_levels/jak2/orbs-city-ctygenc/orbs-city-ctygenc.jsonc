@@ -76,7 +76,39 @@
       "lump": {
         "name": "ctygenc-skill-3"
       }
-    }
+    },
+    {
+      "trans": [   13.41,  24.12, 234.71 ], // on stable roof on back hallway to path to ctygena
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  13.41,  24.12, 234.71, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenc-skill-4"
+      }
+    },
+    {
+      "trans": [   41.40,  29.77, 291.65 ], // slippery rooftop opposite ^, boosted/extended over
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  41.40,  29.77, 291.65, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenc-skill-5"
+      }
+    },
+    {
+      "trans": [  9.0279, 16.2374, 200.5152 ], // behind window cover on backpath to ctygena
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 9.0279, 16.2374, 200.5152, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenc-skill-6"
+      }
+    },
+    
+    
     // {
     //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
     //   "etype": "skill",  // actor type
@@ -88,5 +120,37 @@
     //     "pickup-amount": ["float", 3.0]  // goldge
     //   }
     // }
+
+    // moved from ctygena for proper spawning
+    {
+      "trans": [  -111.0693, 16.1826, 6.3413], // under window cover right before ctygenc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -111.0693, 16.1826, 6.3413, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-22"
+      }
+    },
+    {
+      "trans": [-200.57,  24.00,  38.86], // up on stable rooftop, on path to ctygenc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-200.57,  24.00,  38.86, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-23"
+      }
+    },
+    {
+      "trans": [  -181.0340, 30.2096, 5.8379], // up in corner/high roof, boosted/extended over from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -181.0340, 30.2096, 5.8379, 10], // bounding sphere
+      "lump": {
+        "name": "ctygena-skill-24"
+      }
+    }
   ]
 }
