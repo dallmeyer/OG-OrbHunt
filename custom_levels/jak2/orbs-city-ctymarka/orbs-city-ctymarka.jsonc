@@ -231,7 +231,7 @@
       "bsphere": [-87.7797, 8.65, 562.7805, 10], // bounding sphere
       "lump": {
         "name": "ctymarka-skill-18",
-        "alt-actor": "market-basker-b-224"
+        "alt-actor": "market-basket-b-224"
       }
     },
     {
@@ -315,6 +315,26 @@
       "lump": {
         "name": "ctymarka-skill-26",
         "bob-scale": ["float", 0.5]
+      }
+    },
+    {
+      "trans": [ -10.4299, 22.7983, 720.0179], // near ctypal, south side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -10.4299, 22.7983, 720.0179, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-27"
+      }
+    },
+    {
+      "trans": [ -11.49,  24.53, 742.23], // jump up and around "oob" from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -11.49,  24.53, 742.23, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarka-skill-28"
       }
     }
     // {
