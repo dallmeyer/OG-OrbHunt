@@ -47,11 +47,11 @@
 
   "actors" : [
     {
-      "trans": [  221.90, 345.78, 617.95 ], // under conference table in central room near throne
+      "trans": [  222.0634, 346.6967, 615.0919], // on seat of table in conf room
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 221.90, 345.78, 617.95, 10], // bounding sphere
+      "bsphere": [  222.0634, 346.6967, 615.0919, 10], // bounding sphere
       "lump": {
         "name":"palent-skill-01"
       }
@@ -247,7 +247,126 @@
         "name":"palent-skill-20"
       }
     },
-    // HOVER CELLS
+    {
+      "trans": [ 242.03, 364.58, 560.73], // on lamp up high behind turret after first guards
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 242.03, 364.58, 560.73, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-21"
+      }
+    },
+    {
+      "trans": [ 273.23, 368.77, 631.67], // on top of center of X support beam after turret in guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 273.23, 368.77, 631.67, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-22"
+      }
+    },
+    {
+      "trans": [ 257.30, 383.86, 626.55], // higher up on X beam from ^ against center wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 257.30, 383.86, 626.55, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-23",
+        "pickup-amount": ["float", 2.0]   // abah hint
+      }
+    },
+    {
+      "trans": [ 255.97, 398.41, 626.15], // way up on central wall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 255.97, 398.41, 626.15, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-24"
+      }
+    },
+    {
+      "trans": [ 249.21, 385.53, 572.14], // way up on central wall above turret in guard section, crouch proxy on wall below
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 249.21, 385.53, 572.14, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-25"
+      }
+    },
+    {
+      "trans": [ 263.30, 367.35, 686.67], // up on top of doubled up barriers, after breakable window
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 263.30, 367.35, 686.67, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-26"
+      }
+    },
+    {
+      "trans": [ 292.85, 354.50, 676.32], // corner of grindable/breakable window
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 292.85, 354.50, 676.32, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-27"
+      }
+    },
+    {
+      "trans": [ 257.31, 342.57, 626.52], // under floor, on lower support near breakable window but central wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 257.31, 342.57, 626.52, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-28"
+      }
+    },
+    {
+      "trans": [  206.3661, 354.8578, 627.7993], // standpoint on tip of flagpole in conf room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   206.3661, 354.8578, 627.7993, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-29"
+      }
+    },
+    {
+      "trans": [  215.3312, 363.2, 620.2028], // infin jump/standpoint on rafters in center of conf
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  215.3312, 363.2, 620.2028, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-30",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    // CRATES
+    {
+      "trans": [ 203.73, 345.18, 617.47], // in conf room
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.3267, 0, -0.9451], // quaternion
+      "bsphere": [ 203.73, 345.18, 617.47, 10], // bounding sphere
+      "lump": {
+        "name": "palent-crate-1",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    // HOVER ORBS
     {
       "trans": [  153.19, 377.19, 609.04], // pillar up high on other end of central hallway, near elevator
       "etype": "skill",  // actor type
@@ -282,11 +401,11 @@
       }
     },
     {
-      "trans": [  153.62, 400.62, 622.02], // in rafters of central hallway (extended from infin jump or just hover up)
+      "trans": [   172.5696, 414.3390, 613.6419], // in rafters of central hallway (extended from infin jump or just hover up)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 153.62, 400.62, 622.02, 10], // bounding sphere
+      "bsphere": [  172.5696, 414.3390, 613.6419, 10], // bounding sphere
       "lump": {
         "name":"palent-skill-hover-04",
         "pickup-amount": ["float", 3.0]  // goldge
