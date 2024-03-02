@@ -200,8 +200,58 @@
         "name": "ctygenc-skill-15"
       }
     },
+    {
+      "trans": [  191.8370, -7.2949, 291.1374], // under water below wide bridge
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  191.8370, -7.2949, 291.1374, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenc-skill-16"
+      }
+    },
+    {
+      "trans": [ 0.5231, 29.0959, 45.1683], // up on sign in corner before path to ctygena (car launch)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 0.5231, 29.0959, 45.1683, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenc-skill-17"
+      }
+    },
+    {
+      "trans": [ 79.2938, 28.4999, 93.4587], // under sheet of metal up on building in NW central area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 79.2938, 28.4999, 93.4587, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenc-skill-18"
+      }
+    },
+    {
+      "trans": [ 288.38,   8.59, 367.23], // behind fencing, SE corner of water
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 288.38,   8.59, 367.23, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenc-skill-19"
+      }
+    },
+    {
+      "trans": [ 255.00,  18.42, 385.30], // behind tree SE side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 255.00,  18.42, 385.30, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenc-skill-20"
+      }
+    },
     
-    
+    // HOVER ORBS
     {
       "trans": [ 363.62,  48.81, 242.35  ], // edge of roof up high in useless back alleyway
       "etype": "skill",  // actor type
