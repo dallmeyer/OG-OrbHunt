@@ -208,11 +208,11 @@
       }
     },
     {
-      "trans": [  192.6893, 357.3270, 579.8808], // on shielf behind turret in center hallway
+      "trans": [   153.5770, 357.3443, 609.4119], // on shielf in center hallway near elevator
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  192.6893, 357.3270, 579.8808, 10], // bounding sphere
+      "bsphere": [  153.5770, 357.3443, 609.4119, 10], // bounding sphere
       "lump": {
         "name":"palent-skill-17"
       }
@@ -349,6 +349,36 @@
         "bob-scale": ["float", 0.4]
       }
     },
+    {
+      "trans": [ 203.0981, 346.2413, 577.0105 ], // under turret in central hallway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  203.0981, 346.2413, 577.0105, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-31"
+      }
+    },
+    {
+      "trans": [ 185.2134, 364.2591, 634.7841 ], // on standpoint ceiling rafter in first part of second guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  185.2134, 364.2591, 634.7841, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-32"
+      }
+    },
+    {
+      "trans": [ 198.18, 342.57, 677.66 ], // lower elbow of support in second guard section, before grindable circle falls
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  198.18, 342.57, 677.66, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-33"
+      }
+    },
     // CRATES
     {
       "trans": [ 203.73, 345.18, 617.47], // in conf room
@@ -408,6 +438,39 @@
       "bsphere": [  172.5696, 414.3390, 613.6419, 10], // bounding sphere
       "lump": {
         "name":"palent-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  223.69, 363.45, 657.12], // top of support for glass on left wall in beginning of second guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  223.69, 363.45, 657.12, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-hover-05",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  196.03, 366.17, 647.17], // top of light overhead in beginning of second guard section (can jump from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  196.03, 366.17, 647.17, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-hover-06",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  194.83, 361.27, 654.40], // top of pipe overhead in beginning of section guard section (can jump from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 194.83, 361.27, 654.40, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-hover-07",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     }

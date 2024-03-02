@@ -241,13 +241,33 @@
       }
     },
     {
-      "trans": [ 255.00,  18.42, 385.30], // behind tree SE side
+      "trans": [  132.47,  18.42, 384.69], // behind tree SW side
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 255.00,  18.42, 385.30, 10], // bounding sphere
+      "bsphere": [  132.47,  18.42, 384.69, 10], // bounding sphere
       "lump": {
         "name": "ctygenc-skill-20"
+      }
+    },
+    {
+      "trans": [ 180.65,  39.95, 135.21], // back of central structure, car launch ofc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 180.65,  39.95, 135.21, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenc-skill-21"
+      }
+    },
+    {
+      "trans": [  61.3433, 10.2874, 335.3700], // around corner NE side down back path
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  61.3433, 10.2874, 335.3700, 10], // bounding sphere
+      "lump": {
+        "name": "ctygenc-skill-22"
       }
     },
     

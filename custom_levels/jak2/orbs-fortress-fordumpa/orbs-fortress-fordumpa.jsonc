@@ -86,6 +86,24 @@
       "lump": {
         "name": "fordumpa-skill-4"
 			}
-		}
+		},
+    
+    // CRATES
+    {
+      "trans": [ 480.84,  23.0, 275.10], // just after first tank section (last room in fordumpa)
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.3267, 0, -0.9451], // quaternion
+      "bsphere": [ 480.84,  23.0, 275.10, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpa-crate-1",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    }
   ]
 }
