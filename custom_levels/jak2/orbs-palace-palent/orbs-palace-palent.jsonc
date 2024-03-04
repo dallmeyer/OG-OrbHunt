@@ -379,6 +379,27 @@
         "name":"palent-skill-33"
       }
     },
+    {
+      "trans": [  204.1244, 385.2073, 728.1355 ], // up high where support meets window, just before falling grind circle (abah/cancel chain)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   204.1244, 385.2073, 728.1355, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-34"
+      }
+    },
+    {
+      "trans": [  187.98, 364.53, 673.98 ], // on lamp over void near grindable circle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  187.98, 364.53, 673.98, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-35"
+      }
+    },
+
     // CRATES
     {
       "trans": [ 203.73, 345.18, 617.47], // in conf room
@@ -396,6 +417,23 @@
         ]
       }
     },
+    {
+      "trans": [ 193.12, 345.18, 628.40], // in initial part of second guard section
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 0], // quaternion
+      "bsphere": [ 193.12, 345.18, 628.40, 10], // bounding sphere
+      "lump": {
+        "name": "palent-crate-2",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+
     // HOVER ORBS
     {
       "trans": [  153.19, 377.19, 609.04], // pillar up high on other end of central hallway, near elevator
@@ -464,13 +502,35 @@
       }
     },
     {
-      "trans": [  194.83, 361.27, 654.40], // top of pipe overhead in beginning of section guard section (can jump from ^)
+      "trans": [  194.83, 361.27, 654.40], // top of pipe overhead in beginning of second guard section (can jump from ^)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [ 194.83, 361.27, 654.40, 10], // bounding sphere
       "lump": {
         "name":"palent-skill-hover-07",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 172.95, 387.09, 692.38], // top of pipe WAY overhead in second guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 171.52, 404.68, 687.55, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-hover-08",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 171.52, 404.68, 687.55], // top of pipe WAY WAY overhead in second guard section (can abah from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 171.52, 404.68, 687.55, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-hover-09",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     }

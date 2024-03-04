@@ -423,6 +423,8 @@
     (('skill-33) (set-vector-meters! (-> arg0 extra trans) 225.70 401.31  -4.96))  ;; atop light at end of first hotplate section
     ;; === palroof/palboss ===
     (('skill-34) (set-vector-meters! (-> arg0 extra trans) 181.05 417.75 728.3))  ;; over wall in final phase of praxis 1
+    ;; === palent ===
+    ;; none
     ;; ====== ORBS / CASTLE ======
     ;; === castle ===
     (('skill-126) (set-vector-meters! (-> arg0 extra trans) -26.54  64.99 -1692.65))  ;; on pipe in lobby
@@ -660,6 +662,9 @@
     ;;   (set-vector-meters! (-> arg0 extra trans) 803.61   15.26 158.12) ;;
     ;;   (set-vector! (-> arg0 quat) 0.0 0.0 0.0 0.0)
     ;;   )
+    ;; === palent ===
+    (('crate-817) (set-vector-meters! (-> arg0 extra trans) 195.13 345.78 630.70)) ;; other side of initial part of second guard section
+
     ;; village1
     (('crate-665) (set-vector-meters! (-> arg0 extra trans) -82.0 21.5 -10.3))      ;; high ledge between bridges
     (('crate-666) (set-vector-meters! (-> arg0 extra trans) 32.5 12.5 -132.7))      ;; on tree 
