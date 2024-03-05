@@ -663,7 +663,7 @@
     ;;   (set-vector! (-> arg0 quat) 0.0 0.0 0.0 0.0)
     ;;   )
     ;; === palent ===
-    (('crate-817) (set-vector-meters! (-> arg0 extra trans) 195.13 345.78 630.70)) ;; other side of initial part of second guard section
+    (('crate-817) (set-vector-meters! (-> arg0 extra trans) 195.13 345.18 630.70)) ;; other side of initial part of second guard section
 
     ;; village1
     (('crate-665) (set-vector-meters! (-> arg0 extra trans) -82.0 21.5 -10.3))      ;; high ledge between bridges

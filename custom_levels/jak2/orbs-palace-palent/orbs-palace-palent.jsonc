@@ -399,6 +399,147 @@
         "name":"palent-skill-35"
       }
     },
+    {
+      "trans": [  121.2005, 350.2663, 632.7104], // on wall behind wall behind turret in 2nd guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  121.2005, 350.2663, 632.7104, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-36",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 117.91, 364.15, 632.37], // on tiny ledge up behind turret before elevator in 2nd guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  117.91, 364.15, 632.37, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-37"
+      }
+    },
+    {
+      "trans": [ 123.48, 364.16, 629.57], // around corner from ^, over elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 123.48, 364.16, 629.57, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-38"
+      }
+    },
+    {
+      "trans": [ 127.95, 369.05, 618.42], // on pipe near end of 2nd guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 127.95, 369.05, 618.42, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-39"
+      }
+    },
+    {
+      "trans": [ 135.53, 366.08, 615.55], // on pipe near end of 2nd guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 135.53, 366.08, 615.55, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-40"
+      }
+    },
+    {
+      "trans": [ 136.51, 374.85, 601.95], // on pipe near end of 2nd guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 136.51, 374.85, 601.95, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-41"
+      }
+    },
+    {
+      "trans": [ 128.57, 374.87, 592.98], // on pipe near end of 2nd guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 128.57, 374.87, 592.98, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-42"
+      }
+    },
+    {
+      "trans": [  132.3186, 342.3608, 610.0499], // hanging between droppable platforms near end of 2nd guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  132.3186, 342.3608, 610.0499, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-43"
+      }
+    },
+    {
+      "trans": [   130.2801, 347.2536, 664.8840], // under machine next to turret in 2nd guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   130.2801, 347.2536, 664.8840, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-44"
+      }
+    },
+    {
+      "trans": [   75.8997, 344.6586, 641.1163], // behind/under machine on left after turret in 2nd guard section (extended/boosted)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  75.8997, 344.6586, 641.1163, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-45"
+      }
+    },
+    {
+      "trans": [ 99.6612, 348.9220, 627.2199], // hang from back of wall over void (behind breakable glass) in 2nd guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  99.6612, 348.9220, 627.2199, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-46"
+      }
+    },
+    {
+      "trans": [  73.1681, 353.3034, 552.3830], // in far corner near window at end of 2nd guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  73.1681, 353.3034, 552.3830, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-47"
+      }
+    },
+    {
+      "trans": [  137.06, 358.31, 611.55], //  on pipe near end of 2nd guard section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  137.06, 358.31, 611.55, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-48"
+      }
+    },
+    {
+      "trans": [  137.0727, 349.6791, 605.2006], //  behind canisters near trapdoor plats right before exit elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  137.0727, 349.6791, 605.2006, 10], // bounding sphere
+      "lump": {
+        "name":"palent-skill-49"
+      }
+    },
 
     // CRATES
     {
@@ -426,6 +567,7 @@
       "lump": {
         "name": "palent-crate-2",
         "crate-type": "iron",
+        "light-index": ["int32", 10],
         "eco-info": [
           "int32",
           22, // (pickup-type skill)
