@@ -175,7 +175,7 @@
 (defun speedrun-practice-store-temp-checkpoint ()
   (case (-> *target* state)
     ;; only store temp checkpoint if in one of these states
-    ((target-look-around target-stance target-wade-stance target-swim-stance)
+    ((target-look-around target-stance target-duck-stance target-wade-stance target-swim-stance)
       ;; assume current continue is good enough for the current location
       (continue-point-copy! *tmp-continue-point* (-> *game-info* current-continue))
       (vector-copy! (-> *tmp-continue-point* trans) (-> *target* root trans))
@@ -183,6 +183,15 @@
       (vector-copy! (-> *tmp-continue-point* camera-trans) (-> *camera-combiner* trans))
       (camera-rot-copy! *tmp-continue-point* (-> *camera-combiner* inv-camera-rot))
 
+      ;; some weird bug where current continue has #f or default level?
+      (when (or (not (-> *tmp-continue-point* level))
+                (= (-> *tmp-continue-point* vis-nick) 'default-level))
+        (let ((lvl (level-get-target-inside *level*)))
+          (dbg-format 0 "current continue has #f level, using inside level ~A~%" lvl)
+          (set! (-> *tmp-continue-point* level) (-> lvl name))
+          (set! (-> *tmp-continue-point* vis-nick) (-> lvl name))
+          )
+        )
       (cheats-sound-play #t)
       )
     )

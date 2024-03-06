@@ -666,7 +666,10 @@
     (('crate-817) (set-vector-meters! (-> arg0 extra trans) 195.13 345.18 630.70)) ;; other side of initial part of second guard section
 
     ;; === tombb ===
-    (('crate-724) (set-vector-meters! (-> arg0 extra trans) 332.35 -59.39 1254.91)) ;; in cubby where orb normally is
+    (('crate-725)
+      (set-vector-meters! (-> arg0 extra trans) 332.35 -59.99 1254.91) ;; in cubby where orb normally is
+      (set-vector! (-> arg0 quat) 0.0 1.0 0.0 0.0)
+      )
 
     ;; village1
     (('crate-665) (set-vector-meters! (-> arg0 extra trans) -82.0 21.5 -10.3))      ;; high ledge between bridges

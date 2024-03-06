@@ -5966,7 +5966,7 @@
        "Popup"
        (menu
         "Continue"
-        (function "yeah"      #f ,(lambda () (start 'play (get-continue-by-name *game-info* startingDebugContinuePoint))))
+        (function "temp"      #f ,(lambda () (start 'play (get-continue-by-name *game-info* startingDebugContinuePoint))))
         (function "atoll"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "atoll-ext-test"))))
         (function "casboss"   #f ,(lambda () (start 'play (get-continue-by-name *game-info* "casboss-start"))))
         (function "caspad"    #f ,(lambda () (start 'play (get-continue-by-name *game-info* "caspad-start"))))
