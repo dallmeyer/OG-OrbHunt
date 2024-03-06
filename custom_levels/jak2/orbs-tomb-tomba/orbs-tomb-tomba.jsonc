@@ -136,21 +136,64 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [ 222.45, -33.29, 1140.35, 10], // bounding sphere
       "lump": {
-        "name":"tomba-skill-08"
+        "name":"tomba-skill-09"
+      }
+    },
+    {
+      "trans": [ 212.3482, -31.6584, 1044.0378], // between wall and precursor thing on left at top of ramps
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 212.3482, -31.6584, 1044.0378, 10], // bounding sphere
+      "lump": {
+        "name":"tomba-skill-10"
+      }
+    },
+    {
+      "trans": [ 254.82, -70.08, 1373.33], // between wall and precursor thing on left way near boss room (dark giant up and around)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 254.82, -70.08, 1373.33, 10], // bounding sphere
+      "lump": {
+        "name":"tomba-skill-11"
+      }
+    },
+    
+    // HOVER OBRS
+    {
+      "trans": [ 127.14,  -9.40, 1101.13], // high ledge above right tomb exit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [127.14,  -9.40, 1101.13, 10], // bounding sphere
+      "lump": {
+        "name":"tomba-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 251.39,  -9.83, 1127.87], // high ledge in corner above left tomb exit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 251.39,  -9.83, 1127.87, 10], // bounding sphere
+      "lump": {
+        "name":"tomba-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  260.1748, -19.9055, 1059.3652], // high slant ledge in corner above left tomb exit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  260.1748, -19.9055, 1059.3652, 10], // bounding sphere
+      "lump": {
+        "name":"tomba-skill-hover-03",
+        "bob-scale": ["float", 0.5],
+        "pickup-amount": ["float", 3.0]  // goldge
       }
     }
-    
-    // // HOVER CELLS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
   ]
 }
