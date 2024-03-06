@@ -159,6 +159,26 @@
         "name":"tomba-skill-11"
       }
     },
+    {
+      "trans": [ 133.0110, -74.7171, 1311.7974], // in claw of precursor outside right tomb entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 133.0110, -74.7171, 1311.7974, 10], // bounding sphere
+      "lump": {
+        "name":"tomba-skill-12"
+      }
+    },
+    {
+      "trans": [ 133.0110, -74.7171, 1311.7974], // behind flaming pot at right tomb entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 133.0110, -74.7171, 1311.7974, 10], // bounding sphere
+      "lump": {
+        "name":"tomba-skill-13"
+      }
+    },
     
     // HOVER OBRS
     {
@@ -191,6 +211,18 @@
       "bsphere": [  260.1748, -19.9055, 1059.3652, 10], // bounding sphere
       "lump": {
         "name":"tomba-skill-hover-03",
+        "bob-scale": ["float", 0.5],
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  248.09, -29.64, 1371.54], // high slant ledge outside boss
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  248.09, -29.64, 1371.54, 10], // bounding sphere
+      "lump": {
+        "name":"tomba-skill-hover-04",
         "bob-scale": ["float", 0.5],
         "pickup-amount": ["float", 3.0]  // goldge
       }

@@ -47,16 +47,96 @@
 
   "actors" : [
     // left tomb
-    // {
-    //   "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-01"
-    //   }
-    // },
+    {
+      "trans": [  334.15, -63.90, 1263.75 ], // in cutout above door from first hallway into left tomb dark eco area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 334.15, -63.90, 1263.75, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-01"
+      }
+    },
+    {
+      "trans": [  343.79, -50.93, 1279.96 ], // on edge near ceiling, above ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 343.79, -50.93, 1279.96, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-02"
+      }
+    },
+    {
+      "trans": [ 332.50, -50.93, 1289.62], // on edge near ceiling, above ^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 332.50, -50.93, 1289.62, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-03"
+      }
+    },
+    {
+      "trans": [ 336.07, -62.40, 1218.85], // gap on one of teh spiky platforms
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 336.07, -62.40, 1218.85, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-04"
+      }
+    },
+    {
+      "trans": [  336.0509, -84.2387, 1247.6707], // in dark eco between entrance and raised steps down to tombd
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  336.0509, -84.2387, 1247.6707, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-05"
+      }
+    },
+    {
+      "trans": [ 296.78, -18.66, 1165.56], // up in left corner of infin jump area opposite start, jump from swingpoles
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 296.78, -18.66, 1165.56, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-06"
+      }
+    },
+    {
+      "trans": [ 335.1499, 9.6700, 1180.9699], // in banana bread box on ceiling, extended from infin jump area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 335.1499, 9.6700, 1180.9699, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-07"
+      }
+    },
+    {
+      "trans": [  341.3880, 6.5481, 1166.9327], // up in rafters above infin jump area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  341.3880, 6.5481, 1166.9327, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-08"
+      }
+    },
+    {
+      "trans": [  338.84, -18.49, 1166.17], // inside central circle of infin jump area opposite start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  338.84, -18.49, 1166.17, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-09"
+      }
+    }
     // // HOVER CELLS
     // {
     //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
