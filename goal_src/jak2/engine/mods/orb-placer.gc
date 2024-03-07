@@ -9,7 +9,7 @@
 (define *orb-placer-count* 0)
 
 ;; max number of orbs
-(defconstant ORB_PLACER_MAX 1000)
+(defconstant ORB_PLACER_MAX 100)
 
 ;; index of currently selected orb for placing
 (define *orb-placer-selected-idx* -1)
@@ -18,16 +18,16 @@
 (define *orb-placer-orbs* (new 'global 'boxed-array handle ORB_PLACER_MAX))
 
 (define *orb-placer-temp-strs* (new 'static 'boxed-array :type string :length ORB_PLACER_MAX
-  "orba-0"
-  "orba-1"
-  "orba-2"
-  "orba-3"
-  "orba-4"
-  "orba-5"
-  "orba-6"
-  "orba-7"
-  "orba-8"
-  "orba-9"
+  "orba-00"
+  "orba-01"
+  "orba-02"
+  "orba-03"
+  "orba-04"
+  "orba-05"
+  "orba-06"
+  "orba-07"
+  "orba-08"
+  "orba-09"
   "orba-10"
   "orba-11"
   "orba-12"
