@@ -129,7 +129,7 @@
       }
     },
     {
-      "trans": [ -93.69, -33.66, 1247.36], // up along wall in corner in empty room between 1st two shocky waters - abah from second arch (no hint hehe)
+      "trans": [ -93.69, -33.66, 1247.36], // up along wall in corner in empty room between 1st two shocky waters - follow from ^, abah from second arch (no hint hehe)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -186,6 +186,198 @@
       "bsphere": [    -122.03, -64.26, 1309.98, 10], // bounding sphere
       "lump": {
         "name":"tombc-skill-14"
+      }
+    },
+    {
+      "trans": [ -105.00, -48.04, 1237.18], // in big empty room, in between skill 09 and 10^^^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -105.00, -48.04, 1237.18, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-15"
+      }
+    },
+    {
+      "trans": [  -129.2566, -64.0541, 1368.5238], // down low on side of first plat in tile puzzle room (infin jump back up)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -129.2566, -64.0541, 1368.5238, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-16"
+      }
+    },
+    {
+      "trans": [ -90.89, -47.20, 1364.83], // on wall of tile puzzle room, first one counterclockwise
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -90.89, -47.20, 1364.83, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-17",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [      -86.1542, -29.1607, 1366.5622], // up in corner of tile puzzle room, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -86.1542, -29.1607, 1366.5622, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-18"
+      }
+    },
+    {
+      "trans": [ -148.32, -53.40, 1408.71], // on wall of 1st tile puzzle room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -148.32, -53.40, 1408.71, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-19"
+      }
+    },
+    {
+      "trans": [ -128.40, -53.78, 1444.01], // on wall of 1st tile puzzle room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -128.40, -53.78, 1444.01, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-20"
+      }
+    },
+    {
+      "trans": [ -76.79, -42.72, 1397.97], // on statue in corner of hallway after 1st tile puzzle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -76.79, -42.72, 1397.97, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-21"
+      }
+    },
+    {
+      "trans": [  -77.16, -30.81, 1405.56], // up above door frame in hallay after 1st tile puzzle (up from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -77.16, -30.81, 1405.56, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-22"
+      }
+    },
+    {
+      "trans": [  -2.64, -64.38, 1372.57], // in 3rd shocky water, right side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -2.64, -64.38, 1372.57, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-23"
+      }
+    },
+    {
+      "trans": [     -16.7073, -64.5392, 1341.8948], // in 3rd shocky water, crevice on left side (spam dive)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -16.7073, -64.5392, 1341.8948, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-24"
+      }
+    },
+    {
+      "trans": [   -2.64, -64.26, 1195.80], // in 4th shocky water, crevice on right side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -2.64, -64.26, 1195.80, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-25"
+      }
+    },
+    {
+      "trans": [   11.93, -65.04, 1109.23], // down low below plat in 2nd tile puzzle (infin jump)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   11.93, -65.04, 1109.23, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-26"
+      }
+    },
+    {
+      "trans": [ -16.94, -54.40, 1069.30], // just behind pillar on left in 5th shocky water
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -16.94, -54.40, 1069.30, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-27"
+      }
+    },
+    {
+      "trans": [     -11.7365, -45.4512, 1026.5451], // just under lamp over island in 5th shocky water
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -11.7365, -45.4512, 1026.5451, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-28"
+      }
+    },
+    {
+      "trans": [     -24.9037, -56.5759, 1029.7834], // behind bars in middle of 5th shocky water
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -24.9037, -56.5759, 1029.7834, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-29"
+      }
+    },
+    {
+      "trans": [  35.3969, -49.5175, 1021.9218], // in crevice just after 5th shocky water
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  35.3969, -49.5175, 1021.9218, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-30",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 35.3969, -32.2175, 1021.9218], // up high just after 5th shocky water, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 35.3969, -32.2175, 1021.9218, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-31"
+      }
+    },
+    {
+      "trans": [     65.2707, -43.5283, 1039.2204], // under little overhang before tombstones
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     65.2707, -43.5283, 1039.2204, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-32"
+      }
+    },
+    {
+      "trans": [ 71.00, -54.23, 1073.22], // crevice next to tombstone entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 71.00, -54.23, 1073.22, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-33"
       }
     },
 
@@ -253,6 +445,17 @@
       "bsphere": [ -161.3082, -30.0063, 1236.1385, 10], // bounding sphere
       "lump": {
         "name":"tombc-skill-hover-06",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  74.99, -18.15, 1097.45], // way up in ceiling of tombstones room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  74.99, -18.15, 1097.45, 10], // bounding sphere
+      "lump": {
+        "name":"tombc-skill-hover-07",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     }
