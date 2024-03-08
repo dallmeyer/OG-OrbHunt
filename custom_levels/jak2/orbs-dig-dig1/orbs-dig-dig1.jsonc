@@ -69,13 +69,33 @@
       }
     },
     {
-      "trans": [ 233.26, -69.1, -1831.89 ], // #t left once in main room, extended over lava under cag
+      "trans": [ 233.26, -69.1, -1831.89 ], // #t left once in main room, extended over lava under cage
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [233.26, -69.1, -1831.8, 10], // bounding sphere
+      "bsphere": [233.26, -69.1, -1831.89, 10], // bounding sphere
       "lump": {
         "name": "dig1-skill-01"
+      }
+    },
+    {
+      "trans": [ 441.33, -63.96, -1901.49], // in crevice on right wall in main room (jump over invis wall from platform above)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 441.33, -63.96, -1901.49, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-02"
+      }
+    },
+    {
+      "trans": [     379.3330, -79.4081, -1909.4050], // among rocks in ramp coming down from entrance towards lava river
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     379.3330, -79.4081, -1909.4050, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-03"
       }
     }
     // HOVER ORBS
