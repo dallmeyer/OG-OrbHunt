@@ -67,28 +67,403 @@
         "name":"dig3a-warp-gate-01",
         "distance": ["meters", 5.0]
       }
+    },
+    {
+      "trans": [     437.9255, -39.2817, -1730.5500], // between stalag/stalac in entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     437.9255, -39.2817, -1730.5500, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-01",
+        "bob-scale": ["float", 0.0]
+      }
+    },
+    {
+      "trans": [     405.6199, -59.1827, -1840.6401], // base of lamp and stalag
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    405.6199, -59.1827, -1840.6401, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 406.03, -44.05, -1838.77], // top of lamp post, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 406.03, -44.05, -1838.77, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-03"
+      }
+    },
+    {
+      "trans": [ 307.68, -68.25, -1849.72], // on edge over lava river behind spiky log
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 307.68, -68.25, -1849.72, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-04"
+      }
+    },
+    {
+      "trans": [ 365.83, -48.85, -1824.26], // top of mushroom-y stalag near spiky logs
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  365.83, -48.85, -1824.26, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-05",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [     370.1104, -36.8539, -1826.4665], // up high on wall near entrance/spiky logs, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    370.1104, -36.8539, -1826.4665, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-06"
+      }
+    },
+    {
+      "trans": [    403.1056, -63.3261, -1842.8447], // in corner under first platform from entrance into main room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    403.1056, -63.3261, -1842.8447, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-07"
+      }
+    },
+    {
+      "trans": [ 391.63, -59.43, -1870.41], // random triangle on early wooden path thats slippery
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  391.63, -59.43, -1870.41, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-08",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 383.75, -43.86, -1869.44], // top of 2nd lamp post, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 383.75, -43.86, -1869.44, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-09"
+      }
+    },
+    {
+      "trans": [ 311.80, -57.05, -1957.96], // under building in first room, crawl near lamp post base
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 311.80, -57.05, -1957.96, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-10"
+      }
+    },
+    {
+      "trans": [  304.7388, -57.3835, -1987.3613], // under fat stalac on far side of first room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  304.7388, -57.3835, -1987.3613, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-11",
+        "bob-scale": ["float", 0.5] // avoid clipping
+      }
+    },
+    {
+      "trans": [ 329.34, -60.85, -1970.76], // on support in back of building on far side of main room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 329.34, -60.85, -1970.76, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-12",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 328.58, -41.93, -1972.28], // behind stalags up high behind building on far side of main room, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  328.58, -41.93, -1972.28, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-13"
+      }
+    },
+    {
+      "trans": [ 348.53, -66.35, -1962.28], // on support for building next to path to dig3b
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  348.53, -66.35, -1962.28, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-14"
+      }
+    },
+    {
+      "trans": [ 267.98, -72.43, -1896.02], // in crack of crater from dig1 machine
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  267.98, -72.43, -1896.02, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-15"
+      }
+    },
+    {
+      "trans": [     201.2065, -57.5823, -1961.9185], // between 2 stalac//stalags up on cliff near end of lava river
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      201.2065, -57.5823, -1961.9185, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-16"
+      }
+    },
+    {
+      "trans": [ 240.0375, -57.5501, -1995.2387], // behind step up to 2nd scaffolding area (leading to warp exit)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 240.0375, -57.5501, -1995.2387, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-17"
+      }
+    },
+    {
+      "trans": [     251.9219, -54.9473, -2009.1965], // under platform exiting dig3b leading to final scaffolding section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     251.9219, -54.9473, -2009.1965, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-18"
+      }
+    },
+    {
+      "trans": [    263.7133, -49.0197, -2003.5838], // next to/slightly under platform exiting dig3b leading to final scaffolding section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    263.7133, -49.0197, -2003.5838, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-19"
+      }
+    },
+    {
+      "trans": [     158.9165, -52.5717, -1956.0454], // small gap at end of raised ground near lava river
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     158.9165, -52.5717, -1956.0454, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-20"
+      }
+    },
+    {
+      "trans": [ 237.78, -21.06, -1923.74], // on horn toward top of building with 2 ferris wheels
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 237.78, -21.06, -1923.74, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-21"
+      }
+    },
+    {
+      "trans": [ 226.32, -12.72, -1966.39], // top of building near warp exit, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 226.32, -12.72, -1966.39, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-22"
+      }
+    },
+    {
+      "trans": [     165.6247, -1.5254, -1892.5456], // top of ramp where spiky rocks come out (circle jump to keep momentum)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     165.6247, -1.5254, -1892.5456, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-23"
+      }
+    },
+    {
+      "trans": [ 184.46, -24.80, -1890.24], // bottom bit of ramp where spiky rocks come out, left side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 184.46, -24.80, -1890.24, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-24"
+      }
+    },
+    {
+      "trans": [ 201.05,   2.01, -1856.55], // top of lamp post near totem/warp exit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 201.05,   2.01, -1856.55, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-25"
+      }
+    },
+    {
+      "trans": [ 178.96,  -7.49, -1829.37], // under step just left of totem - tricky extended up under invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 178.96,  -7.49, -1829.37, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-26"
+      }
+    },
+    {
+      "trans": [ 206.63,   2.34, -1798.54], // tiny standpoint on horn of building between totem and warp exit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 206.63,   2.34, -1798.54, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-27"
+      }
+    },
+    {
+      "trans": [ 162.47,   2.35, -1832.62], // fake standpoint on edge of wood next to building by warp exit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 162.47,   2.35, -1832.62, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-28"
+      }
+    },
+    {
+      "trans": [ 126.41,  14.77, -1845.49], // doorstep of building across small gap from warp gate (extended from top of warp gate)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 126.41,  14.77, -1845.49, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-29"
+      }
+    },
+    {
+      "trans": [ 139.36,  23.05, -1838.02], // another building up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 139.36,  23.05, -1838.02, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-30"
+      }
+    },
+    {
+      "trans": [ 152.10,  30.79, -1846.82], // lamp on corner rooftop, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 152.10,  30.79, -1846.82, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-31"
+      }
+    },
+    {
+      "trans": [ 139.36,  23.05, -1838.02], // abah cancel/standpoint from ^ to rooftop
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 139.36,  23.05, -1838.02, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-32"
+      }
+    },
+    {
+      "trans": [  204.1985, -43.2958, -2019.7587], // between stalags in hallway from 3b back to 3a
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  204.1985, -43.2958, -2019.7587, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-33"
+      }
+    },
+    {
+      "trans": [      263.0843, -43.0663, -2037.3956], // between stalags in hallway from 3b back to 3a
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      263.0843, -43.0663, -2037.3956, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-34"
+      }
+    },
+    {
+      "trans": [    252.4124, -42.2898, -1954.6075], // underneath platform a bit before totem (tricky uppercut into infin jump on I beams)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    252.4124, -42.2898, -1954.6075, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-35"
+      }
+    },
+    {
+      "trans": [ 352.5694, -75.7219, -1978.2220], // in corner in hallway leading from 3a to 3b
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 352.5694, -75.7219, -1978.2220, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-skill-36"
+      }
+    },
+
+    // CRATES
+    {
+      "trans": [ 366.15, -76.0, -1997.63], // near other crates in hallway from 3a to 3b
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.2931, 0, 0.9560], // quaternion
+      "bsphere": [ 366.15, -76.0, -1997.63, 10], // bounding sphere
+      "lump": {
+        "name": "dig3a-crate-1",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [  181.99,   1.76, -1916.26], // on rooftop near totem/warp exit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 181.99,   1.76, -1916.26, 10], // bounding sphere
+      "lump": {
+        "name":"dig3a-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
-    // {
-    //   "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-01"
-    //   }
-    // },
-    // // HOVER ORBS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
   ]
 }

@@ -528,15 +528,14 @@
     ;; none 
     ;; ====== ORBS / DIG ======
     ;; === dig3a (front room with metalheads) ===
-    ;; skill-14
-    ;; skill-15
-    ;; skill-16
-    ;; === dig3b (second room with metalheads, buttons) ===
-    ;; skill-17
-    ;; skill-18
-    ;; skill-19
-    ;; skill-20
-    ;; skill-106
+    (('skill-14) (set-vector-meters! (-> arg0 extra trans) 441.33 -63.96 -1901.49 )) ;; in crevice on right wall in main room (uppercut over invis wall)
+    (('skill-15) (set-vector-meters! (-> arg0 extra trans) 379.3330 -79.4081 -1909.4050 )) ;; among rocks in ramp coming down from entrance towards lava river
+    (('skill-16) (set-vector-meters! (-> arg0 extra trans)  398.3031 -51.2921 -1814.1436 )) ;; behind stalacs right before main room
+    (('skill-17) (set-vector-meters! (-> arg0 extra trans) 427.9649 -58.1892 -1801.8002 )) ;; between rocks/stalags in entrance area
+    (('skill-18) (set-vector-meters! (-> arg0 extra trans) 442.6669 -56.9951 -1764.4019 )) ;; in corner straight down from higher part of entrance
+    (('skill-19) (set-vector-meters! (-> arg0 extra trans) 478.9531 -45.2447 -1736.4868 )) ;; behind rocks in wall by ramp in entrance
+    (('skill-20) (set-vector-meters! (-> arg0 extra trans) 438.6985 -46.0468 -1757.7114 )) ;; behind big stalag before ramp in entrance
+    (('skill-106) (set-vector-meters! (-> arg0 extra trans) 415.5820 -43.1975 -1747.6417 )) ;; in corner on left in early part of entrance
     ;; ====== ORBS / CANYON ======
     ;; fake level - see MOUNTAIN
     ;; ====== ORBS / CONSITE ======
