@@ -706,8 +706,10 @@
             )          
           )
         (else
-          (when (not (name= (-> alt-actor extra process state name) 'die))
-            ;; alt-actor is not dead, prevent pickup/hide
+          (when (not (or (name= (-> alt-actor extra process state name) 'die)
+                         (name= (-> alt-actor extra process state name) 'joint-exploder-shatter)
+                         ))
+            ;; alt-actor is not dead/triggered, prevent pickup/hide
             (return #f)
             )
           )
@@ -889,6 +891,17 @@
       )
     (when door3
       (set! (cdr (res-lump-struct door3 'on-notice pair)) '(#f '(palent)))
+      )
+    )
+
+  ;; === dig3 === 
+  ;; make orb follow balloon lurker
+  (let ((lrkr (the process-drawable (process-by-ename "dig-balloon-lurker-1")))
+        (orb (the skill (process-by-ename "dig3b-skill-hover-02"))))
+    (when (and lrkr orb)
+      (vector-copy! (-> orb root trans) (-> lrkr root trans))
+      (+! (-> orb root trans y) (meters 19.5))
+      (vector-copy! (-> orb base) (-> orb root trans))
       )
     )
 

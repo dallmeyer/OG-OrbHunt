@@ -69,27 +69,182 @@
       }
     },
     {
-      "trans": [ 233.26, -69.1, -1831.89 ], // #t left once in main room, extended over lava under cage
+      "trans": [  252.3881, -68.7621, -1833.2456], // on lamp thing under walkway - extended up n under cage
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [233.26, -69.1, -1831.89, 10], // bounding sphere
+      "bsphere": [  252.3881, -68.7621, -1833.2456, 10], // bounding sphere
       "lump": {
         "name": "dig1-skill-01"
       }
-    }
-    
+    },
+    {
+      "trans": [ 260.5139, -59.7, -1785.1608], // inside bomb crate south side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 260.5139, -59.7, -1785.1608, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-02",
+        "alt-actor": "dig-bomb-crate-1"
+      }
+    },
+    {
+      "trans": [  339.95, -51.02, -1959.26], // between I beam on side of 2nd highest escalator and wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 339.95, -51.02, -1959.26, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-03"
+      }
+    },
+    {
+      "trans": [    331.9196, -53.4602, -1963.2319], // on I beam below/between 1st and 2nd highest escalators
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    331.9196, -53.4602, -1963.2319, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-04"
+      }
+    },
+    {
+      "trans": [ 336.50, -52.83, -1956.16], // on I beam underneath 2nd highest escalator (uppercut up n under... or clip thru)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 336.50, -52.83, -1956.16, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-05"
+      }
+    },
+    {
+      "trans": [ 382.62, -49.83, -1917.88], // bottom of big stalag, use jetboard launcher thing
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 382.62, -49.83, -1917.88, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-06"
+      }
+    },
+    {
+      "trans": [ 202.16, -69.50, -1935.18], // on grind rail over lava river
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 202.16, -69.50, -1935.18, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-07"
+      }
+    },
+    {
+      "trans": [     266.8931, -45.3554, -2006.9693], // in corner of blocked off hallway to other side of dig
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     266.8931, -45.3554, -2006.9693, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-08"
+      }
+    },
+    {
+      "trans": [ 320.15, -57.20, -1867.46], // between pipes on mid level of platforms, SEish
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 320.15, -57.20, -1867.46, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-09"
+      }
+    },
+    {
+      "trans": [  241.4048, -61.7619, -1810.4962], // underneath platforms in 'cage' (uppercut up n under)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   241.4048, -61.7619, -1810.4962, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-10"
+      }
+    },
+    {
+      "trans": [ 253.47, -70.44, -1901.18], // in crack of crater from drilling
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 253.47, -70.44, -1901.18, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-11"
+      }
+    },
+    {
+      "trans": [ 416.96, -47.17, -1931.40], // top of supporting bolt far east side (uppercut from unbroken bomb cluster)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 416.96, -47.17, -1931.40, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-12"
+      }
+    },
+    {
+      "trans": [ 336.43, -52.83, -1969.57], // on I beam inside 2nd highest escalator (around from back)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 336.43, -52.83, -1969.57, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-13"
+      }
+    },
+
+    // CRATES
+    {
+      "trans": [ 119.97, -49.03, -1847.37], // near other crates on path far west side
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0.0555, 0.9683, -0.0239, 0.2421], // quaternion
+      "bsphere": [ 119.97, -49.03, -1847.37, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-crate-1",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [ 253.72, -58.0, -1911.13], // near other crates on lower platform near digger
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0.0, 0.9995, 0.0, 0.0295], // quaternion
+      "bsphere": [ 253.72, -58.0, -1911.13, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-crate-2",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+
     // HOVER ORBS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
+    {
+      "trans": [  256.5584, -69.4772, -1892.6402 ], // top of digger
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 256.5584, -69.4772, -1892.6402, 10], // bounding sphere
+      "lump": {
+        "name":"dig1-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
   ]
 }
