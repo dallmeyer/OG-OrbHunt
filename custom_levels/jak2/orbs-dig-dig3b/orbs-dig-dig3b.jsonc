@@ -248,11 +248,11 @@
       }
     },
     {
-      "trans": [ 358.92, -86.61, -2080.51], // near lava on small ledge on side/behind stalag in middle of main room
+      "trans": [    362.7106, -79.4792, -2078.6132], // behind stalags supporting upper walkway, over lava river
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 358.92, -86.61, -2080.51, 10], // bounding sphere
+      "bsphere": [    362.7106, -79.4792, -2078.6132, 10], // bounding sphere
       "lump": {
         "name":"dig3b-skill-21"
       }
@@ -276,6 +276,97 @@
       "lump": {
         "name":"dig3b-skill-23",
         "bob-scale": ["float", 0.8]
+      }
+    },
+    {
+      "trans": [    314.4430, -71.9864, -2002.1956], // between stalags in short hallway left from entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    314.4430, -71.9864, -2002.1956, 10], // bounding sphere
+      "lump": {
+        "name": "dig3b-skill-24",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [    319.1252, -58.4361, -2001.2370], // behind stalacs up high in short hallway left from entrance, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    319.1252, -58.4361, -2001.2370, 10], // bounding sphere
+      "lump": {
+        "name": "dig3b-skill-25"
+      }
+    },
+    {
+      "trans": [     361.8713, -84.9756, -2012.3045], // crevice in wall on lower area, not far from entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    361.8713, -84.9756, -2012.3045, 10], // bounding sphere
+      "lump": {
+        "name": "dig3b-skill-26"
+      }
+    },
+    {
+      "trans": [    309.0022, -88.5699, -2094.8703], // submerged in lava in corner sort of near path to western room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    309.0022, -88.5699, -2094.8703, 10], // bounding sphere
+      "lump": {
+        "name": "dig3b-skill-27"
+      }
+    },
+    {
+      "trans": [ 372.67, -64.81, -2150.79], // top of lamp between balloon lurker and path to western room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 372.67, -64.81, -2150.79, 10], // bounding sphere
+      "lump": {
+        "name": "dig3b-skill-28"
+      }
+    },
+    {
+      "trans": [  319.7425, -59.8909, -2120.4267], // on higher platform that only exists for orb in vanilla
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  319.7425, -59.8909, -2120.4267, 10], // bounding sphere
+      "lump": {
+        "name": "dig3b-skill-29"
+      }
+    },
+    {
+      "trans": [  441.3604, -80.0056, -2139.0524], // in bottom of support beam for structures on island
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   441.3604, -80.0056, -2139.0524, 10], // bounding sphere
+      "lump": {
+        "name": "dig3b-skill-30"
+      }
+    },
+    {
+      "trans": [  472.7356, -67.1562, -2091.6259], // on support beam for houses, mid level
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  472.7356, -67.1562, -2091.6259, 10], // bounding sphere
+      "lump": {
+        "name": "dig3b-skill-31"
+      }
+    },
+    {
+      "trans": [    189.5141, -56.4215, -2160.3259], // in lava next to long floaty rock platforms in western room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    189.5141, -56.4215, -2160.3259, 10], // bounding sphere
+      "lump": {
+        "name": "dig3b-skill-32"
       }
     },
 

@@ -199,6 +199,26 @@
         "name": "dig1-skill-13"
       }
     },
+    {
+      "trans": [  421.9892, -60.7252, -1860.6665], // hanging off side/corner of bridge over lava river near entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  421.9892, -60.7252, -1860.6665, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-14"
+      }
+    },
+    {
+      "trans": [ 215.49, -69.71, -1859.02], // under lowest escalator - uppercut into caged area then walk over (can't walk out tho)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  215.49, -69.71, -1859.02, 10], // bounding sphere
+      "lump": {
+        "name": "dig1-skill-15"
+      }
+    },
 
     // CRATES
     {
@@ -236,11 +256,11 @@
 
     // HOVER ORBS
     {
-      "trans": [  256.5584, -69.4772, -1892.6402 ], // top of digger
+      "trans": [  256.84, 2.3, -1892.79 ], // top of digger
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 256.5584, -69.4772, -1892.6402, 10], // bounding sphere
+      "bsphere": [ 256.84, 2.3, -1892.79, 10], // bounding sphere
       "lump": {
         "name":"dig1-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
