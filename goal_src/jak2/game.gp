@@ -472,6 +472,9 @@
 (build-custom-level "orbs-drill-drillb")
 (custom-level-cgo "O11.DGO" "orbs-drill-drillb/orbs-drill-drillb.gd")
 
+(build-custom-level "orbs-drill-ctrlroom")
+(custom-level-cgo "O1J.DGO" "orbs-drill-ctrlroom/orbs-drill-ctrlroom.gd")
+
 
 (build-custom-level "orbs-tomb-tomba")
 (custom-level-cgo "O12.DGO" "orbs-tomb-tomba/orbs-tomb-tomba.gd")

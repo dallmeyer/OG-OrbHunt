@@ -55,7 +55,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   1 ;; vinroom -> power station
   2 ;; drillmid -> drill plat A (first area)
   3 ;; drill -> drill plat B (on rails/ship area)
-  4 ;; drillb -> drill plat C (titan suit section)
+  72 ;; drillb -> drill plat C (titan suit section)
   0 ;; drillmtn -> none (?)
   5 ;; sewer -> sewers
   5 ;; sewerb -> sewers
@@ -259,7 +259,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   30 ;; orbs-forest-forestb (removed but index is still there)
   3 ;; orbs-drill-drill
   2 ;; orbs-drill-drillmid
-  4 ;; orbs-drill-drillb
+  72 ;; orbs-drill-drillb
   6 ;; orbs-tomb-tomba
   7 ;; orbs-tomb-tombb
   8 ;; orbs-tomb-tombc
@@ -277,6 +277,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   63 ;; orbs-default-village1
   66 ;; orbs-default-halfpipe
   69 ;; orbs-sewer-sewesc ;; sewesc/sewescb
+  4 ;; orbs-drill-ctrlroom
 
 
   ;; PS3 levels excluded
@@ -295,7 +296,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   ;; 0 ;; test-zone ;; out of place
   ))
 
-(defconstant LEVEL_ID_LEN 72)
+(defconstant LEVEL_ID_LEN 73)
 
 (define *level-id-names* (new 'static 'boxed-array :type string :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   "" ;; 0 (none)
@@ -370,6 +371,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Sewers" ;; 69
   "Underport (Chamber)" ;; 70
   "Construction Site (Entrance)" ;; 71
+  "Drill Platform (Interior)" ;; 72
   ))
 
 (define *level-orb-collected-counts* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))

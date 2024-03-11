@@ -1074,8 +1074,9 @@
                    :activate-func #f
                    :deactivate-func #f
                    :kill-func #f
-                   :borrow-level (new 'static 'array symbol 2 #f #f)
-                   :borrow-display? (new 'static 'array symbol 2 #f #f)
+                 :borrow-size (new 'static 'array uint16 2 160 160)
+                 :borrow-level (new 'static 'array symbol 2 #f 'orbs-drill-ctrlroom) ;; bit of a hack but yolo
+                 :borrow-display? (new 'static 'array symbol 2 #f 'display)
                    :base-task-mask (task-mask task0 primary0)
                    :texture-anim-tfrag #f
                    :texture-anim-pris #f
@@ -16367,6 +16368,7 @@
 (define orbs-drill-drill       (orbs-borrow-level #xd2 'orbs-drill-drill       'orbs-drill-drill-vis       'o0z 'update-mood-drill))
 (define orbs-drill-drillmid    (orbs-borrow-level #xd3 'orbs-drill-drillmid    'orbs-drill-drillmid-vis    'o10 'update-mood-drill))
 (define orbs-drill-drillb      (orbs-borrow-level #xd4 'orbs-drill-drillb      'orbs-drill-drillb-vis      'o11 'update-mood-drillb))
+(define orbs-drill-ctrlroom    (orbs-borrow-level #xe6 'orbs-drill-ctrlroom    'orbs-drill-drillmtn-vis    'o1j 'update-mood-drillmnt))
 
 (define orbs-tomb-tomba        (orbs-borrow-level #xd5 'orbs-tomb-tomba        'orbs-tomb-tomba-vis        'o12 'update-mood-tomba))
 (define orbs-tomb-tombb        (orbs-borrow-level #xd6 'orbs-tomb-tombb        'orbs-tomb-tombb-vis        'o13 'update-mood-tombb))
@@ -16410,6 +16412,7 @@
   (cons! *level-load-list* 'orbs-tomb-tombb)
   (cons! *level-load-list* 'orbs-tomb-tomba)
   (cons! *level-load-list* 'orbs-drill-drillb)
+  (cons! *level-load-list* 'orbs-drill-ctrlroom)
   (cons! *level-load-list* 'orbs-drill-drillmid)
   (cons! *level-load-list* 'orbs-drill-drill)
   (cons! *level-load-list* 'orbs-forest-forest)
