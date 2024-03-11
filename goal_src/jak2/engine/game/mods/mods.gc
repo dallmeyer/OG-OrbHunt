@@ -503,11 +503,11 @@
     ;; skill-122
     ;; ====== ORBS / DRILL ======
     ;; === drill/drillmid/drillmtn ===
-    ;; skill-53
-    ;; skill-54
-    ;; skill-55
-    ;; skill-56
-    ;; skill-57
+    (('skill-53) (set-vector-meters! (-> arg0 extra trans)  -49.6434  8.3223  228.6763)) ;; around side of interior (kinda like the titan suit skip)
+    (('skill-54) (set-vector-meters! (-> arg0 extra trans)  -176.0119  8.9930  229.0152)) ;; on exterior edge of wall near first fixed turret
+    (('skill-55) (set-vector-meters! (-> arg0 extra trans)  -239.23   34.37  242.07)) ;; way up on wall in SW corner (abah cancel chain)
+    (('skill-56) (set-vector-meters! (-> arg0 extra trans)  -244.6724  49.4584  258.3278)) ;; farther up SW corner wall from ^
+    (('skill-57) (set-vector-meters! (-> arg0 extra trans)  -264.27   77.52  272.80)) ;; very top of SW corner wall, keep abah-ing from ^
     ;; === drillb (mech suit area) === 
     ;; none
     ;; ====== ORBS / TOMB ======
@@ -853,6 +853,14 @@
   ;; === drill/drillb ===
   (let ((door (entity-by-name "drill-elevator-doors-4"))) ;; open locked door to drillb area
     (when door (set! (cdr (res-lump-struct door 'on-notice pair)) '(#f '(drill drillmid drillmtn))))
+    )
+  
+  ;; move orb to follow centurion if its not visible yet
+  (let ((orb (the skill (process-by-ename "drillmid-skill-13")))
+        (cent (the centurion (process-by-ename "centurion-11"))))
+    (when (and orb cent (logtest? (-> orb draw status) (draw-control-status no-draw-bounds)))
+      (vector-copy! (-> orb root trans) (-> cent root trans))
+      )
     )
 
   ;; === tomb/tombboss ===
