@@ -6000,7 +6000,7 @@
         (function "dig3b"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "dig3b-start"))))
         (function "drill"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "drill1-warp"))))
         (function "drillb"    #f ,(lambda () (start 'play (get-continue-by-name *game-info* "drill-escape"))))
-        (function "drillmid"  #f ,(lambda () (start 'play (get-continue-by-name *game-info* "drillmid-checkpoint"))))
+        (function "drillmid"  #f ,(lambda () (start 'play (get-continue-by-name *game-info* "drill-warp-gunship"))))
         (function "forest"    #f ,(lambda () (start 'play (get-continue-by-name *game-info* "forest-start"))))
         (function "forestb"   #f ,(lambda () (start 'play (get-continue-by-name *game-info* "forest-tree"))))
         (function "fordumpa"  #f ,(lambda () (start 'play (get-continue-by-name *game-info* "fordumpa-start"))))

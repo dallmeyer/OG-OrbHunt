@@ -851,8 +851,16 @@
     )
 
   ;; === drill/drillb ===
-  (let ((door (entity-by-name "drill-elevator-doors-4"))) ;; open locked door to drillb area
+  (let ((door (entity-by-name "drill-elevator-doors-4")) ;; open locked door to drillb area
+        (tur13 (entity-by-name "turret-13"))  ;; ensure turret spawns
+        (tur14 (entity-by-name "turret-14"))  ;; ensure turret spawns
+        (tur15 (entity-by-name "turret-15"))  ;; ensure turret spawns
+        )
     (when door (set! (cdr (res-lump-struct door 'on-notice pair)) '(#f '(drill drillmid drillmtn))))
+    (when tur13 (logclear! (-> tur13 extra kill-mask) (task-mask task0 task2 done)))
+    (when tur14 (logclear! (-> tur14 extra kill-mask) (task-mask task0 task2 done)))
+    (when tur15 (logclear! (-> tur15 extra kill-mask) (task-mask task0 task2 done)))
+
     )
   
   ;; move orb to follow centurion if its not visible yet

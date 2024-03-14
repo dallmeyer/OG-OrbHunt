@@ -309,18 +309,141 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [ -37.76,  10.61, 160.63, 10], // bounding sphere
       "lump": {
-        "name":"drillmid-skill-26",
-        "pickup-amount":["float", 2.0] // abah hint
+        "name":"drillmid-skill-26"
       }
     },
     {
-      "trans": [ -41.16,  16.79, 148.80], // on edge over void near 2nd breakable wall, abah from ^
+      "trans": [ -41.16,  16.79, 148.80], // on edge over void near 2nd breakable wall, jump from ^
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [ -41.16,  16.79, 148.80, 10], // bounding sphere
       "lump": {
         "name":"drillmid-skill-27"
+      }
+    },
+    {
+      "trans": [ -181.28,  39.12, 152.56], // up on first structure, closer to the big orange sphere
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -181.28,  39.12, 152.56, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-28",
+        "pickup-amount":["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -173.52,  53.99, 150.33], // on slippery lip of big orange sphere on first structure, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -173.52,  53.99, 150.33, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-29",
+        "pickup-amount":["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -182.64,  66.58, 151.33], // back to the top of the other part of first structure, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -182.64,  66.58, 151.33, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-30"
+      }
+    },
+    {
+      "trans": [ -200.41,  14.28, 101.53], // on small ledge on back of big cylinder in area after first breakable wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -200.41,  14.28, 101.53, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-31",
+        "pickup-amount":["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -199.1131, 30.1191, 97.2327], // tucked in fold of big cylinder up high, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -199.1131, 30.1191, 97.2327, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-32"
+      }
+    },
+    {
+      "trans": [ -147.88,  53.99, 119.52], // on slippery lip of big orange sphere on first structure, other side around from skill-29
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -147.88,  53.99, 119.52, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-33",
+        "pickup-amount":["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -136.22,  68.49, 106.68], // top of big cylinder in area after first breakable wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -136.22,  68.49, 106.68, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-34"
+      }
+    },
+    {
+      "trans": [ -11.48,  32.11, 152.39], // top of ledge just above/outside 2nd breakable wall room, against wall - follow from other side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -11.48,  32.11, 152.39, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-35"
+      }
+    },
+    {
+      "trans": [  -13.4716, 16.4717, 155.7525], // between support and wall just outside 2nd breakable wall room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -13.4716, 16.4717, 155.7525, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-36"
+      }
+    },
+    {
+      "trans": [     73.9678, 29.2623, 153.8944], // up near ceiling in corner after 2nd breakable wall, before 3rd fixed turret (abah from corner)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      73.9678, 29.2623, 153.8944, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-37"
+      }
+    },
+    {
+      "trans": [   96.67,  47.88, 125.30], // way up on "windowsill" above 3rd fixed turret elevator (GP elevator going up)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   96.67,  47.88, 125.30, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-38"
+      }
+    },
+    {
+      "trans": [     131.3049, -3.4476, 37.6529], // hanging off edge in corner after 3rd fixed turret before bridge to warp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     131.3049, -3.4476, 37.6529, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-39"
       }
     },
 
@@ -340,19 +463,52 @@
           1 // amount?
         ]
       }
-    }
+    },
 
-    // // HOVER ORBS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"drillmid-skill-hover-01",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
+    // HOVER ORBS
+    {
+      "trans": [  -196.18,  58.30,  94.46 ], // top of other cylinder in area after first breakable wall, closer to outer wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -196.18,  58.30,  94.46, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ -171.39,  88.60,  56.42], // rooftop of mid/west building with spatulas path
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -171.39,  88.60,  56.42, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ -151.31,  72.93,  18.95], // over and down onto lower rooftop from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -151.31,  72.93,  18.95, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ -97.28,  96.55, -15.87], // rooftop of central building, just above big orange circle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -97.28,  96.55, -15.87, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
   ]
 }
