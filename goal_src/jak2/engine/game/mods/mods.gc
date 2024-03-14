@@ -670,6 +670,10 @@
       (set-vector! (-> arg0 quat) 0.0 1.0 0.0 0.0)
       )
 
+    ;; drill
+    (('crate-761) (set-vector-meters! (-> arg0 extra trans)  72.59   0.59 -161.51  ))      ;; on distant area you'd never stand on in vanilla
+    (('crate-762) (set-vector-meters! (-> arg0 extra trans)  71.50   0.59 -158.90  ))      ;; on distant area you'd never stand on in vanilla
+
     ;; village1
     (('crate-665) (set-vector-meters! (-> arg0 extra trans) -82.0 21.5 -10.3))      ;; high ledge between bridges
     (('crate-666) (set-vector-meters! (-> arg0 extra trans) 32.5 12.5 -132.7))      ;; on tree 
@@ -860,7 +864,6 @@
     (when tur13 (logclear! (-> tur13 extra kill-mask) (task-mask task0 task2 done)))
     (when tur14 (logclear! (-> tur14 extra kill-mask) (task-mask task0 task2 done)))
     (when tur15 (logclear! (-> tur15 extra kill-mask) (task-mask task0 task2 done)))
-
     )
   
   ;; move orb to follow centurion if its not visible yet

@@ -446,6 +446,26 @@
         "name":"drillmid-skill-39"
       }
     },
+    {
+      "trans": [  41.0211, 13.99, 47.4853], // random small (pair of) standpoint(s) to left of exit warp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  41.0211, 13.99, 47.4853, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-40"
+      }
+    },
+    {
+      "trans": [  13.8676, 26.7005, 7.0301], // behind cables of computers at exit warp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  13.8676, 26.7005, 7.0301, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-41"
+      }
+    },
 
     // CRATES
     {
@@ -508,6 +528,16 @@
       "lump": {
         "name":"drillmid-skill-hover-04",
         "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  41.0211, 13.99, 99.10], // random small (pair of) standpoint(s) further left of exit warp, other side of orange sphere from skill-40
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  41.0211, 13.99, 99.10, 10], // bounding sphere
+      "lump": {
+        "name":"drillmid-skill-hover-05"
       }
     }
   ]
