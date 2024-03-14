@@ -287,6 +287,36 @@
         "name":"drillb-skill-24"
       }
     },
+    {
+      "trans": [   37.10, -45.54, 211.98], // under fallen door in 2nd room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   37.10, -45.54, 211.98, 10], // bounding sphere
+      "lump": {
+        "name":"drillb-skill-25"
+      }
+    },
+    {
+      "trans": [     173.2424, -17.4657, 190.8560], // in opening of pipe, 3rd room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     173.2424, -17.4657, 190.8560, 10], // bounding sphere
+      "lump": {
+        "name":"drillb-skill-26"
+      }
+    },
+    {
+      "trans": [    147.3201, -28.9813, 43.3741], // behind pipe aganist wall over void
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     147.3201, -28.9813, 43.3741, 10], // bounding sphere
+      "lump": {
+        "name":"drillb-skill-27"
+      }
+    },
 
     // HOVER ORBS
     {
@@ -297,6 +327,28 @@
       "bsphere": [ 184.18,  -7.04, 117.51, 10], // bounding sphere
       "lump": {
         "name":"drillb-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  62.91,  -9.05, 201.68], // up high on arch over void in 2nd room 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  62.91,  -9.05, 201.68, 10], // bounding sphere
+      "lump": {
+        "name":"drillb-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 145.26, -13.31, -26.30], // up high on arch early left in 5th room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 145.26, -13.31, -26.30, 10], // bounding sphere
+      "lump": {
+        "name":"drillb-skill-hover-03",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     }

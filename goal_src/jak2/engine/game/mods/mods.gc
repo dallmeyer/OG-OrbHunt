@@ -857,7 +857,7 @@
   
   ;; move orb to follow centurion if its not visible yet
   (let ((orb (the skill (process-by-ename "drillmid-skill-13")))
-        (cent (the centurion (process-by-ename "centurion-11"))))
+        (cent (the process-drawable (process-by-ename "centurion-11"))))
     (when (and orb cent (logtest? (-> orb draw status) (draw-control-status no-draw-bounds)))
       (vector-copy! (-> orb root trans) (-> cent root trans))
       )
