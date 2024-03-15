@@ -492,14 +492,14 @@
     ;; ====== ORBS / FOREST ======
     ;; === forest / forestb ===
     (('skill-115) (set-vector-meters! (-> arg0 extra trans)  -618.41  23.75 584.35)) ;; tucked in between steps coming back to very start
-    (('skill-116) (set-vector-meters! (-> arg0 extra trans)  -616.12  12.32 614.19)) ;; another in the steps ^, more central
+    (('skill-116) (set-vector-meters! (-> arg0 extra trans)  -616.12  12.2 614.19)) ;; another in the steps ^, more central
     (('skill-117) (set-vector-meters! (-> arg0 extra trans)  -629.3837 17.92 614.5840)) ;; below tree roots / under overhanging grass near ^
     (('skill-118) (set-vector-meters! (-> arg0 extra trans)  -567.9725 3.3210 630.0205)) ;; under overturned rock near bottom of steps at start
-    ;; (('skill-119) (set-vector-meters! (-> arg0 extra trans)  )) ;; 
-    ;; (('skill-120) (set-vector-meters! (-> arg0 extra trans)  )) ;; 
-    ;; (('skill-121) (set-vector-meters! (-> arg0 extra trans)  )) ;; 
-    ;; (('skill-122) (set-vector-meters! (-> arg0 extra trans)  )) ;; 
-    ;; (('skill-123) (set-vector-meters! (-> arg0 extra trans)  )) ;; 
+    (('skill-119) (set-vector-meters! (-> arg0 extra trans)  -538.6940 13.5231 614.8938)) ;; behind tree on lower right side facing entrance/exit
+    (('skill-120) (set-vector-meters! (-> arg0 extra trans)  -521.2038 16.0688 679.3712)) ;; behind sus rock with vines near river path to forestb
+    (('skill-121) (set-vector-meters! (-> arg0 extra trans)  -523.88  11.0 706.77)) ;; behind 4 rocks with tree near ^
+    (('skill-122) (set-vector-meters! (-> arg0 extra trans)  -547.2012 20.2389 729.6240)) ;; up on tree root standpoint, jump from top of sus rock #2
+    (('skill-123) (set-vector-meters! (-> arg0 extra trans)  -685.8104 7.1571 712.5150)) ;; in crevice between wall and trees on side of sus rock #4
     ;; ====== ORBS / DRILL ======
     ;; === drill/drillmid/drillmtn ===
     (('skill-53) (set-vector-meters! (-> arg0 extra trans)  -49.6434  8.3223  228.6763)) ;; around side of interior (kinda like the titan suit skip)
