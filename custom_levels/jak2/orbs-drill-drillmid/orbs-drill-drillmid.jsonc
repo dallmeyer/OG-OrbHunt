@@ -531,13 +531,14 @@
       }
     },
     {
-      "trans": [  41.0211, 13.99, 99.10], // random small (pair of) standpoint(s) further left of exit warp, other side of orange sphere from skill-40
+      "trans": [  41.0211, 13.99, 99.05], // random small (pair of) standpoint(s) further left of exit warp, other side of orange sphere from skill-40
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  41.0211, 13.99, 99.10, 10], // bounding sphere
+      "bsphere": [  41.0211, 13.99, 99.05, 10], // bounding sphere
       "lump": {
-        "name":"drillmid-skill-hover-05"
+        "name":"drillmid-skill-hover-05",
+        "pickup-amount": ["float", 3.0]  // goldge
       }
     }
   ]
