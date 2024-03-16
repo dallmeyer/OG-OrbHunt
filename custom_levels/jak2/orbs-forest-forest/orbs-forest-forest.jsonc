@@ -394,20 +394,60 @@
         "name":"forestb-skill-02",
         "alt-actor": "youngsamos-npc-7"
       }
-    }
+    },
+    {
+      "trans": [ -664.71,  40.36, 914.29], // in main tree roots
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -664.71,  40.36, 914.29, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-03"
+      }
+    },
+    {
+      "trans": [ -657.21,  40.77, 916.41], // in main tree roots
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -657.21,  40.77, 916.41, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-04"
+      }
+    },
+    {
+      "trans": [     -398.1525, 7.8105, 875.1428], // between rocks just under where wall southern-most (right) support meets ground
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -398.1525, 7.8105, 875.1428, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-05"
+      }
+    },
+    {
+      "trans": [ -393.38,  16.77, 683.97], // between tree and base of support more on north side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -393.38,  16.77, 683.97, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-06"
+      }
+    },
 
 
     // FOERSTB HOVER ORBS
-    // {
-    //   "trans": [  -581.62,  73.59, 566.30], // on top of arch at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [ -581.62,  73.59, 566.30, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"forest-skill-hover-01",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // },
+    {
+      "trans": [  -361.95,  77.62, 902.29], // on top of wall in SE corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -361.95,  77.62, 902.29, 10], // bounding sphere
+      "lump": {
+        "name":"forestb-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
   ]
 }
