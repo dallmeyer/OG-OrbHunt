@@ -926,6 +926,22 @@
       )
     )
 
+  ;; === forest(b) === 
+  (let (;; (crate918 (entity-by-name "crate-918"))
+        (crate920 (entity-by-name "crate-920"))
+        (crate921 (entity-by-name "crate-921"))
+        ;; (crate785 (entity-by-name "crate-785"))
+        ;; (crate786 (entity-by-name "crate-786"))
+        ;; (crate787 (entity-by-name "crate-787"))
+        )
+    ;; (when crate918 (logclear! (-> crate918 extra kill-mask) (task-mask task0 task1 task2 done)))
+    (when crate920 (logclear! (-> crate920 extra kill-mask) (task-mask task0 task1 task2 done)))
+    (when crate921 (logclear! (-> crate921 extra kill-mask) (task-mask task0 task1 task2 done)))
+    ;; (when crate785 (logclear! (-> crate785 extra kill-mask) (task-mask task0 task1 task2 done)))
+    ;; (when crate786 (logclear! (-> crate786 extra kill-mask) (task-mask task0 task1 task2 done)))
+    ;; (when crate787 (logclear! (-> crate787 extra kill-mask) (task-mask task0 task1 task2 done)))
+    )
+
   ;; === dig3 === 
   ;; make orb follow balloon lurker
   (let ((lrkr (the process-drawable (process-by-ename "dig-balloon-lurker-1")))

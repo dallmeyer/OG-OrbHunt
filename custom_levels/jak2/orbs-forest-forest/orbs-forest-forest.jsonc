@@ -435,9 +435,128 @@
         "name":"forestb-skill-06"
       }
     },
+    {
+      "trans": [  -415.1249, 4.7801, 918.4354], // between rocks/roots in SE corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -415.1249, 4.7801, 918.4354, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-07"
+      }
+    },
+    {
+      "trans": [ -499.00,  16.59, 900.13], // on unused grind log you can stand on
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -499.00,  16.59, 900.13, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-08"
+      }
+    },
+    {
+      "trans": [ -530.61,  20.01, 865.32], // on round rock in north of middle area between protect samos and water
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -530.61,  20.01, 865.32, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-09",
+        "pickup-amount": ["float", 2,0] // abah hint
+      }
+    },
+    {
+      "trans": [ -522.34,  22.14, 858.55], // on rock behind invis wall, abah over from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -522.34,  22.14, 858.55, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-10"
+      }
+    },
+    {
+      "trans": [ -512.46,   5.95, 861.30], // between roots and rocks behind invis wall, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -512.46,   5.95, 861.30, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-11"
+      }
+    },
+    {
+      "trans": [ -463.52,   3.87, 767.51], // between tree roots and rocks over water, more west
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -463.52,   3.87, 767.51, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-12"
+      }
+    },
+    {
+      "trans": [  -645.2275, 11.6378, 957.7418], // bottom left corner of wall below main tree
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -645.2275, 11.6378, 957.7418, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-13"
+      }
+    },
+    {
+      "trans": [ -667.01,  55.66, 896.88], // between trunks of main tree
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -667.01,  55.66, 896.88, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-14",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -667.56,  71.14, 910.22], // up high in main tree, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -667.56,  71.14, 910.22, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-15"
+      }
+    },
+    {
+      "trans": [     -758.4087, 48.8186, 880.8551], // crevice of rocks at top of forced downhill QP
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -758.4087, 48.8186, 880.8551, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-16"
+      }
+    },
 
+    // FORESTB CRATES
+    {
+      "trans": [ -608.5, 36.0968, 881.6], // near other crates below exit warp gate
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -608.5, 36.0968, 881.6, 10], // bounding sphere
+      "lump": {
+        "name": "forestb-crate-1",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
 
-    // FOERSTB HOVER ORBS
+    // FORESTB HOVER ORBS
     {
       "trans": [  -361.95,  77.62, 902.29], // on top of wall in SE corner
       "etype": "skill",  // actor type
