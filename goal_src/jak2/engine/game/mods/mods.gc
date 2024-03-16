@@ -698,13 +698,27 @@
     )
   )
 
-(defun skill-alt-actor-check? ((skill collectable))
+(defun skill-alt-actor-check? ((skill collectable) (for-pickup? symbol))
   (let ((alt-actor (entity-actor-lookup (-> skill entity) 'alt-actor 0)))
     (when (and alt-actor (-> alt-actor extra process))
+      (when (and for-pickup? ;; visibility check would skip this
+                *target* 
+                (= (-> *target* next-state) target-hit)
+                )
+        ;; we have some alt-actor but jak is getting knocked, no pickup
+        (return #f)
+        )
+
       (case (-> alt-actor etype symbol)
         (('yakow)
           (when (zero? (-> (the yakow (-> alt-actor extra process)) incoming-attack-id))
             ;; yakow hasnt been attacked yet, prevent pickup/hide
+            (return #f)
+            )          
+          )
+        (('youngsamos-npc)
+          (when (zero? (-> (the youngsamos-npc (-> alt-actor extra process)) incoming-attack-id))
+            ;; samos hasnt been attacked yet, pevent pickup/hide
             (return #f)
             )          
           )
