@@ -537,6 +537,166 @@
         "name":"forestb-skill-16"
       }
     },
+    {
+      "trans": [ -681.582, 39.0265, 935.294], // mouth of stone face on one of four cylinder plats by main tree
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.1361,  0.8400,  -0.0233,  0.5246 ], // quaternion
+      "bsphere": [ -681.582, 39.0265, 935.294, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-17"
+      }
+    },
+    {
+      "trans": [     -747.7125, 62.2523, 960.4084], // up midway on rock wall in SW corner (abah from rock below)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -747.7125, 62.2523, 960.4084, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-18"
+      }
+    },
+    {
+      "trans": [     -734.9372, 36.6581, 852.8659], // among plants near small steps close to dry path entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -734.9372, 36.6581, 852.8659, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-19"
+      }
+    },
+    {
+      "trans": [ -716.88,  59.93, 803.51], // base of tree overhead at dry path entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -716.88,  59.93, 803.51, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-20"
+      }
+    },
+    {
+      "trans": [ -706.01,  60.96, 803.26], // on top of rock overhead near dry path entrance, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -706.01,  60.96, 803.26, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-21"
+      }
+    },
+    {
+      "trans": [  -590.4606, 4.6077, 861.8893], // behind rocks under bridge/ramp from tree down to water, right side facing tree
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -590.4606, 4.6077, 861.8893, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-22"
+      }
+    },
+    {
+      "trans": [     -589.2161, 17.0960, 844.6506], // facing main tree, under bridge on right
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -589.2161, 17.0960, 844.6506, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-23"
+      }
+    },
+    {
+      "trans": [     -600.3842, 21.4817, 943.0922], // facing main tree, under bridge on left
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -600.3842, 21.4817, 943.0922, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-24"
+      }
+    },
+    {
+      "trans": [  -547.3841, 16.3249, 911.4195], // hanging from middle rect plat between main tree and water, next to grind rail
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -547.3841, 16.3249, 911.4195, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-25"
+      }
+    },
+    {
+      "trans": [   -550.8109, 20.4742, 861.3993], // on corner of grass behind rock, halfway down right ramp (facing main tree)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -550.8109, 20.4742, 861.3993, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-26"
+      }
+    },
+    {
+      "trans": [  -602.7147, 31.0798, 904.0091], // top/middle of wall below main tree, just under overhang
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -602.7147, 31.0798, 904.0091, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-27"
+      }
+    },
+    {
+      "trans": [     -619.0017, 28.2225, 853.5328], // between right bridge (facing main tree) and rock wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -619.0017, 28.2225, 853.5328, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-28"
+      }
+    },
+    {
+      "trans": [     -408.3243, 8.3360, 838.8475], // under grind log over water, SE corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -408.3243, 8.3360, 838.8475, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-29"
+      }
+    },
+    {
+      "trans": [     -389.9378, -7.5735, 780.6499], // underwater in narrow path under support on southern east wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -389.9378, -7.5735, 780.6499, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-30"
+      }
+    },
+    {
+      "trans": [      -405.4685, 7.8427, 774.3707], // below platform on rocks at base of middle support
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -405.4685, 7.8427, 774.3707, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-31"
+      }
+    },
+    {
+      "trans": [      -490.2325, 1.0179, 747.3251], // in corner of weird alley on west side of lake with exposed rock
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -490.2325, 1.0179, 747.3251, 10], // bounding sphere 
+      "lump": {
+        "name":"forestb-skill-32"
+      }
+    },
 
     // FORESTB CRATES
     {
@@ -565,6 +725,50 @@
       "bsphere": [  -361.95,  77.62, 902.29, 10], // bounding sphere
       "lump": {
         "name":"forestb-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ -679.20,  88.03, 972.32], // on top of southern rock wall, west side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -679.20,  88.03, 972.32, 10], // bounding sphere
+      "lump": {
+        "name":"forestb-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ -747.49, 104.55, 977.99], // on top of rock wall, SW corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -747.49, 104.55, 977.99, 10], // bounding sphere
+      "lump": {
+        "name":"forestb-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ -762.91,  78.14, 877.11], // behind tree on top of western rock wall, south end
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -762.91,  78.14, 877.11, 10], // bounding sphere
+      "lump": {
+        "name":"forestb-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -459.91,  42.75, 957.30], // up in rock bowl up mid height, southern wall east side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -459.91,  42.75, 957.30, 10], // bounding sphere
+      "lump": {
+        "name":"forestb-skill-hover-05",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     }
