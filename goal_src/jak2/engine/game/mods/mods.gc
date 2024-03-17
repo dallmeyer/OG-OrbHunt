@@ -673,6 +673,10 @@
     (('crate-761) (set-vector-meters! (-> arg0 extra trans)  72.59   0.0 -161.51  ))      ;; on distant area you'd never stand on in vanilla
     (('crate-762) (set-vector-meters! (-> arg0 extra trans)  71.50   0.0 -158.90  ))      ;; on distant area you'd never stand on in vanilla
 
+    ;; forest(b)
+    (('crate-786) (set-vector-meters! (-> arg0 extra trans) -549.23  20.23 893.15 )) ;; rectangular plat between grind rails below main tree wall
+    (('crate-787) (set-vector-meters! (-> arg0 extra trans) -549.08  20.23 905.36)) ;; rectangular plat between grind rails below main tree wall
+
     ;; village1
     (('crate-665) (set-vector-meters! (-> arg0 extra trans) -82.0 21.5 -10.3))      ;; high ledge between bridges
     (('crate-666) (set-vector-meters! (-> arg0 extra trans) 32.5 12.5 -132.7))      ;; on tree 
@@ -931,15 +935,15 @@
         (crate920 (entity-by-name "crate-920"))
         (crate921 (entity-by-name "crate-921"))
         ;; (crate785 (entity-by-name "crate-785"))
-        ;; (crate786 (entity-by-name "crate-786"))
-        ;; (crate787 (entity-by-name "crate-787"))
+        (crate786 (entity-by-name "crate-786"))
+        (crate787 (entity-by-name "crate-787"))
         )
     ;; (when crate918 (logclear! (-> crate918 extra kill-mask) (task-mask task0 task1 task2 done)))
     (when crate920 (logclear! (-> crate920 extra kill-mask) (task-mask task0 task1 task2 done)))
     (when crate921 (logclear! (-> crate921 extra kill-mask) (task-mask task0 task1 task2 done)))
     ;; (when crate785 (logclear! (-> crate785 extra kill-mask) (task-mask task0 task1 task2 done)))
-    ;; (when crate786 (logclear! (-> crate786 extra kill-mask) (task-mask task0 task1 task2 done)))
-    ;; (when crate787 (logclear! (-> crate787 extra kill-mask) (task-mask task0 task1 task2 done)))
+    (when crate786 (logclear! (-> crate786 extra kill-mask) (task-mask task0 task1 task2 done)))
+    (when crate787 (logclear! (-> crate787 extra kill-mask) (task-mask task0 task1 task2 done)))
     )
 
   ;; === dig3 === 
