@@ -633,6 +633,8 @@
     (('crate-954) (set-vector-meters! (-> arg0 extra trans) 548.87  26.69   64.18))  ;; health - moved to cylinder from ceiling for fortexitb-skill-5
     ;; === fordump ===
     (('crate-601) (set-vector-meters! (-> arg0 extra trans) 537.30  23.0  291.15))  ;; moved to other pair of crates and replaced with orb crate
+    (('crate-609) (set-vector-meters! (-> arg0 extra trans) 473.55  34.56 333.76))  ;; moved to top of computer as a troll and replaced with orb crate
+
     ;; === cty-sluma (near hideout) === 
     (('cty-fruit-stand-1)
      (set-vector-meters! (-> arg0 extra trans) 1132.0   8.2 163.0) ;; 
