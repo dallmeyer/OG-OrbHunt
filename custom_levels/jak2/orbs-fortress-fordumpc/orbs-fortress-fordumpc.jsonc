@@ -54,7 +54,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [646.5,    50.6,    383.4, 10], // bounding sphere
       "lump": {
-        "name": "fordumpc-skill-1"
+        "name": "fordumpc-skill-01"
 			}
 		},
     {
@@ -64,7 +64,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [632.0,    72.0,    321.8, 10], // bounding sphere
       "lump": {
-        "name": "fordumpc-skill-2"
+        "name": "fordumpc-skill-02"
 			}
 		},
     {
@@ -74,7 +74,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [738.62,   50.0,    333.60, 10], // bounding sphere
       "lump": {
-        "name": "fordumpc-skill-3"
+        "name": "fordumpc-skill-03"
 			}
 		},
     {
@@ -84,7 +84,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [696.0,    60.7,    353.05, 10], // bounding sphere
       "lump": {
-        "name":   "fordumpc-skill-4"
+        "name":   "fordumpc-skill-04"
 			}
 		},
     {
@@ -94,8 +94,96 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [736.52,   54.3,    322.04, 10], // bounding sphere
       "lump": {
-        "name": "fordumpc-skill-5"
+        "name": "fordumpc-skill-05"
 			}
+    },
+    {
+      "trans": [      620.6066, 38.0152, 381.0711], // immediate right corner from entrance, behind boxes
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     620.6066, 38.0152, 381.0711, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-06"
+			}
+    },
+    {
+      "trans": [  619.36,  36.59, 327.17], // immediate left corner from entrance, behind boxes
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  619.36,  36.59, 327.17, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-07"
+			}
+    },
+    {
+      "trans": [ 628.23,  60.88, 328.75], // top of tall stack on left
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 628.23,  60.88, 328.75, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-08"
+			}
+    },
+    {
+      "trans": [     639.0275, 36.3030, 321.6220], // behind boxes on left
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     639.0275, 36.3030, 321.6220, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-09"
+			}
+    },
+    {
+      "trans": [     646.2640, 52.2933, 323.4527], // up on stack behind boxes on left
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     646.2640, 52.2933, 323.4527, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-10"
+			}
+    },
+    {
+      "trans": [     650.5773, 36.2885, 321.9116], // corner next to stack of boxes on left, behind more boxes/column
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     650.5773, 36.2885, 321.9116, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-11"
+			}
+    },
+    {
+      "trans": [     665.8768, 36.5224, 323.2098], // behind boxes on left in fake cubby
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     665.8768, 36.5224, 323.2098, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-12"
+			}
+    },
+
+    // CRATES
+    {
+      "trans": [ 701.6203, 36.0709, 383.0757], // next to other crates on right side
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0.9767, 0, -0.2144], // quaternion
+      "bsphere": [ 701.6203, 36.0709, 383.0757, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-crate-1",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
     }
   ]
 }

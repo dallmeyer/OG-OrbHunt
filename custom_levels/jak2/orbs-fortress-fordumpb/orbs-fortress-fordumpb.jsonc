@@ -240,13 +240,165 @@
 			}
 		},
     {
-      "trans": [   504.1261, 34.9228, 381.9704], // up higher on pipe right side of first flat escalator, jump from ^
+      "trans": [   504.1261, 34.9228, 381.9704], // up on pipe right side of first flat escalator, jump from ^
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [   504.1261, 34.9228, 381.9704, 10], // bounding sphere
       "lump": {
         "name": "fordumpb-skill-20"
+			}
+		},
+    {
+      "trans": [ 503.17,  43.31, 380.36], // up on fake boxes in wall right of first flat escalator, jump from next rung of pipe from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 503.17,  43.31, 380.36, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-21"
+			}
+		},
+    {
+      "trans": [  494.6757, 23.5616, 359.3334], // left side of first flat escalator, jump across from up on pipe^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  494.6757, 23.5616, 359.3334, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-22"
+			}
+		},
+    {
+      "trans": [      499.6273, 41.5170, 360.7357], // up high on ledge left side of first flat escalator, jump from lamp from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     499.6273, 41.5170, 360.7357, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-23"
+			}
+		},
+    {
+      "trans": [ 434.34,  13.94, 300.90], // in frogger room, uppercut under grate/wall (death plane ends early)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 434.34,  13.94, 300.90, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-24"
+			}
+		},
+    {
+      "trans": [ 560.32,  26.69, 383.61], // behind pipe in corner void among steps between flat escalators
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 560.32,  26.69, 383.61, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-25"
+			}
+		},
+    {
+      "trans": [  546.4459, 20.2953, 384.2675], // in corner among steps between flat escalators
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  546.4459, 20.2953, 384.2675, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-26"
+			}
+		},
+    {
+      "trans": [  593.03,  35.27, 343.63], // bottom right rung of "ladder" twin pipes before fordumpc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  593.03,  35.27, 343.63, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-27"
+			}
+		},
+    {
+      "trans": [  591.18,  71.50, 341.66], // top of right side of "ladder" twin pipes before fordumpc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 591.18,  71.50, 341.66, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-28"
+			}
+		},
+    {
+      "trans": [  585.98,  84.21, 341.66], // top of left side of "ladder" twin pipes before fordumpc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  585.98,  84.21, 341.66, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-29"
+			}
+		},
+    {
+      "trans": [  598.77,  62.92, 351.37], // on left hanging crane before fordumpc, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  598.77,  62.92, 351.37, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-30"
+			}
+		},
+    {
+      "trans": [      612.8218, 33.1422, 355.2238], // hanging under platform on left JUST before fordumpc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      612.8218, 33.1422, 355.2238, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-31"
+			}
+		},
+    {
+      "trans": [     586.1954, 40.9319, 385.6233], // on shelf in right wall before fordumpc
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      586.1954, 40.9319, 385.6233, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-32"
+			}
+		},
+    {
+      "trans": [  595.80,  50.86, 377.14], // on right hanging crane before fordumpc, jump from left one/pipes up high
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  595.80,  50.86, 377.14, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-33",
+        "pickup-amount": ["float", 2.0] // abah hint
+			}
+		},
+    {
+      "trans": [   589.8278, 63.3569, 385.5964], // way up on right before fordumpc, tiny bit of ledge not covered by boxes, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   589.8278, 63.3569, 385.5964, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-34",
+        "pickup-amount": ["float", 2.0] // abah hint
+			}
+		},
+    {
+      "trans": [  589.8305, 75.5034, 386.6603], // way WAY up on right before fordumpc, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   589.8305, 75.5034, 386.6603, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-skill-35"
 			}
 		},
 
@@ -265,6 +417,35 @@
           22, // (pickup-type skill)
           1 // amount?
         ]
+      }
+    },
+    {
+      "trans": [ 558.23,  31.29, 355.12], // in corner among steps between flat escalators
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 0], // quaternion
+      "bsphere": [ 558.23,  31.29, 355.12, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpb-crate-2",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    
+    // HOVER ORBS
+    {
+      "trans": [  502.4393, 71.3794, 384.2825], // top of pipe right of first flat escalator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   502.4393, 71.3794, 384.2825, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpb-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
       }
     }
 
