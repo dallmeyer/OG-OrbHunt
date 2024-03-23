@@ -167,6 +167,66 @@
         "name": "fordumpc-skill-12"
 			}
     },
+    {
+      "trans": [     653.3947, 37.1712, 381.7647], // behind tall stacks of barrels on right, up and over invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     653.3947, 37.1712, 381.7647, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-13"
+			}
+    },
+    {
+      "trans": [ 738.83,  54.33, 349.55], // on upper platform above exit, deep between barrels against back wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 738.83,  54.33, 349.55, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-14"
+			}
+    },
+    {
+      "trans": [ 728.62,  54.33, 384.14], // on upper platform above exit, in corner near pipe/vent things idk
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 728.62,  54.33, 384.14, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-15"
+			}
+    },
+    {
+      "trans": [      739.0502, 37.4276, 378.8696], // behind computer on right at end
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     739.0502, 37.4276, 378.8696, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-16"
+			}
+    },
+    {
+      "trans": [ 632.0,  72.0, 384.11], // way up high on right near entrance, abah from top of boxes (no hint)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 632.0,  72.0, 384.11, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-17"
+			}
+    },
+    {
+      "trans": [  742.5114, 36.1842, 353.8769], // lil corner behind exit door :)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  742.5114, 36.1842, 353.8769, 10], // bounding sphere
+      "lump": {
+        "name": "fordumpc-skill-18"
+			}
+    },
 
     // CRATES
     {

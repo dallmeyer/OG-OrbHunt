@@ -54,7 +54,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [833.8,    34.5,    13.9  , 10], // bounding sphere
       "lump": {
-        "name": "ctysluma-skill-1"
+        "name": "ctysluma-skill-01"
       }
     },
     {
@@ -64,7 +64,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [1127.95,  32.72,   -16.0 , 10], // bounding sphere
       "lump": {
-        "name": "ctysluma-skill-2"
+        "name": "ctysluma-skill-02"
       }
     },
     {
@@ -74,7 +74,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [1113.96,  26.7,    349.47, 10], // bounding sphere
       "lump": {
-        "name": "ctysluma-skill-3"
+        "name": "ctysluma-skill-03"
       }
     },
     {
@@ -84,7 +84,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [1001.2,   33.5,    160.5 , 10], // bounding sphere
       "lump": {
-        "name": "ctysluma-skill-4"
+        "name": "ctysluma-skill-04"
       }
     },
     {
@@ -94,7 +94,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [697.46,  31.18, -73.06 , 10], // bounding sphere
       "lump": {
-        "name": "ctysluma-skill-5"
+        "name": "ctysluma-skill-05"
       }
     },
     {
@@ -104,7 +104,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [726.97,  40.65, -66.75 , 10], // bounding sphere
       "lump": {
-        "name": "ctysluma-skill-6"
+        "name": "ctysluma-skill-06"
       }
     },
     {
@@ -114,7 +114,17 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [739.84,  39.36, -65.63, 10], // bounding sphere
       "lump": {
-        "name": "ctysluma-skill-7"
+        "name": "ctysluma-skill-07"
+      }
+    },
+    {
+      "trans": [      814.9960, 48.9410, 358.8240], // way up on rooftop, trash can proxy (get flush, crouch, quick square>X and hold forward after square)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     814.9960, 48.9410, 358.8240, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-08"
       }
     }
     // {
