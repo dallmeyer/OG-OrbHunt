@@ -70,14 +70,137 @@
     },
 
     {
-      "trans": [ 693.65,   46.0,    199.09], // way up behind cylinder in right corner (computer > HJ from lil pipe to left pipe > DEEP extended to right pipes > standpoint on cylinder > higher on pipes > GG)
+      "trans": [ 693.55,  24.36, 216.11], // on lil pipe above computer
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  693.55,  24.36, 216.11, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+			}
+		},
+    {
+      "trans": [ 695.58,  39.24, 220.14], // up on pipe left of computer ^, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 695.58,  39.24, 220.14 , 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-02"
+			}
+		},
+    {
+      "trans": [  697.7017, 35.9520, 204.7001], // standpoint in concave of cylinder in right corner of first room, jump from ^ or nearby pipes
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   697.7017, 35.9520, 204.7001, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-03"
+			}
+		},
+    {
+      "trans": [ 693.65,   46.0,    199.09], // way up behind cylinder in right corner (from ^ to high on nearby pipes > GG)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [693.65,   46.0,    199.09, 10], // bounding sphere
       "lump": {
-        "name": "forresca-skill-1"
+        "name": "forresca-skill-04"
+			}
+		},
+    {
+      "trans": [  742.78,  23.0, 232.32], // on ledge above entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 742.78,  23.0, 232.32, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-05",
+        "pickup-amount": ["float", 2.0] // abah hint
+			}
+		},
+    {
+      "trans": [      740.9533, 45.3118, 241.7443], // up on pipe in corner near broken tank section, abah from ^ (or maybe just jump up pipe but that sucks)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     740.9533, 45.3118, 241.7443, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-06"
+			}
+		},
+    {
+      "trans": [      696.2907, 35.9398, 240.2723 ], // similar to skill-03 ^^^^ but to the left 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     696.2907, 35.9398, 240.2723, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-07"
+			}
+		},
+    {
+      "trans": [     680.69,  39.29, 246.62 ], // up high between pipes just past first elec gate (from fordumpa), jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    680.69,  39.29, 246.62, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-08"
+			}
+		},
+    {
+      "trans": [     666.2751, 13.5621, 247.6023], // far side of pipe in low corner over void before right turn
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     666.2751, 13.5621, 247.6023, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-09"
+			}
+		},
+    {
+      "trans": [  649.1985, 25.0340, 243.6119], // between pipes in corner to left in button/guard room 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  649.1985, 25.0340, 243.6119, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-10"
+			}
+		},
+    {
+      "trans": [  635.8543, 27.8458, 242.6378], // on vault door handle above button, jump from pipes ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  635.8543, 27.8458, 242.6378, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-11"
+			}
+		},
+    {
+      "trans": [  635.8399, 36.5497, 244.1907], // on lamp above vault handle, infin jump around and up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  635.8399, 36.5497, 244.1907, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-12"
+			}
+		},
+    {
+      "trans": [  650.4822, 39.1498, 244.2525], // on top of far left pipe in corner, extended from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  650.4822, 39.1498, 244.2525, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-13"
 			}
 		}
+
   ]
 }
