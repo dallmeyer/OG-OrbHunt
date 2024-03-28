@@ -200,6 +200,128 @@
       "lump": {
         "name": "forresca-skill-13"
 			}
+		},
+    {
+      "trans": [ 655.38,  21.77, 220.73], // 2nd level of pipe right around corner at beginning of guard/button room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 655.38,  21.77, 220.73, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-14",
+        "pickup-amount": ["float", 2.0]
+			}
+		},
+    {
+      "trans": [  655.37,  34.67, 219.17], // on top of pipe at beginning of guard/button room, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  655.37,  34.67, 219.17, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-15"
+			}
+		},
+    {
+      "trans": [ 635.48,  14.86, 197.60], // in corner next to first guard button and "ladder"
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 635.48,  14.86, 197.60, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-16",
+        "pickup-amount": ["float", 2.0]
+			}
+		},
+    {
+      "trans": [ 638.02,  27.46, 199.09], // on top of "ladder" at beginning of guard/button room, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 638.02,  27.46, 199.09, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-17"
+			}
+		},
+    {
+      "trans": [ 621.86,  34.70, 209.62], // on top of pipe on wall on right wall in guard/button room, extended from vault from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 621.86,  34.70, 209.62, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-18"
+			}
+		},
+    {
+      "trans": [ 611.80,  27.97, 242.38], // 2nd vault on left wall of guard/button room, jump from ladder/1st one
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 611.80,  27.97, 242.38, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-19"
+			}
+		},
+    {
+      "trans": [ 599.29,  34.15, 244.39], // atop fat pipe on left wall of guard/button room, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 599.29,  34.15, 244.39, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-20"
+			}
+		},
+    {
+      "trans": [ 608.16,  25.55, 209.60], // atop twin pipes on right wall of guard/button room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 608.16,  25.55, 209.60, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-21"
+			}
+		},
+    {
+      "trans": [ 594.36,  34.65, 209.62], // atop taller pipe on right wall of guard/button room, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 594.36,  34.65, 209.62, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-22"
+			}
+		},
+    {
+      "trans": [ 582.45,  34.65, 209.62], // atop next taller pipe on right wall of guard/button room, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 582.45,  34.65, 209.62, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-23"
+			}
+		},
+    {
+      "trans": [ 571.97,  36.38, 210.24], // atop lamp in far corner on right wall of guard/button room, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 571.97,  36.38, 210.24, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-24"
+			}
+		},
+    {
+      "trans": [ 564.60,  34.40, 224.49], // atop pipe at far end of guard/button room, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 564.60,  34.40, 224.49, 10], // bounding sphere
+      "lump": {
+        "name": "forresca-skill-25"
+			}
 		}
 
   ]

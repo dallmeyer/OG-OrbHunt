@@ -37,7 +37,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;; Define Settings to use in mods
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define startingDebugContinuePoint "forresca-start")
+(define startingDebugContinuePoint "forrescb-mid")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -318,8 +318,8 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Fortress (Prison)" ;; 16
   "Fortress (Escape South)" ;; 17
   "Fortress (Escape North)" ;; 18
-  "Fortress (Rescue South)" ;; 19
-  "Fortress (Rescue North)" ;; 20
+  "Fortress (Rescue East)" ;; 19
+  "Fortress (Rescue West)" ;; 20
   "Fortress (Ammo Dump Northeast)" ;; 21
   "Fortress (Ammo Dump West)" ;; 22
   "Fortress (Ammo Dump Southeast)" ;; 23

@@ -660,6 +660,9 @@
 (defbehavior target-generic-event-handler target ((arg0 process) (arg1 int) (arg2 symbol) (arg3 event-message-block))
   (local-vars (v0-0 object))
   (case arg2
+    (('level-inside?)
+      (name= (-> (level-get-target-inside *level*) name) (-> arg3 param 0))
+      )
     (('get-pickup)
      (when (not (focus-test? self dead))
        (let ((s4-0 (-> arg3 param 0))

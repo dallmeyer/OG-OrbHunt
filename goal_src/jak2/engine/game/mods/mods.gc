@@ -48,9 +48,11 @@
 (defmacro pd-pos-m (procname)
   `(let ((obj (the process-drawable (process-by-ename ,procname))))
     (when obj
-      (let ((vec (-> obj root trans)))
-        (format 0 "~m ~m ~m~%" (-> vec x) (-> vec y) (-> vec z) 4096.0)
-        (format 0 "~m, ~m, ~m~%" (-> vec x) (-> vec y) (-> vec z) 4096.0)
+      (let ((vec (-> obj root trans))
+            (q (-> obj root quat)))
+        (format 0 "~m ~m ~m~%" (-> vec x) (-> vec y) (-> vec z))
+        (format 0 "~m, ~m, ~m~%" (-> vec x) (-> vec y) (-> vec z))
+        (format 0 " Q:  ~f, ~f, ~f, ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
         )
       )
     (none)))
@@ -635,7 +637,9 @@
     (('crate-601) (set-vector-meters! (-> arg0 extra trans) 537.30  23.0  291.15))  ;; moved to other pair of crates and replaced with orb crate
     (('crate-609) (set-vector-meters! (-> arg0 extra trans) 473.55  34.56 333.76))  ;; moved to top of computer as a troll and replaced with orb crate
     (('crate-595) (set-vector-meters! (-> arg0 extra trans) 698.62  35.99 383.02))  ;; just shifted over slightly in fordumpc
-
+    ;; === forrescb (west rescue friends) ===
+    (('crate-857) (set-vector-meters! (-> arg0 extra trans) 469.23  12.15 267.01))  ;; moved to corner with other crates in first turret area, replaced with orb crate
+    (('crate-864) (set-vector-meters! (-> arg0 extra trans) 511.89  12.15 213.34))  ;; moved to corner with other crates before overhead guards
     ;; === cty-sluma (near hideout) === 
     (('cty-fruit-stand-1)
      (set-vector-meters! (-> arg0 extra trans) 1132.0   8.2 163.0) ;; 
@@ -785,10 +789,11 @@
     )
 
   ;; === prison (first 2 rooms) ===
-  ;; dont allow backtrack into forrescb
-  (let ((door (entity-by-name "fort-entry-gate-20")))
-    (when door (set! (cdr (res-lump-struct door 'on-notice pair)) '(#f '(forrescb))))
-    )
+  ;; dont allow backtrack into forrescb - did this in airlock.gc instead, idk
+  ;; (let ((door (entity-by-name "fort-entry-gate-20")))
+  ;;   (when door (set! (cdr (res-lump-struct door 'on-notice pair)) '((= (-> (level-get-target-inside *level*) name) 'forrescb) '(forrescb))))
+  ;;   )
+  
   ;; check for fake button press to unlock cells
   (prison-door-button-check "prison-part-374" "prsn-cell-door-4")
   (prison-door-button-check "prison-part-375" "prsn-cell-door-3")
