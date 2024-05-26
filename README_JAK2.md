@@ -1,0 +1,47 @@
+# Orb Hunt II
+
+<img src="https://raw.githubusercontent.com/dallmeyer/OG-OrbHunt/main/ModImage2.png" height="400">
+
+Play via the [openGOAL mod-launcher](https://jakmods.dev)!
+
+## Concept
+The core idea is the same as the [Jak 1 Orb Hunt](README_JAK1.md) - it's a collectathon across all the Jak II levels. This time however, it's not just the vanilla collectables that are moved around 😈 Since the Precursor Orbs in Jak II only exist in a handful of levels, and there's only 286(ish) in total, it just wasn't really enough to spread across the entire game. Soooo I added a few Orbs... XXXX - hopefully enough to make every level interesting and challenging!
+
+And I mean *every* level in the game, including the different areas/variations of levels like Sewers and Fortress, has Orbs. Normally in Jak II, there are certain levels or areas that you can only reach at specific points in the storyline, and cannot revisit during post-game. Vanilla OpenGOAL fixes some of these that softlock you out of Orbs, like the Metalhead Nest. I've built on top of that to guarantee you can get both in and out of every level, which means more Orb hiding spots :)
+
+## Gameplay
+I've modified a handful of conditions throughout the game for loading levels and opening airlocks, added some new actors, and taken a few other creative liberties that will allow you to travel to levels or parts of levels that would otherwise be inaccessible.
+
+Many level loading conditions depend on your storyline progression, and so to keep my modifications simpler, **the game starts in a sort of NG+ mode**. Your active mission will be to break into the Metalhead Nest and defeat the final boss - this means you'll have the JET-board, all the guns, and all the Dark Jak powers from the start.
+
+There's also a minimap added to the L3 HUD for most levels - particularly useful with the ORB MAP ICONS option (see Difficulty Toggles below)
+
+## Orbs
+
+**All Orbs needed for 100% should be "in bounds"** meaning you should never need to clip through (what appear to be) solid walls/objects (though I can't stop you from doing it when possible)
+- Taking a death should never be necessary (good luck with deathless), though a couple collectables might require Save+Load / Restart Mission
+- It shouldn't be possible to softlock yourself out of any collectables (though you might need to Save+Load to reset things like crates)
+- You will need to work around some invisible collision/walls
+- You will need knowledge of speedrunning tech, such as dealing with slippery surfaces, extended uppercuts, boosted uppercuts, infinite jump ceilings, rocket uppercuts, proxies, jetboard hovers, Abahbounces, etc
+  - You shouldn't need to use any invuln glitches
+
+### Orb Guide
+- 🟡 JET-board hover glitch hints - certain orbs have a yellow/gold tint, and indicate that you should (and probably must) use the [hover glitch](https://www.youtube.com/watch?v=gEZQjj_pVuY&t=364s) to reach them
+- 🟠 Normal Orbs - any normal-looking orbs should NOT require the hover glitch
+- 🟣 Abahbounce hints - certain orbs have a blue/purple tint, and indicate that you should do an [Abahbounce](https://www.youtube.com/watch?v=gEZQjj_pVuY&t=487s) there (probably to reach a higher location)
+
+## Difficulty Toggles
+Some collectables are well-hidden and/or annoying to reach - you may want to ease your pain by using some of the below options to change the difficulty (you can find them under Options > Game Options > Misc Options)
+- ORB MAP ICONS - when enabled, icons are shown on the map and minimap for Orbs in any active levels
+- PSEUDO SAVESTATES - set custom checkpoints that you can quickly reset to! These only work when Jak has a standpoint - you'll hear a ding to confirm/bonk if rejected
+  - Hold R3 and press Dpad Down to store your current position
+  - Hold R3 and press Dpad Up to reset back to your previously stored position
+    - Note: this will also reset actors (green eco crates, enemies, etc), similar to dying or loading a save file
+  - Note: if you reboot into _debug mode_, be sure `Game Mode` is enabled, not `Debug Mode`
+- CLOSEST ORB - color-coded text displays the distance from Jak to the closest nearby Precursor Orb (including orbs within crates or other actors)
+- HOVER RESTRICTION - when enabled, the game enforces that *only* the yellow/gold Orbs can be picked up by hovering. For any other Orbs, there is a 1m cooldown window after hovering during which you cannot collect the non-hover Orbs. Collecting a hover Orb will instantly clear the cooldown window.
+
+## Side Missions
+You can still collect orbs from side missions like the original game, and they DO count towards the per-level HUD counters. When you activate a side mission, you will notice that the "open orbs" despawn - this is intentional to avoid any issues with level load slots. Once the side mission is no longer active, the open orbs should respawn.
+
+Note that the Stadium levels DO have open orbs, but they won't be spawned/cannot be collected while the race side missions are active. You'll have to find a way to load these levels without the race side missions being activated in order to get the open orbs 😉

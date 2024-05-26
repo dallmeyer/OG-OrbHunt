@@ -296,7 +296,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Set up the build system to build the level geometry
-;; this path is relative to the custom_levels/jak2 folder
+;; this path is relative to the custom_assets/jak2/levels folder
 ;; it should point to the .jsonc file that specifies the level.
 
 
@@ -360,15 +360,14 @@
 (build-custom-level "orbs-city-gungame")
 (custom-level-cgo "OCJ.DGO" "orbs-city-gungame/orbs-city-gungame.gd")
 
-
-(build-custom-level "orbs-fortress-prison")
-(custom-level-cgo "O00.DGO" "orbs-fortress-prison/orbs-fortress-prison.gd")
+(build-custom-level "orbs-o00")
+(custom-level-cgo "O00.DGO" "orbs-o00/orbs-o00.gd")
 
 (build-custom-level "orbs-fortress-forexita")
 (custom-level-cgo "O01.DGO" "orbs-fortress-forexita/orbs-fortress-forexita.gd")
 
-(build-custom-level "orbs-fortress-forexitb")
-(custom-level-cgo "O02.DGO" "orbs-fortress-forexitb/orbs-fortress-forexitb.gd")
+(build-custom-level "orbs-o02")
+(custom-level-cgo "O02.DGO" "orbs-o02/orbs-o02.gd")
 
 (build-custom-level "orbs-fortress-forresca")
 (custom-level-cgo "O03.DGO" "orbs-fortress-forresca/orbs-fortress-forresca.gd")
@@ -526,8 +525,8 @@
 (custom-level-cgo "O1G.DGO" "orbs-nest-nestb/orbs-nest-nestb.gd")
 
 
-(build-custom-level "orbs-default-village1")
-(custom-level-cgo "O1H.DGO" "orbs-default-village1/orbs-default-village1.gd")
+(build-custom-level "orbs-o1h")
+(custom-level-cgo "O1H.DGO" "orbs-o1h/orbs-o1h.gd")
 
 (build-custom-level "orbs-default-halfpipe")
 (custom-level-cgo "O1I.DGO" "orbs-default-halfpipe/orbs-default-halfpipe.gd")

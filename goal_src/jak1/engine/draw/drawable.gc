@@ -1,5 +1,15 @@
 ;;-*-Lisp-*-
 (in-package goal)
+(bundles "ENGINE.CGO" "GAME.CGO")
+
+(require "engine/engine/engines.gc")
+(require "engine/gfx/tie/tie-methods.gc")
+(require "engine/level/load-boundary.gc")
+(require "engine/gfx/mood/time-of-day.gc")
+(require "engine/gfx/shadow/shadow-cpu.gc")
+(require "engine/gfx/generic/generic.gc")
+(require "engine/collide/collide-shape.gc")
+(require "engine/gfx/generic/generic-merc.gc")
 
 ;; name: drawable.gc
 ;; name in dgo: drawable
@@ -1166,9 +1176,7 @@
     )
 
   ;; find closest orb for baby-mode
-  (if (-> *pc-settings* baby-mode?)
-    (baby-mode-find-closest-orb)
-    )
+  (baby-mode-find-closest-orb)
 
   ;; debug drawing
   (with-profiler "debug-draw"

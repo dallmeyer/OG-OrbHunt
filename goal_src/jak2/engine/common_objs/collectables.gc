@@ -344,11 +344,12 @@
   (go-to-initial-state self)
   (none))
   
-
+(define-extern mod-override-init-position (function process-drawable entity-actor none))
 (defmethod init-common ((this collectable) (arg0 entity-actor) (arg1 pickup-type) (arg2 float))
   (set! (-> this pickup-amount) arg2)
   (set! (-> this pickup-type) arg1)
   (initialize-allocations this)
+  (mod-override-init-position this arg0)
   (set! (-> this root trans quad) (-> arg0 extra trans quad))
   (initialize-effects this (-> this fact pickup-type))
   (initialize-options this 0 1024.0 (the-as fact-info #f))
@@ -655,6 +656,8 @@
   #f)
   
 (defun-extern hover-need-to-cooldown? symbol)
+(define-extern *last-hover-time* time-frame)
+(define-extern *last-no-hover-zone-time* time-frame)
 (define-extern skill-alt-actor-check? (function collectable symbol symbol))
 (defbehavior collectable-standard-event-handler collectable ((arg0 process) (arg1 int) (arg2 symbol) (arg3 event-message-block))
   (local-vars (v0-4 object))
@@ -662,20 +665,33 @@
             (and (logtest? (-> self flags) (collectable-flag pickup))
                   (time-elapsed? (the-as int (-> self birth-time)) (the-as time-frame (-> self collect-timeout)))
                   (not (and (-> self next-state) (= (-> self next-state name) 'pickup)))))
+                  
+    (when (and (= (-> self type symbol) 'skill)
+               (= (-> self pickup-amount) (-> *FACT-bank* super-skill-inc))
+               (hover-need-to-cooldown?)
+               )
+      ;; hover orb collected, reset cooldown
+      (set! *last-hover-time* (the time-frame #f)) 
+      )
     (cond
-      ;; if this is a non-hover orb and you've hovered in the past X minutes, frick you
-      ((and (= (-> self type symbol) 'skill)
-            (!= (-> self pickup-amount) (-> *FACT-bank* super-skill-inc))
-            (not (-> *pc-settings* baby-mode?))
-            (hover-need-to-cooldown?)
-            )
-        (add-process *gui-control* *target* (gui-channel guard) (gui-action play) "kg007" -50.0 0)
-        )
       ;; some orbs require 'alt-actor to be dead before pickup is allowed (veggies hack)
       ((and (= (-> self type symbol) 'skill)
             (not (skill-alt-actor-check? self #t))
             )
         ;; don't do pickup
+        )
+      ;; if this is a non-hover orb and you've hovered in the past X minutes, frick you
+      ((and (= (-> self type symbol) 'skill)
+            (!= (-> self pickup-amount) (-> *FACT-bank* super-skill-inc))
+            (hover-need-to-cooldown?)
+            )
+        (when (or (not *last-no-hover-zone-time*)
+                  (g-time-elapsed? *last-no-hover-zone-time* (seconds 5)))
+          ;; "no hover zone" dialogue if its been 5s since last one
+          (add-process *gui-control* *target* (gui-channel guard) (gui-action play) "kg007" -50.0 0)
+          ;; remember last time we played this dialogue
+          (set-g-time! *last-no-hover-zone-time*)
+          )
         )
       ;; otherwise try to get-pickup as usual
       ((send-event arg0 'get-pickup (-> self fact pickup-type) (-> self fact pickup-amount))
@@ -1453,7 +1469,7 @@ This commonly includes things such as:
   (let ((spin-factor (if (zero? (-> this bob-amount))
                         4400.0
                         40049.777)))
-    (quaternion-rotate-local-y! (-> this root quat) (-> this root quat) (* 40049.777 (seconds-per-frame)))
+    (quaternion-rotate-y! (-> this root quat) (-> this root quat) (* 40049.777 (seconds-per-frame)))
     )
   (let ((f30-0 (-> this bob-amount)))
     (when (< 0.0 f30-0)
@@ -1510,10 +1526,17 @@ This commonly includes things such as:
     )
   )
 
+(define-extern orb-placer-list-maintenace (function symbol none))
 (defstate pickup (money)
   :virtual #t
   :code (behavior ((arg0 symbol) (arg1 handle))
     (process-entity-status! self (entity-perm-status dead) #t)
+    )
+  :exit (behavior ()
+    ;; refresh orb-placer list in debug mode
+    (when *debug-segment*
+      (orb-placer-list-maintenace #t)
+      )
     )
   )
 
@@ -2004,7 +2027,7 @@ This commonly includes things such as:
         (set-vector! (-> this draw color-emissive) 0.2 0.2 0.2 1.0)
         )
       )
-    (when (-> *pc-settings* baby-mode?)
+    (when (-> *pc-settings* orb-map-icons?)
       (set! (-> this minimap) (add-icon! *minimap* this (the uint map-class) (the-as int #f) (the-as vector #t) 0))
       )
     )

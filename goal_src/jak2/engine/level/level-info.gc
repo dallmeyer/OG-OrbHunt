@@ -72,7 +72,7 @@
                         :texture-anim-sky #f
                         :draw-priority 10.0
                         :fog-height 327680.0
-                        :bigmap-id (bigmap-id bigmap-id-20)
+                        :bigmap-id (bigmap-id city)
                         :ocean-near-translucent? #t
                         :ocean-far? #f
                         :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -128,7 +128,7 @@
                 :texture-anim-sky #f
                 :draw-priority 10.0
                 :fog-height 327680.0
-                :bigmap-id (bigmap-id bigmap-id-20)
+                :bigmap-id (bigmap-id city)
                 :ocean-near-translucent? #t
                 :ocean-far? #f
                 :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -302,7 +302,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -452,7 +452,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -676,7 +676,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -925,7 +925,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-5)
+    :bigmap-id (bigmap-id drill)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 1.0 1.0 0.0 1.0))
@@ -980,7 +980,7 @@
                 :texture-anim-sky #f
                 :draw-priority 10.0
                 :fog-height 327680.0
-                :bigmap-id (bigmap-id bigmap-id-5)
+                :bigmap-id (bigmap-id drill)
                 :ocean-near-translucent? #t
                 :ocean-far? #f
                 :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 1.0 1.0 0.0 1.0))
@@ -1035,7 +1035,7 @@
                  :texture-anim-sky #f
                  :draw-priority 10.0
                  :fog-height 327680.0
-                 :bigmap-id (bigmap-id bigmap-id-5)
+                 :bigmap-id (bigmap-id drill)
                  :ocean-near-translucent? #t
                  :ocean-far? #f
                  :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 1.0 1.0 0.0 1.0))
@@ -1090,7 +1090,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-5)
+                   :bigmap-id (bigmap-id drill)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 1.0 1.0 0.0 1.0))
@@ -1465,7 +1465,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-16)
+    :bigmap-id (bigmap-id sewesc)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -1520,7 +1520,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-16)
+                  :bigmap-id (bigmap-id sewesc)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -1727,7 +1727,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-18)
+    :bigmap-id (bigmap-id tomb)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -1830,7 +1830,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-18)
+    :bigmap-id (bigmap-id tomb)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -1909,7 +1909,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-18)
+    :bigmap-id (bigmap-id tomb)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -1987,7 +1987,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-18)
+    :bigmap-id (bigmap-id tomb)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -2118,7 +2118,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-18)
+    :bigmap-id (bigmap-id tomb)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -2171,7 +2171,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-18)
+                  :bigmap-id (bigmap-id tomb)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -2273,7 +2273,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-18)
+    :bigmap-id (bigmap-id tomb)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -2354,7 +2354,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-19)
+    :bigmap-id (bigmap-id under)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -2506,7 +2506,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-19)
+    :bigmap-id (bigmap-id under)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -2611,7 +2611,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-11) ;; (bigmap-id bigmap-id-20) ;; changed to share palroof
+    :bigmap-id (bigmap-id palcab) ;; (bigmap-id city) ;; changed orbhunt
     :ocean-near-translucent? #t
     :ocean-far? #t
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -2692,7 +2692,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -2747,7 +2747,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-11)
+                  :bigmap-id (bigmap-id palcab)
                   :ocean-near-translucent? #t
                   :ocean-far? #t
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.75 1.0 0.75 1.0))
@@ -2876,7 +2876,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-11)
+    :bigmap-id (bigmap-id palcab)
     :ocean-near-translucent? #t
     :ocean-far? #t
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.75 1.0 0.75 1.0))
@@ -2931,7 +2931,7 @@
                  :texture-anim-sky #f
                  :draw-priority 10.0
                  :fog-height 327680.0
-                 :bigmap-id (bigmap-id bigmap-id-11)
+                 :bigmap-id (bigmap-id palcab)
                  :ocean-near-translucent? #t
                  :ocean-far? #t
                  :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.5 1.0 0.5 0.5))
@@ -3036,7 +3036,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-12)
+    :bigmap-id (bigmap-id palent)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.5 1.0 0.5 0.5))
@@ -3091,7 +3091,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -3146,7 +3146,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -3201,7 +3201,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.5 1.0 0.5 0.5))
@@ -3305,7 +3305,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-12)
+    :bigmap-id (bigmap-id palent)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.5 1.0 0.5 0.5))
@@ -3472,7 +3472,7 @@
     :deactivate-func #f
     :kill-func #f
     :borrow-size (new 'static 'array uint16 2 #x8ca 160)
-    :borrow-level (new 'static 'array symbol 2 #f 'orbs-fortress-prison)
+    :borrow-level (new 'static 'array symbol 2 #f 'orbs-o00)
     :borrow-display? (new 'static 'array symbol 2 #f 'display)
     :base-task-mask (task-mask task0)
     :texture-anim-tfrag #f
@@ -3487,7 +3487,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-7)
+    :bigmap-id (bigmap-id fortress)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -3541,7 +3541,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -3595,7 +3595,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -3698,7 +3698,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-7)
+    :bigmap-id (bigmap-id fortress)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -3787,7 +3787,7 @@
     :deactivate-func #f
     :kill-func #f
     :borrow-size (new 'static 'array uint16 2 160 160)
-    :borrow-level (new 'static 'array symbol 2 #f 'orbs-fortress-forexitb)
+    :borrow-level (new 'static 'array symbol 2 #f 'orbs-o02)
     :borrow-display? (new 'static 'array symbol 2 #f 'display)
     :base-task-mask (task-mask task0)
     :texture-anim-tfrag #f
@@ -3802,7 +3802,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-7)
+    :bigmap-id (bigmap-id fortress)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -3881,7 +3881,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-7)
+    :bigmap-id (bigmap-id fortress)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -3961,7 +3961,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-7)
+    :bigmap-id (bigmap-id fortress)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -4064,7 +4064,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-7)
+    :bigmap-id (bigmap-id fortress)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -4145,7 +4145,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-7)
+    :bigmap-id (bigmap-id fortress)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -4273,7 +4273,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-7)
+    :bigmap-id (bigmap-id fortress)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -4328,7 +4328,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-7)
+                   :bigmap-id (bigmap-id fortress)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -4481,7 +4481,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-17)
+    :bigmap-id (bigmap-id strip)
     :ocean-near-translucent? #t
     :ocean-far? #t
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -4691,7 +4691,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-13)
+    :bigmap-id (bigmap-id ruins)
     :ocean-near-translucent? #f
     :ocean-far? #t
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -4747,7 +4747,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-13)
+                  :bigmap-id (bigmap-id ruins)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -5401,7 +5401,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-8)
+    :bigmap-id (bigmap-id mountain)
     :ocean-near-translucent? #t
     :ocean-far? #t
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 0.5 0.0 1.0))
@@ -5457,7 +5457,7 @@
                  :texture-anim-sky #f
                  :draw-priority 10.0
                  :fog-height 327680.0
-                 :bigmap-id (bigmap-id bigmap-id-8)
+                 :bigmap-id (bigmap-id mountain)
                  :ocean-near-translucent? #t
                  :ocean-far? #f
                  :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 0.5 0.0 1.0))
@@ -5562,7 +5562,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-6)
+    :bigmap-id (bigmap-id forest)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -5619,7 +5619,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-6)
+                  :bigmap-id (bigmap-id forest)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -5640,7 +5640,7 @@
     :dbname 'mincan
     :taskname 'mountain
     :packages '(mincan)
-    :music-bank #f
+    :music-bank 'mountain
     :ambient-sounds '()
     :mood-func 'update-mood-mincan
     :mood-init #f
@@ -5724,7 +5724,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-8)
+    :bigmap-id (bigmap-id mountain)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -5780,9 +5780,9 @@
                   :texture-anim-map #f
                   :texture-anim-sky #f
                   :draw-priority 9.0
-                  :level-flags #x1
+                  :level-flags (level-load-flags city)
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -5836,9 +5836,9 @@
                  :texture-anim-map #f
                  :texture-anim-sky #f
                  :draw-priority 10.0
-                 :level-flags #x1
+                 :level-flags (level-load-flags city)
                  :fog-height 327680.0
-                 :bigmap-id (bigmap-id bigmap-id-20)
+                 :bigmap-id (bigmap-id city)
                  :ocean-near-translucent? #t
                  :ocean-far? #f
                  :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -5892,9 +5892,9 @@
                  :texture-anim-map #f
                  :texture-anim-sky #f
                  :draw-priority 10.0
-                 :level-flags #x1
+                 :level-flags (level-load-flags city)
                  :fog-height 327680.0
-                 :bigmap-id (bigmap-id bigmap-id-20)
+                 :bigmap-id (bigmap-id city)
                  :ocean-near-translucent? #t
                  :ocean-far? #f
                  :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -5948,9 +5948,9 @@
                  :texture-anim-map #f
                  :texture-anim-sky #f
                  :draw-priority 10.0
-                 :level-flags #x1
+                 :level-flags (level-load-flags city)
                  :fog-height 327680.0
-                 :bigmap-id (bigmap-id bigmap-id-20)
+                 :bigmap-id (bigmap-id city)
                  :ocean-near-translucent? #t
                  :ocean-far? #f
                  :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -6003,9 +6003,9 @@
                   :texture-anim-map #f
                   :texture-anim-sky #f
                   :draw-priority 10.0
-                  :level-flags #x1
+                  :level-flags (level-load-flags city)
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -6058,9 +6058,9 @@
                   :texture-anim-map #f
                   :texture-anim-sky #f
                   :draw-priority 10.0
-                  :level-flags #x1
+                  :level-flags (level-load-flags city)
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -6114,7 +6114,7 @@
                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3))
         
                  (new 'static 'continue-point
-                   :name "ctygena-burning-bush-2"
+                   :name "ctygena-burning-bush-2" ;; burning-bush-16 / get-to-14
                    :level 'ctygena
                    :flags (continue-flags no-auto)
                    :trans (new 'static 'vector :x -1562447.5000 :y 95869.0859 :z -1153554.875 :w 1.0)
@@ -6128,26 +6128,26 @@
                    :on-goto #f
                    :vis-nick 'ctygena
                    :want (new 'static 'inline-array level-buffer-state 6
-                          (new 'static 'level-buffer-state :name 'ctyfarma :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'ctygena :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'ctywide :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
-                          (new 'static 'level-buffer-state :name 'ctygena :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'ctyfarma :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
                    :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3))
         
                  (new 'static 'continue-point
-                   :name "ctygena-burning-bush"
+                   :name "ctygena-burning-bush" ;; burning-bush-2 / get-to-11
                    :level 'ctygena
                    :flags (continue-flags no-auto)
-                   :trans (new 'static 'vector :x -256512.4 :y 32768.0 :z -116162.15 :w 1.0)
-                   :quat (new 'static 'vector :y 0.0466 :w -0.9989)
-                   :camera-trans (new 'static 'vector :x -255002.22 :y 53861.992 :z -167339.62 :w 1.0)
+                   :trans (new 'static 'vector :x (meters -46.25) :y (meters 21.3524) :z (meters -21.16) :w 1.0)
+                   :quat (new 'static 'vector :x -0.0009 :y -0.0212 :z 0.0008 :w 0.9997)
+                   :camera-trans (new 'static 'vector :x (meters -53.7695) :y (meters 26.4996) :z (meters -31.8182) :w 1.0)
                    :camera-rot (new 'static 'inline-array vector3s 3
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.9995 0.0 0.0305))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.0037 0.9925 0.1216))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.0302 -0.1216 0.9921)))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  0.8068 -0.0000 -0.5908))
+                                (new 'static 'vector3s :data (new 'static 'array float 3 0.0706 0.9928 0.0964))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  0.5865 -0.1195 0.8010)))
           
                    :on-goto #f
                    :vis-nick 'ctygena
@@ -6188,9 +6188,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -6244,16 +6244,16 @@
                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3))
         
                  (new 'static 'continue-point
-                   :name "ctygenb-burning-bush"
+                   :name "ctygenb-burning-bush" ;; burning-bush-15
                    :level 'ctygenb
                    :flags (continue-flags no-auto)
-                   :trans (new 'static 'vector :x 685747.8 :y 32765.543 :z -1213995.9 :w 1.0)
-                   :quat (new 'static 'vector :y 0.9949 :w 0.1007)
-                   :camera-trans (new 'static 'vector :x 686984.8 :y 53859.53 :z -1162769.6 :w 1.0)
+                   :trans (new 'static 'vector :x (meters 324.4936) :y (meters 8.0000) :z (meters -302.7128) :w 1.0)
+                   :quat (new 'static 'vector :x 0.0002 :y -0.5630 :z 0.0004 :w 0.8264)
+                   :camera-trans (new 'static 'vector :x (meters 336.9295) :y (meters 13.1500) :z (meters -301.4453) :w 1.0)
                    :camera-rot (new 'static 'inline-array vector3s 3
-                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.9997 0.0 0.0243))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.0029 0.9926 -0.1207))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.0242 -0.1207 -0.9923)))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.0993 -0.0000 0.9950))
+                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.1202 0.9926 -0.0119))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.9877 -0.1208 -0.0985)))
           
                    :on-goto #f
                    :vis-nick 'ctygenb
@@ -6261,7 +6261,7 @@
                           (new 'static 'level-buffer-state :name 'ctygenb :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'ctywide :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
-                          (new 'static 'level-buffer-state :name 'ctygena :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'stadium :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
@@ -6318,9 +6318,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -6448,9 +6448,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -6745,9 +6745,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -6897,9 +6897,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -7050,9 +7050,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -7514,9 +7514,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -7570,7 +7570,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -7676,13 +7676,13 @@
                    :name "ctyfarma-burning-bush"
                    :level 'ctyfarma
                    :flags (continue-flags no-auto)
-                   :trans (new 'static 'vector :x -1517668.5000 :y 36428.9492 :z 389282.8125 :w 1.0)
-                   :quat (new 'static 'vector :y -0.6976 :w -0.7164)
-                   :camera-trans (new 'static 'vector :x -1544719.8750 :y 57522.6914 :z 432749.9687 :w 1.0)
+                   :trans (new 'static 'vector :x (meters -397.3371) :y (meters 22.7737) :z (meters 92.8341) :w 1.0)
+                   :quat (new 'static 'vector :x 0.0000 :y 0.8954 :z 0.0000 :w -0.4452)
+                   :camera-trans (new 'static 'vector :x (meters -397.8463) :y (meters 27.9146) :z (meters 80.3704) :w 1.0)
                    :camera-rot (new 'static 'inline-array vector3s 3
-                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.8216 -0.0000 -0.5700))
-                                (new 'static 'vector3s :data (new 'static 'array float 3  0.0655  0.9933 -0.0944))
-                                (new 'static 'vector3s :data (new 'static 'array float 3  0.5662 -0.1149 -0.8161)))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  0.9982    0.0000   0.0596))
+                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.0082    0.9903   0.1386))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.0591    -0.1389   0.9885)))
           
                    :on-goto #f
                    :vis-nick 'ctyfarma
@@ -7723,9 +7723,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -7783,14 +7783,14 @@
                    :name "ctyfarmb-burning-bush"
                    :level 'ctyfarmb
                    :flags (continue-flags no-auto)
-                   :trans (new 'static 'vector :x -1292948.6 :y 32763.904 :z 4407961.5 :w 1.0)
-                   :quat (new 'static 'vector :y -0.7097 :w -0.7044)
-                   :camera-trans (new 'static 'vector :x -1337764.2 :y 52156.824 :z 4405888.0 :w 1.0)
+                   :trans (new 'static 'vector :x (meters -33.8009) :y (meters 11.8256) :z (meters 944.8270) :w 1.0)
+                   :quat (new 'static 'vector :x -0.0003 :y -0.1377 :z -0.0015 :w 0.9904)
+                   :camera-trans (new 'static 'vector :x (meters -27.9830) :y (meters 16.9755) :z (meters 933.7645) :w 1.0)
                    :camera-rot (new 'static 'inline-array vector3s 3
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.0466 0.0 -0.9989))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.1284 0.9916 0.006))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.9906 -0.1286 0.0463)))
-          
+                                (new 'static 'vector3s :data (new 'static 'array float 3  0.8856 -0.0000 0.4643))
+                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.0565 0.9925 0.1077))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.4609 -0.1217 0.8790)))
+                                         
                    :on-goto #f
                    :vis-nick 'ctyfarmb
                    :want (new 'static 'inline-array level-buffer-state 6
@@ -7830,9 +7830,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -8006,9 +8006,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -8113,7 +8113,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -8193,7 +8193,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -8319,9 +8319,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -8434,9 +8434,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -8589,9 +8589,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -8743,9 +8743,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 10.0
-    :level-flags #x1
+    :level-flags (level-load-flags city)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -8945,7 +8945,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 0.5 0.25 0.75))
@@ -9091,7 +9091,33 @@
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
-                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'stadium1)))
+                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'stadium1))
+
+                 (new 'static 'continue-point
+                   :name "stadiumb-warp"
+                   :level 'stadiumb
+                   :flags (continue-flags warp-gate)
+                   :trans (new 'static 'vector :x (meters -166.5116) :y (meters 11.5038) :z (meters -457.1051) :w 1.0)
+                   :quat (new 'static 'vector :x 0.0000 :y -0.9974 :z -0.0009 :w -0.0710)
+                   :camera-trans (new 'static 'vector :x (meters -158.4657) :y (meters 16.2190) :z (meters -464.3651) :w 1.0)
+                   :camera-rot (new 'static 'inline-array vector3s 3
+                                (new 'static 'vector3s :data (new 'static 'array float 3   0.6060  0.0000  0.7954))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.1113  0.9901  0.0848))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.7876 -0.1399  0.6000)))
+          
+                   :on-goto #f
+                   :vis-nick 'stadiumb
+                   :want (new 'static 'inline-array level-buffer-state 6
+                          (new 'static 'level-buffer-state :name 'ctywide :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'stadium :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'stadiumb :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'stadium1))
+
+                   )
         
       
     :tasks '()
@@ -9121,7 +9147,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 0.5 0.25 0.75))
@@ -9291,7 +9317,33 @@
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
-                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'stadium1)))
+                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'stadium1))
+
+                 (new 'static 'continue-point
+                   :name "stadiumc-warp"
+                   :level 'stadiumc
+                   :flags (continue-flags warp-gate)
+                   :trans (new 'static 'vector :x (meters -166.5116) :y (meters 11.5038) :z (meters -457.1051) :w 1.0)
+                   :quat (new 'static 'vector :x 0.0000 :y -0.9974 :z -0.0009 :w -0.0710)
+                   :camera-trans (new 'static 'vector :x (meters -158.4657) :y (meters 16.2190) :z (meters -464.3651) :w 1.0)
+                   :camera-rot (new 'static 'inline-array vector3s 3
+                                (new 'static 'vector3s :data (new 'static 'array float 3   0.6060  0.0000  0.7954))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.1113  0.9901  0.0848))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.7876 -0.1399  0.6000)))
+          
+                   :on-goto #f
+                   :vis-nick 'stadium
+                   :want (new 'static 'inline-array level-buffer-state 6
+                          (new 'static 'level-buffer-state :name 'ctywide :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'stadium :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'stadiumc :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'stadium1))
+                   
+                   )
         
       
     :tasks '()
@@ -9321,7 +9373,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 0.5 0.25 0.75))
@@ -9467,7 +9519,33 @@
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
-                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'stadium1)))
+                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'stadium1))
+                   
+                 (new 'static 'continue-point
+                   :name "stadiumd-warp"
+                   :level 'stadiumd
+                   :flags (continue-flags warp-gate)
+                   :trans (new 'static 'vector :x (meters -166.5116) :y (meters 11.5038) :z (meters -457.1051) :w 1.0)
+                   :quat (new 'static 'vector :x 0.0000 :y -0.9974 :z -0.0009 :w -0.0710)
+                   :camera-trans (new 'static 'vector :x (meters -158.4657) :y (meters 16.2190) :z (meters -464.3651) :w 1.0)
+                   :camera-rot (new 'static 'inline-array vector3s 3
+                                (new 'static 'vector3s :data (new 'static 'array float 3   0.6060  0.0000  0.7954))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.1113  0.9901  0.0848))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.7876 -0.1399  0.6000)))
+          
+                   :on-goto #f
+                   :vis-nick 'stadiumd
+                   :want (new 'static 'inline-array level-buffer-state 6
+                          (new 'static 'level-buffer-state :name 'ctywide :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'stadium :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'stadiumd :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'stadium1))
+                   
+                   )
         
       
     :tasks '()
@@ -9497,7 +9575,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 0.5 0.25 0.75))
@@ -9593,7 +9671,33 @@
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
-                   :want-sound (new 'static 'array symbol 3 'ctywide1 'stadium1 'skate1)))
+                   :want-sound (new 'static 'array symbol 3 'ctywide1 'stadium1 'skate1))
+
+                 (new 'static 'continue-point
+                   :name "skatea-warp"
+                   :level 'skatea
+                   :flags (continue-flags warp-gate)
+                   :trans (new 'static 'vector :x (meters -166.5116) :y (meters 11.5038) :z (meters -457.1051) :w 1.0)
+                   :quat (new 'static 'vector :x 0.0000 :y -0.9974 :z -0.0009 :w -0.0710)
+                   :camera-trans (new 'static 'vector :x (meters -158.4657) :y (meters 16.2190) :z (meters -464.3651) :w 1.0)
+                   :camera-rot (new 'static 'inline-array vector3s 3
+                                (new 'static 'vector3s :data (new 'static 'array float 3   0.6060  0.0000  0.7954))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.1113  0.9901  0.0848))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.7876 -0.1399  0.6000)))
+          
+                   :on-goto #f
+                   :vis-nick 'skatea
+                   :want (new 'static 'inline-array level-buffer-state 6
+                          (new 'static 'level-buffer-state :name 'skatea :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'ctywide :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'stadium :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                   :want-sound (new 'static 'array symbol 3 'ctywide1 'stadium1 'skate1))
+
+                   )
         
       
     :tasks '()
@@ -9623,7 +9727,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 0.5 0.25 0.75))
@@ -9750,7 +9854,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 0.5 0.25 0.75))
@@ -9804,7 +9908,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 0.5 0.25 0.75))
@@ -9859,7 +9963,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -9915,7 +10019,7 @@
                  :texture-anim-sky #f
                  :draw-priority 10.0
                  :fog-height 327680.0
-                 :bigmap-id (bigmap-id bigmap-id-20)
+                 :bigmap-id (bigmap-id city)
                  :ocean-near-translucent? #t
                  :ocean-far? #f
                  :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -9971,7 +10075,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10027,7 +10131,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10083,7 +10187,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10139,7 +10243,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10195,7 +10299,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10251,7 +10355,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10307,7 +10411,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10363,7 +10467,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10418,7 +10522,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10473,7 +10577,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10528,7 +10632,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10583,7 +10687,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10638,7 +10742,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10718,7 +10822,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10773,7 +10877,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10829,7 +10933,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10908,7 +11012,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -10988,7 +11092,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11090,7 +11194,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.5 0.5))
@@ -11143,7 +11247,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11198,7 +11302,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11253,7 +11357,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11308,7 +11412,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11362,7 +11466,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11417,7 +11521,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11472,7 +11576,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11527,7 +11631,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11582,7 +11686,7 @@
                 :texture-anim-sky #f
                 :draw-priority 10.0
                 :fog-height 327680.0
-                :bigmap-id (bigmap-id bigmap-id-20)
+                :bigmap-id (bigmap-id city)
                 :ocean-near-translucent? #t
                 :ocean-far? #f
                 :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11637,7 +11741,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11692,7 +11796,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11747,7 +11851,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11802,7 +11906,7 @@
                  :texture-anim-sky #f
                  :draw-priority 10.0
                  :fog-height 327680.0
-                 :bigmap-id (bigmap-id bigmap-id-20)
+                 :bigmap-id (bigmap-id city)
                  :ocean-near-translucent? #t
                  :ocean-far? #f
                  :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11857,7 +11961,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11912,7 +12016,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -11967,7 +12071,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -12022,7 +12126,7 @@
                  :texture-anim-sky #f
                  :draw-priority 10.0
                  :fog-height 327680.0
-                 :bigmap-id (bigmap-id bigmap-id-20)
+                 :bigmap-id (bigmap-id city)
                  :ocean-near-translucent? #t
                  :ocean-far? #f
                  :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -12077,7 +12181,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -12277,7 +12381,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -12331,7 +12435,7 @@
                 :texture-anim-sky #f
                 :draw-priority 10.0
                 :fog-height 327680.0
-                :bigmap-id (bigmap-id bigmap-id-20)
+                :bigmap-id (bigmap-id city)
                 :ocean-near-translucent? #t
                 :ocean-far? #f
                 :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -12386,7 +12490,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -12441,7 +12545,7 @@
                  :texture-anim-sky #f
                  :draw-priority 10.0
                  :fog-height 327680.0
-                 :bigmap-id (bigmap-id bigmap-id-20)
+                 :bigmap-id (bigmap-id city)
                  :ocean-near-translucent? #t
                  :ocean-far? #f
                  :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -12496,7 +12600,7 @@
                  :texture-anim-sky #f
                  :draw-priority 10.0
                  :fog-height 327680.0
-                 :bigmap-id (bigmap-id bigmap-id-20)
+                 :bigmap-id (bigmap-id city)
                  :ocean-near-translucent? #t
                  :ocean-far? #f
                  :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -12551,7 +12655,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -12606,7 +12710,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -12710,7 +12814,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -12818,7 +12922,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-3)
+    :bigmap-id (bigmap-id dig1)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -13006,7 +13110,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-4)
+    :bigmap-id (bigmap-id dig3)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -13061,7 +13165,7 @@
                 :texture-anim-sky #f
                 :draw-priority 10.0
                 :fog-height 327680.0
-                :bigmap-id (bigmap-id bigmap-id-4)
+                :bigmap-id (bigmap-id dig3)
                 :ocean-near-translucent? #t
                 :ocean-far? #f
                 :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -13188,7 +13292,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-1)
+    :bigmap-id (bigmap-id caspad)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -13318,7 +13422,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-2)
+    :bigmap-id (bigmap-id castle)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -13422,7 +13526,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #t
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -13478,7 +13582,7 @@
                  :texture-anim-sky #f
                  :draw-priority 10.0
                  :fog-height 327680.0
-                 :bigmap-id (bigmap-id bigmap-id-2)
+                 :bigmap-id (bigmap-id castle)
                  :ocean-near-translucent? #t
                  :ocean-far? #f
                  :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -13534,7 +13638,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-2)
+                  :bigmap-id (bigmap-id castle)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -13696,7 +13800,7 @@
     :deactivate-func #f
     :kill-func #f
     :borrow-size (new 'static 'array uint16 2 160 160)
-    :borrow-level (new 'static 'array symbol 2 #f 'orbs-default-village1)
+    :borrow-level (new 'static 'array symbol 2 #f 'orbs-o1h)
     :borrow-display? (new 'static 'array symbol 2 #f 'display)
     :base-task-mask (task-mask task0)
     :texture-anim-tfrag #f
@@ -13711,7 +13815,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #t
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -13766,7 +13870,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -13822,7 +13926,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -13877,7 +13981,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -13931,7 +14035,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -14084,7 +14188,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-9)
+    :bigmap-id (bigmap-id nest)
     :ocean-near-translucent? #t
     :ocean-far? #t
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -14261,7 +14365,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-9)
+    :bigmap-id (bigmap-id nest)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -14315,7 +14419,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -14371,7 +14475,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -14426,7 +14530,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -14503,7 +14607,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -14599,7 +14703,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -14703,7 +14807,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -14758,7 +14862,7 @@
                   :texture-anim-sky #f
                   :draw-priority 10.0
                   :fog-height 327680.0
-                  :bigmap-id (bigmap-id bigmap-id-20)
+                  :bigmap-id (bigmap-id city)
                   :ocean-near-translucent? #t
                   :ocean-far? #f
                   :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -14813,7 +14917,7 @@
                     :texture-anim-sky #f
                     :draw-priority 10.0
                     :fog-height 327680.0
-                    :bigmap-id (bigmap-id bigmap-id-20)
+                    :bigmap-id (bigmap-id city)
                     :ocean-near-translucent? #t
                     :ocean-far? #f
                     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -14868,7 +14972,7 @@
                    :texture-anim-sky #f
                    :draw-priority 10.0
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -14947,7 +15051,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15025,7 +15129,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15103,9 +15207,9 @@
                    :texture-anim-map #f
                    :texture-anim-sky #f
                    :draw-priority 10.0
-                   :level-flags #x1
+                   :level-flags (level-load-flags city)
                    :fog-height 327680.0
-                   :bigmap-id (bigmap-id bigmap-id-20)
+                   :bigmap-id (bigmap-id city)
                    :ocean-near-translucent? #t
                    :ocean-far? #f
                    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15190,7 +15294,7 @@
                           :texture-anim-sky #f
                           :draw-priority 10.0
                           :fog-height 327680.0
-                          :bigmap-id (bigmap-id bigmap-id-20)
+                          :bigmap-id (bigmap-id city)
                           :ocean-near-translucent? #t
                           :ocean-far? #f
                           :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15267,7 +15371,7 @@
                           :texture-anim-sky #f
                           :draw-priority 10.0
                           :fog-height 327680.0
-                          :bigmap-id (bigmap-id bigmap-id-20)
+                          :bigmap-id (bigmap-id city)
                           :ocean-near-translucent? #t
                           :ocean-far? #f
                           :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15344,7 +15448,7 @@
                           :texture-anim-sky #f
                           :draw-priority 10.0
                           :fog-height 327680.0
-                          :bigmap-id (bigmap-id bigmap-id-20)
+                          :bigmap-id (bigmap-id city)
                           :ocean-near-translucent? #t
                           :ocean-far? #f
                           :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15421,7 +15525,7 @@
                           :texture-anim-sky #f
                           :draw-priority 10.0
                           :fog-height 327680.0
-                          :bigmap-id (bigmap-id bigmap-id-20)
+                          :bigmap-id (bigmap-id city)
                           :ocean-near-translucent? #t
                           :ocean-far? #f
                           :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15498,7 +15602,7 @@
                           :texture-anim-sky #f
                           :draw-priority 10.0
                           :fog-height 327680.0
-                          :bigmap-id (bigmap-id bigmap-id-20)
+                          :bigmap-id (bigmap-id city)
                           :ocean-near-translucent? #t
                           :ocean-far? #f
                           :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15575,7 +15679,7 @@
                           :texture-anim-sky #f
                           :draw-priority 10.0
                           :fog-height 327680.0
-                          :bigmap-id (bigmap-id bigmap-id-20)
+                          :bigmap-id (bigmap-id city)
                           :ocean-near-translucent? #t
                           :ocean-far? #f
                           :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15652,7 +15756,7 @@
                           :texture-anim-sky #f
                           :draw-priority 10.0
                           :fog-height 327680.0
-                          :bigmap-id (bigmap-id bigmap-id-20)
+                          :bigmap-id (bigmap-id city)
                           :ocean-near-translucent? #t
                           :ocean-far? #f
                           :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15729,7 +15833,7 @@
                           :texture-anim-sky #f
                           :draw-priority 10.0
                           :fog-height 327680.0
-                          :bigmap-id (bigmap-id bigmap-id-20)
+                          :bigmap-id (bigmap-id city)
                           :ocean-near-translucent? #t
                           :ocean-far? #f
                           :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15806,7 +15910,7 @@
                           :texture-anim-sky #f
                           :draw-priority 10.0
                           :fog-height 327680.0
-                          :bigmap-id (bigmap-id bigmap-id-20)
+                          :bigmap-id (bigmap-id city)
                           :ocean-near-translucent? #t
                           :ocean-far? #f
                           :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15883,7 +15987,7 @@
                           :texture-anim-sky #f
                           :draw-priority 10.0
                           :fog-height 327680.0
-                          :bigmap-id (bigmap-id bigmap-id-20)
+                          :bigmap-id (bigmap-id city)
                           :ocean-near-translucent? #t
                           :ocean-far? #f
                           :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15960,7 +16064,7 @@
                           :texture-anim-sky #f
                           :draw-priority 10.0
                           :fog-height 327680.0
-                          :bigmap-id (bigmap-id bigmap-id-20)
+                          :bigmap-id (bigmap-id city)
                           :ocean-near-translucent? #t
                           :ocean-far? #f
                           :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -15978,9 +16082,9 @@
   (set! (-> demo memory-mode) (load-buffer-mode small-edge)))
   
 
-(#when PC_PORT
-  (set! (-> sewesc activate-func) 'sewesc-activate)
-  (set! (-> sewesc deactivate-func) 'sewesc-deactivate))
+;; (#when PC_PORT
+;;   (set! (-> sewesc activate-func) 'sewesc-activate)
+;;   (set! (-> sewesc deactivate-func) 'sewesc-deactivate))
   
 
 (define *level-load-list* '(default-level
@@ -16226,7 +16330,7 @@
     :texture-anim-sky #f
     :draw-priority 10.0
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #t
     :ocean-far? #t
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -16283,8 +16387,9 @@
     :texture-anim-map #f
     :texture-anim-sky #f
     :draw-priority 9.0
+    :level-flags (level-load-flags orb-hunt)
     :fog-height 327680.0
-    :bigmap-id (bigmap-id bigmap-id-20)
+    :bigmap-id (bigmap-id city)
     :ocean-near-translucent? #f
     :ocean-far? #f
     :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
@@ -16321,9 +16426,9 @@
 (define orbs-city-hiphog   (orbs-borrow-level #xb0 'orbs-city-hiphog   'orbs-city-hiphog-vis   'oci 'update-mood-copy-ctywide))
 (define orbs-city-gungame  (orbs-borrow-level #xb1 'orbs-city-gungame  'orbs-city-gungame-vis  'ocj 'update-mood-copy-ctywide))
 
-(define orbs-fortress-prison   (orbs-borrow-level #xb2 'orbs-fortress-prison   'orbs-fortress-prison-vis   'o00 'update-mood-copy-prison))
+(define orbs-o00   (orbs-borrow-level #xb2 'orbs-o00   'orbs-o00-vis   'o00 'update-mood-copy-prison))  ;; fortress-prison
 (define orbs-fortress-forexita (orbs-borrow-level #xb3 'orbs-fortress-forexita 'orbs-fortress-forexita-vis 'o01 'update-mood-fortress))
-(define orbs-fortress-forexitb (orbs-borrow-level #xb4 'orbs-fortress-forexitb 'orbs-fortress-forexitb-vis 'o02 'update-mood-fortress))
+(define orbs-o02 (orbs-borrow-level #xb4 'orbs-o02 'orbs-o02-vis 'o02 'update-mood-fortress)) ;; fortress-forexitb
 (define orbs-fortress-forresca (orbs-borrow-level #xb5 'orbs-fortress-forresca 'orbs-fortress-forresca-vis 'o03 'update-mood-forresca))
 (define orbs-fortress-forrescb (orbs-borrow-level #xb6 'orbs-fortress-forrescb 'orbs-fortress-forrescb-vis 'o04 'update-mood-forrescb))
 (define orbs-fortress-fordumpa (orbs-borrow-level #xb7 'orbs-fortress-fordumpa 'orbs-fortress-fordumpa-vis 'o05 'update-mood-fordumpa))
@@ -16339,6 +16444,11 @@
 (define orbs-stadium-stadiumd (orbs-borrow-level #xbe 'orbs-stadium-stadiumd 'orbs-stadium-stadiumd-vis 'o0c 'update-mood-stadiumb))
 (define orbs-stadium-skatea   (orbs-borrow-level #xbf 'orbs-stadium-skatea   'orbs-stadium-skatea-vis   'o0d 'update-mood-skatea))
 (define orbs-stadium-garage   (orbs-borrow-level #xc0 'orbs-stadium-garage   'orbs-stadium-garage-vis   'o0e 'update-mood-garage))
+;; keep these orb levels loaded during side missions
+;; (logclear! (-> orbs-stadium-stadiumb level-flags) (level-load-flags orb-hunt))
+;; (logclear! (-> orbs-stadium-stadiumc level-flags) (level-load-flags orb-hunt))
+;; (logclear! (-> orbs-stadium-stadiumd level-flags) (level-load-flags orb-hunt))
+;; (logclear! (-> orbs-stadium-skatea level-flags)   (level-load-flags orb-hunt))
 
 (define orbs-palace-palcab     (orbs-borrow-level #xc1 'orbs-palace-palcab     'orbs-palace-palcab-vis     'o0f 'update-mood-palcab))
 (define orbs-palace-palshaft   (orbs-borrow-level #xc2 'orbs-palace-palshaft   'orbs-palace-palshaft-vis   'o0g 'update-mood-palshaft))
@@ -16389,14 +16499,14 @@
 (define orbs-nest-nest         (orbs-borrow-level #xe1 'orbs-nest-nest         'orbs-nest-nest-vis         'o1f 'update-mood-nest))
 (define orbs-nest-nestb        (orbs-borrow-level #xe2 'orbs-nest-nestb        'orbs-nest-nestb-vis        'o1g 'update-mood-nestb))
 
-(define orbs-default-village1  (orbs-borrow-level #xe3 'orbs-default-village1  'orbs-default-village1-vis  'o1h 'update-mood-village1))
+(define orbs-o1h  (orbs-borrow-level #xe3 'orbs-o1h  'orbs-o1h-vis  'o1h 'update-mood-village1))  ;; default-village1
 (define orbs-default-halfpipe  (orbs-borrow-level #xe4 'orbs-default-halfpipe  'orbs-default-halfpipe-vis  'o1i 'update-mood-default))
 
 
 (#when PC_PORT
   ;; (cons! *level-load-list* 'test-zone)
   (cons! *level-load-list* 'orbs-default-halfpipe)
-  (cons! *level-load-list* 'orbs-default-village1)
+  (cons! *level-load-list* 'orbs-o1h)
   (cons! *level-load-list* 'orbs-nest-nestb)
   (cons! *level-load-list* 'orbs-nest-nest)
   (cons! *level-load-list* 'orbs-under-underb)
@@ -16444,9 +16554,9 @@
   (cons! *level-load-list* 'orbs-fortress-fordumpa)
   (cons! *level-load-list* 'orbs-fortress-forrescb)
   (cons! *level-load-list* 'orbs-fortress-forresca)
-  (cons! *level-load-list* 'orbs-fortress-forexitb)
+  (cons! *level-load-list* 'orbs-o02)
   (cons! *level-load-list* 'orbs-fortress-forexita)
-  (cons! *level-load-list* 'orbs-fortress-prison)
+  (cons! *level-load-list* 'orbs-o00)
   (cons! *level-load-list* 'orbs-city-gungame)
   (cons! *level-load-list* 'orbs-city-hiphog)
   (cons! *level-load-list* 'orbs-city-hideout)

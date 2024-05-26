@@ -1,6 +1,9 @@
 ;;-*-Lisp-*-
 (in-package goal)
 
+(require "engine/ps2/pad.gc")
+
+
 #|
 
   This file contains code that we need for the PC port of the game specifically.
@@ -83,10 +86,6 @@
   (direct3d)
   )
 
-
-(defmacro pc-cheats? (obj &rest cheats)
-  `(logtest? ,obj (pc-cheats ,@cheats)))
-
 ;; music log info
 (deftype pc-music-log-entry (structure)
   ((name  symbol)
@@ -152,7 +151,7 @@
    (controller-led-max-brightness float)
    (controller-led-color          rgbaf :inline)
    (stick-deadzone float) ;; analog stick deadzone. 0-1
-   (keyboard-enabled? symbol)
+   (keyboard-enabled? symbol) ;; NOTE - this is here solely to satisfy jak 1's menu design, the setting has been moved into `input-settings.json`
    (mouse-enabled? symbol)
    (mouse-camera? symbol)
    (mouse-xsens float)
@@ -201,7 +200,7 @@
    (third-camera-v-inverted? symbol) ;; third-person vertical camera inverted
    (music-fadeout?  symbol) ;; music fadeout toggle.
    (music-fadein?   symbol) ;; music fadein toggle.
-   
+
    (territory   int16)
 
    (bingo pc-bingo-info :inline) ;; bingo integration. does nothing for now.
@@ -211,7 +210,7 @@
 
    (flava-hack int64)
 
-   (baby-mode? symbol)  ;; allows custom checkpoints/respawn like practice mod if enabled
+   (baby-mode? symbol)  ;; unused
    (baby-mode-count uint8)  ;; count of baby-mode resets
    ;; TODO - save/restore original settings (language/sound/etc)
    )
@@ -260,7 +259,6 @@
     (commit-to-file (_type_) none)
     (load-settings (_type_) int)
     (set-ignore-controller-in-bg! (_type_ symbol) none)
-    (set-enable-keyboard! (_type_ symbol) none)
     (update-mouse-controls! (_type_) none)
     (debug-font-scale-factor (_type_) float)
     )
@@ -298,7 +296,7 @@
 
 (defmethod reset pc-settings ((obj pc-settings) (call-handlers symbol))
   "Reset everything back to default settings
-   
+
    If call-handlers = #t then events will be sent to the runtime kernel to update OS settings
    such as window size, etc.
    If you just want to set the settings and handle the fields yourself later, set call-handlers to #f
@@ -393,9 +391,9 @@
     (set! (-> obj controller-led-min-brightness) 0.25)
     (set! (-> obj controller-led-max-brightness) 1.0)
     )
-  
+
   (when (or (= device 'all) (= device 'input))
-    (set! (-> obj keyboard-enabled?) #t)
+    (set! (-> obj keyboard-enabled?) #f)
     (set! (-> obj mouse-enabled?) #f)
     (set! (-> obj auto-hide-cursor?) #t)
     )
@@ -436,6 +434,7 @@
   (set! (-> obj subtitle-speaker?) 'auto)
   (reset-camera obj call-handlers)
   (set! (-> obj baby-mode?) #f)
+  (set! (-> obj baby-mode-count) 0)
   (set! (-> obj territory) -1) ;; auto
   0)
 
@@ -473,6 +472,11 @@
 
 (defmacro fullscreen? ()
   `(symbol-member? (-> *pc-settings* display-mode) '(fullscreen borderless)))
+
+
+(defun bcd->dec ((bcd uint))
+  "Convert a number encoded in BCD to its decimal equivalent"
+  (+ (* (shr (logand bcd #xf0) 4) 10) (logand bcd #x0f)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -525,7 +529,7 @@
 
   (dolist (ex extra)
     (set! out (cons (car ex) out)))
-  
+
   out)
   )
 
@@ -567,3 +571,44 @@
 (defun-extern real-movie? symbol)
 
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; entity debugging
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(when *debug-segment*
+
+(deftype entity-debug-inspect (basic)
+  (
+   (scroll-y int16)
+   (scroll-y-max int16)
+   (entity entity)
+   (show-actor-info symbol)
+   (show-long-info symbol)
+   )
+  (:methods
+    (new (symbol type) _type_)
+    (set-entity! (_type_ entity) entity)
+    (update-pad (_type_ int) none)
+    )
+  )
+
+(defmethod new entity-debug-inspect ((allocation symbol) (type-to-make type))
+  "make a new entity-debug-inspect object"
+
+  (let ((obj (object-new allocation type-to-make (the-as int (-> type-to-make size)))))
+
+    (set! (-> obj scroll-y) 0)
+    (set! (-> obj scroll-y-max) 0)
+    (set! (-> obj entity) (the entity #f))
+    (set! (-> obj show-actor-info) #f)
+    (set! (-> obj show-long-info) #f)
+    obj
+    )
+  )
+
+
+(define *entity-debug-inspect* (new 'debug 'entity-debug-inspect))
+
+
+) ;; when debug_segment

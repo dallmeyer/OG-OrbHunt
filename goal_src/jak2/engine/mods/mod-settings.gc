@@ -37,7 +37,8 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;; Define Settings to use in mods
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define startingDebugContinuePoint "fordumpc-start")
+(define ORB_HUNT_DEBUG? #f)
+(define startingDebugContinuePoint "garage-start-skate")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -318,8 +319,8 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Fortress (Prison)" ;; 16
   "Fortress (Escape South)" ;; 17
   "Fortress (Escape North)" ;; 18
-  "Fortress (Rescue South)" ;; 19
-  "Fortress (Rescue North)" ;; 20
+  "Fortress (Rescue East)" ;; 19
+  "Fortress (Rescue West)" ;; 20
   "Fortress (Ammo Dump Northeast)" ;; 21
   "Fortress (Ammo Dump West)" ;; 22
   "Fortress (Ammo Dump Southeast)" ;; 23
@@ -345,11 +346,11 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Industrial Zone (North)" ;; 43
   "Bazaar (West)" ;; 44 ctymarka
   "Bazaar (East)" ;; 45 ctymarkb
-  "Haven City (Palace Grounds)" ;; 46
+  "Central Haven (Palace Grounds)" ;; 46
   "Stadium (Exterior)" ;; 47
-  "Stadium (Class 1)" ;; 48
+  "Stadium (Class 3)" ;; 48
   "Stadium (Class 2)" ;; 49
-  "Stadium (Class 3)" ;; 50
+  "Stadium (Class 1)" ;; 50
   "Stadium (JET Board)" ;; 51
   "Stadium (Garage)" ;; 52
   "Onin's Tent" ;; 53

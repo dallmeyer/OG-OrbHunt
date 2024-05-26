@@ -343,7 +343,7 @@
                           ;; camera magic
                           (vector-matrix*! vec vec (matrix-local->world #t #f))
                           (vector-flatten! vec vec (-> *camera* local-down))
-                          (vector-float*! vec vec (* (-> pad stick0-speed) 512.0))  ;; TODO scale?
+                          (vector-float*! vec vec (* (-> pad stick0-speed) 512.0))
                           
                           ;; actually move orb
                           (vector+! (-> orb root trans) (-> orb root trans) vec)

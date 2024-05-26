@@ -995,7 +995,7 @@ it returns a triangle and normal direction to push in.
   (if (< (-> arg0 poly-angle) -0.2)
       (set! sv-56 (logior sv-56 (collide-status touch-ceiling)))
       )
-  (set! sv-96 (< (fabs (-> arg0 surface-angle)) (-> *pat-mode-info* (-> arg0 cur-pat mode) wall-angle)))
+  (set! sv-96 (< (fabs (-> arg0 surface-angle)) (-> (get-active-pat-mode-info) (-> arg0 cur-pat mode) wall-angle)))
 
   ;; if we hit this function, we hit some surface
   (set! sv-56 (logior sv-56 (collide-status touch-surface)))

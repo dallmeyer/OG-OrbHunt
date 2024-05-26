@@ -667,7 +667,7 @@
                   (not (logtest? (-> self control status) (collide-status touch-actor)))
                   (or (= (-> self control wall-contact-pat event) (pat-event hide))
                       (let ((a0-2 (level-get-target-inside *level*)))
-                        (and a0-2 (logtest? (-> a0-2 info level-flags) 1))
+                        (and a0-2 (logtest? (-> a0-2 info level-flags) (level-load-flags city)))
                         )
                       )
                   )

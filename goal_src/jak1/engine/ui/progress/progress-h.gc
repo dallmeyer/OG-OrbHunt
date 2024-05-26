@@ -1,5 +1,8 @@
 ;;-*-Lisp-*-
 (in-package goal)
+(bundles "ENGINE.CGO" "GAME.CGO")
+
+(require "kernel-defs.gc")
 
 ;; name: progress-h.gc
 ;; name in dgo: progress-h
@@ -174,6 +177,7 @@
   (controller)
   (binding-assignment)
   (confirmation)
+  (slip-assist)
   )
 
     ) ;; end of PC_PORT = #t branch for enum initialization

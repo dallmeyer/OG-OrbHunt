@@ -3322,6 +3322,27 @@
         )
   )
 
+(let ((v1-79 (-> *script-form* 85)))
+  (set! (-> v1-79 name) 'process-alive?)
+  (set! (-> v1-79 spec) '((return macro (boolean)) (function macro (symbol)) (procname macro (symbol))))
+  (set! (-> v1-79 func)
+        (lambda ((arg0 script-context)) (process-by-ename (symbol->string (-> arg0 param 1))) )
+        )
+  )
+
+(let ((v1-79 (-> *script-form* 86)))
+  (set! (-> v1-79 name) 'level-active?)
+  (set! (-> v1-79 spec) '((return macro (boolean)) (function macro (symbol)) (levelname macro (symbol))))
+  (set! (-> v1-79 func)
+        (lambda ((arg0 script-context)) 
+          ;; (format 0 "eval level-active? script for ~A => ~A~%" 
+          ;;   (-> arg0 param 1)
+          ;;   (level-status *level* (the symbol (-> arg0 param 1))))
+          (= (level-status *level* (the symbol (-> arg0 param 1))) 'active)
+          )
+        )
+  )
+
 (let ((v1-182 (new 'global 'script-context (process->ppointer pp) pp (the-as vector #f))))
   (set! (-> v1-182 side-effect?) #f)
   (set! *syntax-context* v1-182)

@@ -1,5 +1,10 @@
 ;;-*-Lisp-*-
 (in-package goal)
+(bundles "ENGINE.CGO" "GAME.CGO")
+
+(require "engine/ui/progress/progress-h.gc")
+(require "engine/ui/text-h.gc")
+(require "engine/game/task/game-task-h.gc")
 
 ;; name: progress-static.gc
 ;; name in dgo: progress-static
@@ -173,7 +178,8 @@
   (cave 13)
   (lavatube 14)
   (citadel 15)
-  (max 16)
+  (crystalc 16)
+  (max 17)
   )
 
 ;; maps level-info indices to the appropriate offset in *level-task-data*
@@ -216,7 +222,8 @@
     0
     0
     0
-    16 ;; crystal-cave
+    (level-task-data-index crystalc) ;; crystal-cave
+    0
     )
   )
 

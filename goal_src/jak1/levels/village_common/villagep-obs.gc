@@ -1,5 +1,12 @@
 ;;-*-Lisp-*-
 (in-package goal)
+(bundles "CIT.DGO" "VI1.DGO" "VI2.DGO" "VI3.DGO")
+
+(require "engine/entity/ambient.gc")
+(require "engine/game/task/task-control.gc")
+(require "engine/target/target.gc")
+(require "engine/camera/pov-camera-h.gc")
+(require "engine/common-obs/basebutton.gc")
 
 ;; name: villagep-obs.gc
 ;; name in dgo: villagep-obs
@@ -18,7 +25,7 @@
     (max
       (-> ,warp-gate max-slot) 
       (cond  ;; CHECK WHICH TASK HAS BEEN CLOSED TO UNLOCK X SLOTS IN THE PORTAL MENU
-        ((or (-> *pc-settings* baby-mode?) (>= (-> *game-info* money-total) 2000.0))
+        ((or (-> *pc-settings* unlocked-warp-gates?) (>= (-> *game-info* money-total) 2000.0))
           5
           )
         ((task-closed? (game-task village4-button) (task-status need-hint))
@@ -563,7 +570,7 @@
                )
           #t
           )
-         ((-> *pc-settings* baby-mode?)
+         ((-> *pc-settings* unlocked-warp-gates?)
           #t
           )
          (else

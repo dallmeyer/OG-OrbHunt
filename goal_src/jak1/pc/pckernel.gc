@@ -1,6 +1,12 @@
 ;;-*-Lisp-*-
 (in-package goal)
 
+(require "pc/util/pc-anim-util.gc")
+(require "engine/gfx/mood/time-of-day.gc")
+(require "engine/level/level.gc")
+(require "pc/pckernel-common.gc")
+
+
 #|
 
   This file runs the game-specific version of the pckernel.
@@ -165,7 +171,7 @@
           (when (zero? (-> date stat))
             (set-time-of-day (+ (the float (bcd->dec (-> date hour))) (/ (the float (bcd->dec (-> date minute))) 60))))
           ))
-  
+
   (pc-set-gfx-hack (pc-gfx-hack no-tex) (logtest? (-> obj cheats) (pc-cheats no-tex)))
 
   (if (pc-cheats? (-> obj cheats) mirror)
@@ -332,7 +338,7 @@
 
 (defmethod update-led pc-settings-jak1 ((obj pc-settings-jak1))
   "set the controller led color by modifying the controller-led-color vector"
-  
+
   ;; default color is just blue.
   (set! (-> obj controller-led-color r) 0.0)
   (set! (-> obj controller-led-color g) 0.0)
@@ -523,6 +529,14 @@
     (("subtitles?") (set! (-> obj subtitles?) (file-stream-read-symbol file)))
     (("subtitle-language") (set! (-> obj subtitle-language) (the-as pc-language (file-stream-read-int file))))
     (("text-language") (set! (-> obj text-language) (the-as pc-language (file-stream-read-int file))))
+    
+    (("baby-mode?") (set! (-> obj baby-mode?) (file-stream-read-symbol file)))
+    (("baby-mode-count") (set! (-> obj baby-mode-count) (file-stream-read-int file)))
+    (("unlocked-warp-gates?") (set! (-> obj unlocked-warp-gates?) (file-stream-read-symbol file)))
+    (("pseudo-savestates?") (set! (-> obj pseudo-savestates?) (file-stream-read-symbol file)))
+    (("closest-orb?") (set! (-> obj closest-orb?) (file-stream-read-symbol file)))
+    (("slip-assist") (set! (-> obj slip-assist) (the-as slip-assist-mode (file-stream-read-int file))))
+    
     (("scenes-seen")
       (dotimes (i PC_SPOOL_LOG_LENGTH)
         (set! (-> obj scenes-seen i) (file-stream-read-int file))
@@ -563,7 +577,7 @@
 
 (defmethod handle-output-settings pc-settings-jak1 ((obj pc-settings-jak1) (file file-stream))
   "handle the text writing output for the 'settings' group"
-  
+
 	((method-of-type pc-settings handle-output-settings) obj file)
   (format file "  (money-starburst? ~A)~%" (-> obj money-starburst?))
   (format file "  (extra-hud? ~A)~%" (-> obj extra-hud?))
@@ -571,6 +585,13 @@
   (format file "  (subtitles? ~A)~%" (-> obj subtitles?))
   (format file "  (subtitle-language ~D)~%" (-> obj subtitle-language))
   (format file "  (text-language ~D)~%" (-> obj text-language))
+
+  (format file "  (baby-mode? ~A)~%" (-> obj baby-mode?))
+  (format file "  (baby-mode-count ~D)~%" (-> obj baby-mode-count))
+  (format file "  (unlocked-warp-gates? ~A)~%" (-> obj unlocked-warp-gates?))
+  (format file "  (pseudo-savestates? ~A)~%" (-> obj pseudo-savestates?))
+  (format file "  (closest-orb? ~A)~%" (-> obj closest-orb?))
+  (format file "  (slip-assist ~D)~%" (-> obj slip-assist))
 
   #|
   (format file "  (scenes-seen")

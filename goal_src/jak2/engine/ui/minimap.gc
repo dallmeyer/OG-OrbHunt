@@ -578,25 +578,25 @@
                                  :color (new 'static 'rgba :r #xff :g #xff :b #xff :a #x80))
                                  
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x -258048.0 :y 32768.0 :z -96256.0 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters -46.2979) :y (meters 21.3524) :z (meters -21.8101) :w 1.0)
                                  :flags (minimap-flag bigmap city-only)
-                                 :name "bbush-gena"
+                                 :name "bbush-gena" ;; burning-bush-2
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x3))
                                  :scale 1.0
                                  :color (new 'static 'rgba :r #xff :g #xff :b #xff :a #x80))
                                  
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x -1571573.1250 :y 95869.0859 :z -1152552.25 :w 1.0)
+                                 :default-position (new 'static 'vector  :x (meters -382.6)  :y (meters 23.40)  :z (meters -279.4)  :w 1.0)
                                  :flags (minimap-flag bigmap city-only)
-                                 :name "bbush-gena-2"
+                                 :name "bbush-gena-2" ;; burning-bush-16
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x3))
                                  :scale 1.0
                                  :color (new 'static 'rgba :r #xff :g #xff :b #xff :a #x80))
                                  
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 683663.4 :y 32768.0 :z -1237483.5 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 319.59)   :y (meters 8.0) :z (meters -299.58) :w 1.0)
                                  :flags (minimap-flag bigmap city-only)
-                                 :name "bbush-genb"
+                                 :name "bbush-genb" ;; burning-bush-15 / get-to-9
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x3))
                                  :scale 1.0
                                  :color (new 'static 'rgba :r #xff :g #xff :b #xff :a #x80))
@@ -682,7 +682,7 @@
                                  :color (new 'static 'rgba :r #xff :g #xff :b #xff :a #x80))
                                  
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x -1504174.1250 :y 65044.4804 :z 380108.8125 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters -401.14) :y (meters 24.2) :z (meters 93.7) :w 1.0)
                                  :flags (minimap-flag bigmap city-only)
                                  :name "bbush-farma"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x3))
@@ -690,7 +690,7 @@
                                  :color (new 'static 'rgba :r #xff :g #xff :b #xff :a #x80))
                                  
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x -1280532.5 :y 32768.0 :z 4410286.0 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters -39.98) :y (meters 12.42) :z (meters 947.61)  :w 1.0)
                                  :flags (minimap-flag bigmap city-only)
                                  :name "bbush-farmb"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x3))
@@ -863,7 +863,7 @@
 
 (let ((gp-0 *minimap*))
   ;; og:preserve-this minimap engine connections raised for pc port
-  (set! (-> gp-0 engine) (new 'global 'engine-minimap '*minimap* (#if PC_PORT 256 64) connection-minimap))
+  (set! (-> gp-0 engine) (new 'global 'engine-minimap '*minimap* (#if PC_PORT 1024 64) connection-minimap))
   (countdown (v1-7 6)
     (set! (-> gp-0 trail v1-7 used-by) #f)))
     
@@ -1412,7 +1412,7 @@
     (set! sv-220 (new 'stack-no-clear 'matrix))
     (set! sv-224 (new 'stack-no-clear 'matrix))
     (set! sv-228 (new 'stack-no-clear 'matrix))
-    (set! (-> sv-216 quad) (-> (matrix-world->local #f #f) vector 2 quad))
+    (set! (-> sv-216 quad) (-> (#if PC_PORT (if (-> *pc-settings* minimap-force-north) *matrix-minimap-north* (matrix-world->local #f #f)) (matrix-world->local #f #f)) vector 2 quad))
     (set! (-> sv-216 y) 0.0)
     (vector-normalize! sv-216 1.0)
     (vector-z-quaternion! (the-as vector sv-220) (-> (the-as process-drawable sv-16) root quat))
@@ -1663,7 +1663,7 @@
       (set! sv-228 (new 'stack-no-clear 'matrix))
       (set! sv-232 (new 'stack-no-clear 'matrix))
       (when sv-212
-        (set! (-> sv-220 quad) (-> (matrix-world->local #f #f) vector 2 quad))
+        (set! (-> sv-220 quad) (-> (#if PC_PORT (if (-> *pc-settings* minimap-force-north) *matrix-minimap-north* (matrix-world->local #f #f)) (matrix-world->local #f #f)) vector 2 quad))
         (set! (-> sv-220 y) 0.0)
         (vector-normalize! sv-220 1.0)
         (vector-z-quaternion! (the-as vector sv-224) (-> (the-as process-drawable sv-16) root quat))
@@ -1812,7 +1812,7 @@
     (set! sv-228 (new 'stack-no-clear 'matrix))
     (set! sv-232 (new 'stack-no-clear 'matrix))
     (when sv-212
-      (set! (-> sv-220 quad) (-> (matrix-world->local #f #f) vector 2 quad))
+      (set! (-> sv-220 quad) (-> (#if PC_PORT (if (-> *pc-settings* minimap-force-north) *matrix-minimap-north* (matrix-world->local #f #f)) (matrix-world->local #f #f)) vector 2 quad))
       (set! (-> sv-220 y) 0.0)
       (vector-normalize! sv-220 1.0)
       (vector-z-quaternion! (the-as vector sv-224) (-> (the-as process-drawable sv-16) root quat))
@@ -1942,7 +1942,7 @@
         (set! (-> (the-as (pointer uint128) s3-1) 1) (-> this draw2-tmpl quad 1))
         (let ((s2-0 (new-stack-vector0)))
           (let ((s1-0 (new-stack-vector0)))
-            (set! (-> s1-0 quad) (-> (matrix-local->world #f #f) vector 2 quad))
+            (set! (-> s1-0 quad) (-> (#if PC_PORT (if (-> *pc-settings* minimap-force-north) *matrix-minimap-north* (matrix-local->world #f #f)) (matrix-local->world #f #f)) vector 2 quad))
             (set! (-> s1-0 y) 0.0)
             (vector-normalize! s1-0 1.0)
             (let ((v1-16 (-> arg0 mat)))
@@ -2154,7 +2154,7 @@
         (set! sv-52 v1-29))
         
       (set! sv-56 (target-pos 0))
-      (set! (-> sv-52 quad 0) (-> (matrix-world->local #f #f) vector 2 quad))
+      (set! (-> sv-52 quad 0) (-> (#if PC_PORT (if (-> *pc-settings* minimap-force-north) *matrix-minimap-north* (matrix-world->local #f #f)) (matrix-world->local #f #f)) vector 2 quad))
       (set! (-> sv-52 vector 0 y) 0.0)
       (vector-normalize! (the-as vector sv-52) 1.0)
       (cond
@@ -2500,8 +2500,8 @@
               )
             (let* ((a3-1 (+ (* (the-as uint 320) (-> arg1 class icon-xy x)) 8))
                    (t0-1 (+ (* (the-as uint 320) (-> arg1 class icon-xy y)) 8))
-                   (a1-61 (+ a3-1 312))
-                   (a2-14 (+ t0-1 312))
+                   (a1-61 (+ a3-1 300)) ;; og:preserve-this fix icon misalign
+                   (a2-14 (+ t0-1 300)) ;; og:preserve-this fix icon misalign
                    )
               (set! (-> (the-as (pointer uint128) v1-115)) (-> this sprite-tmpl dma-vif quad))
               (set! (-> (the-as (pointer uint128) v1-115) 1) (-> this sprite-tmpl quad 1))

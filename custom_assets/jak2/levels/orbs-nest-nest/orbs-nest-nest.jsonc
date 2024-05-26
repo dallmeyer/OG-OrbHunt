@@ -1,0 +1,1756 @@
+{
+  // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
+  // the name of this file, and the folder this file is in must have the same name.
+  "long_name": "orbs-nest-nest",
+  // The file name, should be upper case and 8 characters or less.
+  "iso_name": "O1F",
+  // The nickname, should be exactly 3 characters
+  "nickname": "o1f", // 3 char name, all lowercase
+  // Background mesh file.
+  // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
+  // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
+  // only have 1.
+  "gltf_file": "custom_assets/jak2/levels/orbs-nest-nest/orbs-nest-nest.glb",
+
+  // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
+  "automatic_wall_detection": true,
+  "automatic_wall_angle": 45.0,
+
+  // if your mesh has triangles with incorrect orientation, set this to make all collision mesh triangles double sided
+  // this makes collision 2x slower and bigger, so only use if really needed
+  "double_sided_collide": false,
+
+  // available res-lump tag data types:
+  // int32, float, meters, vector, vector4m (meters)
+  //
+  // examples:
+  //
+  // adds a float tag 'spring-height' with value of 200 meters (1 meter = 4096.0 units):
+  // "spring-height": ["meters", 200.0]
+  //
+  // adds a vector tag 'movie-pos':
+  // "movie-pos": ["vector", [4096000.0, -176128.0, 1353973.76, 1.0]]
+
+   // The base actor id for your custom level. If you have multiple levels, this should be unique!
+   "base_id": 48000,
+
+  // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
+  // Removed so that the release builds don't have to double-decompile the game
+  //"art_groups": ["prsn-torture-ag"],
+  "art_groups": [],
+
+   // Any textures you want to include in your custom level.
+   // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
+   // To get a list of all the textures, you can extract all of the game's textures
+   // by setting "save_texture_pngs" to true in the decompiler config.
+   "textures": [],
+
+  "actors" : [
+    {
+      "trans": [  -247.5559, 13.6349, -111.6955], // first mammoth
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -247.5559, 13.6349, -111.6955, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-01",
+        "alt-actor": "mammoth-10"
+      }
+    },
+    {
+      "trans": [  -277.4885, 26.5834, -189.3570], // second mammoth
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -277.4885, 26.5834, -189.3570, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-02",
+        "alt-actor": "mammoth-5"
+      }
+    },
+    {
+      "trans": [ -167.0423, 10.5974, -229.8147], // third mammoth
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -167.0423, 10.5974, -229.8147, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-03",
+        "alt-actor": "mammoth-6"
+      }
+    },
+    {
+      "trans": [  39.2953, 0.4115, -79.6893], // behind fallen tank on right near rock wall at start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  39.2953, 0.4115, -79.6893, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-04"
+      }
+    },
+    {
+      "trans": [ -30.73,   5.83, -93.30], // under back of tank on left, first area w MHs
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -30.73,   5.83, -93.30, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-05"
+      }
+    },
+    {
+      "trans": [ -62.41,  17.5, -53.11], // inner side of wall, between spiky fences 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -62.41,  17.5, -53.11, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-06",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -58.72,  35.85, -49.34], // top of building/wall left of start, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -58.72,  35.85, -49.34, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-07"
+      }
+    },
+    {
+      "trans": [  -86.0197, 32.1092, -26.8464], // further down wall left of start from ^, in lower gap between slabs
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -86.0197, 32.1092, -26.8464, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-08"
+      }
+    },
+    {
+      "trans": [  -131.98,  34.32,  14.11], // where wall left of start meets rock wall, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -131.98,  34.32,  14.11, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-09"
+      }
+    },
+    {
+      "trans": [  -30.47,   7.89, -27.87], // on top of first pipe on beach
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -30.47,   7.89, -27.87, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-10"
+      }
+    },
+    {
+      "trans": [     -20.5950, 5.6244, -132.2075], // in broken tank in first area, near cylinder plat up to next area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -20.5950, 5.6244, -132.2075, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-11"
+      }
+    },
+    {
+      "trans": [  -85.1492, 20.5144, -87.0748], // up on wall, on first area's side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -85.1492, 20.5144, -87.0748, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-12"
+      }
+    },
+    {
+      "trans": [ -87.11,  20.94, -121.10], // on side of broken tower(?) towards big gun, up from first area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -87.11,  20.94, -121.10, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-13"
+      }
+    },
+    {
+      "trans": [ -94.70,  28.71, -109.72], // on broken tower(?) towards big gun, up from first area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -94.70,  28.71, -109.72, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-14"
+      }
+    },
+    {
+      "trans": [  -68.5158, 2.4901, -145.1992], // first area, in right corner of wall up to big gun
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -68.5158, 2.4901, -145.1992, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-15"
+      }
+    },
+    {
+      "trans": [  -51.2980, 9.0626, -138.7044], // first area, start of climb up rock wall in corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -51.2980, 9.0626, -138.7044, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-16",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -45.9821, 22.0651, -143.9575], // first area, up rock wall in corner, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -45.9821, 22.0651, -143.9575, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-17",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -44.7473, 27.8774, -150.0222], // first area, up rock wall in corner, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -44.7473, 27.8774, -150.0222, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-18"
+      }
+    },
+    {
+      "trans": [  -54.4274, 29.1747, -149.5795], // first area, up rock wall in corner, abah from ^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -54.4274, 29.1747, -149.5795, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-19",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -46.19,  42.45, -153.69], // first area, up rock wall in corner, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -46.19,  42.45, -153.69, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-20"
+      }
+    },
+    {
+      "trans": [  -47.61,  31.50, -171.10], // behind pipe up on rock wall/column, in hallway from NE>SW that vanilla leads to big gun
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -47.61,  31.50, -171.10, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-21"
+      }
+    },
+    {
+      "trans": [  -59.15,  37.16, -178.82], // on column among I beams, in hallway from NE>SW that vanilla leads to big gun
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -59.15,  37.16, -178.82, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-22"
+      }
+    },
+    {
+      "trans": [  -64.52,  48.32, -162.88], // on crooked I beam, near big gun
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -64.52,  48.32, -162.88, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-23"
+      }
+    },
+    {
+      "trans": [  -84.7155, 19.3817, -170.6218], // in hole in wall/steps near big gun
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -84.7155, 19.3817, -170.6218, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-24",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [   62.35,  12.59, -162.11], // between pillar with I beam and rock wall, east mid
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   62.35,  12.59, -162.11, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-25"
+      }
+    },
+    {
+      "trans": [    35.5422, 12.7160, -172.0877], // between barrell and foundation, east mid
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   35.5422, 12.7160, -172.0877, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-26"
+      }
+    },
+    {
+      "trans": [  61.4571, 13.5067, -140.7847], // between flat rock and rock wall, east mid
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   61.4571, 13.5067, -140.7847, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-27",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  64.9455, 21.3749, -131.9677], // up on rock wall east mid, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   64.9455, 21.3749, -131.9677, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-28",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  70.7996, 37.6727, -129.2871], // further up rock wall at ground collision, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   70.7996, 37.6727, -129.2871, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-29"
+      }
+    },    
+    {
+      "trans": [  107.46, 117.64, -127.02], // way further up rock wall walk/jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  107.46, 117.64, -127.02, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-30"
+      }
+    },
+    {
+      "trans": [   83.57, 110.86, -66.48], // up on next ground-collision mountain, uppercut from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    83.57, 110.86, -66.48, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-31"
+      }
+    },
+    {
+      "trans": [  20.62,  18.73, -163.30], // on ground between I beams, destroyed foundation, east mid
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  20.62,  18.73, -163.30, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-32",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  31.86,  32.79, -162.38], // small standpoint to help with scaffolding climb, east mid, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  31.86,  32.79, -162.38, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-33"
+      }
+    },
+    {
+      "trans": [   57.46,  39.83, -165.38], // on I beam/scaffolding, east mid, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   57.46,  39.83, -165.38, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-34"
+      }
+    },
+    {
+      "trans": [   41.09,  44.85, -192.50], // tricky standpoint/abah jump from mid scaffolding/I-beams, east mid
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   41.09,  44.85, -192.50, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-35",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  33.07,  54.70, -181.31], // top of scaffolding/I-beam, east mid, abah from ^ and try not to fall through collision
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  33.07,  54.70, -181.31, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-36"
+      }
+    },
+    {
+      "trans": [  33.84,  53.08, -162.43], // top of scaffolding/I-beam, east mid, follow from ^ and try not to fall through collision
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   33.84,  53.08, -162.43, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-37"
+      }
+    },
+    {
+      "trans": [  43.61,  46.47, -199.77], // east mid, extended around rock wall from ^ into corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   43.61,  46.47, -199.77, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-38",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  41.11,  60.58, -203.14], // on rock wall with ground collision, east/north mid, abah from ^ into infin ceiling
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  41.11,  60.58, -203.14, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-39"
+      }
+    },
+    {
+      "trans": [   14.26, 123.03, -190.28], // top of rock wall with ground collision, east/north mid, infin ceiling from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  14.26, 123.03, -190.28, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-40"
+      }
+    },
+    {
+      "trans": [  -11.23, 109.91, -209.00], // left side of top of rock wall with ground collision, east/north mid, infin ceiling from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -11.23, 109.91, -209.00, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-41"
+      }
+    },
+    {
+      "trans": [   72.65,  36.16, -175.05], // east mid, up on east rock wall from scaffolding/I-beams
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   72.65,  36.16, -175.05, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-42",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  80.62,  51.35, -183.57], // east mid, up high on east rock wall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   80.62,  51.35, -183.57, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-43"
+      }
+    },
+    {
+      "trans": [ -16.00,  41.05, -160.90], // east mid, up on I-beam at top of steps/foundation area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -16.00,  41.05, -160.90, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-44"
+      }
+    },
+    {
+      "trans": [  10.83,  31.53, -146.03], // east mid, up high on central rock wall, uppercut from other I-beam next to ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   10.83,  31.53, -146.03, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-45"
+      }
+    },
+    {
+      "trans": [ -26.24,  40.08, -213.00], // east mid, up on north rock wall in cutout
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -26.24,  40.08, -213.00, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-46",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -20.97,  55.14, -214.69], // east mid, up high on north rock wall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -20.97,  55.14, -214.69, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-47"
+      }
+    },
+    {
+      "trans": [ -72.51,  23.14, -210.22], // central/east mid, past fence just over ledge, looking at big gun/open nest
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -72.51,  23.14, -210.22, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-48"
+      }
+    },
+    {
+      "trans": [ -67.25,  39.34, -215.06], // central/east mid, on top of I beam looking at big gun/open nest, above ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -67.25,  39.34, -215.06, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-49"
+      }
+    },
+    {
+      "trans": [ -71.47,  59.29, -188.40], // central/east mid, on top of I beam looking at big gun/open nest
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -71.47,  59.29, -188.40, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-50"
+      }
+    },
+    {
+      "trans": [ -109.45,  41.55, -191.60], // on pipes below big gun
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -109.45,  41.55, -191.60, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-51"
+      }
+    },
+    {
+      "trans": [ -129.53,  42.03, -183.13], // on pipes below big gun, in back
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -129.53,  42.03, -183.13, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-52"
+      }
+    },
+    {
+      "trans": [ -87.32,  41.80, -134.33], // up on I beam of fence before big gun
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -87.32,  41.80, -134.33, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-53"
+      }
+    },
+    {
+      "trans": [ -107.17,  37.69, -107.59], // up on pillar of broken tower(?) on line before big gun, kinda central (extended to lower part)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -107.17,  37.69, -107.59, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-54"
+      }
+    },
+    {
+      "trans": [     -152.1684, 30.3740, -142.6733], // far left corner of big gun base
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -152.1684, 30.3740, -142.6733, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-55"
+      }
+    },
+    {
+      "trans": [ -140.91,  30.59, -158.31], // mid left cubby on big gun base
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -140.91,  30.59, -158.31, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-56"
+      }
+    },
+    {
+      "trans": [ -145.88,  43.42, -131.11], // behind/on pipes far left side of big gun base
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -145.88,  43.42, -131.11, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-57"
+      }
+    },
+    {
+      "trans": [ -147.60,  42.09, -143.73], // on pipes left side of big gun base
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -147.60,  42.09, -143.73, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-58"
+      }
+    },
+    {
+      "trans": [  -136.9526, 52.2407, -161.4796], // inside pipe up on platform on big gun
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -136.9526, 52.2407, -161.4796, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-59",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [   -135.2153, 64.9253, -171.4140], // up on pipe on very top of big gun
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -135.2153, 64.9253, -171.4140, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-60"
+      }
+    },
+    {
+      "trans": [  -121.59,  51.09, -180.88], // inside barrel of big gun, uppercut from platform
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -121.59,  51.09, -180.88, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-61"
+      }
+    },
+    {
+      "trans": [  -99.9773, 6.9, -58.5717], // inside broken tank near wall in early open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -99.9773, 6.9, -58.5717, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-62"
+      }
+    },
+    {
+      "trans": [ -199.05,  12.10, -19.34], // in corner with destroyed building in early open MH section, crawl "oob"
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -199.05,  12.10, -19.34, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-63"
+      }
+    },
+    {
+      "trans": [  -118.8531, 3.7333, -111.8333], // in corner below ramp into open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -118.8531, 3.7333, -111.8333, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-64"
+      }
+    },
+    {
+      "trans": [  -175.99,  25.66,  -0.31], // on small square standpoint on rock wall, next to broken tower in open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -175.99,  25.66,  -0.31, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-65"
+      }
+    },
+    {
+      "trans": [  -161.4618, 5.0101, -0.4776], // behind slab of rock against wall, south mid
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -161.4618, 5.0101, -0.4776, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-66"
+      }
+    },
+    {
+      "trans": [     -115.2128, 2.1961, -34.5311], // under grill of broken tank in open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -115.2128, 2.1961, -34.5311, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-67",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [  -210.0931, 12.1153, -63.3461], // SE rock wall, behind small rocks
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -210.0931, 12.1153, -63.3461, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-68",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -214.01,  27.44, -64.28], // top of pillar on rock wall, SE, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -214.01,  27.44, -64.28, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-69"
+      }
+    },
+    {
+      "trans": [  -221.4665, 18.2992, -69.9333], // SE rock wall, on pillar of broken building
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -221.4665, 18.2992, -69.9333, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-70",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -233.49,  35.53, -71.69], // SE rock wall, up on broken building behind crooked slab, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -233.49,  35.53, -71.69, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-71",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -236.87,  48.99, -61.51], // SE rock wall, up top of broken building, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -236.87,  48.99, -61.51, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-72"
+      }
+    },
+    {
+      "trans": [ -230.55,  38.48, -55.68], // SE rock wall, up on broken building, jump from top
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -230.55,  38.48, -55.68, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-73"
+      }
+    },
+    {
+      "trans": [  -242.5297, 33.7751, -76.9976], // east/south rock wall, jump from broken building
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -242.5297, 33.7751, -76.9976, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-74"
+      }
+    },
+    {
+      "trans": [  -245.6337, 41.9734, -76.6260], // east/south rock wall, jump from broken building or ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -245.6337, 41.9734, -76.6260, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-75"
+      }
+    },    
+    {
+      "trans": [ -261.92,  26.29, -94.49], // east/south rock wall, uppercut from ^ (or maybe come up from below idk)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -261.92,  26.29, -94.49, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-76"
+      }
+    },
+    {
+      "trans": [     -191.5754, 11.1211, -100.0880], // way up under broken tank, sorta inside corner of SE open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -191.5754, 11.1211, -100.0880, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-77"
+      }
+    },
+    {
+      "trans": [ -147.19,   5.83, -115.10], // behind rocks on inner wall, start of SE open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -147.19,   5.83, -115.10, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-78"
+      }
+    },
+    {
+      "trans": [  -174.8341, 4.2974, -115.9980], // in crevice of inner rock wall, at turn in SE open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -174.8341, 4.2974, -115.9980, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-79"
+      }
+    },
+    {
+      "trans": [ -277.72,  23.17, -97.64], // east rock wall, start of climb to infin mountain
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -277.72,  23.17, -97.64, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-80",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -280.61,  39.13, -89.13], // up on east rock wall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -280.61,  39.13, -89.13, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-81"
+      }
+    },
+    {
+      "trans": [ -299.56,  48.47, -98.21], // up on east rock wall, jump over then up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -299.56,  48.47, -98.21, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-82",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -301.67,  59.23, -86.80], // way up on east rock wall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -301.67,  59.23, -86.80, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-83",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -307.72,  77.46, -78.32], // way up on east rock wall, on the ground collision bit, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -307.72,  77.46, -78.32, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-84"
+      }
+    },
+    {
+      "trans": [  -228.3487, 176.0564, -74.6938], // way up on ground collision mountain peak, straight up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -228.3487, 176.0564, -74.6938, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-85"
+      }
+    },
+    {
+      "trans": [  -286.3956, 123.0887, 71.1560], // way up on ground collision mountain peak, counterclockwise back towards start from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -286.3956, 123.0887, 71.1560, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-86"
+      }
+    },
+    {
+      "trans": [  -224.9674, 94.7758, 118.9428], // way up on ground collision mountain peak, counterclockwise back towards start from ^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -224.9674, 94.7758, 118.9428, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-87"
+      }
+    },
+    {
+      "trans": [  -386.7186, 151.8818, -86.4370], // way up on ground collision mountain peak, clockwise around towards end
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -386.7186, 151.8818, -86.4370, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-88"
+      }
+    },
+    {
+      "trans": [  -362.8808, 118.9151, -181.3305], // way up on ground collision mountain peak, clockwise around towards end
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -362.8808, 118.9151, -181.3305, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-89"
+      }
+    },
+    {
+      "trans": [  -438.8764, 134.5057, -309.5302], // way up on ground collision mountain peak, clockwise around towards end
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -438.8764, 134.5057, -309.5302, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-90"
+      }
+    },
+    {
+      "trans": [  -284.4563, 122.3378, -410.7499], // way up on ground collision mountain peak, clockwise around towards end
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -284.4563, 122.3378, -410.7499, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-91"
+      }
+    },
+    {
+      "trans": [  -176.2579, 180.6864, -391.0484], // way up on ground collision mountain peak, clockwise around towards end
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -176.2579, 180.6864, -391.0484, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-92"
+      }
+    },
+    {
+      "trans": [  -20.8258, 268.5358, -515.2716], // way up on ground collision mountain peak, clockwise around towards end
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -20.8258, 268.5358, -515.2716, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-93"
+      }
+    },
+    {
+      "trans": [  -149.6191, 192.2945, -471.6277], // way up on ground collision mountain peak, clockwise around towards end
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -149.6191, 192.2945, -471.6277, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-94"
+      }
+    },
+    {
+      "trans": [   -254.8282, 22.3187, -183.0815], // near broken building in middle of open MH section, behind pillar a bit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -254.8282, 22.3187, -183.0815, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-95"
+      }
+    },
+    {
+      "trans": [       -91.9773, 12.4, -125.9062], // in crevice in destroyed tower(?) just after gun cutscene before open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -91.9773, 12.4, -125.9062, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-96"
+      }
+    },
+    {
+      "trans": [       -116.7974, 12.2974, -144.8363], // in crevice in destroyed tower(?) just after gun cutscene before open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -116.7974, 12.2974, -144.8363, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-97"
+      }
+    },
+    {
+      "trans": [    -296.27,  28.21, -145.83], // behind rock pillar/stalag on west wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -296.27,  28.21, -145.83, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-98"
+      }
+    },
+    {
+      "trans": [      -298.4695, 27.3496, -159.4930], // crevice in west/midish wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -298.4695, 27.3496, -159.4930, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-99"
+      }
+    },
+    {
+      "trans": [  -304.1122, 36.1660, -179.5722], // up a bit on west/midish wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -304.1122, 36.1660, -179.5722, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-100"
+      }
+    },
+    {
+      "trans": [  -305.9694, 43.2953, -162.4754], // up a bit on west/midish wall, from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -305.9694, 43.2953, -162.4754, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-101"
+      }
+    },
+    {
+      "trans": [  -180.79,  29.39, -131.37], // on rock pillar on inside wall/corner, open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -180.79,  29.39, -131.37, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-102"
+      }
+    },
+    {
+      "trans": [ -183.80,  33.67, -136.72], // on rock pillar on inside wall/corner, open MH section, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -183.80,  33.67, -136.72, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-103"
+      }
+    },
+    {
+      "trans": [ -176.33,  22.74, -137.42], // behind rock pillar on inside wall/corner, open MH section, in crevice against inner wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -176.33,  22.74, -137.42, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-104"
+      }
+    },
+    {
+      "trans": [     -267.9118, 20.2389, -158.2124], // nestled into top of tank in open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -267.9118, 20.2389, -158.2124, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-105"
+      }
+    },
+    {
+      "trans": [       -181.2504, 18.0494, -161.3624], // in crevice behind tank against inner wall, open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [       -181.2504, 18.0494, -161.3624, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-106"
+      }
+    },
+    {
+      "trans": [  -202.23,  27.75, -191.68], // in crevice behind rock pillar against inner wall, open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -202.23,  27.75, -191.68, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-107"
+      }
+    },
+    {
+      "trans": [      -215.2463, 18.9279, -204.0883], // in crevice behind rocks against inner wall, open MH section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -215.2463, 18.9279, -204.0883, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-108"
+      }
+    },
+    {
+      "trans": [  -232.0019, 21.4269, -224.4490], // in crevice behind rocks against inner wall, open MH section, just before dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -232.0019, 21.4269, -224.4490, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-109"
+      }
+    },
+    {
+      "trans": [       -228.8914, 23.3808, -232.7784], // in crevice behind rocks against inner wall, open MH section, just before dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -228.8914, 23.3808, -232.7784, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-110"
+      }
+    },
+    {
+      "trans": [  -250.85,  37.66, -227.08], // top of "lamp pole" on right, just before dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -250.85,  37.66, -227.08, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-111"
+      }
+    },
+    {
+      "trans": [ -261.73,  37.20, -242.42], // top of "lamp pole" on left, just before dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -261.73,  37.20, -242.42, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-112"
+      }
+    },
+    {
+      "trans": [  -258.15,  35.39, -255.06], // top of "lamp pole", near start of dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -258.15,  35.39, -255.06, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-113"
+      }
+    },
+    {
+      "trans": [  -270.78,  28.78, -255.17], // top of "lamp pole", near start of dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -270.78,  28.78, -255.17, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-114"
+      }
+    },
+    {
+      "trans": [  -254.57,  29.11, -271.24], // top of "lamp pole", near start of dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -254.57,  29.11, -271.24, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-115"
+      }
+    },
+    {
+      "trans": [  -251.26,  29.35, -290.75], // top of "lamp pole", near start of dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -251.26,  29.35, -290.75, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-116"
+      }
+    },
+    {
+      "trans": [  -224.21,  19.90, -301.37], // top of metal sheet near dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -224.21,  19.90, -301.37, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-117"
+      }
+    },
+    {
+      "trans": [  -206.08,  15.30, -298.96], // shitty standpoint on wall over dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -206.08,  15.30, -298.96, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-118"
+      }
+    },
+    {
+      "trans": [  -263.31,  11.82, -250.44], // crevice of rocks in ramp down to dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -263.31,  11.82, -250.44, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-119"
+      }
+    },
+    {
+      "trans": [  -222.92,  28.64, -263.11], // top of metal sheet near dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -222.92,  28.64, -263.11, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-120"
+      }
+    },
+    {
+      "trans": [ -187.97,  16.14, -294.99], // between broken tower and north wall, near end of dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -187.97,  16.14, -294.99, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-121"
+      }
+    },
+    {
+      "trans": [  -187.5758, 25.2901, -298.9680], // on slanted slab up broken tower on north wall, near end of dark eco, up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -187.5758, 25.2901, -298.9680, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-122",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   -186.4093, 37.2170, -306.2847], // up on rock wall behind/above broken tower on north wall, near end of dark eco, up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -186.4093, 37.2170, -306.2847, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-123",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   -176.2312, 54.6428, -318.2418], // up on rock wall where it becomes ground collision, abah up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -176.2312, 54.6428, -318.2418, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-124"
+      }
+    },
+    {
+      "trans": [   -303.04,  21.85, -283.04], // up in rocks in NW corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -303.04,  21.85, -283.04, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-125"
+      }
+    },
+    {
+      "trans": [  -300.55,  10.53, -304.52], // behind rocks in NW corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -300.55,  10.53, -304.52, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-126"
+      }
+    },
+    {
+      "trans": [   -260.6570, 10.1613, -304.2160], // behind broken tower near start of dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -260.6570, 10.1613, -304.2160, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-127"
+      }
+    },
+    {
+      "trans": [  -203.63,  26.26, -278.80], // up on "lamp post" near end of dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -203.63,  26.26, -278.80, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-128"
+      }
+    },
+    {
+      "trans": [  -198.46,  27.87, -268.67], // up on "lamp post" near end of dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -198.46,  27.87, -268.67, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-129"
+      }
+    },
+    {
+      "trans": [ -177.94,  28.41, -261.04], // up on "lamp post" near end of dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -177.94,  28.41, -261.04, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-130"
+      }
+    },
+    {
+      "trans": [ -198.02,  17.01, -223.98], // behind sheet of metal just past end of dark eco, towards inner wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -198.02,  17.01, -223.98, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-131"
+      }
+    },
+    {
+      "trans": [     -207.0260, 9.8739, -234.9718], // behind sheet of metal just past end of dark eco, towards inner wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -207.0260, 9.8739, -234.9718, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-132"
+      }
+    },
+    {
+      "trans": [  -165.82,  19.62, -282.53], // on small rock bundle, north wall over last bit of dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -165.82,  19.62, -282.53, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-133"
+      }
+    },
+    {
+      "trans": [ -149.14,  29.0, -260.60], // on small edge on outside of broken tower at end of dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -149.14,  29.0, -260.60, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-134"
+      }
+    },
+    {
+      "trans": [ -222.97,   7.90, -302.58], // in dark eco behind metal sheet, against north wall (jetboard)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -222.97,   7.90, -302.58, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-135"
+      }
+    },
+    {
+      "trans": [  -226.48,   7.60, -265.19], // in dark eco behind metal sheet, towards inner wall (jetboard)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -226.48,   7.60, -265.19, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-136"
+      }
+    },
+    {
+      "trans": [  -165.82,  38.82, -296.82], // on north rock wall, boosted from broken tower just past dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -165.82,  38.82, -296.82, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-137"
+      }
+    },
+    {
+      "trans": [  -143.82,  36.75, -299.24], // on north rock wall, just behind broken tower
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -143.82,  36.75, -299.24, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-138"
+      }
+    },
+    {
+      "trans": [  -136.99,  45.18, -290.47], // on beam in broken tower past dark eco, uppercut from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -136.99,  45.18, -290.47, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-139"
+      }
+    },
+    {
+      "trans": [  -130.28,  49.84, -264.65], // on beam in broken tower past dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -130.28,  49.84, -264.65, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-140"
+      }
+    },
+    {
+      "trans": [      -147.7608, 19.5070, -282.8960], // in base of broken tower past dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -147.7608, 19.5070, -282.8960, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-141"
+      }
+    },
+    {
+      "trans": [ -132.06,  29.75, -320.93], // in rocks behind broken tower past dark eco, north central wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -132.06,  29.75, -320.93, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-142",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -134.34,  45.30, -333.47], // up on rock wall behind broken tower past dark eco, north central wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -134.34,  45.30, -333.47, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-143"
+      }
+    },
+    {
+      "trans": [ -60.03,  47.79, -300.51], // up on northern rock wall, east-ish
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -60.03,  47.79, -300.51, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-144"
+      }
+    },
+    {
+      "trans": [  -40.1348, 40.2220, -233.9737], // behind small rocks near entrance to nestb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -40.1348, 40.2220, -233.9737, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-145"
+      }
+    },
+    {
+      "trans": [  -89.1387, 30.2926, -315.2499], // mid north rock wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -89.1387, 30.2926, -315.2499, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-146",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -95.99,  50.68, -322.27], // up on north rock wall, bit before nestb entrance, tight abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -95.99,  50.68, -322.27, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-147"
+      }
+    },
+    {
+      "trans": [ -301.86,  33.27, -209.57], // in gap between rocks on western wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -301.86,  33.27, -209.57, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-148"
+      }
+    },
+    {
+      "trans": [  -311.23,  43.38, -202.24], // mid west rock wall, up from pillar^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -311.23,  43.38, -202.24, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-149",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -321.56,  56.60, -197.03], // way up on west rock wall, near ground collision part, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -321.56,  56.60, -197.03, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-150"
+      }
+    },
+    {
+      "trans": [  -307.76,  35.27, -220.96], // on west/north rock wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -307.76,  35.27, -220.96, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-151"
+      }
+    },
+    {
+      "trans": [  -15.94,  40.51, -250.77], // behind rocks just before nestb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -15.94,  40.51, -250.77, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-152"
+      }
+    },
+    {
+      "trans": [ -65.43 , 34.1, -237.3 ], // at gap where you shoot open / shortcut
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-65.43 , 34.1, -237.3, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-153"
+      }
+    },    
+
+    {
+      "trans": [   57.97,  -1.55, -10.56], // on "island" out in ocean
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   -0.0767,   -0.9522,    -0.1967,    0.2206], // quaternion
+      "bsphere": [   57.97,  -1.55, -10.56, 10], // bounding sphere
+      "lump": {
+        "name": "nest-crate-1",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  -12.02,  12.0, -168.92], // behind slanted I-beam in east mid area, next to other crate
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   0.0, 0.6730, 0.0, 0.7396], // quaternion
+      "bsphere": [   -12.02,  12.0, -168.92, 10], // bounding sphere
+      "lump": {
+        "name": "nest-crate-2",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [ -115.30,  13.42, -149.66], // in corner in lower steps right before big gun
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   0.0, 0.8327, 0.0, 0.5536], // quaternion
+      "bsphere": [ -115.30,  13.42, -149.66, 10], // bounding sphere
+      "lump": {
+        "name": "nest-crate-3",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [ -132.47,   2.01,  -9.37], // near trees in open MH section
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   0.0, 0.9173, 0.0, -0.3981], // quaternion
+      "bsphere": [ -132.47,   2.01,  -9.37, 10], // bounding sphere
+      "lump": {
+        "name": "nest-crate-4",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [ -245.10,  10.20, -306.40], // under metal sheet, in back near dark eco
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [    -0.1724,      0.4544,     -0.0318,     -0.8733], // quaternion
+      "bsphere": [ -245.10,  10.20, -306.40, 10], // bounding sphere
+      "lump": {
+        "name": "nest-crate-5",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [ -194.30,  35.23, -302.40], // top of broken tower, north wall, abah from skill-122
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [    0.0886,      0.3348,      0.0289,     -0.9376], // quaternion
+      "bsphere": [ -194.30,  35.23, -302.40, 10], // bounding sphere
+      "lump": {
+        "name": "nest-crate-6",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [ -103.70,  18.0, -247.40], // under broken tank past dark eco near void
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [    0.0,  -0.8239,  0.0,  0.5666], // quaternion
+      "bsphere": [ -103.70,  18.0, -247.40, 10], // bounding sphere
+      "lump": {
+        "name": "nest-crate-7",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [  -32.02,  53.01, -65.53], // top of antenna, left of start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -32.02,  53.01, -65.53, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -146.31,  62.53, -266.17], // higher beam on broken tower past dark eco
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -146.31,  62.53, -266.17, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   30.98,  14.44,  41.19], // higher beam out in ocean
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   30.98,  14.44,  41.19, 10], // bounding sphere
+      "lump": {
+        "name":"nest-skill-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
+  ]
+}

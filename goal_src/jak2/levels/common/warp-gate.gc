@@ -612,9 +612,41 @@
             (set! (-> this wait-for) '())
             (set! (-> this on-close) '())
             )
+          ;; skatea -> stadiumb
+          (("skatea-warp-gate-01")
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide so it looks like rift-ring is warp
+            (set! (-> this continue) (get-continue-by-name *game-info* "stadiumb-warp"))
+            (set! (-> this on-activate) '())
+            (set! (-> this wait-for) '())
+            (set! (-> this on-close) '())            
+            )
+          ;; stadiumb -> stadiumc
+          (("stadiumb-warp-gate-01")
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide so it looks like rift-ring is warp
+            (set! (-> this continue) (get-continue-by-name *game-info* "stadiumc-warp"))
+            (set! (-> this on-activate) '())
+            (set! (-> this wait-for) '())
+            (set! (-> this on-close) '())            
+            )
+          ;; stadiumc -> stadiumd
+          (("stadiumc-warp-gate-01")
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide so it looks like rift-ring is warp
+            (set! (-> this continue) (get-continue-by-name *game-info* "stadiumd-warp"))
+            (set! (-> this on-activate) '())
+            (set! (-> this wait-for) '())
+            (set! (-> this on-close) '())            
+            )
+          ;; stadiumd -> skatea
+          (("stadiumd-warp-gate-01")
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide so it looks like rift-ring is warp
+            (set! (-> this continue) (get-continue-by-name *game-info* "skatea-warp"))
+            (set! (-> this on-activate) '())
+            (set! (-> this wait-for) '())
+            (set! (-> this on-close) '())            
+            )
           ;; unknown
           (else
-            (set! (-> this continue) #f)
+            ;; (set! (-> this continue) #f)
             )
           )
         )
@@ -675,8 +707,8 @@
         ;; og:preserve-this
         ;; For speedrunner mode, always allow warp-gates to be used
         ;; even when dialogues are playing
-        (when (and (or (-> *pc-settings* speedrunner-mode?)
-                       (can-display-query? self (the-as string #f) -99.0))
+        (when (and ;; (or (-> *pc-settings* speedrunner-mode?)
+                   ;;    (can-display-query? self (the-as string #f) -99.0))
                    (cond
                      ((and (-> *target* next-state) (let ((v1-30 (-> *target* next-state name)))
                                                       (or (= v1-30 'target-warp-in) (= v1-30 'target-warp-out))

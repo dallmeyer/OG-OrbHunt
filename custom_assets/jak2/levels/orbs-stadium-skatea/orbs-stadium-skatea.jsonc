@@ -1,0 +1,360 @@
+{
+  // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
+  // the name of this file, and the folder this file is in must have the same name.
+  "long_name": "orbs-stadium-skatea",
+  // The file name, should be upper case and 8 characters or less.
+  "iso_name": "O0D",
+  // The nickname, should be exactly 3 characters
+  "nickname": "o0d", // 3 char name, all lowercase
+  // Background mesh file.
+  // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
+  // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
+  // only have 1.
+  "gltf_file": "custom_assets/jak2/levels/orbs-stadium-skatea/orbs-stadium-skatea.glb",
+
+  // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
+  "automatic_wall_detection": true,
+  "automatic_wall_angle": 45.0,
+
+  // if your mesh has triangles with incorrect orientation, set this to make all collision mesh triangles double sided
+  // this makes collision 2x slower and bigger, so only use if really needed
+  "double_sided_collide": false,
+
+  // available res-lump tag data types:
+  // int32, float, meters, vector, vector4m (meters)
+  //
+  // examples:
+  //
+  // adds a float tag 'spring-height' with value of 200 meters (1 meter = 4096.0 units):
+  // "spring-height": ["meters", 200.0]
+  //
+  // adds a vector tag 'movie-pos':
+  // "movie-pos": ["vector", [4096000.0, -176128.0, 1353973.76, 1.0]]
+
+   // The base actor id for your custom level. If you have multiple levels, this should be unique!
+   "base_id": 62000,
+
+  // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
+  // Removed so that the release builds don't have to double-decompile the game
+  //"art_groups": ["prsn-torture-ag"],
+  "art_groups": ["rift-ring-in-game-ag"],
+
+   // Any textures you want to include in your custom level.
+   // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
+   // To get a list of all the textures, you can extract all of the game's textures
+   // by setting "save_texture_pngs" to true in the decompiler config.
+   "textures": [],
+
+  "actors" : [
+    {
+      "trans": [ -168.70, 15.5189, -452.26], // duh
+      "etype": "rift-ring-ingame",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ -0.0002, 0.9891, 0.0000, 0.1471], // quaternion
+      "bsphere": [ -168.70, 15.5189, -452.26, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-rift-ring-ingame-01"
+      }
+    },
+    {
+      "trans": [ -168.70, 12.5189, -452.26], // hidden behind rift ring
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ -0.0002, 0.9891, 0.0000, 0.1471], // quaternion
+      "bsphere": [ -168.70, 12.5189, -452.26, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-warp-gate-01",
+        "distance": ["meters", 5.0]
+      }
+    },
+
+    // ORBS
+    {
+      "trans": [ 12.5,    12.0,    -692.6  ], // behind glass wall at start, go around or over
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [12.5,    12.0,    -692.6, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-01"
+      }
+    },
+    {
+      "trans": [ -72.35,  -6.99,   -465.50  ], // behind some ramps and things against wall opposite entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-72.35,  -6.99,   -465.50, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-02"
+      }
+    },
+    {
+      "trans": [   96.55,  12.61, -676.28 ], // up on ledge of outer wall near entrance ramp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  96.55,  12.61, -676.28, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-03"
+      }
+    },
+    {
+      "trans": [  143.18,  14.00, -580.36], // in corner at far end of upper walkway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  143.18,  14.00, -580.36, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-04"
+      }
+    },
+    {
+      "trans": [   115.34,  10.28, -643.19], // on top of arch at entrance ramp, follow from ^ (abah or extended around the pillar)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  115.34,  10.28, -643.19, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-05"
+      }
+    },
+    {
+      "trans": [    104.0333, 10.2393, -559.5795 ], // on top of post of glass wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   104.0333, 10.2393, -559.5795, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-06"
+      }
+    },
+    {
+      "trans": [    72.4272, 10.1691, -518.9370 ], // on top of post of glass wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   72.4272, 10.1691, -518.9370, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-07"
+      }
+    },
+    {
+      "trans": [    72.4069, 5.2144, -640.0709 ], // on top of post of glass wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   72.4069, 5.2144, -640.0709, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-08"
+      }
+    },
+    {
+      "trans": [     163.1370, 1.0867, -472.6020], // in wall in corner by first grind rail before main skatepark
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      163.1370, 1.0867, -472.6020, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-09"
+      }
+    },
+    {
+      "trans": [  -116.0126, 6.1258, -488.2148], // ring of fire
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -116.0126, 6.1258, -488.2148, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-10"
+      }
+    },
+    {
+      "trans": [  -83.9966, 6.1258, -488.2148], // ring of fire
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -83.9966, 6.1258, -488.2148, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-11"
+      }
+    },
+    {
+      "trans": [   -193.9901, -1.1654, -551.8808], // in "corrugated cardboard" walls on far (west) end
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -193.9901, -1.1654, -551.8808, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-12"
+      }
+    },
+    {
+      "trans": [    -178.7764, -0.4001, -644.9630], // in "corrugated cardboard" walls on far (west) end
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -178.7764, -0.4001, -644.9630, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-13"
+      }
+    },
+    {
+      "trans": [      -199.8824, -3.3781, -527.9526], // on infin jump ceiling in hallway with jetboard token launch thing
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -199.8824, -3.3781, -527.9526, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-14"
+      }
+    },
+    {
+      "trans": [   -117.8427, 1.2525, -536.0266], // just below surface on top of platform with spiralling grind rails around
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -117.8427, 1.2525, -536.0266, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-15",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [     -6.5942, -6.7869, -630.2989], // just below surface on west side of pyramid
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -6.5942, -6.7869, -630.2989, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-16"
+      }
+    },
+    {
+      "trans": [      -147.4355, 21.2538, -576.0035], // just under highest ramp, against supporting pillar
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -147.4355, 21.2538, -576.0035, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-17"
+      }
+    },
+    {
+      "trans": [      -45.4817, 1.5419, -710.7544], // behind pipes in hallway under north side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -45.4817, 1.5419, -710.7544, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-18"
+      }
+    },
+    {
+      "trans": [   55.3892, -1.2337, -480.6221], // in corner of mid platform south side, behind curved grindrail
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  55.3892, -1.2337, -480.6221, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-19"
+      }
+    },
+    {
+      "trans": [  -22.4390, -13.1945, -530.5912], // behind supporting pillar in SE near miniramp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -22.4390, -13.1945, -530.5912, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-20"
+      }
+    },
+    {
+      "trans": [    -117.1170, 24.34, -599.8269], // left grind rail from big jump
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -117.1170, 24.34, -599.8269, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-21"
+      }
+    },
+    {
+      "trans": [  -117.1170, 24.34, -551.8820], // right grind rail from big jump
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -117.1170, 24.34, -551.8820, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-22"
+      }
+    },
+
+    // CRATES
+    {
+      "trans": [  64.2025, 10.4893, -575.8273 ], // in water in NE corner room, before escort ambush
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [    0.0000, 0.6201, 0.0000, -0.7844 ], // quaternion
+      "bsphere": [  64.2025, 10.4893, -575.8273 , 10], // bounding sphere
+      "lump": {
+        "name": "skatea-crate-01",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  -72.0323, 10.4978, -468.053], // on upper platform in skatepark southside
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [     0.0, -0.9985, 0.0, 0.0535], // quaternion
+      "bsphere": [  -72.0323, 10.4978, -468.053 , 10], // bounding sphere
+      "lump": {
+        "name": "skatea-crate-02",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  -220.0182, 2.2122, -576.0787], // small area just above hole from jetboard launch token thing, below upper level of platforms
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   -0.2639, -0.6386, 0.2760, -0.6680], // quaternion
+      "bsphere": [  -220.0182, 2.2122, -576.0787 , 10], // bounding sphere
+      "lump": {
+        "name": "skatea-crate-03",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    }
+
+    // HOVER ORBS
+    // {
+    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
+    //   "etype": "skill",  // actor type
+    //   "game_task": 0, // associated game task (for powercells, etc)
+    //   "quat" : [0, 0, 0, 1], // quaternion
+    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
+    //   "lump": {
+    //     "name":"city-skill-02",
+    //     "pickup-amount": ["float", 3.0]  // goldge
+    //   }
+    // }
+  ]
+}

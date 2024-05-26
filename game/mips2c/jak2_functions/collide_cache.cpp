@@ -63,7 +63,7 @@ u64 execute(void* ctxt) {
   // nop                                            // sll r0, r0, 0
   // nop                                            // sll r0, r0, 0
   c->lwu(a1, 4, gp);                                // lwu a1, 4(gp)
-  c->addiu(a2, r0, 460);                            // addiu a2, r0, 460
+  c->addiu(a2, r0, 920);                            // addiu a2, r0, 460 // changed
   c->lwu(v1, 0, gp);                                // lwu v1, 0(gp)
   c->dsll32(a0, a1, 0);                             // dsll32 a0, a1, 0
   // nop                                            // sll r0, r0, 0
@@ -486,7 +486,7 @@ u64 execute(void* ctxt) {
   c->mov64(v1, v0);                                 // or v1, v0, r0
   // nop                                            // sll r0, r0, 0
   c->lwu(a0, 4, gp);                                // lwu a0, 4(gp)
-  c->addiu(a1, r0, 460);                            // addiu a1, r0, 460
+  c->addiu(a1, r0, 920);                            // addiu a1, r0, 460 // changed
   c->lwu(v1, 0, gp);                                // lwu v1, 0(gp)
   c->dsll32(a0, a0, 0);                             // dsll32 a0, a0, 0
   // nop                                            // sll r0, r0, 0

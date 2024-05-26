@@ -287,6 +287,13 @@
                     )
                 )
               )
+             (else
+              (let ((t0-1 (get-penetrate-using-from-attack-event (the process-drawable proc) block)))
+                (when (logtest? (penetrate dark-bomb) t0-1)
+                  (go-virtual hit)
+                  )
+                )
+              )
              )
            )
          )

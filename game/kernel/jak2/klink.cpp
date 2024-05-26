@@ -13,7 +13,7 @@
 #include "game/kernel/jak2/kscheme.h"
 #include "game/mips2c/mips2c_table.h"
 
-#include "third-party/fmt/core.h"
+#include "fmt/core.h"
 
 static constexpr bool link_debug_printfs = false;
 
@@ -544,7 +544,7 @@ void link_control::jak2_finish(bool jump_from_c_to_goal) {
   *EnableMethodSet = *EnableMethodSet + m_keep_debug;
 
   ObjectFileHeader* ofh = m_link_block_ptr.cast<ObjectFileHeader>().c();
-  lg::info("link finish: {}", m_object_name);
+  lg::debug("link finish: {}", m_object_name);
   if (ofh->object_file_version == 3) {
     // todo check function type of entry
 

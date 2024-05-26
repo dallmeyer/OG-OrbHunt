@@ -1,5 +1,11 @@
 ;;-*-Lisp-*-
 (in-package goal)
+(bundles "FIC.DGO" "LAV.DGO" "MIS.DGO" "OGR.DGO" "ROL.DGO")
+
+(require "levels/common/blocking-plane.gc")
+(require "engine/common-obs/generic-obs.gc")
+(require "engine/entity/ambient.gc")
+(require "engine/game/task/task-control.gc")
 
 ;; name: racer.gc
 ;; name in dgo: racer
@@ -421,7 +427,15 @@
   (set! (-> this path) (-> this path-target))
   (set-vector! (-> this extra-trans) 0.0 6144.0 0.0 1.0)
   (set! (-> this auto-get-off) #f)
-  (move-to-ground (-> this root) 40960.0 40960.0 #t (collide-kind background))
+  (case (-> this name) :comp name=
+    (('racer-15)
+      ;; skip this so cell doesnt end up underground
+      ;; the ground collision where this sits is technically village3 so it doesnt exist when ogre loads
+      )
+    (else
+      (move-to-ground (-> this root) 40960.0 40960.0 #t (collide-kind background))
+      )
+    )
   (set! (-> this cell) (the-as handle #f))
   (if (not *allow-zoomer-anywhere*)
     (blocking-plane-spawn

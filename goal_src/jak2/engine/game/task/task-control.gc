@@ -358,7 +358,11 @@
             )
        )
      (cond
-       ((= arg0 'debug)
+       ((or (= arg0 'debug) (= arg0 'event))
+        )
+       ((or (name= (-> *game-info* current-continue name) 'tmp)
+            (name= (-> *game-info* current-continue name) 'default))
+        ;; reloading tmp checkpoint/debug spawning, don't change water level
         )
        ;; low water for sewesc[b]
        ((or (= (-> this name) 'sewesc) (= (-> this name) 'sewescb)) ;; (task-complete? *game-info* (game-task sewer-board))
@@ -537,7 +541,7 @@
     (when restart?
       (let ((gp-1 0))
         (let ((cur-lev (level-get-target-inside *level*)))
-          (when (and cur-lev (not (logtest? (-> cur-lev info level-flags) 1)))
+          (when (and cur-lev (not (logtest? (-> cur-lev info level-flags) (level-load-flags city))))
             (let ((game-nodes (-> *game-info* sub-task-list)))
               (dotimes (i (-> game-nodes length))
                 (when (nonzero? i)
@@ -2094,7 +2098,7 @@
     (and (or (not (logtest? (-> this node-info flags) (game-task-node-flag city-wait)))
              (let ((a0-2 (level-get-target-inside *level*)))
                (cond
-                 ((not (and a0-2 (logtest? (-> a0-2 info level-flags) 1)))
+                 ((not (and a0-2 (logtest? (-> a0-2 info level-flags) (level-load-flags city))))
                   (set-time! (-> this intro-time))
                   #f
                   )

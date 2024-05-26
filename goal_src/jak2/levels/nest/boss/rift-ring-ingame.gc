@@ -37,6 +37,10 @@
       )
     )
   :trans (behavior ()
+    (if (and (movie?) (name= (-> self name) "village1-rift-ring-ingame-01"))
+      (logior! (-> self draw status) (draw-control-status no-draw)) ;; hide
+      (logclear! (-> self draw status) (draw-control-status no-draw)) ;; show
+      )
     (cond
       ((-> self stutter)
        (update! (-> self anim-speed))
@@ -208,7 +212,8 @@ This commonly includes things such as:
     (the-as pair 0)
     )
   (case-str (-> this name)
-    (("forresca-rift-ring-ingame-01" "dig1-rift-ring-ingame-01" "dig3a-rift-ring-ingame-01" "sewer-rift-ring-ingame-01" "sewesc-rift-ring-ingame-01")
+    (("forresca-rift-ring-ingame-01" "dig1-rift-ring-ingame-01" "dig3a-rift-ring-ingame-01" "sewer-rift-ring-ingame-01" "sewesc-rift-ring-ingame-01"
+      "skatea-rift-ring-ingame-01" "stadiumb-rift-ring-ingame-01" "stadiumc-rift-ring-ingame-01" "stadiumd-rift-ring-ingame-01")
       (set-vector! (-> this root scale) 0.16 0.16 0.16 0.16)  ;; mini rift ring
       (set! (-> this part) (create-launch-control (-> *part-group-id-table* 1301) this))  ;; less intense particles
       )

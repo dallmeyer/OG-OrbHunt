@@ -5103,7 +5103,7 @@
             :borrow '((ctywide 0 lportrun display))
             :open? (lambda ((arg0 game-task-node-info))
               (let ((v1-1 (level-get-target-inside *level*)))
-                (the-as symbol (and v1-1 (logtest? (-> v1-1 info level-flags) 1) (!= (-> v1-1 name) 'ctysluma)))
+                (the-as symbol (and v1-1 (logtest? (-> v1-1 info level-flags) (level-load-flags city)) (!= (-> v1-1 name) 'ctysluma)))
                 )
               )
             :on-close #f
@@ -5142,7 +5142,7 @@
             :borrow '((ctywide 0 lportrun display))
             :open? (lambda ((arg0 game-task-node-info))
               (let ((v1-1 (level-get-target-inside *level*)))
-                (the-as symbol (and v1-1 (logtest? (-> v1-1 info level-flags) 1) (!= (-> v1-1 name) 'ctysluma)))
+                (the-as symbol (and v1-1 (logtest? (-> v1-1 info level-flags) (level-load-flags city)) (!= (-> v1-1 name) 'ctysluma)))
                 )
               )
             :on-close #f

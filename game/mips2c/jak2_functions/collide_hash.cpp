@@ -898,7 +898,7 @@ u64 execute(void* ctxt) {
   c->lw(s4, 0, a0);                                 // lw s4, 0(a0)
   // nop                                            // sll r0, r0, 0
   c->daddiu(s5, a0, 4908);                          // daddiu s5, a0, 4908
-  c->daddiu(s3, s4, -460);                          // daddiu s3, s4, -460
+  c->daddiu(s3, s4, -920);                          // daddiu s3, s4, -460 // changed
   // nop                                            // sll r0, r0, 0
   bc = ((s64)c->sgpr64(s3)) >= 0;                   // bgez s3, L76
   c->dsll(s3, s4, 6);                               // dsll s3, s4, 6
@@ -1407,7 +1407,7 @@ u64 execute(void* ctxt) {
   c->lw(s3, 0, a0);                                 // lw s3, 0(a0)
   // nop                                            // sll r0, r0, 0
   c->daddiu(s4, a0, 4908);                          // daddiu s4, a0, 4908
-  c->daddiu(s2, s3, -460);                          // daddiu s2, s3, -460
+  c->daddiu(s2, s3, -920);                          // daddiu s2, s3, -460 //changed
   // nop                                            // sll r0, r0, 0
   bc = ((s64)c->sgpr64(s2)) >= 0;                   // bgez s2, L64
   c->dsll(s2, s3, 6);                               // dsll s2, s3, 6

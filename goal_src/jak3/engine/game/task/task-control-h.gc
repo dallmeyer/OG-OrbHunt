@@ -43,9 +43,45 @@
   )
 ;; ---task-manager-mask
 
+(declare-type editable-player process)
+(define-extern *editable* (pointer editable-player))
+
+(declare-type mission-squad-control basic)
+(declare-type cty-attack-controller mission-squad-control)
+(declare-type cty-faction-manager basic)
+(define-extern *cty-faction-manager* cty-faction-manager)
+(define-extern *cty-attack-controller* cty-attack-controller)
+(set! *cty-faction-manager* (the cty-faction-manager #f))
+(set! *cty-attack-controller* (the cty-attack-controller #f))
+
+(define-extern cty-attack-reset (function symbol symbol symbol none))
+(define-extern setup-city-task-faction (function object))
+(define-extern cty-faction-evaluate-commands (function pair object))
+
+(define-extern update-task-masks (function symbol int))
+(define-extern task-resolution-close! (function game-task symbol))
+(define-extern task-node-closed? (function game-task-node symbol))
+(define-extern task-node-open! (function game-task-node symbol int))
+(define-extern task-node-reset (function symbol int))
+(define-extern game-task-node->string (function game-task-node string))
+(define-extern task-close! (function string symbol))
+(define-extern task-node-index-by-name (function string int))
+(define-extern task-node-close! (function game-task-node symbol int))
+(define-extern task-node-open? (function game-task-node symbol))
+
+(define-extern restart-mission (function int))
+(define-extern play-task (function game-task symbol symbol string))
+(define-extern play-clean (function symbol int))
+
+(declare-type task-manager process)
+(declare-type game-task-node-info basic)
+(declare-type traffic-engine basic)
+(define-extern task-manager-init-by-other (function game-task-node-info symbol object :behavior task-manager))
+
 ;; DECOMP BEGINS
 
-(defun-debug game-task->string ((task game-task))
+;; og:preserve-this removed from debug segment
+(defun game-task->string ((task game-task))
   (case task
     (((game-task sewer-hum-kg))
      "sewer-hum-kg"
@@ -1028,16 +1064,16 @@
    (tex       game-task-icon)
    (icon      uint16           :overlay-at tex)
    (flags     game-task-flags  :offset   7)
-   (scene     basic            :offset   8)
+   (scene     string           :offset   8)
    (distance  meters)
    )
   )
 
 
 (deftype resetter-spec (structure)
-  ((continue    basic)
+  ((continue    string)
    (node        game-task-node)
-   (reset-mode  basic)
+   (reset-mode  symbol)
    (execute     basic)
    )
   :pack-me
@@ -1059,18 +1095,18 @@
 (deftype task-manager-info (structure)
   ((mask                       task-manager-mask)
    (level                      symbol)
-   (type-to-spawn              basic)
+   (type-to-spawn              symbol)
    (time-limit                 int32)
    (manager                    handle)
-   (intro-scene                string)
-   (resolution-scene           string)
-   (resolution-scene-continue  string)
+   (intro-scene                object)
+   (resolution-scene           object)
+   (resolution-scene-continue  object)
    (final-node                 game-task-node)
    (vehicle-type               uint8)
    (sphere-count               int8)
    (index                      int8)
    (intro-delay                uint16)
-   (sphere-array               uint32)
+   (sphere-array               (inline-array sphere))
    (on-complete                pair)
    (on-fail                    pair)
    (user-count                 int32)
@@ -1408,14 +1444,14 @@
    (command-index     uint8)
    (command-count     uint8)
    (description       text-id)
-   (faction-commands  basic)
+   (faction-commands  pair)
    )
   (:methods
-    (game-task-node-info-method-9 () none)
-    (game-task-node-info-method-10 () none)
-    (game-task-node-info-method-11 () none)
-    (game-task-node-info-method-12 () none)
-    (game-task-node-info-method-13 () none)
+    (get-idx-in-task-list (_type_) int)
+    (open! (_type_ symbol) int)
+    (game-task-node-info-method-11 (_type_ symbol) none)
+    (game-task-node-info-method-12 (_type_) symbol)
+    (eval-game-task-cmd! (_type_) none)
     )
   )
 
@@ -1428,10 +1464,10 @@
    (pre-play-continue    string)
    (play-node            game-task-node)
    (play-continue        string)
-   (kiosk-play-continue  string)
+   (kiosk-play-continue  object)
    )
   (:methods
-    (game-task-info-method-9 (_type_) none)
+    (get-play-list-idx (_type_) int)
     )
   )
 
@@ -1439,7 +1475,7 @@
 (deftype game-task-control (basic)
   ((counter        uint32)
    (actor          game-task-actor)
-   (current-node   uint16)
+   (current-node   game-task-node)
    (current-event  game-task-event)
    )
   (:methods
@@ -1467,25 +1503,27 @@
    (hud-counter     handle  :overlay-at (-> hud 1))
    (intro-time      time-frame)
    )
+  (:state-methods
+    wait
+    active
+    complete
+    resolution
+    (fail resetter-params)
+    (restart symbol)
+    )
   (:methods
-    (task-manager-method-14 () none)
-    (task-manager-method-15 () none)
-    (task-manager-method-16 () none)
-    (task-manager-method-17 () none)
-    (task-manager-method-18 () none)
-    (task-manager-method-19 () none)
-    (task-manager-method-20 () none)
-    (task-manager-method-21 () none)
-    (task-manager-method-22 () none)
-    (task-manager-method-23 () none)
-    (task-manager-method-24 () none)
-    (task-manager-method-25 () none)
-    (task-manager-method-26 () none)
-    (task-manager-method-27 () none)
-    (task-manager-method-28 () none)
-    (task-manager-method-29 () none)
-    (task-manager-method-30 () none)
-    (task-manager-method-31 () none)
+    (init! (_type_) none)
+    (set-time-limit (_type_) none)
+    (kill-all-children (_type_) none)
+    (hud-timer-handler (_type_) none)
+    (ready? (_type_) object)
+    (task-manager-method-25 (_type_) none)
+    (task-manager-method-26 (_type_) none)
+    (task-manager-method-27 (_type_) none)
+    (task-manager-method-28 (_type_) none)
+    (go-fail (_type_) object)
+    (taskman-event-handler (_type_ process int symbol event-message-block) object)
+    (on-fail (_type_ symbol) resetter-params)
     )
   )
 
@@ -1495,6 +1533,7 @@
    (last-ambient       string)
    (last-ambient-id    sound-id)
    )
+  :pack-me
   (:methods
     (ambient-control-method-9 () none)
     (ambient-control-method-10 () none)
@@ -1503,4 +1542,4 @@
   )
 
 
-(define *traffic-engine* #f)
+(define *traffic-engine* (the-as traffic-engine #f))

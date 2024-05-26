@@ -125,26 +125,26 @@
 (defenum bigmap-id
   :type uint32
   (bigmap-id-0 0)
-  (bigmap-id-1 1) ;; caspad
-  (bigmap-id-2 2) ;; castle
-  (bigmap-id-3 3) ;; dig-1
-  (bigmap-id-4 4) ;; dig-3
-  (bigmap-id-5 5) ;; drill
-  (bigmap-id-6 6) ;; forest
-  (bigmap-id-7 7) ;; forexit
-  (bigmap-id-8 8) ;; mountain
-  (bigmap-id-9 9) ;; nest
+  (caspad 1)
+  (castle 2)
+  (dig1 3)
+  (dig3 4)
+  (drill 5)
+  (forest 6)
+  (fortress 7)
+  (mountain 8)
+  (nest 9)
   (bigmap-id-10 10)
-  (bigmap-id-11 11) ;; palcab
-  (bigmap-id-12 12) ;; palent
-  (bigmap-id-13 13) ;; ruins
+  (palcab 11)
+  (palent 12)
+  (ruins 13)
   (sewer-default 14)
   (sewer-with-board-area 15)
-  (bigmap-id-16 16) ;; sewesc
-  (bigmap-id-17 17) ;; strip
-  (bigmap-id-18 18) ;; tomb
-  (bigmap-id-19 19) ;; under
-  (bigmap-id-20 20))  ;; city
+  (sewesc 16)
+  (strip 17)
+  (tomb 18)
+  (under 19)
+  (city 20))
 ;; ---bigmap-id
 
 
@@ -171,6 +171,14 @@
 ;; WARN: Return type mismatch uint vs int.
 (defmethod asize-of ((this level-vis-info))
   (the-as int (+ (-> level-vis-info size) (-> this dictionary-length)))
+  )
+
+(defenum level-load-flags
+  :bitfield #t
+  :type uint32
+  (city       0)      ;; 1
+  (orb-hunt   1)      ;; 2
+  ;; 4
   )
 
 (deftype level-load-info (basic)
@@ -227,7 +235,7 @@
    (texture-anim-map         symbol      :overlay-at (-> texture-anim 8))
    (texture-anim-sky         symbol      :overlay-at (-> texture-anim 9))
    (draw-priority            float)
-   (level-flags              uint32)
+   (level-flags              level-load-flags)
    (fog-height               float)
    (bigmap-id                bigmap-id)
    (ocean-near-translucent?  symbol)

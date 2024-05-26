@@ -68,9 +68,16 @@
   (icelandic 17)
   (russian 18)
   (polish 19)
-  (lithuanian 19)
+  (lithuanian 20)
 
   (custom 999) ;; temp
+  )
+
+(defenum slip-assist-mode
+  :type uint8
+  (normal)
+  (no-slip)
+  (spiderman)
   )
 
 ;; The Jak 2 version of the pc-settings object.
@@ -81,7 +88,6 @@
    (cheats-purchased  pc-cheats)
    (cheats-unlocked   pc-cheats)
    (cheats-mask       pc-cheats)
-   (cheats-backup     pc-cheats) ;; backup for 'cheats', persisted to disk to be restored when disabling speedrunner mode TODO use mask instead
    ;; music
    (music-unlocked  bit-array)
    (flava-unlocked  symbol 6)
@@ -90,7 +96,8 @@
    (fast-airlock?  symbol)
    (fast-elevator? symbol)
    (fast-progress? symbol)
-   
+   (minimap-force-north   symbol)
+
    (stats   statistics)
 
    ;; gfx
@@ -99,7 +106,15 @@
 
    ;; other
    (controller-led-status?    symbol)
+   (speedrunner-mode-custom-bind uint32)
+
    (text-language pc-language) ;; language for game text
+
+   (orb-map-icons?        symbol)
+   (pseudo-savestates?    symbol)
+   (closest-orb?          symbol)
+   (hover-restriction?    symbol)
+   (slip-assist           slip-assist-mode)
 	 )
 
   (:methods
@@ -110,6 +125,7 @@
   )
 
 (define *pc-settings* (the pc-settings-jak2 #f))
+(define *matrix-minimap-north* (quaternion->matrix (new 'static 'matrix) (quaternion-vector-angle! (new 'static 'quaternion) *y-vector* (degrees 180))))
 
 
 ;; jak 2 discord rpc structure
@@ -141,8 +157,17 @@
   (true! (-> obj fast-elevator?))
   (false! (-> obj fast-progress?))
   (true! (-> obj smooth-minimap?))
+  (false! (-> obj minimap-force-north))
   (false! (-> obj hires-clouds?))
+  (set! (-> obj speedrunner-mode-custom-bind) 0)
+
   
+  (set! (-> obj orb-map-icons?) #f)
+  (set! (-> obj pseudo-savestates?) #f)
+  (set! (-> obj closest-orb?) #f)
+  (set! (-> obj hover-restriction?) #f)
+  (set! (-> obj slip-assist) (slip-assist-mode normal))
+
   (cond
     ((and (= *default-territory* GAME_TERRITORY_SCEE) (= (-> obj text-language) (pc-language english)))
       (set! (-> obj text-language) (pc-language uk-english))
@@ -170,8 +195,9 @@
   (clear-all! (-> obj music-unlocked))
   (dotimes (i 6)
     (set! (-> obj flava-unlocked i) #f))
-  
+
   (set! (-> obj stats) *statistics*)
+  (initialize (-> obj stats kill-stats))
   0)
 
 (defmethod reset-input ((obj pc-settings-jak2) (device symbol) (call-handlers symbol))
@@ -263,7 +289,7 @@
                               :hijack-speech-chance 0.45
 
                               :sewer-valve-target-seconds 75
-                              
+
                               :kill-civvie-target 40
                               :kill-car-target 20
                               ))

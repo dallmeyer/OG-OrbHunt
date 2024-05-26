@@ -12,8 +12,8 @@
 (defconstant *kernel-major-version* 2)
 (defconstant *kernel-minor-version* 0)
 
-(defconstant DPROCESS_STACK_SIZE (#if PC_PORT #x8000 #x3800))
-(defconstant PROCESS_STACK_SIZE (#if PC_PORT #x4000 #x1c00))
+(defconstant DPROCESS_STACK_SIZE (#if PC_PORT #x10000 #x3800))
+(defconstant PROCESS_STACK_SIZE (#if PC_PORT #x8000 #x1c00))
 
 (#if PC_BIG_MEMORY
   (defconstant PROCESS_HEAP_MULT 4) ;; 4x actors
@@ -255,7 +255,7 @@
     (new (symbol type string) _type_)
     (activate (_type_ process-tree string pointer) process-tree)
     (deactivate  (_type_) none)
-    (init-from-entity! (_type_ entity-actor) none) ;; todo check
+    (init-from-entity! (_type_ entity-actor) object) ;; todo check
     (run-logic? (_type_) symbol)
     (process-tree-method-13 () none)
     )
@@ -291,7 +291,8 @@
   )
 
 (deftype process (process-tree)
-  ((pool dead-pool)
+  ((self             process :override)
+   (pool             dead-pool)
    (status           symbol)
    (pid int32)
    (main-thread      cpu-thread)
@@ -301,7 +302,7 @@
    (state            state)
    (prev-state       state)
    (next-state       state)
-   (state-stack      basic)
+   (state-stack      (array state))
    (trans-hook       function)
    (post-hook        function)
    (event-hook       (function process int symbol event-message-block object))
@@ -501,6 +502,8 @@
     (new (symbol type int) _type_)
     )
   )
+
+(define-extern sql-query (function string sql-result))
 
 (defmethod new sql-result ((allocation symbol) (type-to-make type) (num-elts int))
   (let ((v0-0 (object-new allocation type-to-make (the-as int (+ (-> type-to-make size) (* num-elts 4))))))

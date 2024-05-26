@@ -1,0 +1,256 @@
+{
+  // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
+  // the name of this file, and the folder this file is in must have the same name.
+  "long_name": "orbs-sewer-sewesc",
+  // The file name, should be upper case and 8 characters or less.
+  "iso_name": "O0T",
+  // The nickname, should be exactly 3 characters
+  "nickname": "o0t", // 3 char name, all lowercase
+  // Background mesh file.
+  // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
+  // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
+  // only have 1.
+  "gltf_file": "custom_assets/jak2/levels/orbs-sewer-sewesc/orbs-sewer-sewesc.glb",
+
+  // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
+  "automatic_wall_detection": true,
+  "automatic_wall_angle": 45.0,
+
+  // if your mesh has triangles with incorrect orientation, set this to make all collision mesh triangles double sided
+  // this makes collision 2x slower and bigger, so only use if really needed
+  "double_sided_collide": false,
+
+  // available res-lump tag data types:
+  // int32, float, meters, vector, vector4m (meters)
+  //
+  // examples:
+  //
+  // adds a float tag 'spring-height' with value of 200 meters (1 meter = 4096.0 units):
+  // "spring-height": ["meters", 200.0]
+  //
+  // adds a vector tag 'movie-pos':
+  // "movie-pos": ["vector", [4096000.0, -176128.0, 1353973.76, 1.0]]
+
+   // The base actor id for your custom level. If you have multiple levels, this should be unique!
+   "base_id": 60000,
+
+  // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
+  // Removed so that the release builds don't have to double-decompile the game
+  //"art_groups": ["prsn-torture-ag"],
+  "art_groups": ["rift-ring-in-game-ag"],
+
+  // Any textures you want to include in your custom level.
+  // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
+  // To get a list of all the textures, you can extract all of the game's textures
+  // by setting "save_texture_pngs" to true in the decompiler config.
+  "textures": [],
+
+  "actors" : [
+    {
+      "trans": [1215.37, -33.67, 455.44], // duh
+      "etype": "rift-ring-ingame",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, -0.3934, 0, 0.9193], // quaternion
+      "bsphere": [1215.37, -33.67, 455.44, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-rift-ring-ingame-01"
+      }
+    },
+    {
+      "trans": [1215.37, -37.67, 455.44], // hidden behind rift ring
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0.5219, 0, 0.8529], // quaternion
+      "bsphere": [1215.37, -37.67, 455.44, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-warp-gate-01",
+        "distance": ["meters", 5.0]
+      }
+    },
+    // ORBS
+    {
+      "trans": [ 1308.59, -89.0, 607.61], // behind grate at end
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1308.59, -89.0, 607.61, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-01"
+      }
+    },
+    {
+      "trans": [ 1182.38, -41.90, 618.99], // atop door frame to closed off jetboard section (sideflip > extended ff > dismount)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1182.38, -41.90, 618.99, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-02"
+      }
+    },
+    {
+      "trans": [     1190.0125, -66.5104, 519.2733], // in corner at bottom of first elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     1190.0125, -66.5104, 519.2733, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-03"
+      }
+    },
+    {
+      "trans": [      1219.5584, -64.2079, 498.5827], // behind pipe at bottom of first elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     1219.5584, -64.2079, 498.5827, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-04"
+      }
+    },
+    {
+      "trans": [  1129.9102, -39.6170, 474.8370], // in 2nd or 3rd hosehead near start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1129.9102, -39.6170, 474.8370, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-05",
+        "alt-actor": "hosehead-9"
+      }
+    },
+    {
+      "trans": [   1155.1619, -66.3132, 479.7130], // behind rubble from escort explosion
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1155.1619, -66.3132, 479.7130, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-06",
+        "bob-scale": ["float", 0.6]
+      }
+    },
+    {
+      "trans": [      1167.1638, -66.5383, 441.1590], // behind middle pipe in escort explosion room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      1167.1638, -66.5383, 441.1590, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-07"
+      }
+    },
+    {
+      "trans": [      1156.9049, -64.5885, 368.5490], // down below platform in corner as soon as you enter room after escort explosion
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [        1156.9049, -64.5885, 368.5490, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-08"
+      }
+    },
+    {
+      "trans": [  1419.1967, -88.8591, 447.7649], // in 2nd trio of hoseheads before ambush
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1419.1967, -88.8591, 447.7649, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-09",
+        "alt-actor": "hosehead-25"
+      }
+    },
+    {
+      "trans": [   1222.7717, -64.2165, 346.7738], // one of hoseheads on wall after 2nd elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1222.7717, -64.2165, 346.7738, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-10",
+        "alt-actor": "hosehead-18"
+      }
+    },
+    {
+      "trans": [      1156.9049, -64.5885, 368.5490], // on lamp over pipes with jetboard ramp, in ambush room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [        1156.9049, -64.5885, 368.5490, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-11"
+      }
+    },
+    {
+      "trans": [   1368.3763, -88.5238, 622.1121], // under rubble of broken statue
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1368.3763, -88.5238, 622.1121, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-12"
+      }
+    },
+    {
+      "trans": [    1385.8522, -91.0048, 488.3918], // under rubble in water at escort ambush
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    1385.8522, -91.0048, 488.3918, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-13",
+        "bob-scale": ["float", 0.6]
+      }
+    },
+
+    // CRATES
+    {
+      "trans": [ 1379.1387, -91.3179, 433.1943], // in water in NE corner room, before escort ambush
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [    0.0,     -0.1816, -0.0001, -0.9833 ], // quaternion
+      "bsphere": [ 1379.1387, -91.3179, 433.1943, 10], // bounding sphere
+      "lump": {
+        "name": "sewesc-crate-01",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [   1291.7785, -91.1516, 372.8694], // in water in NE corner room, before escort ambush
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [    0.0007,  0.8430,  0.0002,  -0.5378], // quaternion
+      "bsphere": [  1291.7785, -91.1516, 372.8694, 10], // bounding sphere
+      "lump": {
+        "name": "sewesc-crate-02",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    
+    // HOVER ORBS
+    {
+      "trans": [   1377.30, -46.50, 622.82], // closed door from jetboard section across from 1st valve (above statue)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1377.30, -46.50, 622.82, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
+  ]
+}

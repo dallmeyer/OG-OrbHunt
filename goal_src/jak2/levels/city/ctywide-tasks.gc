@@ -122,7 +122,7 @@
     (set-setting! 'vehicle-hijacking #f 0.0 0)
     (set-setting! 'exclusive-task #f 0.0 (-> self node-info task))
     (while (let ((a0-9 (level-get-target-inside *level*)))
-             (not (and a0-9 (logtest? (-> a0-9 info level-flags) 1)))
+             (not (and a0-9 (logtest? (-> a0-9 info level-flags) (level-load-flags city))))
              )
       (suspend)
       )

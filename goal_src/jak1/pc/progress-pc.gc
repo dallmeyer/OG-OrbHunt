@@ -1,6 +1,9 @@
 ;;-*-Lisp-*-
 (in-package goal)
 
+(require "engine/ui/progress/progress.gc")
+
+
 #|
 
   Code for the progress menu in the PC port. The original code is still loaded, this just has some overriden functions.
@@ -96,6 +99,7 @@
 (def-progress-carousell *carousell-speaker* (speaker-always speaker-never speaker-auto))
 (def-progress-carousell *carousell-frame-rate-150fps* (60fps 100fps 150fps))
 (def-progress-carousell *carousell-frame-rate-100fps* (60fps 100fps))
+(def-progress-carousell *carousell-slip-assist* (slip-normal slip-no-slip slip-spiderman))
 (define *carousell-frame-rate* *carousell-frame-rate-150fps*)
 
 ;; pad remap stuff
@@ -132,7 +136,10 @@
   )
 
 (define *game-options-pc* (new 'static 'boxed-array :type game-option
-    (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id baby-mode) :scale #t)
+    (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id unlocked-warp-gates) :scale #t)
+    (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id pseudo-savestates) :scale #t)
+    (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id closest-orb) :scale #t)
+    (new 'static 'game-option :option-type (game-option-type slip-assist) :name (text-id slip-assist) :scale #t)
     (new 'static 'game-option :option-type (game-option-type menu) :name (text-id input-options) :scale #t :param3 (game-option-menu input-options))
     (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id play-hints) :scale #t)
     (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id subtitles) :scale #t)
@@ -154,18 +161,8 @@
     (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id vsync) :scale #t)
     (new 'static 'game-option :option-type (game-option-type menu) :name (text-id aspect-ratio) :scale #t :param3 (game-option-menu aspect-ratio))
     (new 'static 'game-option :option-type (game-option-type msaa) :name (text-id msaa) :scale #t)
-    (new 'static 'game-option :option-type (game-option-type frame-rate) :name (text-id frame-rate) :scale #t)
-    (new 'static 'game-option :option-type (game-option-type menu) :name (text-id ps2-options) :scale #t :param3 (game-option-menu gfx-ps2-options))
-    (new 'static 'game-option :option-type (game-option-type button) :name (text-id back) :scale #t)
-    )
-  )
-
-(define *graphic-options-no-frame-rate-pc* (new 'static 'boxed-array :type game-option
-    (new 'static 'game-option :option-type (game-option-type menu) :name (text-id game-resolution) :scale #t :param3 (game-option-menu resolution))
-    (new 'static 'game-option :option-type (game-option-type display-mode) :name (text-id display-mode) :scale #t)
-    (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id vsync) :scale #t)
-    (new 'static 'game-option :option-type (game-option-type menu) :name (text-id aspect-ratio) :scale #t :param3 (game-option-menu aspect-ratio))
-    (new 'static 'game-option :option-type (game-option-type msaa) :name (text-id msaa) :scale #t)
+    (new 'static 'game-option :option-type (game-option-type frame-rate) :name (text-id frame-rate) :scale #t
+      :option-disabled-func (lambda () (or (-> *pc-settings* speedrunner-mode?) (<= (pc-get-active-display-refresh-rate) 60))))
     (new 'static 'game-option :option-type (game-option-type menu) :name (text-id ps2-options) :scale #t :param3 (game-option-menu gfx-ps2-options))
     (new 'static 'game-option :option-type (game-option-type button) :name (text-id back) :scale #t)
     )
@@ -246,7 +243,7 @@
   (new 'static 'game-option :option-type (game-option-type menu) :name (text-id input-opts-binds-controller) :scale #t :param3 (game-option-menu controller-binds)
     :option-disabled-func (lambda () (<= (pc-get-controller-count) 0)))
   (new 'static 'game-option :option-type (game-option-type menu) :name (text-id input-opts-binds-keyboard) :scale #t :param3 (game-option-menu keyboard-binds)
-    :option-disabled-func (lambda () (not (-> *pc-settings* keyboard-enabled?))))
+    :option-disabled-func (lambda () (not (pc-get-keyboard-enabled?))))
   (new 'static 'game-option :option-type (game-option-type menu) :name (text-id input-opts-binds-mouse) :scale #t :param3 (game-option-menu mouse-binds)
     :option-disabled-func (lambda () (not (-> *pc-settings* mouse-enabled?))))
   (new 'static 'game-option :option-type (game-option-type button) :name (text-id back) :scale #t)))
@@ -258,7 +255,8 @@
   (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id input-opts-enable-kb) :scale #t
     :on-change (lambda ((val object))
                 (let ((val-sym (the-as symbol val)))
-                  (set-enable-keyboard! *pc-settings* val-sym)
+                  (pc-set-keyboard-enabled! val-sym)
+                  (set! (-> *pc-settings* keyboard-enabled?) val-sym)
                   (none))))
   (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id input-opts-enable-mouse) :scale #t
     :on-change (lambda ((val object))
@@ -278,7 +276,7 @@
   (new 'static 'game-option :option-type (game-option-type confirmation) :name (text-id restore-defaults) :scale #t
     :on-confirm (lambda ()
                  (reset-input *pc-settings* 'input #t)
-                 (set-enable-keyboard! *pc-settings* (-> *pc-settings* keyboard-enabled?))
+                 (pc-set-keyboard-enabled! (-> *pc-settings* keyboard-enabled?))
                  (update-mouse-controls! *pc-settings*)
                  (none)))
   (new 'static 'game-option :option-type (game-option-type button) :name (text-id back) :scale #t)))
@@ -874,20 +872,15 @@
                                                             *main-options-secrets*
                                                             *main-options-pc*))
   (set! (-> *options-remap* (progress-screen game-settings)) *game-options-pc*)
+  (set! (-> *options-remap* (progress-screen graphic-settings)) *graphic-options-pc*)
   (let ((max-refresh-rate (pc-get-active-display-refresh-rate)))
     (cond
       ((> max-refresh-rate 100)
-        (set! (-> *options-remap* (progress-screen graphic-settings)) *graphic-options-pc*)
         (set! *carousell-frame-rate* *carousell-frame-rate-150fps*)
         )
       ((> max-refresh-rate 60)
-        (set! (-> *options-remap* (progress-screen graphic-settings)) *graphic-options-pc*)
         (set! *carousell-frame-rate* *carousell-frame-rate-100fps*)
-        )
-      (else
-        (set! (-> *options-remap* (progress-screen graphic-settings)) *graphic-options-no-frame-rate-pc*)
-        )
-      ))
+        )))
 
   (set! (-> *options-remap* (progress-screen sound-settings))             *sound-options-pc*)
   (set! (-> *options-remap* (progress-screen memcard-no-space))           *ok-options*)
@@ -962,27 +955,24 @@
   (set! (-> *yes-no-options* 0 value-to-modify) (&-> *progress-state* yes-no-choice))
 
   ;; our options!
-  (set! (-> *game-options-pc* 0 value-to-modify) (&-> *pc-settings* baby-mode?))
-  (set! (-> *game-options-pc* 2 value-to-modify) (&-> *setting-control* default play-hints))
-  (set! (-> *game-options-pc* 3 value-to-modify) (&-> *pc-settings* subtitles?))
-  (set! (-> *game-options-pc* 4 value-to-modify) (&-> *pc-settings* hinttitles?))
-  (set! (-> *game-options-pc* 5 value-to-modify) (&-> *setting-control* default language))
-  (set! (-> *game-options-pc* 6 value-to-modify) (&-> *progress-carousell* int-backup))
-  (set! (-> *game-options-pc* 7 value-to-modify) (&-> *progress-carousell* int-backup))
-  (set! (-> *game-options-pc* 8 value-to-modify) (&-> *progress-carousell* int-backup))
+  (set! (-> *game-options-pc* 0 value-to-modify) (&-> *pc-settings* unlocked-warp-gates?))
+  (set! (-> *game-options-pc* 1 value-to-modify) (&-> *pc-settings* pseudo-savestates?))
+  (set! (-> *game-options-pc* 2 value-to-modify) (&-> *pc-settings* closest-orb?))
+  (set! (-> *game-options-pc* 3 value-to-modify) (&-> *progress-carousell* int-backup)) ;; slip assist
+  (set! (-> *game-options-pc* 4 value-to-modify) (&-> *setting-control* default vibration))
+  (set! (-> *game-options-pc* 5 value-to-modify) (&-> *setting-control* default play-hints))
+  (set! (-> *game-options-pc* 6 value-to-modify) (&-> *pc-settings* subtitles?))
+  (set! (-> *game-options-pc* 7 value-to-modify) (&-> *pc-settings* hinttitles?))
+  (set! (-> *game-options-pc* 8 value-to-modify) (&-> *setting-control* default language))
+  (set! (-> *game-options-pc* 9 value-to-modify) (&-> *progress-carousell* int-backup))
+  (set! (-> *game-options-pc* 10 value-to-modify) (&-> *progress-carousell* int-backup))
+  (set! (-> *game-options-pc* 11 value-to-modify) (&-> *progress-carousell* int-backup))
 
   (set! (-> *graphic-options-pc* 1 value-to-modify) (&-> *progress-carousell* int-backup))
   (set! (-> *graphic-options-pc* 2 value-to-modify) (&-> *pc-settings* monitor))
   (set! (-> *graphic-options-pc* 3 value-to-modify) (&-> *pc-settings* vsync?))
   (set! (-> *graphic-options-pc* 5 value-to-modify) (&-> *progress-carousell* int-backup))
   (set! (-> *graphic-options-pc* 6 value-to-modify) (&-> *progress-carousell* int-backup))
-  ;; disable changes to frame-rate while in speedrunner mode
-  ;; todo move this to the creation
-  (set! (-> *graphic-options-pc* 6 option-disabled-func) (lambda () (-> *pc-settings* speedrunner-mode?)))
-
-  (set! (-> *graphic-options-no-frame-rate-pc* 1 value-to-modify) (&-> *progress-carousell* int-backup))
-  (set! (-> *graphic-options-no-frame-rate-pc* 2 value-to-modify) (&-> *pc-settings* vsync?))
-  (set! (-> *graphic-options-no-frame-rate-pc* 4 value-to-modify) (&-> *progress-carousell* int-backup))
 
   (set! (-> *misc-options* 0 value-to-modify) (&-> *pc-settings* money-starburst?))
   (set! (-> *misc-options* 1 value-to-modify) (&-> *pc-settings* discord-rpc?))
@@ -1173,6 +1163,7 @@
                     (game-option-type frame-rate)
                     (game-option-type language-subtitles)
                     (game-option-type language-text)
+                    (game-option-type slip-assist)
                     )
                    ;; a carousell like language
                    (if (> (-> (the-as (pointer int) (-> options (-> obj option-index) value-to-modify))) 0)
@@ -1283,6 +1274,7 @@
                     (game-option-type frame-rate)
                     (game-option-type language-subtitles)
                     (game-option-type language-text)
+                    (game-option-type slip-assist)
                     )
                    ;; same thing as before. if at last, go to first. otherwise, keep going forward.
                    (if (< (-> (the-as (pointer int) (-> options (-> obj option-index) value-to-modify))) (1- (length (-> *progress-carousell* current-carousell))))
@@ -1766,6 +1758,13 @@
                             (set! (-> *progress-carousell* int-backup) i))
                         ))
                   )
+                 (((game-option-type slip-assist))
+                  (case (-> *pc-settings* slip-assist)
+                    (((slip-assist-mode normal)) (set! (-> *progress-carousell* int-backup) 0))
+                    (((slip-assist-mode no-slip)) (set! (-> *progress-carousell* int-backup) 1))
+                    (((slip-assist-mode spiderman)) (set! (-> *progress-carousell* int-backup) 2))
+                    )               
+                  )
                  )
                (sound-play "select-option")
                (cpad-clear! 0 x)
@@ -1792,6 +1791,7 @@
                      (((game-option-type frame-rate)) (set! (-> *progress-carousell* current-carousell) *carousell-frame-rate*))
                      (((game-option-type language-subtitles)) (set! (-> *progress-carousell* current-carousell) *subtitle-languages*))
                      (((game-option-type language-text)) (set! (-> *progress-carousell* current-carousell) *text-languages*))
+                     (((game-option-type slip-assist)) (set! (-> *progress-carousell* current-carousell) *carousell-slip-assist*))
                      )
                    )
                  )
@@ -1885,6 +1885,13 @@
                   ((2) (set-frame-rate! *pc-settings* 150 #t))
                   )
                 (set-video-mode (-> *setting-control* default video-mode))
+                )
+               (((game-option-type slip-assist))
+                (case (-> *progress-carousell* int-backup)
+                  ((0) (set! (-> *pc-settings* slip-assist) (slip-assist-mode normal)))
+                  ((1) (set! (-> *pc-settings* slip-assist) (slip-assist-mode no-slip)))
+                  ((2) (set! (-> *pc-settings* slip-assist) (slip-assist-mode spiderman)))
+                  )               
                 )
                )
               ;; if the option has a `on-confirm` function, run it
@@ -2363,6 +2370,7 @@
                     (game-option-type frame-rate)
                     (game-option-type language-subtitles)
                     (game-option-type language-text)
+                    (game-option-type slip-assist)
                     )
                     ;; crunched down to one generic function.
                     (progress-draw-carousell-from-string-list (-> *progress-carousell* current-carousell) font y-off (-> (the-as (pointer int) (-> options index value-to-modify))))
@@ -2443,7 +2451,7 @@
                   )
                 )
                 (else
-                  ;; this option is not selected :-(
+                  ;; this option is not selected
                   (case (-> options index option-type)
                     (((game-option-type slider)
                       (game-option-type aspect-ratio)
@@ -2534,6 +2542,17 @@
                     (set! option-str (string-format "~S: ~S" (lookup-text! *common-text* (-> options index name) #f)
                                                               (lookup-text! *common-text* (get-language-name (-> *pc-settings* text-language)) #f)))
                     )
+                    (((game-option-type slip-assist))
+                      (let ((slip-assist-text 
+                        (case (-> *pc-settings* slip-assist)
+                          (((slip-assist-mode normal)) (lookup-text! *common-text* (text-id slip-normal) #f))
+                          (((slip-assist-mode no-slip)) (lookup-text! *common-text* (text-id slip-no-slip) #f))
+                          (((slip-assist-mode spiderman)) (lookup-text! *common-text* (text-id slip-spiderman) #f))
+                          )))
+                        (set! option-str (string-format "~S: ~S" (lookup-text! *common-text* (-> options index name) #f)
+                                                                slip-assist-text))
+                        )
+                      )
                     )
                   )
                 ))

@@ -829,12 +829,21 @@
   (progress-graphics-msaa-off #x1338)
   (progress-graphics-display #x1339)
   
-  
   ;; mod text
   (pad-triangle #x2000)
   (pad-circle #x2001)
   (pad-x #x2002)
   (pad-square #x2003)
+
+  (progress-orb-map-icons #x3000)
+  (progress-pseudo-savestates #x3001)
+  (progress-closest-orb #x3002)
+  (progress-hover-restriction #x3003)
+
+  (progress-slip-assist #x3004)
+  (progress-slip-normal #x3005)
+  (progress-slip-no-slip #x3006)
+  (progress-slip-spiderman #x3007)
 )
 ;; ---text-id
 

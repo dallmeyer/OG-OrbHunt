@@ -114,6 +114,11 @@
                       )
                 )
         )
+  (case (-> this name) :comp name=
+    (('fort-entry-gate-20 'fort-entry-gate-11)
+      (set! (-> this open-test) '(send-event *target* 'level-inside? 'forrescb))
+      )
+    )
   (set! (-> this sound-gear) #f)
   (set! (-> this sound-pre-open) #f)
   (set! (-> this sound-pre-open-stop) #f)
@@ -437,6 +442,7 @@
     (when (or (and (want-cross-airlock? self)
                    (begin
                     (let ((gp-0 (res-lump-struct (-> self entity) 'on-activate structure)))
+                      (dbg-format 0 "AIRLOCK (close) on-activate ~S ~A~%" (-> self name) (the-as pair gp-0))
                       (if gp-0 (script-eval (the-as pair gp-0)))
                       )
                     (destination-loaded? self #f)
