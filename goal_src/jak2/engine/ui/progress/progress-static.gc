@@ -17,7 +17,7 @@
               :bounds (static-spherem 0 0 0 55)
               )
 
-(define *main-options*
+(define *menu-options-orig*
   (new 'static 'menu-option-list
     :y-center #xc6
     :y-space 30
@@ -52,6 +52,44 @@
       )
     )
   )
+
+(define *menu-options-orbs*
+  (new 'static 'menu-option-list
+    :y-center #xc6
+    :y-space 30
+    :scale 0.82
+    :options (new 'static 'boxed-array :type menu-option
+      (new 'static 'menu-main-menu-option :name (text-id progress-root-orb-counts) :scale #t :next-state 'orb-counts)
+      (new 'static 'menu-main-menu-option :name (text-id progress-root-show-map) :scale #t :next-state 'bigmap)
+      (new 'static 'menu-main-menu-option
+        :name (text-id progress-root-highscores)
+        :scale #t
+        :next-state 'highscores
+        )
+      (new 'static 'menu-main-menu-option
+        :name (text-id progress-root-game-options)
+        :scale #t
+        :next-state 'game-options
+        )
+      (new 'static 'menu-main-menu-option
+        :name (text-id progress-root-graphic-options)
+        :scale #t
+        :next-state 'graphic-options
+        )
+      (new 'static 'menu-main-menu-option
+        :name (text-id progress-root-sound-options)
+        :scale #t
+        :next-state 'sound-options
+        )
+      (new 'static 'menu-main-menu-option :name (text-id progress-load-game) :scale #t :next-state 'select-load)
+      (new 'static 'menu-main-menu-option :name (text-id progress-save-game) :scale #t :next-state 'select-save)
+      (new 'static 'menu-main-menu-option :name (text-id progress-root-secrets) :scale #t :next-state 'secret)
+      (new 'static 'menu-main-menu-option :name (text-id progress-restart-quit) :scale #t :next-state 'quit-restart)
+      )
+    )
+  )
+
+(define *main-options* *menu-options-orig*)
 
 (define *main-options-debug*
   (new 'static 'menu-option-list
@@ -520,6 +558,16 @@
     :y-space 30
     :scale 0.82
     :options (new 'static 'boxed-array :type menu-option (new 'static 'menu-missions-option :num-pages 2))
+    )
+  )
+
+(define *orb-counts-options*
+  "List of [[menu-orb-counts-option]]"
+  (new 'static 'menu-option-list
+    :y-center #xc6
+    :y-space 30
+    :scale 0.6
+    :options (new 'static 'boxed-array :type menu-option (new 'static 'menu-orb-counts-option :num-pages 2))
     )
   )
 

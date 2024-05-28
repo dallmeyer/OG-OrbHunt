@@ -308,7 +308,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Mars Tomb (Left)" ;; 7
   "Mars Tomb (Right)" ;; 8
   "Mars Tomb (Boss)" ;; 9
-  "Underport (Ruins)" ;; 10
+  "Underport (Sig)" ;; 10
   "Palace (Cables)" ;; 11
   "Palace (Shaft/Lobby)" ;; 12
   "Palace (Rooftop)" ;; 13
@@ -368,10 +368,86 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Mars Tomb (Daxter Chase)" ;; 67
   "Mars Tomb (Entrance)" ;; 68
   "Sewers" ;; 69
-  "Underport (Chamber)" ;; 70
+  "Underport (Mech)" ;; 70
   "Construction Site (Entrance)" ;; 71
   "Drill Platform (Interior)" ;; 72
   ))
 
 (define *level-orb-collected-counts* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
 (define *level-orb-total-counts* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
+
+(define *level-orb-total-counts-fixed* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
+  0 ;; "" ;; 0 (none)
+  1 ;; "Power Station" ;; 1
+  52 ;; "Drill Platform (Main)" ;; 2
+  36 ;; "Drill Platform (Rails)" ;; 3
+  4 ;; "Drill Platform (Control Room)" ;; 4
+  99 ;; "Sewers (Old)" ;; 5
+  23 ;; "Mars Tomb (Center)" ;; 6
+  35 ;; "Mars Tomb (Left)" ;; 7
+  40 ;; "Mars Tomb (Right)" ;; 8
+  28 ;; "Mars Tomb (Boss)" ;; 9
+  4 ;; "Underport (Sig Section)" ;; 10
+  19 ;; "Palace (Cables)" ;; 11
+  8 ;; "Palace (Shaft/Lobby)" ;; 12
+  36 ;; "Palace (Rooftop)" ;; 13
+  8 ;; "Palace (Throne)" ;; 14
+  60 ;; "Palace (Interior)" ;; 15
+  25 ;; "Fortress (Prison)" ;; 16
+  35 ;; "Fortress (Escape South)" ;; 17
+  20 ;; "Fortress (Escape North)" ;; 18
+  25 ;; "Fortress (Rescue East)" ;; 19
+  60 ;; "Fortress (Rescue West)" ;; 20
+  32 ;; "Fortress (Ammo Dump Northeast)" ;; 21
+  38 ;; "Fortress (Ammo Dump West)" ;; 22
+  19 ;; "Fortress (Ammo Dump Southeast)" ;; 23
+  18 ;; "Dig Site (Old)" ;; 24
+  103 ;; "Strip Mine" ;; 25
+  154 ;; "Dead Town" ;; 26
+  8 ;; "Dead Town (Hut)" ;; 27
+  95 ;; "Pumping Station" ;; 28
+  182 ;; "Mountain Temple" ;; 29
+  98 ;; "Haven Forest" ;; 30
+  66 ;; "No Man's Canyon" ;; 31
+  39 ;; "Main Town (Northwest)" ;; 32
+  55 ;; "Main Town (Northeast)" ;; 33
+  32 ;; "Main Town (Southeast)" ;; 34
+  14 ;; "Slums (Southeast)" ;; 35
+  41 ;; "Slums (Northwest)" ;; 36
+  45 ;; "Water Slums" ;; 37
+  31 ;; "Port" ;; 38
+  29 ;; "Gardens (North)" ;; 39 farma
+  30 ;; "Gardens (South)" ;; 40 farmb
+  15 ;; "Industrial Zone (South)" ;; 41
+  112 ;; "Construction Site" ;; 42
+  8 ;; "Industrial Zone (North)" ;; 43
+  40 ;; "Bazaar (West)" ;; 44 ctymarka
+  6 ;; "Bazaar (East)" ;; 45 ctymarkb
+  3 ;; "Central Haven (Palace Grounds)" ;; 46
+  14 ;; "Stadium (Exterior)" ;; 47
+  18 ;; "Stadium (Class 3)" ;; 48
+  18 ;; "Stadium (Class 2)" ;; 49
+  18 ;; "Stadium (Class 1)" ;; 50
+  34 ;; "Stadium (JET Board)" ;; 51
+  6 ;; "Stadium (Garage)" ;; 52
+  6 ;; "Onin's Tent" ;; 53
+  1 ;; "Oracle" ;; 54
+  3 ;; "Underground Hideout" ;; 55
+  4 ;; "Hip Hog Heaven Saloon" ;; 56
+  47 ;; "Gun Course" ;; 57
+  46 ;; "Dig Site (South)" ;; 58
+  36 ;; "Dig Site (North)" ;; 59
+  115 ;; "Landing Pad" ;; 60
+  143 ;; "Weapons Factory (Interior)" ;; 61
+  17 ;; "Weapons Factory (Rooftop)" ;; 62
+  46 ;; "Sandover Village" ;; 63
+  170 ;; "Metal Head Nest (Exterior)" ;; 64
+  46 ;; "Metal Head Nest (Interior)" ;; 65
+  25 ;; "Halfpipe" ;; 66
+  14 ;; "Mars Tomb (Daxter Chase)" ;; 67
+  3 ;; "Mars Tomb (Entrance)" ;; 68
+  16 ;; "Sewers" ;; 69
+  0 ;; "Underport (Mech Section)" ;; 70
+  5 ;; "Construction Site (Entrance)" ;; 71
+  30 ;; "Drill Platform (Interior)" ;; 72
+  ))
