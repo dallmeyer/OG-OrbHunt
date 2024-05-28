@@ -1200,7 +1200,7 @@
       (font-scale float)
       )
     (set! font-alpha (* 2.0 (- 0.5 (-> progress menu-transition))))
-    (set! task-info-idx 1)
+    (set! task-info-idx 0)
     (set! scroll-offset 0)
     (set! sv-32 0)
     (set! sv-40 0)
@@ -1244,7 +1244,7 @@
     ;;     )
     ;;   (set! scroll-offset (+ scroll-offset 1))
     ;;   )
-    (set! num-task-info (- LEVEL_ID_LEN 1))
+    (set! num-task-info (- LEVEL_ID_LEN 2))
     (set! (-> *progress-state* total-num-tasks) num-task-info)
     ;; (sort-task-node-result num-task-info)
     (let ((font-ctx-1 font-ctx))
@@ -1355,7 +1355,7 @@
 
       ;; main lines?
       (set! (-> font-ctx origin y) (the float (+ default-y-origin-4x3 (the int line-height))))
-      (while (and (< task-info-idx num-task-info) (< task-info-idx (+ scroll-offset 10))) ;; [task-info-index, scroll-offset + 10)
+      (while (and (< task-info-idx LEVEL_ID_LEN) (< task-info-idx (+ scroll-offset 10))) ;; [task-info-index, scroll-offset + 10)
         (let* ((collected-count (-> *mod-settings* save-data which orb-counts task-info-idx))
                  (total-count (-> *level-orb-total-counts-fixed* task-info-idx))
                  (line-text (if (nonzero? collected-count) (-> *level-id-names* task-info-idx) "???"))
