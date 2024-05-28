@@ -297,8 +297,6 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   ;; 0 ;; test-zone ;; out of place
   ))
 
-(defconstant LEVEL_ID_LEN 73)
-
 (define *level-id-names* (new 'static 'boxed-array :type string :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   "" ;; 0 (none)
   "Power Station" ;; 1

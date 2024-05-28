@@ -759,12 +759,6 @@
     (("cheats-unlocked") (set! (-> obj cheats-unlocked) (the-as pc-cheats (file-stream-read-int file))))
     (("cheats-backup") (file-stream-read-int file)) ;; TODO - Don't remove this, parsing code can't handle unexpected keys
 
-    (("orb-map-icons?") (set! (-> obj orb-map-icons?) (file-stream-read-symbol file)))
-    (("pseudo-savestates?") (set! (-> obj pseudo-savestates?) (file-stream-read-symbol file)))
-    (("closest-orb?") (set! (-> obj closest-orb?) (file-stream-read-symbol file)))
-    (("hover-restriction?") (set! (-> obj hover-restriction?) (file-stream-read-symbol file)))
-    (("slip-assist") (set! (-> obj slip-assist) (the-as slip-assist-mode (file-stream-read-int file))))
-
     (("music-unlocked")
       (dotimes (i (/ (align64 (-> obj music-unlocked length)) 64))
         (bit-array<-int64 (-> obj music-unlocked) (* i 64) (file-stream-read-int file))
@@ -816,12 +810,6 @@
   (format file "  (cheats-revealed #x~x)~%" (-> obj cheats-revealed))
   (format file "  (cheats-purchased #x~x)~%" (-> obj cheats-purchased))
   (format file "  (cheats-unlocked #x~x)~%" (-> obj cheats-unlocked))
-
-  (format file "  (orb-map-icons? ~A)~%" (-> obj orb-map-icons?))
-  (format file "  (pseudo-savestates? ~A)~%" (-> obj pseudo-savestates?))
-  (format file "  (closest-orb? ~A)~%" (-> obj closest-orb?))
-  (format file "  (hover-restriction? ~A)~%" (-> obj hover-restriction?))
-  (format file "  (slip-assist ~D)~%" (-> obj slip-assist))
 
   (format file "  (music-unlocked")
   (dotimes (i (/ (align64 (-> obj music-unlocked length)) 64))
@@ -953,13 +941,18 @@
   (format 0 "resetting mod settings~%")
 
   ;; reset per-save fields here
-  (dotimes (idx 4)
-    (set! (-> obj save-data idx last-eco-color) #f)
+  (dotimes (save-idx 4)
+    (dotimes (lvl-idx LEVEL_ID_LEN)
+      (set! (-> obj save-data save-idx orb-counts lvl-idx) 0)
+      )
     )
 
-  ;; reset overall mod settings fields here
-  (set! (-> obj some-int)   0)
-  (set! (-> obj some-float) 0.0)
+  (set! (-> obj orb-autosave?) #t)
+  (set! (-> obj orb-map-icons?) #f)
+  (set! (-> obj pseudo-savestates?) #f)
+  (set! (-> obj closest-orb?) #f)
+  (set! (-> obj hover-restriction?) #t)
+  (set! (-> obj slip-assist) (slip-assist-mode normal))
 
   0)
 
@@ -1019,16 +1012,20 @@
 
   (case-str *pc-temp-string*
     ;; handle per-save fields here
-    (("last-eco-color")
-      (set! (-> obj save-data 0 last-eco-color) (file-stream-read-symbol file))
-      (set! (-> obj save-data 1 last-eco-color) (file-stream-read-symbol file))
-      (set! (-> obj save-data 2 last-eco-color) (file-stream-read-symbol file))
-      (set! (-> obj save-data 3 last-eco-color) (file-stream-read-symbol file))
+    (("orb-counts")
+      (dotimes (save-idx 4)
+        (dotimes (lvl-idx LEVEL_ID_LEN)
+          (set! (-> obj save-data save-idx orb-counts lvl-idx) (file-stream-read-int file))
+          )
+        )
       )
 
-    ;; handle overall settings fields here
-    (("some-int") (set! (-> obj some-int) (file-stream-read-int file)))
-    (("some-float") (set! (-> obj some-float) (file-stream-read-float file)))
+    (("orb-autosave?") (set! (-> obj orb-autosave?) (file-stream-read-symbol file)))
+    (("orb-map-icons?") (set! (-> obj orb-map-icons?) (file-stream-read-symbol file)))
+    (("pseudo-savestates?") (set! (-> obj pseudo-savestates?) (file-stream-read-symbol file)))
+    (("closest-orb?") (set! (-> obj closest-orb?) (file-stream-read-symbol file)))
+    (("hover-restriction?") (set! (-> obj hover-restriction?) (file-stream-read-symbol file)))
+    (("slip-assist") (set! (-> obj slip-assist) (the-as slip-assist-mode (file-stream-read-int file))))
 
     (else
       (format 0 "Unrecognized field ~S when trying to parse mod-settings~%" *pc-temp-string*)
@@ -1040,16 +1037,21 @@
   "handle the text writing output for the 'settings' group"
 
   ;; handle per-save fields here
-  (format file "  (last-eco-color ~A ~A ~A ~A)~%" 
-    (-> obj save-data 0 last-eco-color)
-    (-> obj save-data 1 last-eco-color)
-    (-> obj save-data 2 last-eco-color)
-    (-> obj save-data 3 last-eco-color)
+  (format file "  (orb-counts")
+  (dotimes (save-idx 4)
+    (format file "~%    ")
+    (dotimes (lvl-idx LEVEL_ID_LEN)
+      (format file " ~D" (-> obj save-data save-idx orb-counts lvl-idx))
+      )
     )
+  (format file ")~%")
 
-  ;; handle overall settings fields here
-  (format file "  (some-int ~D)~%" (-> obj some-int))
-  (format file "  (some-float ~f)~%" (-> obj some-float))
+  (format file "  (orb-autosave? ~A)~%" (-> obj orb-autosave?))
+  (format file "  (orb-map-icons? ~A)~%" (-> obj orb-map-icons?))
+  (format file "  (pseudo-savestates? ~A)~%" (-> obj pseudo-savestates?))
+  (format file "  (closest-orb? ~A)~%" (-> obj closest-orb?))
+  (format file "  (hover-restriction? ~A)~%" (-> obj hover-restriction?))
+  (format file "  (slip-assist ~D)~%" (-> obj slip-assist))
 
   0)
 

@@ -132,7 +132,7 @@
   ;; Draw info to the screen
   (draw-orb-hunt-text)
 
-  (when (-> *pc-settings* pseudo-savestates?)
+  (when (-> *mod-settings* pseudo-savestates?)
     (when (and (or (not *progress-process*) (gone? (-> *progress-process* 0)))
                (>= (- (-> *display* base-clock frame-counter) (-> *game-info* blackout-time)) (seconds 0.1))
                )
@@ -302,7 +302,7 @@
   )
 
 (defun get-active-pat-mode-info ()
-  (case (-> *pc-settings* slip-assist)
+  (case (-> *mod-settings* slip-assist)
     (((slip-assist-mode normal)) *pat-mode-info*)
     (((slip-assist-mode no-slip)) *no-slip-pat-mode-info*)
     (((slip-assist-mode spiderman)) *spiderman-pat-mode-info*)

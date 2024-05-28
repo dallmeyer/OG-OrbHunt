@@ -73,13 +73,6 @@
   (custom 999) ;; temp
   )
 
-(defenum slip-assist-mode
-  :type uint8
-  (normal)
-  (no-slip)
-  (spiderman)
-  )
-
 ;; The Jak 2 version of the pc-settings object.
 (deftype pc-settings-jak2 (pc-settings)
   (;; cheats
@@ -109,12 +102,6 @@
    (speedrunner-mode-custom-bind uint32)
 
    (text-language pc-language) ;; language for game text
-
-   (orb-map-icons?        symbol)
-   (pseudo-savestates?    symbol)
-   (closest-orb?          symbol)
-   (hover-restriction?    symbol)
-   (slip-assist           slip-assist-mode)
 	 )
 
   (:methods
@@ -160,13 +147,6 @@
   (false! (-> obj minimap-force-north))
   (false! (-> obj hires-clouds?))
   (set! (-> obj speedrunner-mode-custom-bind) 0)
-
-  
-  (set! (-> obj orb-map-icons?) #f)
-  (set! (-> obj pseudo-savestates?) #f)
-  (set! (-> obj closest-orb?) #f)
-  (set! (-> obj hover-restriction?) #f)
-  (set! (-> obj slip-assist) (slip-assist-mode normal))
 
   (cond
     ((and (= *default-territory* GAME_TERRITORY_SCEE) (= (-> obj text-language) (pc-language english)))
@@ -327,23 +307,36 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; CHANGE THE FILENAME SO YOUR SETTINGS DON'T CONFLICT WITH OTHER MODS' SETTINGS
-(define *mod-settings-filename* "modbase-settings.gc")
+(define *mod-settings-filename* "orbhunt-settings.gc")
+
+(defconstant LEVEL_ID_LEN 73)
+
+(defenum slip-assist-mode
+  :type uint8
+  (normal)
+  (no-slip)
+  (spiderman)
+  )
 
 ;; Per-save data should be stored here. The overall mod-settings-jak2 has an array of 4 of these
 (deftype mod-save-file (basic)
   (
     ;; add/replace per-save fields here
-    (last-eco-color         symbol)
+    (orb-counts         uint8  LEVEL_ID_LEN)
     )
   )
 
-;; Overall settings file for the mod, contains an array of 4 mod-save-files for per-save data
+;; ;; Overall settings file for the mod, contains an array of 4 mod-save-files for per-save data
 (deftype mod-settings-jak2 (basic)
   (
     (save-data    mod-save-file 4 :inline)
-    ;; add/replace other settings fields here
-    (some-int     int32)
-    (some-float   float)
+
+    (orb-autosave?        symbol)
+    (orb-map-icons?        symbol)
+    (pseudo-savestates?    symbol)
+    (closest-orb?          symbol)
+    (hover-restriction?    symbol)
+    (slip-assist           slip-assist-mode)
     )
   (:methods
     (new (symbol type) _type_)
