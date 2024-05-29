@@ -65,30 +65,84 @@
         "name":"stadiumb-warp-gate-01",
         "distance": ["meters", 5.0]
       }
-    }
+    },
     
     // ORBS
-    // {
-    //   "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-01"
-    //   }
-    // },
+    {
+      "trans": [      -328.2978, -27.0473, -421.9954], // on burnup central pipe near first gap
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -328.2978, -27.0473, -421.9954, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-01"
+      }
+    },
+    {
+      "trans": [  -171.24, -41.78, -239.92], // behind ramp for ramp over gap, uppercut between lights
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -171.24, -41.78, -239.92, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-02"
+      }
+    },
+    {
+      "trans": [      -80.2, -29.0835, -287.0875], // on left wall after turn after ramp over gap
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -80.2, -29.0835, -287.0875, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-03"
+      }
+    },
+
     // // HOVER ORBS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
+    {
+      "trans": [  -271.6490, -13.6940, -369.5012], // up on small ledge above first gap
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -271.6490, -13.6940, -369.5012, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [    3.73,  21.60, -492.95], // up on scoreboard near start of race
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   3.73,  21.60, -492.95, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [    -207.0812, -18.8560, -261.4865], // on archway behind you in race ramp over gap room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -207.0812, -18.8560, -261.4865, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  66.75,  36.67, -605.66], // on safe part of rooftop over trapdoor to race
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  66.75,  36.67, -605.66, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
   ]
 }

@@ -66,30 +66,152 @@
         "name":"stadiumc-warp-gate-01",
         "distance": ["meters", 5.0]
       }
-    }
+    },
     
     // ORBS
-    // {
-    //   "trans": [ 485.36,   4.0,     91.0  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-01"
-    //   }
-    // },
+    {
+      "trans": [  -92.14,  20.46, -679.63 ], // on right slant before dropdoor to race
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -92.14,  20.46, -679.63, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -125.19,  16.49, -638.16 ], // on skatestopper thing on tunnel roof, boosted from ^ -> crate-01
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -125.19,  16.49, -638.16, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-02"
+      }
+    },
+    {
+      "trans": [  -149.22,   3.09, -596.63], // on tunnel roof, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -149.22,   3.09, -596.63, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-03"
+      }
+    },
+    {
+      "trans": [  -196.11,  16.29, -637.11], // on skatestopper thing on tunnel roof, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -196.11,  16.29, -637.11, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-04"
+      }
+    },
+    {
+      "trans": [  -49.35,  -0.51, -624.78], // on skatestopper thing on 2nd tunnel roof, boosted from top by crate-01
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -49.35,  -0.51, -624.78, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-05"
+      }
+    },
+    {
+      "trans": [  -11.10, -10.32, -586.08], // on 2nd tunnel roof, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -11.10, -10.32, -586.08, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-06"
+      }
+    },
+    {
+      "trans": [  -45.7881, -16.8614, -788.4218], // on mid "shelf" on right, just as tunnel opens up with gaps
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -45.7881, -16.8614, -788.4218, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-07"
+      }
+    },
+    {
+      "trans": [  -97.3119, -11.3402, -761.2841], // on top "shelf" on right, just as tunnel opens up with gaps, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -97.3119, -11.3402, -761.2841, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-08"
+      }
+    },
+    {
+      "trans": [   79.3435, -39.9490, -758.2078], // around corner at end of path around open tunnel section, where shortcut gap meets up
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   79.3435, -39.9490, -758.2078, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-09"
+      }
+    },
+    {
+      "trans": [  -113.0003, -4.9578, -619.1120], // on lower rooftop of tunnel start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -113.0003, -4.9578, -619.1120, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-10"
+      }
+    },
+
+    // CRATES
+    {
+      "trans": [ -85.20,  36.07, -661.18 ], // on top of structure above dropdoor to race, abah from skill-01^
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [    0.0000,  -1.0,  0.0000,  0.0], // quaternion
+      "bsphere": [ -85.20,  36.07, -661.18, 10], // bounding sphere
+      "lump": {
+        "name": "stadiumc-crate-01",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+
     // // HOVER ORBS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
+    {
+      "trans": [ -23.46,  -6.51, -866.24], // up on ledge on inside of open area within tunnel
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -23.46,  -6.51, -866.24, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  71.34,  -6.48, -801.67], // up on ledge on inside of open area within tunnel
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  71.34,  -6.48, -801.67, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
   ]
 }

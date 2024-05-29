@@ -543,6 +543,67 @@
       "lump": {
         "name": "village1-skill-46"
       }
+    },
+    {
+      "trans": [  -179.6641, 36.9521, 168.0569], // on support of wood plats leading to rift gate
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -179.6641, 36.9521, 168.0569, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-47"
+      }
+    },
+    {
+      "trans": [   -136.7953, -4.3316, 40.8711], // in water behind mayors hut
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -136.7953, -4.3316, 40.8711, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-48"
+      }
+    },
+    {
+      "trans": [  -30.6282, 34.1970, -159.1587], // where firecanyon ought to be
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -30.6282, 34.1970, -159.1587, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-49"
+      }
+    },
+    {
+      "trans": [      57.5931, 1.2366, -56.7529], // behind rock you GP on to get up to scout flies/oracle on beach
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      57.5931, 1.2366, -56.7529, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-50"
+      }
+    },
+    {
+      "trans": [   104.1827, 8.4724, -83.5682], // on rock on lower wall near FJ passage
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  104.1827, 8.4724, -83.5682, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-51",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   110.3439, 12.5516, -85.4761], // up on rock behind fern between trees, before FJ passage, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    110.3439, 12.5516, -85.4761, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-52"
+      }
     }
 
     // HOVER ORBS

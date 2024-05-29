@@ -37,7 +37,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;; Define Settings to use in mods
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define ORB_HUNT_DEBUG? #f)
+(define ORB_HUNT_DEBUG? #f) ;; when #t, hold L2 for extra debug prints
 (define startingDebugContinuePoint "garage-start-skate")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -53,84 +53,84 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   0 ;; intro -> none
   0 ;; demo -> none
   0 ;; title -> ctysluma
-  1 ;; vinroom -> power station
-  2 ;; drillmid -> drill plat A (first area)
-  3 ;; drill -> drill plat B (on rails/ship area)
-  72 ;; drillb -> drill plat C (titan suit section)
+  53 ;; vinroom -> power station
+  13 ;; drillmid -> drill plat A (first area)
+  14 ;; drill -> drill plat B (on rails/ship area)
+  12 ;; drillb -> drill plat C (titan suit section)
   0 ;; drillmtn -> none (?)
-  5 ;; sewer -> sewers
-  5 ;; sewerb -> sewers
-  5 ;; sewesc -> sewers
-  5 ;; sewescb -> sewers
-  6 ;; tomba -> center tomb
-  7 ;; tombb -> left tomb
-  8 ;; tombc -> right tomb
-  68 ;; tombd -> entrance?center tomb
-  67 ;; tombe (daxter chase)
+  57 ;; sewer -> sewers
+  57 ;; sewerb -> sewers
+  57 ;; sewesc -> sewers
+  57 ;; sewescb -> sewers
+  36 ;; tomba -> center tomb
+  39 ;; tombb -> left tomb
+  40 ;; tombc -> right tomb
+  38 ;; tombd -> entrance?center tomb
+  37 ;; tombe (daxter chase)
   0 ;; tombext -> none (?)
-  9 ;; tombboss
-  10 ;; under -> underport
-  10 ;; underb -> underport
-  11 ;; palcab
-  12 ;; palshaft
-  13 ;; palboss -> roof
-  13 ;; palroof -> roof
+  35 ;; tombboss
+  69 ;; under -> underport
+  69 ;; underb -> underport
+  47 ;; palcab
+  50 ;; palshaft
+  49 ;; palboss -> roof
+  49 ;; palroof -> roof
   0 ;; palout -> none?
-  14 ;; throne 
+  51 ;; throne 
   0 ;; lbrnermk -> none
   0 ;; lashthrn -> none
   0 ;; lthrnout -> none
-  15 ;; palent
-  16 ;; prison
+  48 ;; palent
+  20 ;; prison
   0 ;; ldjakbrn -> none
   0 ;; lprsncst
-  17 ;; forexita
+  19 ;; forexita
   18 ;; forexitb
-  19 ;; forresca
-  20 ;; forrescb
-  21 ;; fordumpa
-  22 ;; fordumpb
-  23 ;; fordumpc
-  24 ;; fordumpd
-  25 ;; strip
-  26 ;; ruins
-  27 ;; sagehut
-  28 ;; atoll
-  28 ;; atollext
-  29 ;; mountain
-  29 ;; mtnext -> mountain
-  30 ;; forest
-  30 ;; forestb
-  31 ;; mincan
+  21 ;; forresca
+  22 ;; forrescb
+  15 ;; fordumpa
+  17 ;; fordumpb
+  16 ;; fordumpc
+  9 ;; fordumpd
+  66 ;; strip
+  6 ;; ruins
+  7 ;; sagehut
+  54 ;; atoll
+  54 ;; atollext
+  43 ;; mountain
+  43 ;; mtnext -> mountain
+  27 ;; forest
+  27 ;; forestb
+  44 ;; mincan
   0 ;; ctywide -> none
   0 ;; lwidea -> none
   0 ;; lwideb -> none
   0 ;; lwidec -> none
   0 ;; ctykora -> none
   0 ;; ctyasha -> none
-  32 ;; ctygena
-  33 ;; ctygenb
+  33 ;; ctygena
+  32 ;; ctygenb
   34 ;; ctygenc
-  35 ;; ctysluma
-  36 ;; ctyslumb
-  37 ;; ctyslumc
-  38 ;; ctyport
+  59 ;; ctysluma
+  58 ;; ctyslumb
+  70 ;; ctyslumc
+  52 ;; ctyport
   0 ;; ljkdxash
-  39 ;; ctyfarma
-  40 ;; ctyfarmb
-  41 ;; ctyinda
-  42 ;; consite
-  42 ;; consiteb
-  43 ;; ctyindb
-  44 ;; ctymarka
-  45 ;; ctymarkb
-  46 ;; ctypal
-  47 ;; stadium
-  48 ;; stadiumb
-  49 ;; stadiumc
-  50 ;; stadiumd
-  51 ;; skatea
-  52 ;; garage
+  23 ;; ctyfarma
+  24 ;; ctyfarmb
+  30 ;; ctyinda
+  4 ;; consite
+  4 ;; consiteb
+  29 ;; ctyindb
+  2 ;; ctymarka
+  1 ;; ctymarkb
+  3 ;; ctypal
+  63 ;; stadium
+  62 ;; stadiumb
+  61 ;; stadiumc
+  60 ;; stadiumd
+  65 ;; skatea
+  64 ;; garage
   0 ;; stadblmp
   0 ;; lwidesta
   0 ;; lerrol
@@ -147,12 +147,12 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   0 ;; lerbrngd
   0 ;; lsmysbrt
   0 ;; lashgrd
-  53 ;; onintent
+  45 ;; onintent
   0 ;; ltentout
   0 ;; ltentob
   0 ;; kiosk
-  54 ;; oracle
-  55 ;; hideout
+  46 ;; oracle
+  67 ;; hideout
   0 ;; ltrntess
   0 ;; ltrnkrkd
   0 ;; ltrnysam
@@ -171,114 +171,114 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   0 ;; lbombbot
   0 ;; lbbush
   0 ;; lprotect
-  56 ;; hiphog
+  28 ;; hiphog
   0 ;; ltess
   0 ;; lhipout
   0 ;; lwhack
   0 ;; lguard
   0 ;; lcguard
   0 ;; lerltess
-  57 ;; gungame
-  58 ;; dig1
-  58 ;; dig3a
-  59 ;; dig3b
-  60 ;; caspad
-  61 ;; castle
-  62 ;; casboss
+  25 ;; gungame
+  10 ;; dig1
+  10 ;; dig3a
+  8 ;; dig3b
+  31 ;; caspad
+  71 ;; castle
+  72 ;; casboss
   0 ;; casext
   0 ;; cascity
-  63 ;; village1
+  55 ;; village1
   0 ;; introcst
   0 ;; lcitylow
   0 ;; lintcstb
   0 ;; ljakdax
-  64 ;; nest
-  65 ;; nestb
+  41 ;; nest
+  42 ;; nestb
   0 ;; outrocst
   0 ;; portwall
   0 ;; loutcstb
   0 ;; island1
   0 ;; skatepark
-  66 ;; halfpipe
+  26 ;; halfpipe
   0 ;; vistest
   0 ;; woodstest
   0 ;; tobytest
   0 ;; chartest
   0 ;; dptest
   0 ;; ctyfence
-  1 ;; orbs-city-vinroom
-  32 ;; orbs-city-ctygena
-  33 ;; orbs-city-ctygenb
+  53 ;; orbs-city-vinroom
+  33 ;; orbs-city-ctygena
+  32 ;; orbs-city-ctygenb
   34 ;; orbs-city-ctygenc
-  35 ;; orbs-city-ctysluma
-  36 ;; orbs-city-ctyslumb
-  37 ;; orbs-city-ctyslumc
-  38 ;; orbs-city-ctyport
-  39 ;; orbs-city-ctyfarma
-  40 ;; orbs-city-ctyfarmb
-  41 ;; orbs-city-ctyinda
-  43 ;; orbs-city-ctyindb
-  44 ;; orbs-city-ctymarka
-  45 ;; orbs-city-ctymarkb
-  46 ;; orbs-city-ctypal
-  53 ;; orbs-city-onintent
-  54 ;; orbs-city-oracle
-  55 ;; orbs-city-hideout
-  56 ;; orbs-city-hiphog
-  57 ;; orbs-city-gungame
-  16 ;; orbs-fortress-prison
-  17 ;; orbs-fortress-forexita
+  59 ;; orbs-city-ctysluma
+  58 ;; orbs-city-ctyslumb
+  70 ;; orbs-city-ctyslumc
+  52 ;; orbs-city-ctyport
+  23 ;; orbs-city-ctyfarma
+  24 ;; orbs-city-ctyfarmb
+  30 ;; orbs-city-ctyinda
+  29 ;; orbs-city-ctyindb
+  2 ;; orbs-city-ctymarka
+  1 ;; orbs-city-ctymarkb
+  3 ;; orbs-city-ctypal
+  45 ;; orbs-city-onintent
+  46 ;; orbs-city-oracle
+  67 ;; orbs-city-hideout
+  28 ;; orbs-city-hiphog
+  25 ;; orbs-city-gungame
+  20 ;; orbs-fortress-prison
+  19 ;; orbs-fortress-forexita
   18 ;; orbs-fortress-forexitb
-  19 ;; orbs-fortress-forresca
-  20 ;; orbs-fortress-forrescb
-  21 ;; orbs-fortress-fordumpa
-  22 ;; orbs-fortress-fordumpb
-  23 ;; orbs-fortress-fordumpc
-  24 ;; orbs-dig-dig1
-  47 ;; orbs-stadium-stadium
-  48 ;; orbs-stadium-stadiumb
-  49 ;; orbs-stadium-stadiumc
-  50 ;; orbs-stadium-stadiumd
-  51 ;; orbs-stadium-skatea
-  52 ;; orbs-stadium-garage
-  11 ;; orbs-palace-palcab
-  12 ;; orbs-palace-palshaft
-  13 ;; orbs-palace-palroof
-  14 ;; orbs-palace-throne
-  15 ;; orbs-palace-palent
-  60 ;; orbs-castle-caspad
-  61 ;; orbs-castle-castle
-  62 ;; orbs-castle-casboss
-  26 ;; orbs-ruins-ruins
-  27 ;; orbs-ruins-sagehut
-  28 ;; orbs-atoll-atoll
-  5 ;; orbs-sewer-sewer ;; sewer/sewerb
-  25 ;; orbs-strip-strip
-  29 ;; orbs-mountain-mountain
-  31 ;; orbs-mountain-mincan
-  30 ;; orbs-forest-forest
-  30 ;; orbs-forest-forestb (removed but index is still there)
-  3 ;; orbs-drill-drill
-  2 ;; orbs-drill-drillmid
-  72 ;; orbs-drill-drillb
-  6 ;; orbs-tomb-tomba
-  7 ;; orbs-tomb-tombb
-  8 ;; orbs-tomb-tombc
-  68 ;; orbs-tomb-tombd
-  67 ;; orbs-tomb-tombe
-  9 ;; orbs-tomb-tombboss
-  58 ;; orbs-dig-dig3a
-  59 ;; orbs-dig-dig3b
-  42 ;; orbs-consite-consite
-  71 ;; orbs-consite-consiteb
-  10 ;; orbs-under-under
-  70 ;; orbs-under-underb
-  64 ;; orbs-nest-nest
-  65 ;; orbs-nest-nestb
-  63 ;; orbs-default-village1
-  66 ;; orbs-default-halfpipe
-  69 ;; orbs-sewer-sewesc ;; sewesc/sewescb
-  4 ;; orbs-drill-ctrlroom
+  21 ;; orbs-fortress-forresca
+  22 ;; orbs-fortress-forrescb
+  15 ;; orbs-fortress-fordumpa
+  17 ;; orbs-fortress-fordumpb
+  16 ;; orbs-fortress-fordumpc
+  9 ;; orbs-dig-dig1
+  63 ;; orbs-stadium-stadium
+  62 ;; orbs-stadium-stadiumb
+  61 ;; orbs-stadium-stadiumc
+  60 ;; orbs-stadium-stadiumd
+  65 ;; orbs-stadium-skatea
+  64 ;; orbs-stadium-garage
+  47 ;; orbs-palace-palcab
+  50 ;; orbs-palace-palshaft
+  49 ;; orbs-palace-palroof
+  51 ;; orbs-palace-throne
+  48 ;; orbs-palace-palent
+  31 ;; orbs-castle-caspad
+  71 ;; orbs-castle-castle
+  72 ;; orbs-castle-casboss
+  6 ;; orbs-ruins-ruins
+  7 ;; orbs-ruins-sagehut
+  54 ;; orbs-atoll-atoll
+  57 ;; orbs-sewer-sewer ;; sewer/sewerb
+  66 ;; orbs-strip-strip
+  43 ;; orbs-mountain-mountain
+  44 ;; orbs-mountain-mincan
+  27 ;; orbs-forest-forest
+  27 ;; orbs-forest-forestb (removed but index is still there)
+  14 ;; orbs-drill-drill
+  13 ;; orbs-drill-drillmid
+  12 ;; orbs-drill-drillb
+  36 ;; orbs-tomb-tomba
+  39 ;; orbs-tomb-tombb
+  40 ;; orbs-tomb-tombc
+  38 ;; orbs-tomb-tombd
+  37 ;; orbs-tomb-tombe
+  35 ;; orbs-tomb-tombboss
+  10 ;; orbs-dig-dig3a
+  8 ;; orbs-dig-dig3b
+  4 ;; orbs-consite-consite
+  5 ;; orbs-consite-consiteb
+  69 ;; orbs-under-under
+  68 ;; orbs-under-underb
+  41 ;; orbs-nest-nest
+  42 ;; orbs-nest-nestb
+  55 ;; orbs-default-village1
+  26 ;; orbs-default-halfpipe
+  56 ;; orbs-sewer-sewesc ;; sewesc/sewescb
+  11 ;; orbs-drill-ctrlroom
 
 
   ;; PS3 levels excluded
@@ -299,78 +299,78 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 
 (define *level-id-names* (new 'static 'boxed-array :type string :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   "" ;; 0 (none)
-  "Power Station" ;; 1
-  "Drill Platform (Main)" ;; 2
-  "Drill Platform (Rails)" ;; 3
-  "Drill Platform (Control Room)" ;; 4
-  "Sewers (Old)" ;; 5
-  "Mars Tomb (Center)" ;; 6
-  "Mars Tomb (Left)" ;; 7
-  "Mars Tomb (Right)" ;; 8
-  "Mars Tomb (Boss)" ;; 9
-  "Underport (Sig)" ;; 10
-  "Palace (Cables)" ;; 11
-  "Palace (Shaft/Lobby)" ;; 12
-  "Palace (Rooftop)" ;; 13
-  "Palace (Throne)" ;; 14
-  "Palace (Interior)" ;; 15
-  "Fortress (Prison)" ;; 16
-  "Fortress (Escape South)" ;; 17
+  "Bazaar (East)" ;; 1
+  "Bazaar (West)" ;; 2
+  "Central Haven (Palace/Tomb)" ;; 3
+  "Construction Site" ;; 4
+  "Construction Site (Entrance)" ;; 5
+  "Dead Town" ;; 6
+  "Dead Town (Hut)" ;; 7
+  "Dig Site (North)" ;; 8
+  "Dig Site (Old)" ;; 9
+  "Dig Site (South)" ;; 10
+  "Drill Platform (Control Room)" ;; 11
+  "Drill Platform (Interior)" ;; 12
+  "Drill Platform (Main)" ;; 13
+  "Drill Platform (Rails)" ;; 14
+  "Fortress (Ammo Dump NE)" ;; 15
+  "Fortress (Ammo Dump SE)" ;; 16
+  "Fortress (Ammo Dump West)" ;; 17
   "Fortress (Escape North)" ;; 18
-  "Fortress (Rescue East)" ;; 19
-  "Fortress (Rescue West)" ;; 20
-  "Fortress (Ammo Dump Northeast)" ;; 21
-  "Fortress (Ammo Dump West)" ;; 22
-  "Fortress (Ammo Dump Southeast)" ;; 23
-  "Dig Site (Old)" ;; 24
-  "Strip Mine" ;; 25
-  "Dead Town" ;; 26
-  "Dead Town (Hut)" ;; 27
-  "Pumping Station" ;; 28
-  "Mountain Temple" ;; 29
-  "Haven Forest" ;; 30
-  "No Man's Canyon" ;; 31
-  "Main Town (Northwest)" ;; 32
-  "Main Town (Northeast)" ;; 33
+  "Fortress (Escape South)" ;; 19
+  "Fortress (Prison)" ;; 20
+  "Fortress (Rescue East)" ;; 21
+  "Fortress (Rescue West)" ;; 22
+  "Gardens (North)" ;; 23
+  "Gardens (South)" ;; 24
+  "Gun Course" ;; 25
+  "Halfpipe" ;; 26
+  "Haven Forest" ;; 27
+  "Hip Hog Heaven Saloon" ;; 28
+  "Industrial Zone (North)" ;; 29
+  "Industrial Zone (South)" ;; 30
+  "Landing Pad" ;; 31
+  "Main Town (Northeast)" ;; 32
+  "Main Town (Northwest)" ;; 33
   "Main Town (Southeast)" ;; 34
-  "Slums (Southeast)" ;; 35
-  "Slums (Northwest)" ;; 36
-  "Water Slums" ;; 37
-  "Port" ;; 38
-  "Gardens (North)" ;; 39 farma
-  "Gardens (South)" ;; 40 farmb
-  "Industrial Zone (South)" ;; 41
-  "Construction Site" ;; 42
-  "Industrial Zone (North)" ;; 43
-  "Bazaar (West)" ;; 44 ctymarka
-  "Bazaar (East)" ;; 45 ctymarkb
-  "Central Haven (Palace Grounds)" ;; 46
-  "Stadium (Exterior)" ;; 47
-  "Stadium (Class 3)" ;; 48
-  "Stadium (Class 2)" ;; 49
-  "Stadium (Class 1)" ;; 50
-  "Stadium (JET Board)" ;; 51
-  "Stadium (Garage)" ;; 52
-  "Onin's Tent" ;; 53
-  "Oracle" ;; 54
-  "Underground Hideout" ;; 55
-  "Hip Hog Heaven Saloon" ;; 56
-  "Gun Course" ;; 57
-  "Dig Site (South)" ;; 58
-  "Dig Site (North)" ;; 59
-  "Landing Pad" ;; 60
-  "Weapons Factory (Interior)" ;; 61
-  "Weapons Factory (Rooftop)" ;; 62
-  "Sandover Village" ;; 63
-  "Metal Head Nest (Exterior)" ;; 64
-  "Metal Head Nest (Interior)" ;; 65
-  "Halfpipe" ;; 66
-  "Mars Tomb (Daxter Chase)" ;; 67
-  "Mars Tomb (Entrance)" ;; 68
-  "Sewers" ;; 69
-  "Underport (Mech)" ;; 70
-  "Construction Site (Entrance)" ;; 71
-  "Drill Platform (Interior)" ;; 72
+  "Mars Tomb (Boss)" ;; 35
+  "Mars Tomb (Center)" ;; 36
+  "Mars Tomb (Daxter Chase)" ;; 37
+  "Mars Tomb (Entrance)" ;; 38
+  "Mars Tomb (Left)" ;; 39
+  "Mars Tomb (Right)" ;; 40
+  "Metal Head Nest (Exterior)" ;; 41
+  "Metal Head Nest (Interior)" ;; 42
+  "Mountain Temple" ;; 43
+  "No Man's Canyon" ;; 44
+  "Onin's Tent" ;; 45
+  "Oracle" ;; 46
+  "Palace (Cables)" ;; 47
+  "Palace (Interior)" ;; 48
+  "Palace (Rooftop)" ;; 49
+  "Palace (Shaft/Lobby)" ;; 50
+  "Palace (Throne)" ;; 51
+  "Port" ;; 52
+  "Power Station" ;; 53
+  "Pumping Station" ;; 54
+  "Sandover Village" ;; 55
+  "Sewers" ;; 56
+  "Sewers (Old)" ;; 57
+  "Slums (Northwest)" ;; 58
+  "Slums (Southeast)" ;; 59
+  "Stadium (Class 1)" ;; 60
+  "Stadium (Class 2)" ;; 61
+  "Stadium (Class 3)" ;; 62
+  "Stadium (Exterior)" ;; 63
+  "Stadium (Garage)" ;; 64
+  "Stadium (JET Board)" ;; 65
+  "Strip Mine" ;; 66
+  "Underground Hideout" ;; 67
+  "Underport (Mech)" ;; 68
+  "Underport (Sig)" ;; 69
+  "Water Slums" ;; 70
+  "Weapons Factory (Interior)" ;; 71
+  "Weapons Factory (Rooftop)" ;; 72
   ))
 
 (define *level-orb-collected-counts* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
@@ -378,76 +378,76 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 
 (define *level-orb-total-counts-fixed* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   0 ;; "" ;; 0 (none)
-  1 ;; "Power Station" ;; 1
-  52 ;; "Drill Platform (Main)" ;; 2
-  36 ;; "Drill Platform (Rails)" ;; 3
-  4 ;; "Drill Platform (Control Room)" ;; 4
-  99 ;; "Sewers (Old)" ;; 5
-  23 ;; "Mars Tomb (Center)" ;; 6
-  35 ;; "Mars Tomb (Left)" ;; 7
-  40 ;; "Mars Tomb (Right)" ;; 8
-  28 ;; "Mars Tomb (Boss)" ;; 9
-  4 ;; "Underport (Sig Section)" ;; 10
-  19 ;; "Palace (Cables)" ;; 11
-  8 ;; "Palace (Shaft/Lobby)" ;; 12
-  36 ;; "Palace (Rooftop)" ;; 13
-  8 ;; "Palace (Throne)" ;; 14
-  60 ;; "Palace (Interior)" ;; 15
-  25 ;; "Fortress (Prison)" ;; 16
-  35 ;; "Fortress (Escape South)" ;; 17
-  20 ;; "Fortress (Escape North)" ;; 18
-  25 ;; "Fortress (Rescue East)" ;; 19
-  60 ;; "Fortress (Rescue West)" ;; 20
-  32 ;; "Fortress (Ammo Dump Northeast)" ;; 21
-  38 ;; "Fortress (Ammo Dump West)" ;; 22
-  19 ;; "Fortress (Ammo Dump Southeast)" ;; 23
-  18 ;; "Dig Site (Old)" ;; 24
-  103 ;; "Strip Mine" ;; 25
-  154 ;; "Dead Town" ;; 26
-  8 ;; "Dead Town (Hut)" ;; 27
-  95 ;; "Pumping Station" ;; 28
-  182 ;; "Mountain Temple" ;; 29
-  98 ;; "Haven Forest" ;; 30
-  66 ;; "No Man's Canyon" ;; 31
-  39 ;; "Main Town (Northwest)" ;; 32
-  55 ;; "Main Town (Northeast)" ;; 33
-  32 ;; "Main Town (Southeast)" ;; 34
-  14 ;; "Slums (Southeast)" ;; 35
-  41 ;; "Slums (Northwest)" ;; 36
-  45 ;; "Water Slums" ;; 37
-  31 ;; "Port" ;; 38
-  29 ;; "Gardens (North)" ;; 39 farma
-  30 ;; "Gardens (South)" ;; 40 farmb
-  15 ;; "Industrial Zone (South)" ;; 41
-  112 ;; "Construction Site" ;; 42
-  8 ;; "Industrial Zone (North)" ;; 43
-  40 ;; "Bazaar (West)" ;; 44 ctymarka
-  6 ;; "Bazaar (East)" ;; 45 ctymarkb
-  3 ;; "Central Haven (Palace Grounds)" ;; 46
-  14 ;; "Stadium (Exterior)" ;; 47
-  18 ;; "Stadium (Class 3)" ;; 48
-  18 ;; "Stadium (Class 2)" ;; 49
-  19 ;; "Stadium (Class 1)" ;; 50
-  34 ;; "Stadium (JET Board)" ;; 51
-  6 ;; "Stadium (Garage)" ;; 52
-  6 ;; "Onin's Tent" ;; 53
-  1 ;; "Oracle" ;; 54
-  3 ;; "Underground Hideout" ;; 55
-  4 ;; "Hip Hog Heaven Saloon" ;; 56
-  47 ;; "Gun Course" ;; 57
-  46 ;; "Dig Site (South)" ;; 58
-  36 ;; "Dig Site (North)" ;; 59
-  115 ;; "Landing Pad" ;; 60
-  143 ;; "Weapons Factory (Interior)" ;; 61
-  17 ;; "Weapons Factory (Rooftop)" ;; 62
-  46 ;; "Sandover Village" ;; 63
-  170 ;; "Metal Head Nest (Exterior)" ;; 64
-  46 ;; "Metal Head Nest (Interior)" ;; 65
-  25 ;; "Halfpipe" ;; 66
-  14 ;; "Mars Tomb (Daxter Chase)" ;; 67
-  3 ;; "Mars Tomb (Entrance)" ;; 68
-  16 ;; "Sewers" ;; 69
-  0 ;; "Underport (Mech Section)" ;; 70
-  5 ;; "Construction Site (Entrance)" ;; 71
-  30 ;; "Drill Platform (Interior)" ;; 72
+  6    ;; Bazaar (East)
+  40   ;; Bazaar (West)
+  3    ;; Central Haven (Palace Grounds)
+  112  ;; Construction Site
+  5    ;; Construction Site (Entrance)
+  154  ;; Dead Town
+  8    ;; Dead Town (Hut)
+  36   ;; Dig Site (North)
+  18   ;; Dig Site (Old)
+  46   ;; Dig Site (South)
+  4    ;; Drill Platform (Control Room)
+  30   ;; Drill Platform (Interior)
+  52   ;; Drill Platform (Main)
+  36   ;; Drill Platform (Rails)
+  32   ;; Fortress (Ammo Dump Northeast)
+  19   ;; Fortress (Ammo Dump Southeast)
+  38   ;; Fortress (Ammo Dump West)
+  20   ;; Fortress (Escape North)
+  35   ;; Fortress (Escape South)
+  25   ;; Fortress (Prison)
+  25   ;; Fortress (Rescue East)
+  60   ;; Fortress (Rescue West)
+  29   ;; Gardens (North)
+  30   ;; Gardens (South)
+  47   ;; Gun Course
+  25   ;; Halfpipe
+  98   ;; Haven Forest
+  4    ;; Hip Hog Heaven Saloon
+  8    ;; Industrial Zone (North)
+  15   ;; Industrial Zone (South)
+  115  ;; Landing Pad
+  55   ;; Main Town (Northeast)
+  39   ;; Main Town (Northwest)
+  32   ;; Main Town (Southeast)
+  28   ;; Mars Tomb (Boss)
+  23   ;; Mars Tomb (Center)
+  14   ;; Mars Tomb (Daxter Chase)
+  3    ;; Mars Tomb (Entrance)
+  35   ;; Mars Tomb (Left)
+  40   ;; Mars Tomb (Right)
+  170  ;; Metal Head Nest (Exterior)
+  46   ;; Metal Head Nest (Interior)
+  182  ;; Mountain Temple
+  66   ;; No Man's Canyon
+  6    ;; Onin's Tent
+  1    ;; Oracle
+  19   ;; Palace (Cables)
+  60   ;; Palace (Interior)
+  36   ;; Palace (Rooftop)
+  8    ;; Palace (Shaft/Lobby)
+  8    ;; Palace (Throne)
+  31   ;; Port
+  1    ;; Power Station
+  95   ;; Pumping Station
+  50   ;; Sandover Village
+  16   ;; Sewers
+  99   ;; Sewers (Old)
+  41   ;; Slums (Northwest)
+  14   ;; Slums (Southeast)
+  22   ;; Stadium (Class 1)
+  31   ;; Stadium (Class 2)
+  24   ;; Stadium (Class 3)
+  14   ;; Stadium (Exterior)
+  6    ;; Stadium (Garage)
+  34   ;; Stadium (JET Board)
+  103  ;; Strip Mine
+  3    ;; Underground Hideout
+  0    ;; Underport (Mech)
+  4    ;; Underport (Sig)
+  45   ;; Water Slums
+  143  ;; Weapons Factory (Interior)
+  17   ;; Weapons Factory (Rooftop)
   ))

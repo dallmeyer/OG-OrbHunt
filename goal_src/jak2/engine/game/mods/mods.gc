@@ -312,7 +312,7 @@
         (dotimes (lvl-idx LEVEL_ID_LEN)
           (when (nonzero? (-> *level-orb-total-counts* lvl-idx))
             (case lvl-idx
-              ((39) ;; "Gardens (North)" ;;  farma
+              ((23) ;; "Gardens (North)" ;;  farma
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-8))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
@@ -323,13 +323,13 @@
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((40) ;; "Gardens (South)" ;;  farmb
+              ((24) ;; "Gardens (South)" ;;  farmb
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-5))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((32) ;; "Main Town (Northwest)" ;; 
+              ((33) ;; "Main Town (Northwest)" ;; 
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-14))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
@@ -340,7 +340,7 @@
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((33) ;; "Main Town (Northeast)" ;; 
+              ((32) ;; "Main Town (Northeast)" ;; 
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-collection-1))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
@@ -357,19 +357,19 @@
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((41) ;; "Industrial Zone (South)" ;; 
+              ((30) ;; "Industrial Zone (South)" ;; 
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-10))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((43) ;; "Industrial Zone (North)" ;; 
+              ((29) ;; "Industrial Zone (North)" ;; 
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-2))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((44) ;; "Bazaar (West)" ;;  ctymarka
+              ((2) ;; "Bazaar (West)" ;;  ctymarka
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-racepoint-1))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
@@ -390,7 +390,7 @@
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((45) ;; "Bazaar (East)" ;;  ctymarkb
+              ((1) ;; "Bazaar (East)" ;;  ctymarkb
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-7))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
@@ -401,13 +401,13 @@
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((46) ;; "Central Haven (Palace Grounds)" ;; 
+              ((3) ;; "Central Haven (Palace Grounds)" ;; 
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-15))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((38) ;; "Port" ;; 
+              ((52) ;; "Port" ;; 
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-3))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
@@ -432,7 +432,7 @@
                     )
                   )
                 )
-              ((35) ;; "Slums (Southeast)" ;; 
+              ((59) ;; "Slums (Southeast)" ;; 
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-1))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
@@ -443,7 +443,7 @@
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((36) ;; "Slums (Northwest)" ;; 
+              ((58) ;; "Slums (Northwest)" ;; 
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-ring-1))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
@@ -454,13 +454,13 @@
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((37) ;; "Water Slums" ;; 
+              ((70) ;; "Water Slums" ;; 
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-4))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((57) ;; "Gun Course" ;;
+              ((25) ;; "Gun Course" ;;
                 (let ((red-rank (get-cur-rank (game-score gungame-red)))
                       (yellow-rank (get-cur-rank (game-score gungame-yellow)))
                       (blue-rank (get-cur-rank (game-score gungame-blue)))
@@ -487,13 +487,13 @@
                     )
                   )
                 )
-              ((53) ;; "Onin's Tent" ;; 
+              ((45) ;; "Onin's Tent" ;; 
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-node-closed? (game-task-node city-play-onin-game-skill))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )                
                 )
-              ((51) ;; "Stadium (JET Board)" ;; 
+              ((65) ;; "Stadium (JET Board)" ;; 
                 (let ((sk8-rank (get-cur-rank (game-score judge-skatea))))
                   (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 sk8-rank)
@@ -501,7 +501,7 @@
                     )
                   )
                 )
-              ((48) ;; "Stadium (Class 3)" ;; 
+              ((62) ;; "Stadium (Class 3)" ;; 
                 (let ((race-rank (get-cur-rank (game-score bush-race-1)))
                       (rev-rank (get-cur-rank (game-score reverse-race-1))))
                   (+! (-> *level-orb-total-counts* lvl-idx) 9)
@@ -515,7 +515,7 @@
                     )
                   )
                 )
-              ((49) ;; "Stadium (Class 2)" ;; 
+              ((61) ;; "Stadium (Class 2)" ;; 
                 (let ((race-rank (get-cur-rank (game-score bush-race-2)))
                       (rev-rank (get-cur-rank (game-score reverse-race-2))))
                   (+! (-> *level-orb-total-counts* lvl-idx) 9)
@@ -529,7 +529,7 @@
                     )
                   )
                 )
-              ((50) ;; "Stadium (Class 1)" ;; 
+              ((60) ;; "Stadium (Class 1)" ;; 
                 (let ((race-rank (get-cur-rank (game-score bush-race-3)))
                       (rev-rank (get-cur-rank (game-score reverse-race-3))))
                   (+! (-> *level-orb-total-counts* lvl-idx) 9)

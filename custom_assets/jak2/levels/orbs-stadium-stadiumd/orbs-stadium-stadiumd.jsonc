@@ -78,19 +78,39 @@
       "lump": {
         "name":"stadiumd-skill-01"
       }
-    }
+    },
+    {
+      "trans": [     -453.9079, -24.5355, -424.4596], // in corner of wall at hairpin turn towards end, behind lower pipes
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -453.9079, -24.5355, -424.4596, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumd-skill-02"
+      }
+    },
+    {
+      "trans": [    -334.1182, -22.2952, -419.0741], // on right wall in last bit of tunnel section, after dip
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    -334.1182, -22.2952, -419.0741, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumd-skill-03"
+      }
+    },
 
     // HOVER ORBS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
+    {
+      "trans": [   -0.61,   8.52, -613.48  ], // on slant surface on back of structure with trapdoor to race
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -0.61,   8.52, -613.48, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumd-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
   ]
 }
