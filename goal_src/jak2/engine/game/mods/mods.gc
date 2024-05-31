@@ -845,8 +845,8 @@
     (('skill-84) (set-vector-meters! (-> arg0 extra trans) 578.3135 6.0213 828.8388)) ;; behind stable rock up on wall behind spools where it normally is
     ;; ====== ORBS / UNDER ======
     ;; === under/underb (mech suit area) ===
-    ;; skill-87
-    ;; skill-88 ;; originally OOB but we use it
+    ;; (('skill-87) (set-vector-meters! (-> arg0 extra trans) ))
+    ;; (('skill-88) (set-vector-meters! (-> arg0 extra trans) )) ;; originally OOB but we use it
     ;; ====== ORBS / NEST ======
     ;; === nest (outside) ===
     (('skill-24) (set-vector-meters! (-> arg0 extra trans)  31.45  21.74 -98.15)) ;; on broken 'building' on right near start + lift to north/east area
@@ -1453,6 +1453,12 @@
             (return #f)
             )
           )
+        (('under-mine)
+          (when (name= (-> alt-actor extra process state name) 'idle)
+            ;; mine intact, prevent pickup/hide
+            (return #f)
+            )
+          )
         (else
           (when (not (or (name= (-> alt-actor extra process state name) 'die)
                          (name= (-> alt-actor extra process state name) 'joint-exploder-shatter)
@@ -1793,6 +1799,12 @@
       )
     )
 
+  ;; === under/underb ===
+  (skill-follow-min-y "underb-skill-01" "under-mine-39" (meters -64.40))
+  (skill-follow-min-y "underb-skill-17" "under-mine-47" (meters -70.17))
+  (skill-follow-min-y "underb-skill-12" "jellyfish-49" (meters -56.83))
+  (skill-follow-min-y "underb-skill-23" "jellyfish-56" (meters -63.37))
+  
   ;; === nest/nestb ===
   ;; lower riftring after credits for warp
   (let ((ring (the process-drawable (process-by-ename "rift-ring-ingame-1"))))
