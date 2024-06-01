@@ -58,26 +58,116 @@
       }
     },
     {
-      "trans": [  -117.13, -46.22, 2060.12], // up on lamp in first chase room, abah from ^
+      "trans": [ -130.80, -45.44, 2059.07], // up on pillar near lamp in first chase room, abah from ^
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -117.13, -46.22, 2060.12, 10], // bounding sphere
+      "bsphere": [ -130.80, -45.44, 2059.07, 10], // bounding sphere
       "lump": {
         "name":"under-skill-02"
       }
-    }
+    },
+    {
+      "trans": [  -101.1851, -46.4356, 2030.1538], // on lamp up top in first chase room, extended from other lamp from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -101.1851, -46.4356, 2030.1538, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-03"
+      }
+    },
+    {
+      "trans": [ -118.84, -51.86, 1950.15], // right corner tunnel in first sig room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -118.84, -51.86, 1950.15, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-04"
+      }
+    },
+    {
+      "trans": [ -59.47, -66.40, 1987.26], // behind broken wall where metalhead breaks thru to chase you
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -59.47, -66.40, 1987.26, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-05"
+      }
+    },
+    {
+      "trans": [  -315.0503, -46.2692, 1962.5219], // back upper tunnel in 3rd puzzle room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -315.0503, -46.2692, 1962.5219, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-06"
+      }
+    },
+    {
+      "trans": [  -239.44, -59.30, 2034.81], // windowsill in 2nd puzzle room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -239.44, -59.30, 2034.81, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-07"
+      }
+    },
+
+    // CRATES
+    {
+      "trans": [  -67.9093, -52.4554, 1976.4128 ], // left corner tunnel in first sig room
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.000, -0.6859, 0.00, -0.7276], // quaternion
+      "bsphere": [  -67.9093, -52.4554, 1976.4128 , 10], // bounding sphere
+      "lump": {
+        "name": "under-crate-01",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+
+
     // // HOVER ORBS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
+    {
+      "trans": [   -99.6012, -39.9800, 1980.3118], // on lamp in first puzzle room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -99.6012, -39.9800, 1980.3118, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+
+    
+    // other crates
+    {
+      "trans": [ -64.0831, -62.1523, 1909.1933], // up in north corner of 5th room, abah from skill-19^^
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.0000, -0.9808, 0.0000, -0.1945 ], // quaternion
+      "bsphere": [  -64.0831, -62.1523, 1909.1933, 10], // bounding sphere
+      "lump": {
+        "name": "under-crate-100",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          18, // (pickup-type health)
+          1 // amount?
+        ]
+      }
+    }
+
   ]
 }

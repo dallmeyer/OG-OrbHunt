@@ -256,11 +256,11 @@
       }
     },
     {
-      "trans": [  197.89, -63.94, 1864.95], // on outside of glass in 6th room with chained plats
+      "trans": [      199.0444, -46.8883, 1894.2874], // up in gap in ceiling in hallway between 6th and 7th room (dark giant hijump)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  197.89, -63.94, 1864.95, 10], // bounding sphere
+      "bsphere": [       199.0444, -46.8883, 1894.2874, 10], // bounding sphere
       "lump": {
         "name":"underb-skill-21"
       }
@@ -287,13 +287,105 @@
       }
     },
     {
-      "trans": [  167.55, -64.40, 2006.67], // in southern corner of 7th room
+      "trans": [   166.9979, -64.6595, 2006.8199], // in southern corner of 8th room
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  167.55, -64.40, 2006.67, 10], // bounding sphere
+      "bsphere": [   166.9979, -64.6595, 2006.8199, 10], // bounding sphere
       "lump": {
         "name":"underb-skill-24"
+      }
+    },
+    {
+      "trans": [   231.2702, -46.1787, 1810.5494], // in design in NE wall of 6th room, top of elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   231.2702, -46.1787, 1810.5494, 10], // bounding sphere
+      "lump": {
+        "name":"underb-skill-25"
+      }
+    },
+    {
+      "trans": [   198.9872, -66.6695, 1911.3153], // hanging off edge of bridge in 7th room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   198.9872, -66.6695, 1911.3153, 10], // bounding sphere
+      "lump": {
+        "name":"underb-skill-26"
+      }
+    },
+    {
+      "trans": [    97.6282, -55.4234, 1923.0006], // near pillar around corner in 9th room, with double elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    97.6282, -55.4234, 1923.0006, 10], // bounding sphere
+      "lump": {
+        "name":"underb-skill-27"
+      }
+    },
+    {
+      "trans": [  123.51, -48.01, 1950.52], // up in corner atop pillar in 9th room, extended from elevator to pillar to this
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  123.51, -48.01, 1950.52, 10], // bounding sphere
+      "lump": {
+        "name":"underb-skill-28"
+      }
+    },
+    {
+      "trans": [   53.55, -54.31, 1941.90], // on edge of design on SW wall of 9th room, boosted from elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   53.55, -54.31, 1941.90, 10], // bounding sphere
+      "lump": {
+        "name":"underb-skill-29"
+      }
+    },
+    {
+      "trans": [   60.35, -67.08, 1902.14], // small ledge beside/below exit platform of 9th room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    60.35, -67.08, 1902.14, 10], // bounding sphere
+      "lump": {
+        "name":"underb-skill-30"
+      }
+    },
+    {
+      "trans": [   73.6492, -41.7429, 1950.9382], // in bubble window on left, 9th room, boosted from elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   73.6492, -41.7429, 1950.9382, 10], // bounding sphere
+      "lump": {
+        "name":"underb-skill-31"
+      }
+    },
+    {
+      "trans": [      236.6739, -78.5670, 1828.4039], // behind elevator in 6th room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      236.6739, -78.5670, 1828.4039, 10], // bounding sphere
+      "lump": {
+        "name":"underb-skill-32"
+      }
+    },
+
+    {
+      "trans": [  209.73, -50.45, 1852.25], // inside 3rd buoy plat from elevator side, 6th room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  209.73, -50.45, 1852.25, 10], // bounding sphere
+      "lump": {
+        "name":"underb-skill-33",
+        "alt-actor": "under-buoy-plat-3"
       }
     },
 
@@ -339,6 +431,22 @@
       "bsphere": [   174.7924, -48.7407, 1816.0361, 10], // bounding sphere
       "lump": {
         "name": "underb-crate-03",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  71.4480, -65.0036, 1923.3947], // behind 2nd elevator, 9th room
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0000, 0.8176, -0.0001, -0.5757], // quaternion
+      "bsphere": [   71.4480, -65.0036, 1923.3947, 10], // bounding sphere
+      "lump": {
+        "name": "underb-crate-04",
         "crate-type": "iron",
         "eco-info": [
           "int32",
@@ -438,13 +546,24 @@
       }
     },
     {
-      "trans": [   196.9969, -35.5613, 1745.0317], // way up on high lil ledge in 7th room, NW end
+      "trans": [  -23.27, -43.06, 1855.08], // way up in north corner, final room
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   196.9969, -35.5613, 1745.0317, 10], // bounding sphere
+      "bsphere": [  -23.27, -43.06, 1855.08, 10], // bounding sphere
       "lump": {
         "name":"underb-skill-hover-09",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   12.7891, -27.7073, 1904.2167], // way up in ceiling above (abah, no hint) south corner, final room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    12.7891, -27.7073, 1904.2167, 10], // bounding sphere
+      "lump": {
+        "name":"underb-skill-hover-10",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     },
