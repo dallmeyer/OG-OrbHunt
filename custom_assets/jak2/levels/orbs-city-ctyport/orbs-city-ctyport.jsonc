@@ -97,6 +97,26 @@
         "name": "ctyport-skill-5"
       }
     },
+    
+    // CRATES
+    {
+      "trans": [ -216.0642, 4.2867, 1908.5012], // behind underport exit
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   0.0000, -0.2097, 0.0001, -0.9777], // quaternion
+      "bsphere": [ -216.0642, 4.2867, 1908.5012, 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-crate-01",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+
+    // HOVER ORBS
     {
       "trans": [ -117.5,   52.6,    1399.3  ], // way up on pipe, near hiphog (HOVER or boost zoomer jump during race)
       "etype": "skill",  // actor type

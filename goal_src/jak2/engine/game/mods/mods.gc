@@ -1811,6 +1811,27 @@
   (skill-follow-min-y "underb-skill-12" "jellyfish-49" (meters -56.83))
   (skill-follow-min-y "underb-skill-23" "jellyfish-56" (meters -63.37))
   
+  ;; keep crate on platform
+  (let ((orb (the skill-crate (process-by-ename "under-crate-02")))
+        (platform (the process-drawable (process-by-ename "under-plat-wall-1"))))
+    (when (and orb platform)
+      (vector-copy! (-> orb root trans) (-> platform root trans))
+      (+! (-> orb root trans x) 18349.6875)
+      (+! (-> orb root trans z) -35758.0)
+      (vector-copy! (-> orb base) (-> orb root trans))
+      
+      ;; if broken crate, move orb too
+      (when (and (-> orb child)
+                 (ppointer->process (-> orb child)))
+        (let ((orb-child (the skill (ppointer->process (-> orb child)))))
+          (vector-copy! (-> orb-child root trans) (-> orb root trans))
+          (+! (-> orb-child root trans y) (meters 0.6))
+          (vector-copy! (-> orb-child base) (-> orb-child root trans))
+          )
+        )
+      )
+    )
+  
   ;; === nest/nestb ===
   ;; lower riftring after credits for warp
   (let ((ring (the process-drawable (process-by-ename "rift-ring-ingame-1"))))
