@@ -170,6 +170,26 @@
         "name":"stadiumc-skill-10"
       }
     },
+    {
+      "trans": [   59.29,  11.30, -606.54], // on scoreboard on east side, need a deep, near perfect boosted from the walkway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   59.29,  11.30, -606.54, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-11"
+      }
+    },
+    {
+      "trans": [   22.00,  -7.30, -461.98], // bottom of support on small no-burn ledge, south/eastish side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   22.00,  -7.30, -461.98, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumc-skill-12"
+      }
+    },
 
     // CRATES
     {

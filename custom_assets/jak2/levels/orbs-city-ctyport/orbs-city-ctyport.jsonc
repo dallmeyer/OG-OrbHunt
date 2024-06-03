@@ -54,7 +54,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-260.0,   5.7,     1919.3, 10], // bounding sphere
       "lump": {
-        "name": "ctyport-skill-1"
+        "name": "ctyport-skill-01"
       }
     },
     {
@@ -64,7 +64,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [657.45,   38.61,   1834.8, 10], // bounding sphere
       "lump": {
-        "name": "ctyport-skill-2"
+        "name": "ctyport-skill-02"
       }
     },
     {
@@ -74,7 +74,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [111.83,   5.9,     1326.6, 10], // bounding sphere
       "lump": {
-        "name": "ctyport-skill-3"
+        "name": "ctyport-skill-03"
       }
     },
     {
@@ -84,7 +84,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [401.11,   27.8,    1436.7, 10], // bounding sphere
       "lump": {
-        "name": "ctyport-skill-4"
+        "name": "ctyport-skill-04"
       }
     },
     {
@@ -94,7 +94,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-225.22,  8.3,     1658.4, 10], // bounding sphere
       "lump": {
-        "name": "ctyport-skill-5"
+        "name": "ctyport-skill-05"
       }
     },
     
@@ -107,6 +107,22 @@
       "bsphere": [ -216.0642, 4.2867, 1908.5012, 10], // bounding sphere
       "lump": {
         "name": "ctyport-crate-01",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  776.7760, 5.1906, 1259.0056  ], // behind/under right ball on path from ctyinda
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   0.0009, -0.6986, 0.0003, 0.7154], // quaternion
+      "bsphere": [  776.7760, 5.1906, 1259.0056  , 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-crate-02",
         "crate-type": "iron",
         "eco-info": [
           "int32",

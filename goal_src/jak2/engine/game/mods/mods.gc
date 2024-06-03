@@ -45,8 +45,8 @@
 ;; prints the position (root trans) of a process-drawable
 (defmacro pd-pos-m (procname)
   `(let ((obj (the process-drawable 
-                (cond 
-                  ((string= ,procname "target") 
+                (case ,procname :comp name= 
+                  (("target" "")
                     *target*)
                   (else 
                     (process-by-ename ,procname))

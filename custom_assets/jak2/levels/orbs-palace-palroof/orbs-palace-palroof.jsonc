@@ -57,11 +57,11 @@
       }
     },
     {
-      "trans": [ 159.16,   445.43,  571.50  ], // #t on wall above glass ceiling, follow from ^ and abbah bounce agai
+      "trans": [ 159.16,   445.93,  571.50  ], // #t on wall above glass ceiling, follow from ^ and abbah bounce agai
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [159.16,   445.43,  571.50, 10], // bounding sphere
+      "bsphere": [159.16,   445.93,  571.50, 10], // bounding sphere
       "lump": {
         "name": "palroof-skill-02"
       }

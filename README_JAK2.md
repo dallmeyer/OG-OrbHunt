@@ -10,7 +10,7 @@ The core idea is the same as the [Jak 1 Orb Hunt](README_JAK1.md) - it's a colle
 And I mean *every* level in the game, including the different areas/variations of levels like Sewers and Fortress, has Orbs. Normally in Jak II, there are certain levels or areas that you can only reach at specific points in the storyline, and cannot revisit during post-game. Vanilla OpenGOAL fixes some of these that softlock you out of Orbs, like the Metalhead Nest. I've built on top of that to guarantee you can get both in and out of every level, which means more Orb hiding spots :)
 
 ## Gameplay
-I've modified a handful of conditions throughout the game for loading levels and opening airlocks, added some new actors, and taken a few other creative liberties that will allow you to travel to levels or parts of levels that would otherwise be inaccessible.
+I've modified a handful of conditions throughout the game for loading levels and opening airlocks, added some new actors, and taken a few other creative liberties in changing gameplay mechanics that will allow you to travel to levels or parts of levels that would otherwise be inaccessible. (hint: try Dark Bomb on stuff)
 
 Many level loading conditions depend on your storyline progression, and so to keep my modifications simpler, **the game starts in a sort of NG+ mode**. Your active mission will be to break into the Metalhead Nest and defeat the final boss - this means you'll have the JET-board, all the guns, and all the Dark Jak powers from the start.
 
@@ -19,11 +19,12 @@ There's also a minimap added to the L3 HUD for most levels - particularly useful
 ## Orbs
 
 **All Orbs needed for 100% should be "in bounds"** meaning you should never need to clip through (what appear to be) solid walls/objects (though I can't stop you from doing it when possible)
-- Taking a death should never be necessary (good luck with deathless), though a couple collectables might require Save+Load / Restart Mission
-- It shouldn't be possible to softlock yourself out of any collectables (though you might need to Save+Load to reset things like crates)
+- Taking a death should never be necessary (good luck with deathless), though a few orbs might require Save+Load / Restart Mission
+- Some orbs might be inside other... things
+- It shouldn't be possible to softlock yourself out of any orbs (though you might need to Save+Load / Restart Mission to reset things like crates)
 - You will need to work around some invisible collision/walls
-- You will need knowledge of speedrunning tech, such as dealing with slippery surfaces, extended uppercuts, boosted uppercuts, infinite jump ceilings, rocket uppercuts, proxies, jetboard hovers, Abahbounces, etc
-  - You shouldn't need to use any invuln glitches
+- You will need knowledge of speedrunning tech, such as dealing with slippery surfaces, extended uppercuts, boosted uppercuts, infinite jump ceilings, rocket uppercuts, proxies, Abahbounces, sliding Abahbounces, etc. You will need a solid grasp on jetboard mechanics, including things like extended frontflips, freefalling, and of course the hover glitch.
+  - You shouldn't need to use any invuln glitches (might be worth unlocking the invulnerabilty secret though...)
 
 ### Orb Guide
 - 🟡 JET-board hover glitch hints - certain orbs have a yellow/gold tint, and indicate that you should (and probably must) use the [hover glitch](https://www.youtube.com/watch?v=gEZQjj_pVuY&t=364s) to reach them

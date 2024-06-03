@@ -38,7 +38,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define ORB_HUNT_DEBUG? #f) ;; when #t, hold L2 for extra debug prints
-(define startingDebugContinuePoint "garage-start-skate")
+(define startingDebugContinuePoint "ctyinda-start")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -407,7 +407,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   98   ;; Haven Forest
   4    ;; Hip Hog Heaven Saloon
   8    ;; Industrial Zone (North)
-  15   ;; Industrial Zone (South)
+  37   ;; Industrial Zone (South)
   115  ;; Landing Pad
   55   ;; Main Town (Northeast)
   39   ;; Main Town (Northwest)
@@ -429,18 +429,18 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   36   ;; Palace (Rooftop)
   8    ;; Palace (Shaft/Lobby)
   8    ;; Palace (Throne)
-  32   ;; Port
-  1    ;; Power Station
+  33   ;; Port
+  2    ;; Power Station
   95   ;; Pumping Station
   50   ;; Sandover Village
   16   ;; Sewers
   99   ;; Sewers (Old)
   41   ;; Slums (Northwest)
   14   ;; Slums (Southeast)
-  22   ;; Stadium (Class 1)
-  31   ;; Stadium (Class 2)
-  24   ;; Stadium (Class 3)
-  14   ;; Stadium (Exterior)
+  23   ;; Stadium (Class 1)
+  33   ;; Stadium (Class 2)
+  30   ;; Stadium (Class 3)
+  16   ;; Stadium (Exterior)
   6    ;; Stadium (Garage)
   34   ;; Stadium (JET Board)
   103  ;; Strip Mine

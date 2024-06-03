@@ -98,6 +98,47 @@
         "name":"stadiumb-skill-03"
       }
     },
+    {
+      "trans": [    109.1102, 11.7904, -638.1674], // on random dot of slippery collision
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   109.1102, 11.7904, -638.1674, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-04",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [    109.1102, 32.7904, -638.1674], // above random dot of slippery collision (abah from ^)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    109.1102, 32.7904, -638.1674, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-05"
+      }
+    },
+    {
+      "trans": [ -258.00,  -7.53, -582.00], // western tip, bottom on small ledge that doesnt burn
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -258.00,  -7.53, -582.00, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-06"
+      }
+    },
+    {
+      "trans": [     -154.7536, -14.2590, -544.7882], // on small bit of pipe that doeant burn in middle of arena, more on west side (3x sideflip and launch that shit)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -154.7536, -14.2590, -544.7882, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-07"
+      }
+    },
 
     // // HOVER ORBS
     {
@@ -141,6 +182,17 @@
       "bsphere": [  66.75,  36.67, -605.66, 10], // bounding sphere
       "lump": {
         "name":"stadiumb-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -141.86,  27.45, -683.20], // on beam with overhead light on part of track that comes up over edge of walkway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -141.86,  27.45, -683.20, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-hover-05",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     }

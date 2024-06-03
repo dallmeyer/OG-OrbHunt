@@ -204,14 +204,14 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   )
 
 ;; prints the position (root trans) of a process-drawable
-(defmacro pd-pos-m (procname)
-  `(let* ((obj (the process-drawable (process-by-ename ,procname)))
-          (vec (-> obj root trans)))
-    (format 0 "~m ~m ~m~%" (-> vec x) (-> vec y) (-> vec z) 4096.0)
-    (format 0 "~m, ~m, ~m~%" (-> vec x) (-> vec y) (-> vec z) 4096.0)
-    (none)
-    )
-  )
+;; (defmacro pd-pos-m (procname)
+;;   `(let* ((obj (the process-drawable (process-by-ename ,procname)))
+;;           (vec (-> obj root trans)))
+;;     (format 0 "~m ~m ~m~%" (-> vec x) (-> vec y) (-> vec z) 4096.0)
+;;     (format 0 "~m, ~m, ~m~%" (-> vec x) (-> vec y) (-> vec z) 4096.0)
+;;     (none)
+;;     )
+;;   )
 
 ;;This function moves an actor based on jaks position + an offset
 (defun move-to-behind-jak ((arg0 string) (arg1 meters) (arg2 meters))

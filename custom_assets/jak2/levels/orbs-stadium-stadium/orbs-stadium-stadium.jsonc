@@ -200,16 +200,43 @@
         "name":"stadium-skill-13"
       }
     },
+    {
+      "trans": [      230.6995, 9.3395, -669.2800], // inside northern fountain
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      230.6995, 9.3395, -669.2800, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-14"
+      }
+    },
 
     // CRATES
     {
-      "trans": [ 171.4837, 10.9804, -404.6630 ], // in water in NE corner room, before escort ambush
+      "trans": [ 171.4837, 10.9804, -404.6630 ], // behind tree on south end
       "etype": "skill-crate",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [    0.0, -0.3353, -0.0, 0.9420 ], // quaternion
       "bsphere": [ 171.4837, 10.9804, -404.6630 , 10], // bounding sphere
       "lump": {
         "name": "stadium-crate-01",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [ 300.5465, 2.9848, -633.2288 ], // behind mid tree, more north
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [    -0.0015, -0.9998, 0.0002, -0.0190], // quaternion
+      "bsphere": [  300.5465, 2.9848, -633.2288  , 10], // bounding sphere
+      "lump": {
+        "name": "stadium-crate-02",
         "crate-type": "iron",
         "light-index": ["int32", 10],
         "eco-info": [

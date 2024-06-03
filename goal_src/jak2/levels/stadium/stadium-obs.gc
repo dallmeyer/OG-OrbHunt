@@ -2588,6 +2588,8 @@ This commonly includes things such as:
   (none)
   )
 
+(define-extern side-mish-active? (function symbol))
+
 ;; WARN: Return type mismatch object vs none.
 (defmethod init-from-entity! ((this stad-force-field) (arg0 entity-actor))
   "Typically the method that does the initial setup on the process, potentially using the [[entity-actor]] provided as part of that.
@@ -2607,7 +2609,10 @@ This commonly includes things such as:
   (set! (-> this field) (the-as handle #f))
   (set! (-> this ripple) (the-as handle #f))
   (transform-post)
-  (go (method-of-object this idle))
+  (if (side-mish-active?)
+    (go (method-of-object this idle))
+    (deactivate this)
+    )
   (none)
   )
 
@@ -2640,7 +2645,10 @@ This commonly includes things such as:
   (set! (-> this field) (the-as handle #f))
   (set! (-> this ripple) (the-as handle #f))
   (transform-post)
-  (go (method-of-object this idle))
+  (if (side-mish-active?)
+    (go (method-of-object this idle))
+    (deactivate this)
+    )
   (none)
   )
 
@@ -2673,7 +2681,10 @@ This commonly includes things such as:
   (set! (-> this field) (the-as handle #f))
   (set! (-> this ripple) (the-as handle #f))
   (transform-post)
-  (go (method-of-object this idle))
+  (if (side-mish-active?)
+    (go (method-of-object this idle))
+    (deactivate this)
+    )
   (none)
   )
 

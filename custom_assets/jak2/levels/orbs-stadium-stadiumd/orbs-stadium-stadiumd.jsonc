@@ -99,6 +99,16 @@
         "name":"stadiumd-skill-03"
       }
     },
+    {
+      "trans": [  117.26,  -7.30, -533.91], // bottom of support, on small no-burn ledge, south side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  117.26,  -7.30, -533.91, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumd-skill-04"
+      }
+    },
 
     // HOVER ORBS
     {
@@ -109,6 +119,17 @@
       "bsphere": [  -0.61,   8.52, -613.48, 10], // bounding sphere
       "lump": {
         "name":"stadiumd-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [    -195.9732, -5.8644, -516.6757], // up over head exiting tunnel section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -195.9732, -5.8644, -516.6757, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumd-skill-hover-02",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     }
