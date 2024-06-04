@@ -723,30 +723,61 @@
                      )
                    (time-elapsed? (-> self state-time) (seconds 0.1))
                    )
-          (if (and (cpad-pressed? 0 triangle) (process-grab? *target* #f))
-              (go-virtual use (-> self continue))
-              )
-          (script-eval (-> self on-close))
-          (let ((gp-0
-                  (new 'stack 'font-context *font-default-matrix* 32 320 0.0 (font-color default) (font-flags shadow kerning))
+          (cond
+            ((and (name= (-> self name) "air-train-1")
+                  (not (task-closed? "city-win-resolution"))
+                  (< (-> *game-info* skill) 1000.0))
+              ;; no metalhead nest until you get 1000 orbs / beat finalboss (debug)
+              (let ((gp-0
+                      (new 'stack 'font-context *font-default-matrix* 32 320 0.0 (font-color default) (font-flags shadow kerning))
+                      )
+                    )
+                (let ((v1-51 gp-0))
+                  (set! (-> v1-51 width) (the float 340))
+                  )
+                (let ((v1-52 gp-0))
+                  (set! (-> v1-52 height) (the float 80))
+                  )
+                (let ((v1-53 gp-0))
+                  (set! (-> v1-53 scale) 0.9)
+                  )
+                (set! (-> gp-0 flags) (font-flags shadow kerning large))
+                (print-game-text
+                  (lookup-text! *common-text* (text-id collect-1000-orbs) #f)
+                  gp-0
+                  #f
+                  44
+                  (bucket-id progress)
                   )
                 )
-            (let ((v1-51 gp-0))
-              (set! (-> v1-51 width) (the float 340))
               )
-            (let ((v1-52 gp-0))
-              (set! (-> v1-52 height) (the float 80))
-              )
-            (let ((v1-53 gp-0))
-              (set! (-> v1-53 scale) 0.9)
-              )
-            (set! (-> gp-0 flags) (font-flags shadow kerning large))
-            (print-game-text
-              (lookup-text! *common-text* (text-id press-triangle-to-use) #f)
-              gp-0
-              #f
-              44
-              (bucket-id progress)
+            (else
+              (if (and (cpad-pressed? 0 triangle) (process-grab? *target* #f))
+                  (go-virtual use (-> self continue))
+                  )
+              (script-eval (-> self on-close))
+              (let ((gp-0
+                      (new 'stack 'font-context *font-default-matrix* 32 320 0.0 (font-color default) (font-flags shadow kerning))
+                      )
+                    )
+                (let ((v1-51 gp-0))
+                  (set! (-> v1-51 width) (the float 340))
+                  )
+                (let ((v1-52 gp-0))
+                  (set! (-> v1-52 height) (the float 80))
+                  )
+                (let ((v1-53 gp-0))
+                  (set! (-> v1-53 scale) 0.9)
+                  )
+                (set! (-> gp-0 flags) (font-flags shadow kerning large))
+                (print-game-text
+                  (lookup-text! *common-text* (text-id press-triangle-to-use) #f)
+                  gp-0
+                  #f
+                  44
+                  (bucket-id progress)
+                  )
+                )
               )
             )
           )

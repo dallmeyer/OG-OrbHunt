@@ -147,7 +147,7 @@
 
 (defun side-mish-level? ((name symbol))
   (case name :comp name=  
-    (('lbbush 'lshuttle 'lbombbot 'lprtrace 'lerlchal 'lracebb 'lracebf 'lracecb 'lracecf 'lracedb 'lracedf)
+    (('lbbush 'lshuttle 'lbombbot 'lprtrace 'lerlchal 'lracebb 'lracebf 'lracecb 'lracecf 'lracedb 'lracedf 'outrocst)
       #t
       )
     (else
