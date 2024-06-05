@@ -253,11 +253,11 @@
       }
     },
     {
-      "trans": [   924.0000, 8.5000, 1147.0000 ], // inside propaganda thing near port path
+      "trans": [   924.0000, 9.5000, 1147.0000 ], // inside propaganda thing near port path
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   924.0000, 8.5000, 1147.0000 , 10], // bounding sphere
+      "bsphere": [   924.0000, 9.5000, 1147.0000 , 10], // bounding sphere
       "lump": {
         "name": "ctyinda-skill-21",
         "alt-actor": "propa-9"
@@ -342,6 +342,16 @@
       "bsphere": [      888.4149, 30.1000, 831.6470, 10], // bounding sphere
       "lump": {
         "name": "ctyinda-skill-29"
+      }
+    },
+    {
+      "trans": [     852.3959, 31.1367, 870.7446], // just before turn to ctyindb, on window ledge in corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     852.3959, 31.1367, 870.7446, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-30"
       }
     },
 
