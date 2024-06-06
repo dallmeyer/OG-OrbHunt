@@ -35,6 +35,12 @@ There are now XXXX orbs in total spread across every level - and I mean *every* 
 - 🟠 Normal Orbs - any normal-looking orbs should NOT require the hover glitch
 - 🟣 Abahbounce hints - certain orbs have a blue/purple tint, and indicate that you should do an [Abahbounce](https://www.youtube.com/watch?v=gEZQjj_pVuY&t=487s) there (probably to reach a higher location)
 
+## Side Missions
+- You can still collect orbs from side missions like the original game, and they DO count towards the per-level HUD counters
+- When you activate a side mission, you will notice that the "open orbs" despawn - this is intentional to avoid any issues with level load slots
+  - Once the side mission is no longer active, the open orbs should respawn.
+- Note that the Stadium levels DO have open orbs, but they won't be spawned/cannot be collected while the race side missions are active. You'll have to find a way to load these levels without the race side missions being activated in order to get the open orbs 😉
+
 ## Difficulty Toggles
 Some collectables are well-hidden and/or annoying to reach - you may want to ease your pain by using some of the below options to change the difficulty (you can find them under Options > Game Options > Misc Options)
 - AUTOSAVE ON ORB - when enabled, autosave will kick in every time you collect an orb
@@ -50,9 +56,3 @@ Some collectables are well-hidden and/or annoying to reach - you may want to eas
   - LESS SLIP - Jak gets standpoints on most surfaces that he would normally slip off (just not steep surfaces/walls)
   - SPIDERMAN - Jak gets standpoints on any surface/wall
 - HOVER RESTRICTION - when enabled, the game enforces that *only* the yellow/gold Orbs can be picked up by hovering. For any other Orbs, there is a 1m cooldown window after hovering during which you cannot collect the non-hover Orbs. Collecting a hover Orb will instantly clear the cooldown window.
-
-## Side Missions
-- You can still collect orbs from side missions like the original game, and they DO count towards the per-level HUD counters
-- When you activate a side mission, you will notice that the "open orbs" despawn - this is intentional to avoid any issues with level load slots
-  - Once the side mission is no longer active, the open orbs should respawn.
-- Note that the Stadium levels DO have open orbs, but they won't be spawned/cannot be collected while the race side missions are active. You'll have to find a way to load these levels without the race side missions being activated in order to get the open orbs 😉
