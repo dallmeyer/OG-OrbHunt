@@ -9,14 +9,16 @@ The core idea is the same as the [Jak 1 Orb Hunt](README_JAK1.md) - it's a colle
 
 There are now XXXX orbs in total spread across every level - and I mean *every* level - in the game.
 
-Normally in Jak II, there are certain levels or areas that you can only reach at specific points in the storyline, and cannot revisit during post-game. Vanilla OpenGOAL fixes some of these that softlock you out of Orbs, like the Metalhead Nest. I've built on top of that to guarantee you can get both in and out of every level, which means more Orb hiding spots :)
-
 ## Gameplay
-I've modified a handful of conditions throughout the game for loading levels and opening airlocks, added some new actors, and taken a few other creative liberties in changing gameplay mechanics that will allow you to travel to levels or parts of levels that would otherwise be inaccessible. (hint: try Dark Bomb on stuff)
-
-Many level loading conditions depend on your storyline progression, and so to keep my modifications simpler, **the game starts in a sort of NG+ mode**. Your active mission will be to break into the Metalhead Nest and defeat the final boss - this means you'll have the JET-board, all the guns, and all the Dark Jak powers from the start.
-
-There's also a minimap added to the L3 HUD for most levels - particularly useful with the ORB MAP ICONS option (see Difficulty Toggles below)
+- Normally in Jak II, there are certain levels or areas that you can only reach at specific points in the storyline, and cannot revisit during post-game
+  - Vanilla OpenGOAL fixes some of these that softlock you out of Orbs, like the Metalhead Nest
+  - I've built on top of that to guarantee you can get both in and out of every level, which means more Orb hiding spots :)
+- I've modified a handful of conditions throughout the game for loading levels and opening airlocks, added some new actors, and taken a few other creative liberties in changing gameplay mechanics that will allow you to travel to levels or parts of levels that would otherwise be inaccessible. (hint: try Dark Bomb on stuff)
+- Many level-loading conditions depend on your storyline progression, and so to keep my modifications simpler, **the game starts in a sort of NG+ mode**. 
+  - Your active mission will be to break into the Metalhead Nest and defeat the final boss (though you won't be able to right away...)
+  - This means you'll have the JET-board, all the guns, and all the Dark Jak powers from the start
+- There's also a minimap added to the L3 HUD for most levels
+  - This is particularly useful with the ORB MAP ICONS option (see Difficulty Toggles below)
 
 ## Orbs
 
@@ -50,6 +52,7 @@ Some collectables are well-hidden and/or annoying to reach - you may want to eas
 - HOVER RESTRICTION - when enabled, the game enforces that *only* the yellow/gold Orbs can be picked up by hovering. For any other Orbs, there is a 1m cooldown window after hovering during which you cannot collect the non-hover Orbs. Collecting a hover Orb will instantly clear the cooldown window.
 
 ## Side Missions
-You can still collect orbs from side missions like the original game, and they DO count towards the per-level HUD counters. When you activate a side mission, you will notice that the "open orbs" despawn - this is intentional to avoid any issues with level load slots. Once the side mission is no longer active, the open orbs should respawn.
-
-Note that the Stadium levels DO have open orbs, but they won't be spawned/cannot be collected while the race side missions are active. You'll have to find a way to load these levels without the race side missions being activated in order to get the open orbs 😉
+- You can still collect orbs from side missions like the original game, and they DO count towards the per-level HUD counters
+- When you activate a side mission, you will notice that the "open orbs" despawn - this is intentional to avoid any issues with level load slots
+  - Once the side mission is no longer active, the open orbs should respawn.
+- Note that the Stadium levels DO have open orbs, but they won't be spawned/cannot be collected while the race side missions are active. You'll have to find a way to load these levels without the race side missions being activated in order to get the open orbs 😉
