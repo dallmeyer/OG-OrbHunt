@@ -1958,16 +1958,16 @@
 
   ;; missions VS orb count pause menu option
   (when (not (paused?))
-    (cond 
-      ((task-closed? "city-win-resolution")
+    ;; (cond 
+    ;;   ((task-closed? "city-win-resolution")
         ;; orb count menu
         (set! *main-options* *menu-options-orbs*)
-        )
-      (else
-        ;; normal mission menu
-        (set! *main-options* *menu-options-orig*)
-        )
-      )
+      ;;   )
+      ;; (else
+      ;;   ;; normal mission menu
+      ;;   (set! *main-options* *menu-options-orig*)
+      ;;   )
+      ;; )
     )
 
   ;; mini-bigmap stuff

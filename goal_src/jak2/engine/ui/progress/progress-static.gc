@@ -354,11 +354,11 @@
                                  (new 'static 'menu-memcard-slot-option)
                                  (new 'static 'menu-memcard-slot-option)
                                  (new 'static 'menu-memcard-slot-option)
-                                 (new 'static 'menu-sub-menu-option
-                                   :name (text-id progress-continue-without-saving)
-                                   :scale #f
-                                   :next-state 'continue
-                                   )
+                                ;;  (new 'static 'menu-sub-menu-option
+                                ;;    :name (text-id progress-continue-without-saving)
+                                ;;    :scale #f
+                                ;;    :next-state 'continue
+                                ;;    )
                                  )
                                )
         )

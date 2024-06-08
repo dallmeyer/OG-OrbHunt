@@ -1896,12 +1896,12 @@
                     )
               )
             (cond
-              ((= *save-options-title* (-> arg0 current-options))
-               (set! (-> arg1 origin y) 80.0)
-               (set! (-> arg1 height) 52.0)
-               (+! (-> arg1 origin y) (the float (* 42 (+ arg2 1))))
-               (+! (-> arg1 origin x) -100.0)
-               )
+              ;; ((= *save-options-title* (-> arg0 current-options))
+              ;;  (set! (-> arg1 origin y) 80.0)
+              ;;  (set! (-> arg1 height) 52.0)
+              ;;  (+! (-> arg1 origin y) (the float (* 42 (+ arg2 1))))
+              ;;  (+! (-> arg1 origin x) -100.0)
+              ;;  )
               (else
                 (case (get-aspect-ratio)
                   (('aspect16x9)
@@ -1921,8 +1921,8 @@
               )
             (set-vector! (-> this box 0 color) 64 128 128 (the int (* 128.0 sv-16)))
             (when (= arg2 sv-20)
-              (cond
-                ((!= *save-options-title* (-> arg0 current-options))
+              ;; (cond
+              ;;   ((!= *save-options-title* (-> arg0 current-options))
                  (case (get-aspect-ratio)
                    (('aspect16x9)
                     (set! sv-64 79)
@@ -1973,68 +1973,68 @@
                      (new 'static 'rgba :r #x40 :g #x40 :b #x40 :a (the int (* 64.0 sv-16)))
                      )
                    )
-                 )
-                ((= *save-options-title* (-> arg0 current-options))
-                 (set! sv-88 42)
-                 (let ((v0-13 (get-aspect-ratio)))
-                   (when (= v0-13 'aspect16x9)
-                     (set! sv-64 79)
-                     (set! sv-72 110)
-                     (set! sv-80 166)
-                     (set! sv-88 42)
-                     (draw-savegame-box
-                       this
-                       (the float (+ sv-64 sv-80))
-                       (the float (+ sv-64 sv-80))
-                       (the float (+ sv-72 sv-88 (* sv-88 arg2)))
-                       (the float (+ sv-72 (* 6 sv-88)))
-                       )
-                     )
-                   )
-                 (draw-savegame-box
-                   this
-                   (the float sv-64)
-                   (the float (+ sv-64 sv-80))
-                   (the float (+ sv-72 (* sv-88 arg2)))
-                   (the float (+ sv-72 (* sv-88 arg2)))
-                   )
-                 (when (!= arg2 4)
-                   (draw-savegame-box
-                     this
-                     (the float sv-64)
-                     (the float (+ sv-64 sv-80))
-                     (the float (+ sv-72 sv-88 (* sv-88 arg2)))
-                     (the float (+ sv-72 sv-88 (* sv-88 arg2)))
-                     )
-                   (draw-savegame-box
-                     this
-                     (the float (+ sv-64 sv-80))
-                     (the float (+ sv-64 sv-80))
-                     (the float (+ sv-72 sv-88 (* sv-88 arg2)))
-                     (the float (+ (* 5 sv-88) 2 sv-72))
-                     )
-                   )
-                 (draw-savegame-box
-                   this
-                   (the float (+ sv-64 sv-80))
-                   (the float (+ sv-64 sv-80))
-                   (the float sv-72)
-                   (the float (+ sv-72 (* sv-88 arg2)))
-                   )
-                 (with-dma-buffer-add-bucket ((s1-1 (-> *display* frames (-> *display* on-screen) global-buf))
-                                              (bucket-id particles)
-                                              )
-                   (draw-sprite2d-xy
-                     s1-1
-                     sv-64
-                     (+ sv-72 (* sv-88 arg2))
-                     sv-80
-                     sv-88
-                     (new 'static 'rgba :r #x40 :g #x40 :b #x40 :a (the int (* 64.0 sv-16)))
-                     )
-                   )
-                 )
-                )
+                ;;  )
+                ;; ((= *save-options-title* (-> arg0 current-options))
+                ;;  (set! sv-88 42)
+                ;;  (let ((v0-13 (get-aspect-ratio)))
+                ;;    (when (= v0-13 'aspect16x9)
+                ;;      (set! sv-64 79)
+                ;;      (set! sv-72 110)
+                ;;      (set! sv-80 166)
+                ;;      (set! sv-88 42)
+                ;;      (draw-savegame-box
+                ;;        this
+                ;;        (the float (+ sv-64 sv-80))
+                ;;        (the float (+ sv-64 sv-80))
+                ;;        (the float (+ sv-72 sv-88 (* sv-88 arg2)))
+                ;;        (the float (+ sv-72 (* 6 sv-88)))
+                ;;        )
+                ;;      )
+                ;;    )
+                ;;  (draw-savegame-box
+                ;;    this
+                ;;    (the float sv-64)
+                ;;    (the float (+ sv-64 sv-80))
+                ;;    (the float (+ sv-72 (* sv-88 arg2)))
+                ;;    (the float (+ sv-72 (* sv-88 arg2)))
+                ;;    )
+                ;;  (when (!= arg2 4)
+                ;;    (draw-savegame-box
+                ;;      this
+                ;;      (the float sv-64)
+                ;;      (the float (+ sv-64 sv-80))
+                ;;      (the float (+ sv-72 sv-88 (* sv-88 arg2)))
+                ;;      (the float (+ sv-72 sv-88 (* sv-88 arg2)))
+                ;;      )
+                ;;    (draw-savegame-box
+                ;;      this
+                ;;      (the float (+ sv-64 sv-80))
+                ;;      (the float (+ sv-64 sv-80))
+                ;;      (the float (+ sv-72 sv-88 (* sv-88 arg2)))
+                ;;      (the float (+ (* 5 sv-88) 2 sv-72))
+                ;;      )
+                ;;    )
+                ;;  (draw-savegame-box
+                ;;    this
+                ;;    (the float (+ sv-64 sv-80))
+                ;;    (the float (+ sv-64 sv-80))
+                ;;    (the float sv-72)
+                ;;    (the float (+ sv-72 (* sv-88 arg2)))
+                ;;    )
+                ;;  (with-dma-buffer-add-bucket ((s1-1 (-> *display* frames (-> *display* on-screen) global-buf))
+                ;;                               (bucket-id particles)
+                ;;                               )
+                ;;    (draw-sprite2d-xy
+                ;;      s1-1
+                ;;      sv-64
+                ;;      (+ sv-72 (* sv-88 arg2))
+                ;;      sv-80
+                ;;      sv-88
+                ;;      (new 'static 'rgba :r #x40 :g #x40 :b #x40 :a (the int (* 64.0 sv-16)))
+                ;;      )
+                ;;    )
+                ;;  )
+              ;;   )
               )
             (cond
               ((and *progress-save-info*

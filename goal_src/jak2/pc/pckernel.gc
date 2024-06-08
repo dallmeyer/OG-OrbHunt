@@ -935,6 +935,22 @@
 ;;;; mod-settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defun reset-mod-save-file ((obj mod-settings-jak2) (save-idx int))
+  (format 0 "resetting mod save file #~D~%" save-idx)
+  (dotimes (lvl-idx LEVEL_ID_LEN)
+    (set! (-> obj save-data save-idx orb-counts lvl-idx) 0)
+    )
+  (none)
+  )
+
+(defun copy-mod-save-file ((obj mod-settings-jak2) (src-save-idx int) (dest-save-idx int))
+  (format 0 "copying mod save file #~D to #~D~%" src-save-idx dest-save-idx)
+  (dotimes (lvl-idx LEVEL_ID_LEN)
+    (set! (-> obj save-data dest-save-idx orb-counts lvl-idx) (-> obj save-data src-save-idx orb-counts lvl-idx))
+    )
+  (none)
+  )
+
 (defmethod reset mod-settings-jak2 ((obj mod-settings-jak2) (call-handlers symbol))
   "Set the default settings for mod settings"
 
@@ -942,9 +958,7 @@
 
   ;; reset per-save fields here
   (dotimes (save-idx 4)
-    (dotimes (lvl-idx LEVEL_ID_LEN)
-      (set! (-> obj save-data save-idx orb-counts lvl-idx) 0)
-      )
+    (reset-mod-save-file obj save-idx)
     )
 
   (set! (-> obj orb-autosave?) #t)

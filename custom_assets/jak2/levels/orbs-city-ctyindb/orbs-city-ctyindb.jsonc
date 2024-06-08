@@ -220,6 +220,36 @@
         "name": "ctyindb-skill-17"
       }
     },
+    {
+      "trans": [  908.8655, 42.9746, 620.4006], // on standpoint up on wall just west of center, south side, dark giant crouch jump late dark bomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  908.8655, 42.9746, 620.4006, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-18"
+      }
+    },
+    {
+      "trans": [  874.2777, 42.9870, 752.6298], // standpoint up high on wall in SW area, just before crossing into ctyinda, dark giant crouch jump late dark bomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  874.2777, 42.9870, 752.6298, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-19"
+      }
+    },
+    {
+      "trans": [     1067.5291, 9.7752, 619.5013], // down almost on ground behind pipe in corner on east before going from south to north half
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     1067.5291, 9.7752, 619.5013, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-20"
+      }
+    },
 
     // CRATES
     {
@@ -249,17 +279,6 @@
       "bsphere": [  842.7365, 42.9824, 621.0164, 10], // bounding sphere
       "lump": {
         "name":"ctyindb-skill-hover-01",
-        "pickup-amount": ["float", 3.0]  // goldge
-      }
-    },
-    {
-      "trans": [   874.2777, 42.9870, 752.6298], // standpoint up high on wall in SW area, just before crossing into ctyinda
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   874.2777, 42.9870, 752.6298, 10], // bounding sphere
-      "lump": {
-        "name":"ctyindb-skill-hover-02",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     }
