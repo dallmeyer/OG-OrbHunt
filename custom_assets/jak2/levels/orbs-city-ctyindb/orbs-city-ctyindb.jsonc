@@ -200,6 +200,26 @@
         "name": "ctyindb-skill-15"
       }
     },
+    {
+      "trans": [   979.1069, 43.0015, 620.4312], // on standpoint up on wall dead center, south side, dark giant crouch jump late dark bomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   979.1069, 43.0015, 620.4312, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-16"
+      }
+    },
+    {
+      "trans": [       997.5250, 48.9732, 626.7124], // way up high on fake ledge center southside, extended from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     997.5250, 48.9732, 626.7124, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-17"
+      }
+    },
 
     // CRATES
     {
