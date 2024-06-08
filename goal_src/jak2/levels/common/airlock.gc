@@ -508,6 +508,7 @@
           ((lambda :behavior com-airlock
              ()
              (let ((gp-0 (res-lump-struct (-> self entity) 'on-exit structure)))
+               (dbg-format 0 "AIRLOCK (close) on-exit ~S ~A~%" (-> self name) (the-as pair gp-0))
                (if (and gp-0 (not *scene-player*))
                    (script-eval (the-as pair gp-0))
                    )
@@ -515,6 +516,7 @@
              (the-as pair (when (-> self were-behind?)
                             (let ((gp-1 (res-lump-struct (-> self entity) 'on-inside structure)))
                               (set! (-> self were-behind?) #f)
+                              (dbg-format 0 "AIRLOCK (close) on-inside ~S ~A~%" (-> self name) (the-as pair gp-1))
                               (if (and gp-1 (not *scene-player*))
                                   (script-eval (the-as pair gp-1))
                                   )
@@ -710,6 +712,7 @@
         )
       (process-entity-status! self (entity-perm-status subtask-complete) #t)
       (let ((s5-10 (res-lump-struct (-> self entity) 'on-enter structure)))
+        (dbg-format 0 "AIRLOCK (close) on-enter ~S ~A~%" (-> self name) (the-as pair s5-10))
         (if s5-10
             (script-eval (the-as pair s5-10))
             )

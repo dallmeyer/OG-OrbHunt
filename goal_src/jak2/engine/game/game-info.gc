@@ -339,7 +339,7 @@
                                               (>= (- (-> *display* game-clock frame-counter) (-> this death-time)) (seconds 2))
                                               )
                                          )
-                                (format #t "death count inc for ~S~%" (-> sv-96 name))
+                                ;; (format #t "death count inc for ~S~%" (-> sv-96 name))
                                 (set! v0-3 (seekl (the-as int (-> sv-96 death-count)) #xffff 1))
                                 (set! (-> sv-96 death-count) (the-as uint v0-3))
                                 v0-3

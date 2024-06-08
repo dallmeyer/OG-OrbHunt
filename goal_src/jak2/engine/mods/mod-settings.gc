@@ -38,7 +38,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define ORB_HUNT_DEBUG? #f) ;; when #t, hold L2 for extra debug prints
-(define startingDebugContinuePoint "ctyinda-start")
+(define startingDebugContinuePoint "ctyindb-start")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -406,7 +406,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   25   ;; Halfpipe
   98   ;; Haven Forest
   4    ;; Hip Hog Heaven Saloon
-  25   ;; Industrial Zone (North)
+  43   ;; Industrial Zone (North)
   38   ;; Industrial Zone (South)
   115  ;; Landing Pad
   55   ;; Main Town (Northeast)

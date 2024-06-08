@@ -68,11 +68,11 @@
       }
     },
     {
-      "trans": [ 1151.34,  10.8,    714.0   ], // #t behind pipes couple turns past sewers towards path to port
+      "trans": [      1151.1821, 10.8, 714.9151], // #t behind pipes couple turns past sewers towards path to port (near burning bush)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [1151.34,  10.8,    714.0 , 10], // bounding sphere
+      "bsphere": [      1151.1821, 10.8, 714.9151, 10], // bounding sphere
       "lump": {
         "name": "ctyindb-skill-03"
       }
@@ -250,16 +250,222 @@
         "name": "ctyindb-skill-20"
       }
     },
+    {
+      "trans": [     970.4449, 40.3446, 708.1099], // up on pipes crossing overhead in south central hallway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     970.4449, 40.3446, 708.1099, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-21"
+      }
+    },
+    {
+      "trans": [   1052.0980, 9.8887, 683.37], // in crack behind burning bush
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1052.0980, 9.8887, 683.37, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-22"
+      }
+    },
+    {
+      "trans": [     1150.6689, 30.9203, 630.7357], // behind pipe on east wall coming from south to north half
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     1150.6689, 30.9203, 630.7357, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-23"
+      }
+    },
+    {
+      "trans": [      1145.1090, 29.2583, 557.3516], // between pipe and column on wall in corner on east side just coming into north half, boosted from walkway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      1145.1090, 29.2583, 557.3516, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-24",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [      1145.8964, 42.9839, 552.6948], // up high on standpoint on wall in corner, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      1145.8964, 42.9839, 552.6948, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-25"
+      }
+    },
+    {
+      "trans": [      966.0000, 9.5, 587.0000], // inside proganda thing near sewers
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      966.0000, 9.5, 587.0000, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-26",
+        "alt-actor": "propa-3"
+      }
+    },
+    {
+      "trans": [   903.8528, 42.9979, 594.8306], // another up high on standpoint on mid wall north side, dark giant dark bomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  903.8528, 42.9979, 594.8306, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-27"
+      }
+    },
+    {
+      "trans": [    974.0958, 42.9850, 594.8161], // another up high on standpoint on mid wall north side, dark giant dark bomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   974.0958, 42.9850, 594.8161, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-28"
+      }
+    },
+    {
+      "trans": [       1021.3034, 8.6987, 465.8744], // behind pipes on ground level, along north-most path
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      1021.3034, 8.6987, 465.8744, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-29"
+      }
+    },
+    {
+      "trans": [     775.1878, 31.1591, 595.6703], // on ledge around corner on SW corner of north half, extended from walkway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     775.1878, 31.1591, 595.6703, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-30"
+      }
+    },
+    {
+      "trans": [     773.2426, 20.6137, 521.5249], // on pipe in corner before ramp by ctymarkb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     773.2426, 20.6137, 521.5249, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-31",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [      770.9913, 44.4777, 521.4694], // way up on top of window in corner, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      770.9913, 44.4777, 521.4694, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-32"
+      }
+    },
+    {
+      "trans": [     1161.3287, 10.1808, 518.2760], // on edge of pipe base platform in corner near ctysluma
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     1161.3287, 10.1808, 518.2760, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-33",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   1159.1506, 26.6099, 516.2239], // on pipe in corner near ctysluma, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1159.1506, 26.6099, 516.2239, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-34",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   1161.8981, 42.9826, 514.4287], // way up on top of window in corner, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1161.8981, 42.9826, 514.4287, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-35"
+      }
+    },
 
     // CRATES
     {
-      "trans": [ 775.15, 11.2, 690.6 ], // to left side (jetboard lulz)
+      "trans": [ 775.15, 11.2, 690.6 ], // between ramp and wall in SW area
       "etype": "skill-crate",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [ -0.0097,    0.0017,     -0.7070,    -0.7070], // quaternion
       "bsphere": [  775.15, 11.2, 690.6 , 10], // bounding sphere
       "lump": {
         "name": "ctyindb-crate-01",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [ 1059.0145, 7.9936, 717.7511], // in corner left of burning bush
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.0000, -0.6439, 0.0000, 0.7650], // quaternion
+      "bsphere": [  1059.0145, 7.9936, 717.7511, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-crate-02",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  1156.5351, 9.8981, 712.5103], // in corner near burning bush
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   0.0000, 0.6735, 0.0000, -0.7391], // quaternion
+      "bsphere": [   1156.5351, 9.8981, 712.5103, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-crate-03",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  1085.2165, 7.9936, 604.2592 ], // small cutout in north half just before turning to south half, kinda near sewers
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  -0.0005, 0.6972, 0.0005, -0.7168], // quaternion
+      "bsphere": [   1085.2165, 7.9936, 604.2592 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-crate-04",
         "crate-type": "iron",
         "light-index": ["int32", 10],
         "eco-info": [
@@ -279,6 +485,39 @@
       "bsphere": [  842.7365, 42.9824, 621.0164, 10], // bounding sphere
       "lump": {
         "name":"ctyindb-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [       1057.3979, 42.9825, 717.2123], // standpoint up high on wall left of burning bush
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      1057.3979, 42.9825, 717.2123, 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [    1126.9291, 42.9747, 717.2139], // standpoint up high on wall in near burning bush
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1126.9291, 42.9747, 717.2139, 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  1083.6176, 42.9803, 552.6927], // standpoint up high on wall just past sewers towards path to south half
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1083.6176, 42.9803, 552.6927, 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-hover-04",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     }
