@@ -2896,13 +2896,21 @@ This commonly includes things such as:
     ;;   (set! (-> info time) 4850.0))
 
     ;; === ctymarkb ===
-    (((game-task city-burning-bush-get-to-6)) ;; 
-     (set-vector-meters! (-> info trans) 703.93  10.08 635.16)
+    (((game-task city-burning-bush-get-to-6)) ;; burning-bush-13 / bbush-markb-2
+     (set-vector-meters! (-> info trans) 703.45  9.0 635.12 )
      (set-vector-meters! (-> info camera-trans) 710.0449  20.6847  628.7670)
      (set! (-> info camera-rot 0)   0.4471) (set! (-> info camera-rot 1)   0.0000) (set! (-> info camera-rot 2)  0.8944)
       (set! (-> info camera-rot 3) -0.5937) (set! (-> info camera-rot 4)   0.7479) (set! (-> info camera-rot 5)  0.2968)
       (set! (-> info camera-rot 6) -0.6689) (set! (-> info camera-rot 7)  -0.6637) (set! (-> info camera-rot 8)  0.3344)
-      (set! (-> info time) 4500.0)))
+      (set! (-> info time) 4200.0))
+
+    (((game-task city-burning-bush-get-to-7)) ;; burning-bush-12 / bbush-markb
+     (set-vector-meters! (-> info trans) 523.52   8.00 584.92  )
+     (set-vector-meters! (-> info camera-trans) 526.5274  11.5800  588.8538)
+     (set! (-> info camera-rot 0)  -0.8044) (set! (-> info camera-rot 1) -0.0000) (set! (-> info camera-rot 2)  0.5940)
+      (set! (-> info camera-rot 3) -0.1805) (set! (-> info camera-rot 4)  0.9526) (set! (-> info camera-rot 5)  -0.2445)
+      (set! (-> info camera-rot 6) -0.5659) (set! (-> info camera-rot 7) -0.3039) (set! (-> info camera-rot 8)  -0.7663)
+      (set! (-> info time) 4000.0)))
       
     
   (none))

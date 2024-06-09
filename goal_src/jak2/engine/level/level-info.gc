@@ -8518,13 +8518,13 @@
                    :name "ctymarkb-burning-bush"
                    :level 'ctymarkb
                    :flags (continue-flags no-auto)
-                   :trans (new 'static 'vector :x 2977968.2 :y 34444.902 :z 2160323.0 :w 1.0)
-                   :quat (new 'static 'vector :y -0.1398 :w -0.9901)
-                   :camera-trans (new 'static 'vector :x 2964785.5 :y 54040.574 :z 2116632.2 :w 1.0)
+                   :trans (new 'static 'vector :x (meters 666.7808) :y (meters 24.5430) :z (meters 420.0940) :w 1.0)
+                   :quat (new 'static 'vector :x 0.0000 :y -0.9885 :z 0.0000 :w 0.1507)
+                   :camera-trans (new 'static 'vector :x (meters 672.6300) :y (meters 29.6926) :z (meters 431.1392) :w 1.0)
                    :camera-rot (new 'static 'inline-array vector3s 3
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.9589 0.0 -0.2835))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.0361 0.9918 0.122))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.2812 -0.1273 0.9511)))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.8843 0.0000 0.4668))
+                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.0568 0.9925 -0.1076))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.4634 -0.1216 -0.8777)))
           
                    :on-goto #f
                    :vis-nick 'ctymarkb

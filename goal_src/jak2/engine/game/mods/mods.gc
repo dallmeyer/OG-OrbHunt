@@ -941,6 +941,9 @@
     (('burning-bush-13) ;; city-burning-bush-get-to-6 / bbush-markb-2
       (set-vector-meters! (-> arg0 extra trans) 410.4383 8.4404 695.6322)  ;; under overpass at ctypal entrance
       (set-vector! (-> arg0 quat)  0.0003  -0.7116  -0.0014  0.7025))
+    (('burning-bush-12) ;; city-burning-bush-get-to-7 / bbush-markb
+      (set-vector-meters! (-> arg0 extra trans) 666.7913 33.1302 409.4261)  ;; in cutout in wall above rooftop, up from overpass
+      (set-vector! (-> arg0 quat)  0.0000  -1.0  0.0000  0.0))
       
     ;; ====== BURNING BUSH / STADIUM ======
     ;; === stadium ===
@@ -998,6 +1001,12 @@
     ;;   (set-vector-meters! (-> arg0 extra trans) 803.61   15.26 158.12) ;;
     ;;   (set-vector! (-> arg0 quat) 0.0 0.0 0.0 0.0)
     ;;   )
+
+    ;; === ctymarkb ===
+    (('crate-769) (set-vector-meters! (-> arg0 extra trans) 454.89 11.5 470.69))
+    (('crate-770) (set-vector-meters! (-> arg0 extra trans) 454.89 12.7 470.69))
+    (('crate-771) (set-vector-meters! (-> arg0 extra trans) 454.89 14.0 470.69))
+    (('crate-772) (set-vector-meters! (-> arg0 extra trans) 454.89 15.3 470.69))
 
     ;; === ctyindb ===
     (('parking-spot-28) (set-vector-meters! (-> arg0 extra trans) 836.3753 8.3728 398.4976)) ;; off in corner near ctymarkb

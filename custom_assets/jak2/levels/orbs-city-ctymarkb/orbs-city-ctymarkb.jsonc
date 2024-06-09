@@ -87,6 +87,46 @@
       "lump": {
         "name": "ctymarkb-skill-04"
       }
+    },
+    {
+      "trans": [   424.1213, 11.2965, 450.8733 ], // in KG tank
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  424.1213, 11.2965, 450.8733, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarkb-skill-05",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [   735.2887, 38.3658, 445.4908], // on banner above rocket/abah pole (no hint) near ctyindb entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   735.2887, 38.3658, 445.4908, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarkb-skill-06"
+      }
+    },
+    
+    // CRATES
+    {
+      "trans": [  454.8401, 16.5799, 470.5704], // between ramp and wall, right outside consite
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.0395, 0.8628, 0.0236, 0.5033 ], // quaternion
+      "bsphere": [ 454.8401, 16.5799, 470.5704, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarkb-crate-01",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
     }
 
     // {

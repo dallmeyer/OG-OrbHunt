@@ -2740,10 +2740,18 @@ This commonly includes things such as:
         (set! (-> v1-75 ignore-pat) (new 'static 'pat-surface :noentity #x1 :nojak #x1 :probe #x1 :noendlessfall #x1))
         (set! (-> v1-75 action-mask) (collide-action solid)))
         
-      (if (>= (fill-and-probe-using-line-sphere *collide-cache* s3-1) 0.0)
-          (set! (-> s3-1 start-pos quad) (-> s3-1 best-other-tri intersect quad))
-          (set! (-> s3-1 start-pos quad) (-> (the-as process-drawable (-> this process)) root trans quad))
+      ;; orb hunt - for certain crates over weird collision, use crates position, no collide query
+      (case (-> (the-as process-drawable (-> this process)) name) :comp name=
+        (('ctymarkb-crate-01)
+          (set! (-> s3-1 start-pos quad) (-> (the-as process-drawable (-> this process)) root trans quad))        
           )
+        (else
+          (if (>= (fill-and-probe-using-line-sphere *collide-cache* s3-1) 0.0)
+            (set! (-> s3-1 start-pos quad) (-> s3-1 best-other-tri intersect quad))
+            (set! (-> s3-1 start-pos quad) (-> (the-as process-drawable (-> this process)) root trans quad))
+            )
+          )
+        )
       (if (= s2-0 (pickup-type fuel-cell))
           (+! (-> s3-1 start-pos y) 6144.0)
           )
