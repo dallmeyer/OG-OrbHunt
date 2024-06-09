@@ -47,16 +47,48 @@
 
   "actors" : [
     // 'ctymarkb (bazaar between ctypal and ctyind. overpass. onin. denfend ashelin)
-    // {
-    //   "trans": [ -311.7,   24.6,    -357.85 ], // up on high ledge at first turn from farm, jump from zoomer ez
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [-311.7,   24.6,    -357.85, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"ctygena-skill-1"
-    //   }
-    // }
+    {
+      "trans": [  401.42,   9.05, 670.81], // down in gap on left when entering from ctypal
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 401.42,   9.05, 670.81, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarkb-skill-01"
+      }
+    },
+    {
+      "trans": [   393.6963, 23.3652, 730.2302], // on wall near ctypal SE entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  393.6963, 23.3652, 730.2302, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarkb-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   395.9091, 32.8612, 720.9013], // on rooftop of entrance gate from ctypal, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  395.9091, 32.8612, 720.9013, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarkb-skill-03"
+      }
+    },
+    {
+      "trans": [   538.3814, 24.9317, 720.4644], // on rooftop near blue/yellow neon sign and misaligned collision, nice work ND
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  538.3814, 24.9317, 720.4644, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarkb-skill-04"
+      }
+    }
+
     // {
     //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
     //   "etype": "skill",  // actor type

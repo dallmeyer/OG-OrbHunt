@@ -8539,16 +8539,16 @@
                    :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3))
         
                  (new 'static 'continue-point
-                   :name "ctymarkb-burning-bush-2"
+                   :name "ctymarkb-burning-bush-2" ;; burning-bush-13 / city-burning-bush-get-to-6 / bbush-markb-2
                    :level 'ctymarkb
                    :flags (continue-flags no-auto)
-                   :trans (new 'static 'vector :x 2575240.5 :y 34444.902 :z 3103047.2 :w 1.0)
-                   :quat (new 'static 'vector :y 0.0787 :w 0.9968)
-                   :camera-trans (new 'static 'vector :x 2563072.0 :y 54984.293 :z 3055447.2 :w 1.0)
+                   :trans (new 'static 'vector :x (meters 414.2133) :y (meters 8.4207) :z (meters 694.3829) :w 1.0)
+                   :quat (new 'static 'vector :x 0.0000 :y 0.4811 :z 0.0000 :w -0.8766)
+                   :camera-trans (new 'static 'vector :x (meters 425.3578) :y (meters 13.4545) :z (meters 689.7227) :w 1.0)
                    :camera-rot (new 'static 'inline-array vector3s 3
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.9676 0.0 -0.2522))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.0305 0.9926 0.1173))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.2503 -0.1212 0.9605)))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  0.3868  -0.0000  0.9221))
+                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.1113  0.9926  0.0467))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.9153  -0.1207  0.3840)))
           
                    :on-goto #f
                    :vis-nick 'ctymarkb

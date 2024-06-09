@@ -378,7 +378,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 
 (define *level-orb-total-counts-fixed* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   0 ;; "" ;; 0 (none)
-  6    ;; Bazaar (East)
+  10   ;; Bazaar (East)
   40   ;; Bazaar (West)
   3    ;; Central Haven (Palace Grounds)
   112  ;; Construction Site

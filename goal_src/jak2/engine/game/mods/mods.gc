@@ -937,6 +937,10 @@
       (set-vector-meters! (-> arg0 extra trans) -25.62  10.36 926.80)
       )
 
+    ;; === ctymarkb ===
+    (('burning-bush-13) ;; city-burning-bush-get-to-6 / bbush-markb-2
+      (set-vector-meters! (-> arg0 extra trans) 410.4383 8.4404 695.6322)  ;; under overpass at ctypal entrance
+      (set-vector! (-> arg0 quat)  0.0003  -0.7116  -0.0014  0.7025))
       
     ;; ====== BURNING BUSH / STADIUM ======
     ;; === stadium ===
