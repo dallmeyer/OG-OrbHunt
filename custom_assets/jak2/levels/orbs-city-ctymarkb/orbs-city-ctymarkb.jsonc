@@ -109,6 +109,16 @@
         "name": "ctymarkb-skill-06"
       }
     },
+    {
+      "trans": [    679.9407, 21.4271, 419.5798], // between wall and overpass right at top of ramp, ctyindb side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   679.9407, 21.4271, 419.5798, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarkb-skill-07"
+      }
+    },
     
     // CRATES
     {
@@ -119,6 +129,23 @@
       "bsphere": [ 454.8401, 16.5799, 470.5704, 10], // bounding sphere
       "lump": {
         "name": "ctymarkb-crate-01",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  716.7182, 8.2811, 425.0439], // under ramp near ctyindb entrance
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.0000, -0.6938, -0.0000, 0.7201], // quaternion
+      "bsphere": [ 716.7182, 8.2811, 425.0439, 10], // bounding sphere
+      "lump": {
+        "name": "ctymarkb-crate-02",
         "crate-type": "iron",
         "light-index": ["int32", 10],
         "eco-info": [
