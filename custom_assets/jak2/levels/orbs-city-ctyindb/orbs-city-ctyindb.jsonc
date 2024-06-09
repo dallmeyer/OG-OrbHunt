@@ -313,7 +313,7 @@
       }
     },
     {
-      "trans": [   903.8528, 42.9979, 594.8306], // another up high on standpoint on mid wall north side, dark giant dark bomb
+      "trans": [   903.8528, 42.9979, 594.8306], // another up high on standpoint on center wall, north side, dark giant dark bomb
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -323,7 +323,7 @@
       }
     },
     {
-      "trans": [    974.0958, 42.9850, 594.8161], // another up high on standpoint on mid wall north side, dark giant dark bomb
+      "trans": [    974.0958, 42.9850, 594.8161], // another up high on standpoint on center wall, north side, dark giant dark bomb
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
@@ -403,6 +403,36 @@
       "bsphere": [   1161.8981, 42.9826, 514.4287, 10], // bounding sphere
       "lump": {
         "name": "ctyindb-skill-35"
+      }
+    },
+    {
+      "trans": [   965.4751, 42.9832, 396.7166], // another up high on standpoint on north wall, dark giant dark bomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   965.4751, 42.9832, 396.7166, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-36"
+      }
+    },
+    {
+      "trans": [   885.8381, 42.9860, 471.8892], // another up high on standpoint on west-ish wall in north half, dark giant dark bomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   885.8381, 42.9860, 471.8892, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-37"
+      }
+    },
+    {
+      "trans": [   1161.9085, 43.0127, 449.4194], // another up high on standpoint on NE wall, car launch
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1161.9085, 43.0127, 449.4194, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-38"
       }
     },
 
