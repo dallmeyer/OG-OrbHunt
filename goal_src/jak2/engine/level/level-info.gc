@@ -10808,8 +10808,8 @@
     :deactivate-func #f
     :kill-func #f
     :borrow-size (new 'static 'array uint16 2 #x4ba 160)
-    :borrow-level (new 'static 'array symbol 2 #f 'orbs-city-onintent)
-    :borrow-display? (new 'static 'array symbol 2 #f 'display)
+    :borrow-level (new 'static 'array symbol 2 #f #f) ;; 'orbs-city-onintent) ;; stuffed into ctymarkb for side mission bullshit
+    :borrow-display? (new 'static 'array symbol 2 #f #f) ;; 'display)
     :texture-anim-tfrag #f
     :texture-anim-pris #f
     :texture-anim-shrub #f
@@ -16420,6 +16420,7 @@
 (define orbs-city-ctymarka (orbs-borrow-level #xaa 'orbs-city-ctymarka 'orbs-city-ctymarka-vis 'occ 'update-mood-copy-ctywide))
 (define orbs-city-ctymarkb (orbs-borrow-level #xab 'orbs-city-ctymarkb 'orbs-city-ctymarkb-vis 'ocd 'update-mood-copy-ctywide))
 (define orbs-city-ctypal   (orbs-borrow-level #xac 'orbs-city-ctypal   'orbs-city-ctypal-vis   'oce 'update-mood-copy-ctywide))
+;; orb-city-onintent not actually used for anything but im too lazy to remove and reorder/reindex everything below
 (define orbs-city-onintent (orbs-borrow-level #xad 'orbs-city-onintent 'orbs-city-onintent-vis 'ocf 'update-mood-copy-ctywide))
 (define orbs-city-oracle   (orbs-borrow-level #xae 'orbs-city-oracle   'orbs-city-oracle-vis   'ocg 'update-mood-copy-ctywide))
 (define orbs-city-hideout  (orbs-borrow-level #xaf 'orbs-city-hideout  'orbs-city-hideout-vis  'och 'update-mood-copy-ctywide))

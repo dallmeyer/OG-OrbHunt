@@ -46,48 +46,6 @@
    "textures": [],
 
   "actors" : [
-    // 'onintent
-    {
-    "trans": [ 707.82,  10.18, 743.17  ], // on left - tricky uppercut from outside over invis wall (enjoy softlock)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [707.82,  10.18, 743.17, 10], // bounding sphere
-      "lump": {
-        "name": "onintent-skill-1"
-      }
-    },
-    {
-    "trans": [ 708.7,    9.0,     746.2   ], // on pot on left - tricky uppercut from outside over invis wall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [708.7,    9.0,     746.2 , 10], // bounding sphere
-      "lump": {
-        "name": "onintent-skill-2",
-        "bob-scale": ["float", -1.0]  // no bob
-      }
-    },
-    {
-    "trans": [717.3490, 9.1150, 742.4205], // on right - tricky uppercut from outside over invis wall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [717.3490, 9.1150, 742.4205 , 10], // bounding sphere
-      "lump": {
-        "name": "onintent-skill-3"
-      }
-    }
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
+    // moved to ctymarkb for side mission bullshit
   ]
 }

@@ -379,7 +379,7 @@
   (set! (-> self ring-angle) 0.0)
   (set! (-> self ring-want-angle) 0.0)
   (set! (-> self option-index) 0) 
-  (if *debug-segment*
+  (if #f ;; *debug-segment*
     (set! (-> self want-option-index) 1) ;; orb hunt - wakeup on bigmap debug mode
     (set! (-> self want-option-index) 0)
     )
