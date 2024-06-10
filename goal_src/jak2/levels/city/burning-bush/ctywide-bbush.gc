@@ -2910,7 +2910,19 @@ This commonly includes things such as:
      (set! (-> info camera-rot 0)  -0.8044) (set! (-> info camera-rot 1) -0.0000) (set! (-> info camera-rot 2)  0.5940)
       (set! (-> info camera-rot 3) -0.1805) (set! (-> info camera-rot 4)  0.9526) (set! (-> info camera-rot 5)  -0.2445)
       (set! (-> info camera-rot 6) -0.5659) (set! (-> info camera-rot 7) -0.3039) (set! (-> info camera-rot 8)  -0.7663)
-      (set! (-> info time) 4000.0)))
+      (set! (-> info time) 4000.0))
+
+    ;; === ctypal ===
+    (((game-task city-burning-bush-get-to-15)) ;; burning-bush-19 / bbush-pal
+    ;; 135.90  28.5  1045.38
+     (set-vector-meters! (-> info trans) 135.3  28.7616  1044.8)
+     (set-vector-meters! (-> info camera-trans) 153.5768  52.8440  1024.9290)
+     (set! (-> info camera-rot 0)   0.7094) (set! (-> info camera-rot 1)  0.0000) (set! (-> info camera-rot 2)   0.7047)
+      (set! (-> info camera-rot 3) -0.3554) (set! (-> info camera-rot 4)  0.8635) (set! (-> info camera-rot 5)   0.3578)
+      (set! (-> info camera-rot 6) -0.6085) (set! (-> info camera-rot 7) -0.5043) (set! (-> info camera-rot 8)   0.6126)
+      (set! (-> info time) 8800.0))
+
+    )
       
     
   (none))

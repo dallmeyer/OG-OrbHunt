@@ -8672,20 +8672,20 @@
                    :name "ctypal-burning-bush"
                    :level 'ctypal
                    :flags (continue-flags no-auto)
-                   :trans (new 'static 'vector :x 377386.6 :y 65546.65 :z 1834825.8 :w 1.0)
-                   :quat (new 'static 'vector :y -0.0469 :w 0.9988)
-                   :camera-trans (new 'static 'vector :x 372478.38 :y 86293.71 :z 1785120.0 :w 1.0)
+                   :trans (new 'static 'vector :x (meters 179.7675) :y (meters 43.6889) :z (meters 465.7471) :w 1.0)
+                   :quat (new 'static 'vector :y 0.6625 :w -0.7490)
+                   :camera-trans (new 'static 'vector :x (meters 182.6243) :y (meters 48.8388) :z (meters 453.5781) :w 1.0)
                    :camera-rot (new 'static 'inline-array vector3s 3
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.9952 0.0 -0.0968))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.0116 0.9927 0.1197))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.0961 -0.1203 0.988)))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  0.9518 0.0000 0.3066))
+                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.0349 0.9934 0.1085))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.3046 -0.1140 0.9456)))
           
                    :on-goto #f
                    :vis-nick 'ctypal
                    :want (new 'static 'inline-array level-buffer-state 6
                           (new 'static 'level-buffer-state :name 'ctywide :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
-                          (new 'static 'level-buffer-state :name 'ctygenc :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'ctygenc :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name 'ctypal :display? 'display :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))

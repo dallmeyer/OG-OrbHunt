@@ -325,7 +325,8 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [  -111.0693, 16.1826, 6.3413, 10], // bounding sphere
       "lump": {
-        "name": "ctygena-skill-22"
+        "name": "ctygena-skill-22",
+        "lvl-idx-override": ["int32", 33]
       }
     },
     {
@@ -335,7 +336,8 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-200.57,  24.00,  38.86, 10], // bounding sphere
       "lump": {
-        "name": "ctygena-skill-23"
+        "name": "ctygena-skill-23",
+        "lvl-idx-override": ["int32", 33]
       }
     },
     {
@@ -345,7 +347,8 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [ -181.0340, 30.2096, 5.8379, 10], // bounding sphere
       "lump": {
-        "name": "ctygena-skill-24"
+        "name": "ctygena-skill-24",
+        "lvl-idx-override": ["int32", 33]
       }
     }
   ]

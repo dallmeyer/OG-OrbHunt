@@ -276,6 +276,7 @@
 
         ;; refresh orb counts for active levels
         (dotimes (idx LEVEL_ID_LEN)
+          (false! (-> *level-orb-active* idx))
           (set! (-> *level-orb-collected-counts* idx) 0)
           (set! (-> *level-orb-total-counts* idx) 0)
           )
@@ -294,12 +295,20 @@
                         (case (-> (the entity-actor (-> entity-link entity)) etype symbol)
                           (('skill)
                             (+! (-> *level-orb-total-counts* final-lvl-idx) 1)
+                            ;; only consider final-lvl-idx active if not overridden from some other level
+                            (if (< lvl-idx-override 0)
+                              (true! (-> *level-orb-active* final-lvl-idx))
+                              )
                             (when (logtest? (-> entity-link status) (entity-perm-status dead))
                               (+! (-> *level-orb-collected-counts* final-lvl-idx) 1)
                               )
                             )
                           (('skill-crate)
                             (+! (-> *level-orb-total-counts* final-lvl-idx) 1)
+                            ;; only consider final-lvl-idx active if not overridden from some other level
+                            (if (< lvl-idx-override 0)
+                              (true! (-> *level-orb-active* final-lvl-idx))
+                              )
                             (when (nonzero? (-> entity-link perm user-int8 1))
                               (+! (-> *level-orb-collected-counts* final-lvl-idx) 1)
                               )
@@ -580,7 +589,9 @@
               (xpos (if (= 1.0 (-> *pc-settings* aspect-ratio-scale)) 507.0 1019.0))
               )
           (dotimes (idx LEVEL_ID_LEN)
-            (when (nonzero? (-> *level-orb-total-counts* idx))
+            (when (or (-> *level-orb-active* idx)
+                      (and (= idx 45) (nonzero? (-> *level-orb-total-counts* idx)))
+                      )
               (let ((color-str
                         (cond
                           ((= (-> *level-orb-collected-counts* idx) (-> *level-orb-total-counts* idx)) "<COLOR_GREEN>") ;; green if 100%
@@ -904,6 +915,14 @@
     ;; === ctyslumc (water slums) ===
     (('burning-bush-11) ;; orbhunt - more related overrides in mod-override-burning-bush-get-on!
      (set-vector-meters! (-> arg0 extra trans) 440.0  19.87 -536.5))  ;; atop small building in corner
+
+    ;; === ctypal ===
+    (('burning-bush-19) ;; city-burning-bush-get-on-15 / bbush-pal
+     (set-vector-meters! (-> arg0 extra trans) 176.1416 43.6889 466.6342)  ;; on edge of palace wall (car launch, hover)
+     (set-vector! (-> arg0 quat) 0.0000  0.0  0.0000  1.0))
+    ;; (('burning-bush-23) ;; city-burning-bush-get-on-XX / bbush-pal-2 (no tasks)
+    ;;  (set-vector-meters! (-> arg0 extra trans) 176.1416 43.6889 466.6342)  ;; 
+    ;;  (set-vector! (-> arg0 quat) 0.0000  -1.0  0.0000  0.0000))
       
     ;; === ctyport ===
     (('burning-bush-8) ;; orbhunt - more related overrides in mod-override-burning-bush-get-on!
