@@ -66,7 +66,133 @@
       "lump": {
         "name":"ctypal-skill-02"
       }
-    }
+    },
+    {
+      "trans": [   127.3879, 46.1206, 913.5957], // on ear of statue on NW corner of mars tomb (car launch)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  127.3879, 46.1206, 913.5957, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-03"
+      }
+    },
+    {
+      "trans": [   83.2395, 9.6178, 1108.8292], // behind rubble in SW corner by mars tomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    83.2395, 9.6178, 1108.8292, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-04"
+      }
+    },
+    {
+      "trans": [   122.7514, 9.3869, 983.1078], // behind rubble on west side of mars tomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   122.7514, 9.3869, 983.1078, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-05"
+      }
+    },
+    {
+      "trans": [   232.1986, 21.3620, 1039.0227], // behind rubble on west side of mars tomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   232.1986, 21.3620, 1039.0227, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-06"
+      }
+    },
+    {
+      "trans": [  224.3805, 35.4121, 943.4532], // among rubble in middle of mars tomb (car launch)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   224.3805, 35.4121, 943.4532, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-07"
+      }
+    },
+    {
+      "trans": [ 205.35,  40.2, 1043.79], // tip of rubble south side in middle of mars tomb (car launch)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 205.35,  40.2, 1043.79, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-08"
+      }
+    },
+    {
+      "trans": [ 141.67,  44.18, 971.48], // tip of rubble west side in middle of mars tomb (car launch)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 141.67,  44.18, 971.48, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-09"
+      }
+    },
+    {
+      "trans": [  254.4509, 9.7874, 960.1087], // behind rubble on east side of mars tomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  254.4509, 9.7874, 960.1087, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-10"
+      }
+    },
     
+    // CRATES
+    {
+      "trans": [  74.9213, 23.5295, 937.7709 ], // behind underport exit
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.0000, -0.7069, 0.0000, -0.7072], // quaternion
+      "bsphere": [  74.9213, 23.5295, 937.7709 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-crate-01",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  216.3578, 43.4451, 971.2502 ], // on rubble in middle of mars tomb
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.1137, 0.0703, 0.0892, 0.9869], // quaternion
+      "bsphere": [   216.3578, 43.4451, 971.2502 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-crate-02",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    
+    // HOVER ORBS
+    {
+      "trans": [  192.08,  61.08, 734.42], // on top of latch door at palace entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 192.08,  61.08, 734.42, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
   ]
 }

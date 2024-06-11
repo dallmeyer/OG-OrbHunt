@@ -920,9 +920,9 @@
     (('burning-bush-19) ;; city-burning-bush-get-on-15 / bbush-pal
      (set-vector-meters! (-> arg0 extra trans) 176.1416 43.6889 466.6342)  ;; on edge of palace wall (car launch, hover)
      (set-vector! (-> arg0 quat) 0.0000  0.0  0.0000  1.0))
-    ;; (('burning-bush-23) ;; city-burning-bush-get-on-XX / bbush-pal-2 (no tasks)
-    ;;  (set-vector-meters! (-> arg0 extra trans) 176.1416 43.6889 466.6342)  ;; 
-    ;;  (set-vector! (-> arg0 quat) 0.0000  -1.0  0.0000  0.0000))
+    (('burning-bush-23) ;; city-burning-bush-get-on-XX / bbush-pal-2 (no tasks)
+     (set-vector-meters! (-> arg0 extra trans) 240.1164 21.0563 937.7714)  ;; 
+     (set-vector! (-> arg0 quat) 0.0000  0.9243  0.0000  -0.3814))
       
     ;; === ctyport ===
     (('burning-bush-8) ;; orbhunt - more related overrides in mod-override-burning-bush-get-on!
