@@ -147,14 +147,86 @@
         "name":"ctypal-skill-10"
       }
     },
+    {
+      "trans": [   293.5190, 21.3509, 1101.2568], // on ledge of awning in SE near mars tomb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   293.5190, 21.3509, 1101.2568, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-11",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   300.5937, 35.1688, 1103.0264], // up higher on wall in SE near mars tomb, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   300.5937, 35.1688, 1103.0264, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-12"
+      }
+    },
+    {
+      "trans": [  217.93,  29.99, 763.41], // atop statue head near palace entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  217.93,  29.99, 763.41, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-13"
+      }
+    },
+    {
+      "trans": [    35.5458, 28.8615, 748.7971], // up mid level on wall of palace, SW corner, west side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   35.5458, 28.8615, 748.7971, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-14"
+      }
+    },
+    {
+      "trans": [      322.0130, 37.0577, 658.6431], // up a bit on palace wall, east side, behind trees
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      322.0130, 37.0577, 658.6431, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-15"
+      }
+    },
+    {
+      "trans": [     61.6499, 44.9909, 499.9199], // up high on palace wall, NW corner, hidden behind pillar a bit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    61.6499, 44.9909, 499.9199, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-16"
+      }
+    },
+    {
+      "trans": [   257.9194, 41.54, 463.5102], // top of tree near upper level of palace wall, north side, to east a bit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  257.9194, 41.54, 463.5102, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-17",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
     
     // CRATES
     {
-      "trans": [  74.9213, 23.5295,  937.8709 ], // on awning w standpoint, west wall by mars tomb
+      "trans": [  74.9213, 23.5295,   937.8508], // on awning w standpoint, west wall by mars tomb
       "etype": "skill-crate",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [  0.0000, -0.7069, 0.0000, -0.7072], // quaternion
-      "bsphere": [  74.9213, 23.5295, 937.8709 , 10], // bounding sphere
+      "bsphere": [  74.9213, 23.5295,  937.8508, 10], // bounding sphere
       "lump": {
         "name": "ctypal-crate-01",
         "crate-type": "iron",
@@ -173,6 +245,22 @@
       "bsphere": [   216.3578, 43.4451, 971.2502 , 10], // bounding sphere
       "lump": {
         "name": "ctypal-crate-02",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  325.2788, 43.6889, 563.4937 ], // up high on eastern palace wall, sorta behind trees
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.0001, 0.8098, -0.0000, 0.5866], // quaternion
+      "bsphere": [  325.2788, 43.6889, 563.4937 , 10], // bounding sphere
+      "lump": {
+        "name": "ctypal-crate-03",
         "crate-type": "iron",
         "eco-info": [
           "int32",

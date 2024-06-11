@@ -1070,6 +1070,9 @@
     ;; === ctyindb ===
     (('parking-spot-28) (set-vector-meters! (-> arg0 extra trans) 836.3753 8.3728 398.4976)) ;; off in corner near ctymarkb
 
+    ;; === ctypal ===
+    (('parking-spot-40) (set-vector-meters! (-> arg0 extra trans)  156.1172 8.1579 750.1027)) ;; in pool next to steps up to palace entrance
+
     ;; === palent ===
     (('crate-817) (set-vector-meters! (-> arg0 extra trans) 195.13 345.18 630.70)) ;; other side of initial part of second guard section
 

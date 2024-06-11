@@ -97,6 +97,17 @@
         "name": "ctyport-skill-05"
       }
     },
+    {
+      "trans": [  -380.0000, 5.8, 1353.0000], // inside propaganda in NW towards ctygen
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -380.0000, 5.8, 1353.0000, 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-skill-06",
+        "alt-actor": "propa-6"
+      }
+    },
     
     // CRATES
     {
