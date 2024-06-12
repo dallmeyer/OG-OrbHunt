@@ -662,7 +662,7 @@
   
 (defun-extern hover-need-to-cooldown? symbol)
 (define-extern *last-hover-time* time-frame)
-(define-extern *last-no-hover-zone-time* time-frame)
+(define-extern try-play-no-hover-zone-audio (function none))
 (define-extern skill-alt-actor-check? (function collectable symbol symbol))
 (defbehavior collectable-standard-event-handler collectable ((arg0 process) (arg1 int) (arg2 symbol) (arg3 event-message-block))
   (local-vars (v0-4 object))
@@ -690,13 +690,8 @@
             (!= (-> self pickup-amount) (-> *FACT-bank* super-skill-inc))
             (hover-need-to-cooldown?)
             )
-        (when (or (not *last-no-hover-zone-time*)
-                  (g-time-elapsed? *last-no-hover-zone-time* (seconds 5)))
-          ;; "no hover zone" dialogue if its been 5s since last one
-          (add-process *gui-control* *target* (gui-channel guard) (gui-action play) "kg007" -50.0 0)
-          ;; remember last time we played this dialogue
-          (set-g-time! *last-no-hover-zone-time*)
-          )
+        (try-play-no-hover-zone-audio)
+        ;; no pickup
         )
       ;; otherwise try to get-pickup as usual
       ((send-event arg0 'get-pickup (-> self fact pickup-type) (-> self fact pickup-amount))

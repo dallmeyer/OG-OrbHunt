@@ -1505,6 +1505,17 @@
     )
   )
 
+(defun try-play-no-hover-zone-audio ()
+  (when (or (not *last-no-hover-zone-time*)
+            (g-time-elapsed? *last-no-hover-zone-time* (seconds 5)))
+    ;; "no hover zone" dialogue if its been 5s since last one
+    (add-process *gui-control* *target* (gui-channel guard) (gui-action play) "kg007" -50.0 0)
+    ;; remember last time we played this dialogue
+    (set-g-time! *last-no-hover-zone-time*)
+    )
+  (none)
+  )
+
 (defun skill-alt-actor-check? ((skill collectable) (for-pickup? symbol))
   (let ((alt-actor (entity-actor-lookup (-> skill entity) 'alt-actor 0)))
     (when (and alt-actor (-> alt-actor extra process))

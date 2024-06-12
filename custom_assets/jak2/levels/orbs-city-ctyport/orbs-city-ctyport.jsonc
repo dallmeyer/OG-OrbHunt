@@ -118,6 +118,36 @@
         "name": "ctyport-skill-07"
       }
     },
+    {
+      "trans": [      -273.7422, 8.0920, 1649.0820], // on ground under pipe against wall, between hiphog and underport exit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -273.7422, 8.0920, 1649.0820, 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-skill-08"
+      }
+    },
+    {
+      "trans": [  -237.3309, 44.7672, 1670.4470], // on top of ledge overhead between hiphog and underport, car launch from ramp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -237.3309, 44.7672, 1670.4470, 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-skill-09"
+      }
+    },
+    {
+      "trans": [   -297.9136, 44.8970, 1664.5773], // up and under roofing on top of ledge overhead between hiphog and underport, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -297.9136, 44.8970, 1664.5773, 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-skill-10"
+      }
+    },
     
     // CRATES
     {
@@ -161,18 +191,51 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-117.5,   52.6,    1399.3, 10], // bounding sphere
       "lump": {
-        "name":"ctyport-skill-hover-1",
+        "name":"ctyport-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     },
     {
-      "trans": [ -226.26,  71.72, 1670.38  ], // way up on pipe, near hiphog (HOVER or boost zoomer jump during race)
+      "trans": [   -235.23,  44.14, 1753.11], // way up on pipe, past hiphog towards underport exit
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-226.26,  71.72, 1670.38, 10], // bounding sphere
+      "bsphere": [  -235.23,  44.14, 1753.11, 10], // bounding sphere
       "lump": {
-        "name":"ctyport-skill-hover-2",
+        "name":"ctyport-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  481.52,  52.79, 1410.25], // way up on pipe, near gungame
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 481.52,  52.79, 1410.25, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   128.37, 112.68, 1245.58], // way up on top of radio tower thing, near path to ctypal
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 128.37, 112.68, 1245.58, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -225.8237, 84.6049, 1686.4985], // way up on top of radio tower thing, between hiphog and underport
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -225.8237, 84.6049, 1686.4985, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-hover-05",
         "pickup-amount": ["float", 3.0]  // goldge
       }
     }
