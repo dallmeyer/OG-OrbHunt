@@ -219,6 +219,16 @@
         "bob-scale": ["float", -1.0] // no bob
       }
     },
+    {
+      "trans": [   147.5695, 43.9690, 732.8159], // upper part of palace wall, just left of entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   147.5695, 43.9690, 732.8159, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-18"
+      }
+    },
     
     // CRATES
     {

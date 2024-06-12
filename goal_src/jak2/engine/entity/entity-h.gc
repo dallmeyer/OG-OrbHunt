@@ -214,4 +214,4 @@
   )
 
 
-(define *ACTOR-bank* (new 'static 'actor-bank :pause-dist (meters 50) :birth-dist (meters 220) :birth-max 10))
+(define *ACTOR-bank* (new 'static 'actor-bank :pause-dist (meters 50) :birth-dist (meters 1000) :birth-max 10))

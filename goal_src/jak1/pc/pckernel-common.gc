@@ -283,7 +283,7 @@
     (update-video-hacks obj)
     )
   (cond
-    ((not (-> obj ps2-actor-vis?))
+    (#t ;; (not (-> obj ps2-actor-vis?))
       ;; kinda overkill.
       (set! (-> *ACTOR-bank* birth-dist) (meters 10000))
       (set! (-> *ACTOR-bank* pause-dist) (meters 10000))

@@ -108,6 +108,16 @@
         "alt-actor": "propa-6"
       }
     },
+    {
+      "trans": [ -36.9861, 2.7, 1516.3984], // special code to ride on top of a barge
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -36.9861, 2.7, 1516.3984, 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-skill-07"
+      }
+    },
     
     // CRATES
     {

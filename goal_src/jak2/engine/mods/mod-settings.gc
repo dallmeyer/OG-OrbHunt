@@ -38,7 +38,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define ORB_HUNT_DEBUG? #f) ;; when #t, hold L2 for extra debug prints
-(define startingDebugContinuePoint "ctypal-tomb")
+(define startingDebugContinuePoint "ctyport-start")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -381,7 +381,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   0 ;; "" ;; 0 (none)
   34   ;; Bazaar (East)
   40   ;; Bazaar (West)
-  23   ;; Central Haven (Palace Grounds)
+  25   ;; Central Haven (Palace Grounds)
   112  ;; Construction Site
   5    ;; Construction Site (Entrance)
   154  ;; Dead Town
@@ -430,7 +430,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   36   ;; Palace (Rooftop)
   8    ;; Palace (Shaft/Lobby)
   8    ;; Palace (Throne)
-  34   ;; Port
+  35   ;; Port
   2    ;; Power Station
   95   ;; Pumping Station
   52   ;; Sandover Village
