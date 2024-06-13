@@ -312,8 +312,8 @@
 (build-custom-level "orbs-city-ctygenc")
 (custom-level-cgo "OC3.DGO" "orbs-city-ctygenc/orbs-city-ctygenc.gd")
 
-(build-custom-level "orbs-city-ctysluma")
-(custom-level-cgo "OC4.DGO" "orbs-city-ctysluma/orbs-city-ctysluma.gd")
+(build-custom-level "orbs-oc4")
+(custom-level-cgo "OC4.DGO" "orbs-oc4/orbs-oc4.gd")
 
 (build-custom-level "orbs-city-ctyslumb")
 (custom-level-cgo "OC5.DGO" "orbs-city-ctyslumb/orbs-city-ctyslumb.gd")

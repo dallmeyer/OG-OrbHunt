@@ -4,5 +4,5 @@
 ;; the actual file name still needs to be 8.3
 ("OC4.DGO"
  (
-  "orbs-city-ctysluma.go"
+  "orbs-oc4.go"
   ))

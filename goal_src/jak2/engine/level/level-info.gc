@@ -6732,7 +6732,7 @@
     :deactivate-func #f
     :kill-func #f
     :borrow-size (new 'static 'array uint16 2 160 160)
-    :borrow-level (new 'static 'array symbol 2 #f 'orbs-city-ctysluma)
+    :borrow-level (new 'static 'array symbol 2 #f 'orbs-oc4)
     :borrow-display? (new 'static 'array symbol 2 #f 'display)
     :texture-anim-tfrag #f
     :texture-anim-pris #f
@@ -16409,7 +16409,7 @@
 (define orbs-city-ctygena  (orbs-borrow-level #x9f 'orbs-city-ctygena  'orbs-city-ctygena-vis  'oc1 'update-mood-copy-ctywide))
 (define orbs-city-ctygenb  (orbs-borrow-level #xa0 'orbs-city-ctygenb  'orbs-city-ctygenb-vis  'oc2 'update-mood-copy-ctywide))
 (define orbs-city-ctygenc  (orbs-borrow-level #xa1 'orbs-city-ctygenc  'orbs-city-ctygenc-vis  'oc3 'update-mood-copy-ctywide))
-(define orbs-city-ctysluma (orbs-borrow-level #xa2 'orbs-city-ctysluma 'orbs-city-ctysluma-vis 'oc4 'update-mood-copy-ctywide))
+(define orbs-oc4 (orbs-borrow-level #xa2 'orbs-oc4 'orbs-oc4-vis 'oc4 'update-mood-copy-ctywide))
 (define orbs-city-ctyslumb (orbs-borrow-level #xa3 'orbs-city-ctyslumb 'orbs-city-ctyslumb-vis 'oc5 'update-mood-copy-ctywide))
 (define orbs-city-ctyslumc (orbs-borrow-level #xa4 'orbs-city-ctyslumc 'orbs-city-ctyslumc-vis 'oc6 'update-mood-copy-ctywide))
 (define orbs-city-ctyport  (orbs-borrow-level #xa5 'orbs-city-ctyport  'orbs-city-ctyport-vis  'oc7 'update-mood-copy-ctywide))
@@ -16573,7 +16573,7 @@
   (cons! *level-load-list* 'orbs-city-ctyport)
   (cons! *level-load-list* 'orbs-city-ctyslumc)
   (cons! *level-load-list* 'orbs-city-ctyslumb)
-  (cons! *level-load-list* 'orbs-city-ctysluma)
+  (cons! *level-load-list* 'orbs-oc4)
   (cons! *level-load-list* 'orbs-city-ctygenc)
   (cons! *level-load-list* 'orbs-city-ctygenb)
   (cons! *level-load-list* 'orbs-city-ctygena)
