@@ -2101,7 +2101,7 @@
     (let ((s5-0 (new 'stack-no-clear 'vector)))
       (set! (-> s5-0 quad) (-> self control transv quad))
       (when (not (edge-grab-info-method-9 s4-0))
-        (format #t "exit update~%")
+        (dbg-format #t "exit update~%")
         (send-event self 'end-mode #f)
         (return (the-as time-frame #f))
         )
