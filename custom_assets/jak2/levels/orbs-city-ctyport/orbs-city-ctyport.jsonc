@@ -239,6 +239,16 @@
         "name": "ctyport-skill-19"
       }
     },
+    {
+      "trans": [   -254.1803, 33.2474, 1405.9362], // up on weird wall-hug standpoint on path to ctygena
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -254.1803, 33.2474, 1405.9362, 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-skill-20"
+      }
+    },
     
     // CRATES
     {
@@ -297,6 +307,22 @@
       "bsphere": [  -198.9457, 7.8234, 1432.7570, 10], // bounding sphere
       "lump": {
         "name": "ctyport-crate-04",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  589.6224, -4.7239, 1871.0083], // in water on ramp at east end of port (dark jak)
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ -0.2958, 0.5401, 0.2067, 0.7602], // quaternion
+      "bsphere": [  589.6224, -4.7239, 1871.0083, 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-crate-05",
         "crate-type": "iron",
         "eco-info": [
           "int32",

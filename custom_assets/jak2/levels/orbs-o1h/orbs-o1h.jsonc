@@ -86,7 +86,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-26.5,    22.0,    -83.7 , 10], // bounding sphere
       "lump": {
-        "name": "village1-skill-1",
+        "name": "village1-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint for skill-37
       }
     },
@@ -97,7 +97,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-30.3,    8.7,     -68.4 , 10], // bounding sphere
       "lump": {
-        "name": "village1-skill-2"
+        "name": "village1-skill-02"
       }
     },
     {
@@ -107,7 +107,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [6.5,      23.2,    -108.3, 10], // bounding sphere
       "lump": {
-        "name": "village1-skill-3"
+        "name": "village1-skill-03"
       }
     },
     {
@@ -117,7 +117,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [84.6,     28.0,    30.0  , 10], // bounding sphere
       "lump": {
-        "name": "village1-skill-4"
+        "name": "village1-skill-04"
       }
     },
     {
@@ -127,17 +127,17 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [79.7,     18.0,    -41.5 , 10], // bounding sphere
       "lump": {
-        "name": "village1-skill-5"
+        "name": "village1-skill-05"
       }
     },
     {
-      "trans": [ -25.5,    4.7,     -66.6   ], // #t  fireplace in farmers hu
+      "trans": [  -23.11,   3.62, -70.10], // #t  fireplace in farmers hu
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-25.5,    4.7,     -66.6 , 10], // bounding sphere
+      "bsphere": [ -23.11,   3.62, -70.10 , 10], // bounding sphere
       "lump": {
-        "name": "village1-skill-6"
+        "name": "village1-skill-06"
       }
     },
     {
@@ -147,7 +147,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [88.18,    18.57,   18.87 , 10], // bounding sphere
       "lump": {
-        "name": "village1-skill-7"
+        "name": "village1-skill-07"
       }
     },
     {
@@ -157,7 +157,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-107.9,   35.0,    219.7 , 10], // bounding sphere
       "lump": {
-        "name": "village1-skill-8"
+        "name": "village1-skill-08"
       }
     },
     {
@@ -167,7 +167,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [-182.85,  32.9,    213.01, 10], // bounding sphere
       "lump": {
-        "name": "village1-skill-9"
+        "name": "village1-skill-09"
       }
     },
     {
@@ -604,19 +604,201 @@
       "lump": {
         "name": "village1-skill-52"
       }
-    }
+    },
+    {
+      "trans": [ -143.48,  41.55, 225.68], // on back of first floor samos roof in back
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -143.48,  41.55, 225.68, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-53",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -146.0439, 46.5698, 216.7334], // between plants on 2nd floor deck behind invis wall, abah (or cancel) from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -146.0439, 46.5698, 216.7334, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-54"
+      }
+    },
+    {
+      "trans": [ 109.28,  12.00, -47.30], // on rock cliff in corner above water by yakows
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 109.28,  12.00, -47.30, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-55",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 108.33,  27.30, -42.35], // up higher on rock cliff in corner above water by yakows, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 108.33,  27.30, -42.35, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-56",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 101.52,  40.62, -43.24], // up even higher on rock cliff in corner above water by yakows, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 101.52,  40.62, -43.24, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-57"
+      }
+    },
+    {
+      "trans": [  -150.8056, 3.5909, -89.0588], // on rocks below arch towards beach
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -150.8056, 3.5909, -89.0588, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-58",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -142.45,  28.44, -87.78], // on rock arch near beach, abah from ^ to crate-2 then up to here
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -142.45,  28.44, -87.78, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-59"
+      }
+    },
+    {
+      "trans": [  -122.4329, 38.6200, -84.8926], // further up rock arch near beach, follow from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -122.4329, 38.6200, -84.8926, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-60"
+      }
+    },
+    {
+      "trans": [  186.6671, 27.2823, -157.5209], // behind rock at top of path to jungle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   186.6671, 27.2823, -157.5209, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-61"
+      }
+    },
+    {
+      "trans": [   202.5787, 1.5853, -161.3821], // behind rock at bottom of path to jungle, where waterfall would flow to sea
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   202.5787, 1.5853, -161.3821, 10], // bounding sphere
+      "lump": {
+        "name": "village1-skill-62"
+      }
+    },
+
+    // CRATES
+    {
+      "trans": [ -110.2849, 46.3943, 218.6286], // on far end of deck 2nd floor, go around back on small ledge from abah^^
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ -0.0001, -0.5015, -0.0000, -0.8651], // quaternion
+      "bsphere": [  -110.2849, 46.3943, 218.6286, 10], // bounding sphere
+      "lump": {
+        "name": "village1-crate-1",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [ -158.1664, 19.1158, -93.7313 ], // on rock arch towards beach, abah from skill-58
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ -0.0669, 0.8014, -0.0677, -0.5904 ], // quaternion
+      "bsphere": [  -158.1664, 19.1158, -93.7313 , 10], // bounding sphere
+      "lump": {
+        "name": "village1-crate-2",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
 
     // HOVER ORBS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "extype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
+    {
+      "trans": [      101.9485, 27.3999, 68.5055], // on side of far rock cliff over water (where mirrors would connect)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     101.9485, 27.3999, 68.5055, 10], // bounding sphere
+      "lump": {
+        "name":"village1-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [      101.4095, 42.5380, 61.8637], // near top of far rock cliff over water (where mirrors would connect)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     101.4095, 42.5380, 61.8637, 10], // bounding sphere
+      "lump": {
+        "name":"village1-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   93.25,  51.40, -121.27], // up on cliff above path to jungle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   93.25,  51.40, -121.27, 10], // bounding sphere
+      "lump": {
+        "name":"village1-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   -2.2100, 34.8055, -115.2491], // up on cliff above yakow pen
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -2.2100, 34.8055, -115.2491, 10], // bounding sphere
+      "lump": {
+        "name":"village1-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  117.0126, 0.1263, 29.8786], // "tidepool" against rock cliff on backside facing jungle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  117.0126, 0.1263, 29.8786, 10], // bounding sphere
+      "lump": {
+        "name":"village1-skill-hover-05",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
   ]
 }

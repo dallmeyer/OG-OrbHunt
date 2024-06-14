@@ -2054,7 +2054,7 @@
   (when (and *debug-segment* (cpad-pressed? 0 select) (not (cpad-hold? 0 l3)) (not (paused?)))
     (toggleCollisionRenderer)
     ;; hideskip nojak
-    (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack nojak)) #t)
+    (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack nojak probe)) #t)
 
     ;; disable camera collision/line of sight
     (if (logtest? (-> *camera* slave-options) 32)

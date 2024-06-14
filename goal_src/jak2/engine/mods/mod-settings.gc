@@ -38,7 +38,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define ORB_HUNT_DEBUG? #f) ;; when #t, hold L2 for extra debug prints
-(define startingDebugContinuePoint "ctyport-start")
+(define startingDebugContinuePoint "village1-warp")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -424,20 +424,20 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   182  ;; Mountain Temple
   66   ;; No Man's Canyon
   6    ;; Onin's Tent
-  1    ;; Oracle
+  2    ;; Oracle
   19   ;; Palace (Cables)
   60   ;; Palace (Interior)
   36   ;; Palace (Rooftop)
   8    ;; Palace (Shaft/Lobby)
   8    ;; Palace (Throne)
-  54   ;; Port
+  56   ;; Port
   2    ;; Power Station
   95   ;; Pumping Station
-  52   ;; Sandover Village
+  69   ;; Sandover Village
   16   ;; Sewers
   99   ;; Sewers (Old)
   47   ;; Slums (Northwest)
-  14   ;; Slums (Southeast)
+  32   ;; Slums (Southeast)
   24   ;; Stadium (Class 1)
   33   ;; Stadium (Class 2)
   30   ;; Stadium (Class 3)

@@ -126,6 +126,210 @@
       "lump": {
         "name": "ctysluma-skill-08"
       }
+    },
+    {
+      "trans": [   1025.8157, 9.7, 74.0000], // inside propaganda near hideout
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1025.8157, 9.7, 74.0000, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-09",
+        "alt-actor": "propa-2"
+      }
+    },
+    {
+      "trans": [      1041.8293, 9.8424, 48.8164], // behind pipe near hideout / propa-2
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      1041.8293, 9.8424, 48.8164, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-10"
+      }
+    },
+    {
+      "trans": [   1113.2333, 24.7692, 44.0086], // on pipe right at turn to hideout
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    1113.2333, 24.7692, 44.0086, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-11"
+      }
+    },
+    {
+      "trans": [    1113.8933, 37.4767, 39.6410], // up from ^ above window (standpoints) 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    1113.8933, 37.4767, 39.6410, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-12"
+      }
+    },
+    {
+      "trans": [   1162.8789, 32.5994, 93.0929], // up in corner at end of hideout alley
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1162.8789, 32.5994, 93.0929, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-13"
+      }
+    },
+    {
+      "trans": [   1092.1505, 30.7158, 210.1309], // up at top of pipe on banner support, east central
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1092.1505, 30.7158, 210.1309, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-14"
+      }
+    },
+    {
+      "trans": [   976.4531, 20.86, 128.4398], // behind/under pipe in corner near big neon sign
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    976.4531, 20.86, 128.4398, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-15",
+        "bob-scale": ["float", 0.15]
+      }
+    },
+    {
+      "trans": [  913.41,  31.40, 169.08], // atop building on left before path to ctyslumb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 913.41,  31.40, 169.08, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-16"
+      }
+    },
+    {
+      "trans": [       916.5902, 8.2822, 167.5741], // in crevice between buildings on left before path to ctyslumb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      916.5902, 8.2822, 167.5741, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-17"
+      }
+    },
+    {
+      "trans": [   966.6593, 0.4288, 196.2420], // behind pipes in west end of middle trench
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    966.6593, 0.4288, 196.2420, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-18",
+        "bob-scale": ["float", 0.6]
+      }
+    },
+    {
+      "trans": [   890.7322, 21.9512, 290.6517], // in corner between buildings on first level of rooftops in hall way from SW to center
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   890.7322, 21.9512, 290.6517, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-19"
+      }
+    },
+    {
+      "trans": [  980.79,  35.07, 257.70], // up on corner of rooftop/pipes near center (car launch)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  980.79,  35.07, 257.70, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-20"
+      }
+    },
+    {
+      "trans": [  809.41,  31.19, 149.99], // on rooftop near fortress entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  809.41,  31.19, 149.99, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-21"
+      }
+    },
+    {
+      "trans": [      774.8580, 39.3110, 161.3282], // way up on rooftop near fortress entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      774.8580, 39.3110, 161.3282, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-22"
+      }
+    },
+    {
+      "trans": [  1044.27,  45.52, 339.17], // way up in gap of overhang, east end of southern trench (rocket from trash can)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1044.27,  45.52, 339.17, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-skill-23"
+      }
+    },
+    
+    // CRATES
+    {
+      "trans": [  1134.9078, 16.5950, 74.9669 ], // above doorway near/opposite hideout
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ -0.7072, 0.0033, -0.7069, 0.0034], // quaternion
+      "bsphere": [  1134.9078, 16.5950, 74.9669 , 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-crate-1",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [ 821.7354, 8.1450, 286.2108], // behind fruit stand towards fortress
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ -0.0001, 0.7524, -0.0001, 0.6586], // quaternion
+      "bsphere": [ 821.7354, 8.1450, 286.2108, 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-crate-2",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  1141.6962, 21.2807, 143.7433 ], // on rooftop near stack of fruit stands / yellow barrier skip deathwarp
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.0000, 0.2158, 0.0000, 0.9764 ], // quaternion
+      "bsphere": [  1141.6962, 21.2807, 143.7433 , 10], // bounding sphere
+      "lump": {
+        "name": "ctysluma-crate-3",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
     }
+
   ]
 }
