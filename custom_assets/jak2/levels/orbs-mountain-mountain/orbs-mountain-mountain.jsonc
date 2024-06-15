@@ -1663,6 +1663,16 @@
         "name":"mountain-skill-157"
       }
     },
+    {
+      "trans": [     -611.4478, 90.5089, 9.2176], // in dark eco near cube puzzle
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -611.4478, 90.5089, 9.2176, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-158"
+      }
+    },
     
     // CRATES
     {
@@ -1792,19 +1802,129 @@
           1 // amount?
         ]
       }
-    }
+    },
     
-    // // HOVER ORBS
-    // {
-    //   "trans": [ 463.0,    26.78,   54.1  ], // 3 on left at start
-    //   "extype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"city-skill-02",
-    //     "pickup-amount": ["float", 3.0]  // goldge
-    //   }
-    // }
+    // HOVER ORBS
+    {
+      "trans": [      -602.7400, 174.6519, 275.9643], // up on mountain up high above initial path from top warp (towards forest)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -602.7400, 174.6519, 275.9643, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   -565.4301, 183.0010, 176.6245], // up on mountain up high above top warp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -565.4301, 183.0010, 176.6245, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [     -543.6718, 79.4496, 115.2997], // up in crevice in mountain above gridrails opposite from mincan
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -543.6718, 79.4496, 115.2997, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ -481.70,  81.09,  68.85], // way up on mountain above grindrails, closer to mincan
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -481.70,  81.09,  68.85, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   -692.3604, 156.2912, 30.6878], // up in designs in precursor crap, above rhino sumo stage
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -692.3604, 156.2912, 30.6878, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-05",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -713.35, 179.19,  28.55], // up higher on precursor thing above rhino sumo stage, near left blue light
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -713.35, 179.19,  28.55, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-06",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [    -671.0198, 186.6841, 13.4977], // up higher on precursor thing above rhino sumo stage, inside right blue light
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -671.0198, 186.6841, 13.4977, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-07",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -873.25, 143.32, 187.87], // up on flat section of precursor thing above rhino near artifact collapse stage
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -873.25, 143.32, 187.87, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-08",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [     -880.5627, 101.7258, 162.9497], // up on mountain against precursor stuff above bottom of avalanche
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -880.5627, 101.7258, 162.9497, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-09",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -877.7053, 190.6204, 243.6135], // up on flat section of precursor thing left of blue lights above artifact collapse stage
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -877.7053, 190.6204, 243.6135, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-10",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -854.1184, 205.8301, 202.1114], // up on blue light above artifact collapse stage
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -854.1184, 205.8301, 202.1114, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-11",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    }
   ]
 }
