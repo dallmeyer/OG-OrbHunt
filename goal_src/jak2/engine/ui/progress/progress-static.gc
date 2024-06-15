@@ -595,7 +595,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-toggle-beard)
                                                       :scale #t
-                                                      :cost 5
+                                                      :cost 25
                                                       :can-toggle #t
                                                       :flag (game-secrets toggle-beard)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -603,7 +603,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-hflip-screen)
                                                       :scale #t
-                                                      :cost 15
+                                                      :cost 50
                                                       :can-toggle #t
                                                       :flag (game-secrets hflip-screen)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -611,7 +611,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-big-head)
                                                       :scale #t
-                                                      :cost 30
+                                                      :cost 75
                                                       :can-toggle #t
                                                       :flag (game-secrets big-head)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -619,7 +619,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-small-head)
                                                       :scale #t
-                                                      :cost 45
+                                                      :cost 100
                                                       :can-toggle #t
                                                       :flag (game-secrets little-head)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -627,7 +627,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-scrapbook)
                                                       :scale #t
-                                                      :cost 55
+                                                      :cost 125
                                                       :can-toggle #f
                                                       :flag (game-secrets scrap-book-1)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -635,7 +635,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-sceneplayer-1)
                                                       :scale #t
-                                                      :cost 65
+                                                      :cost 150
                                                       :can-toggle #f
                                                       :flag (game-secrets scene-player-1)
                                                       :avail-after (game-task-node ruins-enemy-resolution)
@@ -643,7 +643,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-highscores-gungame-blue)
                                                       :scale #t
-                                                      :cost 75
+                                                      :cost 175
                                                       :can-toggle 'auto
                                                       :flag (game-secrets gungame-blue)
                                                       :avail-after (game-task-node ruins-enemy-resolution)
@@ -651,7 +651,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-sceneplayer-2)
                                                       :scale #t
-                                                      :cost 95
+                                                      :cost 200
                                                       :can-toggle #f
                                                       :flag (game-secrets scene-player-2)
                                                       :avail-after (game-task-node tomb-boss-resolution)
@@ -659,7 +659,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-highscores-gungame-dark)
                                                       :scale #t
-                                                      :cost #x69
+                                                      :cost 250
                                                       :can-toggle 'auto
                                                       :flag (game-secrets gungame-dark)
                                                       :avail-after (game-task-node sewer-escort-get-gun)
@@ -667,7 +667,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-sceneplayer-3)
                                                       :scale #t
-                                                      :cost #x7d
+                                                      :cost 300
                                                       :can-toggle #f
                                                       :flag (game-secrets scene-player-3)
                                                       :avail-after (game-task-node nest-boss-resolution)
@@ -675,7 +675,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-highscores-reverse-races)
                                                       :scale #t
-                                                      :cost #x87
+                                                      :cost 350
                                                       :can-toggle 'auto
                                                       :flag (game-secrets reverse-races)
                                                       :avail-after (game-task-node stadium-race-class1-resolution)
@@ -683,7 +683,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-levelselect)
                                                       :scale #t
-                                                      :cost #x91
+                                                      :cost 400
                                                       :can-toggle #f
                                                       :flag (game-secrets level-select)
                                                       :avail-after (game-task-node nest-boss-resolution)
@@ -691,7 +691,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-endless-ammo)
                                                       :scale #t
-                                                      :cost #x9b
+                                                      :cost 500
                                                       :can-toggle #t
                                                       :flag (game-secrets endless-ammo)
                                                       :avail-after (game-task-node nest-boss-resolution)
@@ -699,7 +699,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-endless-dark)
                                                       :scale #t
-                                                      :cost #xa5
+                                                      :cost 750
                                                       :can-toggle #t
                                                       :flag (game-secrets endless-dark)
                                                       :avail-after (game-task-node nest-boss-resolution)
@@ -707,7 +707,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-invulnerable)
                                                       :scale #t
-                                                      :cost #xaf
+                                                      :cost 1000
                                                       :can-toggle #t
                                                       :flag (game-secrets invulnerable)
                                                       :avail-after (game-task-node nest-boss-resolution)
@@ -715,15 +715,16 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-hero-mode)
                                                       :scale #t
-                                                      :cost #xc8
+                                                      :cost 2000
                                                       :can-toggle #f
                                                       :flag (game-secrets hero-mode)
                                                       :avail-after (game-task-node fortress-escape-start)
                                                       )
+                                                    ;; hero mode from here down
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-toggle-beard)
                                                       :scale #t
-                                                      :cost 5
+                                                      :cost 50
                                                       :can-toggle #t
                                                       :flag (game-secrets toggle-beard)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -731,7 +732,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-hflip-screen)
                                                       :scale #t
-                                                      :cost 15
+                                                      :cost 75
                                                       :can-toggle #t
                                                       :flag (game-secrets hflip-screen)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -739,7 +740,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-endless-ammo)
                                                       :scale #t
-                                                      :cost 20
+                                                      :cost 100
                                                       :can-toggle #t
                                                       :flag (game-secrets endless-ammo)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -747,7 +748,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-endless-dark)
                                                       :scale #t
-                                                      :cost 25
+                                                      :cost 200
                                                       :can-toggle #t
                                                       :flag (game-secrets endless-dark)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -755,7 +756,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-invulnerable)
                                                       :scale #t
-                                                      :cost 30
+                                                      :cost 500
                                                       :can-toggle #t
                                                       :flag (game-secrets invulnerable)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -763,7 +764,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-big-head)
                                                       :scale #t
-                                                      :cost 35
+                                                      :cost 600
                                                       :can-toggle #t
                                                       :flag (game-secrets big-head)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -771,7 +772,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-small-head)
                                                       :scale #t
-                                                      :cost 40
+                                                      :cost 700
                                                       :can-toggle #t
                                                       :flag (game-secrets little-head)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -779,7 +780,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-scrapbook)
                                                       :scale #t
-                                                      :cost 55
+                                                      :cost 800
                                                       :can-toggle #f
                                                       :flag (game-secrets scrap-book-1)
                                                       :avail-after (game-task-node fortress-escape-start)
@@ -787,7 +788,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-sceneplayer-1)
                                                       :scale #t
-                                                      :cost 65
+                                                      :cost 900
                                                       :can-toggle #f
                                                       :flag (game-secrets scene-player-1)
                                                       :avail-after (game-task-node ruins-enemy-resolution)
@@ -795,7 +796,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-highscores-gungame-blue)
                                                       :scale #t
-                                                      :cost 75
+                                                      :cost 1000
                                                       :can-toggle 'auto
                                                       :flag (game-secrets gungame-blue)
                                                       :avail-after (game-task-node ruins-enemy-resolution)
@@ -803,7 +804,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-sceneplayer-2)
                                                       :scale #t
-                                                      :cost 95
+                                                      :cost 1100
                                                       :can-toggle #f
                                                       :flag (game-secrets scene-player-2)
                                                       :avail-after (game-task-node tomb-boss-resolution)
@@ -811,7 +812,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-highscores-gungame-dark)
                                                       :scale #t
-                                                      :cost #x69
+                                                      :cost 1200
                                                       :can-toggle 'auto
                                                       :flag (game-secrets gungame-dark)
                                                       :avail-after (game-task-node sewer-escort-get-gun)
@@ -819,7 +820,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-sceneplayer-3)
                                                       :scale #t
-                                                      :cost #x7d
+                                                      :cost 1300
                                                       :can-toggle #f
                                                       :flag (game-secrets scene-player-3)
                                                       :avail-after (game-task-node nest-boss-resolution)
@@ -827,7 +828,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-highscores-reverse-races)
                                                       :scale #t
-                                                      :cost #x87
+                                                      :cost 1500
                                                       :can-toggle 'auto
                                                       :flag (game-secrets reverse-races)
                                                       :avail-after (game-task-node stadium-race-class1-resolution)
@@ -835,7 +836,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-levelselect)
                                                       :scale #t
-                                                      :cost #x91
+                                                      :cost 2000
                                                       :can-toggle #f
                                                       :flag (game-secrets level-select)
                                                       :avail-after (game-task-node nest-boss-resolution)
@@ -843,7 +844,7 @@
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-mega-scrapbook)
                                                       :scale #t
-                                                      :cost #xc8
+                                                      :cost 3000
                                                       :can-toggle #f
                                                       :flag (game-secrets scrap-book-2)
                                                       :avail-after (game-task-node fortress-escape-start)

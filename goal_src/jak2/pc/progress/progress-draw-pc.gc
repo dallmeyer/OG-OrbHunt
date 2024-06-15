@@ -1478,6 +1478,7 @@
                                                  50
                                                  45
                                                  ))))
+       (+! (-> arg2 origin x) -9.0)
        (print-game-text (string-format "~D" (-> arg0 cost)) arg2 #f 44 (bucket-id progress))
        )
       ((and (not s4-0) (= (-> arg0 can-toggle) #t) (logtest? (-> *game-info* secrets) (-> arg0 flag)))
