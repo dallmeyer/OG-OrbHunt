@@ -610,7 +610,7 @@
                                  :color (new 'static 'rgba :r #xff :g #xff :b #xff :a #x80))
                                  
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 884736.0 :y 32768.0 :z 9445.376 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 95.67)  :y (meters 8.2) :z (meters 87.65) :w 1.0)
                                  :flags (minimap-flag bigmap city-only)
                                  :name "bbush-genc"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x3))
@@ -618,7 +618,7 @@
                                  :color (new 'static 'rgba :r #xff :g #xff :b #xff :a #x80))
                                  
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 159744.0 :y 32768.0 :z 1081344.0 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 234.4506) :y (meters 11.1294) :z (meters 6.7339) :w 1.0)
                                  :flags (minimap-flag bigmap city-only)
                                  :name "bbush-genc-2"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x3))
@@ -714,8 +714,7 @@
                                  :color (new 'static 'rgba :r #xff :g #xff :b #xff :a #x80))
                                  
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x -733184.0 :y 32768.0 :z 3481600.0 :w 1.0)
-                                ;;  :default-position (new 'static 'vector :x -1065162.7500 :y 50462.7539 :z 2883410.0 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters -314.5069)  :y (meters 7.9994)  :z (meters 853.2808) :w 1.0)
                                  :flags (minimap-flag bigmap city-only)
                                  :name "bbush-marka"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x3))

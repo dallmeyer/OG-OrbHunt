@@ -901,15 +901,24 @@
       (set! (-> (the (pointer float) (get-tag-index-data arg0 2))) (degrees 138.0))
       )
     ;; === ctygenc) canals connecting ctygena and ctypal) ===
-    ;; (('burning-bush-) ;; orbhunt - 
-    ;;   (set-vector-meters! (-> arg0 extra trans) ) ;; 
-    ;;   )
+    (('burning-bush-4) ;; green eco collection - 
+      (set-vector-meters! (-> arg0 extra trans) 234.4506 11.1294 6.7339) ;; just up on ledge near where it normally is, on northern loop
+      )
+    (('burning-bush-18) ;; unused
+      (set-vector-meters! (-> arg0 extra trans)  95.67  8.2  87.65)
+      (set-vector! (-> arg0 quat) 0.0 1.0 0.0 0.0)
+      )
+
     ;; === ctysluma (near hideout) ===
     (('burning-bush-9)  ;; orbhunt - more related overrides in mod-override-burning-bush-get-on!
      (set-vector-meters! (-> arg0 extra trans) 1125.92   8.14 149.91)) ;; near yellow barrier skip hidden by fruit
       
-    ;; === ctyslumb (near prison exit) ===
+    ;; === ctysluma/b ===
     (('burning-bush-17)  ;; orbhunt - more related overrides in mod-override-burning-bush-get-on!
+     (set-vector-meters! (-> arg0 extra trans) 827.57  24.6  56.04)) ;; atop roundabout building towards ctysluma
+      
+    ;; === ctyslumb (near prison exit) ===
+    (('burning-bush-X)  ;; orbhunt - more related overrides in mod-override-burning-bush-get-on!
      (set-vector-meters! (-> arg0 extra trans) 827.57  24.6  56.04)) ;; atop roundabout building towards ctysluma
       
     ;; === ctyslumc (water slums) ===
@@ -953,8 +962,10 @@
      (set-vector-meters! (-> arg0 extra trans) 1055.40   9.89 684.95))  ;; between generators midway thru level
      
     ;; === ctymarka ===
-    ;; (('burning-bush-3) ;; racepoint-1 and get-to-12
-    ;;  (set-vector-meters! (-> arg0 extra trans) -260.14   9.32 703.85))  ;; in some path between squares idk
+    (('burning-bush-3) ;; racepoint-1 / shuttle-1 / get-to-12 / bombots-X
+      (set-vector-meters! (-> arg0 extra trans) -314.5069  7.9994  853.2808)  ;; in corner of adjacent square from where it normally is, SW
+      (set-vector! (-> arg0 quat) 0.0001  -0.3729  -0.0003  0.9278)
+      )
     (('yakow-12)
       (set-vector-meters! (-> arg0 extra trans) -25.62  10.36 926.80)
       )
