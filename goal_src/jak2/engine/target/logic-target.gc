@@ -164,7 +164,8 @@
     (sv-304 string)
     )
   (when (and (= *cheat-mode* 'debug) (cpad-pressed? 0 select))
-    (format 0 "~6,,2m ~6,,2m ~6,,2m  ~%" (-> arg0 control trans x) (+ (-> arg0 control trans y) (meters 0.6)) (-> arg0 control trans z))
+    (format 0 ":x (meters ~6,,2m)  :y (meters ~6,,2m)  :z (meters ~6,,2m)  ~%" (-> arg0 control trans x) (+ (-> arg0 control trans y) (meters 0.6)) (-> arg0 control trans z))
+    (format 0 "~6,,2m  ~6,,2m  ~6,,2m  ~%" (-> arg0 control trans x) (+ (-> arg0 control trans y) (meters 0.6)) (-> arg0 control trans z))
     (format 0 "~6,,2m, ~6,,2m, ~6,,2m  ~%" (-> arg0 control trans x) (+ (-> arg0 control trans y) (meters 0.6)) (-> arg0 control trans z))
     )
   (with-pp

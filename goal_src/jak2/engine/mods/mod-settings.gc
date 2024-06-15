@@ -38,7 +38,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define ORB_HUNT_DEBUG? #f) ;; when #t, hold L2 for extra debug prints
-(define startingDebugContinuePoint "mountain-top")
+(define startingDebugContinuePoint "ctygenb-start")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -421,7 +421,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   40   ;; Mars Tomb (Right)
   170  ;; Metal Head Nest (Exterior)
   46   ;; Metal Head Nest (Interior)
-  182  ;; Mountain Temple
+  194  ;; Mountain Temple
   66   ;; No Man's Canyon
   6    ;; Onin's Tent
   2    ;; Oracle
