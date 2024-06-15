@@ -246,7 +246,7 @@
   )
 
 (defun speedrun-practice-store-temp-checkpoint ()
-  (when *target*
+  (when (and *target* (not (side-mish-active?)))
     (case (-> *target* state)
       ;; only store temp checkpoint if in one of these states
       ((target-look-around target-stance target-duck-stance target-wade-stance target-gun-stance)

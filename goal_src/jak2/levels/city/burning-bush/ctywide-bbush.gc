@@ -1839,7 +1839,7 @@ This commonly includes things such as:
 
 (define *bb-collection-info*
   (new 'static 'boxed-array :type bb-collection-info
-    (new 'static 'bb-collection-info  ;; beacon collection in ctygenb
+    (new 'static 'bb-collection-info  ;; green eco collection in ctygenc
       :user-data #x2
       :time (seconds 120)
       :colls (new 'static 'boxed-array :type burning-bush-collection-info
@@ -1905,29 +1905,29 @@ This commonly includes things such as:
               (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 1085972.5 :y 47554.56 :z 529817.6))))
         
       
-    (new 'static 'bb-collection-info ;; green eco collection in ctygenc
+    (new 'static 'bb-collection-info ;; beacon collection in ctygenb
       :time (seconds 120)
       :colls (new 'static 'boxed-array :type burning-bush-collection-info
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 691732.5 :y 45015.04 :z -1437450.2))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 871710.75 :y 45670.4 :z -1238425.6))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 1036943.4 :y 46571.52 :z -1118904.4))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 1275166.8 :y 11960.32 :z -1024819.2))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 1465712.6 :y 11182.08 :z -1191649.2))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 1366507.5 :y 69017.6 :z -1411809.2))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 1456455.6 :y 69017.6 :z -1106370.5))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 1171660.8 :y 69017.6 :z -998727.7))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 692592.6 :y 11878.4 :z -1012572.2))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 457277.44 :y 11141.12 :z -1011015.7))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 222494.72 :y 69795.84 :z -1272504.4))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 54886.4 :y 44154.88 :z -1290649.6))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x -710656.0 :y 44687.36 :z -1403945.0))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x -435036.16 :y 13189.12 :z -805724.2))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x -248176.64 :y 12083.2 :z -807444.5))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x -193986.56 :y 45629.44 :z -536125.44))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x -229335.05 :y 44851.2 :z -162201.6))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 125132.8 :y 43991.04 :z -190423.05))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 323952.62 :y 44851.2 :z -226344.95))
-              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x 460636.16 :y 44851.2 :z -615424.0))))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 281.16)  :y (meters  17.60)  :z (meters -353.69)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 350.25)  :y (meters  11.59)  :z (meters -438.71)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 287.68)  :y (meters  13.70)  :z (meters -405.16)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 149.54)  :y (meters  13.95)  :z (meters -423.66)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 222.62)  :y (meters  10.03)  :z (meters -490.01)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 205.58)  :y (meters  13.97)  :z (meters -585.56)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters  96.01)  :y (meters  12.61)  :z (meters -695.83)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 218.70)  :y (meters  11.59)  :z (meters -760.16)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 329.20)  :y (meters  11.59)  :z (meters -646.00)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 300.46)  :y (meters   9.82)  :z (meters -517.10)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 363.84)  :y (meters  14.85)  :z (meters -370.40)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 308.07)  :y (meters  12.06)  :z (meters -203.53)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 264.47)  :y (meters   8.60)  :z (meters -312.85)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 204.38)  :y (meters   8.60)  :z (meters -184.65)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 113.06)  :y (meters  14.32)  :z (meters -170.26)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters  57.21)  :y (meters   8.60)  :z (meters -194.70)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters  13.28)  :y (meters  15.97)  :z (meters -243.24)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 359.77)  :y (meters   1.45)  :z (meters -312.40)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters  95.27)  :y (meters  11.04)  :z (meters -247.97)))
+              (new 'static 'burning-bush-collection-info :pos (new 'static 'vector :x (meters 170.29)  :y (meters   9.57)  :z (meters -371.03)))))
         
       
     (new 'static 'bb-collection-info  ;; dark eco collection in ctyfarma
