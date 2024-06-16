@@ -575,6 +575,7 @@
   this
   )
 
+(define-extern *total-orbs* int)
 (defmethod give ((this game-info) (arg0 symbol) (arg1 float) (arg2 handle))
   (local-vars (ammo-max float))
   (with-pp
