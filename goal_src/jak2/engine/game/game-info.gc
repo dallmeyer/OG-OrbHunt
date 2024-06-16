@@ -1232,7 +1232,7 @@
       )
     (format
       #t
-      "~f ~f ~f ~% ~f ~f ~f)~%"
+      " ~f ~f ~f ~% ~f ~f ~f)~%"
       (-> gp-1 inv-camera-rot vector 1 x)
       (-> gp-1 inv-camera-rot vector 1 y)
       (-> gp-1 inv-camera-rot vector 1 z)

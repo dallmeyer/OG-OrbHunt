@@ -268,7 +268,7 @@
         (when (hover-need-to-cooldown?)
           ;; show hover cooldown text
           (clear *tmp-orb-hunt-str*)
-          (format *tmp-orb-hunt-str* "Hover cooldown: ~Ds" (/ (- (+ *last-hover-time* (seconds 60)) (current-time)) TICKS_PER_SECOND))
+          (format *tmp-orb-hunt-str* "Hover cooldown: ~Ds" (/ (- (+ *last-hover-time* (seconds 60)) (get-current-time)) TICKS_PER_SECOND))
           (pc-encode-utf8-string *tmp-orb-hunt-str* *pc-encoded-temp-string*)
           (set! (-> font-ctx color) (font-color orange))
           (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
@@ -939,6 +939,10 @@
      ;; fix rotation. 2 is 'rotoffset. do this to display: (set-entity! *entity-debug-inspect* (entity-by-name "burning-bush-8"))
      (set! (-> (the (pointer float) (get-tag-index-data arg0 2))) (degrees 180.0))
      )
+    (('burning-bush-6) ;; city-burning-bush-ring-2 /// city race 
+      (set-vector-meters! (-> arg0 extra trans) 56.5775 7.7351 1266.0883)
+      (set-vector! (-> arg0 quat)  0.0000  -0.5753  0.0000  0.8178)
+      )
 
     ;; === ctrfarma (between bazaar and ctygen, with mountain/forest exit) ===
     (('burning-bush-10) ;; city-burning-bush-get-to-8

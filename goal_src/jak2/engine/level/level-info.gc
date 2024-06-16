@@ -7440,7 +7440,7 @@
                    :want-sound (new 'static 'array symbol 3 'ctywide1 'outro1 'hiphog1))
         
                  (new 'static 'continue-point
-                   :name "ctyport-burning-bush-3"
+                   :name "ctyport-burning-bush-3" ;; burning-bush-8 / city-burning-bush-get-to-3 / port race
                    :level 'ctyport
                    :flags (continue-flags no-auto)
                    :trans (new 'static 'vector :x 1376975.1250 :y 32241.5449 :z 7037166.0000 :w 1.0)
@@ -7464,16 +7464,16 @@
                    :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3))
         
                  (new 'static 'continue-point
-                   :name "ctyport-burning-bush"
+                   :name "ctyport-burning-bush" ;; burning-bush-6 / city-burning-bush-ring-2 / city race
                    :level 'ctyport
                    :flags (continue-flags no-auto)
-                   :trans (new 'static 'vector :x -409080.22 :y 31759.154 :z 5577668.5 :w 1.0)
-                   :quat (new 'static 'vector :y 0.9767 :w -0.2145)
-                   :camera-trans (new 'static 'vector :x -378350.38 :y 52853.145 :z 5607808.0 :w 1.0)
+                   :trans (new 'static 'vector :x (meters 54.1962) :y (meters 7.7319) :z (meters 1272.3719) :w 1.0)
+                   :quat (new 'static 'vector :x 0.0000 :y 0.9963 :z 0.0000 :w 0.0852)
+                   :camera-trans (new 'static 'vector :x (meters 54.3618) :y (meters 12.8366) :z (meters 1284.7369) :w 1.0)
                    :camera-rot (new 'static 'inline-array vector3s 3
-                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.6993 0.0 0.7148))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.1256 0.9844 -0.1228))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.7036 -0.1757 -0.6884)))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.9999 0.0000 0.0123))
+                                (new 'static 'vector3s :data (new 'static 'array float 3 -0.0014 0.9926 -0.1210))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.0122 -0.1210 -0.9925)))
           
                    :on-goto #f
                    :vis-nick 'ctyport
