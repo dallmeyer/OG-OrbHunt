@@ -210,6 +210,15 @@
     (('attack)
      (let ((v1-1 (the-as object (-> arg3 param 1))))
        (when (!= (-> (the-as attack-info v1-1) id) (-> this incoming-attack-id))
+         ;; fart when dropping orb
+         (when (name= (-> this name) "yakow-8")
+          (let ((orb (the skill (process-by-ename "ctyfarmb-skill-23"))))
+            (when (and orb (logtest? (-> orb draw status) (draw-control-status no-draw-bounds)))
+              (play-sound-file "custom_assets/jak2/audio/fart1.mp3" 100)
+              )
+            )
+          )
+
          (set! (-> this incoming-attack-id) (-> (the-as attack-info v1-1) id))
          (go (method-of-object this kicked))
          )

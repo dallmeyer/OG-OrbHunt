@@ -1130,10 +1130,8 @@
 
 (defmethod new mod-settings-jak2 ((allocation symbol) (type-to-make type))
   "make a new mod-settings-jak2"
-  (format 0 "new mod-settings-jak2 PRE!~%")
   (let ((obj (object-new allocation type-to-make (the-as int (-> type-to-make size)))))
     (initialize obj)
-    (format 0 "new mod-settings-jak2!~%")
     (inspect obj)
     obj))
 

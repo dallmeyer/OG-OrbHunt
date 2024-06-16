@@ -919,6 +919,7 @@
   (none)
   )
 
+(define-extern *total-orbs* int)
 (defmethod draw-option ((this menu-main-menu-option) (arg0 progress) (arg1 font-context) (arg2 int) (arg3 symbol))
   (-> arg1 flags)
   (when (and (= (-> arg0 menu-transition) 0.0) (and (= (-> arg0 ring-angle) (-> arg0 ring-want-angle))
@@ -1158,6 +1159,17 @@
            )
          )
        )
+      ((= (-> this name) (text-id progress-root-orb-counts))
+        ;; title
+        (print-game-text (lookup-text! *common-text* (-> this name) #f) arg1 #f 44 (bucket-id progress))
+        ;; count
+        (set! (-> arg1 origin y) (the float (if (= (get-aspect-ratio) 'aspect4x3)
+                                                210
+                                                200
+                                                )))
+        (set-scale! arg1 0.6)
+        (print-game-text (string-format "(~D/~D)" (the int (-> *game-info* skill-total)) *total-orbs*) arg1 #f 44 (bucket-id progress))
+        )
       (else
         (print-game-text (lookup-text! *common-text* (-> this name) #f) arg1 #f 44 (bucket-id progress))
         )
@@ -1565,7 +1577,15 @@
       (set! (-> sv-48 height) 50.0)
       (set! (-> sv-48 origin y) (the float sv-16))
       (set-color! sv-48 (font-color progress))
-      (print-game-text (lookup-text! *common-text* s0-0 #f) sv-48 #f 44 (bucket-id progress))
+      (cond
+        ((= s0-0 (text-id progress-root-orb-counts))
+          (set! (-> sv-48 scale) 0.75)
+          (print-game-text (string-format "~S (~D/~D)" (lookup-text! *common-text* s0-0 #f) (the int (-> *game-info* skill-total)) *total-orbs*) sv-48 #f 44 (bucket-id progress))
+          )
+        (else
+          (print-game-text (lookup-text! *common-text* s0-0 #f) sv-48 #f 44 (bucket-id progress))
+          )
+        )
       (set-vector! (-> arg0 box 0 color) 64 128 128 (the int (* 128.0 s2-0)))
       (draw-savegame-box arg0 (the float gp-0) (the float (+ gp-0 s4-0)) (the float s5-0) (the float s5-0))
       (draw-savegame-box

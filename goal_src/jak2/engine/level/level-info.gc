@@ -8376,7 +8376,7 @@
                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3))
         
                  (new 'static 'continue-point
-                   :name "ctymarka-burning-bush" ;; racepoint-1 / shuttle-1 / get-to-X / bombots
+                   :name "ctymarka-burning-bush" ;; racepoint-1 / shuttle-1 / get-to-12 / bombots
                    :level 'ctymarka
                    :flags (continue-flags no-auto)
                    :trans (new 'static 'vector :x (meters -310.1910) :y (meters 7.9994) :z (meters 850.2111) :w 1.0)

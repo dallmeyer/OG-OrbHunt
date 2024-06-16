@@ -452,3 +452,8 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   143  ;; Weapons Factory (Interior)
   17   ;; Weapons Factory (Rooftop)
   ))
+
+(define *total-orbs* 0)
+(dotimes (lvl-idx LEVEL_ID_LEN)
+  (+! *total-orbs* (-> *level-orb-total-counts-fixed* lvl-idx))
+  )

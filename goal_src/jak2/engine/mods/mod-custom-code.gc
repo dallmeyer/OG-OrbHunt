@@ -125,7 +125,9 @@ an orb |#
       )
     (('blackout)
       ;; Code here runs after jak dies (and any death cutscene finishes), during the blackout before he spawns
-
+      
+      ;; reset any hover cooldown since u died ig
+      (set! *last-hover-time* (the-as time-frame #f))
       )
     )
   
