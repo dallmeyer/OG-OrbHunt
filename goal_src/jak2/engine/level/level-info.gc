@@ -6823,16 +6823,16 @@
                    :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3))
         
                  (new 'static 'continue-point
-                   :name "ctyslumb-burning-bush"
+                   :name "ctyslumb-burning-bush" ;; burning-bush-1 / ring-1 / ring-3
                    :level 'ctyslumb
                    :flags (continue-flags no-auto)
-                   :trans (new 'static 'vector :x 2895687.8 :y 33280.41 :z -332780.75 :w 1.0)
-                   :quat (new 'static 'vector :x 0.0002 :y 0.5948 :z -0.0003 :w 0.8038)
-                   :camera-trans (new 'static 'vector :x 2892613.8 :y 54387.508 :z -383899.25 :w 1.0)
+                   :trans (new 'static 'vector :x (meters 733.3951) :y (meters 22.6546) :z (meters -277.2350) :w 1.0)
+                   :quat (new 'static 'vector :x 0.0001 :y 0.8996 :z 0.0016 :w 0.4366)
+                   :camera-trans (new 'static 'vector :x (meters 736.1292) :y (meters 27.7208) :z (meters -265.3600) :w 1.0)
                    :camera-rot (new 'static 'inline-array vector3s 3
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.9924 0.0 -0.123))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.0142 0.9932 0.1152))
-                                (new 'static 'vector3s :data (new 'static 'array float 3 0.1221 -0.1161 0.9856)))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.9867 -0.0000 0.1625))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.0185 0.9934 -0.1125))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.1614 -0.1140 -0.9802)))
           
                    :on-goto #f
                    :vis-nick 'ctyslumb
@@ -6847,7 +6847,7 @@
                    :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3))
         
                  (new 'static 'continue-point
-                   :name "ctyslumb-burning-bush-2"
+                   :name "ctyslumb-burning-bush-2" ;; burning-bush-17 / get-to-X
                    :level 'ctyslumb
                    :flags (continue-flags no-auto)
                    :trans (new 'static 'vector :x 3391714.5000 :y 101622.2343 :z 242877.6093 :w 1.0)

@@ -918,8 +918,10 @@
      (set-vector-meters! (-> arg0 extra trans) 827.57  24.6  56.04)) ;; atop roundabout building towards ctysluma
       
     ;; === ctyslumb (near prison exit) ===
-    (('burning-bush-X)  ;; orbhunt - more related overrides in mod-override-burning-bush-get-on!
-     (set-vector-meters! (-> arg0 extra trans) 827.57  24.6  56.04)) ;; atop roundabout building towards ctysluma
+    (('burning-bush-1)  ;; ring-1 / ring-3
+     (set-vector-meters! (-> arg0 extra trans) 737.3585 22.0 -284.3110 ) ;; atop roundabout building after path from ctysluma
+     (set-vector! (-> arg0 quat) -0.0011  0.8530  0.0013  0.5218)
+     )
       
     ;; === ctyslumc (water slums) ===
     (('burning-bush-11) ;; orbhunt - more related overrides in mod-override-burning-bush-get-on!

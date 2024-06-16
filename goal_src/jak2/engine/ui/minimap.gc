@@ -634,9 +634,9 @@
                                  :color (new 'static 'rgba :r #xff :g #xff :b #xff :a #x80))
                                  
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 2891899.0 :y 32768.0 :z -306487.28 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 737.3585) :y (meters 22.6763) :z (meters -284.3110) :w 1.0)
                                  :flags (minimap-flag bigmap city-only)
-                                 :name "bbush-slumb"
+                                 :name "bbush-slumb" ;; burning-bush-1 / ring-1 / ring-3
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x3))
                                  :scale 1.0
                                  :color (new 'static 'rgba :r #xff :g #xff :b #xff :a #x80))
@@ -644,7 +644,7 @@
                                (new 'static 'minimap-class-node
                                  :default-position (new 'static 'vector :x 3389633.2500 :y 102790.8359 :z 228242.7968 :w 1.0)
                                  :flags (minimap-flag bigmap city-only)
-                                 :name "bbush-slumb-2" ;; burning-bush-17
+                                 :name "bbush-slumb-2" ;; burning-bush-17 / get-to-X
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x3))
                                  :scale 1.0
                                  :color (new 'static 'rgba :r #xff :g #xff :b #xff :a #x80))
