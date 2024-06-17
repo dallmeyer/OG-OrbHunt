@@ -1517,7 +1517,7 @@
   ;; need to cooldown if we have a last hover time and it isn't 1m ago
   (if (and (-> *mod-settings* hover-restriction?)
            *last-hover-time*
-           (not (g-time-elapsed? *last-hover-time* (seconds 60)))
+           (not (g-time-elapsed? *last-hover-time* (seconds 30)))
            )
     #t
     #f
