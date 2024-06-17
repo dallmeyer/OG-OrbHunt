@@ -7,7 +7,7 @@ Play via the [openGOAL mod-launcher](https://jakmods.dev)!
 ## Concept
 The core idea is the same as the [Jak 1 Orb Hunt](README_JAK1.md) - it's a collectathon across all the Jak II levels. This time however, it's not just the vanilla collectables that are moved around 😈 Since the Precursor Orbs in Jak II only exist in a handful of levels, and there's only 286(ish) in total, it just wasn't really enough to spread across the entire game. Soooo I added a few Orbs...
 
-There are now XXXX orbs in total spread across every level - and I mean *every* level - in the game.
+There are now 3125 orbs in total spread across every level in the game - and I mean every level 😎
 
 ## Gameplay
 - Normally in Jak II, there are certain levels or areas that you can only reach at specific points in the storyline, and cannot revisit during post-game
