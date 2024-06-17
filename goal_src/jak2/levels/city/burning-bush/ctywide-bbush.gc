@@ -508,136 +508,137 @@
 (define *bb-ring-info* (new 'static 'boxed-array :type bb-ring-info
                          ;; ctyslumb / burning-bush-1 / city-burning-bush-ring-3
                          (new 'static 'bb-ring-info
-                           :time (seconds 8)
-                           :start-pos (new 'static 'vector :x 2920693.8 :y 20960.0 :z -333086.72 :w 1.0)
+                           :time (seconds 11.25)
+                           :start-pos (new 'static 'vector :x (meters 736.10)  :y (meters  24.70)  :z (meters -274.62)   :w 1.0)
                            :rings (new 'static 'boxed-array :type city-race-ring-info
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 3070796.2 :y 43205.02 :z -289035.47 :w 8995.472)
+                                     :pos (new 'static 'vector :x (meters 766.04)  :y (meters  27.07)  :z (meters -182.42)   :w 1226.6175)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 3351872.0 :y 42851.125 :z 86396.11 :w 14760.418)
+                                     :pos (new 'static 'vector :x (meters 691.68)  :y (meters  14.06)  :z (meters -118.97)   :w -1451.0982)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 3540834.8 :y 72001.54 :z 367432.5 :w 4834.5728)
+                                     :pos (new 'static 'vector :x (meters 827.60)  :y (meters  31.11)  :z (meters  55.86)   :w 6852.4609)
+                                     :boost 1.0
+                                     :dist 819200.0)
+                               
+                                   (new 'static 'city-race-ring-info  ;; by neon sign
+                                     :pos (new 'static 'vector :x (meters 996.96)  :y (meters  23.85)  :z (meters 169.19)    :w 9462.2841)
+                                     :boost 1.0
+                                     :dist 819200.0)
+                               
+                                   (new 'static 'city-race-ring-info  ;; in northern trench by hideout
+                                     :pos (new 'static 'vector :x (meters 1074.19)  :y (meters   1.31)  :z (meters  78.47)    :w -13772.8076)
+                                    ;;  :pos (new 'static 'vector :x (meters 943.52)  :y (meters   2.16)  :z (meters 346.16)    :w 16075.2041)
+                                     :boost 1.0
+                                     :dist 819200.0)
+                               
+                                   (new 'static 'city-race-ring-info  ;; to east of middle trench
+                                     :pos (new 'static 'vector :x (meters 1159.87)  :y (meters  10.49)  :z (meters 200.48)   :w -29876.1445)
+                                     :boost 1.0
+                                     :dist 819200.0)
+                               
+                                   (new 'static 'city-race-ring-info ;; pipes near ctyindb
+                                     :pos (new 'static 'vector :x (meters 1107.20)  :y (meters  19.00)  :z (meters 356.05)    :w -976.8892)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 3950253.8 :y 43052.24 :z 800616.06 :w 5659.835)
+                                     :pos (new 'static 'vector :x (meters 1153.17)  :y (meters  11.45)  :z (meters 468.04)   :w -246.9142)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4657052.5 :y 42684.414 :z 806750.6 :w 8782.443)
+                                     :pos (new 'static 'vector :x (meters 1044.26)  :y (meters  26.67)  :z (meters 418.03)   :w -20887.5976)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4643791.5 :y 70061.67 :z 1225949.6 :w -7646.1035)
+                                     :pos (new 'static 'vector :x (meters 1029.07)  :y (meters  26.52)  :z (meters 514.05)   :w 8166.2543)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4473472.0 :y 46644.84 :z 1626665.4 :w 1340.4115)
+                                     :pos (new 'static 'vector :x (meters 1132.04)  :y (meters  28.15)  :z (meters 623.12)   :w 660.7589)
+                                     :boost 1.0
+                                     :dist 819200.0)
+                               
+                                   (new 'static 'city-race-ring-info ;; pipes near ctyindb bbush
+                                     :pos (new 'static 'vector :x (meters 1061.94)  :y (meters  13.64)  :z (meters 667.54)  :w -29122.3613)
+                                     :boost 1.0
+                                     :dist 819200.0)
+                               
+                                   (new 'static 'city-race-ring-info ;; overpass ramp
+                                     :pos (new 'static 'vector :x (meters 788.25)  :y (meters  10.71)  :z (meters 667.19)    :w -5705.1386)
+                                     :boost 1.0
+                                     :dist 819200.0)
+
+                                   (new 'static 'city-race-ring-info ;; on overpass loop
+                                     :pos (new 'static 'vector :x (meters 936.17)  :y (meters  27.10)  :z (meters 637.14)   :w 8167.6054)
+                                     :boost 1.0
+                                     :dist 819200.0)
+                               
+                                   (new 'static 'city-race-ring-info ;; drop off overpass loop near ctyinda bbush
+                                     :pos (new 'static 'vector :x (meters 922.47)  :y (meters  26.41)  :z (meters 851.39)   :w 10165.9882)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4650624.0 :y 62401.332 :z 1927367.1 :w 32186.242)
+                                     :pos (new 'static 'vector :x (meters 1041.31)  :y (meters  10.84)  :z (meters 960.23)   :w 2167.6699)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4236069.5 :y 109972.69 :z 1854959.2 :w -13605.638)
+                                     :pos (new 'static 'vector :x (meters 1128.02)  :y (meters  12.27)  :z (meters 1084.67)   :w -15366.7285)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 3701647.0 :y 113170.84 :z 1698812.8 :w -2880.9443)
+                                     :pos (new 'static 'vector :x (meters 1036.04)  :y (meters   9.96)  :z (meters 1154.38)   :w -15342.0556)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 3724027.5 :y 111864.22 :z 2344453.0 :w 11307.618)
+                                     :pos (new 'static 'vector :x (meters 907.54)  :y (meters  12.90)  :z (meters 994.26)   :w -23745.4062)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4235592.5 :y 109263.26 :z 2386389.0 :w 16874.646)
+                                     :pos (new 'static 'vector :x (meters 818.90)  :y (meters  18.35)  :z (meters 1076.04)   :w 16563.1054)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4495594.5 :y 101352.66 :z 2342717.5 :w 19199.955)
+                                     :pos (new 'static 'vector :x (meters 847.41)  :y (meters  27.47)  :z (meters 1014.80)   :w -23520.2792)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4557376.5 :y 44639.848 :z 2683306.0 :w -17726.906)
+                                     :pos (new 'static 'vector :x (meters 962.00)  :y (meters  27.94)  :z (meters 872.01)   :w 24501.4726)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4011281.2 :y 72860.47 :z 2645215.8 :w -4971.9067)
+                                     :pos (new 'static 'vector :x (meters 1079.88)  :y (meters  11.15)  :z (meters 776.50)   :w 16651.4765)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 3543313.2 :y 47093.76 :z 2577456.0 :w -16974.389)
+                                     :pos (new 'static 'vector :x (meters 984.40)  :y (meters  11.82)  :z (meters 893.44)    :w 15852.0927)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 3204822.2 :y 74465.28 :z 2832405.8 :w 1022.9805)
+                                     :pos (new 'static 'vector :x (meters 1118.42)  :y (meters  16.71)  :z (meters 806.76)    :w 17292.8046)
                                      :boost 1.0
                                      :dist 819200.0)
                                
                                    (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 3519941.5 :y 115895.09 :z 3035037.8 :w 3764.133)
-                                     :boost 1.0
-                                     :dist 819200.0)
-                               
-                                   (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 3583739.5 :y 112346.32 :z 3433880.0 :w 15266.283)
-                                     :boost 1.0
-                                     :dist 819200.0)
-                               
-                                   (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 3925602.0 :y 115456.82 :z 3560821.2 :w 12493.182)
-                                     :boost 1.0
-                                     :dist 819200.0)
-                               
-                                   (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4214438.5 :y 109173.15 :z 3710432.5 :w 3543.022)
-                                     :boost 1.0
-                                     :dist 819200.0)
-                               
-                                   (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4292878.5 :y 113903.62 :z 4136553.8 :w 13073.904)
-                                     :boost 1.0
-                                     :dist 819200.0)
-                               
-                                   (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4557998.5 :y 108473.14 :z 4093858.2 :w 32527.1)
-                                     :boost 1.0
-                                     :dist 819200.0)
-                               
-                                   (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4457908.0 :y 44532.94 :z 3678150.8 :w -16948.848)
-                                     :boost 1.0
-                                     :dist 819200.0)
-                               
-                                   (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 3962912.0 :y 42423.09 :z 3524606.0 :w 24137.527)
-                                     :boost 1.0
-                                     :dist 819200.0)
-                               
-                                   (new 'static 'city-race-ring-info
-                                     :pos (new 'static 'vector :x 4440953.0 :y 42390.734 :z 3293434.8 :w 31590.809)
+                                     :pos (new 'static 'vector :x (meters 1070.30)  :y (meters  30.29)  :z (meters 1070.37)   :w -22559.1054)
                                      :boost 1.0
                                      :dist 819200.0)))
                                
