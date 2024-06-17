@@ -965,7 +965,7 @@
   (set! (-> obj orb-map-icons?) #f)
   (set! (-> obj pseudo-savestates?) #f)
   (set! (-> obj closest-orb?) #f)
-  (set! (-> obj hover-restriction?) #t)
+  (set! (-> obj hover-restriction?) #f)
   (set! (-> obj slip-assist) (slip-assist-mode normal))
 
   0)

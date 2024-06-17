@@ -89,7 +89,8 @@
     )
   )
 
-(define *main-options* *menu-options-orig*)
+;; (define *main-options* *menu-options-orig*)
+(define *main-options* *menu-options-orbs*)
 
 (define *main-options-debug*
   (new 'static 'menu-option-list

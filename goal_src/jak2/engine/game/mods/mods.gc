@@ -583,42 +583,44 @@
             )
           )
 
-        ;; print orb counts
-        (clear *tmp-orb-hunt-str*)
-        (let ((row-offset 0)
-              (xpos (if (= 1.0 (-> *pc-settings* aspect-ratio-scale)) 507.0 1019.0))
-              )
-          (dotimes (idx LEVEL_ID_LEN)
-            (when (or (-> *level-orb-active* idx)
-                      (and (= idx 45) (nonzero? (-> *level-orb-total-counts* idx)))
-                      )
-              (let ((color-str
-                        (cond
-                          ((= (-> *level-orb-collected-counts* idx) (-> *level-orb-total-counts* idx)) "<COLOR_GREEN>") ;; green if 100%
-                          ((nonzero? (-> *level-orb-collected-counts* idx)) "<COLOR_ORANGE>") ;; nonzero, orange
-                          (else "<COLOR_FLAT-YELLOW>") ;; zero, slight yellow
-                          )))
-                (format *tmp-orb-hunt-str* (string-format "<COLOR_DEFAULT>~S ~S~D / ~D~%"
-                                              (-> *level-id-names* idx)
-                                              color-str
-                                              (-> *level-orb-collected-counts* idx)
-                                              (-> *level-orb-total-counts* idx)
-                                              ))
-                (+! row-offset 1)
+        (when (not (movie?))
+          ;; print orb counts
+          (clear *tmp-orb-hunt-str*)
+          (let ((row-offset 0)
+                (xpos (if (= 1.0 (-> *pc-settings* aspect-ratio-scale)) 507.0 1019.0))
+                )
+            (dotimes (idx LEVEL_ID_LEN)
+              (when (or (-> *level-orb-active* idx)
+                        (and (= idx 45) (nonzero? (-> *level-orb-total-counts* idx)))
+                        )
+                (let ((color-str
+                          (cond
+                            ((= (-> *level-orb-collected-counts* idx) (-> *level-orb-total-counts* idx)) "<COLOR_GREEN>") ;; green if 100%
+                            ((nonzero? (-> *level-orb-collected-counts* idx)) "<COLOR_ORANGE>") ;; nonzero, orange
+                            (else "<COLOR_FLAT-YELLOW>") ;; zero, slight yellow
+                            )))
+                  (format *tmp-orb-hunt-str* (string-format "<COLOR_DEFAULT>~S ~S~D / ~D~%"
+                                                (-> *level-id-names* idx)
+                                                color-str
+                                                (-> *level-orb-collected-counts* idx)
+                                                (-> *level-orb-total-counts* idx)
+                                                ))
+                  (+! row-offset 1)
+                  )
                 )
               )
-            )
-          
-          (when (nonzero? row-offset)
-            ;; (set! (-> font-ctx origin x) xpos)
-            (set! (-> font-ctx origin x) 507.0)
-            (set! (-> font-ctx origin y) (- 409.0 (* 9.0 row-offset)))
-            (set! (-> font-ctx color) (font-color white))
-            (logior! (-> font-ctx flags) (font-flags right))
             
-            (clear *pc-encoded-temp-string*)
-            (pc-encode-utf8-string *tmp-orb-hunt-str* *pc-encoded-temp-string*)
-            (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
+            (when (nonzero? row-offset)
+              ;; (set! (-> font-ctx origin x) xpos)
+              (set! (-> font-ctx origin x) 507.0)
+              (set! (-> font-ctx origin y) (- 409.0 (* 9.0 row-offset)))
+              (set! (-> font-ctx color) (font-color white))
+              (logior! (-> font-ctx flags) (font-flags right))
+              
+              (clear *pc-encoded-temp-string*)
+              (pc-encode-utf8-string *tmp-orb-hunt-str* *pc-encoded-temp-string*)
+              (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
+              )
             )
           )
         )
@@ -2083,24 +2085,26 @@
     
     ;; show bug report level info
     (true! *display-bug-report*)
-    ;; mark game won and give cheats
-    (task-close! "city-win-resolution")
+    (when (cpad-hold? 0 start)
+      ;; mark game won and give cheats
+      (task-close! "city-win-resolution")
+      )
     (logior! (-> *game-info* secrets) (game-secrets endless-dark invulnerable endless-ammo))
     )
 
   ;; missions VS orb count pause menu option
-  (when (not (paused?))
-    ;; (cond 
-    ;;   ((task-closed? "city-win-resolution")
-        ;; orb count menu
-        (set! *main-options* *menu-options-orbs*)
-      ;;   )
-      ;; (else
-      ;;   ;; normal mission menu
-      ;;   (set! *main-options* *menu-options-orig*)
-      ;;   )
-      ;; )
-    )
+  ;; (when (not (paused?))
+  ;;   (cond 
+  ;;     ((task-closed? "city-win-resolution")
+  ;;       ;; orb count menu
+  ;;       (set! *main-options* *menu-options-orbs*)
+  ;;       )
+  ;;     (else
+  ;;       ;; normal mission menu
+  ;;       (set! *main-options* *menu-options-orig*)
+  ;;       )
+  ;;     )
+  ;;   )
 
   ;; mini-bigmap stuff
   (when (not *progress-process*)
