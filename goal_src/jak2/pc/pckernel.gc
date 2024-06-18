@@ -936,7 +936,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun reset-mod-save-file ((obj mod-settings-jak2) (save-idx int))
-  (format 0 "resetting mod save file #~D~%" save-idx)
+  (dbg-format 0 "resetting mod save file #~D~%" save-idx)
   (dotimes (lvl-idx LEVEL_ID_LEN)
     (set! (-> obj save-data save-idx orb-counts lvl-idx) 0)
     )
@@ -944,7 +944,7 @@
   )
 
 (defun copy-mod-save-file ((obj mod-settings-jak2) (src-save-idx int) (dest-save-idx int))
-  (format 0 "copying mod save file #~D to #~D~%" src-save-idx dest-save-idx)
+  (dbg-format 0 "copying mod save file #~D to #~D~%" src-save-idx dest-save-idx)
   (dotimes (lvl-idx LEVEL_ID_LEN)
     (set! (-> obj save-data dest-save-idx orb-counts lvl-idx) (-> obj save-data src-save-idx orb-counts lvl-idx))
     )

@@ -1795,7 +1795,7 @@ auto-save-post
     (set! (-> self state-time) (-> *display* real-clock frame-counter))
     (let ((a0-9 (reserve-alloc *art-control*)))
       (while (not a0-9)
-        (if (>= (- (-> *display* real-clock frame-counter) (-> self state-time)) (seconds 60))
+        (if (>= (- (-> *display* real-clock frame-counter) (-> self state-time)) (seconds 10))
             (go-virtual error (mc-status-code no-memory))
             )
         (suspend)
