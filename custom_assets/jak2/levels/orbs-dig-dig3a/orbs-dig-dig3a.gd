@@ -7,5 +7,6 @@
   "metalkor-part.o"
   "rift-ring-ingame.o"
   "rift-ring-in-game-ag.go"
+  "warp-gate-ag.go"
   "orbs-dig-dig3a.go"
   ))

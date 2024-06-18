@@ -4,6 +4,7 @@
 ;; the actual file name still needs to be 8.3
 ("O1I.DGO"
  (
+  "warp-gate-ag.go"
   "air-train-ag.go"
   "orbs-default-halfpipe.go"
   ))
