@@ -1031,6 +1031,22 @@
     )
   )
 
+;; thx jak 3
+(defbehavior collectable-count crate ((arg0 process-tree))
+  (set! *global-search-count* 0)
+  (iterate-process-tree
+    arg0
+    (lambda ((arg0 process))
+      (if (type? arg0 collectable)
+          (set! *global-search-count* (+ *global-search-count* 1))
+          )
+      #t
+      )
+    *null-kernel-context*
+    )
+  *global-search-count*
+  )
+
 (defstate special-contents-die (crate)
   :virtual #t
   :event (behavior ((proc process) (argc int) (message symbol) (block event-message-block))
@@ -1048,6 +1064,7 @@
                   )
               (process-entity-status! self (entity-perm-status dead) #t)
               (process-entity-status! self (entity-perm-status subtask-complete) #t)
+              (process-entity-status! self (entity-perm-status bit-15) #f) ;; borrowed from jak 3
               (set! (-> gp-0 user-int8 0) 2)
               (let ((v0-0 (logclear (-> self mask) (process-mask sleep))))
                 (set! (-> self mask) v0-0)
@@ -1092,8 +1109,9 @@
       (set! (-> self fact fade-time) (the-as time-frame 0)) 
       )
     (drop-pickup (-> self fact) #t self (the-as fact-info #f) 0)
-    (set! (-> self child-count) (+ (process-count self) -1))
+    (set! (-> self child-count) (collectable-count self)) ;; borrowed from jak 3
     (process-entity-status! self (entity-perm-status bit-4) #t)
+    (process-entity-status! self (entity-perm-status bit-15) #t) ;; borrowed from jak 3
     (when (-> self entity)
       (let ((v1-32 (-> self entity extra perm)))
         (logior! (-> v1-32 status) (entity-perm-status bit-5))
@@ -1226,7 +1244,7 @@ This commonly includes things such as:
   (set! (-> this carry max-pull) 3686.4)
   (set! (-> this carry carry-radius) 3276.8)
   (set! (-> this target) (the-as handle #f))
-  ;; for babymode, add to minimap if containing orbs
+  ;; orb hunt - add to minimap if containing orbs
   (when (and (-> *mod-settings* orb-map-icons?) (= (-> this fact pickup-type) (pickup-type skill)))
     (set! (-> this minimap) (add-icon! *minimap* this 
       (the uint (cond
@@ -1320,7 +1338,9 @@ This commonly includes things such as:
 
 (defmethod crate-method-38 ((this crate))
   (when (-> this entity)
-    (if (>= (-> this entity extra perm user-int8 0) 1)
+    (if (and (>= (-> this entity extra perm user-int8 0) 1)
+             (logtest? (-> this entity extra perm status) (entity-perm-status bit-15)) ;; borrowed from jak 3
+             )
         (go (method-of-object this die) #t 0)
         )
     )
