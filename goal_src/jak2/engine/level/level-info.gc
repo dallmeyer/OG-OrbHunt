@@ -438,8 +438,9 @@
     :activate-func #f
     :deactivate-func #f
     :kill-func #f
-    :borrow-level (new 'static 'array symbol 2 #f #f)
-    :borrow-display? (new 'static 'array symbol 2 #f #f)
+    :borrow-size (new 'static 'array uint16 2 160 160)
+    :borrow-level (new 'static 'array symbol 2 #f 'otit)
+    :borrow-display? (new 'static 'array symbol 2 #f 'display)
     :texture-anim-tfrag #f
     :texture-anim-pris #f
     :texture-anim-shrub #f
@@ -16495,9 +16496,12 @@
 (define orbs-o1h  (orbs-borrow-level #xe3 'orbs-o1h  'orbs-o1h-vis  'o1h 'update-mood-village1))  ;; default-village1
 (define orbs-default-halfpipe  (orbs-borrow-level #xe4 'orbs-default-halfpipe  'orbs-default-halfpipe-vis  'o1i 'update-mood-default))
 
+(define otit  (orbs-borrow-level #xe5 'otit  'otit-vis  'o1k 'update-mood-default))
 
 (#when PC_PORT
   ;; (cons! *level-load-list* 'test-zone)
+  (cons! *level-load-list* 'otit)
+
   (cons! *level-load-list* 'orbs-default-halfpipe)
   (cons! *level-load-list* 'orbs-o1h)
   (cons! *level-load-list* 'orbs-nest-nestb)

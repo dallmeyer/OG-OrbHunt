@@ -789,7 +789,7 @@ into 7 sections, which might explain the weird sizes in the center.
              )
            (else
              ;; couldn't find it, die.
-             (format 0 "ERROR: level ~A could not find free ~S bank in the level-group heap~%"
+             (format 0 "ERROR: level ~A could not find free ~S bank in the level-group heap A~%"
                (-> this name)
                (enum->string load-buffer-mode mem-mode)
                )
@@ -915,7 +915,7 @@ into 7 sections, which might explain the weird sizes in the center.
           (cond
             ((zero? bits-to-use)
              ;; darn, couldn't find a spot.
-             (format 0 "ERROR: level ~A could not find free ~S bank in the level-group heap~%" (-> this name) (enum->string load-buffer-mode mem-mode))
+             (format 0 "ERROR: level ~A could not find free ~S bank in the level-group heap B~%" (-> this name) (enum->string load-buffer-mode mem-mode))
              (dotimes (s5-1 LEVEL_TOTAL)
                (if (!= (-> *level* level s5-1 status) 'inactive)
                    (format
