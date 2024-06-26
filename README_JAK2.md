@@ -42,15 +42,15 @@ There are now 3125 orbs in total spread across every level in the game - and I m
 - Note that the Stadium levels DO have open orbs, but they won't be spawned/cannot be collected while the race side missions are active. You'll have to find a way to load these levels without the race side missions being activated in order to get the open orbs 😉
 
 ## Difficulty Toggles
-Some collectables are well-hidden and/or annoying to reach - you may want to ease your pain by using some of the below options to change the difficulty (you can find them under Options > Game Options > Misc Options)
+Some collectables are well-hidden and/or annoying to reach - you may want to ease your pain by using some of the below options to change the difficulty (you can find them under Game Options > Orb Hunt Options)
 - AUTOSAVE ON ORB - when enabled, autosave will kick in every time you collect an orb
+- CLOSEST ORB - color-coded text displays the distance from Jak to the closest nearby Precursor Orb (including orbs within crates or other actors)
 - ORB MAP ICONS - when enabled, icons are shown on the map and minimap for Orbs in any active levels
 - PSEUDO SAVESTATES - set custom checkpoints that you can quickly reset to! These only work when Jak has a standpoint - you'll hear a ding to confirm/bonk if rejected
   - Hold R3 and press Dpad Down to store your current position
   - Hold R3 and press Dpad Up to reset back to your previously stored position
     - Note: this will also reset actors (green eco crates, enemies, etc), similar to dying or loading a save file
   - Note: if you reboot into _debug mode_, be sure `Game Mode` is enabled, not `Debug Mode`
-- CLOSEST ORB - color-coded text displays the distance from Jak to the closest nearby Precursor Orb (including orbs within crates or other actors)
 - SLIPPERY ASSIST
   - (NORMAL - normal physics)
   - LESS SLIP - Jak gets standpoints on most surfaces that he would normally slip off (just not steep surfaces/walls)
