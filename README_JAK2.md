@@ -55,4 +55,7 @@ Some collectables are well-hidden and/or annoying to reach - you may want to eas
   - (NORMAL - normal physics)
   - LESS SLIP - Jak gets standpoints on most surfaces that he would normally slip off (just not steep surfaces/walls)
   - SPIDERMAN - Jak gets standpoints on any surface/wall
-- HOVER RESTRICTION - when enabled, the game enforces that *only* the yellow/gold Orbs can be picked up by hovering. For any other Orbs, there is a 1m cooldown window after hovering during which you cannot collect the non-hover Orbs. Collecting a hover Orb will instantly clear the cooldown window.
+- HOVER RESTRICTION - when enabled, the game enforces a hoverless mode for most Orbs
+  - Only the yellow/gold "hover Orbs" can be picked up via hovering
+  - After any hovering, adds a 30s cooldown window during which you cannot collect *non-hover* Orbs
+    - Collecting a *hover* Orb so will instantly clear the cooldown
