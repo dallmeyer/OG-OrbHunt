@@ -58,4 +58,4 @@ Some collectables are well-hidden and/or annoying to reach - you may want to eas
 - HOVER RESTRICTION - when enabled, the game enforces a hoverless mode for most Orbs
   - Only the yellow/gold "hover Orbs" can be picked up via hovering
   - After any hovering, adds a 30s cooldown window during which you cannot collect *non-hover* Orbs
-    - Collecting a *hover* Orb so will instantly clear the cooldown
+    - Collecting a *hover* Orb will instantly clear the cooldown
