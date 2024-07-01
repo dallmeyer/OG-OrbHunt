@@ -268,7 +268,7 @@
         (when (hover-need-to-cooldown?)
           ;; show hover cooldown text
           (clear *tmp-orb-hunt-str*)
-          (format *tmp-orb-hunt-str* "Hover cooldown: ~Ds" (/ (- (+ *last-hover-time* (seconds 60)) (get-current-time)) TICKS_PER_SECOND))
+          (format *tmp-orb-hunt-str* "Hover cooldown: ~Ds" (/ (- (+ *last-hover-time* (seconds 30)) (get-current-time)) TICKS_PER_SECOND))
           (pc-encode-utf8-string *tmp-orb-hunt-str* *pc-encoded-temp-string*)
           (set! (-> font-ctx color) (font-color orange))
           (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
