@@ -33,7 +33,7 @@ There are now 3125 orbs in total spread across every level in the game - and I m
 ### Orb Guide
 - 🟡 JET-board hover glitch hints - certain orbs have a yellow/gold tint, and indicate that you should (and probably must) use the [hover glitch](https://www.youtube.com/watch?v=gEZQjj_pVuY&t=364s) to reach them
 - 🟠 Normal Orbs - any normal-looking orbs should NOT require the hover glitch
-- 🟣 Abahbounce hints - certain orbs have a blue/purple tint, and indicate that you should do an [Abahbounce](https://www.youtube.com/watch?v=gEZQjj_pVuY&t=487s) there (probably to reach a higher location)
+- 🟣 Abahbounce hints - certain orbs have a blue/purple tint, and indicate that you should do an [Abahbounce](https://www.youtube.com/watch?v=gEZQjj_pVuY&t=487s) at that spot (probably to reach another Orb at a higher location)
 
 ## Side Missions
 - You can still collect orbs from side missions like the original game, and they DO count towards the per-level HUD counters
