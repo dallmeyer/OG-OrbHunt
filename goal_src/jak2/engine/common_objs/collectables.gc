@@ -2047,9 +2047,7 @@ This commonly includes things such as:
         (set-vector! (-> this draw color-emissive) 0.2 0.2 0.2 1.0)
         )
       )
-    (when (-> *mod-settings* orb-map-icons?)
-      (set! (-> this minimap) (add-icon! *minimap* this (the uint map-class) (the-as int #f) (the-as vector #t) 0))
-      )
+    (set! (-> this minimap) (add-icon! *minimap* this (the uint map-class) (the-as int #f) (the-as vector #t) 0))
     )
   (set! (-> this part) (create-launch-control (-> *part-group-id-table* 1295) this))
   0

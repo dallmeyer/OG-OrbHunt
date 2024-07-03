@@ -771,14 +771,23 @@
           (while s3-2
             (let ((a2-3 (the-as connection-minimap s3-2)))
               (when (logtest? (-> a2-3 class flags) (minimap-flag bigmap))
-                (cond
-                  ((= (-> this bigmap-index) 20)
-                   (draw-from-minimap this s4-2 a2-3)
-                   )
-                  (else
-                    (when (not (logtest? (-> a2-3 class flags) (minimap-flag city-only)))
-                        (draw-from-minimap this s4-2 a2-3)
-                        )
+                ;; orb hunt - only draw orba connections if the setting is on
+                (when 
+                  (case (-> a2-3 class class)
+                    (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold))
+                      (-> *mod-settings* orb-map-icons?))
+                    (else
+                      #t)
+                    )
+                  (cond
+                    ((= (-> this bigmap-index) 20)
+                    (draw-from-minimap this s4-2 a2-3)
+                    )
+                    (else
+                      (when (not (logtest? (-> a2-3 class flags) (minimap-flag city-only)))
+                          (draw-from-minimap this s4-2 a2-3)
+                          )
+                      )
                     )
                   )
                 )

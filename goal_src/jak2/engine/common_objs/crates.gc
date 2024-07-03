@@ -1245,7 +1245,7 @@ This commonly includes things such as:
   (set! (-> this carry carry-radius) 3276.8)
   (set! (-> this target) (the-as handle #f))
   ;; orb hunt - add to minimap if containing orbs
-  (when (and (-> *mod-settings* orb-map-icons?) (= (-> this fact pickup-type) (pickup-type skill)))
+  (when (= (-> this fact pickup-type) (pickup-type skill))
     (set! (-> this minimap) (add-icon! *minimap* this 
       (the uint (cond
         ((= (-> this fact pickup-amount) 2.0)  ;; abah hint
