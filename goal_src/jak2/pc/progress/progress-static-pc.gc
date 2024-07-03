@@ -378,6 +378,16 @@ This gives us more freedom to write code how we want.
           (set! (-> *mod-settings* skill-starburst?) val)
           (commit-to-file *mod-settings*))))
 
+(defmacro misc-options-pc-closest-orb ()
+  `(new 'static 'menu-generic-boolean-option
+        :name (text-id progress-closest-orb)
+        :truthy-text (text-id progress-on)
+        :falsey-text (text-id progress-off)
+        :get-value-fn (lambda () (-> *mod-settings* closest-orb?))
+        :on-confirm (lambda ((val symbol))
+          (set! (-> *mod-settings* closest-orb?) val)
+          (commit-to-file *mod-settings*))))
+
 (defmacro misc-options-pc-orb-map-icons ()
   `(new 'static 'menu-generic-boolean-option
         :name (text-id progress-orb-map-icons)
@@ -398,14 +408,14 @@ This gives us more freedom to write code how we want.
           (set! (-> *mod-settings* pseudo-savestates?) val)
           (commit-to-file *mod-settings*))))
 
-(defmacro misc-options-pc-closest-orb ()
+(defmacro misc-options-pc-easy-abah ()
   `(new 'static 'menu-generic-boolean-option
-        :name (text-id progress-closest-orb)
+        :name (text-id progress-easy-abah)
         :truthy-text (text-id progress-on)
         :falsey-text (text-id progress-off)
-        :get-value-fn (lambda () (-> *mod-settings* closest-orb?))
+        :get-value-fn (lambda () (-> *mod-settings* easy-abah?))
         :on-confirm (lambda ((val symbol))
-          (set! (-> *mod-settings* closest-orb?) val)
+          (set! (-> *mod-settings* easy-abah?) val)
           (commit-to-file *mod-settings*))))
 
 (defmacro misc-options-pc-hover-restriction ()
@@ -448,6 +458,7 @@ This gives us more freedom to write code how we want.
       (misc-options-pc-closest-orb)
       (misc-options-pc-orb-map-icons)
       (misc-options-pc-pseudo-savestates)
+      (misc-options-pc-easy-abah)
       (misc-options-pc-slip-assist)
       (misc-options-pc-hover-restriction)
       )
@@ -469,6 +480,7 @@ This gives us more freedom to write code how we want.
       (misc-options-pc-closest-orb)
       (misc-options-pc-orb-map-icons)
       (misc-options-pc-pseudo-savestates)
+      (misc-options-pc-easy-abah)
       (misc-options-pc-slip-assist)
       (misc-options-pc-hover-restriction)
       )

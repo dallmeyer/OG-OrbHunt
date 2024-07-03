@@ -529,6 +529,7 @@
           (set! (-> self control did-move-to-pole-or-max-jump-height) s2-1)
           )
         )
+      (dbg-format 0 "init-var-jump vdot ~F f22 ~F f05 ~F s2-1 ~F mjh ~F ~%" (vector-dot (-> self control dynam gravity-normal) (-> self control transv)) f2-2 f0-5 s2-1 (-> self control did-move-to-pole-or-max-jump-height)) ;;(-> self control unknown-word04))
       )
     (when arg2
       (let ((v1-55 (new-stack-vector0)))
@@ -598,6 +599,7 @@
                         )
                      )
                    )
+              (dbg-format 0 "mod-var-jump f300 ~F f07 ~F mjh ~F ~%" (vector-dot (-> self control dynam gravity-normal) (-> self control transv)) f30-0 f0-7 (-> self control did-move-to-pole-or-max-jump-height))
               (vector+!
                 arg3
                 (vector-float*! arg3 (-> self control dynam gravity-normal) f0-7)
@@ -1756,9 +1758,15 @@
     )
   :trans (behavior ()
     ;; og:preserve-this - High FPS Fix - https://github.com/open-goal/jak-project/pull/3178
-    (if (and (recently-pressed? x)
+    (when (and (or (recently-pressed? x)  ;; orb hunt - hold X and do optimal abah for free
+                 (and (-> *mod-settings* easy-abah?)
+                      (cpad-hold? 0 x)
+                      (= 45 (- (current-time) (-> self state-time)))
+                      )
+                 )
              (can-jump? #f)
              )
+        (dbg-format 0 "jumping this much state-time passed: ~D ~%" (- (current-time) (-> self state-time)))
         (target-jump-go)
         )
     (if (and (or (cpad-hold? (-> self control cpad number) l1) (not (can-exit-duck? self))) (can-duck?))
