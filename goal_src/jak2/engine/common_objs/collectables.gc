@@ -1922,6 +1922,9 @@ This commonly includes things such as:
 (defstate pickup (skill)
   :virtual #t
   :code (behavior ((arg0 symbol) (arg1 handle))
+    (if (nonzero? (-> self part))
+      (kill-and-free-particles (-> self part))
+      )
     (process-entity-status! self (entity-perm-status dead) #t)
     (auto-save-user)  ;; autosave on orb pickup
     )
@@ -1965,6 +1968,15 @@ This commonly includes things such as:
                )
           (go-virtual fade)
           )
+      ;; og-orbhunt
+      (with-pc
+        (cond
+          ((-> *mod-settings* skill-starburst?)
+            (spawn (-> self part) (-> self root trans)))
+          ((nonzero? (-> self part)) ;; skill-starburst? is off but we have particles, kill em
+            (kill-and-free-particles (-> self part)))
+          )
+        )
       (common-post self)
       (suspend)
       )
@@ -2039,6 +2051,7 @@ This commonly includes things such as:
       (set! (-> this minimap) (add-icon! *minimap* this (the uint map-class) (the-as int #f) (the-as vector #t) 0))
       )
     )
+  (set! (-> this part) (create-launch-control (-> *part-group-id-table* 1295) this))
   0
   (none))
   

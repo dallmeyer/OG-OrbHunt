@@ -331,7 +331,8 @@
   (
     (save-data    mod-save-file 4 :inline)
 
-    (orb-autosave?        symbol)
+    (orb-autosave?         symbol)
+    (skill-starburst?      symbol)
     (orb-map-icons?        symbol)
     (pseudo-savestates?    symbol)
     (closest-orb?          symbol)

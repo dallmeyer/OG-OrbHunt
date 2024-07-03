@@ -368,6 +368,16 @@ This gives us more freedom to write code how we want.
           (set! (-> *mod-settings* orb-autosave?) val)
           (commit-to-file *mod-settings*))))
 
+(defmacro misc-options-pc-skill-starburst ()
+  `(new 'static 'menu-generic-boolean-option
+        :name (text-id progress-skill-starburst)
+        :truthy-text (text-id progress-on)
+        :falsey-text (text-id progress-off)
+        :get-value-fn (lambda () (-> *mod-settings* skill-starburst?))
+        :on-confirm (lambda ((val symbol))
+          (set! (-> *mod-settings* skill-starburst?) val)
+          (commit-to-file *mod-settings*))))
+
 (defmacro misc-options-pc-orb-map-icons ()
   `(new 'static 'menu-generic-boolean-option
         :name (text-id progress-orb-map-icons)
@@ -434,6 +444,7 @@ This gives us more freedom to write code how we want.
   (progress-new-generic-scrolling-page (text-id progress-root-game-options)
     (progress-new-generic-link-to-scrolling-page (text-id progress-orb-hunt-options)
       (misc-options-pc-orb-autosave)
+      (misc-options-pc-skill-starburst)
       (misc-options-pc-closest-orb)
       (misc-options-pc-orb-map-icons)
       (misc-options-pc-pseudo-savestates)
@@ -454,6 +465,7 @@ This gives us more freedom to write code how we want.
   (progress-new-generic-scrolling-page (text-id progress-root-game-options)
     (progress-new-generic-link-to-scrolling-page (text-id progress-orb-hunt-options)
       (misc-options-pc-orb-autosave)
+      (misc-options-pc-skill-starburst)
       (misc-options-pc-closest-orb)
       (misc-options-pc-orb-map-icons)
       (misc-options-pc-pseudo-savestates)
