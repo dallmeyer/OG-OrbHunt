@@ -1960,12 +1960,21 @@
       (vector-copy! (-> orb base) (-> orb root trans))
       
       ;; if broken crate, move orb too
-      (when (and (-> orb child)
-                 (ppointer->process (-> orb child)))
-        (let ((orb-child (the skill (ppointer->process (-> orb child)))))
-          (vector-copy! (-> orb-child root trans) (-> orb root trans))
-          (+! (-> orb-child root trans y) (meters 0.6))
-          (vector-copy! (-> orb-child base) (-> orb-child root trans))
+      (let ((v1-4 (-> orb child)))
+        (while v1-4
+          ;; if skill, move it
+          (when (and (ppointer->process v1-4)
+                     (type-type? (-> (ppointer->process v1-4) type) skill)
+                     )
+            (let ((orb-child (the skill (ppointer->process v1-4))))
+              (vector-copy! (-> orb-child root trans) (-> orb root trans))
+              (+! (-> orb-child root trans y) (meters 0.6))
+              (vector-copy! (-> orb-child base) (-> orb-child root trans))
+              (update-transforms (-> orb-child root))
+              )
+            )
+          ;; check next child
+          (set! v1-4 (-> v1-4 0 brother))
           )
         )
       )
