@@ -555,10 +555,10 @@ FragSplit pick_best_frag_split(const Frag& frag,
 
   if (aspect > 25) {
     if (split_stats[max_idx].imbalance < 4) {
-      printf(
-          "pick best frag split splitting a frag of size %d due to bad aspect (%f), with imbalance "
-          "%f\n",
-          (int)frag.tri_indices.size(), aspect, split_stats[max_idx].imbalance);
+      // printf(
+      //     "pick best frag split splitting a frag of size %d due to bad aspect (%f), with imbalance "
+      //     "%f\n",
+      //     (int)frag.tri_indices.size(), aspect, split_stats[max_idx].imbalance);
       return splits[max_idx];
     } else {
       printf(
@@ -627,7 +627,7 @@ std::vector<Frag> fragment_mesh(const std::vector<jak2::CollideFace>& tris) {
   std::vector<Frag> good_frags;
 
   while (!too_big_frags.empty()) {
-    printf("sizes %zu %zu\n", too_big_frags.size(), good_frags.size());
+    // printf("sizes %zu %zu\n", too_big_frags.size(), good_frags.size());
     auto& back = too_big_frags.back();
 
     // split it!

@@ -74,7 +74,7 @@ bool run_build_level(const std::string& input_file,
 
   // COLLIDE
   if (mesh_extract_out.collide.faces.empty()) {
-    lg::error("No collision geometry was found");
+    lg::warn("No collision geometry was found");
   } else {
     file.collide_hash = construct_collide_hash(mesh_extract_out.collide.faces);
   }

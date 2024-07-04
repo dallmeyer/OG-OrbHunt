@@ -131,7 +131,7 @@ std::vector<level_tools::TextureRemap> extract_tex_remap(const ObjectFileDB& db,
   }
   std::string level_name = bsp_rec->name;
 
-  lg::info("Processing level {} ({})", dgo_name, level_name);
+  // lg::info("Processing level {} ({})", dgo_name, level_name);
   const auto& bsp_file = db.lookup_record(*bsp_rec);
   bool ok = is_valid_bsp(bsp_file.linked_data);
   ASSERT(ok);
