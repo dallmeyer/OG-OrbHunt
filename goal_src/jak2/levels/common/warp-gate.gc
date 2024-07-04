@@ -729,7 +729,7 @@
                   (< (-> *game-info* skill) 1000.0))
               ;; no metalhead nest until you get 1000 orbs / beat finalboss (debug)
               (let ((gp-0
-                      (new 'stack 'font-context *font-default-matrix* 32 320 0.0 (font-color default) (font-flags shadow kerning))
+                      (new 'stack 'font-context *font-default-matrix* 100 320 0.0 (font-color default) (font-flags middle shadow kerning))
                       )
                     )
                 (let ((v1-51 gp-0))
