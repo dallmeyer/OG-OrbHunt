@@ -111,9 +111,23 @@ an orb |#
   (none)
   )
 
+(defun clear-entity-dead-status-aid-range ((start-aid int) (end-aid int))
+  (while (<= start-aid end-aid)
+    (let ((actor (the entity-actor (entity-by-aid-oh (the uint start-aid) #t))))
+      (when (and actor
+                 (not (or (type-type? (-> actor etype) skill)
+                          (type-type? (-> actor etype) skill-crate))))
+        (logclear! (-> actor extra perm status) (entity-perm-status dead))
+        )
+      )
+    (+! start-aid 1)
+    )
+  (none)
+  )
+
 (defun runs-on-jak-spawn ()
   ;; Code here runs every time jak spawns (loading a file new game or death)
-  
+  (clear-entity-dead-status-aid-range 0 37000)
   (none)
   )
 

@@ -1153,9 +1153,13 @@
         (level-entities (-> arg0 bsp level entity))
         )
     (dotimes (i (-> level-entities length))
-      (let ((entity-perm (-> level-entities data i entity extra perm)))
+      (let* ((entity-perm (-> level-entities data i entity extra perm))
+             (aid (if (logtest? (-> arg0 info level-flags) (level-load-flags orb-hunt))
+                    (- (-> entity-perm aid) 37000) ;; hack - offset for orbhunt levels to avoid aid conflict
+                    (-> entity-perm aid)))
+             )
         (when (or (nonzero? (-> entity-perm task)) (logtest? (-> entity-perm status) (entity-perm-status save)))
-          (let ((actor-perm (actor-perm this (-> entity-perm aid))))
+          (let ((actor-perm (actor-perm this aid)))
             (cond
               (actor-perm
                 (set! (-> actor-perm quad) (-> entity-perm quad))
@@ -1177,6 +1181,9 @@
   (let ((level-entities (-> arg0 bsp level entity)))
     (dotimes (i (-> level-entities length))
       (let* ((entity-perm (-> level-entities data i entity extra perm))
+             (aid (if (logtest? (-> arg0 info level-flags) (level-load-flags orb-hunt))
+                        (- (-> entity-perm aid) 37000) ;; hack - offset for orbhunt levels to avoid aid conflict
+                        (-> entity-perm aid)))
              (actor-perm (actor-perm this (-> entity-perm aid)))
              )
         (when actor-perm

@@ -178,30 +178,39 @@
   (the-as entity-actor #f)
   )
 
-(defun entity-by-aid ((arg0 uint))
+(defun entity-by-aid-oh ((arg0 uint) (skip-orba? symbol))
   (dotimes (v1-0 (-> *level* length))
     (let ((a1-3 (-> *level* level v1-0)))
       (when (= (-> a1-3 status) 'active)
-        (let ((a1-4 (-> a1-3 entity)))
-          (when (nonzero? a1-4)
-            (let ((a2-4 0)
-                  (a3-2 (+ (-> a1-4 length) -1))
-                  )
-              0
-              (while (>= a3-2 a2-4)
-                (let* ((t0-3 (+ a2-4 (/ (- a3-2 a2-4) 2)))
-                       (t1-2 (-> a1-4 data t0-3))
-                       (t2-0 (-> t1-2 perm aid))
-                       )
-                  (cond
-                    ((= t2-0 arg0)
-                     (return (-> t1-2 entity))
-                     )
-                    ((< (the-as uint t2-0) arg0)
-                     (set! a2-4 (+ t0-3 1))
-                     )
-                    (else
-                      (set! a3-2 (+ t0-3 -1))
+        ;; dont get entity-by-aid from orb-hunt levels if skip-orba? is true
+        (when (not (and skip-orba?
+                        (logtest? (-> a1-3 info level-flags) (level-load-flags orb-hunt))
+                        ))
+          (let ((a1-4 (-> a1-3 entity)))
+            (when (nonzero? a1-4)
+              (let ((a2-4 0)
+                    (a3-2 (+ (-> a1-4 length) -1))
+                    )
+                0
+                (while (>= a3-2 a2-4)
+                  (let* ((t0-3 (+ a2-4 (/ (- a3-2 a2-4) 2)))
+                        (t1-2 (-> a1-4 data t0-3))
+                        (t2-0 (-> t1-2 perm aid))
+                        )
+                    (cond
+                      ((= t2-0 arg0)
+                      (return (-> t1-2 entity))
+                      )
+                      ((and (logtest? (-> a1-3 info level-flags) (level-load-flags orb-hunt))
+                            (= (- t2-0 37000) arg0)) ;; hack - offset for orbhunt levels to avoid aid conflict)
+                      (return (-> t1-2 entity))
+                      )
+                      ((< (the-as uint t2-0) arg0)
+                      (set! a2-4 (+ t0-3 1))
+                      )
+                      (else
+                        (set! a3-2 (+ t0-3 -1))
+                        )
                       )
                     )
                   )
@@ -213,6 +222,10 @@
       )
     )
   (the-as entity #f)
+  )
+
+(defun entity-by-aid ((arg0 uint))
+  (entity-by-aid-oh arg0 #f)
   )
 
 ;; WARN: Return type mismatch entity vs entity-actor.

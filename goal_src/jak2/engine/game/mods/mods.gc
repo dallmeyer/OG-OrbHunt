@@ -1597,6 +1597,15 @@
   #t
   )
 
+(defun clear-entity-dead-status ((name string))
+  (let ((actor (entity-by-name name)))
+    (when actor
+      (logclear! (-> actor extra perm status) (entity-perm-status dead))
+      )
+    )
+  (none)
+  )
+
 (defun clear-entity-kill-mask ((name string))
   (let ((actor (entity-by-name name))
         )
