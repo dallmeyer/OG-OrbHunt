@@ -578,7 +578,7 @@
 
             ;; autosave, if enabled
             (when (and orb-count-updated? (-> *mod-settings* orb-autosave?))
-              (commit-to-file *mod-settings*)
+              (auto-save-user)  ;; autosave on orb pickup
               )
             )
           )
@@ -1741,6 +1741,13 @@
     (when r 
       (set! (-> r on-exit) '(want-load 'mountain 'mincan))  ;; load mincan if you take shortcut
       )
+    )
+
+  ;; === ctysluma ===
+  ;; allow early return to forresc
+  (let ((door (entity-by-name "fort-entry-gate-17"))
+        )
+    (when door (set! (cdr (res-lump-struct door 'on-notice pair)) '(((task-closed? "fortress-save-friends-introduction") '(forresca)) ((task-closed? "fortress-dump-resolution") #f) ((task-closed? "fortress-dump-introduction") '(fordumpa)))))
     )
 
   ;; === ctyfarmb === 

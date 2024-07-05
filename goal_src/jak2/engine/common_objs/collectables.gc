@@ -1926,7 +1926,6 @@ This commonly includes things such as:
       (kill-and-free-particles (-> self part))
       )
     (process-entity-status! self (entity-perm-status dead) #t)
-    (auto-save-user)  ;; autosave on orb pickup
     )
   :exit (behavior ()
     ;; refresh orb-placer list in debug mode

@@ -630,6 +630,7 @@
                                                                                               (dotimes (s2-5 s3-11)
                                                                                                 (mem-copy! (&+ (the-as pointer s4-4) (* s2-5 16)) (the-as pointer (-> this perm-list data s2-5)) 16)
                                                                                                 )
+                                                                                              (dbg-format 0 "wrote perm-list to save~%")
                                                                                               (let ((v1-137 (the-as object (+ (the-as int s4-4) (logand -16 (+ (* s3-11 16) 15)))))
                                                                                                     (s4-5 (-> this task-perm-list length))
                                                                                                     )
@@ -1311,6 +1312,13 @@
                )
              )
            )
+          (dbg-format 0 "loaded perm-list from save~%")
+
+          (when (orbhunt-cleanup-aid-perms! this)
+            ;; we actually updated something, re-save the file to persist
+            (dbg-format 0 "saving after orbhunt aid cleanup~%")
+            (save-game this arg0 "save")
+            )
          )
         (((game-save-elt task-list))
          (let ((s2-5

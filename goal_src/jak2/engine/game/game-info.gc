@@ -298,6 +298,90 @@
     )
   )
 
+(define *orbhunt-aid-fuckup* 100000)
+(define *orbhunt-max-original-aid* 76000)
+(defun migrate-perm! ((dest entity-perm) (src entity-perm) (dest-aid actor-id))
+  (set! (-> dest quad) (-> src quad))
+  (set! (-> dest aid) dest-aid)
+  (none)
+  )
+
+(defun orbhunt-cleanup-aid-perms! ((this game-info))
+  (let ((updated-anything? #f)
+        (game-perms (-> this perm-list)))
+        
+    (dotimes (aid *orbhunt-max-original-aid*)
+      (let* ((src-perm (actor-perm this (the actor-id aid)))
+             (src-ent (entity-by-aid (the uint aid)))
+             (dest-aid (the actor-id (+ aid *orbhunt-aid-fuckup*)))
+             (dest-perm (actor-perm this dest-aid))
+             (dest-ent (entity-by-aid (the uint dest-aid))))
+        (case aid
+          ((
+            22237 22238 22239 22240 32940 32942 ;; atoll 
+            35097 35101 35098 35099 35100 ;; castle
+            33200 33201 ;; consite
+            29436 29438 29437 34027 29439 29440 29442 29441 ;; dig3a
+            33172 33171 33168 33169 33170 ;; drillmid
+            35050 35053 35054 35055 35051 35052 35056 35057 35058 ;; forest
+            33177 33178 ;; forexita
+            33184 33185 33186 21086 ;; forexitb
+            33223 33224 33225 33194 33193 33214 33215 33216 33226 33213 33217 33218 33227 33222 33219 33220 33221 ;; mountain
+            32998 33003 32999 33004 33000 33001 33002 ;; nest
+            33104 33103 ; palcab
+            33105 ;; palroof
+            33102 ;; palshaft
+            33122 33123 ;; prison
+            21009 21011 21010 21012 21008 21013 21014 33210 33209 ;; ruins
+            35095 35096 ;; sewer
+            34233 34228 34227 34229 34230 34231 34232 ;; strip
+            33182 33183 33180 33181  ;; tomba
+            21369 ;; tombb
+            33205 33206 ;; under
+            )
+            ;; vanilla orbs, don't copy/clear dead status - 15 conflicts here where people could lose (maybe dupe?) orbs
+            (dbg-format 0 "skipping known vanilla orb ~D, hope ~D isnt a conflict~%" aid dest-aid)
+            )
+          (else
+            (when src-perm ;; (and src-perm (logtest? (-> src-perm status) (entity-perm-status dead)))
+              ;; src is marked dead, copy it to dest (may or may not exist, thats okay)
+              (cond
+                (dest-perm
+                  (dbg-format 0 "copying dead status from ~D to existing ~D~%" aid dest-aid)
+                  (migrate-perm! dest-perm src-perm dest-aid)
+                  (true! updated-anything?)
+                  )
+                ((< (-> game-perms length) (-> game-perms allocated-length))
+                  (dbg-format 0 "copying dead status from ~D into new slot ~D~%" aid dest-aid)
+                  (migrate-perm! (-> game-perms data (-> game-perms length)) src-perm dest-aid)
+                  (+! (-> game-perms length) 1)
+                  (true! updated-anything?)
+                  )
+                (else
+                  (dbg-format 0 "jk there wasn't enough space!~%")
+                  )
+                )
+              ;; if the entity is in an active level, update its perm too
+              (when dest-ent 
+                (migrate-perm! (-> dest-ent extra perm) src-perm dest-aid)
+                )
+
+              ;; clear dead status on src entity
+              (when src-ent 
+                (logclear! (-> src-ent extra perm status) (entity-perm-status dead))
+                )
+              (logclear! (-> src-perm status) (entity-perm-status dead))
+              )
+            )
+          )
+        )
+      )
+
+    ;; return whether anything was updated
+    updated-anything?
+    )
+  )
+
 (define-extern *last-hover-time* time-frame)
 (defmethod initialize! ((this game-info) (arg0 symbol) (arg1 game-save) (arg2 string))
   (local-vars (v0-3 int) (sv-96 game-task-node-info) (sv-112 symbol))
@@ -1149,14 +1233,13 @@
   )
 
 (defmethod copy-perms-from-level! ((this game-info) (arg0 level))
+  (dbg-format 0 "copy-perms-from-level (saving/leaving level) ~A~%" (-> arg0 name))
   (let ((game-perms (-> this perm-list))
         (level-entities (-> arg0 bsp level entity))
         )
     (dotimes (i (-> level-entities length))
       (let* ((entity-perm (-> level-entities data i entity extra perm))
-             (aid (if (logtest? (-> arg0 info level-flags) (level-load-flags orb-hunt))
-                    (- (-> entity-perm aid) 37000) ;; hack - offset for orbhunt levels to avoid aid conflict
-                    (-> entity-perm aid)))
+             (aid (-> entity-perm aid))
              )
         (when (or (nonzero? (-> entity-perm task)) (logtest? (-> entity-perm status) (entity-perm-status save)))
           (let ((actor-perm (actor-perm this aid)))
@@ -1178,12 +1261,10 @@
   )
 
 (defmethod copy-perms-to-level! ((this game-info) (arg0 level))
+  (dbg-format 0 "copy-perms-to-level (loading/entering level) ~A~%" (-> arg0 name))
   (let ((level-entities (-> arg0 bsp level entity)))
     (dotimes (i (-> level-entities length))
       (let* ((entity-perm (-> level-entities data i entity extra perm))
-             (aid (if (logtest? (-> arg0 info level-flags) (level-load-flags orb-hunt))
-                        (- (-> entity-perm aid) 37000) ;; hack - offset for orbhunt levels to avoid aid conflict
-                        (-> entity-perm aid)))
              (actor-perm (actor-perm this (-> entity-perm aid)))
              )
         (when actor-perm
@@ -1796,7 +1877,8 @@
 (let ((gp-0 *game-info*))
   (set! (-> gp-0 task-counter) (the-as uint 1))
   (when (zero? (-> gp-0 perm-list))
-    (set! (-> gp-0 perm-list) (new 'global 'entity-perm-array 4096))
+    (dbg-format 0 "new perm-list~%")
+    (set! (-> gp-0 perm-list) (new 'global 'entity-perm-array 8192))
     (set! (-> gp-0 perm-list length) 0)
     0
     )

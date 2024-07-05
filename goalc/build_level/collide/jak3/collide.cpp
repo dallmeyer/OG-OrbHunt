@@ -556,10 +556,10 @@ FragSplit pick_best_frag_split(const Frag& frag,
 
   if (aspect > 25) {
     if (split_stats[max_idx].imbalance < 4) {
-      printf(
-          "pick best frag split splitting a frag of size %d due to bad aspect (%f), with imbalance "
-          "%f\n",
-          (int)frag.tri_indices.size(), aspect, split_stats[max_idx].imbalance);
+      // printf(
+      //     "pick best frag split splitting a frag of size %d due to bad aspect (%f), with imbalance "
+      //     "%f\n",
+      //     (int)frag.tri_indices.size(), aspect, split_stats[max_idx].imbalance);
       return splits[max_idx];
     } else {
       printf(

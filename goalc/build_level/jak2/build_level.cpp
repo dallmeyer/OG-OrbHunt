@@ -48,8 +48,9 @@ bool run_build_level(const std::string& input_file,
   auto dts = decompiler::DecompilerTypeSystem(GameVersion::Jak2);
   dts.parse_enum_defs({"decompiler", "config", "jak2", "all-types.gc"});
   std::vector<EntityActor> actors;
-  // 37000 offset to avoid conflict with vanilla actors
-  add_actors_from_json(level_json.at("actors"), actors, 37000 + level_json.value("base_id", 1234), dts);
+  // (define *orbhunt-aid-fuckup* 100000)
+  // offset to avoid conflict with vanilla actors
+  add_actors_from_json(level_json.at("actors"), actors, 100000 + level_json.value("base_id", 1234), dts);
   std::sort(actors.begin(), actors.end(), [](auto& a, auto& b) { return a.aid < b.aid; });
   auto duplicates = std::adjacent_find(actors.begin(), actors.end(),
                                        [](auto& a, auto& b) { return a.aid == b.aid; });
