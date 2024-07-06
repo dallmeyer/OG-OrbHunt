@@ -8031,7 +8031,7 @@
     :taskname 'consite
     :packages '(consite)
     :memory-mode (load-buffer-mode large)
-    :music-bank #f
+    :music-bank 'strip
     :ambient-sounds '()
     :mood-func 'update-mood-consite
     :mood-init #f
@@ -8135,7 +8135,7 @@
     :dbname 'consiteb
     :taskname 'consite
     :packages '(consiteb)
-    :music-bank #f
+    :music-bank 'strip
     :ambient-sounds '()
     :mood-func 'update-mood-consiteb
     :mood-init 'init-mood-consiteb
@@ -13178,7 +13178,7 @@
     :dbname 'caspad
     :taskname 'castle
     :packages '(caspad)
-    :music-bank #f
+    :music-bank 'palcab
     :ambient-sounds '()
     :mood-func 'update-mood-caspad
     :mood-init #f
@@ -13652,7 +13652,7 @@
     :taskname 'default
     :packages '()
     :memory-mode (load-buffer-mode large)
-    :music-bank #f
+    :music-bank 'ruins
     :ambient-sounds '()
     :mood-func 'update-mood-village1
     :mood-init 'init-mood-village1
@@ -14717,7 +14717,7 @@
     :taskname 'default
     :packages '()
     :memory-mode (load-buffer-mode medium)
-    :music-bank #f
+    :music-bank 'city1
     :ambient-sounds '()
     :mood-func 'update-mood-default
     :mood-init #f
