@@ -1922,7 +1922,9 @@ This commonly includes things such as:
 (defstate pickup (skill)
   :virtual #t
   :code (behavior ((arg0 symbol) (arg1 handle))
-    (if (nonzero? (-> self part))
+    (if (and (nonzero? (-> self part))
+             (= (-> self type) skill) ;; no onin-brain particles crash
+             )
       (kill-and-free-particles (-> self part))
       )
     (process-entity-status! self (entity-perm-status dead) #t)
@@ -1970,7 +1972,9 @@ This commonly includes things such as:
       ;; og-orbhunt
       (with-pc
         (cond
-          ((-> *mod-settings* skill-starburst?)
+          ((and (-> *mod-settings* skill-starburst?) 
+                (= (-> self type) skill) ;; no onin-brain particles crash
+                )
             (spawn (-> self part) (-> self root trans)))
           ((nonzero? (-> self part)) ;; skill-starburst? is off but we have particles, kill em
             (kill-and-free-particles (-> self part)))

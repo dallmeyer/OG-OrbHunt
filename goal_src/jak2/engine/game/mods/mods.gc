@@ -570,7 +570,7 @@
               (when (and (nonzero? (-> *level-orb-collected-counts* idx))
                         (> (-> *level-orb-collected-counts* idx) (-> *mod-settings* save-data save-idx orb-counts idx))
                         )
-                (dbg-format 0 "updating mod-settings orb-count for ~S to ~D ~%" (-> *level-id-names* idx) (-> *level-orb-collected-counts* idx))
+                (format 0 "updating mod-settings orb-count for ~S to ~D ~%" (-> *level-id-names* idx) (-> *level-orb-collected-counts* idx))
                 (set! (-> *mod-settings* save-data save-idx orb-counts idx) (-> *level-orb-collected-counts* idx))
                 (true! orb-count-updated?)
                 )
@@ -578,6 +578,7 @@
 
             ;; autosave, if enabled
             (when (and orb-count-updated? (-> *mod-settings* orb-autosave?))
+              (format 0 "autosave on orb pickup~%")
               (auto-save-user)  ;; autosave on orb pickup
               )
             )
