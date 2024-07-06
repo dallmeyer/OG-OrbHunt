@@ -8789,7 +8789,7 @@
               (game-task-node none)
               (game-task-node none)
               )
-            :task-mask (task-mask task5)
+            ;; :task-mask (task-mask task5)
             :on-open #f
             :info (new 'static 'task-manager-info
               :mask (task-manager-mask resolution-scene)
@@ -9433,7 +9433,8 @@
               (game-task-node none)
               (game-task-node none)
               )
-            :task-mask (task-mask task3 task5)
+            ;; :task-mask (task-mask task3 task5)
+            :task-mask (task-mask task3)
             :on-open #f
             :info #f
             :borrow '()
