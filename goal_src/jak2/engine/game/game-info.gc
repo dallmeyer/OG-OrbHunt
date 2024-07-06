@@ -627,6 +627,7 @@
                                       (close! (-> *game-info* sub-task-list (game-task-node fortress-escape-start)) 'event)
                                       (set-continue! *game-info* arg2 #f)
                                       (when arg3
+                                        (dbg-format 0 "loading game~%")
                                         (load-game *game-info* arg3)
                                         (set! arg2 (get-current-continue-forced *game-info*))
                                         (reset-actors 'life)

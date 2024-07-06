@@ -173,7 +173,7 @@
 
 (define-extern ORB_HUNT_DEBUG? symbol)
 (defmacro dbg-format (&rest args)
-  `(when (and (cpad-hold? 0 l2) ORB_HUNT_DEBUG?) (format ,@args))
+  `(when (and *debug-segment* (cpad-hold? 0 l2) ORB_HUNT_DEBUG?) (format ,@args))
   )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;

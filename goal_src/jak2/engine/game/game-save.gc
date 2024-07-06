@@ -1317,6 +1317,14 @@
           (when (orbhunt-cleanup-aid-perms! this)
             ;; we actually updated something, re-save the file to persist
             (dbg-format 0 "saving after orbhunt aid cleanup~%")
+            ;; saving always reads from level perms, so refresh level perms
+            (dotimes (s4-1 (-> *level* length))
+              (let ((a1-106 (-> *level* level s4-1)))
+                (if (= (-> a1-106 status) 'active)
+                    (copy-perms-to-level! this a1-106)
+                    )
+                )
+              )
             (save-game this arg0 "save")
             )
          )
@@ -2022,6 +2030,7 @@ auto-save-post
     (let ((gp-0 (the-as object loading-level)))
       (set! loading-level (-> self buffer))
       (set! (-> self save) (new 'loading-level 'game-save #x20000))
+      (dbg-format 0 "saving game ~D~%" (-> self which))
       (save-game *game-info* (-> self save) "save")
       (set! loading-level (the-as kheap gp-0))
       0
