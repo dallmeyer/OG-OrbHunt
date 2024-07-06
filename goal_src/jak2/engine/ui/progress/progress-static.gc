@@ -655,7 +655,7 @@
                                                       :cost 200
                                                       :can-toggle #f
                                                       :flag (game-secrets scene-player-2)
-                                                      :avail-after (game-task-node tomb-boss-resolution)
+                                                      :avail-after (game-task-node ruins-enemy-resolution)
                                                       )
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-highscores-gungame-dark)
@@ -671,7 +671,7 @@
                                                       :cost 300
                                                       :can-toggle #f
                                                       :flag (game-secrets scene-player-3)
-                                                      :avail-after (game-task-node nest-boss-resolution)
+                                                      :avail-after (game-task-node ruins-enemy-resolution)
                                                       )
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-highscores-reverse-races)
@@ -687,7 +687,7 @@
                                                       :cost 400
                                                       :can-toggle #f
                                                       :flag (game-secrets level-select)
-                                                      :avail-after (game-task-node nest-boss-resolution)
+                                                      :avail-after (game-task-node ruins-enemy-resolution)
                                                       )
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-endless-ammo)
@@ -695,7 +695,7 @@
                                                       :cost 500
                                                       :can-toggle #t
                                                       :flag (game-secrets endless-ammo)
-                                                      :avail-after (game-task-node nest-boss-resolution)
+                                                      :avail-after (game-task-node ruins-enemy-resolution)
                                                       )
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-endless-dark)
@@ -703,7 +703,7 @@
                                                       :cost 750
                                                       :can-toggle #t
                                                       :flag (game-secrets endless-dark)
-                                                      :avail-after (game-task-node nest-boss-resolution)
+                                                      :avail-after (game-task-node ruins-enemy-resolution)
                                                       )
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-invulnerable)
@@ -711,7 +711,7 @@
                                                       :cost 1000
                                                       :can-toggle #t
                                                       :flag (game-secrets invulnerable)
-                                                      :avail-after (game-task-node nest-boss-resolution)
+                                                      :avail-after (game-task-node ruins-enemy-resolution)
                                                       )
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-main-secrets-hero-mode)
