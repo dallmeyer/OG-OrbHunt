@@ -772,10 +772,15 @@
             (let ((a2-3 (the-as connection-minimap s3-2)))
               (when (logtest? (-> a2-3 class flags) (minimap-flag bigmap))
                 ;; orb hunt - only draw orba connections if the setting is on
-                (when 
+                (when
                   (case (-> a2-3 class class)
                     (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold))
-                      (-> *mod-settings* orb-map-icons?))
+                      (let ((proc (handle->process (-> a2-3 handle))))
+                        (or (-> *mod-settings* orb-map-icons?)
+                            (and (= (-> proc type) skill) (-> (the skill proc) tagged?))
+                            )
+                        )
+                      )
                     (else
                       #t)
                     )

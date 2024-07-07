@@ -1917,7 +1917,9 @@ This commonly includes things such as:
   
 
 (deftype skill (money)
-  ((minimap connection-minimap))  ;; added orbhunt
+  ((minimap connection-minimap)  ;; added orbhunt
+   (tagged? symbol)  ;; added orbhunt
+   )
   )
 
 (define-extern orb-placer-list-maintenace (function symbol none))
@@ -2053,6 +2055,7 @@ This commonly includes things such as:
         )
       )
     (set! (-> this minimap) (add-icon! *minimap* this (the uint map-class) (the-as int #f) (the-as vector #t) 0))
+    (set! (-> this tagged?) #f)
     )
   (set! (-> this part) (create-launch-control (-> *part-group-id-table* 1295) this))
   0

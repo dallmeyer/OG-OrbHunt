@@ -1457,6 +1457,61 @@
     (format arg0 "camera-rot ~f ~f ~f ~f" (-> v1-49 x) (-> v1-49 y) (-> v1-49 z) (-> v1-49 w))
     )
   (format arg0 "~%")
+
+  (when (and *target* (name= (-> *target* state name) 'target-look-around)
+             (not (paused?)))
+    (let ((v-cam (new-stack-vector0))
+          (v-tmp (new-stack-vector0))
+          (skill-pos-offset (new-stack-vector0))
+          (dist 0.0)
+          (off 0.0)
+          (ratio 0.0)
+          )
+      ;; figure out where we're looking
+      (vector-matrix*! v-cam (new 'static 'vector :z 1.0) (math-camera-matrix))
+
+      ;; check if any orbs are in our line of sight
+      (dotimes (s4-2 LEVEL_MAX)
+        (cond
+          ((= (-> *level* level s4-2 status) 'active)
+            (let ((entities (-> *level* level s4-2 entity)))
+              (dotimes (idx (-> entities length))
+                (let ((entity-link (-> entities data idx)))
+                  (when (and (-> entity-link entity) (nonzero? (-> entity-link entity))
+                            (-> entity-link process)
+                            (= (-> (the entity-actor (-> entity-link entity)) etype symbol) 'skill)
+                            )
+                    (let ((s (the process-drawable (-> entity-link process))))
+                      (vector-copy! skill-pos-offset (-> s root trans))
+                      (+! (-> skill-pos-offset y) (meters 0.6)) ;; from base of orb to middle
+
+                      ;; we have a live orb, figure out how far away it is relative to camera
+                      (vector-! v-tmp skill-pos-offset (camera-pos))
+                      (set! dist (vector-length v-tmp))
+
+                      ;; project in v-cam direction with length dist, then compare position to actual orb
+                      (vector-copy! v-tmp v-cam)
+                      (vector-normalize! v-tmp dist)
+                      (vector+! v-tmp (camera-pos) v-tmp)
+
+                      (set! off (vector-vector-distance v-tmp skill-pos-offset))
+                      (set! ratio (/ (cube-root dist) off))
+
+                      ;; the closer we are, the less accurate the vectors need to be, so lower threshold
+                      (when (> ratio 0.0125)
+                        (format arg0 "~3Llooking at ~A, dist is ~m, off by ~m, ratio ~f ~%" (-> entity-link process name) dist off ratio)
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+
   0
   (none)
   )

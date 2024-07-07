@@ -1669,6 +1669,86 @@
       )
     )
 
+  ;; check for orb tagging
+  (when (and *target* (name= (-> *target* state name) 'target-look-around)
+             (pause-allowed?) (not (paused?)))
+    ;; we're first-person, draw reticle
+    (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
+                                (bucket-id debug-no-zbuf1))
+      ;; reset bucket settings prior to drawing - font won't do this for us, and
+      ;; draw-raw-image can sometimes mess them up. (intro sequence)
+      (dma-buffer-add-gs-set-flusha buf (alpha-1 (new 'static 'gs-alpha :b #x1 :d #x1)) (tex1-1 (new 'static 'gs-tex1 :mmag #x1 :mmin #x1)))
+
+      ;; init font-ctx for dead center
+      (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 256 208 0.0 (font-color default) (font-flags kerning large middle))))
+        (set! (-> font-ctx scale) 0.325)
+        (set! (-> font-ctx color) (font-color transparent))
+        (draw-string-adv "o" buf font-ctx)
+        )
+      )
+    
+    ;; ...and pressed a face button
+    (when (cpad-pressed? 0 triangle square circle x)
+      (let ((v-cam (new-stack-vector0))
+          (v-tmp (new-stack-vector0))
+          (skill-pos-offset (new-stack-vector0))
+          (dist 0.0)
+          (off 0.0)
+          (ratio 0.0)
+          )
+        ;; figure out where we're looking
+        (vector-matrix*! v-cam (new 'static 'vector :z 1.0) (math-camera-matrix))
+
+        ;; check if any orbs are in our line of sight
+        (dotimes (s4-2 LEVEL_MAX)
+          (cond
+            ((= (-> *level* level s4-2 status) 'active)
+              (let ((entities (-> *level* level s4-2 entity)))
+                (dotimes (idx (-> entities length))
+                  (let ((entity-link (-> entities data idx)))
+                    (when (and (-> entity-link entity) (nonzero? (-> entity-link entity))
+                              (-> entity-link process)
+                              (= (-> (the entity-actor (-> entity-link entity)) etype symbol) 'skill)
+                              )
+                      (let ((s (the skill (-> entity-link process))))
+                        (vector-copy! skill-pos-offset (-> s root trans))
+                        (+! (-> skill-pos-offset y) (meters 0.6)) ;; from base of orb to middle
+
+                        ;; we have a live orb, figure out how far away it is relative to camera
+                        (vector-! v-tmp skill-pos-offset (camera-pos))
+                        (set! dist (vector-length v-tmp))
+
+                        ;; project in v-cam direction with length dist, then compare position to actual orb
+                        (vector-copy! v-tmp v-cam)
+                        (vector-normalize! v-tmp dist)
+                        (vector+! v-tmp (camera-pos) v-tmp)
+
+                        ;; figure out how far off our projection would be
+                        (set! off (vector-vector-distance v-tmp skill-pos-offset))
+                        ;; compute ratio scaled based on cube root of the distance to orb
+                        (set! ratio (/ (cube-root dist) off))
+
+                        ;; the closer we are, the less accurate the vectors need to be, so lower threshold
+                        (when (> ratio 0.011)
+                          (dbg-format 0 "tagging orb ~A~%" (-> s name))
+                          (show-hud #f)
+                          (set! *mini-bigmap-toggle-time* (get-current-time))
+                          (true! *show-mini-bigmap*)
+                          (true! (-> s tagged?))
+                          (sound-play "skill-pickup" :pitch -0.75)
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+
   ;; hover check/cooldown stuff
   (cond
     ((and (board-hovering?) 

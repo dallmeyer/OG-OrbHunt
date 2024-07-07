@@ -2578,7 +2578,12 @@
             (when 
               (case (-> (the-as connection-minimap a2-1) class class)
                 (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold))
-                  (-> *mod-settings* orb-map-icons?))
+                  (let ((proc (handle->process (-> (the-as connection-minimap a2-1) handle))))
+                    (or (-> *mod-settings* orb-map-icons?)
+                        (and (= (-> proc type) skill) (-> (the skill proc) tagged?))
+                        )
+                    )
+                  )
                 (else 
                   #t)
                 )
