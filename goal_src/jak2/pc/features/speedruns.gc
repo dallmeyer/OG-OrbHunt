@@ -4,6 +4,7 @@
 (define-extern speedrun-practice-spawn (function none)) ;; defined at end of this file
 (define-extern speedrun-practice-store-temp-checkpoint (function none)) ;; defined at end of this file
 (define *practice-spawn-post-init* (the-as (function none) #f))
+(define *last-checkpoint-load-time* (the time-frame #f))
 
 (define *last-real-continue-point* (the-as continue-point #f))
 (defun generic-post-init ()
@@ -279,25 +280,29 @@
 
 (defun speedrun-practice-spawn ()
   (cond
-    ((and *debug-segment* (not *target*))
+    ((not *target*)
+      ;; only respawn from no target when in debug
+      (when *debug-segment*
+        (set! *last-checkpoint-load-time* (get-current-time))
+        ;; reset any previous post-target-init callback
+        (set! *practice-spawn-post-init* #f)
+        (speedrun-practice-temp-checkpoint)
+        )
+      )
+    ((or (not *last-checkpoint-load-time*)
+         (g-time-elapsed? *last-checkpoint-load-time* (seconds 1))
+         )
+      ;; if we havent yet used checkpoint load, or its been more than 1s since last load, OK to load
+      
+      (set! *last-checkpoint-load-time* (get-current-time))
       ;; reset any previous post-target-init callback
       (set! *practice-spawn-post-init* #f)
       (speedrun-practice-temp-checkpoint)
       )
     (else
-      (case (-> *target* state)
-        ;; only load temp checkpoint if in one of these states
-        ((target-look-around target-stance target-duck-stance target-wade-stance target-gun-stance target-float)
-          ;; reset any previous post-target-init callback
-          (set! *practice-spawn-post-init* #f)
-          (speedrun-practice-temp-checkpoint)
-          )
-        (else
-          (sound-play "smack-surface")
-          )
-        )
-      )
+      (sound-play "smack-surface")
     )
+  )
       
   (none)
   )

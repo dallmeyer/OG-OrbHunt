@@ -662,6 +662,7 @@
   
 (defun-extern hover-need-to-cooldown? symbol)
 (define-extern *last-hover-time* time-frame)
+(define-extern *hover-collected-grace-time* time-frame)
 (define-extern try-play-no-hover-zone-audio (function none))
 (define-extern skill-alt-actor-check? (function collectable symbol symbol))
 (defbehavior collectable-standard-event-handler collectable ((arg0 process) (arg1 int) (arg2 symbol) (arg3 event-message-block))
@@ -676,7 +677,8 @@
                (hover-need-to-cooldown?)
                )
       ;; hover orb collected, reset cooldown
-      (set! *last-hover-time* (the time-frame #f)) 
+      (set! *last-hover-time* (the time-frame #f))
+      (set! *hover-collected-grace-time* (get-current-time))
       )
     (cond
       ;; some orbs require 'alt-actor to be dead before pickup is allowed (veggies hack)

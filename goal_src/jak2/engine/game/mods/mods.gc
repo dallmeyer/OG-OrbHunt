@@ -1511,6 +1511,7 @@
       (= (level-status *level* 'stadiumd) 'active)))
       
 (define *last-hover-time* (the time-frame #f))
+(define *hover-collected-grace-time* (the time-frame #f))
 (define *last-no-hover-zone-time* (the time-frame #f))
 
 (defun hover-need-to-cooldown? ()
@@ -1670,7 +1671,12 @@
 
   ;; hover check/cooldown stuff
   (cond
-    ((board-hovering?)
+    ((and (board-hovering?) 
+          (or (not *hover-collected-grace-time*)
+              (g-time-elapsed? *hover-collected-grace-time* (seconds 2))
+              )
+          )
+      ;; hovering and we didnt recently pickup a hover orb -> update last hover time
       (set-g-time! *last-hover-time*)
       )
     ((not (hover-need-to-cooldown?))
