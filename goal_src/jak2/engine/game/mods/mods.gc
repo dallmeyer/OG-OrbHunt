@@ -1711,10 +1711,9 @@
                               (= (-> (the entity-actor (-> entity-link entity)) etype symbol) 'skill)
                               )
                       (let ((s (the skill (-> entity-link process))))
+                        ;; we have a live orb, figure out how far away it is relative to camera
                         (vector-copy! skill-pos-offset (-> s root trans))
                         (+! (-> skill-pos-offset y) (meters 0.6)) ;; from base of orb to middle
-
-                        ;; we have a live orb, figure out how far away it is relative to camera
                         (vector-! v-tmp skill-pos-offset (camera-pos))
                         (set! dist (vector-length v-tmp))
 
@@ -1734,7 +1733,7 @@
                           (show-hud #f)
                           (set! *mini-bigmap-toggle-time* (get-current-time))
                           (true! *show-mini-bigmap*)
-                          (true! (-> s tagged?))
+                          (logior! (-> entity-link perm status) (entity-perm-status bit-15))  ;; overload this bit for crate orbs
                           (sound-play "skill-pickup" :pitch -0.75)
                           )
                         )

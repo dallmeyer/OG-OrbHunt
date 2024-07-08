@@ -777,7 +777,10 @@
                     (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold))
                       (let ((proc (handle->process (-> a2-3 handle))))
                         (or (-> *mod-settings* orb-map-icons?)
-                            (and (= (-> proc type) skill) (-> (the skill proc) tagged?))
+                            (and (= (-> proc type) skill)
+                                 ;; check overloaded bit-15 from crate orbs
+                                 (logtest? (-> proc entity extra perm status) (entity-perm-status bit-15))
+                                 )
                             )
                         )
                       )
