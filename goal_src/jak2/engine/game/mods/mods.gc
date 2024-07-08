@@ -1733,7 +1733,7 @@
                           (show-hud #f)
                           (set! *mini-bigmap-toggle-time* (get-current-time))
                           (true! *show-mini-bigmap*)
-                          (logior! (-> entity-link perm status) (entity-perm-status bit-15))  ;; overload this bit for crate orbs
+                          (process-entity-status! s (entity-perm-status bit-15) #t)  ;; overload this bit for crate orbs
                           (sound-play "skill-pickup" :pitch -0.75)
                           )
                         )

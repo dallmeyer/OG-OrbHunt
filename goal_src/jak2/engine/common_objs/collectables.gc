@@ -1930,6 +1930,7 @@ This commonly includes things such as:
              )
       (kill-and-free-particles (-> self part))
       )
+    (process-entity-status! self (entity-perm-status bit-15) #f)
     (process-entity-status! self (entity-perm-status dead) #t)
     )
   :exit (behavior ()
