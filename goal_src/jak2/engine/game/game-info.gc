@@ -343,16 +343,16 @@
             (dbg-format 0 "skipping known vanilla orb ~D, hope ~D isnt a conflict~%" aid dest-aid)
             )
           (else
-            (when src-perm ;; (and src-perm (logtest? (-> src-perm status) (entity-perm-status dead)))
-              ;; src is marked dead, copy it to dest (may or may not exist, thats okay)
+            (when (and src-perm (logtest? (-> src-perm status) (entity-perm-status dead bit-15)))
+              ;; src is marked dead or bit-15, copy it to dest (may or may not exist, thats okay)
               (cond
                 (dest-perm
-                  (dbg-format 0 "copying dead status from ~D to existing ~D~%" aid dest-aid)
+                  (dbg-format 0 "copying dead/15 status from ~D to existing ~D~%" aid dest-aid)
                   (migrate-perm! dest-perm src-perm dest-aid)
                   (true! updated-anything?)
                   )
                 ((< (-> game-perms length) (-> game-perms allocated-length))
-                  (dbg-format 0 "copying dead status from ~D into new slot ~D~%" aid dest-aid)
+                  (dbg-format 0 "copying dead/15 status from ~D into new slot ~D~%" aid dest-aid)
                   (migrate-perm! (-> game-perms data (-> game-perms length)) src-perm dest-aid)
                   (+! (-> game-perms length) 1)
                   (true! updated-anything?)
@@ -367,7 +367,7 @@
                 )
 
               ;; clear dead status on src entity
-              (when src-ent 
+              (when src-ent
                 (logclear! (-> src-ent extra perm status) (entity-perm-status dead))
                 )
               (logclear! (-> src-perm status) (entity-perm-status dead))

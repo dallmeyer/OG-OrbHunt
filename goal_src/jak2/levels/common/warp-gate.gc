@@ -533,7 +533,7 @@
           ;; nestb -> village1
           (("nestb-warp-gate-01")
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide so it looks like rift-ring is warp
-            (when (task-closed? "city-win-introduction")  ;; kor dead, allow use
+            (when (task-closed? "nest-boss-resolution")  ;; kor dead, allow use
               (set! (-> this continue) (get-continue-by-name *game-info* "village1-rift"))
               (set! (-> this on-activate) '())
               (set! (-> this wait-for) '())
@@ -543,7 +543,7 @@
           ;; village1 -> nestb
           (("village1-warp-gate-01")
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide so it looks like rift-ring is warp
-            (when (task-closed? "city-win-introduction")  ;; kor dead, allow use
+            (when (task-closed? "nest-boss-resolution")  ;; kor dead, allow use
               (set! (-> this continue) (get-continue-by-name *game-info* "nestb-warp"))
               (set! (-> this on-activate) '())
               (set! (-> this wait-for) '())
@@ -553,7 +553,7 @@
           ;; sagehut -> village1
           (("sagehut-warp-gate-01")
             (cond 
-              ((task-closed? "city-win-introduction")  ;; kor dead, allow use
+              ((task-closed? "nest-boss-resolution")  ;; kor dead, allow use
                 (set! (-> this continue) (get-continue-by-name *game-info* "village1-warp"))
                 (set! (-> this on-activate) '())
                 (set! (-> this wait-for) '())
@@ -725,7 +725,7 @@
                    )
           (cond
             ((and (name= (-> self name) "air-train-1")
-                  (not (task-closed? "city-win-resolution"))
+                  (not (task-closed? "nest-boss-resolution"))
                   (< (-> *game-info* skill) 1000.0))
               ;; no metalhead nest until you get 1000 orbs / beat finalboss (debug)
               (let ((gp-0

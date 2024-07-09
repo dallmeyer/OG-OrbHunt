@@ -1430,7 +1430,7 @@
       (set-vector! (-> arg0 quat)  0.0  -0.7956  0.0  -0.6057))
     (('crate-936) (set-vector-meters! (-> arg0 extra trans)  -134.99  50.18 -164.23) ;; on platform on big gun
       (set-vector! (-> arg0 quat)  0.0  -0.5893  0.0  -0.8078))
-    (('crate-937) (set-vector-meters! (-> arg0 extra trans)  -101.65  30.59 -203.78  ) ;; on edge under big gun, looking towards nest opening
+    (('crate-937) (set-vector-meters! (-> arg0 extra trans)  -101.65  30.0 -203.78  ) ;; on edge under big gun, looking towards nest opening
       (set-vector! (-> arg0 quat)  0.0  -0.7227  0.0  -0.6911))
     (('crate-938) (set-vector-meters! (-> arg0 extra trans)  -120.83  25.93 -320.05  ) ;; behind broken tower past dark eco, north wall
       (set-vector! (-> arg0 quat)  0.0  0.1968  0.0  0.9804))
@@ -2085,7 +2085,7 @@
   ;; === nest/nestb ===
   ;; lower riftring after credits for warp
   (let ((ring (the process-drawable (process-by-ename "rift-ring-ingame-1"))))
-    (when (and ring (task-closed? "city-win-resolution"))
+    (when (and ring (task-closed? "nest-boss-resolution"))
       (set! (-> ring root trans y) (meters 41.0))
       )
     )
@@ -2205,7 +2205,7 @@
   ;; missions VS orb count pause menu option
   ;; (when (not (paused?))
   ;;   (cond 
-  ;;     ((task-closed? "city-win-resolution")
+  ;;     ((task-closed? "city-win-introduction")
   ;;       ;; orb count menu
   ;;       (set! *main-options* *menu-options-orbs*)
   ;;       )
