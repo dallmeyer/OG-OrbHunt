@@ -1688,7 +1688,7 @@
       )
     
     ;; ...and pressed a face button
-    (when (cpad-pressed? 0 triangle square circle x)
+    (when (cpad-pressed? 0 triangle square circle x r1)
       (let ((v-cam (new-stack-vector0))
           (v-tmp (new-stack-vector0))
           (skill-pos-offset (new-stack-vector0))
