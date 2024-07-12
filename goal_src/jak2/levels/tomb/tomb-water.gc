@@ -197,7 +197,7 @@ This commonly includes things such as:
     (joint-control-channel-group! a0-27 (the-as art-joint-anim (-> this draw art-group data 2)) num-func-identity)
     )
   (transform-post)
-  (go (method-of-object this idle))
+  (go (method-of-object this open) 0)
   (none)
   )
 
@@ -383,7 +383,7 @@ This commonly includes things such as:
     (joint-control-channel-group! a0-30 (the-as art-joint-anim (-> this draw art-group data 2)) num-func-identity)
     )
   (transform-post)
-  (go (method-of-object this idle))
+  (go (method-of-object this open))
   (none)
   )
 
