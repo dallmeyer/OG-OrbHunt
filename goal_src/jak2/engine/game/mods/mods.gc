@@ -2019,6 +2019,15 @@
       )
     )
 
+  ;; palcab side
+  (let ((door15 (entity-by-name "com-airlock-outer-15"))
+        )
+    (when door15
+      (set! (cdr (res-lump-struct door15 'on-activate pair)) '(((focus-test? *target* pilot) #f) (else (want-load 'ctygenb 'ctywide 'palshaft))))
+      (set! (cdr (res-lump-struct door15 'on-notice pair)) '(((focus-test? *target* pilot) #f) (else '(palshaft))))
+      )
+    )
+
   ;; === forest(b) === 
   (let (;; (crate918 (entity-by-name "crate-918"))
         (crate920 (entity-by-name "crate-920"))
