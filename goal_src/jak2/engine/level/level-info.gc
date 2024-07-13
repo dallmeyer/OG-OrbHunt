@@ -5264,7 +5264,7 @@
                               (kill "metalmonk-73" store #f)
                               (kill "metalmonk-74" store #f)
                               (kill "metalmonk-75" store #f)
-                              (send-event "mtn-aval-rocks-4" 'draw #t))
+                              (send-event "mtn-aval-rocks-4" 'draw #f))
            
                    :vis-nick 'mountain
                    :want (new 'static 'inline-array level-buffer-state 6

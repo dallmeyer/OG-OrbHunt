@@ -130,6 +130,8 @@
   (none))
 
 (define-extern draw-orb-hunt-text (function none))
+(define-extern *auto-saving?* symbol)
+(define-extern *last-auto-save-time* time-frame)
 (defun orb-hunt-update ()
   ;; Draw info to the screen
   (draw-orb-hunt-text)
@@ -248,7 +250,11 @@
 (defun speedrun-practice-store-temp-checkpoint ()
   (when (and *target* )
     (cond
-      ((or (side-mish-active?) (not (progress-allowed?)))
+      ((or (side-mish-active?) 
+           (not (progress-allowed?))
+           *auto-saving?*
+           (and *last-auto-save-time* (not (g-time-elapsed? *last-auto-save-time* (seconds 3))))
+           )
         (sound-play "smack-surface")  
         )
       (else
@@ -285,7 +291,10 @@
 
 (defun speedrun-practice-spawn ()
   (cond
-    ((not (progress-allowed?))
+    ((or (not (progress-allowed?))
+         *auto-saving?*
+         (and *last-auto-save-time* (not (g-time-elapsed? *last-auto-save-time* (seconds 3))))
+         )
       (sound-play "smack-surface")  
       )
     ((not *target*)

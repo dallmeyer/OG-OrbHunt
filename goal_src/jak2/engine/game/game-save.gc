@@ -2051,7 +2051,6 @@ auto-save-post
         (suspend)
         (goto cfg-5)
         )
-      (runs-on-game-saved (-> self which))
       (until #f
         (set! (-> self result) (mc-check-result))
         (let ((v1-20 (-> self result)))
@@ -2083,6 +2082,7 @@ auto-save-post
       )
     #f
     (label cfg-18)
+    (runs-on-game-saved (-> self which))
     (go-virtual done)
     )
   :post auto-save-post

@@ -219,6 +219,8 @@
   )
 
 (defun-extern hover-need-to-cooldown? symbol)
+(define *auto-saving?* #f)
+(define *last-auto-save-time* (the time-frame #f))
 (define *tmp-orb-hunt-str* (new 'global 'string 2048 (the-as string #f)))
 (defun draw-orb-hunt-text ()
   (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
@@ -577,8 +579,11 @@
               )
 
             ;; autosave, if enabled
-            (when (and orb-count-updated? (-> *mod-settings* orb-autosave?))
+            (when (and orb-count-updated?
+                       (-> *mod-settings* orb-autosave?)
+                       (not *auto-saving?*))
               (format 0 "autosave on orb pickup~%")
+              (true! *auto-saving?*)
               (auto-save-user)  ;; autosave on orb pickup
               )
             )
@@ -1826,6 +1831,12 @@
         )
     (when r 
       (set! (-> r on-exit) '(want-load 'mountain 'mincan))  ;; load mincan if you take shortcut
+      )
+    )
+  (let ((r (region-lookup-by-id 894))
+        )
+    (when r 
+      (set! (-> r on-enter) '(send-event "mtn-aval-rocks-4" 'draw #f))  ;; fuck u buggy ass avalanche
       )
     )
 
