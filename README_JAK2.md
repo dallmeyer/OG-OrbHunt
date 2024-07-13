@@ -18,7 +18,8 @@ There are now 3125 orbs in total spread across every level in the game - and I m
   - Your active mission will be to break into the Metalhead Nest and defeat the final boss (though you won't be able to right away...)
   - This means you'll have the JET-board, all the guns, and all the Dark Jak powers from the start
 - There's also a minimap added to the L3 HUD for most levels
-  - This is particularly useful with the ORB MAP ICONS option (see Difficulty Toggles below)
+  - While in first-person you can aim at an orb and press any of X/Square/Circle/Triangle/R1 to "tag" the orb and add it to your minimap (and the bigmap too)
+  - Alternatively, you can toggle the ORB MAP ICONS option to see all the locations on your maps from the beginning (see Difficulty Toggles below)
 
 ## Orbs
 
