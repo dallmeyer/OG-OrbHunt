@@ -18,7 +18,8 @@ There are now 3125 orbs in total spread across every level in the game - and I m
   - Your active mission will be to break into the Metalhead Nest and defeat the final boss (though you won't be able to right away...)
   - This means you'll have the JET-board, all the guns, and all the Dark Jak powers from the start
 - There's also a minimap added to the L3 HUD for most levels
-  - This is particularly useful with the ORB MAP ICONS option (see Difficulty Toggles below)
+  - While in first-person you can aim at an orb and press any of X/Square/Circle/Triangle/R1 to "tag" the orb and add it to your map
+  - Alternatively, you can toggle the ORB MAP ICONS option to see all the locations on your map from the beginning (see Difficulty Toggles below)
 
 ## Orbs
 
@@ -47,6 +48,7 @@ Some collectables are well-hidden and/or annoying to reach - you may want to eas
 - ORB GLOW - Ported from Jak 1, accessibility feature that adds a glow effect around orbs
 - CLOSEST ORB - color-coded text displays the distance from Jak to the closest nearby Precursor Orb (including orbs within crates or other actors)
 - ORB MAP ICONS - when enabled, icons are shown on the map and minimap for Orbs in any active levels
+  - when not enabled, you can still "tag" orbs manually while in first-person, by aiming at an orb and pressing any of X/Square/Circle/Triangle/R1
 - PSEUDO SAVESTATES - set custom checkpoints that you can quickly reset to! These only work when Jak has a standpoint - you'll hear a ding to confirm/bonk if rejected
   - Hold R3 and press Dpad Down to store your current position
   - Hold R3 and press Dpad Up to reset back to your previously stored position
