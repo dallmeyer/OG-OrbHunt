@@ -67,11 +67,11 @@
       }
     },
     {
-      "trans": [410.85, 104.16, -989.57],  // up from ^, couple blind but easy jumps through trees
+      "trans": [410.85, 104.56, -989.57],  // up from ^, couple blind but easy jumps through trees
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [410.85, 104.16, -989.57, 10], // bounding sphere
+      "bsphere": [410.85, 104.56, -989.57, 10], // bounding sphere
       "lump": {
         "name":"atoll-skill-3"
       }
@@ -648,13 +648,14 @@
       }
     },
     {
-      "trans": [399.23,  48.36, -1466.14], // in crevice in wall, follow from ^
+      "trans": [  399.2541, 48.5626, -1466.0538], // in crevice in wall, follow from ^
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [399.23,  48.36, -1466.14, 10], // bounding sphere
+      "bsphere": [  399.2541, 48.5626, -1466.0538, 10], // bounding sphere
       "lump": {
-        "name":"atoll-skill-61"
+        "name":"atoll-skill-61",
+        "bob-scale": ["float", 0.75]
       }
     },
     {
@@ -868,11 +869,11 @@
       }
     },
     {
-      "trans": [458.93, 115.14, -1236.94], // up high in cracks of cliff tops
+      "trans": [ 459.1088, 115.15, -1237.0582], // up high in cracks of cliff tops
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [458.93, 115.14, -1236.94, 10], // bounding sphere
+      "bsphere": [ 459.1088, 115.15, -1237.0582, 10], // bounding sphere
       "lump": {
         "name":"atoll-skill-83"
       }
