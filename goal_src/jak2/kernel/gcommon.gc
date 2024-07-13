@@ -1217,7 +1217,7 @@
        )
       ((and (= expected-type type) (!= (rtype-of this) type))
        (if name
-           (format
+           (dbg-format
              print-dest
              "ERROR: object #x~X ~S is not a valid object of type '~A' (invalid type #x~X)~%"
              this
@@ -1230,7 +1230,7 @@
        )
       ((and (!= expected-type type) (not (valid? (rtype-of this) type (the-as string #f) #t 0)))
        (if name
-           (format
+           (dbg-format
              print-dest
              "ERROR: object #x~X ~S is not a valid object of type '~A' (invalid type #x~X)~%"
              this
