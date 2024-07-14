@@ -595,24 +595,31 @@
         (when (not (movie?))
           ;; print orb counts
           (clear *tmp-orb-hunt-str*)
-          (let ((row-offset 0)
+          (let ((save-idx (-> *game-info* auto-save-which))
+                (row-offset 0)
                 (xpos (if (= 1.0 (-> *pc-settings* aspect-ratio-scale)) 507.0 1019.0))
                 )
             (dotimes (idx LEVEL_ID_LEN)
               (when (or (-> *level-orb-active* idx)
-                        (and (= idx 45) (nonzero? (-> *level-orb-total-counts* idx)))
+                        (and (= idx 45) (nonzero? (-> *level-orb-total-counts* idx))) ;; onintent has orbs in ctymark(a/b? idk)
+                        (and (= idx 33) (nonzero? (-> *level-orb-total-counts* idx))) ;; ctygena has orbs in ctygenc
                         )
-                (let ((color-str
+                (let* ((coll (if (>= save-idx 0) ;; prefer to read the save data one, addresses changing count in ctygena
+                                 (-> *mod-settings* save-data save-idx orb-counts idx)
+                                 (-> *level-orb-collected-counts* idx)
+                                 ))
+                       (tot (-> *level-orb-total-counts-fixed* idx))
+                       (color-str
                           (cond
-                            ((= (-> *level-orb-collected-counts* idx) (-> *level-orb-total-counts* idx)) "<COLOR_GREEN>") ;; green if 100%
-                            ((nonzero? (-> *level-orb-collected-counts* idx)) "<COLOR_ORANGE>") ;; nonzero, orange
+                            ((= coll tot) "<COLOR_GREEN>") ;; green if 100%
+                            ((nonzero? coll) "<COLOR_ORANGE>") ;; nonzero, orange
                             (else "<COLOR_FLAT-YELLOW>") ;; zero, slight yellow
                             )))
                   (format *tmp-orb-hunt-str* (string-format "<COLOR_DEFAULT>~S ~S~D / ~D~%"
                                                 (-> *level-id-names* idx)
                                                 color-str
-                                                (-> *level-orb-collected-counts* idx)
-                                                (-> *level-orb-total-counts* idx)
+                                                coll
+                                                tot
                                                 ))
                   (+! row-offset 1)
                   )
