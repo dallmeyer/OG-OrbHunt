@@ -1684,7 +1684,7 @@
       )
     )
 
-  ;; check for orb tagging
+  ;; check for orb tagging / "zooming"
   (when (and *target* (name= (-> *target* state name) 'target-look-around)
              (pause-allowed?) (not (paused?)))
     ;; we're first-person, draw reticle
@@ -1695,15 +1695,30 @@
       (dma-buffer-add-gs-set-flusha buf (alpha-1 (new 'static 'gs-alpha :b #x1 :d #x1)) (tex1-1 (new 'static 'gs-tex1 :mmag #x1 :mmin #x1)))
 
       ;; init font-ctx for dead center
-      (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 256 208 0.0 (font-color default) (font-flags kerning large middle))))
+      (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 256 203 0.0 (font-color default) (font-flags kerning large middle))))
         (set! (-> font-ctx scale) 0.325)
         (set! (-> font-ctx color) (font-color transparent))
         (draw-string-adv "o" buf font-ctx)
         )
       )
+
+    ;; ...and zoomed in/out (but not both)
+    (when (!= (cpad-pressed? 0 l2) (cpad-pressed? 0 r2))
+      (let* ((cur (* 0.005493164 (-> *math-camera* fov)))
+             (arg2 (fmax 28.0 (fmin 64.0 (+ cur (if (cpad-pressed? 0 r2) -12.0 12.0)))))
+             )
+        (set-setting-by-param *setting-control* 'fov #f (* 182.04445 arg2) 0)
+        (if *camera-combiner*
+          (set! (-> *camera-combiner* fov) (* 182.04445 arg2))
+          )
+        (if (and *camera* (-> *camera* slave))
+          (set! (-> *camera* slave 0 fov) (* 182.04445 arg2))
+          )
+        )
+      )
     
     ;; ...and pressed a face button
-    (when (cpad-pressed? 0 triangle square circle x r1)
+    (when (cpad-pressed? 0 triangle square circle x l1 r1)
       (let ((v-cam (new-stack-vector0))
           (v-tmp (new-stack-vector0))
           (skill-pos-offset (new-stack-vector0))

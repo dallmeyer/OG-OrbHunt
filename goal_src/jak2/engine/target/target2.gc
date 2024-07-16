@@ -242,6 +242,7 @@
     (set-setting! 'mode-name 'cam-eye 0.0 0)
     )
   :exit (behavior ()
+    (remove-setting-by-arg0 *setting-control* 'fov) ;; orbhunt to reset any "zoom"
     (set! (-> self cam-user-mode) 'normal)
     (target-exit)
     (remove-setting! 'mode-name)
