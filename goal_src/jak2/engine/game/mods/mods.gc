@@ -181,7 +181,9 @@
                             ;; open orbs/crates
                             (or (type-type? (-> proc type) skill)
                                 (type-type? (-> proc type) skill-crate)
-                                ))
+                                )
+                            (not (logtest? (-> s0-0 extra status) (entity-perm-status subtask-complete))) ;; crate respawn check
+                            )
                     (let ((dist (vector-vector-distance 
                                   (target-pos 0) 
                                   (-> (the process-drawable (-> s0-0 extra process)) root trans))))
