@@ -17,9 +17,6 @@ There are now 3125 orbs in total spread across every level in the game - and I m
 - Many level-loading conditions depend on your storyline progression, and so to keep my modifications simpler, **the game starts in a sort of NG+ mode**. 
   - Your active mission will be to break into the Metalhead Nest and defeat the final boss (though you won't be able to right away...)
   - This means you'll have the JET-board, all the guns, and all the Dark Jak powers from the start
-- There's also a minimap added to the L3 HUD for most levels
-  - While in first-person you can aim at an orb and press any of X/Square/Circle/Triangle/R1 to "tag" the orb and add it to your map
-  - Alternatively, you can toggle the ORB MAP ICONS option to see all the locations on your map from the beginning (see Difficulty Toggles below)
 
 ## Orbs
 
@@ -35,6 +32,12 @@ There are now 3125 orbs in total spread across every level in the game - and I m
 - 🟡 JET-board hover glitch hints - certain orbs have a yellow/gold tint, and indicate that you should (and probably must) use the [hover glitch](https://www.youtube.com/watch?v=gEZQjj_pVuY&t=364s) to reach them
 - 🟠 Normal Orbs - any normal-looking orbs should NOT require the hover glitch
 - 🟣 Abahbounce hints - certain orbs have a blue/purple tint, and indicate that you should do an [Abahbounce](https://www.youtube.com/watch?v=G8fdBxKxocI) at that spot (probably to reach another Orb at a higher location)
+
+### Minimap & Orb Tagging
+- There's a minimap added to the L3 HUD for most levels
+  - While in first-person you can aim at an orb and press any of X/Square/Circle/Triangle/R1 to "tag" the orb and add it to your map
+    - You can also zoom in/out with L2 and R2 while in first person
+  - Alternatively, you can toggle the ORB MAP ICONS option to see all the locations on your map from the beginning (see Difficulty Toggles below)
 
 ## Side Missions
 - You can still collect orbs from side missions like the original game, and they DO count towards the per-level HUD counters
