@@ -254,6 +254,7 @@
            (not (progress-allowed?))
            *auto-saving?*
            (and *last-auto-save-time* (not (g-time-elapsed? *last-auto-save-time* (seconds 3))))
+           (focus-test? *target* dead hit grabbed)
            )
         (sound-play "smack-surface")  
         )
@@ -294,6 +295,7 @@
     ((or (not (progress-allowed?))
          *auto-saving?*
          (and *last-auto-save-time* (not (g-time-elapsed? *last-auto-save-time* (seconds 3))))
+         (focus-test? *target* dead hit grabbed)
          )
       (sound-play "smack-surface")  
       )
