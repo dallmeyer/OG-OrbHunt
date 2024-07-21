@@ -2066,6 +2066,14 @@
       )
     )
 
+  ;; ctygena/b
+  (let ((r (region-lookup-by-id 117))
+        )
+    (when r 
+      (set! (-> r on-exit) '(if (not (level-active? lbbush)) (want-display 'ctygenb #f)))  ;; don't deload ctygenb if target is grabbed (orb hunt side mission cutscene BS)
+      )
+    )
+
   ;; === forest(b) === 
   (let (;; (crate918 (entity-by-name "crate-918"))
         (crate920 (entity-by-name "crate-920"))
