@@ -590,8 +590,8 @@
     :y-space 30
     :scale 0.82
     :options (new 'static 'boxed-array :type menu-option (new 'static 'menu-secret-option
-                                                  :num-items 16
-                                                  :num-hero-items 16
+                                                  :num-items 17
+                                                  :num-hero-items 17
                                                   :secret-items (new 'static 'boxed-array :type secret-item-option
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-toggle-beard)
@@ -721,6 +721,14 @@
                                                       :flag (game-secrets hero-mode)
                                                       :avail-after (game-task-node fortress-escape-start)
                                                       )
+                                                    (new 'static 'secret-item-option
+                                                      :name (text-id progress-secrets-giant-head)
+                                                      :scale #t
+                                                      :cost 3000
+                                                      :can-toggle #t
+                                                      :flag (game-secrets giant-head)
+                                                      :avail-after (game-task-node fortress-escape-start)
+                                                      )
                                                     ;; hero mode from here down
                                                     (new 'static 'secret-item-option
                                                       :name (text-id progress-secrets-toggle-beard)
@@ -848,6 +856,14 @@
                                                       :cost 3000
                                                       :can-toggle #f
                                                       :flag (game-secrets scrap-book-2)
+                                                      :avail-after (game-task-node fortress-escape-start)
+                                                      )
+                                                    (new 'static 'secret-item-option
+                                                      :name (text-id progress-secrets-giant-head)
+                                                      :scale #t
+                                                      :cost 3000
+                                                      :can-toggle #t
+                                                      :flag (game-secrets giant-head)
                                                       :avail-after (game-task-node fortress-escape-start)
                                                       )
                                                     )

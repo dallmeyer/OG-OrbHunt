@@ -459,7 +459,8 @@
             )
        ;; orb hunt - prevent breaking crate if hovered recently
        (when (and (= (-> self type symbol) 'skill-crate)
-                (hover-need-to-cooldown?))
+                  (not (logtest? (-> self entity extra perm status) (entity-perm-status subtask-complete)))
+                  (hover-need-to-cooldown?))
           (try-play-no-hover-zone-audio)
           (activate! (-> self smush) 0.1 90 150 1.0 1.0 (-> self clock))
           (go-virtual bounce-on)
