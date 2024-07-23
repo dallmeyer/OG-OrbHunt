@@ -418,6 +418,16 @@ This gives us more freedom to write code how we want.
           (set! (-> *mod-settings* easy-abah?) val)
           (commit-to-file *mod-settings*))))
 
+(defmacro misc-options-pc-collision-renderer-toggle ()
+  `(new 'static 'menu-generic-boolean-option
+        :name (text-id progress-collision-renderer-toggle)
+        :truthy-text (text-id progress-on)
+        :falsey-text (text-id progress-off)
+        :get-value-fn (lambda () (-> *mod-settings* collision-renderer-toggle?))
+        :on-confirm (lambda ((val symbol))
+          (set! (-> *mod-settings* collision-renderer-toggle?) val)
+          (commit-to-file *mod-settings*))))
+
 (defmacro misc-options-pc-hover-restriction ()
   `(new 'static 'menu-generic-boolean-option
         :name (text-id progress-hover-restriction)
@@ -459,6 +469,7 @@ This gives us more freedom to write code how we want.
       (misc-options-pc-orb-map-icons)
       (misc-options-pc-pseudo-savestates)
       (misc-options-pc-easy-abah)
+      (misc-options-pc-collision-renderer-toggle)
       (misc-options-pc-slip-assist)
       (misc-options-pc-hover-restriction)
       )
@@ -481,6 +492,7 @@ This gives us more freedom to write code how we want.
       (misc-options-pc-orb-map-icons)
       (misc-options-pc-pseudo-savestates)
       (misc-options-pc-easy-abah)
+      (misc-options-pc-collision-renderer-toggle)
       (misc-options-pc-slip-assist)
       (misc-options-pc-hover-restriction)
       )

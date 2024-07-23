@@ -331,14 +331,15 @@
   (
     (save-data    mod-save-file 4 :inline)
 
-    (orb-autosave?         symbol)
-    (skill-starburst?      symbol)
-    (closest-orb?          symbol)
-    (orb-map-icons?        symbol)
-    (pseudo-savestates?    symbol)
-    (easy-abah?            symbol)
-    (hover-restriction?    symbol)
-    (slip-assist           slip-assist-mode)
+    (orb-autosave?                symbol)
+    (skill-starburst?             symbol)
+    (closest-orb?                 symbol)
+    (orb-map-icons?               symbol)
+    (pseudo-savestates?           symbol)
+    (easy-abah?                   symbol)
+    (collision-renderer-toggle?   symbol)
+    (hover-restriction?           symbol)
+    (slip-assist                  slip-assist-mode)
     )
   (:methods
     (new (symbol type) _type_)

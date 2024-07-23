@@ -58,6 +58,7 @@ Some collectables are well-hidden and/or annoying to reach - you may want to eas
     - Note: this will also reset actors (green eco crates, enemies, etc), similar to dying or loading a save file
   - Note: if you reboot into _debug mode_, be sure `Game Mode` is enabled, not `Debug Mode`
 - EASY ABAHBOUNCE - when enabled, you don't need to time the X press during Abahbounces - simply hold X during a slippery ground pound, and you'll get a free optimal Abahbounce
+- COLLISION RENDERER TOGGLE - when enabled, press Select to toggle Collision Renderer mode on/off
 - SLIPPERY ASSIST
   - (NORMAL - normal physics)
   - LESS SLIP - Jak gets standpoints on most surfaces that he would normally slip off (just not steep surfaces/walls)

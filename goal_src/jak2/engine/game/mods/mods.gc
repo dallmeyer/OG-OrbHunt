@@ -1660,6 +1660,7 @@
   (none)
   )
 
+(define *zoom-sensitivity-scale* 1.0)
 (define *show-mini-bigmap* #f)
 (define *mini-bigmap-toggle-time* (the time-frame #f))
 (defun mod-run-each-frame ()
@@ -1709,6 +1710,7 @@
       (let* ((cur (* 0.005493164 (-> *math-camera* fov)))
              (arg2 (fmax 28.0 (fmin 64.0 (+ cur (if (cpad-pressed? 0 r2) -12.0 12.0)))))
              )
+        (set! *zoom-sensitivity-scale* (/ 64.0 arg2))
         (set-setting-by-param *setting-control* 'fov #f (* 182.04445 arg2) 0)
         (if *camera-combiner*
           (set! (-> *camera-combiner* fov) (* 182.04445 arg2))
@@ -2235,26 +2237,39 @@
   ;; (move-actor-str-target-offset "ctyport-part-86" 0.0 1.5 0.0)  ;; jakpoop
 
   ;; dev stuff
-  (when (and *debug-segment* (cpad-pressed? 0 select) (not (cpad-hold? 0 l3)) (not (paused?)))
-    (toggleCollisionRenderer)
-    ;; hideskip nojak
-    (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack nojak probe)) #t)
+  (when (and (cpad-pressed? 0 select) (not (cpad-hold? 0 l3)) (not (paused?)) (not (movie?)))
+    ;; collision renderer, either debug or toggle
+    (when (or *debug-segment* (-> *mod-settings* collision-renderer-toggle?))
+      (toggleCollisionRenderer)
+      (true! *collision-wireframe*)
+      ;; hideskip nojak
+      (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack nojak probe)) #t)
+      )
 
-    ;; disable camera collision/line of sight
-    (if (logtest? (-> *camera* slave-options) 32)
-      (send-event *camera* 'clear-slave-option (cam-slave-options COLLIDE))
+    ;; debug only helper shit
+    (when *debug-segment*
+      ;; disable camera collision/line of sight
+      (if (logtest? (-> *camera* slave-options) 32)
+        (send-event *camera* 'clear-slave-option (cam-slave-options COLLIDE))
+        )
+      (if (logtest? (-> *camera* slave-options) 512)
+        (send-event *camera* 'clear-slave-option (cam-slave-options LINE_OF_SIGHT))
+        )         
+      
+      ;; show bug report level info
+      (true! *display-bug-report*)
+      (when (cpad-hold? 0 start)
+        ;; mark game won and give cheats
+        (task-close! "city-win-resolution")
+        )
+      (logior! (-> *game-info* secrets) (game-secrets endless-dark invulnerable endless-ammo))
       )
-    (if (logtest? (-> *camera* slave-options) 512)
-      (send-event *camera* 'clear-slave-option (cam-slave-options LINE_OF_SIGHT))
-      )         
-    
-    ;; show bug report level info
-    (true! *display-bug-report*)
-    (when (cpad-hold? 0 start)
-      ;; mark game won and give cheats
-      (task-close! "city-win-resolution")
-      )
-    (logior! (-> *game-info* secrets) (game-secrets endless-dark invulnerable endless-ammo))
+    )
+  
+  ;; ensure we turn off collision renderer if you disable the setting
+  (when (and (not *debug-segment*)
+             (not (-> *mod-settings* collision-renderer-toggle?)))
+    (disableCollisionRenderer)
     )
 
   ;; missions VS orb count pause menu option

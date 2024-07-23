@@ -207,6 +207,7 @@
   (set! *look-around-mods* a0-22)
   )
 
+(define-extern *zoom-sensitivity-scale* float)
 (defstate target-look-around (target)
   :event (behavior ((proc process) (argc int) (message symbol) (block event-message-block))
     (cond
@@ -243,6 +244,7 @@
     )
   :exit (behavior ()
     (remove-setting-by-arg0 *setting-control* 'fov) ;; orbhunt to reset any "zoom"
+    (set! *zoom-sensitivity-scale* 1.0) ;; orbhunt to reset zoom sensitivity changes
     (set! (-> self cam-user-mode) 'normal)
     (target-exit)
     (remove-setting! 'mode-name)

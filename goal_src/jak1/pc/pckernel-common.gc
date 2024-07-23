@@ -219,11 +219,11 @@
     (pc-renderer-tree-set-lod (pc-renderer-tree-type tie3) (-> obj lod-force-tie))
     )
 
-  (when *debug-segment*
+  ;; (when *debug-segment* ;; allow in retail for orb hunt
     (pc-set-collision *collision-renderer*)
     (pc-set-collision-wireframe *collision-wireframe*)
     (pc-set-collision-mode *collision-mode*)
-    )
+    ;; )
 
   (pc-sound-set-flava-hack (-> obj flava-hack))
   (let ((fade-hack 0))
