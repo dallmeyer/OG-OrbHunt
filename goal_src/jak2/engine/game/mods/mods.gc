@@ -1660,6 +1660,10 @@
   (none)
   )
 
+(defun active-level? ((lvl-name symbol))
+  (= (level-status *level* lvl-name) 'active)
+  )
+
 (define *zoom-sensitivity-scale* 1.0)
 (define *show-mini-bigmap* #f)
 (define *mini-bigmap-toggle-time* (the time-frame #f))
@@ -1823,6 +1827,41 @@
       (script-eval '(want-load 'mountain 'mtnext))
       (script-eval '(want-display 'mountain 'display))
       (script-eval '(want-display 'mtnext 'display))
+      )
+    )
+
+  ;; exit stadium race tasks if you portal to one of the other stadium areas
+  (cond
+    ((and (or (task-closed? "stadium-burning-bush-race-class3-introduction")
+              (task-closed? "stadium-burning-bush-race-class3-r-introduction")
+              )
+          (or (active-level? 'skatea) (active-level? 'stadiumc) (active-level? 'stadiumd)))
+      ;; kill class 3 if in jetboard/class2/class1
+      (task-node-close! (game-task-node stadium-burning-bush-race-class3-resolution))
+      (task-node-close! (game-task-node stadium-burning-bush-race-class3-r-resolution))
+      )
+    ((and (or (task-closed? "stadium-burning-bush-race-class2-introduction")
+              (task-closed? "stadium-burning-bush-race-class2-r-introduction")
+              )
+          (or (active-level? 'skatea) (active-level? 'stadiumb) (active-level? 'stadiumd)))
+      ;; kill class 2 if in jetboard/class3/class1
+      (task-node-close! (game-task-node stadium-burning-bush-race-class2-resolution))
+      (task-node-close! (game-task-node stadium-burning-bush-race-class2-r-resolution))
+      )
+    ((and (or (task-closed? "stadium-burning-bush-race-class1-introduction")
+              (task-closed? "stadium-burning-bush-race-class1-r-introduction")
+              )
+          (or (active-level? 'skatea) (active-level? 'stadiumb) (active-level? 'stadiumc)))
+      ;; kill class 1 if in jetboard/class3/class2
+      (task-node-close! (game-task-node stadium-burning-bush-race-class1-resolution))
+      (task-node-close! (game-task-node stadium-burning-bush-race-class1-r-resolution))
+      )
+    ;; probably only this one below is really needed
+    ((and (or (task-closed? "stadium-burning-bush-race-board-introduction")
+              )
+          (or (active-level? 'stadiumb) (active-level? 'stadiumc) (active-level? 'stadiumd)))
+      ;; kill jeboard if in class3/class2/class1
+      (task-node-close! (game-task-node stadium-burning-bush-race-board-resolution))
       )
     )
 

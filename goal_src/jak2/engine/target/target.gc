@@ -3190,6 +3190,14 @@
           (set! gp-1 'stuck)
           )
         )
+      ;; (dbg-format 0 "target-flop target-move-dist ~A twall ~A .7 ~A onsurf ~A not t-act? ~A word04>=2 ~A ~%" 
+      ;;   (< (target-move-dist (seconds 0.1)) 1638.4)
+      ;;   (logtest? (-> self control status) (collide-status touch-wall)) 
+      ;;   (< 0.7 (-> self control poly-angle))
+      ;;   (logtest? (-> self control status) (collide-status on-surface))
+      ;;   (not (logtest? (-> self control status) (collide-status touch-actor)))
+      ;;   (>= (-> self control unknown-word04) (the-as uint 2))
+      ;;   )
       (when gp-1
         (logior! (-> self control status) (collide-status on-surface))
         (when (or (and (= (-> self fact eco-type) 2) (>= (-> self fact eco-level) 1.0))
