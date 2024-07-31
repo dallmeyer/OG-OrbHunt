@@ -6717,7 +6717,32 @@
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
                           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
           
-                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3)))
+                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3))
+                   
+                 (new 'static 'continue-point
+                   :name "ctysluma-warp"
+                   :level 'ctysluma
+                   :flags (continue-flags no-auto)
+                   :trans (new 'static 'vector :x (meters 769.8879) :y (meters 8.1436) :z (meters 184.2629) :w 1.0)
+                   :quat (new 'static 'vector :x 0.0006 :y 0.2147 :z -0.0007 :w 0.9766)
+                   :camera-trans (new 'static 'vector :x (meters 770.8750) :y (meters 13.2310) :z (meters 196.4680) :w 1.0)
+                   :camera-rot (new 'static 'inline-array vector3s 3
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.9994 -0.0000 0.0325))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.0048 0.9887 -0.1497))
+                                (new 'static 'vector3s :data (new 'static 'array float 3  -0.0321 -0.1497 -0.9881)))
+          
+                   :on-goto #f
+                   :vis-nick 'ctysluma
+                   :want (new 'static 'inline-array level-buffer-state 6
+                          (new 'static 'level-buffer-state :name 'ctysluma :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'ctywide :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name 'forresca :display? 'display :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+                          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f))
+          
+                   :want-sound (new 'static 'array symbol 3 'ctywide1 'ctywide2 'ctywide3))
+                   )
         
       
     :tasks '()
@@ -16334,6 +16359,86 @@
     )
   )
 
+(define mooon
+  (new 'static 'level-load-info
+    :index #xe6
+    :name 'mooon
+    :visname 'mooon-vis
+    :nickname 'moo
+    :dbname 'mooon
+    :taskname 'default
+    :packages '()
+    :memory-mode (load-buffer-mode large)
+    :music-bank #f
+    :ambient-sounds '()
+    :mood-func 'update-mood-default
+    :mood-init #f
+    :ocean #f
+    :sky #f
+    :use-camera-other #f
+    :part-engine-max 16
+    :continues '((new 'static 'continue-point
+        :name "mooon-start"
+        :level 'mooon
+        :trans (new 'static 'vector :x (meters   0.00)  :y (meters   5.272)  :z (meters  10.00)   :w 1.0)
+        :quat (new 'static 'vector :y 0.061 :w 0.9981)
+        :camera-trans (new 'static 'vector :x 0.0 :y (meters 1) :z 0.0 :w 1.0)
+        :camera-rot (new 'static 'inline-array vector3s 3
+          (new 'static 'vector3s :data (new 'static 'array float 3 1.0 0.0 0.0))
+          (new 'static 'vector3s :data (new 'static 'array float 3 0.0 1.0 0.0))
+          (new 'static 'vector3s :data (new 'static 'array float 3 0.0 0.0 1.0))
+          )
+        :on-goto #f
+        :vis-nick #f
+        :want (new 'static 'inline-array level-buffer-state 6
+          (new 'static 'level-buffer-state :name 'mooon :display? 'display :force-vis? #f :force-inside? #f)
+          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+          (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
+          )
+        :want-sound (new 'static 'array symbol 3 #f #f #f)
+        )
+      )
+    :tasks '()
+    :priority 100
+    :load-commands '()
+    :alt-load-commands '()
+    :bsp-mask #xffffffffffffffff
+    :buttom-height (meters -10000000)
+    :run-packages '()
+    :wait-for-load #t
+    :login-func #f
+    :activate-func #f
+    :deactivate-func #f
+    :kill-func #f
+    :borrow-level (new 'static 'array symbol 2 #f #f)
+    :borrow-display? (new 'static 'array symbol 2 #f #f)
+    :base-task-mask (task-mask task0)
+    :texture-anim-tfrag #f
+    :texture-anim-pris #f
+    :texture-anim-shrub #f
+    :texture-anim-alpha #f
+    :texture-anim-water #f
+    :texture-anim-twarp #f
+    :texture-anim-pris2 #f
+    :texture-anim-sprite #f
+    :texture-anim-map #f
+    :texture-anim-sky #f
+    :draw-priority 10.0
+    :fog-height 327680.0
+    :bigmap-id (bigmap-id city)
+    :ocean-near-translucent? #f
+    :ocean-far? #f
+    :mood-range (new 'static 'mood-range :data (new 'static 'array float 4 0.0 1.0 0.0 1.0))
+    :max-rain 1.0
+    :fog-mult 1.0
+    :ocean-alpha 1.0
+    :extra-sound-bank #f
+    )
+  )
+
 (defmacro orbs-level (index name visname nick mood-func level-size)
   "shorthand for setting up an orbs level"
   `(new 'static 'level-load-info
@@ -16500,6 +16605,7 @@
 
 (#when PC_PORT
   ;; (cons! *level-load-list* 'test-zone)
+  (cons! *level-load-list* 'mooon)
   (cons! *level-load-list* 'otit)
 
   (cons! *level-load-list* 'orbs-default-halfpipe)

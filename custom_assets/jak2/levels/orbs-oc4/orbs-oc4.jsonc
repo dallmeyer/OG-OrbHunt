@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["air-train-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -328,6 +328,30 @@
           22, // (pickup-type skill)
           1 // amount?
         ]
+      }
+    },
+
+    // train to mooon
+    {
+      "trans": [ 769.52,   9.5, 174.67], // where computer normally is
+      "etype": "air-train",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0.6031, 0, 0.7976], // quaternion
+      "bsphere": [769.52,   9.5, 174.67, 10], // bounding sphere
+      "lump": {
+        "name":"ctysluma-air-train-01",
+        "distance": ["meters", 15.0]
+      }
+    },
+    {
+      "trans": [ 769.52,   9.5, 174.67], // where computer normally is
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0.6314, 0, 0.7754], // quaternion
+      "bsphere": [ 769.52,   9.5, 174.67, 10], // bounding sphere
+      "lump": {
+        "name":"ctysluma-warp-gate-01",
+        "distance": ["meters", 10.0]
       }
     }
 

@@ -644,6 +644,46 @@
             (set! (-> this wait-for) '())
             (set! (-> this on-close) '())            
             )
+          
+          ;; port -> mooon
+          (("ctysluma-warp-gate-01")
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+
+            (cond
+              ((>= (-> *game-info* skill-total) 3125.0)
+                (set! (-> this continue) (get-continue-by-name *game-info* "mooon-start"))
+                (set! (-> this on-activate) '())
+                (set! (-> this wait-for) '())
+                (set! (-> this on-close) '())
+                )
+              (else
+                (set! (-> this continue) #f)
+                )
+              )
+            )
+          (("ctysluma-air-train-01") ;; show air-train
+            (cond
+              ((>= (-> *game-info* skill-total) 3125.0)
+                (logclear! (-> this draw status) (draw-control-status no-draw))
+                )
+              (else
+                (logior! (-> this draw status) (draw-control-status no-draw))
+                )
+              )
+            (set! (-> this continue) #f)
+            )
+          ;; mooon -> port
+          (("mooon-warp-gate-01") 
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "ctysluma-warp"))
+            (set! (-> this on-activate) '())
+            (set! (-> this wait-for) '())
+            (set! (-> this on-close) '())
+            )
+          (("mooon-air-train-01") ;; show air-train
+            (logclear! (-> this draw status) (draw-control-status no-draw))
+            (set! (-> this continue) #f)
+            )
           ;; unknown
           (else
             ;; (set! (-> this continue) #f)
@@ -843,7 +883,7 @@
     (set! (-> *level* play?) #t)
     (apply-settings *setting-control*)
     (case-str (-> self name)
-      (("halfpipe-warp-gate-01" "stadium-warp-gate-01") 
+      (("halfpipe-warp-gate-01" "stadium-warp-gate-01" "ctysluma-warp-gate-01" "mooon-warp-gate-01") 
         ;; skip target-warp-out, just go to continue
         )
       (else

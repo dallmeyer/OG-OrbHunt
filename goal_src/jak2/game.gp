@@ -300,6 +300,10 @@
 ;; it should point to the .jsonc file that specifies the level.
 
 
+(build-custom-level "mooon")
+(custom-level-cgo "MOO.DGO" "mooon/mooon.gd")
+
+
 (build-custom-level "orbs-city-vinroom")
 (custom-level-cgo "OC0.DGO" "orbs-city-vinroom/orbs-city-vinroom.gd")
 

@@ -1829,6 +1829,34 @@
       )
     )
 
+  ;; mooon things
+  (cond
+    ((= (level-status *level* 'mooon) 'active)
+      ;; low grav
+      (when *target* (set! (-> *target* control dynam gravity-length) (meters 20)))
+      (set! (-> *TARGET-bank* jump-height-max) (meters 7.0))
+      (set! (-> *TARGET-bank* double-jump-height-max) (meters 5.0))
+      (set! (-> *TARGET_BOARD-bank* jump-height-max) (meters 7.0))
+      (set! (-> *TARGET_BOARD-bank* duck-jump-height-max) (meters 10.0))
+      (set! (-> *TARGET_BOARD-bank* trickx-jump-height-max) (meters 2.4))
+      (set! (-> *TARGET_BOARD-bank* tricky-jump-height-max) (meters 2.4))
+
+      ;; evening always
+      (send-event (ppointer->process *time-of-day*) 'change 'hour 23)
+      (set! (-> *time-of-day-context* mode) (the-as time-of-day-palette-id (/ 6 8)))
+      )
+    (else
+      ;; normal grav
+      (when *target* (set! (-> *target* control dynam gravity-length) (meters 50)))
+      (set! (-> *TARGET-bank* jump-height-max) (meters 3.5))
+      (set! (-> *TARGET-bank* double-jump-height-max) (meters 2.5))
+      (set! (-> *TARGET_BOARD-bank* jump-height-max) (meters 3.5))
+      (set! (-> *TARGET_BOARD-bank* duck-jump-height-max) (meters 5.0))
+      (set! (-> *TARGET_BOARD-bank* trickx-jump-height-max) (meters 1.2))
+      (set! (-> *TARGET_BOARD-bank* tricky-jump-height-max) (meters 1.2))
+      )
+    )
+
   ;; exit stadium race tasks if you portal to one of the other stadium areas
   (cond
     ((and (or (task-closed? "stadium-burning-bush-race-class3-introduction")

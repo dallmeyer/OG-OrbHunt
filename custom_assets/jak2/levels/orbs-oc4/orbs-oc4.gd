@@ -4,5 +4,7 @@
 ;; the actual file name still needs to be 8.3
 ("OC4.DGO"
  (
+  "warp-gate-ag.go"
+  "air-train-ag.go"
   "orbs-oc4.go"
   ))
