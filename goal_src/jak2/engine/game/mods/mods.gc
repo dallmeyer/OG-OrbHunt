@@ -604,9 +604,8 @@
             (dotimes (idx LEVEL_ID_LEN)
               (when (or (-> *level-orb-active* idx)
                         (and (= idx 45) (nonzero? (-> *level-orb-total-counts* idx))) ;; onintent has orbs in ctymark(a/b? idk)
-                        (and (= idx 33) (nonzero? (-> *level-orb-total-counts* idx))) ;; ctygena has orbs in ctygenc
                         )
-                (let* ((coll (if (>= save-idx 0) ;; prefer to read the save data one, addresses changing count in ctygena
+                (let* ((coll (if (>= save-idx 0) ;; prefer to read the save data one
                                  (-> *mod-settings* save-data save-idx orb-counts idx)
                                  (-> *level-orb-collected-counts* idx)
                                  ))
@@ -2112,6 +2111,20 @@
         )
     (when r 
       (set! (-> r on-exit) '(if (not (level-active? lbbush)) (want-display 'ctygenb #f)))  ;; don't deload ctygenb if target is grabbed (orb hunt side mission cutscene BS)
+      )
+    )
+  ;; shift region a bit to fudge some more orbs into ctygena
+  (let* ((r (the drawable-region-face (region-prim-lookup-by-id 296 #f 0)))
+         (rp (if r (-> r data points)))
+         )
+    (when r
+      (set-vector! (-> r bsphere) (meters -64.18)  (meters  21.14)  (meters  27.03) 120595.0000)
+      (set-vector! (-> r data normal) 0.9975       0.0000       0.0702 -233893.5937)
+      (set! (-> r data normal-offset) -233893.5937)
+      (set-vector! (-> rp 0) -255785.00		162212.00		13149.70  1.0)
+      (set-vector! (-> rp 1) -255785.00		18589.40		13149.70  1.0)
+      (set-vector! (-> rp 2) -269494.00		162212.00		207760.00  1.0)
+      (set-vector! (-> rp 3) -269494.00		18589.40		207760.00  1.0)
       )
     )
 
