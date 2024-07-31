@@ -758,6 +758,10 @@
   (the-as symbol (and (-> this next-state) (= (-> this next-state name) 'hud-hidden)))
   )
 
+(defun fully-in? ((this hud))
+  (the-as symbol (and (-> this next-state) (= (-> this next-state name) 'hud-in)))
+  )
+
 ;; WARN: Return type mismatch (pointer process) vs (pointer manipy).
 (defun hud-create-icon ((arg0 hud) (arg1 int) (arg2 int))
   (let ((s4-0 (process-spawn manipy :init manipy-init (new 'static 'vector :w 1.0) #f arg2 #f 0 :to arg0)))
@@ -1174,6 +1178,36 @@
       )
     (else
       (set! gp-0 #t)
+      )
+    )
+  gp-0
+  )
+
+
+(defun hud-skill-shown? ()
+  (local-vars (gp-0 symbol))
+  (cond
+    (*target*
+      (set! gp-0 #f)
+      (let ((v1-2 (-> *hud-engine* alive-list next0)))
+        *hud-engine*
+        (let ((s5-0 (-> v1-2 next0)))
+          (while (!= v1-2 (-> *hud-engine* alive-list-end))
+            (let ((h (the-as hud (-> (the-as connection v1-2) param1))))
+              (if (and (fully-in? h)
+                       (= (-> h type) hud-skill))
+                (set! gp-0 #t)
+                )
+              )
+            (set! v1-2 s5-0)
+            *hud-engine*
+            (set! s5-0 (-> s5-0 next0))
+            )
+          )
+        )
+      )
+    (else
+      (set! gp-0 #f)
       )
     )
   gp-0

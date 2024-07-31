@@ -237,8 +237,8 @@
 
       (when (and (pause-allowed?) (not (paused?)))
         (clear *pc-encoded-temp-string*)
-        (when (-> *mod-settings* closest-orb?)
-          ;; show closest orb text
+        (when (and (hud-skill-shown?) (-> *mod-settings* closest-orb?))
+          ;; show closest orb text while hud is up
           (cond
             ((= *baby-mode-orb-dist* #f)
               (pc-encode-utf8-string "Closest Orb: N/A" *pc-encoded-temp-string*)
