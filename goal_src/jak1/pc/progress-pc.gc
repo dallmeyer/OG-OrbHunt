@@ -225,7 +225,10 @@
             :name (text-id input-options)
             :scale #t
             :param3 (game-option-menu input-options))
-       (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id play-hints) :scale #t)
+       (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id play-hints) :scale #t
+        :on-confirm
+        (lambda ()
+          (set! (-> *setting-control* default play-hints) (-> *pc-settings* memcard-play-hints?))))
        (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id subtitles) :scale #t)
        (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id hinttitles) :scale #t)
        (new 'static 'game-option :option-type (game-option-type language) :name (text-id language) :scale #t)
@@ -260,7 +263,7 @@
             :param3 (game-option-menu monitor)
             :option-disabled-func
             (lambda ()
-              (= (-> *pc-settings* display-mode) 'windowed)))
+              (= (pc-get-display-mode) 'windowed)))
        (new 'static 'game-option :option-type (game-option-type on-off) :name (text-id vsync) :scale #t)
        (new 'static
             'game-option
@@ -297,7 +300,11 @@
             :scale #t
             :param1 0.0
             :param2 100.0
-            :slider-step-size 1.0)
+            :slider-step-size 1.0
+            :on-confirm
+            (lambda ((val object))
+              (set! (-> *setting-control* default sfx-volume) (-> *pc-settings* memcard-volume-sfx))
+              (none)))
        (new 'static
             'game-option
             :option-type (game-option-type slider)
@@ -305,7 +312,11 @@
             :scale #t
             :param1 0.0
             :param2 100.0
-            :slider-step-size 1.0)
+            :slider-step-size 1.0
+            :on-confirm
+            (lambda ((val object))
+              (set! (-> *setting-control* default music-volume) (-> *pc-settings* memcard-volume-music))
+              (none)))
        (new 'static
             'game-option
             :option-type (game-option-type slider)
@@ -313,7 +324,11 @@
             :scale #t
             :param1 0.0
             :param2 100.0
-            :slider-step-size 1.0)
+            :slider-step-size 1.0
+            :on-confirm
+            (lambda ((val object))
+              (set! (-> *setting-control* default dialog-volume) (-> *pc-settings* memcard-volume-dialog))
+              (none)))
        ;(new 'static 'game-option :option-type (game-option-type on-off) :name (text-id music-fadein) :scale #t)
        (new 'static 'game-option :option-type (game-option-type button) :name (text-id back) :scale #t)))
 
@@ -371,7 +386,10 @@
             :scale #t
             :option-disabled-func
             (lambda ()
-              (not (pc-current-controller-has-rumble?))))
+              (not (pc-current-controller-has-rumble?)))
+            :on-confirm
+            (lambda ()
+              (set! (-> *setting-control* default vibration) (-> *pc-settings* memcard-vibration?))))
        (new 'static
             'game-option
             :option-type (game-option-type slider)
@@ -1279,7 +1297,7 @@
         (set! (-> option bind-info input-idx) i)
         (set! (-> option bind-info analog-min-range?) #t)
         (set! (-> option option-type) (game-option-type binding-assignment))
-        (set! (-> option name-override) (-> *analog-bind-names* (* i 2)))
+        (set! (-> option name-override) (copy-string<-string (-> option name-override) (-> *analog-bind-names* (* i 2))))
         (set! (-> option scale) #t)
         (1+! (-> *temp-options* length)))
       (let ((option (-> *temp-options* (length *temp-options*))))
@@ -1290,7 +1308,7 @@
         (set! (-> option bind-info input-idx) i)
         (set! (-> option bind-info analog-min-range?) #f)
         (set! (-> option option-type) (game-option-type binding-assignment))
-        (set! (-> option name-override) (-> *analog-bind-names* (+ 1 (* i 2))))
+        (set! (-> option name-override) (copy-string<-string (-> option name-override) (-> *analog-bind-names* (+ 1 (* i 2)))))
         (set! (-> option scale) #t)
         (1+! (-> *temp-options* length)))))
   ;; Add Button bindings
@@ -1305,7 +1323,7 @@
       (set! (-> option bind-info input-idx) i)
       (set! (-> option bind-info analog-min-range?) #f)
       (set! (-> option option-type) (game-option-type binding-assignment))
-      (set! (-> option name-override) (-> *button-bind-names* i))
+      (set! (-> option name-override) (copy-string<-string (-> option name-override) (-> *button-bind-names* i)))
       (set! (-> option scale) #t)
       (1+! (-> *temp-options* length))))
   ;; We add a restore defaults button at the bottom of each binding menu
@@ -2025,19 +2043,19 @@
   (set! (-> *progress-state* video-mode-choice) (get-video-mode))
   (set! (-> *progress-state* yes-no-choice) #f)
   ;; set variable pointers
-  (set! (-> *game-options* 1 value-to-modify) (&-> *setting-control* default play-hints))
+  (set! (-> *game-options* 1 value-to-modify) (&-> *pc-settings* memcard-play-hints?))
   (set! (-> *game-options* 2 value-to-modify) (&-> *setting-control* default language))
-  (set! (-> *game-options-japan* 0 value-to-modify) (&-> *setting-control* default vibration))
-  (set! (-> *game-options-japan* 1 value-to-modify) (&-> *setting-control* default play-hints))
-  (set! (-> *game-options-demo* 0 value-to-modify) (&-> *setting-control* default vibration))
-  (set! (-> *game-options-demo* 1 value-to-modify) (&-> *setting-control* default play-hints))
+  (set! (-> *game-options-japan* 0 value-to-modify) (&-> *pc-settings* memcard-vibration?))
+  (set! (-> *game-options-japan* 1 value-to-modify) (&-> *pc-settings* memcard-play-hints?))
+  (set! (-> *game-options-demo* 0 value-to-modify) (&-> *pc-settings* memcard-vibration?))
+  (set! (-> *game-options-demo* 1 value-to-modify) (&-> *pc-settings* memcard-play-hints?))
   (set! (-> *graphic-options* 1 value-to-modify) (&-> *progress-state* aspect-ratio-choice))
   (set! (-> *sound-options* 0 value-to-modify) (&-> *setting-control* default sfx-volume))
   (set! (-> *sound-options* 1 value-to-modify) (&-> *setting-control* default music-volume))
   (set! (-> *sound-options* 2 value-to-modify) (&-> *setting-control* default dialog-volume))
   (set! (-> *yes-no-options* 0 value-to-modify) (&-> *progress-state* yes-no-choice))
   ;; our options!
-  (set! (-> *game-options-pc* 1 value-to-modify) (&-> *setting-control* default play-hints))
+  (set! (-> *game-options-pc* 1 value-to-modify) (&-> *pc-settings* memcard-play-hints?))
   (set! (-> *game-options-pc* 2 value-to-modify) (&-> *pc-settings* subtitles?))
   (set! (-> *game-options-pc* 3 value-to-modify) (&-> *pc-settings* hinttitles?))
   (set! (-> *game-options-pc* 4 value-to-modify) (&-> *setting-control* default language))
@@ -2045,7 +2063,6 @@
   (set! (-> *game-options-pc* 6 value-to-modify) (&-> *progress-carousell* int-backup))
   (set! (-> *game-options-pc* 7 value-to-modify) (&-> *progress-carousell* int-backup))
   (set! (-> *graphic-options-pc* 1 value-to-modify) (&-> *progress-carousell* int-backup))
-  (set! (-> *graphic-options-pc* 2 value-to-modify) (&-> *pc-settings* monitor))
   (set! (-> *graphic-options-pc* 3 value-to-modify) (&-> *pc-settings* vsync?))
   (set! (-> *graphic-options-pc* 5 value-to-modify) (&-> *progress-carousell* int-backup))
   (set! (-> *graphic-options-pc* 6 value-to-modify) (&-> *progress-carousell* int-backup))
@@ -2058,7 +2075,7 @@
   (set! (-> *camera-options* 2 value-to-modify) (&-> *pc-settings* third-camera-h-inverted?))
   (set! (-> *camera-options* 3 value-to-modify) (&-> *pc-settings* third-camera-v-inverted?))
   ;; input options
-  (set! (-> *controller-options* 1 value-to-modify) (&-> *setting-control* default vibration))
+  (set! (-> *controller-options* 1 value-to-modify) (&-> *pc-settings* memcard-vibration?))
   (set! (-> *controller-options* 2 value-to-modify) (&-> *pc-settings* stick-deadzone))
   (set! (-> *controller-options* 3 value-to-modify) (&-> *pc-settings* ignore-controller-win-unfocused?))
   (set! (-> *controller-options* 4 value-to-modify) (&-> *pc-settings* controller-led-hp?))
@@ -2076,9 +2093,9 @@
   (set! (-> *gfx-ps2-options* 2 value-to-modify) (&-> *pc-settings* ps2-parts?))
   (set! (-> *gfx-ps2-options* 3 value-to-modify) (&-> *pc-settings* force-envmap?))
   (set! (-> *gfx-ps2-options* 4 value-to-modify) (&-> *pc-settings* ps2-actor-vis?))
-  (set! (-> *sound-options-pc* 0 value-to-modify) (&-> *setting-control* default sfx-volume))
-  (set! (-> *sound-options-pc* 1 value-to-modify) (&-> *setting-control* default music-volume))
-  (set! (-> *sound-options-pc* 2 value-to-modify) (&-> *setting-control* default dialog-volume))
+  (set! (-> *sound-options-pc* 0 value-to-modify) (&-> *pc-settings* memcard-volume-sfx))
+  (set! (-> *sound-options-pc* 1 value-to-modify) (&-> *pc-settings* memcard-volume-music))
+  (set! (-> *sound-options-pc* 2 value-to-modify) (&-> *pc-settings* memcard-volume-dialog))
   (dotimes (i (1- (-> *cheats* length)))
     (set! (-> *cheats* i value-to-modify) (&-> *progress-carousell* symbol-backup)))
   ;(set! (-> *sound-options-pc* 3 value-to-modify) (&-> *pc-settings* music-fadein?))
@@ -2486,7 +2503,7 @@
                ;; resolution button. change resolution!
                (let ((newx (the int (-> options (-> obj option-index) param1)))
                      (newy (the int (-> options (-> obj option-index) param2))))
-                 (set-size! *pc-settings* newx newy #t))
+                 (set-window-size! *pc-settings* newx newy))
                (cpad-clear! 0 x)
                (cpad-clear! 0 circle)
                (sound-play "cursor-options")
@@ -2504,7 +2521,7 @@
                (commit-to-file *pc-settings*))
               ((= (-> options (-> obj option-index) option-type) (game-option-type monitor))
                ;; monitor button
-               (let ((monitor (the int (-> options (-> obj option-index) param1)))) (set-monitor! *pc-settings* monitor))
+               (let ((monitor (the int (-> options (-> obj option-index) param1)))) (pc-set-display-id! monitor))
                (cpad-clear! 0 x)
                (cpad-clear! 0 circle)
                (sound-play "cursor-options")
@@ -2659,9 +2676,9 @@
               (((game-option-type display-mode))
                ;; same thing.
                (case (-> *progress-carousell* int-backup)
-                 ((0) (set-display-mode! *pc-settings* 'windowed #t))
-                 ((1) (set-display-mode! *pc-settings* 'fullscreen #t))
-                 ((2) (set-display-mode! *pc-settings* 'borderless #t))))
+                 ((0) (pc-set-display-mode! 'windowed))
+                 ((1) (pc-set-display-mode! 'fullscreen))
+                 ((2) (pc-set-display-mode! 'borderless))))
               (((game-option-type msaa))
                (case (-> *progress-carousell* int-backup)
                  ((0) (set! (-> *pc-settings* gfx-msaa) 1))
