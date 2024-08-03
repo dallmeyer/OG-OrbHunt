@@ -2,7 +2,6 @@
 (in-package goal)
 (bundles "ENGINE.CGO" "GAME.CGO")
 
-
 ;; name: game-task-h.gc
 ;; name in dgo: game-task-h
 ;; dgos: GAME, ENGINE
@@ -128,7 +127,7 @@
   (finalboss-movies 112)
   (plunger-lurker-hit 113)
   (leaving-misty 114)
-  (assistant-village3 115)  
+  (assistant-village3 115)
   ;; CUSTOM TASKS
   (dummy 116)
   ;; CRYSTAL CAVE
@@ -137,6 +136,5 @@
   (crystalc-ship 119)
   (crystalc-shrooms 120)
   (crystalc-buzzer 121)
-
   (max 122) ;;change max to last +1
   )
