@@ -10,10 +10,6 @@
 (require "engine/common-obs/generic-obs.gc")
 (require "pc/pckernel.gc")
 
-;; name: main.gc
-;; name in dgo: main
-;; dgos: GAME, ENGINE
-
 ;; DECOMP BEGINS
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -362,7 +358,9 @@
     ;; collide dma
     (suspend)
     (while *run*
-      (runs-every-frame) ;; trigger hook for mod base
+
+      (runs-every-frame) ;; trigger hook for mod base mod-base-change entry point
+
       ;; start immediately after all process updates finish.
       (profiler-instant-event "display-loop-top")
       ;; drawing effects to be used in foreground drawing.
@@ -418,8 +416,7 @@
       (add-ee-profile-frame 'draw :g #x80)
       (with-profiler "menu"
         ;; (#when PC_PORT
-        ;;   (if (and *display-sha* *debug-segment*)
-        ;; (draw-build-revision)))
+        ;;   (if (and *display-sha* *debug-segment*) (draw-build-revision)))
         (*menu-hook*)
         (add-ee-profile-frame 'draw :g #x40)
         ;; finally, update hints/text

@@ -26,6 +26,7 @@
 (define-extern target-hit-move (function attack-info symbol (function none :behavior target) float none :behavior target))
 
 (define-extern mod-turbo-jetboard? (function symbol))
+(define-extern *target-board-hold-tricks* int)
 
 (declare-type grenade projectile)
 
@@ -122,7 +123,6 @@
   (none)
   )
 
-(define-extern *target-board-hold-tricks* int)
 
 ;; WARN: Return type mismatch object vs none.
 (defbehavior target-board-spin-check target ()

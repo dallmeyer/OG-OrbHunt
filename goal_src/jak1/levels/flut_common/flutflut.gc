@@ -5,10 +5,6 @@
 (require "engine/common-obs/generic-obs.gc")
 (require "engine/entity/ambient.gc")
 
-;; name: flutflut.gc
-;; name in dgo: flutflut
-;; dgos: L1, SNO, SWA
-
 ;; DECOMP BEGINS
 
 (define-extern *allow-flutflut-anywhere* symbol)

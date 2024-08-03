@@ -6,10 +6,6 @@
 (require "engine/level/level-h.gc")
 (require "engine/game/game-info-h.gc")
 
-;; name: level-info.gc
-;; name in dgo: level-info
-;; dgos: GAME, ENGINE
-
 ;; DECOMP BEGINS
 
 (define training
@@ -2533,15 +2529,15 @@
        '()
        :wait-for-load #t))
 
-(define crystal-cave
+(define crystalc
   (new 'static
        'level-load-info
        :index 27
-       :name 'crystal-cave
+       :name 'crystalc
        :customname "???"
        :custom-orb-count 150
        :custom-buzzer-count 7
-       :visname 'crystal-cave-vis
+       :visname 'crystalc-vis
        ;; name + -vis
        :nickname 'crc
        ;; nickname
@@ -2558,7 +2554,7 @@
        '((new 'static
              'continue-point
              :name "crystal-cave-start"
-             :level 'crystal-cave
+             :level 'crystalc
              :trans
              (new 'static 'vector :x (meters -51.23) :y (meters 93.12) :z (meters 15.18) :w 1.0)
              :quat
@@ -2570,14 +2566,14 @@
              :load-commands
              '()
              :vis-nick 'none
-             :lev0 'crystal-cave
+             :lev0 'crystalc
              :disp0 'display
              :lev1 'robocave
              :disp1 '#f)
         (new 'static
              'continue-point
              :name "crystal-cave-warp"
-             :level 'crystal-cave
+             :level 'crystalc
              :flags (continue-flags warp)
              :trans
              (new 'static 'vector :x (meters 0.37) :y (meters 99.55) :z (meters 2.92) :w 1.0)
@@ -2590,14 +2586,14 @@
              :load-commands
              '()
              :vis-nick 'none
-             :lev0 'crystal-cave
+             :lev0 'crystalc
              :disp0 'display
              :lev1 'robocave
              :disp1 '#f)
         (new 'static
              'continue-point
              :name "crystal-cave-void-entry"
-             :level 'crystal-cave
+             :level 'crystalc
              :trans
              (new 'static 'vector :x (meters -186.34) :y (meters 88.49) :z (meters -9.55) :w 1.0)
              :quat
@@ -2609,14 +2605,14 @@
              :load-commands
              '()
              :vis-nick 'none
-             :lev0 'crystal-cave
+             :lev0 'crystalc
              :disp0 'display
              :lev1 'robocave
              :disp1 '#f)
         (new 'static
              'continue-point
              :name "crystal-cave-bad-shrooms"
-             :level 'crystal-cave
+             :level 'crystalc
              :trans
              (new 'static 'vector :x (meters -206.08) :y (meters 73.61) :z (meters -109.63) :w 1.0)
              :quat
@@ -2628,14 +2624,14 @@
              :load-commands
              '()
              :vis-nick 'none
-             :lev0 'crystal-cave
+             :lev0 'crystalc
              :disp0 'display
              :lev1 'robocave
              :disp1 '#f)
         (new 'static
              'continue-point
              :name "crystal-cave-void-end"
-             :level 'crystal-cave
+             :level 'crystalc
              :trans
              (new 'static 'vector :x (meters -327.51) :y (meters 96.61) :z (meters -43.80) :w 1.0)
              :quat
@@ -2647,7 +2643,7 @@
              :load-commands
              '()
              :vis-nick 'none
-             :lev0 'crystal-cave
+             :lev0 'crystalc
              :disp0 'display
              :lev1 'robocave
              :disp1 '#f))
@@ -2668,4 +2664,4 @@
 
 (cons! *level-load-list* 'test-zone)
 
-(cons! *level-load-list* 'crystal-cave)
+(cons! *level-load-list* 'crystalc)

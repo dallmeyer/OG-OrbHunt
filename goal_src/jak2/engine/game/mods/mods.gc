@@ -1753,7 +1753,9 @@
                   (let ((entity-link (-> entities data idx)))
                     (when (and (-> entity-link entity) (nonzero? (-> entity-link entity))
                               (-> entity-link process)
-                              (= (-> (the entity-actor (-> entity-link entity)) etype symbol) 'skill)
+                              (or (= (-> (the entity-actor (-> entity-link entity)) etype symbol) 'skill)
+                                  (= (-> (the entity-actor (-> entity-link entity)) etype symbol) 'skill-crate)
+                                  )
                               )
                       (let ((s (the skill (-> entity-link process))))
                         ;; we have a live orb, figure out how far away it is relative to camera

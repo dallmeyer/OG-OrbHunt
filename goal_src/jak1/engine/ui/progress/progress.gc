@@ -4,10 +4,6 @@
 (require "engine/ui/progress/progress-draw.gc")
 (require "engine/ui/progress/progress-part.gc")
 
-;; name: progress.gc
-;; name in dgo: progress
-;; dgos: GAME, ENGINE
-
 ;; DECOMP BEGINS
 
 (deftype progress-global-state (basic)
@@ -153,9 +149,7 @@
         (cond
           ((!= *kernel-boot-message* 'play)
            (if (= (-> tasks level-name-id) (text-id misty-level-name)) (set! (-> *game-info* level-opened i) (the-as uint 1))))
-          ;; (*cheat-mode*
-          ;;   (set! (-> *game-info* level-opened i) (the-as uint 1))
-          ;;   )
+          ;; (*cheat-mode* (set! (-> *game-info* level-opened i) (the-as uint 1)))
           (else
            (dotimes (ii (-> tasks nb-of-tasks))
              (if (and (zero? (-> *game-info* level-opened ii))
@@ -491,7 +485,6 @@
   0
   (none))
 
-;; TAGMORT
 ;; manually set up game-counts
 (define *game-counts* (the game-count-info (malloc 'global 10000)))
 
@@ -513,8 +506,7 @@
                 (-> info custom-buzzer-count))))
       (set! iter (cdr iter)))))
 
-(defmethod relocate game-count-info
-  ((this game-count-info) (arg0 int))
+(defmethod relocate ((this game-count-info) (arg0 int))
   "Load in the game-count-info."
   ;; ignore the one that was loaded, we have our own.
   ;;(set! *game-counts* this)
@@ -535,7 +527,9 @@
 
 (defmethod adjust-sprites ((this progress))
   (let ((f0-1 (* (1/ METER_LENGTH) (the float (-> this in-out-position)))))
+    ;; right position
     (set! (-> this particles 2 init-pos x) (the float (+ (-> this right-x-offset) 409 (the int (* 301.5 f0-1)))))
+    ;; left position
     (set! (-> this particles 1 init-pos x) (the float (+ (-> this left-x-offset) 59)))
     (set! (-> this left-side-x-scale)
           (meters (+ (/ (if (= (-> *pc-settings* aspect-custom-x) 16) 5.0 3.5) (-> this sides-x-scale)) (* 10.0 f0-1))))

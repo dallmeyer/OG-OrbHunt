@@ -224,9 +224,9 @@
               :tool 'build-level
               :out '(,(string-append "$OUT/obj/" name ".go")))))
 
-(defmacro build-actor (name)
-  (let* ((path (string-append "custom_assets/jak1/models/" name ".glb")))
-    `(defstep :in ,path
+(defmacro build-actor (name &key (gen-mesh #f))
+  (let* ((path (string-append "custom_assets/jak1/models/custom_levels/" name ".glb")))
+    `(defstep :in '(,path ,(symbol->string gen-mesh))
               :tool 'build-actor
               :out '(,(string-append "$OUT/obj/" name "-ag.go")))))
 
@@ -492,6 +492,7 @@
    "village_common/oracle.gc"
 
    "common/blocking-plane.gc"
+   "common/blocking-plane-b.gc" ;; mod-base-change
    "common/launcherdoor.gc"
    "common/battlecontroller.gc"
 
@@ -1659,13 +1660,14 @@
 (custom-level-cgo "TSZ.DGO" "test-zone/testzone.gd")
 
 ;; it should point to the .jsonc file that specifies the level.
-(build-custom-level "crystal-cave")
+(build-custom-level "crystalc")
 ;; the DGO file
-(custom-level-cgo "CRC.DGO" "crystal-cave/crystalc.gd")
+(custom-level-cgo "CRC.DGO" "crystalc/crystalc.gd")
 
 ;; generate the art group for a custom actor.
-;; requires a .glb model file in custom_assets/jak1/models
-(build-actor "test-actor")
+;; requires a .glb model file in custom_assets/jak1/models/custom_levels
+;; to also generate a collide-mesh, add :gen-mesh #t
+(build-actor "test-actor" :gen-mesh #t)
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Game Engine Code

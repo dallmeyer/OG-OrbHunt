@@ -7,10 +7,6 @@
 (require "engine/camera/pov-camera-h.gc")
 (require "engine/common-obs/basebutton.gc")
 
-;; name: villagep-obs.gc
-;; name in dgo: villagep-obs
-;; dgos: CIT, L1, VI1, VI2, VI3, VILLAGEP
-
 ;; DECOMP BEGINS
 
 (deftype warpgate (process-hidden) ())
@@ -528,15 +524,15 @@
   :bounds (static-spherem 0 0 0 80))
 
 (deftype village-cam (process)
-  ((root       trsq)
-   (range      meters)
-   (index      int32)
-   (state-time time-frame))
+  ((root-override trsq)
+   (range         meters)
+   (index         int32)
+   (state-time    time-frame))
   (:state-methods
    idle))
 
 (defmethod relocate ((this village-cam) (arg0 int))
-  (if (nonzero? (-> this root)) (&+! (-> this root) arg0))
+  (if (nonzero? (-> this root-override)) (&+! (-> this root-override) arg0))
   (the-as village-cam ((method-of-type process relocate) this arg0)))
 
 (defstate idle (village-cam)
@@ -545,7 +541,7 @@
     (behavior ()
       (local-vars (v1-18 symbol))
       (loop
-        (let ((v1-5 (and (and *target* (>= (-> self range) (vector-vector-distance (-> self root trans) (-> *target* control trans))))
+        (let ((v1-5 (and (and *target* (>= (-> self range) (vector-vector-distance (-> self root-override trans) (-> *target* control trans))))
                          (and (-> *setting-control* current play-hints)
                               (< 0.0 (-> *setting-control* current dialog-volume))
                               (let ((v1-10 (-> self index)))
@@ -562,7 +558,8 @@
                (until v1-18
                  (suspend)
                  (set! v1-18
-                       (or (not *target*) (< (-> self range) (vector-vector-distance (-> self root trans) (-> *target* control trans))))))
+                       (or (not *target*)
+                           (< (-> self range) (vector-vector-distance (-> self root-override trans) (-> *target* control trans))))))
                (let* ((v1-23 (-> self index))
                       (v1-24 (cond
                                ((= v1-23 2) (not (task-closed? (game-task village2-levitator) (task-status need-hint))))
@@ -687,10 +684,10 @@
 (defmethod init-from-entity! ((this village-cam) (arg0 entity-actor))
   "Copy defaults from the entity."
   (logior! (-> this mask) (process-mask actor-pause))
-  (set! (-> this root) (new 'process 'trsq))
-  (set! (-> this root trans quad) (-> arg0 extra trans quad))
-  (quaternion-copy! (-> this root quat) (-> arg0 quat))
-  (vector-identity! (-> this root scale))
+  (set! (-> this root-override) (new 'process 'trsq))
+  (set! (-> this root-override trans quad) (-> arg0 extra trans quad))
+  (quaternion-copy! (-> this root-override quat) (-> arg0 quat))
+  (vector-identity! (-> this root-override scale))
   (set! (-> this range) (res-lump-float arg0 'cam-notice-dist :default 81920.0))
   (set! (-> this index) (res-lump-value arg0 'index int))
   (go (method-of-object this idle))

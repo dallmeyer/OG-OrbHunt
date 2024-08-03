@@ -20,6 +20,8 @@
 
 (define-extern runs-on-eco-pickup (function pickup-type process-tree none))
 
+(define-extern orb-placer-list-maintenace (function symbol none))
+
 (declare-type vent process-drawable)
 
 (declare-type eco eco-collectable)

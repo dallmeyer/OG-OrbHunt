@@ -3,10 +3,6 @@
 (bundles "ENGINE.CGO" "GAME.CGO")
 (require "kernel/gkernel-h.gc")
 
-;; name: text-h.gc
-;; name in dgo: text-h
-;; dgos: GAME, ENGINE
-
 ;; This file contains types related to game text.
 ;; Each game string is assigned an ID number.
 ;; This ID is used to lookup the string for the currently selected language.
@@ -812,6 +808,8 @@
   (slip-normal #x1707)
   (slip-no-slip #x1708)
   (slip-spiderman #x1709)
+
+  ;; mod text mod-base-change
   (pad-triangle #x2000)
   (pad-circle #x2001)
   (pad-x #x2002)

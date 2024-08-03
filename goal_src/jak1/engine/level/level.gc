@@ -11,10 +11,6 @@
 (require "engine/load/ramdisk.gc")
 (require "engine/gfx/tfrag/tfrag.gc")
 
-;; name: level.gc
-;; name in dgo: level
-;; dgos: GAME, ENGINE
-
 ;; DECOMP BEGINS
 
 ;;;;;;;;;;;;;;;;;;;;;;
@@ -710,82 +706,99 @@
 (defmethod is-object-visible? level
   ((this level) (arg0 int) (actor entity))
   "Is arg0 visible? Note that this will return #f if the visibility data is not loaded."
-  ;; note : pc port added option to show every actor regardless
+
+  ;; hack to force visibility of stuff moved (rather than update visibility data)
+  (case (-> (the entity-actor actor) etype symbol)
+    (('money 'eco
+            'crate
+            'crate-buzzer
+            'fisher
+            'fuel-cell
+            'orb-cache-top
+            'yakow
+            'plat
+            'plat-flip
+            'eggtop
+            'logtrap
+            'launcher
+            'racer
+            'spike
+            'balloon
+            'crate-darkeco-cluster
+            'aphid
+            'pelican
+            'ventblue
+            'harvester
+            'flutflutegg
+            'grottopole
+            'bird-lady-beach
+            'ecoventrock
+            'part-tracker
+            'citb-disc-a
+            'citb-disc-b
+            'citb-disc-c
+            'citb-disc-d
+            'citb-launcher
+            'scarecrow-a
+            'scarecrow-b
+            'junglesnake
+            'darkvine
+            'ecovent
+            'mistycannon
+            'babak-with-cannon
+            'periscope
+            'springbox
+            'teetertotter
+            'plant-boss
+            'warrior
+            'gambler
+            'pontoonten
+            'pontoonfive
+            'blue-eco-charger
+            'swamp-spike
+            'dark-crystal
+            'swamp-tetherrock
+            'swamp-rat-nest
+            'swamp-rock
+            'flutflut
+            'tar-plat
+            'balance-plat
+            'race-ring
+            'snow-bunny
+            'babak
+            'shortcut-boulder
+            'tntbarrel
+            'plunger-lurker
+            'snow-bumper
+            'ram
+            'snow-log-button
+            'snow-log
+            'snow-eggtop
+            'snow-switch
+            'snow-button
+            'flutflut-plat-med
+            'flutflut-plat-large
+            'flutflut-plat-small)
+      (return #t)))
+
+  ;; og:mod-base anything thats not a vanilla level -> always show actors
+  (case (-> this name) :comp name=
+    (('intro 'title 'demo
+      'training 'village1 'beach 'jungle 'jungleb 'misty 'firecanyon
+      'village2 'sunken 'sunkenb 'rolling 'swamp 'ogre
+      'village3 'snow 'maincave 'darkcave 'robocave 'lavatube
+      'citadel 'finalboss)
+      ;; vanilla level -> fall through to normal checks
+      )
+    (else 
+      ;; some custom level -> return true
+      (return #t)
+      )
+    )
+
+  ;; og:preserve-this pc port added option to show every actor regardless
   (with-pc
-    ;; hack to force visibility of stuff moved (rather than update visibility data)
-    (case (-> (the entity-actor actor) etype symbol)
-      (('money 'eco
-              'crate
-              'crate-buzzer
-              'fisher
-              'fuel-cell
-              'orb-cache-top
-              'yakow
-              'plat
-              'plat-flip
-              'eggtop
-              'logtrap
-              'launcher
-              'racer
-              'spike
-              'balloon
-              'crate-darkeco-cluster
-              'aphid
-              'pelican
-              'ventblue
-              'harvester
-              'flutflutegg
-              'grottopole
-              'bird-lady-beach
-              'ecoventrock
-              'part-tracker
-              'citb-disc-a
-              'citb-disc-b
-              'citb-disc-c
-              'citb-disc-d
-              'citb-launcher
-              'scarecrow-a
-              'scarecrow-b
-              'junglesnake
-              'darkvine
-              'ecovent
-              'mistycannon
-              'babak-with-cannon
-              'periscope
-              'springbox
-              'teetertotter
-              'plant-boss
-              'warrior
-              'gambler
-              'pontoonten
-              'pontoonfive
-              'blue-eco-charger
-              'swamp-spike
-              'dark-crystal
-              'swamp-tetherrock
-              'swamp-rat-nest
-              'swamp-rock
-              'flutflut
-              'tar-plat
-              'balance-plat
-              'race-ring
-              'snow-bunny
-              'babak
-              'shortcut-boulder
-              'tntbarrel
-              'plunger-lurker
-              'snow-bumper
-              'ram
-              'snow-log-button
-              'snow-log
-              'snow-eggtop
-              'snow-switch
-              'snow-button
-              'flutflut-plat-med
-              'flutflut-plat-large
-              'flutflut-plat-small)
-       (return #t))
-      (else (if (or (= (-> this name) 'crystal-cave) (-> *pc-settings* ps2-actor-vis?)) (return #t)))))
+    (if (not (-> *pc-settings* ps2-actor-vis?)) (return #t)))
   ;; check the vis bits!
   (let* (;; lwu v1, 388(a0)
          (vis-data (-> this vis-bits))
@@ -1342,12 +1355,7 @@
                    (not (-> s4-4 inside-boxes?)) ;; but not in A
                    )
           ;; (if (and (= *cheat-mode* 'debug) (-> s4-4 other inside-boxes?))
-          ;;     (format
-          ;;       *stdcon*
-          ;;       "~3LForcing outside of ~A [bad split boxes]~%~0L"
-          ;;       (-> s4-4 other name)
-          ;;       )
-          ;;     )
+          ;;   (format *stdcon* "~3LForcing outside of ~A [bad split boxes]~%~0L" (-> s4-4 other name)))
           (set! (-> s4-4 other inside-boxes?) #f)))))
   ;; if we are outside of the boxes, we consider ourselves "outside of bsp"
   ;; if we are outside of both levels boxes, then we don't really know what to do

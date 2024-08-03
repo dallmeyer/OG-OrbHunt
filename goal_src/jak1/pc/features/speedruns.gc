@@ -146,6 +146,18 @@
   (and (-> *pc-settings* speedrunner-mode?)
        (name= category (enum->string speedrun-category (-> *speedrun-info* category)))))
 
+(defun enforce-speedrun-pc-settings ()
+  ;; Disable any active cheats
+  (set! (-> *pc-settings* cheats) (the-as pc-cheats #x0))
+  ;; ensure PS2 actor vis is enabled
+  (set! (-> *pc-settings* ps2-actor-vis?) #t)
+  ;; ensure FPS set to `60`
+  (when (!= (-> *pc-settings* target-fps) 60)
+    (set-frame-rate! *pc-settings* 60 #t)
+    )
+  (none)
+  )
+
 (defun start-speedrun ((category speedrun-category))
   ;; randomize game id so the autosplitter knows to restart
   (update-autosplit-jak1-new-game)
@@ -229,10 +241,7 @@
      (initialize! *game-info* 'game (the-as game-save #f) "intro-start"))
     (else
      (format 0 "start-speedrun: unrecognized category ~S~%" (enum->string speedrun-category (-> *speedrun-info* category)))))
-  ;; ensure actor vis is enabled
-  (set! (-> *pc-settings* ps2-actor-vis?) #t)
-  ;; force FPS to `60`
-  (set-frame-rate! *pc-settings* 60 #t)
+  (enforce-speedrun-pc-settings)
   ;; enable auto saving by default
   (set! (-> *setting-control* default auto-save) #t)
   (none))
@@ -439,7 +448,7 @@
   "Draw speedrun related settings in the bottom left corner"
   (when (and (-> *pc-settings* speedrunner-mode?) (not (paused?)) (-> *speedrun-info* should-display?))
     (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf)) (bucket-id subtitle))
-      (draw-string-xy (string-format "Speedrunner Mode ~%~S ~%Category: ~S ~%Cutscene Skips ~A"
+      (draw-string-xy (string-format "Speedrunner Mode ~%OrbHunt ~S ~%Category: ~S ~%Cutscene Skips ~A"
                                      *mod-version-text*
                                      (enum->string speedrun-category (-> *speedrun-info* category))
                                      (-> *pc-settings* skip-movies?))
@@ -477,9 +486,9 @@
   (when (-> *pc-settings* speedrunner-mode?)
     ;; Update auto-splitter
     (update-autosplit-info-jak1)
+    ;; Draw info to the screen
     (speedrun-draw-settings)
-    ;;Disable any active cheats
-    (set! (-> *pc-settings* cheats) (the-as pc-cheats #x0))
+    (enforce-speedrun-pc-settings)
     ;; Run after-blackout speedrun setup (if needed)
     (setup-speedrun-post-blackout))
   (none))
