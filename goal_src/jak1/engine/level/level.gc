@@ -706,7 +706,6 @@
 (defmethod is-object-visible? level
   ((this level) (arg0 int) (actor entity))
   "Is arg0 visible? Note that this will return #f if the visibility data is not loaded."
-
   ;; hack to force visibility of stuff moved (rather than update visibility data)
   (case (-> (the entity-actor actor) etype symbol)
     (('money 'eco
@@ -779,23 +778,39 @@
             'flutflut-plat-med
             'flutflut-plat-large
             'flutflut-plat-small)
-      (return #t)))
-
+     (return #t)))
   ;; og:mod-base anything thats not a vanilla level -> always show actors
-  (case (-> this name) :comp name=
-    (('intro 'title 'demo
-      'training 'village1 'beach 'jungle 'jungleb 'misty 'firecanyon
-      'village2 'sunken 'sunkenb 'rolling 'swamp 'ogre
-      'village3 'snow 'maincave 'darkcave 'robocave 'lavatube
-      'citadel 'finalboss)
-      ;; vanilla level -> fall through to normal checks
-      )
-    (else 
-      ;; some custom level -> return true
-      (return #t)
-      )
-    )
-
+  (case (-> this name)
+    :comp
+    name=
+    (('intro 'title
+            'demo
+            'training
+            'village1
+            'beach
+            'jungle
+            'jungleb
+            'misty
+            'firecanyon
+            'village2
+            'sunken
+            'sunkenb
+            'rolling
+            'swamp
+            'ogre
+            'village3
+            'snow
+            'maincave
+            'darkcave
+            'robocave
+            'lavatube
+            'citadel
+            'finalboss)
+     ;; vanilla level -> fall through to normal checks
+     )
+    (else
+     ;; some custom level -> return true
+     (return #t)))
   ;; og:preserve-this pc port added option to show every actor regardless
   (with-pc
     (if (not (-> *pc-settings* ps2-actor-vis?)) (return #t)))

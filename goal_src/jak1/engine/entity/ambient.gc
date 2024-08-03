@@ -411,7 +411,7 @@
              (let ((v1-5 a1-3)) (set! (-> v1-5 width) (the float 400)))
              (let ((v1-6 a1-3)) (set! (-> v1-6 height) (the float 96)))
              (set! (-> a1-3 flags) (font-flags shadow kerning middle large))
-            ;;  (print-game-text "AS: UNKNOWN ID" a1-3 #f 128 22)
+             ;;  (print-game-text "AS: UNKNOWN ID" a1-3 #f 128 22)
              )))
         ((!= s5-0 -1) (kill-current-level-hint '() '() 'exit) (process-spawn level-hint s5-0 #f (-> arg0 ambient) :to pp))))
     0
