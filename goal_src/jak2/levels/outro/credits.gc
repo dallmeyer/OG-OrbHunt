@@ -139,6 +139,63 @@
   (none)
   )
 
+(define *credits-rolling?* #f)
+(defun start-credits-yolo ()
+  (true! *credits-rolling?*)
+  (remove-setting! 'movie)
+  (remove-setting! 'music-volume)
+  (persist-with-delay *setting-control* 'music-volume (seconds 3) 'music-volume 'abs 0.001 0)
+  (process-spawn-function
+    process :name "credits-yolo"
+    (lambda :behavior scene-player
+      ()
+      (stack-size-set! (-> self top-thread) 512)
+      (set-setting! 'allow-pause #f 0.0 0)
+      (set-setting! 'allow-progress #f 0.0 0)
+      (set-setting! 'music 'forest 0.0 0)
+      (set-setting! 'sound-mode #f 0.0 1)
+      (apply-settings *setting-control*)
+      (let ((gp-0 (ppointer->process (-> self parent))))
+        (when (type? gp-0 scene-player)
+          (if (lookup-gui-connection
+                *gui-control*
+                (the-as process gp-0)
+                (gui-channel art-load)
+                (the-as string #f)
+                (new 'static 'sound-id)
+                )
+              (sound-group-pause (sound-group dialog))
+              )
+          )
+        )
+      (let ((gp-1 (current-time)))
+        (while (let ((a0-9 (level-get *level* 'outrocst)))
+                 (and a0-9 (not (draw-end-credits a0-9 (* 0.15 (the float (- (current-time) gp-1))))))
+                 )
+          (suspend)
+          )
+        )
+      (let ((gp-2 (ppointer->process (-> self parent))))
+        (when (type? gp-2 scene-player)
+          (if (lookup-gui-connection
+                *gui-control*
+                (the-as process gp-2)
+                (gui-channel art-load)
+                (the-as string #f)
+                (new 'static 'sound-id)
+                )
+              (sound-group-continue (sound-group dialog))
+              )
+          )
+        )
+      (false! *credits-rolling?*)
+      (none)
+      )
+    )
+  0
+  (none)
+  )
+
 (defpartgroup group-ctyport-fireworks
   :id 1272
   :duration (seconds 169.6)

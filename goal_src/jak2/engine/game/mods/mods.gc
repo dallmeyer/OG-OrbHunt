@@ -1674,6 +1674,8 @@
 (define *zoom-sensitivity-scale* 1.0)
 (define *show-mini-bigmap* #f)
 (define *mini-bigmap-toggle-time* (the time-frame #f))
+(define-extern *credits-rolling?* symbol)
+(define-extern start-credits-yolo (function none))
 (defun mod-run-each-frame ()
   (task-close! "nest-get-to-gun-introduction") ;; NG+ or something
   (task-close! "city-oracle-level3-training") ;; close oracle stuff
@@ -1839,7 +1841,7 @@
 
   ;; mooon things
   (cond
-    ((= (level-status *level* 'mooon) 'active)
+    ((and (pause-allowed?) (= (level-status *level* 'mooon) 'active))
       ;; low grav
       (when *target* (set! (-> *target* control dynam gravity-length) (meters 20)))
       (set! (-> *TARGET-bank* jump-height-max) (meters 7.0))
@@ -1852,10 +1854,36 @@
       ;; evening always
       (send-event (ppointer->process *time-of-day*) 'change 'hour 23)
       (set! (-> *time-of-day-context* mode) (the-as time-of-day-palette-id (/ 6 8)))
+
+      ;; credits
+      (when (and (not *credits-rolling?*) (pause-allowed?) (not (paused?)))
+        ;; show prompt
+        (let ((gp-0 (new 'stack 'font-context *font-default-matrix* 100 320 0.0 (font-color default) (font-flags large middle shadow kerning))))
+          (set! (-> gp-0 width) (the float 340))
+          (set! (-> gp-0 height) (the float 80))
+          (set! (-> gp-0 scale) 0.9)
+          (print-game-text
+            (lookup-text! *common-text* (text-id roll-credits) #f)
+            gp-0
+            #f
+            44
+            (bucket-id progress)
+            )
+          )
+
+        ;; check for combo to start credits
+        (when (and (or (cpad-pressed? 0 l1) (cpad-hold? 0 l1))
+                   (or (cpad-pressed? 0 r1) (cpad-hold? 0 r1))
+                   (or (cpad-pressed? 0 l2) (cpad-hold? 0 l2))
+                   (or (cpad-pressed? 0 r2) (cpad-hold? 0 r2))
+                   )
+          (start-credits-yolo)
+          )
+        )
       )
     (else
       ;; normal grav
-      (when *target* (set! (-> *target* control dynam gravity-length) (meters 50)))
+      ;; (when *target* (set! (-> *target* control dynam gravity-length) (meters 50)))
       (set! (-> *TARGET-bank* jump-height-max) (meters 3.5))
       (set! (-> *TARGET-bank* double-jump-height-max) (meters 2.5))
       (set! (-> *TARGET_BOARD-bank* jump-height-max) (meters 3.5))
