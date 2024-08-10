@@ -882,6 +882,28 @@
     (set! (-> *setting-control* user-default border-mode) #t)
     (set! (-> *level* play?) #t)
     (apply-settings *setting-control*)
+    (case (-> arg0 name) :comp name=
+      (("ctysluma-warp")
+        ;; restore normal grav when leaving mooon
+        (when *target* (set! (-> *target* control dynam gravity-length) (meters 50)))
+        (set! (-> *TARGET-bank* jump-height-max) (meters 3.5))
+        (set! (-> *TARGET-bank* double-jump-height-max) (meters 2.5))
+        (set! (-> *TARGET_BOARD-bank* jump-height-max) (meters 3.5))
+        (set! (-> *TARGET_BOARD-bank* duck-jump-height-max) (meters 5.0))
+        (set! (-> *TARGET_BOARD-bank* trickx-jump-height-max) (meters 1.2))
+        (set! (-> *TARGET_BOARD-bank* tricky-jump-height-max) (meters 1.2))
+        )
+      (("mooon-warp")
+        ;; low grav when heading to mooon
+        (when *target* (set! (-> *target* control dynam gravity-length) (meters 20)))
+        (set! (-> *TARGET-bank* jump-height-max) (meters 7.0))
+        (set! (-> *TARGET-bank* double-jump-height-max) (meters 5.0))
+        (set! (-> *TARGET_BOARD-bank* jump-height-max) (meters 7.0))
+        (set! (-> *TARGET_BOARD-bank* duck-jump-height-max) (meters 10.0))
+        (set! (-> *TARGET_BOARD-bank* trickx-jump-height-max) (meters 2.4))
+        (set! (-> *TARGET_BOARD-bank* tricky-jump-height-max) (meters 2.4))
+        )
+      )
     (case-str (-> self name)
       (("halfpipe-warp-gate-01" "stadium-warp-gate-01" "ctysluma-warp-gate-01" "mooon-warp-gate-01") 
         ;; skip target-warp-out, just go to continue

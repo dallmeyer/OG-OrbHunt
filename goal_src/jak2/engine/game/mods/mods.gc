@@ -1841,7 +1841,7 @@
 
   ;; mooon things
   (cond
-    ((= (level-status *level* 'mooon) 'active)
+    ((and (pause-allowed?) (= (level-status *level* 'mooon) 'active))
       ;; low grav
       (when *target* (set! (-> *target* control dynam gravity-length) (meters 20)))
       (set! (-> *TARGET-bank* jump-height-max) (meters 7.0))
@@ -1883,7 +1883,7 @@
       )
     (else
       ;; normal grav
-      (when *target* (set! (-> *target* control dynam gravity-length) (meters 50)))
+      ;; (when *target* (set! (-> *target* control dynam gravity-length) (meters 50)))
       (set! (-> *TARGET-bank* jump-height-max) (meters 3.5))
       (set! (-> *TARGET-bank* double-jump-height-max) (meters 2.5))
       (set! (-> *TARGET_BOARD-bank* jump-height-max) (meters 3.5))
