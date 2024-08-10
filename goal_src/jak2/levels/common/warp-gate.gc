@@ -645,7 +645,7 @@
             (set! (-> this on-close) '())            
             )
           
-          ;; port -> mooon
+          ;; slums -> mooon
           (("ctysluma-warp-gate-01")
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
 
@@ -672,7 +672,7 @@
               )
             (set! (-> this continue) #f)
             )
-          ;; mooon -> port
+          ;; mooon -> slums
           (("mooon-warp-gate-01") 
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
             (set! (-> this continue) (get-continue-by-name *game-info* "ctysluma-warp"))
