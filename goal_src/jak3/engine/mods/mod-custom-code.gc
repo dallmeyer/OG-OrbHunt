@@ -51,6 +51,16 @@ an orb |#
 (defun orb-hunt-update ()
   (runs-every-frame)
 
+  (when (board-hovering?)
+    (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
+                                        (bucket-id debug-no-zbuf1))
+      (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 5 400 0.0 (font-color default) (font-flags shadow kerning large))))
+        (set! (-> font-ctx scale) 0.325)
+        (draw-string-adv "Nice Hover" buf font-ctx)
+        )
+      )
+    )
+
   ;; Draw info to the screen
   ;; (draw-orb-hunt-text)
 
