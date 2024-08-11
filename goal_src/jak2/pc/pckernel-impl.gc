@@ -165,7 +165,7 @@
   (set! (-> obj memcard-volume-sfx) 0.5)
   (set! (-> obj memcard-volume-music) 0.4)
   (set! (-> obj memcard-volume-dialog) 0.75)
-  (set! (-> obj memcard-vibration?) #t)
+  (set! (-> obj memcard-vibration?) #f) ;; modbase change
   (set! (-> obj memcard-subtitles?) #f)
   0)
 

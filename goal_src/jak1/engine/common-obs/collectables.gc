@@ -1820,9 +1820,9 @@
   (initialize this arg0 (pickup-type eco-red))
   (none))
 
-(deftype ventblue (vent) ())
-
 (define-extern mod-override-init-position (function process-drawable entity-actor none))
+
+(deftype ventblue (vent) ())
 
 (defmethod init-from-entity! ((this ventblue) (arg0 entity-actor))
   (mod-override-init-position this arg0)

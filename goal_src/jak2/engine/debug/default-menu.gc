@@ -3294,6 +3294,30 @@
              (flag "weather-good" 262144 dm-game-opengoal-cheat-toggle-pick-func)
              (flag "hijack-lines" 524288 dm-game-opengoal-cheat-toggle-pick-func)
              )
+           ;; og:preserve-this new menu
+           (menu
+             "OpenGOAL Cheats"
+             (flag "turbo-board" 1 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "health-bars" 2 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "vehicle-health-bars" 4 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "vehicle-invuln" 8 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "statistics" 16 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "suck-in-all" 32 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "music-player" 64 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "no-textures" 128 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "fast-movies" 256 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "slow-movies" 512 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "fast-speed" 1024 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "slow-speed" 2048 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "fast-travel" 4096 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "orb-tracker" 8192 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "real-time-of-day" 16384 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "city-peace" 32768 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "board-tricks" 65536 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "weather-bad" 131072 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "weather-good" 262144 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "hijack-lines" 524288 dm-game-opengoal-cheat-toggle-pick-func)
+             )
            (menu "Continue")
            (menu
              "Settings"
