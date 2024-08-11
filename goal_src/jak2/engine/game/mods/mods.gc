@@ -2259,7 +2259,16 @@
   ;; lower riftring after credits for warp
   (let ((ring (the process-drawable (process-by-ename "rift-ring-ingame-1"))))
     (when (and ring (task-closed? "nest-boss-resolution"))
-      (set! (-> ring root trans y) (meters 41.0))
+      ;; hide during movie (normally the scene kills it, but we just want to hide)
+      (cond
+        ((movie?)
+          (logior! (-> ring draw status) (draw-control-status no-draw-bounds))
+          )
+        (else 
+          (logclear! (-> ring draw status) (draw-control-status no-draw-bounds))
+          (set! (-> ring root trans y) (meters 41.0))
+          )
+        )
       )
     )
 

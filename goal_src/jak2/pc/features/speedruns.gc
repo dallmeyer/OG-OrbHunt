@@ -279,6 +279,18 @@
                 )
               )
             (cheats-sound-play #t)
+            
+            ;; autosave in debug mode
+            (when (and *debug-segment*
+                       (not *auto-saving?*)
+                       (>= (-> *game-info* auto-save-which) 0)
+                       ;; dont autosave with bad checkpoint
+                       (not (or (name= (-> *game-info* current-continue name) 'tmp)
+                                (name= (-> *game-info* current-continue name) 'default))))
+              (format 0 "autosave on checkpoint debug mode~%")
+              (true! *auto-saving?*)
+              (auto-save-user)
+              )
             )
           (else
             (sound-play "smack-surface")

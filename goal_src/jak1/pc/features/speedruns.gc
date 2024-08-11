@@ -1,129 +1,137 @@
 ;;-*-Lisp-*-
 (in-package goal)
-
 (require "engine/game/game-save.gc")
 (require "engine/game/task/game-task-h.gc")
 (require "pc/pckernel-common.gc")
 (require "pc/features/autosplit-h.gc")
-
 (define-extern speedrun-practice-spawn (function none)) ;; defined at end of this file
+
 (define-extern speedrun-practice-store-temp-checkpoint (function none)) ;; defined at end of this file
+
 (define *practice-spawn-post-init* (the-as (function none) #f))
 
 (define *last-real-continue-point* (the-as continue-point #f))
+
 (defun generic-post-init ()
   (when *last-real-continue-point*
-    (set! (-> *game-info* current-continue) *last-real-continue-point*)
-    )
-  (none)
-  )
+    (set! (-> *game-info* current-continue) *last-real-continue-point*))
+  (none))
 
 (define *speedrun-info* (new 'static 'speedrun-info-jak1 :should-display? #t :needs-post-blackout-setup? #f))
 
-(define *hub1-cell-list* (new 'static 'boxed-array :type game-task
-  (game-task training-gimmie)
-  (game-task training-door)
-  (game-task training-climb)
-  (game-task training-buzzer)
-  (game-task village1-mayor-money)
-  (game-task village1-uncle-money)
-  (game-task village1-yakow)
-  (game-task village1-oracle-money1)
-  (game-task village1-oracle-money2)
-  (game-task village1-buzzer)
-  (game-task beach-ecorocks)
-  (game-task beach-flutflut)
-  (game-task beach-pelican)
-  (game-task beach-seagull)
-  (game-task beach-cannon)
-  (game-task beach-gimmie)
-  (game-task beach-sentinel)
-  (game-task beach-buzzer)
-  (game-task jungle-lurkerm)
-  (game-task jungle-tower)
-  (game-task jungle-eggtop)
-  (game-task jungle-plant)
-  (game-task jungle-fishgame)
-  (game-task jungle-canyon-end)
-  (game-task jungle-temple-door)
-  (game-task jungle-buzzer)
-  (game-task misty-muse)
-  (game-task misty-boat)
-  (game-task misty-cannon)
-  (game-task misty-warehouse)
-  (game-task misty-bike)
-  (game-task misty-bike-jump)
-  (game-task misty-eco-challenge)
-  (game-task misty-buzzer)
-  (game-task firecanyon-end)
-  (game-task firecanyon-buzzer)
-  ))
+(define *hub1-cell-list*
+  (new 'static
+       'boxed-array
+       :type
+       game-task
+       (game-task training-gimmie)
+       (game-task training-door)
+       (game-task training-climb)
+       (game-task training-buzzer)
+       (game-task village1-mayor-money)
+       (game-task village1-uncle-money)
+       (game-task village1-yakow)
+       (game-task village1-oracle-money1)
+       (game-task village1-oracle-money2)
+       (game-task village1-buzzer)
+       (game-task beach-ecorocks)
+       (game-task beach-flutflut)
+       (game-task beach-pelican)
+       (game-task beach-seagull)
+       (game-task beach-cannon)
+       (game-task beach-gimmie)
+       (game-task beach-sentinel)
+       (game-task beach-buzzer)
+       (game-task jungle-lurkerm)
+       (game-task jungle-tower)
+       (game-task jungle-eggtop)
+       (game-task jungle-plant)
+       (game-task jungle-fishgame)
+       (game-task jungle-canyon-end)
+       (game-task jungle-temple-door)
+       (game-task jungle-buzzer)
+       (game-task misty-muse)
+       (game-task misty-boat)
+       (game-task misty-cannon)
+       (game-task misty-warehouse)
+       (game-task misty-bike)
+       (game-task misty-bike-jump)
+       (game-task misty-eco-challenge)
+       (game-task misty-buzzer)
+       (game-task firecanyon-end)
+       (game-task firecanyon-buzzer)))
 
-(define *hub2-cell-list* (new 'static 'boxed-array :type game-task
-  (game-task village2-gambler-money)
-  (game-task village2-geologist-money)
-  (game-task village2-warrior-money)
-  (game-task village2-oracle-money1)
-  (game-task village2-oracle-money2)
-  (game-task village2-buzzer)
-  (game-task sunken-room)
-  (game-task sunken-pipe)
-  (game-task sunken-slide)
-  (game-task sunken-sharks)
-  (game-task sunken-platforms)
-  (game-task sunken-top-of-helix)
-  (game-task sunken-spinning-room)
-  (game-task sunken-buzzer)
-  (game-task swamp-flutflut)
-  (game-task swamp-billy)
-  (game-task swamp-battle)
-  (game-task swamp-tether-4)
-  (game-task swamp-tether-1)
-  (game-task swamp-tether-2)
-  (game-task swamp-tether-3)
-  (game-task swamp-buzzer)
-  (game-task rolling-moles)
-  (game-task rolling-robbers)
-  (game-task rolling-race)
-  (game-task rolling-lake)
-  (game-task rolling-plants)
-  (game-task rolling-ring-chase-1)
-  (game-task rolling-ring-chase-2)
-  (game-task rolling-buzzer)
-  (game-task ogre-boss)
-  (game-task ogre-end)
-  (game-task ogre-secret)
-  (game-task ogre-buzzer)
-  ))
+(define *hub2-cell-list*
+  (new 'static
+       'boxed-array
+       :type
+       game-task
+       (game-task village2-gambler-money)
+       (game-task village2-geologist-money)
+       (game-task village2-warrior-money)
+       (game-task village2-oracle-money1)
+       (game-task village2-oracle-money2)
+       (game-task village2-buzzer)
+       (game-task sunken-room)
+       (game-task sunken-pipe)
+       (game-task sunken-slide)
+       (game-task sunken-sharks)
+       (game-task sunken-platforms)
+       (game-task sunken-top-of-helix)
+       (game-task sunken-spinning-room)
+       (game-task sunken-buzzer)
+       (game-task swamp-flutflut)
+       (game-task swamp-billy)
+       (game-task swamp-battle)
+       (game-task swamp-tether-4)
+       (game-task swamp-tether-1)
+       (game-task swamp-tether-2)
+       (game-task swamp-tether-3)
+       (game-task swamp-buzzer)
+       (game-task rolling-moles)
+       (game-task rolling-robbers)
+       (game-task rolling-race)
+       (game-task rolling-lake)
+       (game-task rolling-plants)
+       (game-task rolling-ring-chase-1)
+       (game-task rolling-ring-chase-2)
+       (game-task rolling-buzzer)
+       (game-task ogre-boss)
+       (game-task ogre-end)
+       (game-task ogre-secret)
+       (game-task ogre-buzzer)))
 
-(define *hub3-cell-list* (new 'static 'boxed-array :type game-task
-  (game-task village3-miner-money1)
-  (game-task village3-miner-money2)
-  (game-task village3-miner-money3)
-  (game-task village3-miner-money4)
-  (game-task village3-oracle-money1)
-  (game-task village3-oracle-money2)
-  (game-task village3-extra1)
-  (game-task village3-buzzer)
-  (game-task snow-eggtop)
-  (game-task snow-ram)
-  (game-task snow-bumpers)
-  (game-task snow-cage)
-  (game-task snow-fort)
-  (game-task snow-ball)
-  (game-task snow-bunnies)
-  (game-task snow-buzzer)
-  (game-task cave-gnawers)
-  (game-task cave-dark-crystals)
-  (game-task cave-dark-climb)
-  (game-task cave-robot-climb)
-  (game-task cave-swing-poles)
-  (game-task cave-spider-tunnel)
-  (game-task cave-platforms)
-  (game-task cave-buzzer)
-  (game-task lavatube-end)
-  (game-task lavatube-buzzer)
-  ))
+(define *hub3-cell-list*
+  (new 'static
+       'boxed-array
+       :type
+       game-task
+       (game-task village3-miner-money1)
+       (game-task village3-miner-money2)
+       (game-task village3-miner-money3)
+       (game-task village3-miner-money4)
+       (game-task village3-oracle-money1)
+       (game-task village3-oracle-money2)
+       (game-task village3-extra1)
+       (game-task village3-buzzer)
+       (game-task snow-eggtop)
+       (game-task snow-ram)
+       (game-task snow-bumpers)
+       (game-task snow-cage)
+       (game-task snow-fort)
+       (game-task snow-ball)
+       (game-task snow-bunnies)
+       (game-task snow-buzzer)
+       (game-task cave-gnawers)
+       (game-task cave-dark-crystals)
+       (game-task cave-dark-climb)
+       (game-task cave-robot-climb)
+       (game-task cave-swing-poles)
+       (game-task cave-spider-tunnel)
+       (game-task cave-platforms)
+       (game-task cave-buzzer)
+       (game-task lavatube-end)
+       (game-task lavatube-buzzer)))
 
 ;; unused
 ;; (define *citadel-cell-list* (new 'static 'boxed-array :type game-task
@@ -136,9 +144,17 @@
 
 (defun is-speedrun-category? ((category symbol))
   (and (-> *pc-settings* speedrunner-mode?)
-        (name= category (enum->string speedrun-category (-> *speedrun-info* category)))
-        )
-  )
+       (name= category (enum->string speedrun-category (-> *speedrun-info* category)))))
+
+(defun enforce-speedrun-pc-settings ()
+  ;; Disable any active cheats
+  (set! (-> *pc-settings* cheats) (the-as pc-cheats #x0))
+  ;; ensure PS2 actor vis is enabled
+  (set! (-> *pc-settings* ps2-actor-vis?) #t)
+  ;; ensure FPS set to `60`
+  (when (!= (-> *pc-settings* target-fps) 60)
+    (set-frame-rate! *pc-settings* 60 #t))
+  (none))
 
 (defun start-speedrun ((category speedrun-category))
   ;; randomize game id so the autosplitter knows to restart
@@ -149,358 +165,275 @@
   (set! (-> *speedrun-info* should-display?) #t)
   (set! (-> *speedrun-info* needs-post-blackout-setup?) #t)
   ;; start new game with specified checkpoint, if any (otherwise we're resetting current category)
-  (if category
-    (set! (-> *speedrun-info* category) category)
-    )
+  (if category (set! (-> *speedrun-info* category) category))
   (case (-> *speedrun-info* category)
     (((speedrun-category full-game))
-      ;; spawn at the geyser warp gate checkpoint
-      (initialize! *game-info* 'game (the-as game-save #f) "game-start")
-      )
+     ;; spawn at the geyser warp gate checkpoint
+     (initialize! *game-info* 'game (the-as game-save #f) "game-start"))
     (((speedrun-category il-training))
-      ;; spawn at the geyser warp gate checkpoint
-      (initialize! *game-info* 'game (the-as game-save #f) "game-start")
-      )
+     ;; spawn at the geyser warp gate checkpoint
+     (initialize! *game-info* 'game (the-as game-save #f) "game-start"))
     (((speedrun-category il-village1))
-      ;; spawn at the green sage hut warp gate
-      (initialize! *game-info* 'game (the-as game-save #f) "village1-warp")
-      )
+     ;; spawn at the green sage hut warp gate
+     (initialize! *game-info* 'game (the-as game-save #f) "village1-warp"))
     (((speedrun-category il-beach))
-      ;; spawn at beach
-      (initialize! *game-info* 'game (the-as game-save #f) "beach-start")
-      )
+     ;; spawn at beach
+     (initialize! *game-info* 'game (the-as game-save #f) "beach-start"))
     (((speedrun-category il-jungle))
-      ;; spawn at start of FJ
-      (initialize! *game-info* 'game (the-as game-save #f) "jungle-start")
-      )
+     ;; spawn at start of FJ
+     (initialize! *game-info* 'game (the-as game-save #f) "jungle-start"))
     (((speedrun-category il-misty))
-      ;; spawn at start of misty
-      (initialize! *game-info* 'game (the-as game-save #f) "misty-start")
-      )
+     ;; spawn at start of misty
+     (initialize! *game-info* 'game (the-as game-save #f) "misty-start"))
     (((speedrun-category il-firecanyon))
-      ;; spawn at start of fire canyon
-      (initialize! *game-info* 'game (the-as game-save #f) "firecanyon-start")
-      )
+     ;; spawn at start of fire canyon
+     (initialize! *game-info* 'game (the-as game-save #f) "firecanyon-start"))
     (((speedrun-category il-village2))
-      ;; spawn at rock village start
-      (initialize! *game-info* 'game (the-as game-save #f) "village2-start")
-      )
+     ;; spawn at rock village start
+     (initialize! *game-info* 'game (the-as game-save #f) "village2-start"))
     (((speedrun-category il-sunken))
-      ;; spawn at start of LPC
-      (initialize! *game-info* 'game (the-as game-save #f) "sunken-start")
-      )
+     ;; spawn at start of LPC
+     (initialize! *game-info* 'game (the-as game-save #f) "sunken-start"))
     (((speedrun-category il-swamp))
-      ;; spawn at start of boggy
-      (initialize! *game-info* 'game (the-as game-save #f) "swamp-start")
-      )
+     ;; spawn at start of boggy
+     (initialize! *game-info* 'game (the-as game-save #f) "swamp-start"))
     (((speedrun-category il-rolling))
-      ;; spawn at start of basin
-      (initialize! *game-info* 'game (the-as game-save #f) "rolling-start")
-      )
+     ;; spawn at start of basin
+     (initialize! *game-info* 'game (the-as game-save #f) "rolling-start"))
     (((speedrun-category il-ogre))
-      ;; spawn before klaww
-      (initialize! *game-info* 'game (the-as game-save #f) "ogre-start")
-      )
+     ;; spawn before klaww
+     (initialize! *game-info* 'game (the-as game-save #f) "ogre-start"))
     (((speedrun-category il-village3))
-      ;; spawn at start of volcanic crater
-      (initialize! *game-info* 'game (the-as game-save #f) "village3-start")
-      )
+     ;; spawn at start of volcanic crater
+     (initialize! *game-info* 'game (the-as game-save #f) "village3-start"))
     (((speedrun-category il-snow))
-      ;; spawn at start of snowy
-      (initialize! *game-info* 'game (the-as game-save #f) "snow-start")
-      )
+     ;; spawn at start of snowy
+     (initialize! *game-info* 'game (the-as game-save #f) "snow-start"))
     (((speedrun-category il-cave))
-      ;; spawn at start of spider cave
-      (initialize! *game-info* 'game (the-as game-save #f) "maincave-start")
-      )
+     ;; spawn at start of spider cave
+     (initialize! *game-info* 'game (the-as game-save #f) "maincave-start"))
     (((speedrun-category il-lavatube))
-      ;; spawn at start of lava tube
-      (initialize! *game-info* 'game (the-as game-save #f) "lavatube-start")
-      )
+     ;; spawn at start of lava tube
+     (initialize! *game-info* 'game (the-as game-save #f) "lavatube-start"))
     (((speedrun-category il-citadel))
-      ;; spawn outside first citadel door
-      (initialize! *game-info* 'game (the-as game-save #f) "citadel-entrance")
-      )
+     ;; spawn outside first citadel door
+     (initialize! *game-info* 'game (the-as game-save #f) "citadel-entrance"))
     (((speedrun-category new-game-plus))
-      ;; spawn at the geyser warp gate checkpoint
-      (initialize! *game-info* 'game (the-as game-save #f) "game-start")
-      )
+     ;; spawn at the geyser warp gate checkpoint
+     (initialize! *game-info* 'game (the-as game-save #f) "game-start"))
     (((speedrun-category hub1-100))
-      ;; spawn at the geyser warp gate checkpoint
-      (initialize! *game-info* 'game (the-as game-save #f) "game-start")
-      )
+     ;; spawn at the geyser warp gate checkpoint
+     (initialize! *game-info* 'game (the-as game-save #f) "game-start"))
     (((speedrun-category hub2-100))
-      ;; spawn at end of fire canyon
-      (initialize! *game-info* 'game (the-as game-save #f) "firecanyon-end")
-      )
+     ;; spawn at end of fire canyon
+     (initialize! *game-info* 'game (the-as game-save #f) "firecanyon-end"))
     (((speedrun-category hub3-100))
-      ;; spawn at end of mountain pass
-      (initialize! *game-info* 'game (the-as game-save #f) "ogre-end")
-      )
+     ;; spawn at end of mountain pass
+     (initialize! *game-info* 'game (the-as game-save #f) "ogre-end"))
     (((speedrun-category all-cutscenes))
-      ;; turn play hints back on
-      (set! (-> *setting-control* default play-hints) #t)
-      ;; don't allow cutscene skips
-      (set! (-> *pc-settings* skip-movies?) #f)
-      ;; spawn at the geyser warp gate checkpoint
-      (initialize! *game-info* 'game (the-as game-save #f) "intro-start")
-      )
+     ;; turn play hints back on
+     (set! (-> *setting-control* default play-hints) #t)
+     ;; don't allow cutscene skips
+     (set! (-> *pc-settings* skip-movies?) #f)
+     ;; spawn at the geyser warp gate checkpoint
+     (initialize! *game-info* 'game (the-as game-save #f) "intro-start"))
     (else
-      (format 0 "start-speedrun: unrecognized category ~S~%" (enum->string speedrun-category (-> *speedrun-info* category)))
-      )
-    )
-  ;; ensure actor vis is enabled
-  (set! (-> *pc-settings* ps2-actor-vis?) #t)
-  ;; force FPS to `60`
-  (set-frame-rate! *pc-settings* 60 #t)
+     (format 0 "start-speedrun: unrecognized category ~S~%" (enum->string speedrun-category (-> *speedrun-info* category)))))
+  (enforce-speedrun-pc-settings)
   ;; enable auto saving by default
   (set! (-> *setting-control* default auto-save) #t)
-  (none)
-  )
+  (none))
 
 (defun setup-speedrun-post-blackout ()
-  (when (and (-> *speedrun-info* needs-post-blackout-setup?) (>= (-> *display* base-frame-counter) (-> *game-info* blackout-time)))
+  (when (and (-> *speedrun-info* needs-post-blackout-setup?)
+             (>= (-> *display* base-frame-counter) (-> *game-info* blackout-time)))
     (set! (-> *speedrun-info* needs-post-blackout-setup?) #f)
     (case (-> *speedrun-info* category)
       (((speedrun-category full-game))
-        ;; skip intro cutscene
-        (close-specific-task! (game-task intro) (task-status need-resolution))
-        )
+       ;; skip intro cutscene
+       (close-specific-task! (game-task intro) (task-status need-resolution)))
       (((speedrun-category il-training))
-        ;; skip intro cutscene
-        (close-specific-task! (game-task intro) (task-status need-resolution))
-        (mark-text-as-seen *game-info* (text-id training-level-name))
-        )
+       ;; skip intro cutscene
+       (close-specific-task! (game-task intro) (task-status need-resolution))
+       (mark-text-as-seen *game-info* (text-id training-level-name)))
       (((speedrun-category il-village1))
-        ;; give enough orbs to buy all cells 120+120+90+90=420
-        (set! (-> *game-info* money-total) 420.0)
-        (set! (-> *game-info* money) 420.0)
-        (mark-text-as-seen *game-info* (text-id village1-level-name))
-        )
+       ;; give enough orbs to buy all cells 120+120+90+90=420
+       (set! (-> *game-info* money-total) 420.0)
+       (set! (-> *game-info* money) 420.0)
+       (mark-text-as-seen *game-info* (text-id village1-level-name)))
       (((speedrun-category il-beach))
-        ;; unlock blue eco vent
-        (close-specific-task! (game-task jungle-eggtop) (task-status need-resolution))
-        (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task jungle-eggtop)))
-        (mark-text-as-seen *game-info* (text-id beach-level-name))
-        )
-      (((speedrun-category il-jungle))
-        (mark-text-as-seen *game-info* (text-id jungle-level-name))
-        )
+       ;; unlock blue eco vent
+       (close-specific-task! (game-task jungle-eggtop) (task-status need-resolution))
+       (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task jungle-eggtop)))
+       (mark-text-as-seen *game-info* (text-id beach-level-name)))
+      (((speedrun-category il-jungle)) (mark-text-as-seen *game-info* (text-id jungle-level-name)))
       (((speedrun-category il-misty))
-        ;; unlock fisherman's boat
-        (close-specific-task! (game-task jungle-fishgame) (task-status need-resolution))
-        (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task jungle-fishgame)))
-        (mark-text-as-seen *game-info* (text-id misty-level-name))
-        )
+       ;; unlock fisherman's boat
+       (close-specific-task! (game-task jungle-fishgame) (task-status need-resolution))
+       (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task jungle-fishgame)))
+       (mark-text-as-seen *game-info* (text-id misty-level-name)))
       (((speedrun-category il-firecanyon))
-        ;; skip keira intro cutscene
-        (close-specific-task! (game-task firecanyon-assistant) (task-status need-reward-speech))
-        ;; unlock blue eco vent
-        (close-specific-task! (game-task jungle-eggtop) (task-status need-resolution))
-        (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task jungle-eggtop)))
-        (mark-text-as-seen *game-info* (text-id firecanyon-level-name))
-        )
+       ;; skip keira intro cutscene
+       (close-specific-task! (game-task firecanyon-assistant) (task-status need-reward-speech))
+       ;; unlock blue eco vent
+       (close-specific-task! (game-task jungle-eggtop) (task-status need-resolution))
+       (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task jungle-eggtop)))
+       (mark-text-as-seen *game-info* (text-id firecanyon-level-name)))
       (((speedrun-category il-village2))
-        ;; give enough orbs to buy all cells 120+120+90+90+90=510
-        (set! (-> *game-info* money-total) 510.0)
-        (set! (-> *game-info* money) 510.0)
-        (mark-text-as-seen *game-info* (text-id village2-level-name))
-        )
-      (((speedrun-category il-sunken))
-        (mark-text-as-seen *game-info* (text-id sunken-level-name))
-        )
+       ;; give enough orbs to buy all cells 120+120+90+90+90=510
+       (set! (-> *game-info* money-total) 510.0)
+       (set! (-> *game-info* money) 510.0)
+       (mark-text-as-seen *game-info* (text-id village2-level-name)))
+      (((speedrun-category il-sunken)) (mark-text-as-seen *game-info* (text-id sunken-level-name)))
       (((speedrun-category il-swamp))
-        ;; unlock flutflut
-        (close-specific-task! (game-task beach-flutflut) (task-status need-resolution))
-        (close-specific-task! (game-task village2-levitator) (task-status need-introduction))
-        (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task beach-flutflut)))
-        (mark-text-as-seen *game-info* (text-id swamp-level-name))
-        )
+       ;; unlock flutflut
+       (close-specific-task! (game-task beach-flutflut) (task-status need-resolution))
+       (close-specific-task! (game-task village2-levitator) (task-status need-introduction))
+       (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task beach-flutflut)))
+       (mark-text-as-seen *game-info* (text-id swamp-level-name)))
       (((speedrun-category il-rolling))
-        ;; unlock zoomer
-        (close-specific-task! (game-task village2-levitator) (task-status need-introduction))
-        ;; unlock DMG
-        (close-specific-task! (game-task rolling-race) (task-status need-introduction))
-        ;; unlock moles
-        (close-specific-task! (game-task rolling-moles) (task-status need-introduction))
-        (mark-text-as-seen *game-info* (text-id rolling-level-name))
-        )
+       ;; unlock zoomer
+       (close-specific-task! (game-task village2-levitator) (task-status need-introduction))
+       ;; unlock DMG
+       (close-specific-task! (game-task rolling-race) (task-status need-introduction))
+       ;; unlock moles
+       (close-specific-task! (game-task rolling-moles) (task-status need-introduction))
+       (mark-text-as-seen *game-info* (text-id rolling-level-name)))
       (((speedrun-category il-ogre))
-        ;; skip klaww intro cutscene
-        (close-specific-task! (game-task ogre-boss) (task-status need-hint))
-        ;; unlock yellow eco vent
-        (close-specific-task! (game-task snow-eggtop) (task-status need-resolution))
-        (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task snow-eggtop)))
-        (mark-text-as-seen *game-info* (text-id ogre-level-name))
-        )
+       ;; skip klaww intro cutscene
+       (close-specific-task! (game-task ogre-boss) (task-status need-hint))
+       ;; unlock yellow eco vent
+       (close-specific-task! (game-task snow-eggtop) (task-status need-resolution))
+       (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task snow-eggtop)))
+       (mark-text-as-seen *game-info* (text-id ogre-level-name)))
       (((speedrun-category il-village3))
-        ;; give enough orbs to buy all cells 120+120+90+90+90+90=600
-        (set! (-> *game-info* money-total) 600.0)
-        (set! (-> *game-info* money) 600.0)
-        (mark-text-as-seen *game-info* (text-id village3-level-name))
-        )
+       ;; give enough orbs to buy all cells 120+120+90+90+90+90=600
+       (set! (-> *game-info* money-total) 600.0)
+       (set! (-> *game-info* money) 600.0)
+       (mark-text-as-seen *game-info* (text-id village3-level-name)))
       (((speedrun-category il-snow))
-        ;; unlock flutflut
-        (close-specific-task! (game-task beach-flutflut) (task-status need-resolution))
-        (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task beach-flutflut)))
-        ;; unlock gondola
-        (close-specific-task! (game-task village3-button) (task-status need-introduction))
-        (mark-text-as-seen *game-info* (text-id snow-level-name))
-        )
+       ;; unlock flutflut
+       (close-specific-task! (game-task beach-flutflut) (task-status need-resolution))
+       (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task beach-flutflut)))
+       ;; unlock gondola
+       (close-specific-task! (game-task village3-button) (task-status need-introduction))
+       (mark-text-as-seen *game-info* (text-id snow-level-name)))
       (((speedrun-category il-cave))
-        ;; unlock yellow eco vent
-        (close-specific-task! (game-task snow-eggtop) (task-status need-resolution))
-        (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task snow-eggtop)))
-        (mark-text-as-seen *game-info* (text-id cave-level-name))
-        )
+       ;; unlock yellow eco vent
+       (close-specific-task! (game-task snow-eggtop) (task-status need-resolution))
+       (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task snow-eggtop)))
+       (mark-text-as-seen *game-info* (text-id cave-level-name)))
       (((speedrun-category il-lavatube))
-        ;; skip keira intro cutscene
-        (close-specific-task! (game-task lavatube-start) (task-status need-reward-speech))
-        (mark-text-as-seen *game-info* (text-id lavatube-level-name))
-        )
+       ;; skip keira intro cutscene
+       (close-specific-task! (game-task lavatube-start) (task-status need-reward-speech))
+       (mark-text-as-seen *game-info* (text-id lavatube-level-name)))
       (((speedrun-category il-citadel))
-        ;; remove invisible wall
-        (close-specific-task! (game-task lavatube-end) (task-status need-resolution))
-        (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task lavatube-end)))
-        ;; unlock door
-        (close-specific-task! (game-task village4-button) (task-status need-reward-speech))
-        (mark-text-as-seen *game-info* (text-id citadel-level-name))
-        )
+       ;; remove invisible wall
+       (close-specific-task! (game-task lavatube-end) (task-status need-resolution))
+       (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (game-task lavatube-end)))
+       ;; unlock door
+       (close-specific-task! (game-task village4-button) (task-status need-reward-speech))
+       (mark-text-as-seen *game-info* (text-id citadel-level-name)))
       (((speedrun-category new-game-plus))
-        ;; skip intro cutscene
-        (close-specific-task! (game-task intro) (task-status need-resolution))
-        ;; unlock hub1 cells
-        (dotimes (idx (length *hub1-cell-list*))
-          (close-specific-task! (-> *hub1-cell-list* idx) (task-status need-resolution))
-          (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> *hub1-cell-list* idx)))
-          )
-        ;; unlock hub2 cells
-        (dotimes (idx (length *hub2-cell-list*))
-          (close-specific-task! (-> *hub2-cell-list* idx) (task-status need-resolution))
-          (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> *hub2-cell-list* idx)))
-          )
-        ;; unlock hub3 cells
-        (dotimes (idx (length *hub3-cell-list*))
-          (close-specific-task! (-> *hub3-cell-list* idx) (task-status need-resolution))
-          (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> *hub3-cell-list* idx)))
-          )
-        )
+       ;; skip intro cutscene
+       (close-specific-task! (game-task intro) (task-status need-resolution))
+       ;; unlock hub1 cells
+       (dotimes (idx (length *hub1-cell-list*))
+         (close-specific-task! (-> *hub1-cell-list* idx) (task-status need-resolution))
+         (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> *hub1-cell-list* idx))))
+       ;; unlock hub2 cells
+       (dotimes (idx (length *hub2-cell-list*))
+         (close-specific-task! (-> *hub2-cell-list* idx) (task-status need-resolution))
+         (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> *hub2-cell-list* idx))))
+       ;; unlock hub3 cells
+       (dotimes (idx (length *hub3-cell-list*))
+         (close-specific-task! (-> *hub3-cell-list* idx) (task-status need-resolution))
+         (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> *hub3-cell-list* idx)))))
       (((speedrun-category hub1-100))
-        ;; skip intro cutscene
-        (close-specific-task! (game-task intro) (task-status need-resolution))
-        )
+       ;; skip intro cutscene
+       (close-specific-task! (game-task intro) (task-status need-resolution)))
       (((speedrun-category hub2-100))
-        ;; skip intro cutscene
-        (close-specific-task! (game-task intro) (task-status need-resolution))
-        ;; unlock hub1 cells
-        (dotimes (idx (length *hub1-cell-list*))
-          (close-specific-task! (-> *hub1-cell-list* idx) (task-status need-resolution))
-          (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> *hub1-cell-list* idx)))
-          )
-        ;; give all orbs from hub1
-        (set! (-> *game-info* money-total) 600.0)  ;; 50+50+150+150+150+50
-        (set! (-> *game-info* money) 180.0)  ;; 50+50+150+150+150+50 - (90+90+120+120)
-        )
+       ;; skip intro cutscene
+       (close-specific-task! (game-task intro) (task-status need-resolution))
+       ;; unlock hub1 cells
+       (dotimes (idx (length *hub1-cell-list*))
+         (close-specific-task! (-> *hub1-cell-list* idx) (task-status need-resolution))
+         (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> *hub1-cell-list* idx))))
+       ;; give all orbs from hub1
+       (set! (-> *game-info* money-total) 600.0) ;; 50+50+150+150+150+50
+       (set! (-> *game-info* money) 180.0) ;; 50+50+150+150+150+50 - (90+90+120+120)
+       )
       (((speedrun-category hub3-100))
-        ;; skip intro cutscene
-        (close-specific-task! (game-task intro) (task-status need-resolution))
-        ;; unlock hub1 cells
-        (dotimes (idx (length *hub1-cell-list*))
-          (close-specific-task! (-> *hub1-cell-list* idx) (task-status need-resolution))
-          (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> *hub1-cell-list* idx)))
-          )
-        ;; unlock hub2 cells
-        (dotimes (idx (length *hub2-cell-list*))
-          (close-specific-task! (-> *hub2-cell-list* idx) (task-status need-resolution))
-          (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> *hub2-cell-list* idx)))
-          )
-        ;; give all orbs from hub1+2
-        (set! (-> *game-info* money-total) 1300.0)  ;; 50+50+150+150+150+50 + 50+200+200+200+50
-        (set! (-> *game-info* money) 370.0)  ;; 50+50+150+150+150+50 - (90+90+120+120) + 50+200+200+200+50 - (90+90+90+120+120)
-        )
+       ;; skip intro cutscene
+       (close-specific-task! (game-task intro) (task-status need-resolution))
+       ;; unlock hub1 cells
+       (dotimes (idx (length *hub1-cell-list*))
+         (close-specific-task! (-> *hub1-cell-list* idx) (task-status need-resolution))
+         (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> *hub1-cell-list* idx))))
+       ;; unlock hub2 cells
+       (dotimes (idx (length *hub2-cell-list*))
+         (close-specific-task! (-> *hub2-cell-list* idx) (task-status need-resolution))
+         (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> *hub2-cell-list* idx))))
+       ;; give all orbs from hub1+2
+       (set! (-> *game-info* money-total) 1300.0) ;; 50+50+150+150+150+50 + 50+200+200+200+50
+       (set! (-> *game-info* money) 370.0) ;; 50+50+150+150+150+50 - (90+90+120+120) + 50+200+200+200+50 - (90+90+90+120+120)
+       )
       (((speedrun-category all-cutscenes))
-        ;; no post-blackout actions needed
-        )
+       ;; no post-blackout actions needed
+       )
       (else
-        (format 0 "setup-speedrun-post-blackout: unrecognized category ~S~%" (enum->string speedrun-category (-> *speedrun-info* category)))
-        )
-      )
-      ;; reset speedrun display (gets hidden on first collectable pickup)
-      (set! (-> *speedrun-info* should-display?) #t)
-      ;; reset actors to ensure any above changes take effect
-      (reset-actors 'life)
-      ;; autosave any changes back to file
-      (auto-save-command 'auto-save 0 0 *default-pool*)
-    )
-  (none)
-  )
-
+       (format 0
+               "setup-speedrun-post-blackout: unrecognized category ~S~%"
+               (enum->string speedrun-category (-> *speedrun-info* category)))))
+    ;; reset speedrun display (gets hidden on first collectable pickup)
+    (set! (-> *speedrun-info* should-display?) #t)
+    ;; reset actors to ensure any above changes take effect
+    (reset-actors 'life)
+    ;; autosave any changes back to file
+    (auto-save-command 'auto-save 0 0 *default-pool*))
+  (none))
 
 (defun get-on-flutflut ()
   (generic-post-init)
   (case (-> *target* state)
-    ((target-flut-stance target-racing)
-      (send-event *target* 'end-mode)
-      )
-    (else
-      (send-event *target* 'change-mode 'flut #f)
-      )
-    )
-  (none)
-  )
+    ((target-flut-stance target-racing) (send-event *target* 'end-mode))
+    (else (send-event *target* 'change-mode 'flut #f)))
+  (none))
 
 (defun get-on-zoomer ()
   (generic-post-init)
   (case (-> *target* state)
-    ((target-flut-stance target-racing)
-      (send-event *target* 'end-mode)
-      )
-    (else
-      (send-event *target* 'change-mode 'racing #f)
-      )
-    )
-  (none)
-  )
+    ((target-flut-stance target-racing) (send-event *target* 'end-mode))
+    (else (send-event *target* 'change-mode 'racing #f)))
+  (none))
 
 (define *baby-mode-orb-dist* (the-as float #f))
+
 (defun draw-closest-orb ()
   (when (and (-> *setting-control* current allow-pause) (-> *pc-settings* closest-orb?))
-    (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
-                                      (bucket-id debug-no-zbuf))
+    (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf)) (bucket-id debug-no-zbuf))
       (if (= *baby-mode-orb-dist* #f)
-        (draw-string-xy (string-format "Closest Orb: N/A")
-                        buf 0 210 (font-color transparent) (font-flags kerning))
+        (draw-string-xy (string-format "Closest Orb: N/A") buf 0 210 (font-color transparent) (font-flags kerning))
         ;; color based on distance
         (let ((fc (cond
-                  ((< *baby-mode-orb-dist* (meters 10.0)) (font-color orange))
-                  ((< *baby-mode-orb-dist* (meters 20.0)) (font-color progress-yellow))
-                  ((< *baby-mode-orb-dist* (meters 30.0)) (font-color flat-yellow))
-                  ((< *baby-mode-orb-dist* (meters 40.0)) (font-color progress-blue))
-                  ((< *baby-mode-orb-dist* (meters 50.0)) (font-color cyan))
-                  (else (font-color blue))
-                  )))
-          (draw-string-xy (string-format "Closest Orb: ~,,2Mm"
-                                         *baby-mode-orb-dist*)
-                          buf 0 210 fc (font-flags kerning))
-          )
-        )
-      )
-    )
-  (none)
-  )
+                    ((< *baby-mode-orb-dist* (meters 10.0)) (font-color orange))
+                    ((< *baby-mode-orb-dist* (meters 20.0)) (font-color progress-yellow))
+                    ((< *baby-mode-orb-dist* (meters 30.0)) (font-color flat-yellow))
+                    ((< *baby-mode-orb-dist* (meters 40.0)) (font-color progress-blue))
+                    ((< *baby-mode-orb-dist* (meters 50.0)) (font-color cyan))
+                    (else (font-color blue)))))
+          (draw-string-xy (string-format "Closest Orb: ~,,2Mm" *baby-mode-orb-dist*) buf 0 210 fc (font-flags kerning))))))
+  (none))
 
 (defun get-active-pat-mode-info ()
   (case (-> *pc-settings* slip-assist)
     (((slip-assist-mode normal)) *pat-mode-info*)
     (((slip-assist-mode no-slip)) *no-slip-pat-mode-info*)
-    (((slip-assist-mode spiderman)) *spiderman-pat-mode-info*)
-    )
-  )
+    (((slip-assist-mode spiderman)) *spiderman-pat-mode-info*)))
 
 (defun hide-speedrun-display ()
   (set! (-> *speedrun-info* should-display?) #f)
-  (none)
-  )
+  (none))
 
 (defun speedrun-start-full-game-run ()
   ;; start a full game speedrun, save file is already selected so don't default to first slot
@@ -508,68 +441,55 @@
   (none))
 
 (define-extern *mod-version-text* string)
+
 (defun speedrun-draw-settings ()
   "Draw speedrun related settings in the bottom left corner"
-  (when (and (-> *pc-settings* speedrunner-mode?)
-             (not (paused?))
-             (-> *speedrun-info* should-display?))
-    (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
-                                      (bucket-id subtitle))
-      (draw-string-xy (string-format "Speedrunner Mode ~%~S ~%Category: ~S ~%Cutscene Skips ~A"
-                                    *mod-version-text*
+  (when (and (-> *pc-settings* speedrunner-mode?) (not (paused?)) (-> *speedrun-info* should-display?))
+    (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf)) (bucket-id subtitle))
+      (draw-string-xy (string-format "Speedrunner Mode ~%OrbHunt ~S ~%Category: ~S ~%Cutscene Skips ~A"
+                                     *mod-version-text*
                                      (enum->string speedrun-category (-> *speedrun-info* category))
                                      (-> *pc-settings* skip-movies?))
-                      buf 0 (- 220 (* 8 4)) (font-color flat-yellow) (font-flags shadow kerning))))
+                      buf
+                      0
+                      (- 220 (* 8 4))
+                      (font-color flat-yellow)
+                      (font-flags shadow kerning))))
   (none))
 
 (defun orb-hunt-update ()
   ;; Draw info to the screen
   (draw-closest-orb)
-
   (when (-> *pc-settings* pseudo-savestates?)
     ;; call post-init function
     (when (and *practice-spawn-post-init*
-                *target*
-                (-> *setting-control* current allow-pause)
-                (>= (- (-> *display* base-frame-counter) (-> *game-info* blackout-time)) (seconds 0.1))
-                )
+               *target*
+               (-> *setting-control* current allow-pause)
+               (>= (- (-> *display* base-frame-counter) (-> *game-info* blackout-time)) (seconds 0.1)))
       (*practice-spawn-post-init*)
-      (set! *practice-spawn-post-init* #f)
-      )
-
-    (when (or (cpad-hold? 0 r3)
-              (and *debug-segment* (cpad-hold? 0 l2))
-              )
+      (set! *practice-spawn-post-init* #f))
+    (when (or (cpad-hold? 0 r3) (and *debug-segment* (cpad-hold? 0 l2)))
       ;; Check for fast reset combo
       (when (cpad-pressed? 0 up)
         (format #t "player triggered reset combo~%")
-        (speedrun-practice-spawn)
-        )
-      
+        (speedrun-practice-spawn))
       ;; Check for temp checkpoint combo
       (when (cpad-pressed? 0 down)
         (format #t "player triggered temp checkpoint combo~%")
-        (speedrun-practice-store-temp-checkpoint)
-        )
-      )
-    )
-  (none)
-  )
+        (speedrun-practice-store-temp-checkpoint))))
+  (none))
 
 (defun speedrun-mode-update ()
   "A per frame update for speedrunning related stuff"
   (when (-> *pc-settings* speedrunner-mode?)
     ;; Update auto-splitter
     (update-autosplit-info-jak1)
-
+    ;; Draw info to the screen
     (speedrun-draw-settings)
-    ;;Disable any active cheats
-    (set! (-> *pc-settings* cheats) (the-as pc-cheats #x0))
+    (enforce-speedrun-pc-settings)
     ;; Run after-blackout speedrun setup (if needed)
-    (setup-speedrun-post-blackout)
-    )
+    (setup-speedrun-post-blackout))
   (none))
-
 
 (defun speedrun-reset-common-settings ()
   ;; disable hints (this seems to be overriden by your slot 1 save though)
@@ -580,8 +500,7 @@
   (set-frame-rate! *pc-settings* 60 #t)
   ;; skip intro cutscene
   (close-specific-task! (game-task intro) (task-status need-resolution))
-  (none)
-  )
+  (none))
 
 (defun speedrun-start-run ()
   ;; randomize game id so the autosplitter knows to restart
@@ -591,25 +510,31 @@
   (speedrun-reset-common-settings)
   ;; enable auto saving by default
   (set! (-> *setting-control* default auto-save) #t)
-  (none)
-  )
+  (none))
 
-(define *tmp-continue-point* (new 'static 'continue-point
-                             :name "tmp"
-                             :level #f
-                             :trans (new 'static 'vector :w 1.0)
-                             :quat (new 'static 'quaternion :w 1.0)
-                             :camera-trans (new 'static 'vector :w 1.0)
-                             :camera-rot (new 'static 'array float 9)
-                             :load-commands '()
-                             :vis-nick #f
-                             :lev0 #f
-                             :disp0 #f
-                             :lev1 #f
-                             :disp1 #f
-                             )
-    )
+(define *tmp-continue-point*
+  (new 'static
+       'continue-point
+       :name "tmp"
+       :level #f
+       :trans
+       (new 'static 'vector :w 1.0)
+       :quat
+       (new 'static 'quaternion :w 1.0)
+       :camera-trans
+       (new 'static 'vector :w 1.0)
+       :camera-rot
+       (new 'static 'array float 9)
+       :load-commands
+       '()
+       :vis-nick #f
+       :lev0 #f
+       :disp0 #f
+       :lev1 #f
+       :disp1 #f))
+
 (define *tmp-flut?* #f)
+
 (define *tmp-zoomer?* #f)
 
 (defun speedrun-practice-temp-checkpoint ()
@@ -617,23 +542,18 @@
     (cond
       (*tmp-flut?* (set! *practice-spawn-post-init* get-on-flutflut))
       (*tmp-zoomer?* (set! *practice-spawn-post-init* get-on-zoomer))
-      (else (set! *practice-spawn-post-init* generic-post-init))
-      )
+      (else (set! *practice-spawn-post-init* generic-post-init)))
     ;; commented out to prevent malding 
     ;; (if (cpad-hold? 0 r2)  ;; fully reset game if r2 held too
     ;;   (initialize! *game-info* 'game (the-as game-save #f) "default")
     ;;   )
     (when (not (string= (-> *game-info* current-continue name) "tmp"))
-      (set! *last-real-continue-point* (-> *game-info* current-continue))
-      )
+      (set! *last-real-continue-point* (-> *game-info* current-continue)))
     (set! (-> *game-info* current-continue) *tmp-continue-point*)
     (sound-play "select-menu")
-
     (initialize! *game-info* 'dead (the-as game-save #f) (the-as string #f))
-    (speedrun-reset-common-settings)
-    )
-  (none)
-  )
+    (speedrun-reset-common-settings))
+  (none))
 
 (defun continue-point-copy! ((dst continue-point) (src continue-point))
   (set! (-> dst level) (-> src level))
@@ -643,14 +563,11 @@
   (set! (-> dst vis-nick) (-> src vis-nick))
   (when (-> *level* level0)
     (set! (-> dst lev0) (-> *level* level0 name))
-    (set! (-> dst disp0) 'display)
-    )
+    (set! (-> dst disp0) 'display))
   (when (-> *level* level1)
     (set! (-> dst lev1) (-> *level* level1 name))
-    (set! (-> dst disp1) 'display)
-    )
-  (none)
-  )
+    (set! (-> dst disp1) 'display))
+  (none))
 
 (defun camera-rot-copy! ((dst continue-point) (src matrix))
   (set! (-> dst camera-rot 0) (-> src vector 0 x))
@@ -662,54 +579,33 @@
   (set! (-> dst camera-rot 6) (-> src vector 2 x))
   (set! (-> dst camera-rot 7) (-> src vector 2 y))
   (set! (-> dst camera-rot 8) (-> src vector 2 z))
-  (none)
-  )
+  (none))
 
 (defun speedrun-practice-store-temp-checkpoint ()
   (case (-> *target* state)
     ;; only store temp checkpoint if in one of these states
     ((target-stance target-look-around target-wade-stance target-flut-stance target-racing)
-      ;; assume current continue is good enough for the current location
-      (continue-point-copy! *tmp-continue-point* (-> *game-info* current-continue))
-      (vector-copy! (-> *tmp-continue-point* trans) (-> *target* root trans))
-      (quaternion-copy! (-> *tmp-continue-point* quat) (-> *target* control unknown-quaternion00))
-      (vector-copy! (-> *tmp-continue-point* camera-trans) (-> *camera-combiner* trans))
-      (camera-rot-copy! *tmp-continue-point* (-> *camera-combiner* inv-camera-rot))
-
-      (set! *tmp-flut?* #f)
-      (set! *tmp-zoomer?* #f)
-      (case (-> *target* state)
-        ((target-flut-stance)
-          (set! *tmp-flut?* #t)
-          )
-        ((target-racing)
-          (set! *tmp-zoomer?* #t)
-          )
-        )
-      (sound-play "select-menu")
-      )
-    (else
-      (sound-play "caught-eel")
-      )
-    )
-  (none)
-  )
-
+     ;; assume current continue is good enough for the current location
+     (continue-point-copy! *tmp-continue-point* (-> *game-info* current-continue))
+     (vector-copy! (-> *tmp-continue-point* trans) (-> *target* root trans))
+     (quaternion-copy! (-> *tmp-continue-point* quat) (-> *target* control unknown-quaternion00))
+     (vector-copy! (-> *tmp-continue-point* camera-trans) (-> *camera-combiner* trans))
+     (camera-rot-copy! *tmp-continue-point* (-> *camera-combiner* inv-camera-rot))
+     (set! *tmp-flut?* #f)
+     (set! *tmp-zoomer?* #f)
+     (case (-> *target* state)
+       ((target-flut-stance) (set! *tmp-flut?* #t))
+       ((target-racing) (set! *tmp-zoomer?* #t)))
+     (sound-play "select-menu"))
+    (else (sound-play "caught-eel")))
+  (none))
 
 (defun speedrun-practice-spawn ()
   (case (-> *target* state)
     ;; only load temp checkpoint if in one of these states
     ((target-stance target-look-around target-wade-stance target-flut-stance target-racing)
-
-      ;; reset any previous post-target-init callback
-      (set! *practice-spawn-post-init* #f)
-
-      (speedrun-practice-temp-checkpoint)
-      )
-    (else
-      (sound-play "caught-eel")
-      )
-    )
-        
-  (none)
-  )
+     ;; reset any previous post-target-init callback
+     (set! *practice-spawn-post-init* #f)
+     (speedrun-practice-temp-checkpoint))
+    (else (sound-play "caught-eel")))
+  (none))

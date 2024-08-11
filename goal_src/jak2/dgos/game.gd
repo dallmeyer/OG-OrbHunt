@@ -343,7 +343,7 @@
   "pckernel.o" ;; added
   "subtitle2-h.o" ;; added
   "subtitle2.o" ;; added
-  "input-display.o" ;;added
+  "input-display.o" ;;added ;;mod-base-change
   "main.o"
   "collide-cache.o"
   "collide-debug.o"
@@ -467,7 +467,7 @@
   "cty-guard-turret-button.o"
   "entity-debug.o" ;; added
   "yakow.o" ;; added
-  "mod-settings.o" ;; added
+  "mod-settings.o" ;; added ;;mod-base-change
   "mod-common-functions.o" ;; added
   "mods.o"
   "orb-placer.o"  ;; added
