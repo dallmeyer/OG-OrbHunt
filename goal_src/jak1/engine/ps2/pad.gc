@@ -240,6 +240,17 @@
 
 ;; the four controllers
 (define *cpad-list* (new 'global 'cpad-list))
+;; the cpad-history for each controller
+(define *cpad-history-list* (new 'global 'cpad-history-list))
+
+(desfun generate-frame-checks (pad-idx frames)
+  (if (= frames 0)
+       0
+      `(logior (-> *cpad-history-list* cpads ,pad-idx button0-rel ,(- frames 1))
+               ,(generate-frame-checks pad-idx (- frames 1))
+        )
+  )
+)
 
 ;; the cpad-history for each controller
 (define *cpad-history-list* (new 'global 'cpad-history-list))
