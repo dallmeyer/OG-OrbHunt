@@ -139,6 +139,7 @@ an orb |#
 
   (none)
   )
+(set! *runs-on-settings-saved-defined?* #t)
     
 (defun runs-on-game-saved ((which-slot int))
   (false! *auto-saving?*)

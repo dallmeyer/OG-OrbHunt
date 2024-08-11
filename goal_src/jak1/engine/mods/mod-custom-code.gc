@@ -34,6 +34,7 @@ an orb
   ;; uncomment the below line to piggy-back and save your mod-settings whenever pc-settings are saved
   ;; (commit-to-file *mod-settings*)
   (none))
+(set! *runs-on-settings-saved-defined?* #t)
 
 (defun runs-on-orb-pickup ((parent process-tree))
   (let* ((from-cache? (and parent (type-type? (-> parent type) orb-cache-top))))

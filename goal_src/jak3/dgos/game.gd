@@ -472,7 +472,9 @@
   "debris.o"
   "shield-sphere.o"
   "entity-debug.o" ;; added
-  ;; "orb-placer-h.o"  ;; added
+  "orb-placer-h.o"  ;; added
   "mod-common-functions.o"  ;; added
-  ;; "orb-placer.o"  ;; added
+  "orb-placer.o"  ;; added
+  "mod-custom-code.o"  ;; added
+  "mod-debug.o" ;; added 
  ))

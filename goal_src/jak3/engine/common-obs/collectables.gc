@@ -26,6 +26,7 @@
 (declare-type ammo collectable)
 (define-extern process-contact-action (function process none :behavior target))
 (define-extern eco-blue-glow (function vector none))
+(define-extern orb-placer-list-maintenace (function symbol none))
 
 ;; DECOMP BEGINS
 
@@ -1509,6 +1510,12 @@
   :virtual #t
   :code (behavior ((arg0 symbol) (arg1 handle))
     (process-entity-status! self (entity-perm-status dead) #t)
+    )
+  :exit (behavior ()
+    ;; refresh orb-placer list in debug mode
+    (when *debug-segment*
+      (orb-placer-list-maintenace #t)
+      )
     )
   )
 
