@@ -34,8 +34,32 @@
   (none)
   )
 
+(defun dm-orb-placer-dupe-func ((idx int))
+  (let ((vec (new 'stack-no-clear 'vector))
+        (orb (the skill (handle->process (-> *orb-placer-orbs* idx)))))
+    (when orb
+      (vector-copy! vec (-> orb base))
+
+      ; spawn and update orb-placer data
+      (let ((orb-handle (spawn-skill vec 1.0 #t)))
+        (when (nonzero? orb-handle)
+          (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
+          (set! *orb-placer-selected-idx* *orb-placer-count*)
+          (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
+          (+! *orb-placer-count* 1)
+          (orb-placer-list-maintenace #t)
+          )
+        )
+      )
+    )
+  0
+  )
+
 (defun orb-placer-list-maintenace ((update-debug-list? symbol))
-  (when update-debug-list? (debug-menu-remove-all-items *orb-placer-select-menu*))
+  (when update-debug-list?
+   (debug-menu-remove-all-items *orb-placer-select-menu*)
+   (debug-menu-remove-all-items *orb-placer-dupe-menu*)
+   )
 
   (dotimes (i *orb-placer-count*)
     (let ((orb-handle (-> *orb-placer-orbs* i))
@@ -61,10 +85,14 @@
 
             (when update-debug-list?
               ;; append to debug menu list
-              (let ((orb-menu-item (new-dm-flag (-> *orb-placer-temp-strs* i) i dm-orb-placer-select-func)))
+              (let ((orb-menu-item (new-dm-flag (-> *orb-placer-temp-strs* i) i dm-orb-placer-select-func))
+                    (orb-dupe-menu-item (new-dm-func (-> *orb-placer-temp-strs* i) i dm-orb-placer-dupe-func))
+                    )
                 (debug-menu-append-item *orb-placer-select-menu* orb-menu-item)
+                (debug-menu-append-item *orb-placer-dupe-menu* orb-dupe-menu-item)
                 (when is-selected?
                   (set! (-> *orb-placer-select-menu* selected-item) orb-menu-item)
+                  (set! (-> *orb-placer-dupe-menu* selected-item) orb-dupe-menu-item)
                   )
                 )
               )
@@ -167,7 +195,6 @@
         ;; orb-placer exists
         ;; if its not enabled, kill it
         (when (not (and *debug-segment* *orb-placer-enabled?*))
-
           (kill-by-name "orb-placer" *active-pool*)
 
           ;; make sure target is ungrabbed
@@ -175,7 +202,7 @@
             (send-event *target* 'end-mode)
             )
           ;; release any camera modes
-          (when (setting-control-method-14 *setting-control* 'mode-name)
+          (when (get-setting *setting-control* 'mode-name)
             (remove-setting-by-arg0 *setting-control* 'mode-name)
             )
           )

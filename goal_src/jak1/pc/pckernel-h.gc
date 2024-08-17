@@ -314,7 +314,7 @@
   (set-aspect! obj 4 3)
   (set-frame-rate! obj 60 call-handlers)
   (set! (-> obj use-vis?) #f)
-  (set! (-> obj aspect-ratio-auto?) #f)
+  (set! (-> obj aspect-ratio-auto?) #t)
   (set! (-> obj vsync?) #t)
   (set! (-> obj letterbox?) #t)
   ;; default to the displays currently chosen resolution

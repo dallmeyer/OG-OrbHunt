@@ -475,4 +475,6 @@
   ;; "orb-placer-h.o"  ;; added
   ;; "mod-common-functions.o"  ;; added
   ;; "orb-placer.o"  ;; added
+  ;; "mod-custom-code.o"  ;; added
+  ;; "mod-debug.o" ;; added 
  ))
