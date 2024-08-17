@@ -3269,6 +3269,7 @@
              (flag "big-head" 65536 dm-game-secret-toggle-pick-func)
              (flag "little-head" 131072 dm-game-secret-toggle-pick-func)
              (flag "giant-head" 262144 dm-game-secret-toggle-pick-func)
+             (flag "no-head" 262144 dm-game-secret-toggle-pick-func)
              )
            ;; og:preserve-this new menu
            (menu
