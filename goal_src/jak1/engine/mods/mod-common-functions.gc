@@ -81,6 +81,14 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 (defmacro set-cpad-hold! (pad-idx &rest buttons)
   `(logior! (cpad-hold ,pad-idx) (pad-buttons ,@buttons)))
 
+(defmacro set-cpad-pressed! (pad-idx &rest buttons)
+  `(logior! (cpad-pressed ,pad-idx) (pad-buttons ,@buttons))
+  )
+
+(defmacro set-cpad-hold! (pad-idx &rest buttons)
+  `(logior! (cpad-hold ,pad-idx) (pad-buttons ,@buttons))
+  )
+
 ;;This function moves an actor to the given coordinates
 ;;example: (move-actor "farmer-3" 3.0 74.0 -120.0)
 (defun move-actor ((actor-name string) (x float) (y float) (z float))
