@@ -28,10 +28,7 @@ jobs:
       metadataAuthors: "barg"
       metadataTags: "speedrunning,challenge,gameplay-mod"
       metadataWebsiteUrl: "https://github.com/dallmeyer/OG-OrbHunt/blob/main/README.md"
-      skipMacOS: true
-      skipLinux: true
-      toolingBinaryDir: "out/build/Release/bin"
+      toolingRepo: "OpenGOAL-Mods/OG-Mod-Base"
       gameAssetsDir: "game/assets"
-      copyEntireBinaryDir: true
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
