@@ -909,7 +909,7 @@
       }
     },
     
-    // HOVER ORBS
+    // HOVER ORBS - jk!
     {
       "trans": [852.94,  -1.37, -1051.96], // in water behind rock island way out towards ruins(?)
       "etype": "skill",  // actor type
@@ -917,8 +917,8 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [852.94,  -1.37, -1051.96, 10], // bounding sphere
       "lump": {
-        "name":"atoll-skill-hover-01",
-        "pickup-amount": ["float", 3.0]  // goldge
+        "name":"atoll-skill-hover-01" //,
+        // "pickup-amount": ["float", 3.0]  // goldge
       }
     },
     {
@@ -928,8 +928,8 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [838.52,  11.28, -1167.44, 10], // bounding sphere
       "lump": {
-        "name":"atoll-skill-hover-02",
-        "pickup-amount": ["float", 3.0]  // goldge
+        "name":"atoll-skill-hover-02" //,
+        // "pickup-amount": ["float", 3.0]  // goldge
       }
     }
   ]
