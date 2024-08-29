@@ -458,3 +458,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 (dotimes (lvl-idx LEVEL_ID_LEN)
   (+! *total-orbs* (-> *level-orb-total-counts-fixed* lvl-idx))
   )
+
+;; do NOT change %MODVERSIONPLACEHOLDER% below, otherwise the mod-bundling-tools
+;;   will be unable to automatically add version info to the speedrun display
+(define *mod-version-text* "%MODVERSIONPLACEHOLDER%")

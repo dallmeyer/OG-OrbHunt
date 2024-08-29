@@ -699,8 +699,7 @@
        (set! (-> this skill) (+ (-> this skill) arg1))
        ;; orb hunt winner winner chicken dinner
        (when (>= (-> this skill-total) *total-orbs*)
-        (play-sound-file "custom_assets/jak2/audio/congrats.mp3" 100)
-        (play-sound-file "data/custom_assets/jak2/audio/congrats.mp3" 100)
+        (play-sound-file "congrats.mp3" 100)
         )
        (-> this skill)
        )
