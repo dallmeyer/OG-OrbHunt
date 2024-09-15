@@ -617,12 +617,6 @@
   (let ((gp-0 (new 'stack 'file-stream *temp-string* 'write)))
     (format gp-0 ";-*-Lisp-*-~%")
     (format gp-0 "(in-package goal)~%~%")
-    (bundles "ENGINE.CGO" "GAME.CGO")
-    (require "engine/draw/drawable-ambient-h.gc")
-    (require "engine/game/game-save.gc")
-    (require "engine/level/load-boundary-h.gc")
-    (require "engine/gfx/sky/sky-tng.gc")
-    (require "engine/game/settings.gc")
     (format gp-0 ";; reset boundary in editor~%")
     (format gp-0 "(set! (-> *lb-editor-parms* boundary) #f)~%~%")
     (format gp-0 ";; reset all existing load boundaries~%")
@@ -633,7 +627,11 @@
         (format gp-0
                 "(static-load-boundary :flags (~S~S)~%"
                 (if (logtest? (-> s5-0 flags) (load-boundary-flags closed)) "closed " "")
-                (if (logtest? (-> s5-0 flags) (load-boundary-flags player)) "player " ""))
+                (if (logtest? (-> s5-0 flags) (load-boundary-flags player)) "player " "")
+                (if (logtest? (-> s5-0 flags) (load-boundary-flags ignore-normal)) "ignore-normal " "") ;; TFL note: adding the custom flags to the boundary list
+                (if (logtest? (-> s5-0 flags) (load-boundary-flags ignore-racing)) "ignore-racing " "") ;; TFL note: adding the custom flags to the boundary list
+                (if (logtest? (-> s5-0 flags) (load-boundary-flags ignore-flut)) "ignore-flut " "") ;; TFL note: adding the custom flags to the boundary list
+                )
         (format gp-0 "  :top ~f  :bot ~f~%" (-> s5-0 top-plane) (-> s5-0 bot-plane))
         (format gp-0 "  :points (")
         (dotimes (s4-0 (the-as int (-> s5-0 num-points)))
@@ -1347,6 +1345,22 @@
     0
     (none)))
 
+;; TFL note: function to check if the player is on foot (not on zoomer or flutflut)
+(defun on-foot? ()
+  (not (or (logtest? (-> *target* control root-prim prim-core action) (collide-action racer)) ; need to change when enum change
+           (logtest? (-> *target* control root-prim prim-core action) (collide-action flut))) ; need to change when enum change
+       ))
+
+;; TFL note: function to check if the player is on flutflut
+(defun on-flut? ()
+  (logtest? (-> *target* control root-prim prim-core action) (collide-action flut)) ; need to change when enum change
+  )
+
+;; TFL note: function to check if the player is on the zoomer
+(defun on-racer? ()
+  (logtest? (-> *target* control root-prim prim-core action) (collide-action racer)) ; need to change when enum change
+  )
+
 (defun check-boundary ((arg0 load-boundary))
   (local-vars (s5-0 object))
   (let ((a1-0 (if (logtest? (-> arg0 flags) (load-boundary-flags player)) (-> *load-boundary-target* 1) (-> *load-boundary-target* 0)))
@@ -1360,21 +1374,34 @@
            (set! s5-0 (check-closed-boundary arg0 a1-0 a2-0))
            (set! s5-0 (check-open-boundary arg0 a1-0 a2-0))))
         (else (set! s5-0 0) (goto cfg-28)))))
-  (let ((s4-0 (the-as load-boundary-crossing-command #f)))
-    (if (= (the-as symbol s5-0) 1) (set! s4-0 (-> arg0 cmd-fwd)))
-    (if (= (the-as symbol s5-0) 2) (set! s4-0 (-> arg0 cmd-bwd)))
-    (when s4-0
-      (cond
-        ((= (-> s4-0 cmd) (load-boundary-cmd vis)) (load-state-want-vis (the-as symbol (-> s4-0 lev0))))
-        ((= (-> s4-0 cmd) (load-boundary-cmd load))
-         (load-state-want-levels (the-as symbol (-> s4-0 lev0)) (the-as symbol (-> s4-0 lev1))))
-        ((= (-> s4-0 cmd) (load-boundary-cmd display))
-         (load-state-want-display-level (the-as symbol (-> s4-0 lev0)) (the-as symbol (-> s4-0 lev1))))
-        ((= (-> s4-0 cmd) (load-boundary-cmd force-vis))
-         (load-state-want-force-vis (the-as symbol (-> s4-0 lev0)) (the-as symbol (-> s4-0 lev1))))
-        ((= (-> s4-0 cmd) (load-boundary-cmd checkpt))
-         (format 0 "Setting continue to ~A~%" (-> s4-0 lev0))
-         (set-continue! *game-info* (-> s4-0 lev0))))))
+  (let ((ignore-flags 0)) ;; TFL note: Code to check if the ignore flag conditions are met
+    (if (and (logtest? (-> arg0 flags) (load-boundary-flags ignore-normal)) (on-foot?))
+      (set! ignore-flags 1) ;; set the ignore flag to 1 if the flag is present and you're on foot
+      )
+    (if (and (logtest? (-> arg0 flags) (load-boundary-flags ignore-racing)) (on-racer?))
+      (set! ignore-flags 1) ;; set the ignore flag to 1 if the flag is present and you're on the zoomer
+      )
+    (if (and (logtest? (-> arg0 flags) (load-boundary-flags ignore-flut)) (on-flut?))
+      (set! ignore-flags 1) ;; set the ignore flag to 1 if the flag is present and you're on flutflut
+      )
+    (let ((s4-0 (the-as load-boundary-crossing-command #f)))
+      (if (= (the-as symbol s5-0) 1) (set! s4-0 (-> arg0 cmd-fwd)))
+      (if (= (the-as symbol s5-0) 2) (set! s4-0 (-> arg0 cmd-bwd)))
+      (when s4-0
+        (if (= ignore-flags 0)
+          (cond
+            ((= (-> s4-0 cmd) (load-boundary-cmd vis)) (load-state-want-vis (the-as symbol (-> s4-0 lev0))))
+            ((= (-> s4-0 cmd) (load-boundary-cmd load))
+             (load-state-want-levels (the-as symbol (-> s4-0 lev0)) (the-as symbol (-> s4-0 lev1))))
+            ((= (-> s4-0 cmd) (load-boundary-cmd display))
+             (load-state-want-display-level (the-as symbol (-> s4-0 lev0)) (the-as symbol (-> s4-0 lev1))))
+            ((= (-> s4-0 cmd) (load-boundary-cmd force-vis))
+             (load-state-want-force-vis (the-as symbol (-> s4-0 lev0)) (the-as symbol (-> s4-0 lev1))))
+            ((= (-> s4-0 cmd) (load-boundary-cmd checkpt))
+             (format 0 "Setting continue to ~A~%" (-> s4-0 lev0))
+             (set-continue! *game-info* (-> s4-0 lev0)))))
+        ;; (format 0 "ignore-flags: ~D~% " ignore-flags) ;; print the flag when crossing a boundary
+        )))
   (label cfg-28)
   (none))
 

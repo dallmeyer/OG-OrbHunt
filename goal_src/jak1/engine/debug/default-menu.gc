@@ -2422,6 +2422,8 @@
                                                                  (flag "Nav Marks Extras" *display-nav-marks-extras* dm-boolean-toggle-pick-func)
                                                                  (flag "Path Marks" *display-path-marks* dm-boolean-toggle-pick-func)
                                                                  (flag "Vol Marks" *display-vol-marks* dm-boolean-toggle-pick-func)
+                                                                 ;; TFL note: added
+                                                                ;;  (flag "TFL Hint Marks" *display-tfl-hint-marks* dm-boolean-toggle-pick-func)
                                                                  (menu "Ambient Marks"
                                                                        (flag "Ambient Hint Marks" *display-ambient-hint-marks* dm-boolean-toggle-pick-func)
                                                                        (flag "Ambient Sound Marks" *display-ambient-sound-marks* dm-boolean-toggle-pick-func)

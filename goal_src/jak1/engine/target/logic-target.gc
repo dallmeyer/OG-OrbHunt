@@ -21,6 +21,10 @@
              (or (= (-> self control unknown-surface00 name) 'run) (= (-> self control unknown-surface00 name) 'jump)))
     (+! (-> self control unknown-surface01 target-speed) 20480.0)
     (+! (-> self control unknown-surface01 transv-max) 20480.0))
+  ;; TFL note: added super-eco-blue case
+  (when (target-powerup? super-eco-blue)
+    (+! (-> self control unknown-surface01 target-speed) (meters 10))
+    (+! (-> self control unknown-surface01 transv-max) (meters 10)))
   (let ((s5-0 (new-stack-vector0)))
     (vector-z-quaternion! s5-0 (-> self control unknown-quaternion00))
     (when (logtest? (-> self control unknown-surface00 flags) (surface-flags dive))

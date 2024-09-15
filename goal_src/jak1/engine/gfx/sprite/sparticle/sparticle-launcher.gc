@@ -55,10 +55,10 @@
 
 ;; All the particle launchers.
 ;; Particle effects will add themselves to this table when the code is loaded/linked
-(define *part-id-table* (new 'global 'boxed-array sparticle-launcher 3584))
+(define *part-id-table* (new 'global 'boxed-array sparticle-launcher 8192)) ;; TFL note: increased (default:3584)
 
 ;; All the particle groups.
-(define *part-group-id-table* (new 'global 'boxed-array sparticle-launch-group 1024))
+(define *part-group-id-table* (new 'global 'boxed-array sparticle-launch-group 2048)) ;; TFL note: increased (default:1024)
 
 (defun lookup-part-group-by-name ((arg0 string))
   "Find a particle group with the given name. Checks all of them, not very efficient."
@@ -251,7 +251,7 @@
                        (sp-field-id launch-fields-start)
                        (sp-field-id launch-fields-end)
                        #t)
-      ;; rotate vel to include the launchrot and conerot
+      ;; rotate vel to include the launchrot and conerot 
       (matrix-rotate-xyz! s2-0 (-> s5-0 launchrot))
       (vector3s-matrix*! (the-as vector3s (-> arg1 vel-sxvel)) (the-as vector3s (-> arg1 vel-sxvel)) s2-0)
       (matrix-rotate-xyz! s2-0 (-> s5-0 conerot))
@@ -353,7 +353,7 @@
 
 ;; for whatever reason the enemy death launch stuff is defined here.
 ;; it doesn't use the adgif cache.
-;; but it's a nice example for how to set the
+;; but it's a nice example for how to set the 
 
 (define *death-adgif* (the-as adgif-shader #f))
 
@@ -422,7 +422,7 @@
       (.mul.vf vf6 vf6 vf4 :mask #b111)
       (.svf (&-> s5-0 color quad) vf5)
       (.svf (&-> gp-0 fade quad) vf6)
-      ;;
+      ;; 
       (set! (-> gp-0 key) (the-as sparticle-launch-control 0))
       (set! (-> gp-0 binding) #f)
       ;; copy the sprite data
@@ -574,7 +574,7 @@
 ;;;;;;;;;;;;;;;;;;;;
 
 ;; a launch-control is an instance of a particle effect group. it holds the definition and the state.
-;; the launch-controls are always associated with a process. this allows the memory to be reclaimed once the
+;; the launch-controls are always associated with a process. this allows the memory to be reclaimed once the 
 ;; particles are despawned.
 
 (defmethod initialize ((this sparticle-launch-control) (arg0 sparticle-launch-group) (arg1 process))

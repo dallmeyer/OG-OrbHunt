@@ -1058,6 +1058,9 @@
   (set! (-> arg0 root trans quad) (-> arg1 extra trans quad))
   (quaternion-copy! (-> arg0 root quat) (-> arg1 quat))
   ;; (vector-identity! (-> arg0 root scale))
+  (let ((scale (res-lump-float (-> arg0 entity) 'scale :default 0.0))) ;; TFL notes: added a scale option for every process-drawable in the lump
+    (when (nonzero? scale)
+      (set-vector! (-> arg0 root scale) scale scale scale 1.0)))
   (none))
 
 (defmethod update-perm! ((this entity-perm) (arg0 symbol) (arg1 entity-perm-status))

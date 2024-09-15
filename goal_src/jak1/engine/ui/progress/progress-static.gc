@@ -277,7 +277,9 @@
   (cave 13)
   (lavatube 14)
   (citadel 15)
-  (crystalc 16)
+  (crystal-cave 16) ;; TFL note: added the custom level to the level-task-data-index
+  (crescent-top 17)
+  (energy-bay 18)
   (max 17))
 
 ;; maps level-info indices to the appropriate offset in *level-task-data*
@@ -318,12 +320,14 @@
        (level-task-data-index lavatube)
        (level-task-data-index citadel) ;; citadel?
        (level-task-data-index citadel) ;; finalboss?
-       (level-task-data-index misty) ;; demo?
        (level-task-data-index misty) ;; intro?
-       0
-       0
-       0
-       (level-task-data-index crystalc) ;; crystal-cave
+       (level-task-data-index misty) ;; demo?
+       0 ;; title
+       0 ;; halfpipe
+       0 ;; default (26)
+       (level-task-data-index crystal-cave)
+       (level-task-data-index crescent-top)
+       (level-task-data-index energy-bay)
        0))
 
 ;; maps goal language ID to its name string ID
@@ -1406,7 +1410,7 @@
                       :task-id (game-task citadel-buzzer)
                       :task-name
                       (new 'static 'array text-id 4 (text-id citadel-buzzer) (text-id citadel-buzzer) (text-id citadel-buzzer) (text-id zero)))))
-       ;; the tasks for our custom level
+       ;; TFL note: the tasks for our custom level
        ;; since this is the 16th (starting from zero) entry in this array,
        ;; we have to add 16 as an entry to the *level-task-data-remap* array
        ;; - level-name-id is the text id of the level name string
@@ -1414,11 +1418,12 @@
        ;;   however, all text strings are merged into a single file so it shouldn't matter what you put here
        ;; - nb-of-tasks determines the number of tasks this level-tasks-info holds
        ;; - buzzer-task-index is the index of the scout fly task for this level
+       ;; CRYSTAL CAVE LEVEL TASK INFO
        (new 'static
             'level-tasks-info
             :level-name-id (text-id crystalc-level)
-            :text-group-index 7
-            :nb-of-tasks 5
+            :text-group-index 1
+            :nb-of-tasks 6
             :buzzer-task-index 4
             :task-info
             (new 'static
@@ -1470,6 +1475,184 @@
                            (text-id crystalc-buzzer)
                            (text-id crystalc-buzzer)
                            (text-id crystalc-buzzer)
+                           (text-id zero)))
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task crystalc-hidden)
+                      :task-name
+                      (new 'static
+                           'array
+                           text-id
+                           4
+                           (text-id crystalc-hidden)
+                           (text-id crystalc-hidden)
+                           (text-id crystalc-hidden)
+                           (text-id zero)))))
+       ;; CRESCENT TOP LEVEL TASK INFO
+       (new 'static
+            'level-tasks-info
+            :level-name-id (text-id crescent-level)
+            :text-group-index 1
+            :nb-of-tasks 6
+            :buzzer-task-index 5
+            :task-info
+            (new 'static
+                 'array
+                 task-info-data
+                 8
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task crescent-observatory)
+                      :task-name
+                      (new 'static
+                           'array
+                           text-id
+                           4
+                           (text-id crescent-observatory)
+                           (text-id crescent-observatory)
+                           (text-id crescent-observatory)
+                           (text-id zero)))
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task crescent-robot)
+                      :task-name
+                      (new 'static 'array text-id 4 (text-id crescent-robot) (text-id crescent-robot) (text-id crescent-robot) (text-id zero)))
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task crescent-lava)
+                      :task-name
+                      (new 'static 'array text-id 4 (text-id crescent-lava) (text-id crescent-lava) (text-id crescent-lava) (text-id zero)))
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task crescent-zoomer)
+                      :task-name
+                      (new 'static
+                           'array
+                           text-id
+                           4
+                           (text-id crescent-zoomer)
+                           (text-id crescent-zoomer)
+                           (text-id crescent-zoomer)
+                           (text-id zero)))
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task crescent-orange-ring)
+                      :task-name
+                      (new 'static
+                           'array
+                           text-id
+                           4
+                           (text-id crescent-orange-ring)
+                           (text-id crescent-orange-ring)
+                           (text-id crescent-orange-ring)
+                           (text-id zero)))
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task crescent-buzzer)
+                      :task-name
+                      (new 'static
+                           'array
+                           text-id
+                           4
+                           (text-id crescent-buzzer)
+                           (text-id crescent-buzzer)
+                           (text-id crescent-buzzer)
+                           (text-id zero)))))
+       ;; ENERGY BAY LEVEL TASK INFO
+       (new 'static
+            'level-tasks-info
+            :level-name-id (text-id energy-bay-level)
+            :text-group-index 1
+            :nb-of-tasks 7
+            :buzzer-task-index 6
+            :task-info
+            (new 'static
+                 'array
+                 task-info-data
+                 8
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task energy-bay-turbine1)
+                      :task-name
+                      (new 'static
+                           'array
+                           text-id
+                           4
+                           (text-id energy-bay-turbine1)
+                           (text-id energy-bay-turbine1)
+                           (text-id energy-bay-turbine1)
+                           (text-id zero)))
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task energy-bay-turbine2)
+                      :task-name
+                      (new 'static
+                           'array
+                           text-id
+                           4
+                           (text-id energy-bay-turbine2)
+                           (text-id energy-bay-turbine2)
+                           (text-id energy-bay-turbine2)
+                           (text-id zero)))
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task energy-bay-turbine3)
+                      :task-name
+                      (new 'static
+                           'array
+                           text-id
+                           4
+                           (text-id energy-bay-turbine3)
+                           (text-id energy-bay-turbine3)
+                           (text-id energy-bay-turbine3)
+                           (text-id zero)))
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task energy-bay-turbine4)
+                      :task-name
+                      (new 'static
+                           'array
+                           text-id
+                           4
+                           (text-id energy-bay-turbine4)
+                           (text-id energy-bay-turbine4)
+                           (text-id energy-bay-turbine4)
+                           (text-id zero)))
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task energy-bay-kill)
+                      :task-name
+                      (new 'static
+                           'array
+                           text-id
+                           4
+                           (text-id energy-bay-kill)
+                           (text-id energy-bay-kill)
+                           (text-id energy-bay-kill)
+                           (text-id zero)))
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task energy-bay-green-ring)
+                      :task-name
+                      (new 'static
+                           'array
+                           text-id
+                           4
+                           (text-id energy-bay-green-ring)
+                           (text-id energy-bay-green-ring)
+                           (text-id energy-bay-green-ring)
+                           (text-id zero)))
+                 (new 'static
+                      'task-info-data
+                      :task-id (game-task energy-bay-buzzer)
+                      :task-name
+                      (new 'static
+                           'array
+                           text-id
+                           4
+                           (text-id energy-bay-buzzer)
+                           (text-id energy-bay-buzzer)
+                           (text-id energy-bay-buzzer)
                            (text-id zero)))))))
 
 ;; goes down by 24 or 23 every time
