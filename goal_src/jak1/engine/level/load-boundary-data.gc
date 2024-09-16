@@ -1516,15 +1516,15 @@
 ;; (static-load-boundary :flags ()
 ;;   :top (meters 117.77)  :bot (meters 77.84)
 ;;   :points (  (meters -268.05) (meters 38.89)  (meters -295.40) (meters 0.44) (meters -325.45) (meters 2.75) )
-;;   :fwd (display crescent-top display-no-wait)
-;;   :bwd (display crescent-top #f)
+;;   :fwd (display crescent display-no-wait)
+;;   :bwd (display crescent #f)
 ;;   )
 
 (static-load-boundary :flags ()
   :top (meters 117.77)  :bot (meters 77.84)
   :points (  (meters -262.81) (meters 26.82)  (meters -290.15) (meters -11.62) (meters -332.01) (meters -12.9) )
-  :fwd (display crescent-top display-no-wait)
-  :bwd (display crescent-top #f)
+  :fwd (display crescent display-no-wait)
+  :bwd (display crescent #f)
   )
 
 (static-load-boundary :flags ()
@@ -1604,36 +1604,36 @@
 (static-load-boundary :flags () ; observatory side
   :top (meters 292.18)  :bot (meters 209.51)
   :points (  (meters -135.63) (meters 287.46)  (meters 34.55) (meters 528.97) )
-  ;; :fwd (load crescent-top maincave) ;; remove when platforms are fixed
-  :bwd (load crescent-top crystal-cave)
+  ;; :fwd (load crescent maincave) ;; remove when platforms are fixed
+  :bwd (load crescent crystalc)
   )
 
 (static-load-boundary :flags () ; open mine side
   :top (meters 286.56)  :bot (meters 202.06)
   :points (  (meters -307.67) (meters 509.67)  (meters -126.76) (meters 639.09) )
-  :fwd (load crescent-top crystal-cave)
-  ;; :bwd (load crescent-top maincave) ;; open mines load whenever it exists
+  :fwd (load crescent crystalc)
+  ;; :bwd (load crescent maincave) ;; open mines load whenever it exists
   )
 
 (static-load-boundary :flags ()
   :top (meters 302.75)  :bot (meters 126.82)
   :points (  (meters 359.44) (meters 365.73)  (meters 235.99) (meters 546.72) )
-  :fwd (load crescent-top energy-bay)
-  ;:bwd (load crescent-top maincave) ;; remove when platforms are fixed
+  :fwd (load crescent energbay)
+  ;:bwd (load crescent maincave) ;; remove when platforms are fixed
   )
 
 (static-load-boundary :flags ()
   :top (meters 285.30)  :bot (meters 212.05)
   :points (  (meters -258.33) (meters 462.83)  (meters -169.51) (meters 449.59) (meters -148.44) (meters 382.88) (meters -161.21) (meters 329.24) )
-  :fwd (display crystal-cave display-no-wait)
-  :bwd (display crystal-cave #f)
+  :fwd (display crystalc display-no-wait)
+  :bwd (display crystalc #f)
   )
 
 (static-load-boundary :flags ()
   :top (meters 302.75)  :bot (meters 126.82)
   :points (  (meters 386.22) (meters 384.52)  (meters 255.35) (meters 576.76) )
-  :fwd (display energy-bay display-no-wait)
-  :bwd (display energy-bay #f)
+  :fwd (display energbay display-no-wait)
+  :bwd (display energbay #f)
   )
 
 ;; (static-load-boundary :flags () ;; Display for open-mines whenever it exists

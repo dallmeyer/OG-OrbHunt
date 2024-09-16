@@ -81,33 +81,14 @@
                   (-> proc skel channel idx frame-group))))
         (if (string= (-> ja name) anim) (return #t))))))
 
-;; (defmacro enum<-name (enum name)
-;;   `(case ,name
-;;     ,@(apply (lambda (x)
-;;                ,@((,(car x)) (,enum ,(cdr x)))
-;;                ) `(get-enum-vals ,enum))
-;;     )
-;;   )
-
-;; TODO turn into macro
-(defun pickup-type<-name ((name symbol))
-  (case name
-    (('eco-blue) (pickup-type eco-blue))
-    (('eco-red) (pickup-type eco-red))
-    (('eco-green) (pickup-type eco-green))
-    (('eco-yellow) (pickup-type eco-yellow))
-    (('super-eco-blue) (pickup-type super-eco-blue))
-    (('super-eco-red) (pickup-type super-eco-red))
-    (('super-eco-green) (pickup-type super-eco-green))
-    (('super-eco-yellow) (pickup-type super-eco-yellow))
-    (else (pickup-type none))))
-
 (defmethod check-target-mode ((this tfl-hint))
   (let ((p (-> this hint-data target-mode)))
     (if (not (null? p))
       (case (car p)
         (('mode) (= (send-event *target* 'query 'mode) (cadr p)))
-        (('powerup) (the symbol (send-event *target* 'query 'powerup (pickup-type<-name (the symbol (cadr p))))))
+        (('powerup)
+         (the symbol
+              (send-event *target* 'query 'powerup (string->enum pickup-type (symbol->string (the symbol (cadr p))) (pickup-type none)))))
         (('anim) (anim-playing? *target* (symbol->string (cadr p)) (the int (caddr p)))))
       #t)))
 
@@ -197,7 +178,7 @@
   (logior! (-> this mask) (process-mask actor-pause))
   (vector-copy! (-> this root trans) (-> ent extra trans))
   (vector-identity! (-> this root scale))
-  (set! (-> this sound-to-play) (aif (res-lump-struct ent 'filename string :time -1000000000.0) it (the string #f)))
+  (set! (-> this sound-to-play) (aif (res-lump-struct ent 'filename string) it (the string #f)))
   (set! (-> this hint-data) (get-hint-data this))
   (sphere<-vector+r! (-> this sphere) (-> this root trans) (res-lump-float ent 'radius :default (meters 2.5)))
   (set! (-> this voicebox) (the handle #f))
@@ -294,7 +275,7 @@
         (play-tfl-hint (if (and (-> self hint-data alt-names) (> (-> self hint-data alt-names length) 0))
                          (-> self hint-data alt-names (-> self alt-name-idx))
                          (-> self hint-data file-name))
-                       (-> *setting-control* current dialog-volume)
+                       (/ (-> *setting-control* current dialog-volume) 100.0)
                        (-> (get-tfl-hint) hint-data interrupt?))
         (next-alt-hint! self)
         (hint-debug (format 0 "CODE tfl-hint-play starting playback (~A)~%" (-> self name)))

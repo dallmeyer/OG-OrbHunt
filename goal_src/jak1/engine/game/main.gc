@@ -574,10 +574,7 @@
       (if (= (-> *level* level0 status) 'inactive) (bg 'halfpipe)))
     (set! *run* #t)
     (let ((new-dproc (process-spawn-function process display-loop :name 'display :from *4k-dead-pool* :to *display-pool*)))
-      (set! *dproc* (the process (ppointer->process new-dproc)))
-      ;; TFL note: added music player
-      (process-spawn tfl-music-player)
-      )
+      (set! *dproc* (the process (ppointer->process new-dproc))))
     (cond
       ((or (level-get-with-status *level* 'loaded) (level-get-with-status *level* 'alive) (level-get-with-status *level* 'active))
        (activate-levels! *level*)
