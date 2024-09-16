@@ -693,7 +693,7 @@
 (defmethod deactivate ((this money))
   (when (= (-> this next-state name) 'pickup)
     (if (not (and (-> this entity) (logtest? (-> this entity extra perm status) (entity-perm-status dead))))
-      (format #t "money ~A was killed in pickup~%"))
+      (format #t "~A ~A was killed in pickup ~%    ~m, ~m, ~m ~%" (-> this type) (-> this name) (-> this base x) (-> this base y) (-> this base z)))
     (process-entity-status! this (entity-perm-status dead) #t))
   ((method-of-type eco-collectable deactivate) this)
   (none))
@@ -750,6 +750,7 @@
       (logclear! (-> self mask) (process-mask actor-pause))
       (clear-collide-with-as (-> self root))
       (process-entity-status! self (entity-perm-status dead) #t)
+      (format #t "~A ~A was pickup-ed ~%    ~m, ~m, ~m ~%" (-> self type) (-> self name) (-> self base x) (-> self base y) (-> self base z))
       (runs-on-orb-pickup (ppointer->process (-> self parent))) ;; trigger hook for mod base
       (convert-to-hud-object self (the-as hud (ppointer->process (-> *hud-parts* money)))))
   :exit

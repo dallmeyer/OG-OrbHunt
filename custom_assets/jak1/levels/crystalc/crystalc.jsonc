@@ -114,15 +114,15 @@
       }
     },
     {
-      "trans": [-248.57, 50.43, -161.32], // translation
+      "trans": [-49.09, 141.6,  11.55  ], // translation - up on wall in main cave above entrance (ride platforms)
       "etype": "fuel-cell",  // actor type
       "game_task": 135, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-248.57, 50.43, -161.32, 10], // bounding sphere
+      "bsphere": [-49.09, 141.6,  11.55  , 10], // bounding sphere
       "lump": {
-        "name":"crystalc-fuel-cell-05", // TODO BARG
+        "name":"crystalc-fuel-cell-05",
         "eco-info": ["int32", 6, 135],
-        "movie-pos":["vector4m", [-248.57, 48.43, -161.32, 0.0]]
+        "movie-pos":["vector4m", [-49.09, 141.6,  11.55  , 0.0]]
       }
     },
     // ###########################################################################
@@ -1619,44 +1619,44 @@
       }
     },
     {
-      "trans": [-265.99, 47.56, -154.66], // TODO BARG
+      "trans": [ -267.1608, 101.2113, -28.6278], // translation - hang off back of upper ledge towards gondola
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-265.99, 47.56, -154.66, 10], // bounding sphere
+      "bsphere": [ -267.1608, 101.2113, -28.6278, 10], // bounding sphere
       "lump": {
         "name":"crystalc-money-100",
         "light-index": ["int32", 2]
       }
     },
     {
-      "trans": [-234.56, 52.75, -141.64], // TODO BARG
+      "trans": [ -228.9898, 53.9712, -101.2761], // translation - under wooden platform entering purp mushroom area
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-234.56, 52.75, -141.64, 10], // bounding sphere
+      "bsphere": [ -228.9898, 53.9712, -101.2761, 10], // bounding sphere
       "lump": {
         "name":"crystalc-money-101",
         "light-index": ["int32", 2]
       }
     },
     {
-      "trans": [-235.37, 52.78, -136.26], // TODO BARG
+      "trans": [-306.92, 160.99, 202.25  ], // translation - gondola skip left
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-235.37, 52.78, -136.26, 10], // bounding sphere
+      "bsphere": [-306.92, 160.99, 202.25  , 10], // bounding sphere
       "lump": {
         "name":"crystalc-money-102",
         "light-index": ["int32", 2]
       }
     },
     {
-      "trans": [-236.95, 53.22, -130.44], // TODO BARG
+      "trans": [-324.08, 162.74, 203.16  ], // translation - gondola skip right
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-236.95, 53.22, -130.44, 10], // bounding sphere
+      "bsphere": [-324.08, 162.74, 203.16  , 10], // bounding sphere
       "lump": {
         "name":"crystalc-money-103",
         "light-index": ["int32", 2]
@@ -1782,19 +1782,21 @@
       }
     },
     {
-      "trans": [ -267.24, 93.24, -6.49], // translation
+      "trans": [ -252.25, 108.77, -21.47], // translation - moved to upper ledge towards gondola, goes back towards cell on wall up above entrace
       "etype": "plat",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "scale" : [3, 3, 3],
-      "bsphere": [-267.24, 93.24, -6.49, 10], // bounding sphere
+      "bsphere": [-252.25, 108.77, -21.47, 10], // bounding sphere
       "lump": {
         "name":"crystalc-plat-7",
         "path":["vector4m",
-          [-267.24, 93.24, -6.49, 1.0],
-          [-267.24, 91.07, -6.49, 1.0]
+          [-252.25, 108.77, -21.47, 1.0],
+          [-161.76, 108.77, -11.88, 1.0],
+          [-59.80, 118.71,  13.09, 1.0],
+          [-57.79, 141.21,  13.51, 1.0]
           ],
-        "sync": ["float", 4.0, 0.0]
+        "sync": ["float", 25.0, 0.0]
       }
     },
     {
@@ -3190,11 +3192,11 @@
       }
     },
     {
-      "trans": [-224.78, 67.51, -114.07], // translation
+      "trans": [-245.78,  49.50, -157.76], // translation
       "etype": "super-eco-crystal",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-224.78, 67.51, -114.07, 10], // bounding sphere
+      "bsphere": [-245.78,  49.50, -157.76, 10], // bounding sphere
       "lump": {
         "name": "crystalc-eco-crystal-01",
         "eco-type": "'green",
@@ -3334,11 +3336,11 @@
       }
     }
     ,{
-      "trans": [-224.6, 65.52, -113.9], // translation
+      "trans": [-245.78,  48.80, -157.76], // translation
       "etype": "tfl-hint",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion 
-      "bsphere": [-224.6, 65.52, -113.9, 10.0], // bounding sphere
+      "bsphere": [-245.78,  48.80, -157.76, 10.0], // bounding sphere
       "lump": {
         "name": "crystalc-tfl-hint-03-daxSeeGreen",
         "filename": "crystalc-tfl-hint-03-daxSeeGreen.wav",
@@ -3346,11 +3348,11 @@
       }
     }
     ,{
-      "trans": [-224.6, 65.52, -113.9], // translation
+      "trans": [-245.78,  48.80, -157.76], // translation
       "etype": "tfl-hint",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion 
-      "bsphere": [-224.6, 65.52, -113.9, 10.0], // bounding sphere
+      "bsphere": [-245.78,  48.80, -157.76, 10.0], // bounding sphere
       "lump": {
         "name": "crystalc-tfl-hint-04-daxUseGreen",
         "filename": "crystalc-tfl-hint-04-daxUseGreen.wav",

@@ -188,6 +188,14 @@
 
 (define-extern orb-hunt-update (function none))
 
+(defun vanilla-level? ((lvl-name symbol))
+  (case lvl-name  
+    (('test-zone)
+      ;; known custom level name(s)
+      (return #f)))
+  ;; otherwise default to assuming its vanilla (override this function per game)
+  #t)
+
 (defmethod update ((obj pc-settings))
   "Update settings to/from PC kernel. Call this at the start of every frame.
    This will update things like the aspect-ratio, which will be used for graphics code later."
@@ -202,6 +210,11 @@
   (cond
     ((not (-> obj ps2-actor-vis?))
      ;; kinda overkill.
+     (set! (-> *ACTOR-bank* birth-dist) (meters 10000))
+     (set! (-> *ACTOR-bank* pause-dist) (meters 10000))
+     (set! (-> *ACTOR-bank* birth-max) 1000))
+    ((not (vanilla-level? (-> (level-get-target-inside *level*) name)))
+     ;; modbase - not in a vanilla level, use big distances
      (set! (-> *ACTOR-bank* birth-dist) (meters 10000))
      (set! (-> *ACTOR-bank* pause-dist) (meters 10000))
      (set! (-> *ACTOR-bank* birth-max) 1000))
