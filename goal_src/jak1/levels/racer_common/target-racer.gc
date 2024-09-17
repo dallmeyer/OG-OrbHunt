@@ -385,7 +385,7 @@
                 :position
                 (the-as symbol (-> self control trans))))
   (cond
-    ((and (!= (-> self current-level name) 'ogre) (!= (-> self current-level name) 'lavatube)) #f)
+    ((and (vanilla-level? (-> self current-level name)) (!= (-> self current-level name) 'ogre) (!= (-> self current-level name) 'lavatube)) #f)
     ((or (logtest? (-> self control status) (cshape-moving-flags onground))
          (< 12288.0 (vector-length (-> self control transv))))
      (let ((v0-5 (the-as object (current-time)))) (set! (-> self racer unstuck-time) (the-as time-frame v0-5)) v0-5))

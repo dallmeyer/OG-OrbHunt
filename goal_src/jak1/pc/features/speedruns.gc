@@ -9,7 +9,7 @@
 (define-extern speedrun-practice-store-temp-checkpoint (function none)) ;; defined at end of this file
 
 (define *practice-spawn-post-init* (the-as (function none) #f))
-
+(define *last-checkpoint-load-time* (the time-frame #f))
 (define *last-real-continue-point* (the-as continue-point #f))
 
 (defun generic-post-init ()
@@ -520,7 +520,8 @@
                (>= (- (-> *display* base-frame-counter) (-> *game-info* blackout-time)) (seconds 0.1)))
       (*practice-spawn-post-init*)
       (set! *practice-spawn-post-init* #f))
-    (when (or (cpad-hold? 0 r3) (and *debug-segment* (cpad-hold? 0 l2)))
+    (when (or (and (not *debug-segment*) (cpad-hold? 0 r3))
+              (and *debug-segment* (cpad-hold? 0 l2)))
       ;; Check for fast reset combo
       (when (cpad-pressed? 0 up)
         (format #t "player triggered reset combo~%")
@@ -615,10 +616,10 @@
   (set! (-> dst vis-nick) (-> src vis-nick))
   (when (-> *level* level0)
     (set! (-> dst lev0) (-> *level* level0 name))
-    (set! (-> dst disp0) 'display))
+    (set! (-> dst disp0) (-> *level* level0 display?)))
   (when (-> *level* level1)
     (set! (-> dst lev1) (-> *level* level1 name))
-    (set! (-> dst disp1) 'display))
+    (set! (-> dst disp1) (-> *level* level1 display?)))
   (none))
 
 (defun camera-rot-copy! ((dst continue-point) (src matrix))
@@ -653,11 +654,36 @@
   (none))
 
 (defun speedrun-practice-spawn ()
-  (case (-> *target* state)
-    ;; only load temp checkpoint if in one of these states
-    ((target-stance target-look-around target-wade-stance target-flut-stance target-racing)
-     ;; reset any previous post-target-init callback
-     (set! *practice-spawn-post-init* #f)
-     (speedrun-practice-temp-checkpoint))
-    (else (sound-play "caught-eel")))
+
+  (cond
+    ((or (not (progress-allowed?))
+        ;;  *auto-saving?*
+        ;;  (and *last-auto-save-time* (not (time-elapsed? *last-auto-save-time* (seconds 3))))
+         (logtest? (->  *target* state-flags) (state-flags being-attacked grabbed))
+         )
+      (sound-play "smack-surface")  
+      )
+    ((not *target*)
+      ;; only respawn from no target when in debug
+      (when *debug-segment*
+        (set! *last-checkpoint-load-time* (get-current-time))
+        ;; reset any previous post-target-init callback
+        (set! *practice-spawn-post-init* #f)
+        (speedrun-practice-temp-checkpoint)
+        )
+      )
+    ((or (not *last-checkpoint-load-time*)
+         (time-elapsed? *last-checkpoint-load-time* (seconds 1))
+         )
+      ;; if we havent yet used checkpoint load, or its been more than 1s since last load, OK to load
+      
+      (set! *last-checkpoint-load-time* (get-current-time))
+      ;; reset any previous post-target-init callback
+      (set! *practice-spawn-post-init* #f)
+      (speedrun-practice-temp-checkpoint)
+      )
+    (else
+      (sound-play "smack-surface")
+      )
+    )
   (none))
