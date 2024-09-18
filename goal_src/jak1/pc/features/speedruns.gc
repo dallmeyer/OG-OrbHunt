@@ -637,7 +637,7 @@
 (defun speedrun-practice-store-temp-checkpoint ()
   (case (-> *target* state)
     ;; only store temp checkpoint if in one of these states
-    ((target-stance target-look-around target-wade-stance target-flut-stance target-racing)
+    ((target-stance target-duck-stance target-look-around target-wade-stance target-flut-stance target-racing)
      ;; assume current continue is good enough for the current location
      (continue-point-copy! *tmp-continue-point* (-> *game-info* current-continue))
      (vector-copy! (-> *tmp-continue-point* trans) (-> *target* root trans))
