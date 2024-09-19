@@ -120,7 +120,7 @@
         "name":"crescent-crate-buzzer-01",
         "crate-type":"'iron",
         "eco-info": ["int32", 8, 127], // to get SF task = game-task + (2^16 * buzzer-count)
-        "movie-pos": ["meters", -241.03, 222.48, 279.21  ]
+        "movie-pos": ["meters", -255.03, 232.13, 806.01    ] // 4th super high pillar at far end of crescent
       }
     },
     {
@@ -133,7 +133,7 @@
         "name":"crescent-crate-buzzer-02",
         "crate-type":"'iron",
         "eco-info": ["int32", 8, 65663], // to get SF task = game-task + (2^16 * buzzer-count)
-        "movie-pos": ["meters", -323.99, 234.01, 196.28  ]
+        "movie-pos": ["meters", -255.03, 232.13, 806.01   ] // 4th super high pillar at far end of crescent
       }
     },
     {
@@ -146,7 +146,7 @@
         "name":"crescent-crate-buzzer-03",
         "crate-type":"'iron",
         "eco-info": ["int32", 8, 131199], // to get SF task = game-task + (2^16 * buzzer-count)
-        "movie-pos": ["meters",  45.06, 269.76, 377.73  ]
+        "movie-pos": ["meters",  -255.03, 232.13, 806.01   ] // 4th super high pillar at far end of crescent
       }
     },
     {
@@ -159,7 +159,7 @@
         "name":"crescent-crate-buzzer-04",
         "crate-type":"'iron",
         "eco-info": ["int32", 8, 196735], // to get SF task = game-task + (2^16 * buzzer-count)
-        "movie-pos": ["meters", -37.42, 259.68, 448.01  ]//,
+        "movie-pos": ["meters", -255.03, 232.13, 806.01   ]//, // 4th super high pillar at far end of crescent
         // "light-index": ["int32", 1] // underground/rusty look?
       }
     },
@@ -173,7 +173,7 @@
         "name":"crescent-crate-buzzer-05",
         "crate-type":"'iron",
         "eco-info": ["int32", 8, 262271], // to get SF task = game-task + (2^16 * buzzer-count)
-        "movie-pos": ["meters", -241.16, 235.05, 747.62  ]
+        "movie-pos": ["meters", -255.03, 232.13, 806.01  ] // 4th super high pillar at far end of crescent
       }
     },
     {
@@ -186,7 +186,7 @@
         "name":"crescent-crate-buzzer-06",
         "crate-type":"'iron",
         "eco-info": ["int32", 8, 327807], // to get SF task = game-task + (2^16 * buzzer-count)
-        "movie-pos": ["meters", 370.27, 281.26, 477.69  ]
+        "movie-pos": ["meters", -255.03, 232.13, 806.01  ] // 4th super high pillar at far end of crescent
       }
     },
     {
@@ -199,7 +199,7 @@
         "name":"crescent-crate-buzzer-07",
         "crate-type":"'iron",
         "eco-info": ["int32", 8, 393343], // to get SF task = game-task + (2^16 * buzzer-count)
-        "movie-pos": ["meters", 334.04, 275.37, 381.50  ]//,
+        "movie-pos": ["meters", -255.03, 232.13, 806.01   ]//, // 4th super high pillar at far end of crescent
         // "light-index":["int32", 1]
       }
     },
@@ -1147,31 +1147,31 @@
       }
     },
     {
-      "trans": [-14.06, 235.41, 451.40], // translation
+      "trans": [-274.62, 221.87, 717.01  ], // translation - on first super high pillar leading to fly / cell for flies (zoom boosted from robot)
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-14.06, 235.41, 451.40, 10], // bounding sphere
+      "bsphere": [-274.62, 221.87, 717.01  , 10], // bounding sphere
       "lump": {
         "name":"crescent-money-094"
       }
     },
     {
-      "trans": [-16.61, 236.18, 457.86], // translation
+      "trans": [ -245.4574, 224.2132, 743.4142], // translation - boosted from ^, under fly on super high pillar
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-16.61, 236.18, 457.86, 10], // bounding sphere
+      "bsphere": [ -245.4574, 224.2132, 743.4142, 10], // bounding sphere
       "lump": {
         "name":"crescent-money-095"
       }
     },
     {
-      "trans": [-228.35, 246.14, 665.67], // translation
+      "trans": [-289.46, 231.43, 764.78  ], // translation - ride platform from 2nd rock super high pillar to 3rd
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-228.35, 246.14, 665.67, 10], // bounding sphere
+      "bsphere": [-289.46, 231.43, 764.78  , 10], // bounding sphere
       "lump": {
         "name":"crescent-money-096"
       }
@@ -2589,16 +2589,16 @@
       }
     },
     {
-      "trans": [-217.83, 231.88, 689.29], // translation
+      "trans": [-245.6039, 232.0, 760.0942], // translation - super high pillars, between 2nd one with scout fly and 3rd
       "etype": "plat",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-217.83, 231.88, 689.29, 10], // bounding sphere
+      "bsphere": [-245.6039, 232.0, 760.0942, 10], // bounding sphere
       "lump": {
         "name":"crescent-plat-11",
         "path":["vector4m",
-          [-217.83, 231.88, 689.29, 1.0],
-          [-234.07, 241.47, 670.68, 1.0]
+          [ -245.6039, 232.0, 760.0942, 1.0],
+          [ -277.5730, 232.0, 764.3720, 1.0]
           ],
         "sync": ["float", 6.0, 0.0]
         ,"scale":["float", 1.5]
@@ -2757,17 +2757,17 @@
       }
     },
     {
-      "trans": [-159.87, 272.54, 648.33], // translation
+      "trans": [-286.33, 216.08, 799.27  ], // translation - hidden in tree near super high pillars, boosted into eco on top of tree from 3rd pillar to get to 4th
       "etype": "plat-eco",  // actor type
       "game_task": 4, // stay activated if set to 4
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-159.87, 272.54, 648.33, 10], // bounding sphere
+      "bsphere": [-286.33, 216.08, 799.27  , 10], // bounding sphere
       "lump": {
         "name":"crescent-plat-eco-01",
         "path":["vector4m",
-          [-159.87, 272.54, 648.33, 1.0],
-          [-189.69, 236.08, 650.69, 1.0],
-          [-227.37, 212.76, 641.29, 1.0]
+          [-286.33, 216.08, 799.27  , 1.0],
+          [-286.33, 224.81, 799.27  , 1.0],
+          [-265.26, 230.0, 803.93  , 1.0]
           ],
         "sync": ["float", 10.0, 0.0],
         "notice-dist":["meters", 2.5]
@@ -5505,11 +5505,11 @@
       }
     },
     {
-      "trans": [-157.64, 273.14, 647.05], // translation
+      "trans": [-285.89, 225.28, 799.15], // translation - above tree near super high pillars, boosted from 3rd to land on plat and get to 4th
       "etype": "eco",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-157.64, 273.14, 647.05, 10], // bounding sphere
+      "bsphere": [-285.89, 225.28, 799.15, 10], // bounding sphere
       "lump": {
         "name":"crescent-eco-12",
         "eco-info": ["int32", 3, 1]
