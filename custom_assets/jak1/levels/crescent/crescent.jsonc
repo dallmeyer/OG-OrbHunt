@@ -190,11 +190,11 @@
       }
     },
     {
-      "trans": [334.04, 275.37, 381.50  ], // translation - slippery rock pillar climb closer to observatory
+      "trans": [334.14, 275.5, 380.66], // translation - slippery rock pillar climb closer to observatory
       "etype": "crate",  // actor type
       "game_task": 127, // associated game task (for powercells, etc)
       "quat" : [0.0, -0.3254, 0.0, -0.9455], // quaternion
-      "bsphere": [334.04, 275.37, 381.50  , 10], // bounding sphere
+      "bsphere": [334.14, 275.5, 380.66, 10], // bounding sphere
       "lump": {
         "name":"crescent-crate-buzzer-07",
         "crate-type":"'iron",
@@ -1177,152 +1177,152 @@
       }
     },
     {
-      "trans": [-225.51, 247.12, 663.62], // translation
+      "trans": [    -236.2185, 196.4531, 637.3176], // translation - ledge grab down near lava under main robot
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-225.51, 247.12, 663.62, 10], // bounding sphere
+      "bsphere": [    -236.2185, 196.4531, 637.3176, 10], // bounding sphere
       "lump": {
         "name":"crescent-money-097"
       }
     },
     {
-      "trans": [-208.58, 273.45, 632.69], // translation
+      "trans": [ -237.9441, 221.3754, 534.8595], // translation - atop rocks near solo coil near main robot
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-208.58, 273.45, 632.69, 10], // bounding sphere
+      "bsphere": [ -237.9441, 221.3754, 534.8595, 10], // bounding sphere
       "lump": {
         "name":"crescent-money-098"
       }
     },
     {
-      "trans": [-192.98, 269.75, 638.27], // translation
+      "trans": [ -219.1453, 214.8755, 372.8593], // translation - start of rock wall climb from gondola up into crescent top main area
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-192.98, 269.75, 638.27, 10], // bounding sphere
+      "bsphere": [ -219.1453, 214.8755, 372.8593, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-099",
-        "options":["int32", 1024] // big hitbox
+        "name":"crescent-money-099"//,
+        // "options":["int32", 1024] // big hitbox
       }
     },
     {
-      "trans": [-192.09, 266.16, 638.64], // translation
+      "trans": [ -224.0011, 219.3855, 378.2782], // translation - up from ^
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-192.09, 266.16, 638.64, 10], // bounding sphere
+      "bsphere": [ -224.0011, 219.3855, 378.2782, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-100",
-        "options":["int32", 1024] // big hitbox
+        "name":"crescent-money-100"//,
+        // "options":["int32", 1024] // big hitbox
       }
     },
     {
-      "trans": [61.27, 201.74, 377.92], // translation
+      "trans": [    -231.6994, 227.0245, 388.7140], // translation - up from ^
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [61.27, 201.74, 377.92, 10], // bounding sphere
+      "bsphere": [    -231.6994, 227.0245, 388.7140, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-101",
-        "options":["int32", 1024] // big hitbox
+        "name":"crescent-money-101"//,
+        // "options":["int32", 1024] // big hitbox
       }
     },
     {
-      "trans": [58.78, 201.56, 375.25], // translation
+      "trans": [ -212.2211, 240.7018, 369.8137], // translation - up on rock cliff after gondola, between passes
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [58.78, 201.56, 375.25, 10], // bounding sphere
+      "bsphere": [ -212.2211, 240.7018, 369.8137, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-102",
-        "options":["int32", 1024] // big hitbox
+        "name":"crescent-money-102"//,
+        // "options":["int32", 1024] // big hitbox
       }
     },
     {
-      "trans": [58.79, 201.56, 379.76], // translation
+      "trans": [ -203.7597, 249.1835, 372.3396], // translation - up from ^
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [58.79, 201.56, 379.76, 10], // bounding sphere
+      "bsphere": [ -203.7597, 249.1835, 372.3396, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-103",
-        "options":["int32", 1024] // big hitbox
+        "name":"crescent-money-103"//,
+        // "options":["int32", 1024] // big hitbox
       }
     },
     {
-      "trans": [56.91, 201.42, 377.33], // translation
+      "trans": [-68.82, 244.26, 310.80], // translation - in one of the bigger trees off to left near start of og orange rings
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [56.91, 201.42, 377.33, 10], // bounding sphere
+      "bsphere": [-68.82, 244.26, 310.80, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-104",
-        "options":["int32", 1024] // big hitbox
+        "name":"crescent-money-104"//,
+        // "options":["int32", 1024] // big hitbox
       }
     },
     {
-      "trans": [24.27, 181.39, 467.93], // translation
+      "trans": [-69.95, 251.45, 299.33  ], // translation - further up in tree from ^
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [24.27, 181.39, 467.93, 10], // bounding sphere
+      "bsphere": [-69.95, 251.45, 299.33, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-105",
-        "light-index":["int32", 2]
+        "name":"crescent-money-105"//,
+        // "light-index":["int32", 2]
       }
     },
     {
-      "trans": [24.76, 181.39, 465.61], // translation
+      "trans": [-60.38, 255.45, 297.94], // translation - furhter up in tree from ^
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [24.76, 181.39, 465.61, 10], // bounding sphere
+      "bsphere": [-60.38, 255.45, 297.94, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-106",
-        "light-index":["int32", 2]
+        "name":"crescent-money-106"//,
+        // "light-index":["int32", 2]
       }
     },
     {
-      "trans": [22.40, 181.39, 466.28], // translation
+      "trans": [ 42.77, 200.31, 243.09  ], // translation - behind one of the ramps opposite from cave back up from energy bay
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [22.40, 181.39, 466.28, 10], // bounding sphere
+      "bsphere": [ 42.77, 200.31, 243.09  , 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-107",
-        "light-index":["int32", 2]
+        "name":"crescent-money-107"//,
+        // "light-index":["int32", 2]
       }
     },
     {
-      "trans": [-2.35, 181.39, 423.64], // translation
+      "trans": [-49.11, 228.39, 263.41  ], // translation - up a bit from ^, just below ramp on edge of cliff
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-2.35, 181.39, 423.64, 10], // bounding sphere
+      "bsphere": [-49.11, 228.39, 263.41  , 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-108",
-        "light-index":["int32", 2]
+        "name":"crescent-money-108"//,
+        // "light-index":["int32", 2]
       }
     },
     {
-      "trans": [0.13, 181.39, 423.03], // translation
+      "trans": [ 48.7649, 240.7204, 390.4884], // translation - under observatory near raised pipes, around corner from unused platforms
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [0.13, 181.39, 423.03, 10], // bounding sphere
+      "bsphere": [ 48.7649, 240.7204, 390.4884, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-109",
-        "light-index":["int32", 2]
+        "name":"crescent-money-109"//,
+        // "light-index":["int32", 2]
       }
     },
     {
-      "trans": [-1.68, 181.39, 421.28], // translation
+      "trans": [ 469.2955, 264.9740, 676.4421], // translation - on rails for launcher down to energy bay (boosted and dodge death plane, launcher skip)
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-1.68, 181.39, 421.28, 10], // bounding sphere
+      "bsphere": [ 469.2955, 264.9740, 676.4421, 10], // bounding sphere
       "lump": {
         "name":"crescent-money-110",
         "light-index":["int32", 2]
@@ -3332,11 +3332,11 @@
     // RACERS
 
     {
-      "trans": [-191.63, 227.06, 402.98], // translation
+      "trans": [-66.28, 223.51, 464.06], // translation - on top of busted robot fallen leg
       "etype": "racer",  // actor type
       "game_task": 128, // associated game task TO SPAWN THE ZOOMER
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-191.63, 227.06, 402.98, 10], // bounding sphere
+      "bsphere": [-66.28, 223.51, 464.06, 10], // bounding sphere
       "lump": {
         "name":"crescent-racer-01",
         "index": ["int32", 2],
@@ -5695,11 +5695,11 @@
       }
     }
     ,{
-      "trans": [-191.05, 227.03, 403.06], // translation
+      "trans": [-66.28, 223.51, 464.06  ], // translation - on top of busted robot fallen leg
       "etype": "tfl-hint",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion 
-      "bsphere": [-191.05, 227.03, 403.06, 10.0], // bounding sphere
+      "bsphere": [-66.28, 223.51, 464.06  , 10.0], // bounding sphere
       "lump": {
         "name": "crescent-tfl-hint-09-KeiraZoomer",
         "filename": "crescent-tfl-hint-09-KeiraZoomer.wav",
