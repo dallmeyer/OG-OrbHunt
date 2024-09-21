@@ -366,6 +366,7 @@
   "ropebridge.o"
   "ticky.o"
   "mod-settings.o" ;; added mod-base-change
+  "orb-placer-h.o"  ;; added
   "mod-common-functions.o" ;; added
   "orb-placer.o" ;; added
   "mod-custom-code.o" ;; added

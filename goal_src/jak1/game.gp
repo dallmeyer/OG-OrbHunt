@@ -2155,7 +2155,8 @@
 (goal-src "pc/debug/pc-debug-methods.gc" "pc-debug-common")
 
 (goal-src "engine/mods/input-display.gc")
-(goal-src "engine/mods/orb-placer.gc")
+(goal-src "engine/mods/orb-placer-h.gc")
+(goal-src "engine/mods/orb-placer.gc" "orb-placer-h")
 
 
 (goal-src-sequence
