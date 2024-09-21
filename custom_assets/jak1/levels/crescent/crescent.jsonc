@@ -1324,52 +1324,52 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [ 469.2955, 264.9740, 676.4421, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-110",
-        "light-index":["int32", 2]
+        "name":"crescent-money-110"//,
+        // "light-index":["int32", 2]
       }
     },
     {
-      "trans": [95.37, 188.57, 422.71], // translation
+      "trans": [ 91.6871, 179.9991, 235.9261], // translation - between sections of zoomer ramps coming back from energy bay
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [95.37, 188.57, 422.71, 10], // bounding sphere
+      "bsphere": [ 91.6871, 179.9991, 235.9261, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-111",
-        "light-index":["int32", 1]
+        "name":"crescent-money-111"//,
+        // "light-index":["int32", 1]
       }
     },
     {
-      "trans": [99.59, 189.22, 422.24], // translation
+      "trans": [ 220.8339, 203.9903, 256.4776], // translation - between sections of zoomer ramps coming back from energy bay (zoomwalk under invis wall)
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [99.59, 189.22, 422.24, 10], // bounding sphere
+      "bsphere": [ 220.8339, 203.9903, 256.4776, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-112",
-        "light-index":["int32", 1]
+        "name":"crescent-money-112"//,
+        // "light-index":["int32", 1]
       }
     },
     {
-      "trans": [104.23, 190.05, 421.92], // translation
+      "trans": [ -1.8507, 235.9225, 433.7449], // translation - inside gap in arm of busted robot
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [104.23, 190.05, 421.92, 10], // bounding sphere
+      "bsphere": [ -1.8507, 235.9225, 433.7449, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-113",
-        "light-index":["int32", 1]
+        "name":"crescent-money-113"//,
+        // "light-index":["int32", 1]
       }
     },
     {
-      "trans": [108.45, 190.86, 421.95], // translation
+      "trans": [ -33.3733, 215.5143, 453.7185], // translation - between busted robot leg and rock wall
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [108.45, 190.86, 421.95, 10], // bounding sphere
+      "bsphere": [ -33.3733, 215.5143, 453.7185, 10], // bounding sphere
       "lump": {
-        "name":"crescent-money-114",
-        "light-index":["int32", 1]
+        "name":"crescent-money-114"//,
+        // "light-index":["int32", 1]
       }
     },
     {
