@@ -3382,11 +3382,11 @@
       }
     },
     {
-      "trans": [734.74, 1.99, 966.33], // translation
+      "trans": [698.96,  17.92, 1054.96  ], // translation - jump to pillar on water right side
       "etype": "racer",  // actor type
       "game_task": 128, // associated game task TO SPAWN THE ZOOMER
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [734.74, 1.99, 966.33, 10], // bounding sphere
+      "bsphere": [698.96,  17.92, 1054.96  , 10], // bounding sphere
       "lump": {
         "name":"energy-bay-racer-02",
         "index": ["int32", 2],
