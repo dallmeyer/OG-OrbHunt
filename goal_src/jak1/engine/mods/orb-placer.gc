@@ -143,6 +143,7 @@
         (when (nonzero? orb-handle)
           (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
           (set! *orb-placer-selected-idx* *orb-placer-count*)
+          (false! *orb-placer-disabled?*) ;; we probably want edit mode enabled again
           (orb-placer-highlight (the money (handle->process orb-handle)) #t)
           (+! *orb-placer-count* 1)
           (orb-placer-list-maintenace #t)

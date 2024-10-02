@@ -3394,11 +3394,11 @@
       }
     },
     {
-      "trans": [856.95, 74.58, 772.22], // translation
+      "trans": [793.30,  65.7, 891.12], // translation - where red crystal normally is near turbine3
       "etype": "racer",  // actor type
       "game_task": 128, // associated game task TO SPAWN THE ZOOMER
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [856.95, 74.58, 772.22, 10], // bounding sphere
+      "bsphere": [793.30,  65.7, 891.12, 10], // bounding sphere
       "lump": {
         "name":"energy-bay-racer-03",
         "index": ["int32", 2],
