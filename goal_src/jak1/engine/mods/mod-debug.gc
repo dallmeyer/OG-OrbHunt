@@ -13,7 +13,7 @@
 
     ;; orb-placer menu
     (let ((orb-placer-menu (new 'debug 'debug-menu ctx "Orb Placer")))
-      (debug-menu-append-item orb-placer-menu (new-dm-bool "Edit Mode?" *orb-placer-active?* dm-boolean-toggle-pick-func))
+      (debug-menu-append-item orb-placer-menu (new-dm-bool "Entity Placer Edit Mode?" *orb-placer-active?* dm-boolean-toggle-pick-func))
       (debug-menu-append-item orb-placer-menu (new-dm-func "Add Orb" #f orb-placer-add))
       (let ((select-orb-menu (new 'debug 'debug-menu ctx "Select Orb")))
         (set! *orb-placer-select-menu* select-orb-menu)
