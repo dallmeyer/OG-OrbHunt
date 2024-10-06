@@ -149,8 +149,8 @@
   (set! (-> obj memcard-volume-sfx) 50.0)
   (set! (-> obj memcard-volume-music) 40.0)
   (set! (-> obj memcard-volume-dialog) 75.0)
-  (set! (-> obj memcard-vibration?) #t)
-  (set! (-> obj memcard-play-hints?) #t)
+  (set! (-> obj memcard-vibration?) #f)
+  (set! (-> obj memcard-play-hints?) #f)
   0)
 
 (defmethod reset-extra ((obj pc-settings-jak1) (call-handlers symbol))
