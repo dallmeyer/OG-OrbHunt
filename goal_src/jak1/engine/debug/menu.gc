@@ -991,8 +991,8 @@
     ((cpad-pressed? 0 x) (debug-menu-context-activate-selection arg0))
     ((cpad-pressed? 0 up) (debug-menu-context-select-new-item arg0 -1))
     ((cpad-pressed? 0 down) (debug-menu-context-select-new-item arg0 1))
-    ((cpad-pressed? 0 left) (debug-menu-context-select-new-item arg0 -5))
-    ((cpad-pressed? 0 right) (debug-menu-context-select-new-item arg0 5)))
+    ((cpad-pressed? 0 left) (debug-menu-context-select-new-item arg0 (if (cpad-hold? 0 l2) -10 -5)))
+    ((cpad-pressed? 0 right) (debug-menu-context-select-new-item arg0 (if (cpad-hold? 0 l2) 10 5))))
   arg0)
 
 (defun debug-menus-active ((arg0 debug-menu-context))

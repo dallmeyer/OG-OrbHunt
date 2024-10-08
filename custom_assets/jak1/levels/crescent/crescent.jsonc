@@ -3370,11 +3370,11 @@
     },
     // energy-bay racers to avoid the crash
     {
-      "trans": [603.44, 3.02, 670.49], // translation
+      "trans": [646.55,  48.28, 557.69  ], // translation - where og orb cache is on platform left from start
       "etype": "racer",  // actor type
       "game_task": 128, // associated game task TO SPAWN THE ZOOMER
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [603.44, 3.02, 670.49, 10], // bounding sphere
+      "bsphere": [646.55,  48.28, 557.69  , 10], // bounding sphere
       "lump": {
         "name":"energy-bay-racer-01",
         "index": ["int32", 2],
