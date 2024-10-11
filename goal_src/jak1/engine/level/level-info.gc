@@ -2822,10 +2822,10 @@
                                             (new 'static 'continue-point
                                              :name "energy-bay-start"
                                              :level 'energbay
-                                             :trans (new 'static 'vector :x (meters 515.33) :y (meters 47.99) :z (meters 683.18) :w 1.0)
+                                             :trans (new 'static 'vector :x (meters 514.5076) :y (meters 47.99) :z (meters 682.4989) :w 1.0)
                                              :quat (new 'static 'quaternion  :x 0.0 :y 0.6390 :z 0.0 :w 0.7691)
-                                             :camera-trans (new 'static 'vector :x 0.0 :y 4096.0 :z 0.0 :w 1.0)
-                                             :camera-rot (new 'static 'array float 9 0.3927 0.0000 -0.9196 0.1617 0.9844 0.0691 0.9052 -0.1759 0.3866)
+                                             :camera-trans (new 'static 'vector :x (meters 506.0487) :y (meters 53.0512) :z (meters 691.2423) :w 1.0)
+                                             :camera-rot (new 'static 'array float 9 -0.6659 -0.0000 -0.7460 0.0851 0.9934 -0.0759 0.7411 -0.1140 -0.6615)
                                              :load-commands '()
                                              :vis-nick 'enb
                                              :lev0 'crescent
