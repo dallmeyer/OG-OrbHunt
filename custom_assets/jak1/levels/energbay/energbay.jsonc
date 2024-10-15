@@ -134,7 +134,7 @@
             "name":"energy-bay-buzzer-01",
             "crate-type":"'iron",
             "eco-info": ["int32", 8, 134], // to get SF task = game-task + (2^16 * buzzer-count)
-            "movie-pos": ["meters", 856.95, 74.58, 772.22  ] // up where zoomer normally spawns near turbine1
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ] // up where zoomer normally spawns near turbine1
           }
         },
         {
@@ -147,7 +147,7 @@
             "name":"energy-bay-buzzer-02",
             "crate-type":"'iron",
             "eco-info": ["int32", 8, 65670], // to get SF task = game-task + (2^16 * buzzer-count)
-            "movie-pos": ["meters", 856.95, 74.58, 772.22  ]
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ]
           }
         },
         {
@@ -160,7 +160,7 @@
             "name":"energy-bay-buzzer-03",
             "crate-type":"'iron",
             "eco-info": ["int32", 8, 131206], // to get SF task = game-task + (2^16 * buzzer-count)
-            "movie-pos": ["meters", 856.95, 74.58, 772.22  ]
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ]
           }
         },
         {
@@ -173,7 +173,7 @@
             "name":"energy-bay-buzzer-04",
             "crate-type":"'iron",
             "eco-info": ["int32", 8, 196742], // to get SF task = game-task + (2^16 * buzzer-count)
-            "movie-pos": ["meters", 856.95, 74.58, 772.22  ]
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ]
           }
         },
         {
@@ -186,7 +186,7 @@
             "name":"energy-bay-buzzer-05",
             "crate-type":"'iron",
             "eco-info": ["int32", 8, 262278], // to get SF task = game-task + (2^16 * buzzer-count)
-            "movie-pos": ["meters", 856.95, 74.58, 772.22  ]
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ]
           }
         },
         {
@@ -199,7 +199,7 @@
             "name":"energy-bay-buzzer-06",
             "crate-type":"'iron",
             "eco-info": ["int32", 8, 327814], // to get SF task = game-task + (2^16 * buzzer-count)
-            "movie-pos": ["meters", 856.95, 74.58, 772.22  ]
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ]
           }
         },
         {
@@ -212,7 +212,7 @@
             "name":"energy-bay-buzzer-07",
             "crate-type":"'iron",
             "eco-info": ["int32", 8, 393350], // to get SF task = game-task + (2^16 * buzzer-count)
-            "movie-pos": ["meters", 856.95, 74.58, 772.22  ]
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ]
           }
         },
         // ORBS
@@ -1253,11 +1253,11 @@
           }
         },
         {
-          "trans": [824.99, 70.64, 958.43], // translation - around corner near edge of middle plateaus up to turbine 3
+          "trans": [ 766.4078, 49.3022, 880.7505], // translation - around corner near edge of middle plateaus up to turbine 3
           "etype": "money",  // actor type
           "game_task": 0, // associated game task (for powercells, etc)
           "quat" : [0, 0, 0, 1], // quaternion
-          "bsphere": [824.99, 70.64, 958.43, 10], // bounding sphere
+          "bsphere": [ 766.4078, 49.3022, 880.7505, 10], // bounding sphere
           "lump": {
             "name":"energy-bay-money-104"
           }
@@ -2468,11 +2468,11 @@
         // RACE RINGS
 
         {
-          "trans": [591.65, 36.90, 611.79], // translation
+          "trans": [755.36,  67.41, 918.32  ], // translation - down towards right water from turbine 3
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [591.65, 36.90, 611.79, 10], // bounding sphere
+          "bsphere": [755.36,  67.41, 918.32   , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-01-start",
             "timeout":["float", 0.0],
@@ -2482,11 +2482,11 @@
           }
         },
         {
-          "trans": [625.12, 32.49, 593.08], // translation
+          "trans": [709.30,  32.57, 964.17   ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [625.12, 32.49, 593.08, 10], // bounding sphere
+          "bsphere": [709.30,  32.57, 964.17   , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-02",
             "timeout":["float", 8.0],
@@ -2497,11 +2497,11 @@
           }
         },
         {
-          "trans": [665.57, 42.16, 626.86], // translation
+          "trans": [653.61,  2.8, 1057.01   ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [665.57, 42.16, 626.86, 10], // bounding sphere
+          "bsphere": [653.61,  2.8, 1057.01   , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-03",
             "timeout":["float", 8.0],
@@ -2512,11 +2512,11 @@
           }
         },
         {
-          "trans": [649.71, 46.05, 652.47], // translation
+          "trans": [549.03,  32.98, 991.61  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [649.71, 46.05, 652.47, 10], // bounding sphere
+          "bsphere": [549.03,  32.98, 991.61  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-04",
             "timeout":["float", 8.0],
@@ -2527,11 +2527,11 @@
           }
         },
         {
-          "trans": [625.75, 26.39, 656.33], // translation
+          "trans": [569.13,   9.59, 881.44  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [625.75, 26.39, 656.33, 10], // bounding sphere
+          "bsphere": [569.13,   9.59, 881.44  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-05",
             "timeout":["float", 8.0],
@@ -2542,11 +2542,11 @@
           }
         },
         {
-          "trans": [595.07, 7.05, 681.7], // translation
+          "trans": [562.64,   8.5, 754.53  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [595.07, 7.05, 681.7, 10], // bounding sphere
+          "bsphere": [562.64,   8.5, 754.53  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-06",
             "timeout":["float", 8.0],
@@ -2557,11 +2557,11 @@
           }
         },
         {
-          "trans": [550.51, 10.10, 725.53], // translation
+          "trans": [567.27,  20.69, 643.31  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [550.51, 10.10, 725.53, 10], // bounding sphere
+          "bsphere": [567.27,  20.69, 643.31  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-07",
             "timeout":["float", 8.0],
@@ -2572,11 +2572,11 @@
           }
         },
         {
-          "trans": [571.62, 20.23, 846.4], // translation
+          "trans": [493.81,  59.22, 706.12  ], // translation - jump over bigger gap near/behind start
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [571.62, 20.23, 846.4, 10], // bounding sphere
+          "bsphere": [493.81,  59.22, 706.12  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-08",
             "timeout":["float", 8.0],
@@ -2587,11 +2587,11 @@
           }
         },
         {
-          "trans": [579.67, 27.40, 884.88], // translation
+          "trans": [497.25,  71.44, 776.50  ], // translation - loop around and do top jump
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [579.67, 27.40, 884.88, 10], // bounding sphere
+          "bsphere": [497.25,  71.44, 776.50  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-09",
             "timeout":["float", 8.0],
@@ -2602,11 +2602,11 @@
           }
         },
         {
-          "trans": [554.15, 44.48, 932.43], // translation
+          "trans": [532.46,  65.96, 833.05  ], // translation - shitty jump back down to beach
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [554.15, 44.48, 932.43, 10], // bounding sphere
+          "bsphere": [532.46,  65.96, 833.05  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-10",
             "timeout":["float", 8.0],
@@ -2617,11 +2617,11 @@
           }
         },
         {
-          "trans": [553.3, 34.12, 984.66], // translation
+          "trans": [759.00,  3.0, 864.87  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [553.3, 34.12, 984.66, 10], // bounding sphere
+          "bsphere": [759.00,  3.0, 864.87  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-11",
             "timeout":["float", 8.0],
@@ -2632,11 +2632,11 @@
           }
         },
         {
-          "trans": [626.32, 4.71, 1042.3], // translation
+          "trans": [817.48,  17.40, 733.79  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [626.32, 4.71, 1042.3, 10], // bounding sphere
+          "bsphere": [817.48,  17.40, 733.79  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-12",
             "timeout":["float", 8.0],
@@ -2647,11 +2647,11 @@
           }
         },
         {
-          "trans": [697.54, 4.71, 1084.8], // translation
+          "trans": [809.20,  2.8, 579.65  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [697.54, 4.71, 1084.8, 10], // bounding sphere
+          "bsphere": [809.20,  2.8, 579.65  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-13",
             "timeout":["float", 8.0],
@@ -2662,11 +2662,11 @@
           }
         },
         {
-          "trans": [676.91, 4.71, 1127.3], // translation
+          "trans": [927.63,  23.10, 538.09  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [676.91, 4.71, 1127.3, 10], // bounding sphere
+          "bsphere": [927.63,  23.10, 538.09  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-14",
             "timeout":["float", 8.0],
@@ -2677,11 +2677,11 @@
           }
         },
         {
-          "trans": [614.85, 4.71, 1100.6], // translation
+          "trans": [1003.49, 2.8, 655.49  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [614.85, 4.71, 1100.6, 10], // bounding sphere
+          "bsphere": [1003.49, 2.8, 655.49  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-15",
             "timeout":["float", 8.0],
@@ -2692,11 +2692,11 @@
           }
         },
         {
-          "trans": [564.04, 31.27, 955.17], // translation
+          "trans": [997.89,  2.8, 891.51  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [564.04, 31.27, 955.17, 10], // bounding sphere
+          "bsphere": [997.89,  2.8, 891.51  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-16",
             "timeout":["float", 8.0],
@@ -2707,11 +2707,11 @@
           }
         },
         {
-          "trans": [616.29, 32.18, 874.74], // translation
+          "trans": [757.43,   4.45, 823.30  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [616.29, 32.18, 874.74, 10], // bounding sphere
+          "bsphere": [757.43,   4.45, 823.30  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-17",
             "timeout":["float", 8.0],
@@ -2722,11 +2722,11 @@
           }
         },
         {
-          "trans": [682.1, 4.5, 871.25], // translation
+          "trans": [570.23,   1.13, 771.32  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [682.1, 4.5, 871.25, 10], // bounding sphere
+          "bsphere": [570.23,   1.13, 771.32  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-18",
             "timeout":["float", 8.0],
@@ -2737,11 +2737,11 @@
           }
         },
         {
-          "trans": [788.45, 18.36, 825.56], // translation
+          "trans": [580.00,  33.87, 606.40  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [788.45, 18.36, 825.56, 10], // bounding sphere
+          "bsphere": [580.00,  33.87, 606.40  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-19",
             "timeout":["float", 8.0],
@@ -2752,11 +2752,11 @@
           }
         },
         {
-          "trans": [825.86, 23.16, 684.63], // translation
+          "trans": [607.91,  27.65, 624.75  ], // translation - loop de loop troll
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [825.86, 23.16, 684.63, 10], // bounding sphere
+          "bsphere": [607.91,  27.65, 624.75  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-20",
             "timeout":["float", 8.0],
@@ -2767,11 +2767,11 @@
           }
         },
         {
-          "trans": [796.4, 34.01, 641.15], // translation
+          "trans": [650.72,  29.75, 574.89  ], // translation
           "etype": "tfl-race-ring",  // actor type
           "game_task": 133, // associated game task (for powercells, etc)
           "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
-          "bsphere": [796.4, 34.01, 641.15, 10], // bounding sphere
+          "bsphere": [650.72,  29.75, 574.89  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-race-ring-21",
             "timeout":["float", 8.0],
