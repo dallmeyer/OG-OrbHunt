@@ -248,19 +248,27 @@
         )
       )
 
+    ;; rotation, just around Y axis
+    (let ((d 0))
+      (cond
+        ((cpad-pressed? 0 circle) (set! d -1))
+        ((cpad-pressed? 0 square) (set! d 1)))
+      (quaternion-rotate-y! (-> proc root quat) (-> proc root quat) (degrees d)))
+
     ;; update entity too
     (when (-> proc entity)
       (if proc-extra-vec
         (vector-copy! (-> (the entity-actor (-> proc entity)) extra trans) proc-extra-vec)
-        (vector-copy! (-> (the entity-actor (-> proc entity)) extra trans) (-> proc root trans)))))
+        (vector-copy! (-> (the entity-actor (-> proc entity)) extra trans) (-> proc root trans)))
+      (quaternion-copy! (-> (the entity-actor (-> proc entity)) quat) (-> proc root quat))))
 
-    ;; un sleep 
-    (logclear! (-> proc mask) (process-mask sleep))
-    ;; force update transforms
-    (when (type-type? (-> proc root type) collide-shape)
-      (update-transforms! (the collide-shape (-> proc root))))
-      
-    (none))
+  ;; un sleep 
+  (logclear! (-> proc mask) (process-mask sleep))
+  ;; force update transforms
+  (when (type-type? (-> proc root type) collide-shape)
+    (update-transforms! (the collide-shape (-> proc root))))
+    
+  (none))
 
 ;; called from run-every-frame to ensure orb-placer is spawned/killed
 (defun orb-placer-maintenance ()

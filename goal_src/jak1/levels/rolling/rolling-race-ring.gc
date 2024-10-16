@@ -831,11 +831,12 @@
                                             (the-as art-joint-anim #f)
                                             (the-as art-joint-anim #f)
                                             (the-as (function process-drawable symbol) false-func)))
-                     ((= (-> self entity extra perm task) (game-task energy-bay-green-ring)) ;; TFL notes: probably the part that set where the cell end up
-                      (ja-play-spooled-anim (new 'static 'spool-anim :name "race-ring-second-anim" :index 4 :parts 2 :command-list '())
-                                            (the-as art-joint-anim #f)
-                                            (the-as art-joint-anim #f)
-                                            (the-as (function process-drawable symbol) false-func)))
+                    ;; orb hunt - use other anim
+                    ;;  ((= (-> self entity extra perm task) (game-task energy-bay-green-ring)) ;; TFL notes: probably the part that set where the cell end up
+                    ;;   (ja-play-spooled-anim (new 'static 'spool-anim :name "race-ring-second-anim" :index 4 :parts 2 :command-list '())
+                    ;;                         (the-as art-joint-anim #f)
+                    ;;                         (the-as art-joint-anim #f)
+                    ;;                         (the-as (function process-drawable symbol) false-func)))
                      (else
                       (ja-play-spooled-anim (new 'static 'spool-anim :name "race-ring-anim" :index 3 :parts 2 :command-list '())
                                             (the-as art-joint-anim #f)
@@ -974,6 +975,7 @@
   (let ((timeout (res-lump-float entity 'timeout)))
     (set! (-> this timeout) (the time-frame (the int (* (seconds 1) timeout)))))
   (set! (-> this rot-y) (res-lump-float entity 'rot-y :default (degrees 0)))
+  (mod-rotate-race-ring this)
   (set-vector! (-> this cyl axis) (cos (-> this rot-y)) 0.0 (- (sin (-> this rot-y))) 1.0)
   (vector+float*! (the vector (-> this cyl)) (-> this root trans) (-> this cyl axis) -2048.0)
   (set! (-> this cyl radius) 24576.0)
