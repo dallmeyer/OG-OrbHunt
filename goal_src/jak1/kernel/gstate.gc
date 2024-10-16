@@ -428,3 +428,6 @@ It type checks the arguments for the entry function.
 (defmacro time-passed? (time)
   "has it been 'time' since set-state-time?"
   `(>= (time-passed) ,time))
+
+(defmacro suspend-for (time &rest body)
+  `(let ((time (current-time))) (until (time-elapsed? time ,time) ,@body (suspend))))

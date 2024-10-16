@@ -55,10 +55,10 @@
 
 ;; All the particle launchers.
 ;; Particle effects will add themselves to this table when the code is loaded/linked
-(define *part-id-table* (new 'global 'boxed-array sparticle-launcher 3584))
+(define *part-id-table* (new 'global 'boxed-array sparticle-launcher 8192)) ;; TFL note: increased (default:3584)
 
 ;; All the particle groups.
-(define *part-group-id-table* (new 'global 'boxed-array sparticle-launch-group 1024))
+(define *part-group-id-table* (new 'global 'boxed-array sparticle-launch-group 2048)) ;; TFL note: increased (default:1024)
 
 (defun lookup-part-group-by-name ((arg0 string))
   "Find a particle group with the given name. Checks all of them, not very efficient."

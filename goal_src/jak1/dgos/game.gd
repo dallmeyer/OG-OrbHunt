@@ -247,6 +247,8 @@
   "target-util.o"
   "target-part.o"
   "collide-reaction-target.o"
+  ;; TFL note: added
+  "tfl-music-player.o"
   "logic-target.o"
   "sidekick.o"
   "voicebox.o"
@@ -363,8 +365,8 @@
   "plat-eco.o"
   "ropebridge.o"
   "ticky.o"
-  "hud-classes-pc.o" ;; added
   "mod-settings.o" ;; added mod-base-change
+  "orb-placer-h.o"  ;; added
   "mod-common-functions.o" ;; added
   "orb-placer.o" ;; added
   "mod-custom-code.o" ;; added
@@ -372,6 +374,8 @@
   ;; keep zoomer stuff loaded
   "target-racer-h.o"
   "racer-part.o"
+  ;; TFL note: moved
+  "hud-classes-pc.o" ;; added
   "racer.o"
   "target-racer.o"
   "racer-states.o"
@@ -388,4 +392,8 @@
   ;; keep blocking-plane stuff loaded
   "blocking-plane.o"
   "ef-plane-ag.go"
+  ;; TFL note: added
+  "super-eco-crystal.o"
+  "tfl-hint-data.o"
+  "tfl-hint.o"
  ))

@@ -1,0 +1,3801 @@
+{
+  // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
+  // the name of this file, and the folder this file is in must have the same name.
+  "long_name": "energbay",
+  // The file name, should be upper case and 8 characters or less.
+  "iso_name": "ENERGBAY",
+  // The nickname, should be exactly 3 characters
+  "nickname": "enb", // 3 char name same as in level-info.gc
+  // Background mesh file.
+  // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
+  // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
+  // only have 1.
+  "gltf_file": "custom_assets/jak1/levels/energbay/energbay.glb",
+
+  // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
+  "automatic_wall_detection": true,
+  "automatic_wall_angle": 45.0,
+
+  // if your mesh has triangles with incorrect orientation, set this to make all collision mesh triangles double sided
+  // this makes collision 2x slower and bigger, so only use if really needed
+  "double_sided_collide": false,
+
+  // available res-lump tag data types:
+  // int32, float, meters, vector, vector4m (meters)
+  //
+  // examples:
+  //
+  // adds a float tag 'spring-height' with value of 200 meters (1 meter = 4096.0 units):
+  // "spring-height": ["meters", 200.0]
+  //
+  // adds a vector tag 'movie-pos':
+  // "movie-pos": ["vector", [4096000.0, -176128.0, 1353973.76, 1.0]]
+
+   // The base actor id for your custom level. If you have multiple levels this should be unique!
+   "base_id": 30100,
+
+  // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
+  // Note: You will still have to add them to your level's .gd file.
+  "art_groups": [ 
+    "orb-cache-top-ag", 
+    "sun-iris-door-ag",
+    "shortcut-boulder-ag",
+    "dark-crystal-ag",
+    "balloonlurker-ag",
+    "lurkerworm-ag"
+    ],
+
+   // Any textures you want to include in your custom level. This is mainly useful for things such as the zoomer HUD,
+   // which is not in the common level files and has no art group associated with it.
+   // To get a list of all the textures, you can extract all of the game's textures
+   // by setting "save_texture_pngs" to true in the decompiler config.
+   "textures": [
+    // all textures required for the zoomer HUD
+    // "zoomerhud",
+    // "zoomerhud-dial",
+    // "zoomerhud-main-02",
+    // "zoomerhud-main-03",
+    // "zoomerhud-pieslice",
+    // "zoomerhud-heatbg-01",
+    // "zoomerhud-main-03arrow",
+    // "zoomerhud-main-03knob"
+  ],
+
+  "actors" : [
+        // CELLS
+        {
+          "trans": [890.09,  23.78, 1031.11], // translation - inside precursor arena, zoom walk from top rope
+          "etype": "fuel-cell",  // actor type
+          "game_task": 128, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [890.09,  23.78, 1031.11, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-fuel-cell-01", // energy-bay-turbine3 (originally turbine1)
+            "eco-info": ["int32", 6, 128],
+            "movie-pos":["vector4m", [890.09,  23.78, 1031.11 , 60.0]]
+          }
+        },
+        {
+          "trans": [531.72,  44.10, 866.82], // translation - up at top of 'cave' below turbine 2
+          "etype": "fuel-cell",  // actor type
+          "game_task": 129, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [531.72,  44.10, 866.82, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-fuel-cell-02", // energy-bay-turbine2
+            "eco-info": ["int32", 6, 129],
+            "movie-pos":["vector4m", [531.72,  44.10, 866.82, 60.0]]
+          }
+        },
+        {
+          "trans": [940.72,  2.5, 833.10  ], // translation - down slippery rock over wall towards oob from turbine3
+          "etype": "fuel-cell",  // actor type
+          "game_task": 130, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [940.72,  2.5, 833.10  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-fuel-cell-03", // energy-bay-turbine1 (originally turbine3)
+            "eco-info": ["int32", 6, 130],
+            "movie-pos":["vector4m", [940.72,  2.5, 833.10, 4.24]]
+          }
+        },
+        {
+          "trans": [738.29,   0.79, 713.74  ], // translation - in central spiral, past breakable boulder
+          "etype": "fuel-cell",  // actor type
+          "game_task": 131, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [738.29,   0.79, 713.74  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-fuel-cell-04", // energy-bay-turbine4
+            "eco-info": ["int32", 6, 131],
+            "movie-pos":["vector4m", [738.29,   0.79, 713.74  , 2.0]]
+          }
+        },
+        {
+          "trans": [751.02,   0.46, 1149.42], // translation - oob behind fence post
+          "etype": "balloon-fuelcell",  // actor type
+          "game_task": 132, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [751.02,   0.46, 1149.42, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-fuel-cell-05", // energy-bay-kill
+            "movie-pos":["vector4m", [751.02,   0.46, 1149.42, 0.0]]
+          }
+        },
+
+        // SCOUT FLIES
+        {
+          "trans": [602.78,  46.03, 770.08], // translation - on top of zoomer tunnel ramp that starts closed off
+          "etype": "crate",  // actor type
+          "game_task": 134, // associated game task (for powercells, etc)
+          "quat" : [ 0.2242, -0.9126, 0.0880, 0.3302], // quaternion
+          "bsphere": [602.78,  46.03, 770.08, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-buzzer-01",
+            "crate-type":"'iron",
+            "eco-info": ["int32", 8, 134], // to get SF task = game-task + (2^16 * buzzer-count)
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ] // up where zoomer normally spawns near turbine1
+          }
+        },
+        {
+          "trans": [490.44, 106.89, 862.89  ], // translation - on top of coil connecting to turbine 2 (follow orbs up cliff behind)
+          "etype": "crate",  // actor type
+          "game_task": 134, // associated game task (for powercells, etc)
+          "quat" : [0.000, -0.330, 0.000, 0.944], // quaternion
+          "bsphere": [490.44, 106.89, 862.89  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-buzzer-02",
+            "crate-type":"'iron",
+            "eco-info": ["int32", 8, 65670], // to get SF task = game-task + (2^16 * buzzer-count)
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ]
+          }
+        },
+        {
+          "trans": [568.25,  31.86, 1112.08], // translation - atop really high platform out in water to the right, need red eco crystal and good route
+          "etype": "crate",  // actor type
+          "game_task": 134, // associated game task (for powercells, etc)
+          "quat" : [0.000, -0.587, 0.000, 0.810], // quaternion
+          "bsphere": [568.25,  31.86, 1112.08, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-buzzer-03",
+            "crate-type":"'iron",
+            "eco-info": ["int32", 8, 131206], // to get SF task = game-task + (2^16 * buzzer-count)
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ]
+          }
+        },
+        {
+          "trans": [868.73, 103.33, 943.32  ], // translation - where coil connects to turbine3, red eco crystal from lower on coil
+          "etype": "crate",  // actor type
+          "game_task": 134, // associated game task (for powercells, etc)
+          "quat" : [0.1626, 0.2633, -0.0932, 0.9462], // quaternion
+          "bsphere": [868.73, 103.33, 943.32  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-buzzer-04",
+            "crate-type":"'iron",
+            "eco-info": ["int32", 8, 196742], // to get SF task = game-task + (2^16 * buzzer-count)
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ]
+          }
+        },
+        {
+          "trans": [825.49,  27.29, 858.17], // translation - on small cliffs with palm trees near precursor arena
+          "etype": "crate",  // actor type
+          "game_task": 134, // associated game task (for powercells, etc)
+          "quat" : [0.1275, 0.9329, -0.0854, 0.3257], // quaternion
+          "bsphere": [825.49,  27.29, 858.17, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-buzzer-05",
+            "crate-type":"'iron",
+            "eco-info": ["int32", 8, 262278], // to get SF task = game-task + (2^16 * buzzer-count)
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ]
+          }
+        },
+        {
+          "trans": [921.12,  24.15, 486.79  ], // translation - follow long orb trail along main rock wall towards far left water
+          "etype": "crate",  // actor type
+          "game_task": 134, // associated game task (for powercells, etc)
+          "quat" : [ 0.0000, 0.2297, 0.0000, -0.9732], // quaternion
+          "bsphere": [921.12,  24.15, 486.79  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-buzzer-06",
+            "crate-type":"'iron",
+            "eco-info": ["int32", 8, 327814], // to get SF task = game-task + (2^16 * buzzer-count)
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ]
+          }
+        },
+        {
+          "trans": [792.76,  36.84, 541.49], // translation - slippery rock pillar a left water from start, tricky zoom boosted to rock climb from grassy pillar
+          "etype": "crate",  // actor type
+          "game_task": 134, // associated game task (for powercells, etc)
+          "quat" : [ 0.0000, 0.2297, 0.0000, -0.9732], // quaternion
+          "bsphere": [792.76,  36.84, 541.49, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-buzzer-07",
+            "crate-type":"'iron",
+            "eco-info": ["int32", 8, 393350], // to get SF task = game-task + (2^16 * buzzer-count)
+            "movie-pos": ["meters", 435.76,  49.68, 648.06    ]
+          }
+        },
+        // ORBS
+        {
+          "trans": [500.72,  65.63, 663.19  ], // translation - slippery rock climb near start/exit
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [500.72,  65.63, 663.19  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-001"
+          }
+        },
+        {
+          "trans": [568.07,  15.57, 769.42  ], // translation - top of cables entering zoomer tunnel ramp right side
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [568.07,  15.57, 769.42  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-002"
+          }
+        },
+        {
+          "trans": [568.91,  25.87, 760.80  ], // translation - up from ^ climbing onto zoomer tunnel ramp
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [568.91,  25.87, 760.80  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-003"
+          }
+        },
+        {
+          "trans": [ 598.4064, -5.9482, 760.7140], // translation - underwater behind column on left side of zoomer tunnel ramp
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 598.4064, -5.9482, 760.7140, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-004"
+          }
+        },
+        {
+          "trans": [    487.9837, 78.2207, 872.5968], // translation - down in crevice near turbine2
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    487.9837, 78.2207, 872.5968, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-005"
+          }
+        },
+        {
+          "trans": [    521.5618, 38.3118, 762.4896], // translation - on couple lone ledges with palm trees off cliff near start
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    521.5618, 38.3118, 762.4896, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-006"
+          }
+        },
+        {
+          "trans": [ 543.3720, 41.8582, 763.9970], // translation - on top of palm tree near ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 543.3720, 41.8582, 763.9970, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-007"
+          }
+        },
+        {
+          "trans": [483.07,  94.0, 889.07], // translation - climb near turbine 2, crouch jump gp from crate into crack
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [483.07,  94.0, 889.07, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-008"
+          }
+        },
+        {
+          "trans": [478.19,  99.83, 877.72  ], // translation - up on rock cliff up from ^ near turbine 2
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [478.19,  99.83, 877.72  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-009"
+          }
+        },
+        {
+          "trans": [469.49, 111.47, 870.21  ], // translation - kinda shitty crouch jump gp up from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [469.49, 111.47, 870.21  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-010"
+          }
+        },
+        {
+          "trans": [570.41,  24.97, 1103.80], // translation - slippery rock just under scout fly on tall platform in right water
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [570.41,  24.97, 1103.80, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-011"
+          }
+        },
+        {
+          "trans": [ 597.0358, 38.4742, 952.7948], // translation - coconut in tree on pillar towards right water
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 597.0358, 38.4742, 952.7948, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-012"
+          }
+        },
+        {
+          "trans": [801.59,  80.84, 930.26  ], // translation - in crevice of small slippery rock climb near turbine3
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [801.59,  80.84, 930.26  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-013"
+          }
+        },
+        {
+          "trans": [ 865.3181, 85.9683, 947.8031], // translation - on coil leading into turbine3, just behind invis wall (land here and you can red eco crystal up to fly)
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 865.3181, 85.9683, 947.8031, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-014"
+          }
+        },
+        {
+          "trans": [    820.7030, 67.8924, 931.5011], // translation - in tiny 'cave' between rocks and steps by turbine3
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    820.7030, 67.8924, 931.5011, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-015"
+          }
+        },
+        {
+          "trans": [    724.1029, 28.8907, 902.4791], // translation - behind spikes on small bit of safe ground, near right water / central below turbine 3
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    724.1029, 28.8907, 902.4791, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-016"
+          }
+        },
+        {
+          "trans": [871.09,  61.04, 981.86  ], // translation - path down slippery rock from turbine3 to cell/oob
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [871.09,  61.04, 981.86  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-017"
+          }
+        },
+        {
+          "trans": [885.04,  48.99, 998.09  ], // translation - further down from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [885.04,  48.99, 998.09  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-018"
+          }
+        },
+        {
+          "trans": [900.49,  32.02, 1017.97  ], // translation - further down from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [900.49,  32.02, 1017.97  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-019"
+          }
+        },
+        {
+          "trans": [    1061.1505, 4.8334, 705.1181], // translation - along outer fance near rocks with waterfall, go all the way round from turbine3 oob
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    1061.1505, 4.8334, 705.1181, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-020"
+          }
+        },
+        {
+          "trans": [672.99,  33.67, 642.12  ], // translation - in small rock gap among small platforms where vanilla green rings starts, kinda start/mid
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [672.99,  33.67, 642.12  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-021"
+          }
+        },
+        {
+          "trans": [    786.0563, 13.4627, 948.1105], // translation - in crevice in rock wall near water by original hidden zoomer checkpoint
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    786.0563, 13.4627, 948.1105, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-022"
+          }
+        },
+        {
+          "trans": [773.84,  11.53, 1012.13  ], // translation - start of climb up rock wall near hidden original zoomer checkpt to scoutfly
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [773.84,  11.53, 1012.13  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-023"
+          }
+        },
+        {
+          "trans": [761.82,  23.68, 1014.54  ], // translation - up from ^ closer to scoutfly
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [761.82,  23.68, 1014.54  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-024"
+          }
+        },
+        {
+          "trans": [741.61,  11.64, 987.44  ], // translation - boosted from grass near checkpoint w orig hidden zoomer
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [741.61,  11.64, 987.44  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-025"
+          }
+        },
+        {
+          "trans": [726.77,  17.62, 976.33 ], // translation - further up slippery rock from ^ towards 
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [726.77,  17.62, 976.33 , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-026"
+          }
+        },
+        {
+          "trans": [714.53,  27.45, 964.73  ], // translation - further up from ^, just before big grassy section
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [714.53,  27.45, 964.73  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-027"
+          }
+        },
+        {
+          "trans": [687.91,  42.13, 904.43], // translation - top of palm tree halfway up to turbine 3
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [687.91,  42.13, 904.43, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-028"
+          }
+        },
+        {
+          "trans": [ 684.5310, 28.8399, 925.0079], // translation - small patch of grassy platform behind rock on edge of lower level up to turbine3
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 684.5310, 28.8399, 925.0079, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-029"
+          }
+        },
+        {
+          "trans": [ 693.9960, 28.8562, 958.2877], // translation - same as ^ but closer to right water
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 693.9960, 28.8562, 958.2877, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-030"
+          }
+        },
+        {
+          "trans": [ 746.1618, 54.0978, 882.9896], // translation - behind rock pillar on mid level up to turbine3
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 746.1618, 54.0978, 882.9896, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-031"
+          }
+        },
+        {
+          "trans": [835.60,  44.02, 870.22  ], // translation - in crevice drop down from platforms near turbine3 towards precursor arena
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [835.60,  44.02, 870.22  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-032"
+          }
+        },
+        {
+          "trans": [ 801.4253, 63.5940, 859.4520], // translation - small gap between platform and spikes on upper level towards turbine3
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 801.4253, 63.5940, 859.4520, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-033"
+          }
+        },
+        {
+          "trans": [661.30,  34.56, 793.01  ], // translation - inside breakable boulder on precursor platform, jump from closed tunnel/ramp
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [661.30,  34.56, 793.01  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-034"
+          }
+        },
+        {
+          "trans": [916.25,  31.29, 802.25 ], // translation - atop precursor arena, hint to zoomwalk from above or whatever
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [916.25,  31.29, 802.25 , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-035"
+          }
+        },
+        {
+          "trans": [ 986.8596, 26.0508, 811.2111], // translation - atop precursor arena, around back of red tower
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 986.8596, 26.0508, 811.2111, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-036"
+          }
+        },
+        {
+          "trans": [ 916.4075, 28.6411, 864.6561], // translation - atop precursor arena, just below invis floor near door
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 916.4075, 28.6411, 864.6561, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-037"
+          }
+        },
+        {
+          "trans": [ 796.7898, 28.0614, 548.1298], // translation - slippery pillar climb left water, zoom boosted from grassy plat
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 796.7898, 28.0614, 548.1298, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-038"
+          }
+        },
+        {
+          "trans": [786.57,  29.59, 543.13  ], // translation - up/around from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [786.57,  29.59, 543.13  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-039"
+          }
+        },
+        {
+          "trans": [771.60,  30.62, 1017.80], // translation - on highest part of slippery peninsula hiding original zoomer/checkpoint/crystal
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [771.60,  30.62, 1017.80, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-040"
+          }
+        },
+        {
+          "trans": [727.13,  42.95, 486.98  ], // translation - start of climb on rock wall to left of start, near hidden lowreskui kinda
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [727.13,  42.95, 486.98  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-041"
+          }
+        },
+        {
+          "trans": [750.01,  52.82, 482.82  ], // translation - extended up from ^, between pair of palm trees
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [750.01,  52.82, 482.82  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-042"
+          }
+        },
+        {
+          "trans": [770.12,  57.10, 481.06  ], // translation - extended up from ^, on rock that starts to extend out over lowreskui
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [770.12,  57.10, 481.06  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-043"
+          }
+        },
+        {
+          "trans": [782.67,  58.56, 488.93  ], // translation - jump up/over from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [782.67,  58.56, 488.93  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-044"
+          }
+        },
+        {
+          "trans": [809.12,  64.80, 493.72  ], // translation - further along from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [809.12,  64.80, 493.72  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-045"
+          }
+        },
+        {
+          "trans": [819.16,  55.79, 507.00  ], // translation - further along from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [819.16,  55.79, 507.00  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-046"
+          }
+        },
+        {
+          "trans": [837.80,  51.91, 515.31  ], // translation - atop palm tree, follow from ^ 
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [837.80,  51.91, 515.31  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-047"
+          }
+        },
+        {
+          "trans": [ 857.7007, 47.0953, 501.1752], // translation - follow from ^, lurking in crack behind triple palms
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 857.7007, 47.0953, 501.1752, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-048"
+          }
+        },
+        {
+          "trans": [878.56,  42.11, 503.11  ], // translation - follow from ^, on slippery rock left water
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [878.56,  42.11, 503.11  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-049"
+          }
+        },
+        {
+          "trans": [903.67,  41.49, 493.45  ], // translation - follow from ^, on slippery rock left water
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [903.67,  41.49, 493.45  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-050"
+          }
+        },
+        {
+          "trans": [    458.7300, 46.5765, 630.7692], // translation - behind coil next to door back up to crescent top
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    458.7300, 46.5765, 630.7692, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-051"
+          }
+        },
+        {
+          "trans": [459.83,  60.78, 668.77  ], // translation - sus ground collision on wall up/left of door back to c-top
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [459.83,  60.78, 668.77  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-052"
+          }
+        },
+        {
+          "trans": [457.51,  67.12, 652.43  ], // translation - top ring around door back up to c-top
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [457.51,  67.12, 652.43  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-053"
+          }
+        },
+        {
+          "trans": [458.00,  62.57, 629.53], // translation - from ^, boosted/extended over to right side of door back to c-top 
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [458.00,  62.57, 629.53, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-054"
+          }
+        },
+        {
+          "trans": [ 478.0552, 42.7614, 611.4299], // translation - nearby ^, in missing collision hole (smh kuitar)
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 478.0552, 42.7614, 611.4299, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-055"
+          }
+        },
+        {
+          "trans": [    628.9495, 57.1898, 544.7490], // translation - "in" spikes early on path to left water from start, ledge grab them first, up n over
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    628.9495, 57.1898, 544.7490, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-056"
+          }
+        },
+        {
+          "trans": [735.53,   9.59, 649.19], // translation - early left water, climb central rock to get onto separate lil pillar
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [735.53,   9.59, 649.19, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-057"
+          }
+        },
+        {
+          "trans": [734.30,   10.16, 633.85  ], // translation - on lil rock pillar in early left water, follow from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [734.30,   10.16, 633.85   , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-058"
+          }
+        },
+        {
+          "trans": [743.67,  18.79, 626.33  ], // translation - follow from ^, top (ish) of lil rock pillar in early left water
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [743.67,  18.79, 626.33  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-059"
+          }
+        },
+        {
+          "trans": [ 651.0461, 36.2202, 627.2959], // translation - between base of 3 palms left path near start
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 651.0461, 36.2202, 627.2959, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-060"
+          }
+        },
+        {
+          "trans": [970.58,  10.07, 587.83], // translation - inside breakable boulder on 2nd of 3 raised precursor plats left water
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [970.58,  10.07, 587.83, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-061"
+          }
+        },
+        {
+          "trans": [889.08,  97.65, 689.99  ], // translation - turbine1 orb, red eco crystal jump from 5 stack of boxes
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [889.08,  97.65, 689.99  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-062"
+          }
+        },
+        {
+          "trans": [894.15,  62.0, 724.87 ], // translation - smol standpoint next to spikes by turbine1
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [894.15,  62.0, 724.87 , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-063"
+          }
+        },
+        {
+          "trans": [ 902.9362, 59.6265, 690.2958], // translation - crevice in rocks just below turbine1
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 902.9362, 59.6265, 690.2958, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-064"
+          }
+        },
+        {
+          "trans": [862.90,  57.06, 765.56  ], // translation - under zoomer pad by turbine1
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [862.90,  57.06, 765.56  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-065"
+          }
+        },
+        {
+          "trans": [858.61,  -0.73, 734.83  ], // translation - bit of water way under turbine 1 near inner zoomer ramps where no deathplane
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [858.61,  -0.73, 734.83  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-066"
+          }
+        },
+        {
+          "trans": [ 804.3103, 33.4312, 751.2287], // translation - on rock on center spiral, hint where to land boosted/red eco crystal from top turbine1
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 804.3103, 33.4312, 751.2287, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-067"
+          }
+        },
+        {
+          "trans": [ 739.5994, 55.0313, 756.1607], // translation - top of cable going into turbine4, red eco crystal from turbine1 zoomer pad
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 739.5994, 55.0313, 756.1607, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-068"
+          }
+        },
+        {
+          "trans": [  863.7125, 22.1900, 606.9675], // translation - under dark eco bridge
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 863.7125, 22.1900, 606.9675, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-069"
+          }
+        },
+        {
+          "trans": [    807.8264, 16.6879, 674.8132], // translation - in crevice in rock wall on zoomer ramp around outside of central spiral
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    807.8264, 16.6879, 674.8132, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-070"
+          }
+        },
+        {
+          "trans": [    920.3839, 1.8725, 679.4320], // translation - in crevice sea level around back side of rock cliff below turbine1
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    920.3839, 1.8725, 679.4320, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-071"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [    960.2922, 30.4354, 554.8878], // translation - floating above 2nd of 3 precur raised platforms in left water. red eco crystal race
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    960.2922, 30.4354, 554.8878, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-072"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [ 779.1689, 28.5853, 511.0318], // translation - lowreskui
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 779.1689, 28.5853, 511.0318, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-073"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [    849.6840, -6.0470, 650.4000], // translation - crevice underwater but still "on" beach shore, inside of turbine1 rock wall (red eco + spin into water)
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    849.6840, -6.0470, 650.4000, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-074"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [ 907.5158, 16.0382, 620.0333], // translation - crevice on backside of area with og red eco and dark eco crates
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 907.5158, 16.0382, 620.0333, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-075"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [ 484.1334, 6.1410, 701.5708], // translation - just right of start in back corner of beach into rock wall
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 484.1334, 6.1410, 701.5708, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-076"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [ 468.7962, 20.6230, 934.6629], // translation - rock wall near end of fence / right water
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 468.7962, 20.6230, 934.6629, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-077"
+          }
+        },
+        {
+          "trans": [    656.4148, -5.4185, 1042.5238], // translation - under stone ramp in right water
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    656.4148, -5.4185, 1042.5238, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-078"
+          }
+        },
+        {
+          "trans": [ 741.6065, 30.6571, 798.8585], // translation - small gap in rock near central turbine (hehe kui)
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 741.6065, 30.6571, 798.8585, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-079"
+          }
+        },
+        {
+          "trans": [788.95,  37.27, 667.22  ], // translation - in crevice on top of central rock spiral
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [788.95,  37.27, 667.22  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-080"
+          }
+        },
+        {
+          "trans": [    690.8164, -7.2444, 709.5546], // translation - a bit underwater at start of central spiral
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    690.8164, -7.2444, 709.5546, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-081"
+          }
+        },
+        {
+          "trans": [ 550.7755, 42.4659, 648.0465], // translation - behind one of pair of palm trees near start
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 550.7755, 42.4659, 648.0465, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-082"
+          }
+        },
+        {
+          "trans": [    493.3751, 42.8766, 685.4916], // translation - behind grassy ramp just behind start
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    493.3751, 42.8766, 685.4916, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-083"
+          }
+        },
+        {
+          "trans": [ 646.4562, -4.3145, 839.9763], // translation - under ramp in central-ish water (a lil towards right water)
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 646.4562, -4.3145, 839.9763, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-084"
+          }
+        },
+        {
+          "trans": [ 471.4499, 74.0052, 770.1763], // translation - standpoint on rock wall up behind start
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 471.4499, 74.0052, 770.1763, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-085"
+          }
+        },
+        {
+          "trans": [ 464.1383, 82.0016, 767.8749], // translation - higher up rock wall from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 464.1383, 82.0016, 767.8749, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-086"
+          }
+        },
+        {
+          "trans": [ 458.7802, 85.8410, 746.6091], // translation - follow from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 458.7802, 85.8410, 746.6091, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-087"
+          }
+        },
+        {
+          "trans": [ 462.5690, 96.4592, 722.2685], // translation - follow from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 462.5690, 96.4592, 722.2685, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-088"
+          }
+        },
+        {
+          "trans": [ 459.9778, 85.5557, 691.7061], // translation - slide all the way over rocks onto lower one with this orb from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 459.9778, 85.5557, 691.7061, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-089"
+          }
+        },
+        {
+          "trans": [ 474.5956, 64.0724, 720.7771], // translation - backside of rock wall/zoomer path behind start
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 474.5956, 64.0724, 720.7771, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-090"
+          }
+        },
+        {
+          "trans": [    482.4868, 41.5871, 725.3134], // translation - in another crevice down below ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    482.4868, 41.5871, 725.3134, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-091"
+          }
+        },
+        {
+          "trans": [ 574.1193, 20.9157, 991.6158], // translation - at top / just behind second half of stone zoomer jumps in right water
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 574.1193, 20.9157, 991.6158, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-092"
+          }
+        },
+        {
+          "trans": [ 768.3373, -1.1241, 872.6972], // translation - in small water crevice on side of stone ramp in center
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 768.3373, -1.1241, 872.6972, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-093"
+          }
+        },
+        {
+          "trans": [    522.8425, 38.5274, 677.5051], // translation - small crevice under ledge just below start
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    522.8425, 38.5274, 677.5051, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-094"
+          }
+        },
+        {
+          "trans": [660.53,  58.98, 526.45  ], // translation - top of palm tree left from start, past spikes
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [660.53,  58.98, 526.45  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-095"
+          }
+        },
+        {
+          "trans": [ 804.0961, 9.9143, 502.0884], // translation - behind pair of trees leading to lowreskui
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 804.0961, 9.9143, 502.0884, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-096"
+          }
+        },
+        {
+          "trans": [ 837.0123, 22.2656, 583.0140], // translation - under dark eco bridge
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 837.0123, 22.2656, 583.0140, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-097"
+          }
+        },
+        {
+          "trans": [    853.7395, 15.7521, 701.9835], // translation - small gap on wall along grassy zoomer jump in center
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    853.7395, 15.7521, 701.9835, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-098"
+          }
+        },
+        {
+          "trans": [ 747.5467, 41.4177, 555.7556], // translation - up on tall rocky pillar left from start
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 747.5467, 41.4177, 555.7556, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-099"
+          }
+        },
+        {
+          "trans": [629.26,  61.93, 508.10  ], // translation - rock wall climb start over spikes left of start
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [629.26,  61.93, 508.10  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-100"
+          }
+        },
+        {
+          "trans": [625.41,  68.58, 501.32  ], // translation - up from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [625.41,  68.58, 501.32  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-101"
+          }
+        },
+        {
+          "trans": [ 914.2904, 46.3446, 678.9544], // translation - gap in steps leading up to turbine 1
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 914.2904, 46.3446, 678.9544, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-102"
+          }
+        },
+        {
+          "trans": [ 789.3284, 4.4891, 850.5487], // translation - behind/under stone zoomer ramp in center
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 789.3284, 4.4891, 850.5487, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-103"
+          }
+        },
+        {
+          "trans": [ 766.4078, 49.3022, 880.7505], // translation - around corner near edge of middle plateaus up to turbine 3
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 766.4078, 49.3022, 880.7505, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-104"
+          }
+        },
+        {
+          "trans": [703.35,  23.1, 996.86  ], // translation - rock pillar in right water/beach
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [703.35,  23.1, 996.86  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-105"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [562.58,  56.08, 667.08  ], // translation - top of tree right at start
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [562.58,  56.08, 667.08  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-106"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [551.93,  31.08, 885.48  ], // translation - smol standpoint on rock wall on right beach, below turbine
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [551.93,  31.08, 885.48  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-107"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [544.62,  32.35, 876.14  ], // translation - another standpoint on rock wall follow from ^, kinda inside cavern bit
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [544.62,  32.35, 876.14  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-108"
+          }
+        },
+        {
+          "trans": [546.94,  34.58, 868.07  ], // translation - further around rock wall from ^ (can extended from here to cell, neat - no zoomwalk needed)
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [546.94,  34.58, 868.07  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-109"
+          }
+        },
+        {
+          "trans": [557.10,  39.23, 866.53  ], // translation - further around rock wall from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [557.10,  39.23, 866.53  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-110"
+          }
+        },
+        {
+          "trans": [ 565.2376, 38.9757, 872.2958], // translation - further around from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 565.2376, 38.9757, 872.2958, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-111"
+          }
+        },
+        {
+          "trans": [ 563.2183, 55.2721, 883.4068], // translation - up pretty high on rock wall below turbine2
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 563.2183, 55.2721, 883.4068, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-112"
+          }
+        },
+        {
+          "trans": [513.94,  52.53, 901.42  ], // translation - on rock wall below turbine 2
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [513.94,  52.53, 901.42  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-113"
+          }
+        },
+        {
+          "trans": [499.04,  43.19, 901.57  ], // translation - further along rock wall from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [499.04,  43.19, 901.57  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-114"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [483.66,  61.57, 900.50  ], // translation - corner of rock wall just below turbine 2
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [483.66,  61.57, 900.50  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-115"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [464.73,  80.17, 908.09  ], // translation - on outer edge of rock wall just past turbine 2
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [464.73,  80.17, 908.09  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-116"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [ 864.7666, 49.6758, 668.1594], // translation - on rock wall below turbine1
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 864.7666, 49.6758, 668.1594, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-117"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [ 792.4528, 21.7823, 693.0363], // translation - along inner rock wall of central spiral
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 792.4528, 21.7823, 693.0363, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-118"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [719.96,  29.96, 801.85  ], // translation - climbing rock wall of central spiral, from end area
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [719.96,  29.96, 801.85  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-119"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [714.66,  31.60, 781.16  ], // translation - climb around from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [714.66,  31.60, 781.16  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-120"
+          }
+        },
+        {
+          "trans": [ 713.6256, 32.1672, 766.2216], // translation - climb around from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 713.6256, 32.1672, 766.2216, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-121"
+          }
+        },
+        {
+          "trans": [719.38,  35.90, 748.38  ], // translation - climb around from ^
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [719.38,  35.90, 748.38  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-122"
+          }
+        },
+        {
+          "trans": [729.00,  41.20, 759.25  ], // translation - up and over from ^ or from inside
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [729.00,  41.20, 759.25  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-123"
+          }
+        },
+        {
+          "trans": [    749.8545, 8.1415, 801.3237], // translation - small crevice in outside of central rock spiral, sorta near end of path
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    749.8545, 8.1415, 801.3237, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-124"
+          }
+        },
+        {
+          "trans": [ 838.6113, 9.0273, 706.6629], // translation - ledge/crevice just below grassy zoomer ramp in center area
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 838.6113, 9.0273, 706.6629, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-125"
+          }
+        },
+        {
+          "trans": [779.20,  43.07, 509.02  ], // translation - top of stone arch on left beach from start
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [779.20,  43.07, 509.02  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-126"
+          }
+        },
+        {
+          "trans": [891.09,  41.26, 736.78  ], // translation - rock wall over back water under turbine 1
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [891.09,  41.26, 736.78  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-127"
+          }
+        },
+        {
+          "trans": [795.66,  29.25, 855.14  ], // translation - gap in rock wall below turbine 3 towards center
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [795.66,  29.25, 855.14  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-128"
+          }
+        },
+        {
+          "trans": [854.97,   6.72, 1017.29  ], // translation - down side of rock wall just before fence, below turbine 3
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [854.97,   6.72, 1017.29  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-129"
+          }
+        },
+        {
+          "trans": [865.72,  16.27, 1023.74  ], // translation - down back/side of rock wall just past fence, below turbine 3
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [865.72,  16.27, 1023.74  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-130"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [ 913.2780, 11.7716, 861.6835], // translation - between cable and wall near precursor arena door
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 913.2780, 11.7716, 861.6835, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-131"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [ 753.4819, 18.5647, 789.6213], // translation - duh grassy crevice near turbine 4
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [ 753.4819, 18.5647, 789.6213, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-132"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [    744.8294, 0.9007, 657.2731], // translation - small crevice right where water ends on stone ramp within central spiral
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    744.8294, 0.9007, 657.2731, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-133"//,
+            // "options":["int32", 1024] // big hitbox
+          }
+        },
+        {
+          "trans": [761.29,  28.35, 659.96  ], // translation - on rock wall central spiral, silly oob
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [761.29,  28.35, 659.96  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-134"
+          }
+        },
+        {
+          "trans": [707.85,  -0.50, 732.9], // translation - inside breakable boulder in central spiral
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [707.85,  -0.50, 732.9, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-135"
+          }
+        },
+        {
+          "trans": [496.37,  57.61, 798.16  ], // translation - small standpoint over lil lava jump
+          "etype": "money",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [496.37,  57.61, 798.16  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-money-136"
+          }
+        },
+        // CRATES
+        {
+          "trans": [511.72,  26.60, 984.16  ], // translation - on tall pillar right side of water, zoomer jump
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.064, 0.037, 0.010, 0.997], // quaternion
+          "bsphere": [511.72,  26.60, 984.16  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-01",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 3],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [639.88,  34.24, 946.23], // translation - on really tall pillar on beach on right side, use super red eco
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.0515, 0.0, 0.9986], // quaternion
+          "bsphere": [639.88,  34.24, 946.23, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-02",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 3],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [550.28,  22.43, 1062.61], // translation - on high platform in right water, red eco  crystal
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0.323, 0, 0.947], // quaternion
+          "bsphere": [550.28,  22.43, 1062.61, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-03",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 1]
+          }
+        },
+        {
+          "trans": [702.85,  26.64, 1047.72  ], // translation - on pillar in right water next to zoomer
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0384, -0.3323, 0.0135, 0.9422], // quaternion
+          "bsphere": [702.85,  26.64, 1047.72  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-04",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 1]
+          }
+        },
+        {
+          "trans": [637.92,  24.13, 1079.69  ], // translation - slippery rock pillar in right water
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.9807, 0, 0.1953], // quaternion
+          "bsphere": [637.92,  24.13, 1079.69  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-05",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 1]
+          }
+        },
+        {
+          "trans": [732.13,  24.33, 769.43      ], // translation - behind coil of turbine4
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.014, 0, 1.0], // quaternion
+          "bsphere": [732.13,  24.33, 769.43      , 10], // bounding sphere 
+          "lump": {
+            "name":"energy-bay-crate-steel-06",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 1]
+          }
+        },
+        {
+          "trans": [ 789.2297, 33.79, 590.5372], // translation - on raised platform towards left water (red eco crystal from turbine1)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.329, 0, 0.944], // quaternion
+          "bsphere": [ 789.2297, 33.79, 590.5372, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-07",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 1]
+          }
+        },
+        {
+          "trans": [743.27,  27.48, 815.57  ], // translation - top of palm tree in center island towards back
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.329, 0, 0.944], // quaternion
+          "bsphere": [743.27,  27.48, 815.57  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-08",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 1],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [876.67,  61.20, 744.12  ], // translation - in small no-spike area under stairs from turbine1 to old zoomer pad
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.175, 0, 0.985], // quaternion
+          "bsphere": [876.67,  61.20, 744.12  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-09",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 3],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [771.58,  22.89, 525.59  ], // translation - on small grassy ledge near lowreskui (red eco crystal)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0145, -0.0460, -0.0113, -0.9987], // quaternion
+          "bsphere": [771.58,  22.89, 525.59  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-10",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 3],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [598.08,  30.34, 589.59  ], // translation - on ledge left from start next to palm tree (zoomer)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.818, 0, 0.575], // quaternion
+          "bsphere": [598.08,  30.34, 589.59  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-11",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 3],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [609.98,  35.76, 641.73  ], // translation - top of palm tree kinda above og zoomer pad at start (zoomer)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0166, 0.0328, 0.0509, 0.9980], // quaternion
+          "bsphere": [609.98,  35.76, 641.73  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-12",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 3],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [670.89,  39.32, 652.70], // translation - small grassy ledge on platforms left of start (zoomer)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [ -0.0063, -0.5657, -0.0135, -0.8244], // quaternion
+          "bsphere": [670.89,  39.32, 652.70, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-13",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 3],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [ 882.79,  12.52, 508.47 ], // translation - slightly raised graasy plat with palm trees near left water (red crystal)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [ 0, -0.7635, 0, 0.6457], // quaternion
+          "bsphere": [ 882.79,  12.52, 508.47 , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-14",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 3],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [674.58,  38.10, 583.38  ], // translation - grassy platform left from start (zoomer)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.7635, 0, 0.6457], // quaternion
+          "bsphere": [674.58,  38.10, 583.38  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-15",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 2]
+          }
+        },
+        {
+          "trans": [719.30,  20.83, 539.41  ], // translation - lower grassy platform on beach left from start (zoomer)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.420, 0, -0.908], // quaternion
+          "bsphere": [719.30,  20.83, 539.41, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-16",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 2]
+          }
+        },
+        {
+          "trans": [682.98,  33.73, 541.87  ], // translation - another grassy platform beach left from start (tough zoomer jump->jump)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.527, 0, -0.850], // quaternion
+          "bsphere": [682.98,  33.73, 541.87  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-17",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 2]
+          }
+        },
+        {
+          "trans": [719.27,  29.96, 495.42  ], // translation - small grassy ledge left from start against rock wall (zoomer, follow from ^)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.618, 0, -0.786], // quaternion
+          "bsphere": [719.27,  29.96, 495.42  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-18",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 2]
+          }
+        },
+        {
+          "trans": [743.2872, 5.1100, 954.4125], // translation - near hidden og zoomer pad, covered in red eco (so zoomer, not red crystal)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.618, 0, -0.786], // quaternion
+          "bsphere": [743.2872, 5.1100, 954.4125, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-19",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 2]
+          }
+        },
+        {
+          "trans": [516.68,  47.99, 682.79  ], // translation - start (launchpad fall damage)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.618, 0, -0.786], // quaternion
+          "bsphere": [516.68,  47.99, 682.79  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-20",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 3],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [638.20,  28.60, 652.58  ], // translation - another grassy pillar left of start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.1048, -0.7712, 0.0568, 0.6252], // quaternion
+          "bsphere": [638.20,  28.60, 652.58  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-21",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 3],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [587.52,  53.36, 877.04  ], // translation - on raised platform near turbine 3?
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, -0.383, 0.0, 0.924], // quaternion
+          "bsphere": [587.52,  53.36, 877.04  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-22",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 4],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [722.66,  10.84, 836.20  ], // translation - on precursor platform in center
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.044, 0.0, 0.999], // quaternion
+          "bsphere": [722.66,  10.84, 836.20  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-steel-23",
+            "crate-type":"'steel",
+            "eco-info": ["int32", 5, 4],
+            "options":["int32", 8192] // zoomer goes through
+          }
+        },
+        {
+          "trans": [928.58,  20.10, 538.17   ], // translation - on 1st of 3rd precursor platform zoomer jumps
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, -0.1638, 0.0, 0.9864], // quaternion
+          "bsphere": [928.58,  20.10, 538.17   , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-01",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [685.23,  47.6, 590.02  ], // translation - on palm tree on raised platform on left beach path
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, -0.1638, 0.0, 0.9864], // quaternion
+          "bsphere": [685.23,  47.6, 590.02  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-02-blue",
+            "crate-type":"'wood",
+            "eco-info": ["int32", 3, 1]
+          }
+        },
+        {
+          "trans": [898.61,  68.47, 698.76  ], // translation - near turbine 1, use with red eco crystal to get over invis wall to cable
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, -0.1638, 0.0, 0.9864], // quaternion
+          "bsphere": [898.61,  68.47, 698.76  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-03",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [901.29,  44.54, 652.11  ], // translation
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, -0.1638, 0.0, 0.9864], // quaternion
+          "bsphere": [901.29,  44.54, 652.11  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-04",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [898.61,  70.40, 698.76], // translation - on top of other crate ^^
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, -0.1638, 0.0, 0.9864], // quaternion
+          "bsphere": [898.61,  70.40, 698.76, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-05",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [898.61,  72.30, 698.76], // translation - on top of crate ^
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, -0.1638, 0.0, 0.9864], // quaternion
+          "bsphere": [898.61,  72.30, 698.76, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-06",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [ 892.91,  43.94, 653.71  ], // translation
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, -0.1638, 0.0, 0.9864], // quaternion
+          "bsphere": [ 892.91,  43.94, 653.71  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-07",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [743.2855, 6.9092, 954.5048], // translation - above orb crate (force zoomer instead of red eco crystal)
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [-0.061, 0.560, -0.047, 0.825], // quaternion
+          "bsphere": [743.2855, 6.9092, 954.5048, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-08-red",
+            "crate-type":"'wood",
+            "eco-info": ["int32", 2, 2] // red eco
+          }
+        },
+        {
+          "trans": [898.61,  74.20, 698.76], // translation - on top of crate ^^^
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, -0.1638, 0.0, 0.9864], // quaternion
+          "bsphere": [898.61,  74.20, 698.76, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-09",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [898.61,  76.10, 698.76], // translation - ^ uno mas
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, -0.1638, 0.0, 0.9864], // quaternion
+          "bsphere": [898.61,  76.10, 698.76, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-10",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [490.43,  78.86, 891.70  ], // translation - use to climb rock wall behind turbine 2
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [-0.0478, 0.5808, -0.0796, 0.8086], // quaternion
+          "bsphere": [490.43,  78.86, 891.70  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-11",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [602.19, 29.49, 944.86], // translation
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0008, 0.996, 0.002, 0.090], // quaternion
+          "bsphere": [602.19, 29.49, 944.86, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-12",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [537.85, 48.49, 910.88], // translation
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.029, 0.517, 0.057, 0.853], // quaternion
+          "bsphere": [537.85, 48.49, 910.88, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-13",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [687.13, 42.37, 950.31], // translation
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [-0.026, 0.868, -0.050, 0.494], // quaternion
+          "bsphere": [687.13, 42.37, 950.31, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-14",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [719.6, 45.14, 935.68], // translation
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [-0.063, 0.998, 0.010, 0.029], // quaternion
+          "bsphere": [719.6, 45.14, 935.68, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-15",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [774.29, 61.62, 928.88], // translation
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.973, 0.0, 0.229], // quaternion
+          "bsphere": [774.29, 61.62, 928.88, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-16",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [749.68, 64.33, 892.11], // translation
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.974, 0.0, 0.229], // quaternion
+          "bsphere": [749.68, 64.33, 892.11, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-17",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [775.36, 68.68, 866.76], // translation
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.033, 0.879, 0.060, 0.472], // quaternion
+          "bsphere": [775.36, 68.68, 866.76, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-18",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [779.22, 69.00, 864.12], // translation
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.038, 0.888, 0.059, 0.454], // quaternion
+          "bsphere": [779.22, 69.00, 864.12, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-19",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [827.44, 70.58, 926.92], // translation
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [-0.007, 0.963, 0.003, 0.270], // quaternion
+          "bsphere": [827.44, 70.58, 926.92, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-wood-20",
+            "crate-type":"'wood"
+          }
+        },
+        {
+          "trans": [ 516.0059, 47.9, 676.9073], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.161, 0.000, 0.986], // quaternion
+          "bsphere": [ 516.0059, 47.9, 676.9073, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-01",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 517.9700, 47.9, 677.1542], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.156, 0.000, 0.987], // quaternion
+          "bsphere": [ 517.9700, 47.9, 677.1542, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-02",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 519.7763, 47.9, 677.7239], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.000, -0.020, 0.000, 0.999], // quaternion
+          "bsphere": [ 519.7763, 47.9, 677.7239, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-03",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 521.3071, 47.9, 679.0108], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.000, -0.087, 0.000, 0.996], // quaternion
+          "bsphere": [ 521.3071, 47.9, 679.0108, 10], // bounding sphere 
+          "lump": {
+            "name":"energy-bay-crate-darkeco-04",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 522.2147, 47.9, 680.9702], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.000, -0.200, 0.000, 0.979], // quaternion
+          "bsphere": [ 522.2147, 47.9, 680.9702, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-05",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 522.8375, 47.9, 682.9971], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.000, -0.237, 0.000, 0.971], // quaternion
+          "bsphere": [ 522.8375, 47.9, 682.9971, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-06",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 522.4942, 47.9, 685.0780], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.000, -0.111, 0.000, 0.993], // quaternion
+          "bsphere": [ 522.4942, 47.9, 685.0780, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-07",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 521.8250, 47.9, 687.1372], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.000, -0.111, 0.000, 0.993], // quaternion
+          "bsphere": [ 521.8250, 47.9, 687.1372, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-08",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 520.1570, 47.9, 688.5387], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.8641, 0.0, -0.5031], // quaternion
+          "bsphere": [ 520.1570, 47.9, 688.5387, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-09",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 518.1129, 47.9, 689.1318], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.8641, 0.0, -0.5031], // quaternion
+          "bsphere": [ 518.1129, 47.9, 689.1318, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-10",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 516.0697, 47.9, 689.3062], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [-0.084, -0.210, -0.007, 0.974], // quaternion
+          "bsphere": [ 516.0697, 47.9, 689.3062, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-11",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 514.1005, 47.9, 688.8387], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [-0.084, -0.210, -0.007, 0.974], // quaternion
+          "bsphere": [ 514.1005, 47.9, 688.8387, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-12",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 512.2559, 47.9, 687.8906], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [-0.008, -0.211, 0.042, 0.976], // quaternion
+          "bsphere": [ 512.2559, 47.9, 687.8906, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-13",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 511.0770, 47.9, 686.2034], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.011, -0.541, 0.045, 0.839], // quaternion
+          "bsphere": [ 511.0770, 47.9, 686.2034, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-14",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [ 510.4538, 47.9, 684.1348], // translation - start
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.053, -0.316, 0.028, 0.946], // quaternion
+          "bsphere": [ 510.4538, 47.9, 684.1348, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-15",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [845.54,	29.4,	588.78], // translation - dark eco bridge
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.8641, 0.0, -0.5031], // quaternion
+          "bsphere": [845.54,	29.4,	588.78, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-16",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [848.0875,	29.367,	591.7175], // translation - dark eco bridge
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.8641, 0.0, -0.5031], // quaternion
+          "bsphere": [848.0875,	29.367,	591.7175, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-17",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [850.635,	29.51,	594.655], // translation - dark eco bridge
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.8641, 0.0, -0.5031], // quaternion
+          "bsphere": [850.635,	29.51,	594.655, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-18",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [853.1825,	29.8,	597.5925], // translation - dark eco bridge
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.8641, 0.0, -0.5031], // quaternion
+          "bsphere": [853.1825,	29.8,	597.5925, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-19",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [855.73,	30.24,	600.53], // translation - dark eco bridge
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.8641, 0.0, -0.5031], // quaternion
+          "bsphere": [855.73,	30.24,	600.53, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-20",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [843.65,	29.4,	590.6], // translation - dark eco bridge
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.8641, 0.0, -0.5031], // quaternion
+          "bsphere": [843.65,	29.4,	590.6, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-21",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [846.1975,	29.367,	593.5375], // translation - dark eco bridge
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.8641, 0.0, -0.5031], // quaternion
+          "bsphere": [846.1975,	29.367,	593.5375, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-22",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [848.745,	29.51,	596.475], // translation - dark eco bridge
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.8641, 0.0, -0.5031], // quaternion
+          "bsphere": [848.745,	29.51,	596.475, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-23",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [851.2925,	29.8,	599.4125], // translation - dark eco bridge
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.8641, 0.0, -0.5031], // quaternion
+          "bsphere": [851.2925,	29.8,	599.4125, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-24",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [853.78,	30.23,	602.21], // translation - dark eco bridge
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0, 0.8641, 0.0, -0.5031], // quaternion
+          "bsphere": [853.78,	30.23,	602.21, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-25",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [711.25,   5.42, 814.56  ], // translation - stone ramp in center
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0635, -0.8159, 0.2756, 0.5040], // quaternion
+          "bsphere": [711.25,   5.42, 814.56  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-26",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [708.27,   5.35, 816.15  ], // translation - same ^
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [-0.2529, 0.0771, 0.0487, 0.9631], // quaternion
+          "bsphere": [708.27,   5.35, 816.15  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-27",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [752.16,   5.17, 826.97  ], // translation - stone ramp in center ws
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [-0.1457, 0.0568, -0.2420, 0.9575], // quaternion
+          "bsphere": [752.16,   5.17, 826.97  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-28",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [750.89,   5.22, 823.33  ], // translation - same ^
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [-0.0491, -0.0968, -0.2529, 0.9613], // quaternion
+          "bsphere": [750.89,   5.22, 823.33  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-29",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [729.19,  17.75, 812.38  ], // translation - from grassy turbine area to center precursor platform
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0358, 0.1143, 0.0162, 0.9926], // quaternion
+          "bsphere": [729.19,  17.75, 812.38  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-30",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [726.30,  17.70, 812.15  ], // translation - same ^
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.0393, -0.2269, 0.0031, 0.9731], // quaternion
+          "bsphere": [726.30,  17.70, 812.15  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-31",
+            "crate-type":"'darkeco"
+          }
+        },
+        {
+          "trans": [525.45, 75.54, 891.9], // translation
+          "etype": "crate",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [-0.089, -0.962, 0.024, 0.255], // quaternion
+          "bsphere": [525.45, 75.54, 891.9, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-crate-darkeco-32",
+            "crate-type":"'darkeco"
+          }
+        },
+        // PLATFORMS AND MOVEMENT
+    
+        // RACERS
+    
+        // Racers moved to crescent-top.jsonc to avoid crashing without zoomers everywhere
+
+        // RACE RINGS
+
+        {
+          "trans": [755.36,  67.41, 918.32  ], // translation - down towards right water from turbine 3
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [755.36,  67.41, 918.32   , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-01-start",
+            "timeout":["float", 0.0],
+            "rot-y":["meters", 0.4444],
+            "next-actor":"energy-bay-race-ring-02",
+            "alt-task":["int32", 128] // Only appear when 1st turbine task is complete
+          }
+        },
+        {
+          "trans": [709.30,  32.57, 964.17   ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [709.30,  32.57, 964.17   , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-02",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 6.6666],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-03",
+            "prev-actor":"energy-bay-race-ring-01-start"
+          }
+        },
+        {
+          "trans": [643.2409, 2.7999, 1100.5599 ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [643.2409, 2.7999, 1100.5599, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-03",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 6.0],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-04",
+            "prev-actor":"energy-bay-race-ring-02"
+          }
+        },
+        {
+          "trans": [542.2656, 32.4199, 983.2341 ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [542.2656, 32.4199, 983.2341 , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-04",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 0.1777],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-05",
+            "prev-actor":"energy-bay-race-ring-03"
+          }
+        },
+        {
+          "trans": [565.4100, 11.0499, 886.8086 ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [565.4100, 11.0499, 886.8086 , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-05",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 1.3155],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-06",
+            "prev-actor":"energy-bay-race-ring-04"
+          }
+        },
+        {
+          "trans": [562.64,   9.2, 754.53  ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [562.64,   9.2, 754.53  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-06",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 2.2577],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-07",
+            "prev-actor":"energy-bay-race-ring-05"
+          }
+        },
+        {
+          "trans": [564.7418, 23.4099, 637.5911 ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [564.7418, 23.4099, 637.5911  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-07",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 3.2844],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-08",
+            "prev-actor":"energy-bay-race-ring-06"
+          }
+        },
+        {
+          "trans": [493.81,  59.22, 706.12  ], // translation - jump over bigger gap near/behind start
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [493.81,  59.22, 706.12  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-08",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 4.6666],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-09",
+            "prev-actor":"energy-bay-race-ring-07"
+          }
+        },
+        {
+          "trans": [497.25,  75.36, 776.50  ], // translation - loop around and do top jump
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [497.25,  75.36, 776.50  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-09",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 5.3333],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-10",
+            "prev-actor":"energy-bay-race-ring-08"
+          }
+        },
+        {
+          "trans": [528.9450, 65.9599, 819.1940], // translation - shitty jump back down to beach
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [528.9450, 65.9599, 819.1940 , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-10",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 3.9377],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-11",
+            "prev-actor":"energy-bay-race-ring-09"
+          }
+        },
+        {
+          "trans": [   731.9660, 3.3699, 869.0590   ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [   731.9660, 3.3699, 869.0590   , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-11",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 4.6666],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-12",
+            "prev-actor":"energy-bay-race-ring-10"
+          }
+        },
+        {
+          "trans": [818.9039, 19.3999, 741.021 ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [818.9039, 19.3999, 741.021 , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-12",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 7.1555],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-13",
+            "prev-actor":"energy-bay-race-ring-11"
+          }
+        },
+        {
+          "trans": [814.8752, 4.6399, 573.8336 ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [814.8752, 4.6399, 573.8336, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-13",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 6.0],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-14",
+            "prev-actor":"energy-bay-race-ring-12"
+          }
+        },
+        {
+          "trans": [ 1029.0364, 3.1598, 520.9534], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [ 1029.0364, 3.1598, 520.9534, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-14",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 7.0666],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-15",
+            "prev-actor":"energy-bay-race-ring-13"
+          }
+        },
+        {
+          "trans": [ 951.2258, 3.1598, 559.5366 ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [ 951.2258, 3.1598, 559.5366  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-15",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 5.2],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-16",
+            "prev-actor":"energy-bay-race-ring-14"
+          }
+        },
+        {
+          "trans": [   917.8405, 6.0298, 782.9125 ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [   917.8405, 6.0298, 782.9125  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-16",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 2.9866],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-17",
+            "prev-actor":"energy-bay-race-ring-15"
+          }
+        },
+        {
+          "trans": [757.43,   4.45, 823.30  ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [757.43,   4.45, 823.30  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-17",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 1.1511],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-18",
+            "prev-actor":"energy-bay-race-ring-16"
+          }
+        },
+        {
+          "trans": [570.23,   4.9199, 771.32  ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [570.23,   4.9199, 771.32  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-18",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 0.0365],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-19",
+            "prev-actor":"energy-bay-race-ring-17"
+          }
+        },
+        {
+          "trans": [580.00,  33.87, 606.40  ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [580.00,  33.87, 606.40  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-19",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 3.4755],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-20",
+            "prev-actor":"energy-bay-race-ring-18"
+          }
+        },
+        {
+          "trans": [623.4345, 31.8599, 633.6224 ], // translation - loop de loop troll
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [623.4345, 31.8599, 633.6224  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-20",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 5.4222],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "next-actor":"energy-bay-race-ring-21",
+            "prev-actor":"energy-bay-race-ring-19"
+          }
+        },
+        {
+          "trans": [  635.3416, 21.7998, 687.6036 ], // translation
+          "etype": "tfl-race-ring",  // actor type
+          "game_task": 133, // associated game task (for powercells, etc)
+          "quat" : [0.000, 0.000, 0.000, 1.000], // quaternion
+          "bsphere": [  635.3416, 21.7998, 687.6036 , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-race-ring-21",
+            "timeout":["float", 8.0],
+            "rot-y":["meters", 4.0888],
+            "alt-actor":"energy-bay-race-ring-01-start",
+            "prev-actor":"energy-bay-race-ring-20"
+          }
+        },
+
+        // ECO
+        {
+          "trans": [    680.3991, 41.1233, 566.8345 ], // translation - boosted between raised platform on left beach path, kinda near start
+          "etype": "eco",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [    680.3991, 41.1233, 566.8345 , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-eco-01",
+            "eco-info": ["int32", 3, 1] //3 = blue eco
+          }
+        },
+        {
+          "trans": [744.2725, 5.6291, 956.2973], // translation - on steps just below turbine1
+          "etype": "eco",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [744.2725, 5.6291, 956.2973, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-eco-02",
+            "eco-info": ["int32", 2, 2] //2 = red eco
+          }
+        },
+        {
+          "trans": [741.8694, 5.9292, 956.3601], // translation - same as ^
+          "etype": "eco",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [741.8694, 5.9292, 956.3601, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-eco-03",
+            "eco-info": ["int32", 2, 2] //2 = red eco
+          }
+        },
+        {
+          "trans": [740.7704, 6.5891, 954.3784], // translation - same as ^
+          "etype": "eco",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [740.7704, 6.5891, 954.3784, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-eco-04",
+            "eco-info": ["int32", 2, 2] //2 = red eco
+          }
+        },
+        {
+          "trans": [609.2, 2.0, 1080.2], // translation
+          "etype": "eco",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [609.2, 2.0, 1080.2, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-eco-05",
+            "eco-info": ["int32", 3, 1] //1 = blue eco
+          }
+        },
+        {
+          "trans": [577.82, 16.00, 760.65], // translation
+          "etype": "eco",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [577.82, 16.00, 760.65, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-eco-06",
+            "eco-info": ["int32", 3, 1] //1 = blue eco
+          }
+        },
+        {
+          "trans": [605.22, 31.00, 771.1], // translation
+          "etype": "eco",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [605.22, 31.00, 771.1, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-eco-07",
+            "eco-info": ["int32", 3, 1] //1 = blue eco
+          }
+        },
+        {
+          "trans": [856.96,  76.30, 772.40   ], // translation - up near turbine1, on old zoomer pad
+          "etype": "super-eco-crystal",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [856.96,  76.30, 772.40   , 10], // bounding sphere
+          "lump": {
+            "name": "energy-bay-eco-crystal-01",
+            "eco-type": "'red",
+            "respawn-timer": ["int32", 12]
+          }
+        },
+        {
+          "trans": [633.30,  21.9, 998.20  ], // translation - on top of pillar on beach on right side
+          "etype": "super-eco-crystal",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [633.30,  21.9, 998.20  , 10], // bounding sphere
+          "lump": {
+            "name": "energy-bay-eco-crystal-02",
+            "eco-type": "'red",
+            "respawn-timer": ["int32", 12]
+          }
+        },
+        {
+          "trans": [811.75,  84.37, 936.84  ], // translation - on top of slippery rock near turbine3
+          "etype": "super-eco-crystal",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [811.75,  84.37, 936.84  , 10], // bounding sphere
+          "lump": {
+            "name": "energy-bay-eco-crystal-03",
+            "eco-type": "'red",
+            "respawn-timer": ["int32", 12]
+          }
+        },
+        // ENEMIES
+
+        {
+          "trans": [614.63, 44.11, 826.26], // translation
+          "etype": "balloonlurker",  // actor type
+          "game_task": 132, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [614.63, 44.11, 826.26, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-balloonlurker-01",
+            "alt-actor":"energy-bay-fuel-cell-05",
+            "next-actor":"energy-bay-balloonlurker-02",
+            "path":["vector4m",
+              [599.03, -3.96, 728.12, 1.0], // 1
+              [638.61, 45.69, 739.2, 1.0], 
+              [626.62, 48.90, 782.73, 1.0], 
+              [614.63, 44.11, 826.26, 1.0],
+              [675.99, 8.62, 910.52, 1.0], // 5
+              [658.85, 0.60, 995.59, 1.0], 
+              [683.77, 0, 1038.1, 1.0],
+              [681.59, 0, 1092.8, 1.0],
+              [637.93, 0, 1115.8, 1.0],
+              [591.59, 0, 1113.3, 1.0], // 10
+              [585.58, 0, 1036.5, 1.0],  
+              [555.98, 48.30, 979.82, 1.0],
+              [546.84, 38.28, 938.47, 1.0],
+              [578.32, 43.41, 930.05, 1.0],
+              [618.54, 36.31, 938.98, 1.0], // 15
+              [646.96, -10, 882.96, 1.0], 
+              [677.45, 0, 842.16, 1.0],
+              [687.65, 0, 793.32, 1.0],
+              [632.49, 0, 740.63, 1.0],
+              [643.02, 20.87, 683.36, 1.0], // 20
+              [616.02, 36.99, 627.5, 1.0], 
+              [622.92, 36.22, 593.92, 1.0],
+              [574.24, 46.76, 613.17, 1.0],
+              [584.5, 12.85, 636.19, 1.0], 
+              [536.35, 9.24, 713.73, 1.0], // 25
+              [599.03, -3.96, 728.12, 1.0], // 26=1
+              [638.61, 45.69, 739.2, 1.0], // 27=2
+              [626.62, 48.90, 782.73, 1.0]  // 28=3
+              ],
+            "path-k":["float", 
+              0, -2, -1,
+              0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+              10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+              20, 21, 22, 23, 24, 25, 26, 27, 25
+              ]
+          }
+        },
+        {
+          "trans": [555.98, 58.30, 979.82], // translation
+          "etype": "balloonlurker",  // actor type
+          "game_task": 132, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [555.98, 58.30, 979.82, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-balloonlurker-02",
+            "alt-actor":"energy-bay-fuel-cell-05",
+            "prev-actor":"energy-bay-balloonlurker-01",  
+            "next-actor":"energy-bay-balloonlurker-03",      
+            "path-actor":"energy-bay-balloonlurker-01"
+          }
+        },
+        {
+          "trans": [632.54, 25.68, 697.32], // translation
+          "etype": "balloonlurker",  // actor type
+          "game_task": 132, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [632.54, 25.68, 697.32, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-balloonlurker-03",
+            "alt-actor":"energy-bay-fuel-cell-05",
+            "prev-actor":"energy-bay-balloonlurker-02",
+            "next-actor":"energy-bay-balloonlurker-04",        
+            "path-actor":"energy-bay-balloonlurker-01"
+          }
+        },
+        {
+          "trans": [850.43, 30.87, 595.65], // translation
+          "etype": "balloonlurker",  // actor type
+          "game_task": 132, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [850.43, 30.87, 595.65, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-balloonlurker-04",
+            "alt-actor":"energy-bay-fuel-cell-05",
+            "prev-actor":"energy-bay-balloonlurker-03",  
+            "next-actor":"energy-bay-balloonlurker-05",
+            "path":["vector4m",
+              [850.43, 34.87, 595.65, 1.0], // 1
+              [896.7, 35.77, 587.47, 1.0], 
+              [881.13, 1.84, 566.23, 1.0], 
+              [869.17, 10.45, 551.11, 1.0],
+              [840.11, 6.96, 537.28, 1.0], // 5
+              [804.3, 2.93, 522.01, 1.0], 
+              [776.75, 42.4, 534.79, 1.0],
+              [755.21, 34.17, 541.38, 1.0],
+              [758.47, 39.34, 498.96, 1.0],
+              [722.63, 38.20, 511.18, 1.0], // 10
+              [711, 32.35, 540.51, 1.0], 
+              [674.46, 32.95, 526.35, 1.0],
+              [664.97, 40.03, 553.81, 1.0],
+              [652.21, 37.62, 604.96, 1.0],
+              [640.95, 34.19, 621.89, 1.0], // 15
+              [609.43, 56.55, 658.85, 1.0], 
+              [577.87, 2.72, 703.64, 1.0],
+              [615.33, 0, 701.68, 1.0],
+              [662.9, 0, 664.67, 1.0],
+              [715.65, 0, 645.23, 1.0], // 20
+              [716.12, 0, 598.16, 1.0], 
+              [763.92, 0, 596.8, 1.0],
+              [772.42, 0, 627.15, 1.0],
+              [792.05, 0, 622.69, 1.0],
+              [817.51, 17.84, 616.46, 1.0], // 25
+              [827.66, 38.02, 612.52, 1.0], 
+              [850.43, 34.87, 595.65, 1.0], // 27=1
+              [896.7, 35.77, 587.47, 1.0], // 28=2
+              [881.13, 1.84, 566.23, 1.0]  // 29=3
+              ],
+            "path-k":["float", 
+              0, -2, -1,
+              0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+              10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+              20, 21, 22, 23, 24, 25, 26, 27, 28, 26
+              ]
+          }
+        },
+        {
+          "trans": [751.56, 39.34, 501.81], // translation
+          "etype": "balloonlurker",  // actor type
+          "game_task": 132, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [751.56, 39.34, 501.81, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-balloonlurker-05",
+            "alt-actor":"energy-bay-fuel-cell-05",
+            "prev-actor":"energy-bay-balloonlurker-04",
+            "next-actor":"energy-bay-balloonlurker-06",        
+            "path-actor":"energy-bay-balloonlurker-04"
+          }
+        },
+        {
+          "trans": [662.9, 0, 664.67], // translation
+          "etype": "balloonlurker",  // actor type
+          "game_task": 132, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [662.9, 0, 664.67, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-balloonlurker-06",
+            "alt-actor":"energy-bay-fuel-cell-05",
+            "prev-actor":"energy-bay-balloonlurker-05",        
+            "path-actor":"energy-bay-balloonlurker-04"
+          }
+        },
+        {
+          "trans": [561.08, 8.16, 892.56], // translation
+          "etype": "lurkerworm",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [561.08, 8.16, 892.56, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-lurkerworm-01"
+            ,"scale":["float", 1.5]
+          }
+        },
+        {
+          "trans": [617.72, 3.10, 966.53], // translation
+          "etype": "lurkerworm",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [617.72, 3.10, 966.53, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-lurkerworm-02"
+            ,"scale":["float", 1.5]
+          }
+        },
+        {
+          "trans": [528.75, 2.71, 965.31], // translation
+          "etype": "lurkerworm",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [528.75, 2.71, 965.31, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-lurkerworm-03"
+            ,"scale":["float", 1.5]
+          }
+        },
+        {
+          "trans": [725.08, 10.67, 518.45], // translation
+          "etype": "lurkerworm",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [725.08, 10.67, 518.45, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-lurkerworm-04"
+            ,"scale":["float", 1.5]
+          }
+        },
+        {
+          "trans": [856.24, 2.76, 594.71], // translation
+          "etype": "lurkerworm",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [856.24, 2.76, 594.71, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-lurkerworm-05"
+            ,"scale":["float", 1.5]
+          }
+        },
+        {
+          "trans": [783.81, 4.45, 529.64], // translation
+          "etype": "lurkerworm",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [783.81, 4.45, 529.64, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-lurkerworm-06"
+            ,"scale":["float", 1.5]
+          }
+        },
+        // OTHER
+        {
+          "trans": [584.32,   8.39, 602.73], // translation
+          "etype": "orb-cache-top",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [ -0.0812, 0.3557, -0.0222, -0.9307], // quaternion
+          "bsphere": [584.32,   8.39, 602.73, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-cache-top-01",
+            "orb-cache-count":["int32", 10],
+            "vis-dist":  ["meters", 200.0]
+          }
+        },
+        {
+          "trans": [455.97, 53.04, 652.48], // translation
+          "etype": "sun-iris-door",  // actor type
+          "game_task": 131, // associated game task (for powercells, etc)
+          "quat" : [0, -0.707, 0, 0.707], // quaternion
+          "bsphere": [455.97, 53.04, 652.48, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-iris-door-01",
+            "scale-factor":["float", 3.0],
+            "scale":["float", 3.0], // requires both scales to work
+            "proximity":["int32", 1],
+            "open-dist":["meters", 35.0],
+            "close-dist":["meters", 40.0],
+            "light-index":["int32", 1]
+          }
+        },
+        {
+          "trans": [570.96, 15.82, 757.9], // translation
+          "etype": "sun-iris-door",  // actor type
+          "game_task": 129, // associated game task (for powercells, etc)
+          "quat" : [0.129, -0.803, 0.188, 0.551], // quaternion
+          "bsphere": [570.96, 15.82, 757.9, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-iris-door-02",
+            "scale-factor":["float", 2.1],
+            "scale":["float", 2.1], // requires both scales to work
+            "proximity":["int32", 1],
+            "open-dist":["meters", 15.0],
+            "close-dist":["meters", 20.0]
+          }
+        },
+        {
+          "trans": [607.67, 35.67, 771.94], // translation
+          "etype": "sun-iris-door",  // actor type
+          "game_task": 129, // associated game task (for powercells, etc)
+          "quat" : [0.129, -0.803, 0.188, 0.551], // quaternion
+          "bsphere": [607.67, 35.67, 771.94, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-iris-door-03",
+            "scale-factor":["float", 2.1],
+            "scale":["float", 2.1], // requires both scales to work
+            "proximity":["int32", 1],
+            "open-dist":["meters", 22.0],
+            "close-dist":["meters", 25.0]
+          }
+        },
+        {
+          "trans": [911.63, 8.57, 846.34], // translation
+          "etype": "sun-iris-door",  // actor type
+          "game_task": 130, // associated game task (for powercells, etc)
+          "quat" : [0, 0.842, 0, 0.540], // quaternion
+          "bsphere": [911.63, 8.57, 846.34, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-iris-door-04",
+            "scale-factor":["float", 3.4],
+            "scale":["float", 3.4], // requires both scales to work
+            "proximity":["int32", 1],
+            "open-dist":["meters", 25.0],
+            "close-dist":["meters", 30.0]
+          }
+        },
+        {
+          "trans": [707.85,  -2.00, 732.9  ], // translation - blocking central cavity of rock swirl area
+          "etype": "breakable-boulder",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, -0.340, 0, 0.940], // quaternion
+          "bsphere": [707.85,  -2.00, 732.9  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-breakable-boulder-01",
+            "scale":["float", 1.6],
+            "vis-dist":  ["meters", 200.0],
+            "light-index": ["int32", 4]
+          }
+        },
+        // {
+        //   "trans": [733.32, -2.40, 672.11], // translation
+        //   "etype": "breakable-boulder",  // actor type
+        //   "game_task": 0, // associated game task (for powercells, etc)
+        //   "quat" : [0, -0.701, 0, 0.713], // quaternion
+        //   "bsphere": [733.32, -2.40, 672.11, 10], // bounding sphere
+        //   "lump": {
+        //     "name":"energy-bay-breakable-boulder-02",
+        //     "scale":["float", 1.6],
+        //     "vis-dist":  ["meters", 200.0],
+        //     "light-index": ["int32", 4]
+        //   }
+        // },
+        {
+          "trans": [970.5429, 9.0200, 588.2492], // translation - on last of 3 raised precursor plats in left water
+          "etype": "breakable-boulder",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion
+          "bsphere": [970.5429, 9.0200, 588.2492, 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-breakable-boulder-03",
+            "scale":["float", 1.6],
+            "vis-dist":  ["meters", 200.0],
+            "light-index": ["int32", 4]
+          }
+        },
+        {
+          "trans": [661.30,  33.86, 793.01  ], // translation - on raised precursor platform from closed tunnel/ramp (orb inside)
+          "etype": "breakable-boulder",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0.016, -0.951, 0.051, -0.303], // quaternion
+          "bsphere": [661.30,  33.86, 793.01  , 10], // bounding sphere
+          "lump": {
+            "name":"energy-bay-breakable-boulder-04",
+            "scale":["float", 1.00],
+            "vis-dist":  ["meters", 200.0],
+            "light-index": ["int32", 4]
+          }
+        },
+        // WATER
+        {
+          "trans": [746.66, 0.0, 792.46], // translation
+          "etype": "water-anim",  // actor type                               // TEST ACTOR //
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion 
+          "bsphere": [746.66, 0.0, 792.46, 200.0], // bounding sphere
+          "lump": {
+            "vol": ["vector",
+                [1.0, 0.0, 0.0, 4533493.76],   // +x (+x in blender)
+                [-1.0, 0.0, 0.0, -1583095.808],     // -x (inverted x in blender because of the -1)
+                [0.0, 1.0, 0.0, 0.0],      // +y (+z in blender)
+                [0.0, -1.0, 0.0, 97204.6336], // -y (inverted z in blender because of the -1)
+                [0.0, 0.0, 1.0, 4721131.52],       // +z (-y in blender)
+                [0.0, 0.0, -1.0, -1770717.184]       // -z (+y in blender)
+              ],
+            "name": "energy-bay-water-vol-1",
+            "water-height": ["float",  4096.0, 2048.0, 8192.0, 1048588.0 ], // camera height, ?, wadledept, flags
+            "look": ["int32", 36],
+            "vis-dist":  ["meters", 200.0]
+          }
+        }
+        // HINTS
+        ,{
+          "trans": [516.6, 47.98, 683.27], // translation
+          "etype": "tfl-hint",  // actor type                               // TEST ACTOR //
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion 
+          "bsphere": [516.6, 47.98, 683.27, 200.0], // bounding sphere
+          "lump": {
+            "name": "energy-bay-tfl-hint-00",
+            "filename": "DS017.wav",
+            "radius": ["meters", 2.0]
+          }
+        }
+        ,{
+          "trans": [940.72,  1.57, 833.10], // translation
+          "etype": "tfl-hint",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion 
+          "bsphere": [940.72,  1.57, 833.10, 10.0], // bounding sphere
+          "lump": {
+            "name": "energy-bay-tfl-hint-01-daxTurbine1",
+            "filename": "energy-bay-tfl-hint-01-daxTurbine1.wav",
+            "radius": ["meters", 10.0]
+          }
+        }
+        ,{
+          "trans": [450.39, 43.92, 651.66], // translation
+          "etype": "tfl-hint",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion 
+          "bsphere": [450.39, 43.92, 651.66, 10.0], // bounding sphere
+          "lump": {
+            "name": "energy-bay-tfl-hint-02-daxClosed",
+            "filename": "energy-bay-tfl-hint-02-daxClosed.wav",
+            "radius": ["meters", 20.0]
+          }
+        }
+        ,{
+          "trans": [738.29,   0.79, 713.74  ], // translation
+          "etype": "tfl-hint",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion 
+          "bsphere": [738.29,   0.79, 713.74  , 10.0], // bounding sphere
+          "lump": {
+            "name": "energy-bay-tfl-hint-03-daxTurbine4",
+            "filename": "energy-bay-tfl-hint-03-daxTurbine4.wav",
+            "radius": ["meters", 15.0]
+          }
+        }
+        ,{
+          "trans": [633.30,  21.9, 998.20  ], // translation - on top of pillar on beach on right side
+          "etype": "tfl-hint",  // actor type
+          "game_task": 0, // associated game task (for powercells, etc)
+          "quat" : [0, 0, 0, 1], // quaternion 
+          "bsphere": [633.30,  21.9, 998.20  , 10.0], // bounding sphere
+          "lump": {
+            "name": "energy-bay-tfl-hint-04-SamosCrystal",
+            "filename": "energy-bay-tfl-hint-04-SamosCrystal.wav",
+            "radius": ["meters", 10.0]
+          }
+        }
+        // PARTICLES   
+    ,{
+      "trans": [485.58, 55.73, 786.36], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [485.58, 55.73, 786.36, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-lava-01",
+        "art-name":"group-crescent-lava-20x20",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [488.58, 55.73, 806.36], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [488.58, 55.73, 806.36, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-lava-02",
+        "art-name":"group-crescent-lava-20x20",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [505.58, 55.73, 786.36], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [505.58, 55.73, 786.36, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-lava-03",
+        "art-name":"group-crescent-lava-20x20",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [977.25, 67.52, 815.66], // translation
+      "etype": "energybay-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [977.25, 67.52, 815.66, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-tower-spewer-01",
+        "art-name":"group-enb-tower-spewer",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [922.97, 59.07, 796.64], // translation
+      "etype": "energybay-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [922.97, 59.07, 796.64, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-tower-spewer-02",
+        "art-name":"group-enb-tower-spewer",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [958.23, 55.11, 868.94], // translation
+      "etype": "energybay-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [958.23, 55.11, 868.94, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-tower-spewer-03",
+        "art-name":"group-enb-tower-spewer",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [550.24, 44.56, 649.97], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [550.24, 44.56, 649.97, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-01",
+        "art-name":"group-crescent-butterflies",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [788.94, 74.75, 853.34], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [788.94, 74.75, 853.34, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-02",
+        "art-name":"group-crescent-butterflies",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [556.95, 70.73, 873.87], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [556.95, 70.73, 873.87, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-03",
+        "art-name":"group-crescent-butterflies",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [767.22, 27.26, 779.08], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [767.22, 27.26, 779.08, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-04",
+        "art-name":"group-crescent-butterflies",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [749.89, 40.34, 520.21], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [749.89, 40.34, 520.21, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-05",
+        "art-name":"group-crescent-butterflies",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [906.86, 36.79, 611.25], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [906.86, 36.79, 611.25, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-06",
+        "art-name":"group-crescent-butterflies",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [858.67, 42.34, 642.05], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [858.67, 42.34, 642.05, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-07",
+        "art-name":"group-crescent-butterflies",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [903.87, 70.95, 702.34], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [903.87, 70.95, 702.34, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-08",
+        "art-name":"group-crescent-butterflies",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [623.13, 33.38, 580.04], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [623.13, 33.38, 580.04, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-sitting-01",
+        "art-name":"group-crescent-butterfly-sitting",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [640.26, 59.08, 542.53], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [640.26, 59.08, 542.53, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-sitting-02",
+        "art-name":"group-crescent-butterfly-sitting",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [793.15, 20.76, 503.85], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [793.15, 20.76, 503.85, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-sitting-03",
+        "art-name":"group-crescent-butterfly-sitting",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [868.72, 42.40, 654.26], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [868.72, 42.40, 654.26, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-sitting-04",
+        "art-name":"group-crescent-butterfly-sitting",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [860.88, 75.507, 776.39], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [860.88, 75.507, 776.39, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-sitting-05",
+        "art-name":"group-crescent-butterfly-sitting",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [784.61, 67.46, 906.38], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [784.61, 67.46, 906.38, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-sitting-06",
+        "art-name":"group-crescent-butterfly-sitting",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [529.72, 74.37, 839.47], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [529.72, 74.37, 839.47, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-butterfly-sitting-07",
+        "art-name":"group-crescent-butterfly-sitting",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [781.03, 87.12, 820.69], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [781.03, 87.12, 820.69, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-birds-01",
+        "art-name":"group-crescent-birds",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [584.96, 48.97, 1098.8], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [584.96, 48.97, 1098.8, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-birds-02",
+        "art-name":"group-crescent-birds",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [687.4, 75.29, 551.2], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [687.4, 75.29, 551.2, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-birds-03",
+        "art-name":"group-crescent-birds",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [944.07, 102.31, 689.54], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [944.07, 102.31, 689.54, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-birds-04",
+        "art-name":"group-crescent-birds",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [946.58, 88.55, 642.37], // translation
+      "etype": "crescent-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [946.58, 88.55, 642.37, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-birds-05",
+        "art-name":"group-crescent-birds",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    },
+    {
+      "trans": [994.22, 0, 670.8], // translation
+      "etype": "energybay-part",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [994.22, 0, 670.8, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-part-waterfall-01",
+        "art-name":"group-enb-waterfall-01",
+        "effect-param": ["float", 10.0, 20.0, 10.0, 10.0],  // ??, ??, ??, ??
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    }
+    // Activated turbine parts
+    ,{
+      "trans": [884.35, 68.70, 686.8], // translation
+      "etype": "enb-turbine",  // actor type
+      "game_task": 130, // associated game task (for powercells, etc) - originally 128
+      "quat" : [0, -0.294, 0, 0.956], // quaternion
+      "bsphere": [884.35, 68.70, 686.8, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-turbine-01"
+      }
+    }
+    ,{
+      "trans": [496.41, 78.97, 861.58], // translation
+      "etype": "enb-turbine",  // actor type
+      "game_task": 129, // associated game task (for powercells, etc)
+      "quat" : [0, -0.994, 0, 0.109], // quaternion
+      "bsphere": [496.41, 78.97, 861.58, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-turbine-02"
+      }
+    }
+    ,{
+      "trans": [866.71, 75.09, 937.9], // translation
+      "etype": "enb-turbine",  // actor type
+      "game_task": 128, // associated game task (for powercells, etc) - originally 130
+      "quat" : [0, -0.561, 0, 0.828], // quaternion
+      "bsphere": [866.71, 75.09, 937.9, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-turbine-03"
+      }
+    }
+    ,{
+      "trans": [744.14, 26.52, 759.8], // translation
+      "etype": "enb-turbine",  // actor type
+      "game_task": 131, // associated game task (for powercells, etc)
+      "quat" : [0, -0.945, 0, -0.326], // quaternion
+      "bsphere": [744.14, 26.52, 759.8, 10], // bounding sphere
+      "lump": {
+        "name":"energy-bay-turbine-04"
+      }
+    }
+
+  ],
+  "ambients" : [
+    {
+      "trans": [516.6, 47.98, 683.27, 7.0],
+      "bsphere": [516.6, 47.98, 683.27, 7.0],
+      "lump": {
+        "name": "energy-bay-amb-01-namepop",
+        "type": "'hint",
+        "text-id": ["int32", 2592],
+        "play-mode": "'notice"
+      }
+    }
+    ,{
+      "trans": [495.72, 64.14, 791.9, 40],
+      "bsphere": [495.72, 64.14, 791.9, 40],
+      "lump": {
+        "name": "energy-bay-amb-02-lava-loop",
+        "type": "'sound",
+        "effect-name":"'lava-loop",
+        "effect-param": ["float", 11.0, 40.0, 50.0, 40.0],  // ??, ??, ??, Max Radius
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    }
+    ,{
+      "trans": [992.51, 4, 674.07, 70.0],
+      "bsphere": [992.51, 4, 674.07, 70],
+      "lump": {
+        "name": "energy-bay-amb-03-waterfall",
+        "type": "'sound",
+        "effect-name":"'waterfall",
+        "effect-param": ["float", 11.0, 40.0, 50.0, 70.0],  // ??, ??, ??, Max Radius
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    }
+    ,{
+      "trans": [883.02, 50.99, 646.28, 100],
+      "bsphere": [883.02, 50.99, 646.28, 100],
+      "lump": {
+        "name": "energy-bay-amb-04-ogre-amb",
+        "type": "'sound",
+        "effect-name":"'ogre-amb",
+        "effect-param": ["float", 11.0, 400.0, 50.0, 300.0],  // ??, ??, ??, Max Radius
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    }
+    ,{
+      "trans": [801.96, 95.24, 911.3, 100],
+      "bsphere": [801.96, 95.24, 911.3, 100],
+      "lump": {
+        "name": "energy-bay-amb-05-ogre-amb",
+        "type": "'sound",
+        "effect-name":"'ogre-amb",
+        "effect-param": ["float", 11.0, 400.0, 50.0, 300.0],  // ??, ??, ??, Max Radius
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    }
+    ,{
+      "trans": [721.22, 65.31, 934.4, 100],
+      "bsphere": [721.22, 65.31, 934.4, 100],
+      "lump": {
+        "name": "energy-bay-amb-06-ogre-amb",
+        "type": "'sound",
+        "effect-name":"'ogre-amb",
+        "effect-param": ["float", 11.0, 400.0, 50.0, 300.0],  // ??, ??, ??, Max Radius
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    }
+    ,{
+      "trans": [621.35, 50.74, 596.23, 100],
+      "bsphere": [621.35, 50.74, 596.23, 100],
+      "lump": {
+        "name": "energy-bay-amb-07-ogre-amb",
+        "type": "'sound",
+        "effect-name":"'ogre-amb",
+        "effect-param": ["float", 11.0, 400.0, 50.0, 300.0],  // ??, ??, ??, Max Radius
+        "cycle-speed": ["float", -1.0, 0.0]
+      }
+    }
+  ]
+}

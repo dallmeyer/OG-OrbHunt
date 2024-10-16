@@ -1194,10 +1194,15 @@
     (behavior ()
       (when (and *target* (>= (-> self active-distance) (vector-vector-distance (-> self root trans) (-> *target* control trans))))
         (cond
-          ((send-event *target* 'query 'powerup (pickup-type eco-blue)) (go launcher-active))
+          ;; TFL note: added case for super eco
+          ((or (send-event *target* 'query 'powerup (pickup-type eco-blue))
+               (send-event *target* 'query 'powerup (pickup-type super-eco-blue)))
+           (go launcher-active))
           (else (let ((gp-0 'target-launch)) (if (= (send-event *target* 'query 'mode) gp-0) (send-event *target* 'end-mode)))))
+        ;; TFL note: added case for super eco
         (if (and (and *target* (>= 32768.0 (vector-vector-distance (-> self root trans) (-> *target* control trans))))
-                 (not (send-event *target* 'query 'powerup (pickup-type eco-blue))))
+                 (not (or (send-event *target* 'query 'powerup (pickup-type eco-blue))
+                          (send-event *target* 'query 'powerup (pickup-type super-eco-blue)))))
           (level-hint-spawn (text-id sidekick-hint-launcher) "sksp0035" (the-as entity #f) *entity-pool* (game-task none)))))
   :code anim-loop)
 
@@ -1226,7 +1231,9 @@
     (behavior ()
       (if (or (or (not *target*)
                   (< (-> self active-distance) (vector-vector-distance (-> self root trans) (-> *target* control trans))))
-              (not (send-event *target* 'query 'powerup (pickup-type eco-blue))))
+              ;; TFL note: added super eco case
+              (not (or (send-event *target* 'query 'powerup (pickup-type eco-blue))
+                       (send-event *target* 'query 'powerup (pickup-type super-eco-blue)))))
         (go launcher-idle))
       (spawn (-> self part) (-> self root trans))
       (sound-play "launch-idle" :id (-> self sound-id))

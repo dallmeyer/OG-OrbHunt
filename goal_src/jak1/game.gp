@@ -506,6 +506,11 @@
    "flut_common/flut-part.gc"
    "flut_common/flutflut.gc"
    "flut_common/target-flut.gc"
+
+   ;; TFL note: added
+   "tfl_common/super-eco-crystal.gc"
+   "tfl_common/tfl-hint-data.gc"
+   "tfl_common/tfl-hint.gc"
    )
 
 
@@ -1655,19 +1660,23 @@
 ;; Set up the build system to build the level geometry
 ;; this path is relative to the custom_assets/jak1/levels/ folder
 ;; it should point to the .jsonc file that specifies the level.
-(build-custom-level "test-zone")
-;; the DGO file
-(custom-level-cgo "TSZ.DGO" "test-zone/testzone.gd")
+;; (build-custom-level "test-zone")
+;; ;; the DGO file
+;; (custom-level-cgo "TSZ.DGO" "test-zone/testzone.gd")
 
-;; it should point to the .jsonc file that specifies the level.
+;; TFL note: TFL level build files:
+
+;; Crystal cave level :
 (build-custom-level "crystalc")
-;; the DGO file
 (custom-level-cgo "CRC.DGO" "crystalc/crystalc.gd")
 
-;; generate the art group for a custom actor.
-;; requires a .glb model file in custom_assets/jak1/models/custom_levels
-;; to also generate a collide-mesh, add :gen-mesh #t
-(build-actor "test-actor" :gen-mesh #t)
+;; Crescent Top level :
+(build-custom-level "crescent")
+(custom-level-cgo "CST.DGO" "crescent/crescent.gd")
+
+;; Energy Bay level :
+(build-custom-level "energbay")
+(custom-level-cgo "ENB.DGO" "energbay/energbay.gd")
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Game Engine Code
@@ -1959,12 +1968,16 @@
 
 (goal-src "engine/common-obs/generic-obs.gc" "pc-anim-util" "assert")
 
+;; TFL note: added
+(goal-src "levels/tfl_common/tfl-music-player.gc" "level")
+
 (goal-src-sequence
  ;; prefix
  "engine/"
 
  :deps
- ("$OUT/obj/generic-obs.o")
+ ;; TFL note: added music player dep
+ ("$OUT/obj/generic-obs.o" "$OUT/obj/tfl-music-player.o")
  "target/target-util.gc"
  "target/target-part.gc"
  "target/collide-reaction-target.gc"
@@ -1985,7 +1998,8 @@
  "gfx/hw/video.gc"
  )
 
-(goal-src "engine/game/main.gc" "pckernel" "video")
+;; TFL note: added dep
+(goal-src "engine/game/main.gc" "pckernel" "video" "tfl-music-player")
 
 (goal-src-sequence
  ;; prefix
@@ -2141,7 +2155,8 @@
 (goal-src "pc/debug/pc-debug-methods.gc" "pc-debug-common")
 
 (goal-src "engine/mods/input-display.gc")
-(goal-src "engine/mods/orb-placer.gc")
+(goal-src "engine/mods/orb-placer-h.gc")
+(goal-src "engine/mods/orb-placer.gc" "orb-placer-h")
 
 
 (goal-src-sequence
@@ -2154,8 +2169,28 @@
  "mods/mod-debug.gc"
 )
 
-(goal-src "levels/test-zone/test-zone-obs.gc" "process-drawable")
+;; TFL note: Custom part and obs file for the levels
 
+(goal-src-sequence
+ "levels/crystalc/"
+ :deps ("$OUT/obj/ticky.o")
+ "crystalc-obs.gc"
+ "crystalc-part.gc"
+ )
+
+(goal-src-sequence
+ "levels/crescent/"
+ :deps ("$OUT/obj/ticky.o")
+ "crescent-obs.gc"
+ "crescent-part.gc"
+ )
+
+(goal-src-sequence
+ "levels/energybay/"
+ :deps ("$OUT/obj/ticky.o")
+ "energybay-obs.gc"
+ "energybay-part.gc"
+ )
 
 (group-list "all-code"
   `(,@(reverse *all-gc*))

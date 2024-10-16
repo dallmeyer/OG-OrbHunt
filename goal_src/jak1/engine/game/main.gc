@@ -357,6 +357,10 @@
     (blerc-init)
     ;; collide dma
     (suspend)
+
+    ;; TFL note: added music player
+    (process-spawn tfl-music-player)
+
     (while *run*
 
       (runs-every-frame) ;; trigger hook for mod base mod-base-change entry point

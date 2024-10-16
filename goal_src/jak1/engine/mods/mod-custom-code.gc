@@ -25,9 +25,16 @@ an orb
   ;;(increase-power-cell-by-one) This is a call to increase-power-cell-by-one defined in mod-common-functions.gc
   (mod-run-each-frame)
   (if *show-input-display* (input-display-on) (input-display-off))
-  ;; ensure orb-placer is spawned/killed as requested, debug menu is updated
   (when *debug-segment*
-    (orb-placer-maintenance))
+    ;; ensure orb-placer is spawned/killed as requested, debug menu is updated
+    (orb-placer-maintenance)
+    
+    ;; toggle collision view
+    (when (and (not (paused?)) (cpad-pressed? 0 select))
+      (if (vanilla-level? (-> (level-get-target-inside *level*) name))
+        (not! *collision-renderer*) ;; toggle opengoal collision renderer
+        (not! *display-collide-cache*) ;; no extracted collision for custom levels, so toggle meh collision cache view
+        )))
   (none))
 
 (defun runs-on-settings-saved ()
@@ -109,6 +116,21 @@ an orb
      ;; Code here runs after jak dies (and any death cutscene finishes), during the blackout before he spawns
      ))
   (none))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; TFL note: Checking water planes
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun print-water-vol-planes ((water water-vol))
+  (format #t "water-vol:~%")
+  (dotimes (i (-> water vol pos-vol 0 num-planes))
+   (let ((plane (-> water vol pos-vol 0 plane i)))
+    (format #t "plane ~D:~%x: ~m ~%y: ~m~%z: ~m~%w: ~m~%" i 
+      (-> plane x) (-> plane y) (-> plane z) (-> plane w)
+      )
+      )
+    )
+  )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; deprecated function defintions.

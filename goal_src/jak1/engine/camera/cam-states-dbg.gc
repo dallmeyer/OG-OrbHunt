@@ -67,23 +67,23 @@
 
 (defun cam-free-floating-input ((arg0 vector) (arg1 vector) (arg2 symbol) (arg3 int))
   (when (and (!= *master-mode* 'menu) (not *cam-layout*))
-    (when *camera-read-buttons*
+    (when *camera-read-face-buttons*
       (if (cpad-hold? arg3 x)
         (set! (-> arg0 x)
               (- (-> arg0 x)
                  (+ (-> *CAM_FREE-bank* rot-speed)
                     (analog-input (the-as int (-> *cpad-list* cpads arg3 abutton 6)) 0.0 32.0 230.0 (-> *CAM_FREE-bank* rot-speed)))))))
-    (when *camera-read-buttons*
+    (when *camera-read-face-buttons*
       (if (cpad-hold? arg3 triangle)
         (+! (-> arg0 x)
             (+ (-> *CAM_FREE-bank* rot-speed)
                (analog-input (the-as int (-> *cpad-list* cpads arg3 abutton 4)) 0.0 32.0 230.0 (-> *CAM_FREE-bank* rot-speed))))))
-    (when *camera-read-buttons*
+    (when *camera-read-face-buttons*
       (if (cpad-hold? arg3 square)
         (+! (-> arg0 y)
             (+ (-> *CAM_FREE-bank* rot-speed)
                (analog-input (the-as int (-> *cpad-list* cpads arg3 abutton 7)) 0.0 32.0 230.0 (-> *CAM_FREE-bank* rot-speed))))))
-    (when *camera-read-buttons*
+    (when *camera-read-face-buttons*
       (if (cpad-hold? arg3 circle)
         (set! (-> arg0 y)
               (- (-> arg0 y)

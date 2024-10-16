@@ -271,7 +271,7 @@
                         (v1-235 (entity-by-name "assistant-lavatube-end-3")))
                     (s3-7 (if v1-235 (-> v1-235 extra process)) s4-13))))
               (set-continue! *game-info* "lavatube-end"))
-             ;; CUSTOM SPAWN POINT FOR WARPGATE FOR CUSTOM LEVEL
+             ;; TFL note: CUSTOM SPAWN POINT FOR WARPGATE FOR CUSTOM LEVEL
              ((string= (-> arg0 name) "crystal-cave-warp") ;; NAME OF THE WARP CHECKPOINT HERE
               (set! (-> s5-6 quad) (-> (entity-by-name "crystalc-warpmiddle-01") extra trans quad)) ;; ACTOR IN THE PORTAL, SPAWN IT WITH THE JSONC OF YOUR CUSTOM LEVEL
               (set-continue! *game-info* "crystal-cave-start") ;; IF YOU WANT THE CHECKPOINT TO BE SWITCHED TO A DIFFERENT ONE AFTER WARPING
