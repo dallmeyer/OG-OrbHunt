@@ -18,7 +18,9 @@
   (none))
 
 (define *speedrun-info* (new 'static 'speedrun-info-jak1 :should-display? #t :needs-post-blackout-setup? #f))
+
 (define *has-landed?* #f)
+
 (define-extern *mod-version-text* string)
 
 (define *hub1-cell-list*
@@ -496,8 +498,8 @@
       (true! *has-landed?*))
     
     (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf)) (bucket-id subtitle))
-      (draw-string-xy (string-format "Speedrunner Mode ~%OrbHunt ~S ~%Category: ~S ~%Cutscene Skips ~A~%Has Landed? ~A"
-                                     *mod-version-text*
+      (draw-string-xy (string-format "Speedrunner Mode ~%OrbHunt ~S / ~S ~%Category: ~S ~%Cutscene Skips ~A~%Has Landed? ~A"
+                                     *pc-settings-built-sha* *mod-version-text*
                                      (enum->string speedrun-category (-> *speedrun-info* category))
                                      (-> *pc-settings* skip-movies?)
                                      *has-landed?*

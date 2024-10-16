@@ -45,6 +45,21 @@
   (x 14)
   (square 15))
 
+(defenum abutton-idx
+  :type uint8
+  (right 0)
+  (left 1)
+  (up 2)
+  (down 3)
+  (triangle 4)
+  (circle 5)
+  (x 6)
+  (square 7)
+  (l1 8)
+  (r1 9)
+  (l2 10)
+  (r2 11))
+
 (defenum pad-type
   (normal 4)
   (analog 5)
@@ -240,17 +255,14 @@
 
 ;; the four controllers
 (define *cpad-list* (new 'global 'cpad-list))
+
 ;; the cpad-history for each controller
 (define *cpad-history-list* (new 'global 'cpad-history-list))
 
 (desfun generate-frame-checks (pad-idx frames)
   (if (= frames 0)
-       0
-      `(logior (-> *cpad-history-list* cpads ,pad-idx button0-rel ,(- frames 1))
-               ,(generate-frame-checks pad-idx (- frames 1))
-        )
-  )
-)
+    0
+    `(logior (-> *cpad-history-list* cpads ,pad-idx button0-rel ,(- frames 1)) ,(generate-frame-checks pad-idx (- frames 1)))))
 
 ;; the cpad-history for each controller
 (define *cpad-history-list* (new 'global 'cpad-history-list))

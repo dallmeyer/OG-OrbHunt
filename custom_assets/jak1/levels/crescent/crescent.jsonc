@@ -42,11 +42,15 @@
     "mayorgears-ag"
   ],
 
+  // If you have any custom models in the "custom_assets/jak1/models/custom_levels" folder that you want to use in your level, add them to this list.
+  // Note: Like with art groups, these should also be added to your level's .gd file.
+  "custom_models": [],
+
    // Any textures you want to include in your custom level. This is mainly useful for things such as the zoomer HUD,
    // which is not in the common level files and has no art group associated with it.
    // To get a list of all the textures, you can extract all of the game's textures
    // by setting "save_texture_pngs" to true in the decompiler config.
-   "textures": [
+   "textures": [[
     // all textures required for the zoomer HUD
     "zoomerhud",
     "zoomerhud-dial",
@@ -56,7 +60,7 @@
     "zoomerhud-heatbg-01",
     "zoomerhud-main-03arrow",
     "zoomerhud-main-03knob"
-  ],
+   ]],
 
   "actors" : [
     // CELLS

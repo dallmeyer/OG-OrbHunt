@@ -1742,11 +1742,11 @@
 ;; WARN: Return type mismatch entity-perm-status vs none.
 (defmethod init-from-entity! ((this bush-collect) (arg0 entity-actor))
   "Typically the method that does the initial setup on the process, potentially using the [[entity-actor]] provided as part of that.
-This commonly includes things such as:
-- stack size
-- collision information
-- loading the skeleton group / bones
-- sounds"
+   This commonly includes things such as:
+   - stack size
+   - collision information
+   - loading the skeleton group / bones
+   - sounds"
   (process-entity-status! this (entity-perm-status dead) #t)
   (none)
   )
@@ -3048,15 +3048,11 @@ This commonly includes things such as:
         (set! (-> a1-16 trans y) 0.0)
         (set! (-> a1-16 trans z) 0.0)
         (set! (-> a1-16 trans w) 1.0)
-        (matrix->quaternion (-> gp-0 quat) a1-16))
-        
-      (send-event *camera* 'teleport-to-transformq gp-0))
-      
-    (let ((gp-1 (current-time)))
-      (until (time-elapsed? gp-1 (seconds 3))
-        (suspend)
+        (matrix->quaternion (-> gp-0 quat) a1-16)
         )
+      (send-event *camera* 'teleport-to-transformq gp-0)
       )
+    (suspend-for (seconds 3))
     (remove-setting! 'minimap)
     (set! (-> *ACTOR-bank* birth-max) 1000)
     (persist-with-delay *setting-control* 'interp-time (seconds 0.05) 'interp-time 'abs 0.0 0)

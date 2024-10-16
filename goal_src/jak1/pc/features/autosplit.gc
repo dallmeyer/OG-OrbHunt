@@ -3,6 +3,7 @@
 (require "engine/game/game-info.gc")
 (require "pc/features/autosplit-h.gc")
 (define *autosplit-info-jak1* (new 'static 'autosplit-info-jak1))
+
 (define-extern *has-landed?* symbol)
 
 ;; Setup markers

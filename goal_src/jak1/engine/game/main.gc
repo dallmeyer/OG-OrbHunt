@@ -362,9 +362,7 @@
     (process-spawn tfl-music-player)
 
     (while *run*
-
       (runs-every-frame) ;; trigger hook for mod base mod-base-change entry point
-
       ;; start immediately after all process updates finish.
       (profiler-instant-event "display-loop-top")
       ;; drawing effects to be used in foreground drawing.

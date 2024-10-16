@@ -81,14 +81,6 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 (defmacro set-cpad-hold! (pad-idx &rest buttons)
   `(logior! (cpad-hold ,pad-idx) (pad-buttons ,@buttons)))
 
-(defmacro set-cpad-pressed! (pad-idx &rest buttons)
-  `(logior! (cpad-pressed ,pad-idx) (pad-buttons ,@buttons))
-  )
-
-(defmacro set-cpad-hold! (pad-idx &rest buttons)
-  `(logior! (cpad-hold ,pad-idx) (pad-buttons ,@buttons))
-  )
-
 ;;This function moves an actor to the given coordinates
 ;;example: (move-actor "farmer-3" 3.0 74.0 -120.0)
 (defun move-actor ((actor-name string) (x float) (y float) (z float))
@@ -324,9 +316,10 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   (stop-main-music)
   (case (-> (level-get-target-inside *level*) name)
     (('test-zone)
-     (if (> (knuth-rand-int-range 0 15) (+ 8 5))
-       (play-main-music "SND/music-test-zone.mp3" (the int (-> *setting-control* default music-volume)))
-       (play-main-music "SND/music-test-zone-track2.mp3" (the int (-> *setting-control* default music-volume)))))
+     ;;  (if (> (knuth-rand-int-range 0 15) (+ 8 5))
+     ;;   (play-main-music "SND/music-test-zone.mp3" (the int (-> *setting-control* default music-volume)))
+     ;;   (play-main-music "SND/music-test-zone-track2.mp3" (the int (-> *setting-control* default music-volume))))
+     )
     ;;Add more cases here for each level
     (else
      (play-main-music "" (the int (-> *setting-control* default music-volume)))
