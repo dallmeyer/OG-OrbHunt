@@ -182,6 +182,7 @@
                             (or (type-type? (-> proc type) skill)
                                 (type-type? (-> proc type) skill-crate)
                                 )
+                            (not (type-type? (-> proc type) skill-ghost))
                             (not (logtest? (-> s0-0 extra status) (entity-perm-status subtask-complete))) ;; crate respawn check
                             )
                     (let ((dist (vector-vector-distance 
