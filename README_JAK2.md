@@ -48,7 +48,8 @@ There are now 3125 orbs in total spread across every level in the game - and I m
 ## Difficulty Toggles
 Some collectables are well-hidden and/or annoying to reach - you may want to ease your pain by using some of the below options to change the difficulty (you can find them under Game Options > Orb Hunt Options)
 - AUTOSAVE ON ORB - when enabled, autosave will kick in every time you collect an orb
-- ORB GLOW - Ported from Jak 1, accessibility feature that adds a glow effect around orbs
+- ORB GLOW - ported from Jak 1, accessibility feature that adds a glow effect around orbs
+- ORB GHOSTS - when enabled, transparent "orb ghosts" will remain after collecting an orb (to help remind you of paths/what you've collected)
 - CLOSEST ORB - when the HUD is activated, a color-coded text displays the distance from Jak to the closest nearby Precursor Orb (including orbs within crates or other actors)
 - ORB MAP ICONS - when enabled, icons are shown on the map and minimap for Orbs in any active levels
   - when not enabled, you can still "tag" orbs manually while in first-person, by aiming at an orb and pressing any of X/Square/Circle/Triangle/R1
