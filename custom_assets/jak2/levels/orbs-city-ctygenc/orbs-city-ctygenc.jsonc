@@ -315,6 +315,304 @@
         "name":"ctygenc-skill-hover-04",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+
+    {
+      "trans": [ 247.14,   35.0,    380.7   ], // #t up in tree towards ctypal, launch jump from zoomer on trunk
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [247.14,   35.0,    380.7 , 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-01",
+        "alt-actor":"ctygenc-skill-01"
+      }
+    },
+    {
+      "trans": [ 163.22,   26.5,    172.25  ], // #t roof of central area, in corner behind bush
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [163.22,   26.5,    172.25, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-02",
+        "alt-actor":"ctygenc-skill-02"
+      }
+    },
+    {
+      "trans": [ 52.3,     27.7,    390.5   ], // #t  on grassy area near ctypal in corner
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [52.3,     27.7,    390.5 , 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-03",
+        "alt-actor":"ctygenc-skill-03"
+      }
+    },
+    {
+      "trans": [   13.41,  24.12, 234.71 ], // on stable roof on back hallway to path to ctygena
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  13.41,  24.12, 234.71, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-4",
+        "alt-actor":"ctygenc-skill-4"
+      }
+    },
+    {
+      "trans": [   41.40,  29.77, 291.65 ], // slippery rooftop opposite ^, boosted/extended over
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  41.40,  29.77, 291.65, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-05",
+        "alt-actor":"ctygenc-skill-05"
+      }
+    },
+    {
+      "trans": [  9.0279, 16.2374, 200.5152 ], // behind window cover on backpath to ctygena
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 9.0279, 16.2374, 200.5152, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-06",
+        "alt-actor":"ctygenc-skill-06"
+      }
+    },
+    {
+      "trans": [  255.7282, 10.75, 205.2851], // "in" lamp near NE inner side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 255.7282, 10.75, 205.2851, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-07",
+        "alt-actor":"ctygenc-skill-07"
+        // "alt-actor": "ctyn-lamp-80"
+      }
+    },
+    {
+      "trans": [  340.82,  31.89, 124.33 ], // rooftop in useless back alley (car launch to abah/cancel)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 340.82,  31.89, 124.33, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-08",
+        "alt-actor":"ctygenc-skill-08"
+      }
+    },
+    {
+      "trans": [   351.8481, 36.4223, 147.0866 ], // top of light in useless back alley (good car launch or abah/uppercut from ^)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  351.8481, 36.4223, 147.0866, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-09",
+        "alt-actor":"ctygenc-skill-09"
+      }
+    },
+    {
+      "trans": [ 226.36,  27.23, 220.71 ], // midpoint of pillar of central structure
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 226.36,  27.23, 220.71, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-10",
+        "alt-actor":"ctygenc-skill-10",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  214.9743, 41.8472, 220.5148 ], // top of pillar of central structure, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  214.9743, 41.8472, 220.5148, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-11",
+        "alt-actor":"ctygenc-skill-11"
+      }
+    },
+    {
+      "trans": [  259.42,   8.59,  32.96], // between yellow windows/lights on north path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  259.42,   8.59,  32.96, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-12",
+        "alt-actor":"ctygenc-skill-12"
+      }
+    },
+    {
+      "trans": [  64.0899, 20.7738, 41.4551], // on upper ledge NW corner
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  64.0899, 20.7738, 41.4551, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-13",
+        "alt-actor":"ctygenc-skill-13"
+      }
+    },
+    {
+      "trans": [ 208.58,  21.95,  -0.43 ], // slippery mid roof, north path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 208.58,  21.95,  -0.431, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-14",
+        "alt-actor":"ctygenc-skill-14",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   206.2981, 35.2011, -3.1033], // on upper ledge north path, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   206.2981, 35.2011, -3.1033, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-15",
+        "alt-actor":"ctygenc-skill-15"
+      }
+    },
+    {
+      "trans": [  191.8370, -7.2949, 291.1374], // under water below wide bridge
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  191.8370, -7.2949, 291.1374, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-16",
+        "alt-actor":"ctygenc-skill-16"
+      }
+    },
+    {
+      "trans": [ 0.5231, 29.0959, 45.1683], // up on sign in corner before path to ctygena (car launch)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 0.5231, 29.0959, 45.1683, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-17",
+        "alt-actor":"ctygenc-skill-17"
+      }
+    },
+    {
+      "trans": [ 79.2938, 28.4999, 93.4587], // under sheet of metal up on building in NW central area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 79.2938, 28.4999, 93.4587, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-18",
+        "alt-actor":"ctygenc-skill-18"
+      }
+    },
+    {
+      "trans": [ 288.38,   8.59, 367.23], // behind fencing, SE corner of water
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 288.38,   8.59, 367.23, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-19",
+        "alt-actor":"ctygenc-skill-19"
+      }
+    },
+    {
+      "trans": [  132.47,  18.42, 384.69], // behind tree SW side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  132.47,  18.42, 384.69, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-20",
+        "alt-actor":"ctygenc-skill-20"
+      }
+    },
+    {
+      "trans": [ 180.65,  39.95, 135.21], // back of central structure, car launch ofc
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 180.65,  39.95, 135.21, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-21",
+        "alt-actor":"ctygenc-skill-21"
+      }
+    },
+    {
+      "trans": [  61.3433, 10.2874, 335.3700], // around corner NE side down back path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  61.3433, 10.2874, 335.3700, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-22",
+        "alt-actor":"ctygenc-skill-22"
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [ 363.62,  48.81, 242.35  ], // edge of roof up high in useless back alleyway
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 363.62,  48.81, 242.35, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-hover-01",
+        "alt-actor":"ctygenc-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 153.23,  55.53, 374.14 ], // back of right statue head
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 153.23,  55.53, 374.14, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-hover-02",
+        "alt-actor":"ctygenc-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 230.92,  55.53, 374.14 ], // back of left statue head
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 230.92,  55.53, 374.14, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-hover-03",
+        "alt-actor":"ctygenc-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 241.40,  57.37,  13.92 ], // upper light on north path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 241.40,  57.37,  13.92, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenc-skill-ghost-hover-04",
+        "alt-actor":"ctygenc-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
   ]
 }

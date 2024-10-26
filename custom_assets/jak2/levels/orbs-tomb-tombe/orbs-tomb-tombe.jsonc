@@ -187,6 +187,163 @@
       "lump": {
         "name":"tombe-skill-14"
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [452.16, -121.0, 1193.99], // first torch window with no flame
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [452.16, -121.0, 1193.99, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-01",
+        "alt-actor":"tombe-skill-01"
+      }
+    },
+    {
+      "trans": [ 454.17, -126.0, 1220.66], // second torch window with no flame
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 454.17, -126.0, 1220.66, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-02",
+        "alt-actor":"tombe-skill-02"
+      }
+    },
+    {
+      "trans": [ 430.09, -141.0, 1397.26], // third torch window with no flame
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 430.09, -141.0, 1397.26, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-03",
+        "alt-actor":"tombe-skill-03"
+      }
+    },
+    {
+      "trans": [     428.6508, -108.1565, 1130.9781], // in cavity up high (jump from slant nearby)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     428.6508, -108.1565, 1130.9781, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-04",
+        "alt-actor":"tombe-skill-04"
+      }
+    },
+    {
+      "trans": [    472.1803, -129.7023, 1250.7459], // just around corner near gaps/slants
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    472.1803, -129.7023, 1250.7459, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-05",
+        "alt-actor":"tombe-skill-05"
+      }
+    },
+    {
+      "trans": [     442.5535, -141.7288, 1313.9798], // down below ledge before big gap (infin jump)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    442.5535, -141.7288, 1313.9798, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-06",
+        "alt-actor":"tombe-skill-06"
+      }
+    },
+    {
+      "trans": [    440.6399, -123.3320, 1324.6427], // under archyway over void of big gap (tricky jetboard movement, or just take the death)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    440.6399, -123.3320, 1324.6427, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-07",
+        "alt-actor":"tombe-skill-07"
+      }
+    },
+    {
+      "trans": [ 415.0561, -133.6303, 1411.4447], // in cavity on right, above moving plats before trampolines
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 415.0561, -133.6303, 1411.4447, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-08",
+        "alt-actor":"tombe-skill-08"
+      }
+    },
+    {
+      "trans": [389.34, -54.19, 1430.91], // corner edge of door frame exiting trampoline section
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [389.34, -54.19, 1430.91, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-09",
+        "alt-actor":"tombe-skill-09"
+      }
+    },
+    {
+      "trans": [ 388.6242, -49.7824, 1423.7648], // top edge of door frame exiting trampoline section
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 388.6242, -49.7824, 1423.7648, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-10",
+        "alt-actor":"tombe-skill-10"
+      }
+    },
+    {
+      "trans": [     383.1451, -55.3030, 1417.1306], // cavity on left, use last trampoline to get in there
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     383.1451, -55.3030, 1417.1306, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-11",
+        "alt-actor":"tombe-skill-11"
+      }
+    },
+    {
+      "trans": [ 353.19, -65.86, 1425.67], // in corner behind small slant on right
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 353.19, -65.86, 1425.67, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-12",
+        "alt-actor":"tombe-skill-12"
+      }
+    },
+    {
+      "trans": [  266.4821, -65.4309, 1421.9266], // slant wall on side near tombboss exit
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  266.4821, -65.4309, 1421.9266, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-13",
+        "alt-actor":"tombe-skill-13",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 268.59, -38.87, 1411.81], // top of precursor thing thats hidden by final door at boss room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 268.59, -38.87, 1411.81, 10], // bounding sphere
+      "lump": {
+        "name":"tombe-skill-ghost-14",
+        "alt-actor":"tombe-skill-14"
+      }
     }
   ]
 }

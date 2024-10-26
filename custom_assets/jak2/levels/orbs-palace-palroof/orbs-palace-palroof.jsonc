@@ -429,6 +429,436 @@
         "name":"palroof-skill-hover-08",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [ 166.12,   442.99,  532.45  ], // #t high corner above glass, abbah bounce in corner over invis wall for next or
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [166.12,   442.99,  532.45, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-01",
+        "alt-actor":"palroof-skill-01"
+      }
+    },
+    {
+      "trans": [ 159.16,   445.93,  571.50  ], // #t on wall above glass ceiling, follow from ^ and abbah bounce agai
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [159.16,   445.93,  571.50, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-02",
+        "alt-actor":"palroof-skill-02"
+      }
+    },
+    {
+      "trans": [ 173.6,    463.6,   563.65  ], // #t another abbah bounce up from ^, walk along edg
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [173.6,    463.6,   563.65, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-03",
+        "alt-actor":"palroof-skill-03"
+      }
+    },
+    {
+      "trans": [ 180.7,    460.2,   526.0   ], // #t follow from ^ to next roof, boosted from corner to corne
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [180.7,    460.2,   526.0 , 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-04",
+        "alt-actor":"palroof-skill-04"
+      }
+    },
+    {
+      "trans": [ 219.53,   426.8,   534.36  ], // #t on roof in praxis 1st phase, spin cancel jump on slant to get u
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [219.53,   426.8,   534.36, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-05",
+        "alt-actor":"palroof-skill-05"
+      }
+    },
+    {
+      "trans": [  133.4129, 430.6830, 488.3342], // on pillar near edge of roof at start
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  133.4129, 430.6830, 488.3342, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-06",
+        "alt-actor":"palroof-skill-06",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   89.95, 431.63, 507.56], // on edge of glass rooftop, abah from ^ over invis wall and keep going
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   89.95, 431.63, 507.56, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-07",
+        "alt-actor":"palroof-skill-07"
+      }
+    },
+    {
+      "trans": [  193.52, 408.59, 480.02], // in corner near edge of phase 1 of praxis fight
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 193.52, 408.59, 480.02, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-08",
+        "alt-actor":"palroof-skill-08"
+      }
+    },
+    {
+      "trans": [   266.5256, 417.1123, 524.1880], // on left elec gate pillar between phase 1 and 2
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  266.5256, 417.1123, 524.1880, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-09",
+        "alt-actor":"palroof-skill-09",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 273.80, 422.26, 527.72], // on pillar of outer building between phase 1 and 2, abah from ^ over invis wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 273.80, 422.26, 527.72, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-10",
+        "alt-actor":"palroof-skill-10"
+      }
+    },
+    {
+      "trans": [  297.37, 402.88, 541.84], // on side of lower wall leading into phase 2
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  297.37, 402.88, 541.84, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-11",
+        "alt-actor":"palroof-skill-11"
+      }
+    },
+    {
+      "trans": [  275.31, 430.17, 601.2], // up in corner above slant (can walk along ledge from left)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  275.31, 430.17, 601.2, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-12",
+        "alt-actor":"palroof-skill-12"
+      }
+    },
+    {
+      "trans": [  217.9751, 427.2174, 643.3953], // on left elec gate pillar after phase 2
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  217.9751, 427.2174, 643.39533, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-13",
+        "alt-actor":"palroof-skill-13",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  217.62, 445.58, 645.90], // on upper pillar exiting phase 3, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  217.62, 445.58, 645.90, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-14",
+        "alt-actor":"palroof-skill-14"
+      }
+    },
+    {
+      "trans": [  207.31, 451.88, 547.93], // up on pillar between phase 1/2, follow from skill-03
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 207.31, 451.88, 547.93, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-15",
+        "alt-actor":"palroof-skill-15"
+      }
+    },
+    {
+      "trans": [ 220.22, 469.33, 569.22], // up on pillar of next building from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 220.22, 469.33, 569.22, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-16",
+        "alt-actor":"palroof-skill-16"
+      }
+    },
+    {
+      "trans": [ 231.02, 468.91, 562.33], // up on slippery pillar, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 231.02, 468.91, 562.33, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-17",
+        "alt-actor":"palroof-skill-17"
+      }
+    },
+    {
+      "trans": [ 244.94, 468.91, 553.67], // up on slippery pillar, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 244.94, 468.91, 553.67, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-18",
+        "alt-actor":"palroof-skill-18"
+      }
+    },
+    {
+      "trans": [ 254.51, 469.33, 547.26], // up on pillar, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 254.51, 469.33, 547.26, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-19",
+        "alt-actor":"palroof-skill-19"
+      }
+    },
+    {
+      "trans": [ 272.22, 455.83, 593.72], // up on slippery pillar over phase 2, boosted across from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 272.22, 455.83, 593.72, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-20",
+        "alt-actor":"palroof-skill-20",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 285.53, 466.57, 602.40], // up on high pillar between phase 2/3, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 285.53, 466.57, 602.40, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-21",
+        "alt-actor":"palroof-skill-21"
+      }
+    },
+    {
+      "trans": [ 282.58, 482.20, 609.89], // up on higher pillar between phase 2/3, jump to small standpoint and then up from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 282.58, 482.20, 609.89, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-22",
+        "alt-actor":"palroof-skill-22"
+      }
+    },
+    {
+      "trans": [ 299.42, 444.95, 607.70], // on upper pillar between phase 2 and 3, jump down from one of these^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 299.42, 444.95, 607.70, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-23",
+        "alt-actor":"palroof-skill-23"
+      }
+    },
+    {
+      "trans": [  264.37, 420.59, 547.85], // on mid level rooftop, above phase 2 area, drop from one of these^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 264.37, 420.59, 547.85, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-24",
+        "alt-actor":"palroof-skill-24"
+      }
+    },
+
+    // CRATES
+    {
+      "trans": [ 121.78, 428.94, 493.37], // on glass rooftop near edge, abah from skill-06^
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   0.0,  0.9982,  0.0,  0.0584], // quaternion
+      "bsphere": [  121.78, 428.94, 493.37, 10], // bounding sphere
+      "lump": {
+        "name": "palroof-crate-1",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [ 235.65, 411.15, 712.01], // on outer wall, in "oob" section past phase 3
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   0.0,  0.9698,  0.0,  -0.2436], // quaternion
+      "bsphere": [  235.65, 411.15, 712.01, 10], // bounding sphere
+      "lump": {
+        "name": "palroof-crate-2",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [ 208.38, 411.34, 721.98], // on outer wall, in "oob" section past phase 3
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   0.0,  -0.9863,  0.0,  0.1644], // quaternion
+      "bsphere": [ 208.38, 411.34, 721.98, 10], // bounding sphere
+      "lump": {
+        "name": "palroof-crate-3",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [ 151.92, 435.97, 629.43], // on door frame to elevator exiting phase 3
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 151.92, 435.97, 629.43, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-hover-01",
+        "alt-actor":"palroof-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 177.67, 456.88, 651.89], // on upper pillar before elev exit from phase 3
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 177.67, 456.88, 651.89, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-hover-02",
+        "alt-actor":"palroof-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 146.86, 445.58, 624.92], // on upper pillar above elev exit from phase 3, follow from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 146.86, 445.58, 624.92, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-hover-03",
+        "alt-actor":"palroof-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 219.58, 501.33, 612.10], // WAY up on central part of building, above phase 3
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 219.58, 501.33, 612.10, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-hover-04",
+        "alt-actor":"palroof-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 164.74, 497.60, 578.82], // WAY up on central part of building, follow from ^, over glass roof
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 164.74, 497.60, 578.82, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-hover-05",
+        "alt-actor":"palroof-skill-hover-05",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 182.90, 497.60, 562.01], // WAY up on central part of building, follow (boosted/extended) from ^, over glass roof
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 182.90, 497.60, 562.01, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-hover-06",
+        "alt-actor":"palroof-skill-hover-06",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 207.42, 497.60, 569.53], // WAY up on central part of building, follow (boosted/extended) from ^, over glass roof
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 207.42, 497.60, 569.53, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-hover-07",
+        "alt-actor":"palroof-skill-hover-07",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 207.42, 497.60, 569.53], // up/out on pillar past elev exit from phase 3
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 207.42, 497.60, 569.53, 10], // bounding sphere
+      "lump": {
+        "name":"palroof-skill-ghost-hover-08",
+        "alt-actor":"palroof-skill-hover-08",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+
+    {
+      "trans": [181.05, 417.75, 728.3], //  over wall in final phase of praxis 1
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [181.05, 417.75, 728.3, 10],
+      "lump": {
+        "name": "skill-ghost-34",
+        "alt-actor": "skill-34"
+      }
     }
   ]
 }

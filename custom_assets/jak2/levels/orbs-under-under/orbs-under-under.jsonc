@@ -362,6 +362,302 @@
           1 // amount?
         ]
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [  -122.40, -65.56, 2051.90], // on small ledge over void in first chase room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -122.40, -65.56, 2051.90, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-01",
+        "alt-actor":"under-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -130.80, -45.44, 2059.07], // up on pillar near lamp in first chase room, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -130.80, -45.44, 2059.07, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-02",
+        "alt-actor":"under-skill-02"
+      }
+    },
+    {
+      "trans": [  -101.1851, -46.4356, 2030.1538], // on lamp up top in first chase room, extended from other lamp from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -101.1851, -46.4356, 2030.1538, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-03",
+        "alt-actor":"under-skill-03"
+      }
+    },
+    {
+      "trans": [ -118.84, -51.86, 1950.15], // right corner tunnel in first sig room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -118.84, -51.86, 1950.15, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-04",
+        "alt-actor":"under-skill-04"
+      }
+    },
+    {
+      "trans": [ -59.47, -66.40, 1987.26], // behind broken wall where metalhead breaks thru to chase you
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -59.47, -66.40, 1987.26, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-05",
+        "alt-actor":"under-skill-05"
+      }
+    },
+    {
+      "trans": [  -315.0503, -46.2692, 1962.5219], // back upper tunnel in 3rd puzzle room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -315.0503, -46.2692, 1962.5219, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-06",
+        "alt-actor":"under-skill-06"
+      }
+    },
+    {
+      "trans": [  -239.44, -59.30, 2034.81], // windowsill in 2nd puzzle room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -239.44, -59.30, 2034.81, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-07",
+        "alt-actor":"under-skill-07"
+      }
+    },
+    {
+      "trans": [  -81.24, -46.68, 1986.90], // upper ledge in 1st puzzle room, dark giant hijump
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -81.24, -46.68, 1986.90, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-08",
+        "alt-actor":"under-skill-08"
+      }
+    },
+    {
+      "trans": [      -94.5290, -69.7749, 2083.1047], // hanging off edge in corner of early metalhead chase section
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -94.5290, -69.7749, 2083.1047, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-09",
+        "alt-actor":"under-skill-09"
+      }
+    },
+    {
+      "trans": [     -157.8072, -61.2194, 2047.2144], // in wall design above torch, near side to side plat at end of first room of MH chase
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -157.8072, -61.2194, 2047.2144, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-10",
+        "alt-actor":"under-skill-10"
+      }
+    },
+    {
+      "trans": [     -193.2374, -51.3276, 2049.8671], // in ceiling above first laser, abah off lil side wall (no hint)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -193.2374, -51.3276, 2049.8671, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-11",
+        "alt-actor":"under-skill-11"
+      }
+    },
+    {
+      "trans": [  -234.78, -46.86, 1991.11], // east corner of 2nd puzzle room, dark giant from cube
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -234.78, -46.86, 1991.11, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-12",
+        "alt-actor":"under-skill-12"
+      }
+    },
+    {
+      "trans": [      -237.7952, -68.3428, 1967.1647], // east fire in 3rd puzzle room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -237.7952, -68.3428, 1967.1647, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-13",
+        "alt-actor":"under-skill-13"
+      }
+    },
+    {
+      "trans": [     -261.0623, -53.9246, 1971.7186], // in ceiling hole in 3rd puzzle room, jump from respawning cube (or maybe just dark giant)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -261.0623, -53.9246, 1971.7186, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-14",
+        "alt-actor":"under-skill-14"
+      }
+    },
+    {
+      "trans": [        -242.4854, -61.5131, 1925.6053], // in 2nd cave that metalhead breaks out of to chase you
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [       -242.4854, -61.5131, 1925.6053, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-15",
+        "alt-actor":"under-skill-15"
+      }
+    },
+    {
+      "trans": [       -135.2424, -43.9007, 1956.1534], // way up on wall above flames, in 2nd chase above 2 wall platforms (rocket from side/under octogons)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [       -135.2424, -43.9007, 1956.1534, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-16",
+        "alt-actor":"under-skill-16"
+      }
+    },
+    {
+      "trans": [  -122.0112, -56.7188, 1878.0537], // up in corner of wall over laser where you turn left, abah on small ledge (no hint)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -122.0112, -56.7188, 1878.0537, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-17",
+        "alt-actor":"under-skill-17",
+        "bob-scale": ["float", 0.6]
+      }
+    },
+    {
+      "trans": [    -199.0819, -91.5602, 1788.2364], // windowsill on far wall in room where we lose sig, boosted
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    -199.0819, -91.5602, 1788.2364, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-18",
+        "alt-actor":"under-skill-18"
+      }
+    },
+    {
+      "trans": [    -188.8070, -81.2732, 1858.3624], // in flames in in-between room where you're GP-ing thru grates with Sig
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    -188.8070, -81.2732, 1858.3624, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-19",
+        "alt-actor":"under-skill-19"
+      }
+    },
+    {
+      "trans": [  -217.47, -98.1, 1823.36], // edge of walkway in room where we lose Sig
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -217.47, -98.1, 1823.36, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-20",
+        "alt-actor":"under-skill-20",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -219.00, -80.09, 1813.80], // on lamp up top in room where we lose Sig, abag from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -219.00, -80.09, 1813.80, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-21",
+        "alt-actor":"under-skill-21"
+      }
+    },
+    {
+      "trans": [     -270.5983, -97.3310, 1900.0692], // around corner in final room before elevator
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -270.5983, -97.3310, 1900.0692, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-22",
+        "alt-actor":"under-skill-22"
+      }
+    },
+
+    // // HOVER ORBS
+    {
+      "trans": [   -99.6012, -39.9800, 1980.3118], // on lamp in first puzzle room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -99.6012, -39.9800, 1980.3118, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-hover-01",
+        "alt-actor":"under-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -195.23, -48.61, 2037.62], // up high on wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -195.23, -48.61, 2037.62, 10], // bounding sphere
+      "lump": {
+        "name":"under-skill-ghost-hover-02",
+        "alt-actor":"under-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+
+    {
+      "trans": [-30.2111,  -61.9241,  1956.3612], // in flame lamp right at beginning before sig cutscene
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-30.2111,  -61.9241,  1956.3612, 10],
+      "lump": {
+        "name": "skill-ghost-87",
+        "alt-actor": "skill-87"
+      }
+    },
+    {
+      "trans": [-52.3763,  -64.6630,  1919.1239], // (originally OOB but we use it) around corner in first sig room
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-52.3763,  -64.6630,  1919.1239, 10],
+      "lump": {
+        "name": "skill-ghost-88",
+        "alt-actor": "skill-88"
+      }
     }
 
   ]

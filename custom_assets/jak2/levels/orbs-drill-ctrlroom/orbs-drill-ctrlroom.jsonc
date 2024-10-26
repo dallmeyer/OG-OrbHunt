@@ -85,6 +85,52 @@
       "lump": {
         "name":"ctrlroom-skill-04"
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [      91.0085, 51.9876, -138.2077], // up on top of right computers (infin jump)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     91.0085, 51.9876, -138.2077, 10], // bounding sphere
+      "lump": {
+        "name":"ctrlroom-skill-ghost-01",
+        "alt-actor":"ctrlroom-skill-01"
+      }
+    },
+    {
+      "trans": [    93.2528, 42.6377, -114.8272], // in flames/rubble of left computers
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     93.2528, 42.6377, -114.8272, 10], // bounding sphere
+      "lump": {
+        "name":"ctrlroom-skill-ghost-02",
+        "alt-actor":"ctrlroom-skill-02"
+      }
+    },
+    {
+      "trans": [    105.0464, 48.9619, -87.2906], // corner of window on left
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    105.0464, 48.9619, -87.2906, 10], // bounding sphere
+      "lump": {
+        "name":"ctrlroom-skill-ghost-03",
+        "alt-actor":"ctrlroom-skill-03"
+      }
+    },
+    {
+      "trans": [     143.1434, 50.1836, -112.4605], // in innermost room on side of computer
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    143.1434, 50.1836, -112.4605, 10], // bounding sphere
+      "lump": {
+        "name":"ctrlroom-skill-ghost-04",
+        "alt-actor":"ctrlroom-skill-04"
+      }
     }
   ]
 }

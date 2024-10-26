@@ -409,6 +409,398 @@
         "name":"ctyport-skill-hover-07",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [ -260.0,   5.7,     1919.32 ], // #t behind big sphere things next to underport exit (boosted over)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-260.0,   5.7,     1919.3, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-01",
+        "alt-actor":"ctyport-skill-01"
+      }
+    },
+    {
+      "trans": [ 657.45,   38.61,   1834.80 ], // #t opposite end of port from ^, on top of largest sphere (high jump outta zoomer)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [657.45,   38.61,   1834.8, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-02",
+        "alt-actor":"ctyport-skill-02"
+      }
+    },
+    {
+      "trans": [ 111.83,   5.9,     1326.67 ], // #t behind big spheres in middle not far from hiphog (high jump outta zoomer)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [111.83,   5.9,     1326.6, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-03",
+        "alt-actor":"ctyport-skill-03"
+      }
+    },
+    {
+      "trans": [ 401.11,   27.8,    1436.70 ], // #t atop pipe above water, near gungame
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [401.11,   27.8,    1436.7, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-04",
+        "alt-actor":"ctyport-skill-04"
+      }
+    },
+    {
+      "trans": [ -225.22,  8.3,     1658.4  ], // #t  inside pipe opening to water, past hiphop
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-225.22,  8.3,     1658.4, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-05",
+        "alt-actor":"ctyport-skill-05"
+      }
+    },
+    {
+      "trans": [  -380.0000, 5.8, 1353.0000], // inside propaganda in NW towards ctygen
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -380.0000, 5.8, 1353.0000, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-06",
+        "alt-actor":"ctyport-skill-06"
+        // "alt-actor": "propa-6"
+      }
+    },
+    {
+      "trans": [ -36.9861, 2.7, 1516.3984], // special code to ride on top of a barge
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -36.9861, 2.7, 1516.3984, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-07",
+        "alt-actor":"ctyport-skill-07"
+      }
+    },
+    {
+      "trans": [      -273.7422, 8.0920, 1649.0820], // on ground under pipe against wall, between hiphog and underport exit
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -273.7422, 8.0920, 1649.0820, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-08",
+        "alt-actor":"ctyport-skill-08"
+      }
+    },
+    {
+      "trans": [  -195.6936, 49.0602, 1531.9505], // on top of ledge overhead between hiphog and underport exit, car launch
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -195.6936, 49.0602, 1531.9505, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-09",
+        "alt-actor":"ctyport-skill-09"
+      }
+    },
+    {
+      "trans": [   -297.9136, 44.8970, 1664.5773], // up and under roofing on top of ledge overhead between hiphog and underport, car launch, uppercut
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -297.9136, 44.8970, 1664.5773, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-10",
+        "alt-actor":"ctyport-skill-10"
+      }
+    },
+    {
+      "trans": [      26.8840, 18.2398, 1742.1308], // on pipes above underport entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      26.8840, 18.2398, 1742.1308, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-11",
+        "alt-actor":"ctyport-skill-11"
+      }
+    },
+    {
+      "trans": [   305.0000, 9.0, 1760.0000], // in propaganda by south east tower
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  305.0000, 9.0, 1760.0000, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-12",
+        "alt-actor":"ctyport-skill-12"
+        // "alt-actor": "propa-8"
+      }
+    },
+    {
+      "trans": [    715.2379, 39.3148, 1331.6448], // on standpoint way up on wall, right before ctyinda (fat car launch out of slope into corner)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   715.2379, 39.3148, 1331.6448, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-13",
+        "alt-actor":"ctyport-skill-13"
+      }
+    },
+    {
+      "trans": [   569.1087, 49.0646, 1441.5882], // way up on metal zigzag support in corner by path to ctyinda
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   569.1087, 49.0646, 1441.5882, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-14",
+        "alt-actor":"ctyport-skill-14"
+      }
+    },
+    {
+      "trans": [   -193.9332, 44.3291, 1444.8222], // way up on metal zigzag support in corner by path to ctygena
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -193.9332, 44.3291, 1444.8222, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-15",
+        "alt-actor":"ctyport-skill-15"
+      }
+    },
+    {
+      "trans": [  583.0288, 48.9553, 1538.0708], // way up on edge of rooftop just east of path to ctyinda
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  583.0288, 48.9553, 1538.0708, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-16",
+        "alt-actor":"ctyport-skill-16"
+      }
+    },
+    {
+      "trans": [   668.8303, 45.0914, 1662.0753], // way up on edge of rooftop further east of path to ctyinda
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   668.8303, 45.0914, 1662.0753, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-17",
+        "alt-actor":"ctyport-skill-17"
+      }
+    },
+    {
+      "trans": [      -82.6517, -9.9647, 1660.2379], // dive under walkway over water, west side <-> underport entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -82.6517, -9.9647, 1660.2379, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-18",
+        "alt-actor":"ctyport-skill-18"
+      }
+    },
+    {
+      "trans": [    427.6843, -1.2043, 1683.5546], // in water under walkway, east side <-> SE tower
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    427.6843, -1.2043, 1683.5546, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-19",
+        "alt-actor":"ctyport-skill-19"
+      }
+    },
+    {
+      "trans": [   -254.1803, 33.2474, 1405.9362], // up on weird wall-hug standpoint on path to ctygena
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -254.1803, 33.2474, 1405.9362, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-20",
+        "alt-actor":"ctyport-skill-20"
+      }
+    },
+
+    // CRATES
+    {
+      "trans": [ -216.0642, 4.2867, 1908.5012], // behind underport exit
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   0.0000, -0.2097, 0.0001, -0.9777], // quaternion
+      "bsphere": [ -216.0642, 4.2867, 1908.5012, 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-crate-01",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  776.7760, 5.1906, 1259.0056  ], // behind/under right ball on path from ctyinda
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   0.0009, -0.6986, 0.0003, 0.7154], // quaternion
+      "bsphere": [  776.7760, 5.1906, 1259.0056  , 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-crate-02",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  260.2459, 5.2090, 1333.1806], // under balls just east of path from ctypal
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   -0.0001, 0.1797, 0.0000, -0.9837], // quaternion
+      "bsphere": [  260.2459, 5.2090, 1333.1806, 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-crate-03",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  -198.9457, 7.8234, 1432.7570], // behind pipes near path to ctygena (car launch over invis wall near top of pipe)
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [   0.0000, 0.9647, 0.0003, 0.2630], // quaternion
+      "bsphere": [  -198.9457, 7.8234, 1432.7570, 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-crate-04",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+    {
+      "trans": [  589.6224, -4.7239, 1871.0083], // in water on ramp at east end of port (dark jak)
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ -0.2958, 0.5401, 0.2067, 0.7602], // quaternion
+      "bsphere": [  589.6224, -4.7239, 1871.0083, 10], // bounding sphere
+      "lump": {
+        "name": "ctyport-crate-05",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          22, // (pickup-type skill)
+          1 // amount?
+        ]
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [ -117.5,   52.6,    1399.3  ], // way up on pipe, near hiphog (HOVER or boost zoomer jump during race)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-117.5,   52.6,    1399.3, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-hover-01",
+        "alt-actor":"ctyport-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   -235.23,  44.14, 1753.11], // way up on pipe, past hiphog towards underport exit
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -235.23,  44.14, 1753.11, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-hover-02",
+        "alt-actor":"ctyport-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  481.52,  52.79, 1410.25], // way up on pipe, near gungame
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 481.52,  52.79, 1410.25, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-hover-03",
+        "alt-actor":"ctyport-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   128.37, 112.68, 1245.58], // way up on top of radio tower thing, near path to ctypal
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 128.37, 112.68, 1245.58, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-hover-04",
+        "alt-actor":"ctyport-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -225.8237, 84.6049, 1686.4985], // way up on top of radio tower thing, between hiphog and underport
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -225.8237, 84.6049, 1686.4985, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-hover-05",
+        "alt-actor":"ctyport-skill-hover-05",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  251.5067, 86.6532, 1951.8966], // way up on outer sea wall, eastish
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  251.5067, 86.6532, 1951.8966, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-hover-06",
+        "alt-actor":"ctyport-skill-hover-06",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -81.1890, 74.7632, 1958.5886], // way up on outer sea wall, westish
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -81.1890, 74.7632, 1958.5886, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-ghost-hover-07",
+        "alt-actor":"ctyport-skill-hover-07",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
   ]
 }

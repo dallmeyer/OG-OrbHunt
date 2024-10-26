@@ -393,6 +393,352 @@
           1 // amount?
         ]
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [   745.8375, 8.3022, 261.0154], // immediate left corner in tank section
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  745.8375, 8.3022, 261.0154, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-01",
+        "alt-actor":"fordumpa-skill-01"
+      }
+    },
+    {
+      "trans": [ 697.79,   19.3,    295.74], // up/behind pipe in first tank room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [697.79,   19.3,    295.74, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-02",
+        "alt-actor":"fordumpa-skill-02"
+      }
+    },
+    {
+      "trans": [ 728.28,   6.5,     303.2 ], // on vent under platforms in first tank room, avoid death plane
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [728.28,   6.5,     303.2, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-03",
+        "alt-actor":"fordumpa-skill-03"
+      }
+    },
+    {
+      "trans": [ 521.12,   8.5,     346.27], // secret area on ground level in room with 2 rotating platforms, behind boxes
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [521.12,   8.5,     346.27, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-04",
+        "alt-actor":"fordumpa-skill-04"
+      }
+    },
+    {
+      "trans": [      722.9527, 2.8512, 253.3383], // hang down on right in very first doorway
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     722.9527, 2.8512, 253.3383, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-05",
+        "alt-actor":"fordumpa-skill-05"
+      }
+    },
+    {
+      "trans": [ 742.90,  19.35, 306.35], // first room, up on pipe bend on wall, extended frontflip dismount ok
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 742.90,  19.35, 306.35, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-06",
+        "alt-actor":"fordumpa-skill-06"
+      }
+    },
+    {
+      "trans": [ 750.26,  26.15, 295.57], // first room, up on straight pipe higher up, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 750.26,  26.15, 295.57, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-07",
+        "alt-actor":"fordumpa-skill-07"
+      }
+    },
+    {
+      "trans": [ 743.67,  23.07, 292.17], // first room, up on next pipe bend, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 743.67,  23.07, 292.17, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-08",
+        "alt-actor":"fordumpa-skill-08"
+      }
+    },
+    {
+      "trans": [ 750.15,  27.37, 276.09], // first room, behind pipe up high, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 750.15,  27.37, 276.09, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-09",
+        "alt-actor":"fordumpa-skill-09"
+      }
+    },
+    {
+      "trans": [ 698.95,  19.84, 259.27], // turret hallway, on pipe up on right (infin jump to get up)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 698.95,  19.84, 259.27, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-10",
+        "alt-actor":"fordumpa-skill-10"
+      }
+    },
+    {
+      "trans": [     692.9795, 30.3302, 269.6678], // turret hallway, way up between pipe and arch (jump from ^ to infin jump to here)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     692.9795, 30.3302, 269.6678, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-11",
+        "alt-actor":"fordumpa-skill-11"
+      }
+    },
+    {
+      "trans": [ 660.0000, 8.9, 263.0000], // turret hallway, kill 2nd turret
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 660.0000, 8.9, 263.0000, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-12",
+        "alt-actor":"fordumpa-skill-12"
+        // "alt-actor": "fort-turret-5"
+      }
+    },
+    {
+      "trans": [  655.8227, 31.0732, 274.1285], // turret hallway, at the top of pipe above 2nd turret
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  655.8227, 31.0732, 274.1285, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-13",
+        "alt-actor":"fordumpa-skill-13"
+      }
+    },
+    {
+      "trans": [  599.1514, 10.6804, 266.0185], // end of turret hallway, small slippery standpoint on baby pipe in corner
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  599.1514, 10.6804, 266.0185, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-14",
+        "alt-actor":"fordumpa-skill-14",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  610.23,  25.73, 267.98], // end of turret hallway, pipes up high, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   610.23,  25.73, 267.98, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-15",
+        "alt-actor":"fordumpa-skill-15"
+      }
+    },
+    {
+      "trans": [       631.9852, 25.1802, 268.7514], // end of turret hallway, pipes up high inside bigger pipe, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      631.9852, 25.1802, 268.7514, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-16",
+        "alt-actor":"fordumpa-skill-16"
+      }
+    },
+    {
+      "trans": [  631.16,  24.65, 260.89], // turret hallway, skinny pipe up high, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  631.16,  24.65, 260.89, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-17",
+        "alt-actor":"fordumpa-skill-17"
+      }
+    },
+    {
+      "trans": [   643.6967, 24.8717, 265.1706], // turret hallway, end of pipes going backwards from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    643.6967, 24.8717, 265.1706, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-17",
+        "alt-actor":"fordumpa-skill-17"
+      }
+    },
+    {
+      "trans": [      601.2844, 14.4943, 331.5561], // behind tiny boxes on main boxes near swingpole
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      601.2844, 14.4943, 331.5561, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-18",
+        "alt-actor":"fordumpa-skill-18"
+      }
+    },
+    {
+      "trans": [ 601.04,   3.17, 259.94], // on tiny pipe in back corner of turret hallway, death plane ends before wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 601.04,   3.17, 259.94, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-19",
+        "alt-actor":"fordumpa-skill-19"
+      }
+    },
+    {
+      "trans": [     587.9777, 27.4468, 293.4756], // top part of grate that tank usually breaks thru
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     587.9777, 27.4468, 293.4756, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-20",
+        "alt-actor":"fordumpa-skill-20"
+      }
+    },
+    {
+      "trans": [  584.26,  14.72, 322.59], // just after swingpole, mid part of pipe below plat
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  584.26,  14.72, 322.59, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-21",
+        "alt-actor":"fordumpa-skill-21"
+      }
+    },
+    {
+      "trans": [       531.8004, 9.3359, 290.6044], // rotator room, behind pair of pipes under crates
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      531.8004, 9.3359, 290.6044, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-22",
+        "alt-actor":"fordumpa-skill-22"
+      }
+    },
+    {
+      "trans": [     568.1912, 19.9405, 292.4532], // rotator room, between pipes under walkway
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     568.1912, 19.9405, 292.4532, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-23",
+        "alt-actor":"fordumpa-skill-23"
+      }
+    },
+    {
+      "trans": [      497.8496, 34.9606, 294.4261], // rotator room, up high in weird little alcove, jump from rotators
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     497.8496, 34.9606, 294.4261, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-24",
+        "alt-actor":"fordumpa-skill-24"
+      }
+    },
+    {
+      "trans": [ 532.0886, 25.1, 320.9300], // rotator room, break first elec switch
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 532.0886, 25.1, 320.9300, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-25",
+        "alt-actor":"fordumpa-skill-25"
+        // "alt-actor": "fort-elec-switch-1"
+      }
+    },
+    {
+      "trans": [  495.4842, 34.9324, 331.7716], // rotator room, end of pipe on ceiling
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  495.4842, 34.9324, 331.7716, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-26",
+        "alt-actor":"fordumpa-skill-26"
+      }
+    },
+    {
+      "trans": [ 552.51,  28.98, 348.28], // rotator room, on top of vent in corner
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 552.51,  28.98, 348.28, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-27",
+        "alt-actor":"fordumpa-skill-27"
+      }
+    },
+    {
+      "trans": [  472.5435, 34.8849, 292.0903], // last room, on pipe near ceiling
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  472.5435, 34.8849, 292.0903, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-28",
+        "alt-actor":"fordumpa-skill-28"
+      }
+    },
+    {
+      "trans": [  471.4447, 31.6756, 269.6255], // last room, behind boxes on top of shelves
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  471.4447, 31.6756, 269.6255, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-29",
+        "alt-actor":"fordumpa-skill-29"
+      }
+    },
+    {
+      "trans": [  480.3692, 31.4549, 271.2872], // last room, behind pipe behind crates
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  480.3692, 31.4549, 271.2872, 10], // bounding sphere
+      "lump": {
+        "name":"fordumpa-skill-ghost-30",
+        "alt-actor":"fordumpa-skill-30"
+      }
     }
   ]
 }

@@ -398,6 +398,387 @@
         "name":"tombb-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [  334.15, -63.90, 1263.75 ], // in cutout above door from first hallway into left tomb dark eco area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 334.15, -63.90, 1263.75, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-01",
+        "alt-actor":"tombb-skill-01"
+      }
+    },
+    {
+      "trans": [  343.79, -50.93, 1279.96 ], // on edge near ceiling, above ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 343.79, -50.93, 1279.96, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-02",
+        "alt-actor":"tombb-skill-02"
+      }
+    },
+    {
+      "trans": [ 332.50, -50.93, 1289.62], // on edge near ceiling, above ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 332.50, -50.93, 1289.62, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-03",
+        "alt-actor":"tombb-skill-03"
+      }
+    },
+    {
+      "trans": [ 336.07, -62.40, 1218.85], // gap on one of teh spiky platforms
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 336.07, -62.40, 1218.85, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-04",
+        "alt-actor":"tombb-skill-04"
+      }
+    },
+    {
+      "trans": [  336.0509, -84.2387, 1247.6707], // in dark eco between entrance and raised steps down to tombd
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  336.0509, -84.2387, 1247.6707, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-05",
+        "alt-actor":"tombb-skill-05"
+      }
+    },
+    {
+      "trans": [ 296.78, -18.66, 1165.56], // up in left corner of infin jump area opposite start, jump from swingpoles
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 296.78, -18.66, 1165.56, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-06",
+        "alt-actor":"tombb-skill-06"
+      }
+    },
+    {
+      "trans": [ 335.1499, 9.6700, 1180.9699], // in banana bread box on ceiling, extended from infin jump area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 335.1499, 9.6700, 1180.9699, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-07",
+        "alt-actor":"tombb-skill-07"
+      }
+    },
+    {
+      "trans": [  341.3880, 6.5481, 1166.9327], // up in rafters above infin jump area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  341.3880, 6.5481, 1166.9327, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-08",
+        "alt-actor":"tombb-skill-08"
+      }
+    },
+    {
+      "trans": [  338.84, -18.49, 1166.17], // inside central circle of infin jump area opposite start
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  338.84, -18.49, 1166.17, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-09",
+        "alt-actor":"tombb-skill-09"
+      }
+    },
+    {
+      "trans": [ 389.5715, -84.1819, 1250.5146], // in dark eco on right wall (careful can fall thru dark eco :) )
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 389.5715, -84.1819, 1250.5146, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-10",
+        "alt-actor":"tombb-skill-10"
+      }
+    },
+    {
+      "trans": [ 289.2193, -75.3273, 1225.8593], // in hand of statue guy on left
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 289.2193, -75.3273, 1225.8593, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-11",
+        "alt-actor":"tombb-skill-11"
+      }
+    },
+    {
+      "trans": [ 335.60, -29.21, 1262.80], // bottom of infin jump wall over entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 335.60, -29.21, 1262.80, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-12",
+        "alt-actor":"tombb-skill-12"
+      }
+    },
+    {
+      "trans": [ 335.55,   0.92, 1259.91], // top of infin jump wall over entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 335.55,   0.92, 1259.91, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-13",
+        "alt-actor":"tombb-skill-13"
+      }
+    },
+    {
+      "trans": [  326.1983, -12.1623, 1262.4891], // inside main cavity in infin jump wall over entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  326.1983, -12.1623, 1262.4891, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-14",
+        "alt-actor":"tombb-skill-14"
+      }
+    },
+    {
+      "trans": [   376.8558, -16.6787, 1262.3302], // far left side of infin jump wall over entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   376.8558, -16.6787, 1262.3302, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-15",
+        "alt-actor":"tombb-skill-15"
+      }
+    },
+    {
+      "trans": [ 379.5046, -80.0380, 1171.2674], // in one of the lamps over dark eco
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  379.5046, -80.0380, 1171.2674, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-16",
+        "alt-actor":"tombb-skill-16"
+      }
+    },
+    {
+      "trans": [  386.4589, -12.8439, 1181.1051], // high up on wall, boosted/extended to abah cancel from infin jump nearby
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  386.4589, -12.8439, 1181.1051, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-17",
+        "alt-actor":"tombb-skill-17"
+      }
+    },
+    {
+      "trans": [  336.0860, -98.5892, 1204.6889], // on lower part of pillar halfway down steps
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  336.0860, -98.5892, 1204.6889, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-18",
+        "alt-actor":"tombb-skill-18"
+      }
+    },
+    {
+      "trans": [   284.3830, -70.9805, 1287.5493], // on right slanted wall at very very start hallway
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   284.3830, -70.9805, 1287.5493, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-19",
+        "alt-actor":"tombb-skill-19",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  284.4436, -57.0403, 1278.0426], // up high on precursor decoration, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   284.4436, -57.0403, 1278.0426, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-20",
+        "alt-actor":"tombb-skill-20"
+      }
+    },
+    {
+      "trans": [   351.5199, -98.8685, 1172.7550], // corner of arch at bottom of stairs (precise boosted from 2nd step, avoid dark eco OR jetboard dismount from side/top of stairs)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    351.5199, -98.8685, 1172.7550, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-21",
+        "alt-actor":"tombb-skill-21"
+      }
+    },
+    {
+      "trans": [      377.3881, -56.4642, 1260.8758], // on small ledge in right corner between levels
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [       377.3881, -56.4642, 1260.8758, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-22",
+        "alt-actor":"tombb-skill-22"
+      }
+    },
+    {
+      "trans": [     353.0316, -91.7785, 1129.7261], // up near ceiling in corner of room before dax boulder
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     353.0316, -91.7785, 1129.7261, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-23",
+        "alt-actor":"tombb-skill-23"
+      }
+    },
+    {
+      "trans": [    328.5777, -114.2308, 1120.0433], // behind/under rubble outside tombe
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    328.5777, -114.2308, 1120.0433, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-24",
+        "alt-actor":"tombb-skill-24"
+      }
+    },
+    {
+      "trans": [      391.4425, -62.0895, 1091.7813], // behind torch over void in final room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     391.4425, -62.0895, 1091.7813, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-25",
+        "alt-actor":"tombb-skill-25"
+      }
+    },
+    {
+      "trans": [    375.3397, -34.7068, 1061.9852], // up near ceiling above moving swingpole, beginning of last stretch
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    375.3397, -34.7068, 1061.9852, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-26",
+        "alt-actor":"tombb-skill-26"
+      }
+    },
+    {
+      "trans": [     350.4118, -42.1065, 1062.0], // up high between 2 in-n-out plats, need to GP to bounce for height
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    350.4118, -42.1065, 1062.0, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-27",
+        "alt-actor":"tombb-skill-27"
+      }
+    },
+    {
+      "trans": [ 335.62, -53.48, 1100.34], // on shoulder of big statue in wall, torch proxy from below (or uppercut over head from other shoulder)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 335.62, -53.48, 1100.34, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-28",
+        "alt-actor":"tombb-skill-28"
+      }
+    },
+    {
+      "trans": [     300.0153, -58.7315, 1091.3961], // on small ledge under torch, sorta level with exit
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     300.0153, -58.7315, 1091.3961, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-29",
+        "alt-actor":"tombb-skill-29"
+      }
+    },
+    {
+      "trans": [    274.2791, -37.3045, 1085.1602], // on precursor decoration right before button at end of left tomb (jump from torch or dark giant)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    274.2791, -37.3045, 1085.1602, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-30",
+        "alt-actor":"tombb-skill-30"
+      }
+    },
+    {
+      "trans": [ 315.59, -53.48, 1100.40], // on other shoulder of big statue in wall, just boosted from exit area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 315.59, -53.48, 1100.40, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-31",
+        "alt-actor":"tombb-skill-31"
+      }
+    },
+    {
+      "trans": [ 436.37, -96.60, 1059.35], // on tiny ledge in low corner, back right from entrance to final platforming section
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 436.37, -96.60, 1059.35, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-32",
+        "alt-actor":"tombb-skill-32"
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [ 369.96, -47.82, 1098.05 ], // on head of big statue in wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 369.96, -47.82, 1098.05, 10], // bounding sphere
+      "lump": {
+        "name":"tombb-skill-ghost-hover-01",
+        "alt-actor":"tombb-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+
+    {
+      "trans": [332.85, -36.5, 1253.96], // in flame above where it usually is
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [332.85, -36.5, 1253.96, 10],
+      "lump": {
+        "name": "skill-ghost-9",
+        "alt-actor": "skill-9"
+      }
     }
   ]
 }

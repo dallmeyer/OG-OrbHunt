@@ -979,6 +979,7 @@
 
   (set! (-> obj orb-autosave?) #t)
   (set! (-> obj skill-starburst?) #f)
+  (set! (-> obj orb-ghosts?) #f)
   (set! (-> obj closest-orb?) #f)
   (set! (-> obj orb-map-icons?) #f)
   (set! (-> obj pseudo-savestates?) #f)
@@ -1055,6 +1056,7 @@
 
     (("orb-autosave?") (set! (-> obj orb-autosave?) (file-stream-read-symbol file)))
     (("skill-starburst?") (set! (-> obj skill-starburst?) (file-stream-read-symbol file)))
+    (("orb-ghosts?") (set! (-> obj orb-ghosts?) (file-stream-read-symbol file)))
     (("closest-orb?") (set! (-> obj closest-orb?) (file-stream-read-symbol file)))
     (("orb-map-icons?") (set! (-> obj orb-map-icons?) (file-stream-read-symbol file)))
     (("pseudo-savestates?") (set! (-> obj pseudo-savestates?) (file-stream-read-symbol file)))
@@ -1084,6 +1086,7 @@
 
   (format file "  (orb-autosave? ~A)~%" (-> obj orb-autosave?))
   (format file "  (skill-starburst? ~A)~%" (-> obj skill-starburst?))
+  (format file "  (orb-ghosts? ~A)~%" (-> obj orb-ghosts?))
   (format file "  (closest-orb? ~A)~%" (-> obj closest-orb?))
   (format file "  (orb-map-icons? ~A)~%" (-> obj orb-map-icons?))
   (format file "  (pseudo-savestates? ~A)~%" (-> obj pseudo-savestates?))

@@ -683,6 +683,10 @@
       (set! *hover-collected-grace-time* (get-current-time))
       )
     (cond
+      ;; ghost orb hint, no pickup
+      ((and (= (-> self type symbol) 'skill-ghost))
+        ;; don't do pickup
+        )
       ;; some orbs require 'alt-actor to be dead before pickup is allowed (veggies hack)
       ((and (= (-> self type symbol) 'skill)
             (not (skill-alt-actor-check? self #t))
@@ -1922,6 +1926,8 @@ This commonly includes things such as:
    )
   )
 
+(deftype skill-ghost (skill) ()) ;; same as skill but can't be picked up and is transparent
+
 (define-extern orb-placer-list-maintenace (function symbol none))
 (defstate pickup (skill)
   :virtual #t
@@ -1959,11 +1965,26 @@ This commonly includes things such as:
   :virtual #t
   :code (behavior ()
     (until #f
-      ;; make orbs invis if they can't be collected yet due to alt-actor
-      (if (not (skill-alt-actor-check? self #f))
-        (logior! (-> self draw status) (draw-control-status no-draw-bounds))
-        (logclear! (-> self draw status) (draw-control-status no-draw-bounds))
-        )
+      ;; check orb/ghost visibility
+      (cond
+        ((not (skill-alt-actor-check? self #f))
+          ;; make orbs invis if they can't be collected yet due to alt-actor
+          (logior! (-> self draw status) (draw-control-status no-draw-bounds)))
+        ((= (-> self type) skill-ghost)
+          (cond
+            ((-> *mod-settings* orb-ghosts?)
+              ;; translucent ghost orb
+              (logclear! (-> self draw status) (draw-control-status no-draw-bounds))
+              (logior! (-> self draw status) (draw-control-status force-fade))
+              (set! (-> self draw force-fade) (the-as uint 12)))
+            (else
+              ;; hidden ghost orb
+              (logior! (-> self draw status) (draw-control-status no-draw-bounds))
+              (logclear! (-> self draw status) (draw-control-status force-fade)))))
+        (else
+          ;; passed alt-actor check, not a ghost, show orba
+          (logclear! (-> self draw status) (draw-control-status no-draw-bounds))))
+      
       (if (and (logtest? (-> self flags) (collectable-flag fadeout))
                (begin
                  (if (movie?)
@@ -2055,7 +2076,9 @@ This commonly includes things such as:
         (set-vector! (-> this draw color-emissive) 0.2 0.2 0.2 1.0)
         )
       )
-    (set! (-> this minimap) (add-icon! *minimap* this (the uint map-class) (the-as int #f) (the-as vector #t) 0))
+    (when (= (-> this type) skill)
+      (set! (-> this minimap) (add-icon! *minimap* this (the uint map-class) (the-as int #f) (the-as vector #t) 0))
+      )
     )
   (set! (-> this part) (create-launch-control (-> *part-group-id-table* 1295) this))
   0

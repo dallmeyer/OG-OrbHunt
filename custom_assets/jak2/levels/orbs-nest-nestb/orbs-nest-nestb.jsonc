@@ -532,6 +532,541 @@
         "name":"nestb-skill-hover-09",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [ 167.06,  36.22, -441.12], // hidden behind rift ring
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0.6314, 0, 0.7754], // quaternion
+      "bsphere": [ 167.06,  36.22, -441.12, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-warp-gate-01",
+        "distance": ["meters", 15.0]
+      }
+    },
+    {
+      "trans": [   29.4167, 37.2846, -301.4124], // right wall near start
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  29.4167, 37.2846, -301.4124, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-01",
+        "alt-actor":"nestb-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   36.1716, 46.4764, -299.8479], // crevice between spikes, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  36.1716, 46.4764, -299.8479, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-02",
+        "alt-actor":"nestb-skill-02"
+      }
+    },
+    {
+      "trans": [   52.46,  49.60, -305.93], // crevice between spikes on right, jump/abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  52.46,  49.60, -305.93, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-03",
+        "alt-actor":"nestb-skill-03"
+      }
+    },
+    {
+      "trans": [  185.48,  -9.61, -322.63], // on green bulb, down a couple levels on far right side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  185.48,  -9.61, -322.63, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-04",
+        "alt-actor":"nestb-skill-04"
+      }
+    },
+    {
+      "trans": [  189.02,  -3.77, -321.50], // on cables, down a couple levels on far right side, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  189.02,  -3.77, -321.50, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-05",
+        "alt-actor":"nestb-skill-05"
+      }
+    },
+    {
+      "trans": [  188.12,  -0.22, -330.13], // on cables, down a couple levels on far right side, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  188.12,  -0.22, -330.13, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-06",
+        "alt-actor":"nestb-skill-06"
+      }
+    },
+    {
+      "trans": [   74.25,  31.13, -338.84], // over edge between spikes, over inner void
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  74.25,  31.13, -338.84, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-07",
+        "alt-actor":"nestb-skill-07"
+      }
+    },
+    {
+      "trans": [      110.9441, 34.1596, -310.4217], // inside roots on back of MH "lamp" on right
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      110.9441, 34.1596, -310.4217, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-08",
+        "alt-actor":"nestb-skill-08"
+      }
+    },
+    {
+      "trans": [   62.65,  36.00, -379.75], // inside roots on back of MH "lamp" on left (2nd)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   62.65,  36.00, -379.75, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-09",
+        "alt-actor":"nestb-skill-09"
+      }
+    },
+    {
+      "trans": [   148.56, -10.46, -288.07], // green bulb, drop down couple levels on right>mid side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   148.56, -10.46, -288.07, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-10",
+        "alt-actor":"nestb-skill-10"
+      }
+    },
+    {
+      "trans": [   58.05,  31.01, -284.45], // green bulb, boosted out right>early side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   58.05,  31.01, -284.45, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-11",
+        "alt-actor":"nestb-skill-11"
+      }
+    },
+    {
+      "trans": [    23.05,  32.19, -371.85], // down below edge between spikes, behind left early "lamp"
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    23.05,  32.19, -371.85, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-12",
+        "alt-actor":"nestb-skill-12"
+      }
+    },
+    {
+      "trans": [   28.14,  53.80, -363.12], // up atop left early "lamp", abah from side (no hint)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   28.14,  53.80, -363.12, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-13",
+        "alt-actor":"nestb-skill-13"
+      }
+    },
+    {
+      "trans": [  77.39,   8.01, -459.35], // green bulb, down/out left side - extended frontflip or whatever, dont need to hover
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  77.39,   8.01, -459.35, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-14",
+        "alt-actor":"nestb-skill-14"
+      }
+    },
+    {
+      "trans": [    30.75,   8.41, -441.14], // green bulb, down/out left side - extended frontflip or whatever, dont need to hover
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   30.75,   8.41, -441.14, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-15",
+        "alt-actor":"nestb-skill-15"
+      }
+    },
+    {
+      "trans": [  95.69,  35.52, -267.36], // green bulb, down/out right side - extended frontflip or whatever, dont need to hover
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   95.69,  35.52, -267.36, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-16",
+        "alt-actor":"nestb-skill-16"
+      }
+    },
+    {
+      "trans": [  179.70,  54.42, -346.95], // green bulb, up on back right wall - spin up to standpoint on slant below
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 179.70,  54.42, -346.95, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-17",
+        "alt-actor":"nestb-skill-17"
+      }
+    },
+    {
+      "trans": [ 178.17,  71.26, -351.71], // smaller green bulb, up on back right wall - up from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 178.17,  71.26, -351.71, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-18",
+        "alt-actor":"nestb-skill-18"
+      }
+    },
+    {
+      "trans": [  -8.3996, 10.5658, -402.1860], // smaller green bulb, out on early left wall - extended ff to free fall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -8.3996, 10.5658, -402.1860, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-19",
+        "alt-actor":"nestb-skill-19"
+      }
+    },
+    {
+      "trans": [ 175.38,  30.82, -384.59], // in corner to climb out of boss fight area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  175.38,  30.82, -384.59, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-20",
+        "alt-actor":"nestb-skill-20"
+      }
+    },
+    {
+      "trans": [   172.9595, 51.8250, -390.0261], // up on spikes/standable eggs on right wall, just entering boss area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    172.9595, 51.8250, -390.0261, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-21",
+        "alt-actor":"nestb-skill-21"
+      }
+    },
+    {
+      "trans": [   156.5996, 34.8546, -407.8224], // on small slippery surface just before boss area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    156.5996, 34.8546, -407.8224, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-22",
+        "alt-actor":"nestb-skill-22",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   153.7794, 52.5255, -406.9545], // up on spikes/standable eggs on left wall, just entering boss area, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   153.7794, 52.5255, -406.9545, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-23",
+        "alt-actor":"nestb-skill-23"
+      }
+    },
+    {
+      "trans": [   186.38,  24.47, -392.21], // in boss area on right, behind tubes - uppercut from entrance plat behind invis wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  186.38,  24.47, -392.21, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-24",
+        "alt-actor":"nestb-skill-24"
+      }
+    },
+    {
+      "trans": [ 236.37,  33.42, -427.45], // on spikes in back of boss area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 236.37,  33.42, -427.45, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-25",
+        "alt-actor":"nestb-skill-25",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  236.59,  49.39, -421.26], // up on on green bulb on back wall of boss area, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  236.59,  49.39, -421.26, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-26",
+        "alt-actor":"nestb-skill-26"
+      }
+    },
+    {
+      "trans": [  230.99,  54.84, -432.61], // up on big support in back of boss area, extendo from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  230.99,  54.84, -432.61, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-27",
+        "alt-actor":"nestb-skill-27"
+      }
+    },
+    {
+      "trans": [  227.71,  52.53, -406.60], // up on support on back/right wall of boss area, jump to other green bulb from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  227.71,  52.53, -406.60, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-28",
+        "alt-actor":"nestb-skill-28"
+      }
+    },
+    {
+      "trans": [ 222.17,  34.85, -463.67], // on spikes in back of boss area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 222.17,  34.85, -463.67, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-29",
+        "alt-actor":"nestb-skill-29",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  221.06,  48.47, -459.99], // up between tubes in back boss area, abah from ^ through here to next
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 221.06,  48.47, -459.99, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-30",
+        "alt-actor":"nestb-skill-30"
+      }
+    },
+    {
+      "trans": [  225.5057, 50.6845, -458.1827], // on smaller bulb between spikes on back wall of boss area, abah from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  225.5057, 50.6845, -458.1827, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-31",
+        "alt-actor":"nestb-skill-31"
+      }
+    },
+    {
+      "trans": [   220.8845, 60.2491, -454.6336], // way up on big green bulb on back wall of boss area, up from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   220.8845, 60.2491, -454.6336, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-32",
+        "alt-actor":"nestb-skill-32"
+      }
+    },
+    {
+      "trans": [ 154.16,  47.70, -430.75], // atop spikes/standpoint bulbs behind rift gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  154.16,  47.70, -430.75, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-33",
+        "alt-actor":"nestb-skill-33"
+      }
+    },
+    {
+      "trans": [  197.0092, 39.9262, -474.2519], // on spikes up a bit on left/back wall of boss area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  197.0092, 39.9262, -474.2519, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-34",
+        "alt-actor":"nestb-skill-34",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [    192.8556, 61.0417, -466.2648], // way up on green bulb in left/back boss area, abah from ^ into infin
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   192.8556, 61.0417, -466.2648, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-35",
+        "alt-actor":"nestb-skill-35"
+      }
+    },
+    {
+      "trans": [       181.4206, 38.3423, -473.3958 ], // up in corner behind tubes on left, near rift gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     181.4206, 38.3423, -473.3958 , 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-36",
+        "alt-actor":"nestb-skill-36"
+      }
+    },
+    {
+      "trans": [        203.7689, 12.6796, -425.9399], // in hole under final boss (extended)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     203.7689, 12.6796, -425.9399, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-37",
+        "alt-actor":"nestb-skill-37"
+      }
+    },
+
+    // // HOVER ORBS
+    {
+      "trans": [   80.81,  38.58, -462.11], // green bulb out on left side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  80.81,  38.58, -462.11, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-hover-01",
+        "alt-actor":"nestb-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   120.65,  57.92, -440.16], // up on green wall, left side bulb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  120.65,  57.92, -440.16, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-hover-02",
+        "alt-actor":"nestb-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  124.7715, 78.3026, -432.2065], // up on green wall, left top corner bulb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  124.7715, 78.3026, -432.2065, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-hover-03",
+        "alt-actor":"nestb-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [    79.9757, 66.5328, -462.6828], // up on left wall, green bulb, above skill-hover-01^^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   79.9757, 66.5328, -462.6828, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-hover-04",
+        "alt-actor":"nestb-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   164.3017, 84.0118, -368.0279], // up on green wall, right inside bulb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   164.3017, 84.0118, -368.0279, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-hover-05",
+        "alt-actor":"nestb-skill-hover-05",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  75.45,  63.57, -381.54], // up on tall "lamp" on left
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  75.45,  63.57, -381.54, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-hover-06",
+        "alt-actor":"nestb-skill-hover-06",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ -7.7761, 58.0489, -415.0087], // on left wall, tiny green bulb (easiest to hover holding X from early platform)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -7.7761, 58.0489, -415.0087, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-hover-07",
+        "alt-actor":"nestb-skill-hover-07",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  14.71,  59.06, -336.21], // among spikes up on wall on left just after entering
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   14.71,  59.06, -336.21, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-hover-08",
+        "alt-actor":"nestb-skill-hover-08",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  200.48,  59.74, -394.52], // up high on green bulb in boss area on right
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  200.48,  59.74, -394.52, 10], // bounding sphere
+      "lump": {
+        "name":"nestb-skill-ghost-hover-09",
+        "alt-actor":"nestb-skill-hover-09",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
   ]
 }

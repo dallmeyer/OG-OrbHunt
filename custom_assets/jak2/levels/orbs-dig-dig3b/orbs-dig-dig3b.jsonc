@@ -426,6 +426,388 @@
         "name":"dig3b-skill-hover-02",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [  420.21, -61.51, -2015.14], // doorstep of building around corner from smetal platforms you GP down
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 420.21, -61.51, -2015.14, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-01",
+        "alt-actor":"dig3b-skill-01"
+      }
+    },
+    {
+      "trans": [     394.7456, -84.0725, -2062.2495], // in small space near button under plats with tons of scorpion MHs
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     394.7456, -84.0725, -2062.2495, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-02",
+        "alt-actor":"dig3b-skill-02"
+      }
+    },
+    {
+      "trans": [ 483.14, -54.25, -2116.50], // on doorstep of building up high (boosted over from nearby area)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 483.14, -54.25, -2116.50, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-03",
+        "alt-actor":"dig3b-skill-03"
+      }
+    },
+    {
+      "trans": [     473.4391, -81.5465, -1991.2088], // tiny gap between wall and raised area in small room with button
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     473.4391, -81.5465, -1991.2088, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-04",
+        "alt-actor":"dig3b-skill-04"
+      }
+    },
+    {
+      "trans": [    437.9420, -78.7995, -2005.0786], // small edge of building near back path to small room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    437.9420, -78.7995, -2005.0786, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-05",
+        "alt-actor":"dig3b-skill-05"
+      }
+    },
+    {
+      "trans": [ 454.81, -89.42, -2029.90], // below metal cages you can GP down (drop them all super low, one row at a time)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 454.81, -89.42, -2029.90, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-06",
+        "alt-actor":"dig3b-skill-06"
+      }
+    },
+    {
+      "trans": [     367.1619, -83.9180, -2032.8730], // between stalags under walkway at start of 3b
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     367.1619, -83.9180, -2032.8730, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-07",
+        "alt-actor":"dig3b-skill-07"
+      }
+    },
+    {
+      "trans": [ 330.04, -84.85, -2043.35], // between wall and steps not far from start of 3b (extended over invis wall)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 330.04, -84.85, -2043.35, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-08",
+        "alt-actor":"dig3b-skill-08"
+      }
+    },
+    {
+      "trans": [ 327.44, -74.41, -2015.28], // in small gap between walkway at entrance and wall (jump over invis wall)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 327.44, -74.41, -2015.28, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-09",
+        "alt-actor":"dig3b-skill-09"
+      }
+    },
+    {
+      "trans": [ 243.26, -52.51, -2134.33], // behind stalags at start of western room (jump over invis wall)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 243.26, -52.51, -2134.33, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-10",
+        "alt-actor":"dig3b-skill-10"
+      }
+    },
+    {
+      "trans": [ 160.15, -52.69, -2127.38], // behind small rocks left side of first building in western room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 160.15, -52.69, -2127.38, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-11",
+        "alt-actor":"dig3b-skill-11"
+      }
+    },
+    {
+      "trans": [  170.25, -34.29, -2134.42], // on top of first building in western room, boosted from middle area onto right roof corner
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 170.25, -34.29, -2134.42, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-12",
+        "alt-actor":"dig3b-skill-12"
+      }
+    },
+    {
+      "trans": [ 283.65, -75.84, -2141.25], // behind pillar that rises from buttons
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  283.65, -75.84, -2141.25, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-13",
+        "alt-actor":"dig3b-skill-13"
+      }
+    },
+    {
+      "trans": [ 468.03, -79.70, -2102.44], // behind metal sheet under steps near solo balloon lurker
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  468.03, -79.70, -2102.44, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-14",
+        "alt-actor":"dig3b-skill-14"
+      }
+    },
+    {
+      "trans": [ 450.92, -47.92, -2153.04], // atop lamp post near solo balloon lurker
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 450.92, -47.92, -2153.04, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-15",
+        "alt-actor":"dig3b-skill-15"
+      }
+    },
+    {
+      "trans": [ 448.14, -39.97, -2151.76], // atop next lamp post from^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 448.14, -39.97, -2151.76, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-16",
+        "alt-actor":"dig3b-skill-16"
+      }
+    },
+    {
+      "trans": [ 428.04, -85.54, -2066.76], // on rock near lava center of room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 428.04, -85.54, -2066.76, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-17",
+        "alt-actor":"dig3b-skill-17"
+      }
+    },
+    {
+      "trans": [     463.6515, -88.5707, -1923.4665], // half submerged in lava on back path from 3a
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     463.6515, -88.5707, -1923.4665, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-18",
+        "alt-actor":"dig3b-skill-18"
+      }
+    },
+    {
+      "trans": [    419.1487, -88.1253, -2095.7399], // half submerged in lava in middle of big room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    419.1487, -88.1253, -2095.7399, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-19",
+        "alt-actor":"dig3b-skill-19"
+      }
+    },
+    {
+      "trans": [ 455.69, -68.98, -2158.67], // underneath platforms on island, infin jump on I beams
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 455.69, -68.98, -2158.67, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-20",
+        "alt-actor":"dig3b-skill-20"
+      }
+    },
+    {
+      "trans": [    362.7106, -79.4792, -2078.6132], // behind stalags supporting upper walkway, over lava river
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    362.7106, -79.4792, -2078.6132, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-21",
+        "alt-actor":"dig3b-skill-21"
+      }
+    },
+    {
+      "trans": [     341.0783, -72.1735, -2176.1242], // between rocks/stalags in corner with steps leading to western room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    341.0783, -72.1735, -2176.1242, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-22",
+        "alt-actor":"dig3b-skill-22"
+      }
+    },
+    {
+      "trans": [    170.0726, -53.2710, -2134.1579], // under "porch" of house in western room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    170.0726, -53.2710, -2134.1579, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-23",
+        "alt-actor":"dig3b-skill-23",
+        "bob-scale": ["float", 0.8]
+      }
+    },
+    {
+      "trans": [    314.4430, -71.9864, -2002.1956], // between stalags in short hallway left from entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    314.4430, -71.9864, -2002.1956, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-24",
+        "alt-actor":"dig3b-skill-24",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [    319.1252, -58.4361, -2001.2370], // behind stalacs up high in short hallway left from entrance, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    319.1252, -58.4361, -2001.2370, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-25",
+        "alt-actor":"dig3b-skill-25"
+      }
+    },
+    {
+      "trans": [     361.8713, -84.9756, -2012.3045], // crevice in wall on lower area, not far from entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    361.8713, -84.9756, -2012.3045, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-26",
+        "alt-actor":"dig3b-skill-26"
+      }
+    },
+    {
+      "trans": [    309.0022, -88.5699, -2094.8703], // submerged in lava in corner sort of near path to western room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    309.0022, -88.5699, -2094.8703, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-27",
+        "alt-actor":"dig3b-skill-27"
+      }
+    },
+    {
+      "trans": [ 372.67, -64.81, -2150.79], // top of lamp between balloon lurker and path to western room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 372.67, -64.81, -2150.79, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-28",
+        "alt-actor":"dig3b-skill-28"
+      }
+    },
+    {
+      "trans": [  319.7425, -59.8909, -2120.4267], // on higher platform that only exists for orb in vanilla
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  319.7425, -59.8909, -2120.4267, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-29",
+        "alt-actor":"dig3b-skill-29"
+      }
+    },
+    {
+      "trans": [  441.3604, -80.0056, -2139.0524], // in bottom of support beam for structures on island
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   441.3604, -80.0056, -2139.0524, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-30",
+        "alt-actor":"dig3b-skill-30"
+      }
+    },
+    {
+      "trans": [  472.7356, -67.1562, -2091.6259], // on support beam for houses, mid level
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  472.7356, -67.1562, -2091.6259, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-31",
+        "alt-actor":"dig3b-skill-31"
+      }
+    },
+    {
+      "trans": [    189.5141, -56.4215, -2160.3259], // in lava next to long floaty rock platforms in western room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    189.5141, -56.4215, -2160.3259, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-32",
+        "alt-actor":"dig3b-skill-32"
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [  232.30, -28.84, -2064.89], // on doorstep up high in western room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 232.30, -28.84, -2064.89, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-hover-01",
+        "alt-actor":"dig3b-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  221.06, -16.48, -2093.96], // on top of balloon lurker in western room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 221.06, -16.48, -2093.96, 10], // bounding sphere
+      "lump": {
+        "name":"dig3b-skill-ghost-hover-02",
+        "alt-actor":"dig3b-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
   ]
 }

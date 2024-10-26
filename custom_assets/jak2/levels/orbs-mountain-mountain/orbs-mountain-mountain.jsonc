@@ -1925,6 +1925,2115 @@
         "name":"mountain-skill-11",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [  -484.73,  45.75, 129.20], // first "room", on wall right side of exit from mincan
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -484.73,  45.75, 129.20, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-01",
+        "alt-actor":"mountain-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -473.97,  56.05, 127.94], // first "room", up on wall right side after exit from mincan, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -473.97,  56.05, 127.94, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-02",
+        "alt-actor":"mountain-skill-02"
+      }
+    },
+    {
+      "trans": [  -462.40,  50.06, 135.85], // first "room", on metal support to wall, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -462.40,  50.06, 135.85, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-03",
+        "alt-actor":"mountain-skill-03"
+      }
+    },
+    {
+      "trans": [  -457.38,  60.28, 135.80], // first "room", higher on metal support to wall, jump (or abah) from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -457.38,  60.28, 135.80, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-04",
+        "alt-actor":"mountain-skill-04",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -457.8578, 75.5298, 135.9542], // first "room", under infin jump ceiling on wall, sliding abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -457.8578, 75.5298, 135.9542, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-05",
+        "alt-actor":"mountain-skill-05"
+      }
+    },
+    {
+      "trans": [ -451.31,  80.05, 141.57], // first "room", on wall right next to pillar, infin jump up/on corner edges from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -451.31,  80.05, 141.57, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-06",
+        "alt-actor":"mountain-skill-06"
+      }
+    },
+    {
+      "trans": [  -454.02,  97.55, 135.82], // first "room", top of pillar on wall, jump/abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -454.02,  97.55, 135.82, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-07",
+        "alt-actor":"mountain-skill-07"
+      }
+    },
+    {
+      "trans": [  -452.01,  75.08, 184.31], // first "room", top of wall over airlock, follow from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -452.01,  75.08, 184.31, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-08",
+        "alt-actor":"mountain-skill-08"
+      }
+    },
+    {
+      "trans": [ -460.38,  83.27, 232.04], // first "room", top of wall between pillar and rock wall (opposite side of mincan exit), follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -460.38,  83.27, 232.04, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-09",
+        "alt-actor":"mountain-skill-09"
+      }
+    },
+    {
+      "trans": [ -459.56,  74.83, 120.03], // first "room", in corner of rock wall left of infin jump pillar
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -459.56,  74.83, 120.03, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-10",
+        "alt-actor":"mountain-skill-10"
+      }
+    },
+    {
+      "trans": [ -460.64,  88.42, 120.20], // first "room", top of rock wall left of infin jump pillar
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -460.64,  88.42, 120.20, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-11",
+        "alt-actor":"mountain-skill-11"
+      }
+    },
+    {
+      "trans": [  -513.07,  47.25, 141.06], // in corner behind tree, on left just outside exit hallway from mincan
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -513.07,  47.25, 141.06, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-12",
+        "alt-actor":"mountain-skill-12"
+      }
+    },
+    {
+      "trans": [  -485.6180, 46.7215, 120.1919], // in gap of rocks on wall, hallway exit from mincan
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -485.6180, 46.7215, 120.1919, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-13",
+        "alt-actor":"mountain-skill-13"
+      }
+    },
+    {
+      "trans": [  -485.7667, 31.7241, 112.0094], // hallway exiting from mincan, in corner behind purp at high ledge
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -485.7667, 31.7241, 112.0094, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-14",
+        "alt-actor":"mountain-skill-14"
+      }
+    },
+    {
+      "trans": [     -505.9060, 38.4186, 84.6214], // in crevice on slippery rock next to grind rails, mincan side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -505.9060, 38.4186, 84.6214, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-15",
+        "alt-actor":"mountain-skill-15"
+      }
+    },
+    {
+      "trans": [ -524.8276, 56.5852, 255.5321], // in "first room" on left rock wall over void, boosted from top area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -524.8276, 56.5852, 255.5321, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-16",
+        "alt-actor":"mountain-skill-16",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -518.84,  75.46, 257.38], // in "first room" on left rock wall over void, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -518.84,  75.46, 257.38, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-17",
+        "alt-actor":"mountain-skill-17"
+      }
+    },
+    {
+      "trans": [  -567.8909, 123.7601, 238.4776], // tree at top warp gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -567.8909, 123.7601, 238.4776, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-18",
+        "alt-actor":"mountain-skill-18",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [     -621.7009, 112.5609, 235.5786], // down in left corner in first pit before flipping platform
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -621.7009, 112.5609, 235.5786, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-19",
+        "alt-actor":"mountain-skill-19"
+      }
+    },
+    {
+      "trans": [       -607.1810, 115.5578, 212.7994], // down in right corner in first pit after flipping platform
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [       -607.1810, 115.5578, 212.7994, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-20",
+        "alt-actor":"mountain-skill-20",
+        "bob-scale": ["float", 0.4],
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -630.1515, 136.2483, 187.9248], // top of arch, top of elevator
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -630.1515, 136.2483, 187.9248, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-21",
+        "alt-actor":"mountain-skill-21"
+      }
+    },
+    {
+      "trans": [  -630.2962, 124.4614, 172.3752], // in corner of arch against wall at top of elevator
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -630.2962, 124.4614, 172.3752, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-22",
+        "alt-actor":"mountain-skill-22",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [  -611.2409, 134.5983, 203.7195], // other corner/top of arch, top of elevator
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -611.2409, 134.5983, 203.7195, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-23",
+        "alt-actor":"mountain-skill-23"
+      }
+    },
+    {
+      "trans": [  -627.5322, 115.5445, 239.8690], // down in corner just below where you take plat to forest
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -627.5322, 115.5445, 239.8690, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-24",
+        "alt-actor":"mountain-skill-24",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [      -606.5098, 131.0003, 208.6442], // above outer arch before elevator, abah from skill-20^^^^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -606.5098, 131.0003, 208.6442, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-25",
+        "alt-actor":"mountain-skill-25"
+      }
+    },
+    {
+      "trans": [  -628.30, 133.20, 208.80], // other side of top of outer arch before elevator, jump/slide from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -628.30, 133.20, 208.80, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-26",
+        "alt-actor":"mountain-skill-26",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   -631.38, 148.48, 207.20], // up on corner of precursor tower above elevator, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -631.38, 148.48, 207.20, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-27",
+        "alt-actor":"mountain-skill-27"
+      }
+    },
+    {
+      "trans": [  -618.1634, 160.1726, 196.9449], // up in blue beam of precursor tower above elevator, jump slide, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -618.1634, 160.1726, 196.9449, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-28",
+        "alt-actor":"mountain-skill-28"
+      }
+    },
+    {
+      "trans": [      -618.0337, 148.1680, 188.5056], // inside the bottom of the blue beam bowl, follow from ^ and abah to get out
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -618.0337, 148.1680, 188.5056, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-29",
+        "alt-actor":"mountain-skill-29",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [      -643.5926, 123.3582, 198.2250], // crevice on rock wall near top of elevator
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -643.5926, 123.3582, 198.2250, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-30",
+        "alt-actor":"mountain-skill-30"
+      }
+    },
+    {
+      "trans": [  -701.4577, 92.1822, 184.1924], // on left wall of entrance to central precursor room from elevator
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -701.4577, 92.1822, 184.1924, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-31",
+        "alt-actor":"mountain-skill-31",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   -703.6489, 107.7669, 181.2226], // in archway of entrance to central precursor room from elevator, sliding abah from^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -703.6489, 107.7669, 181.2226, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-32",
+        "alt-actor":"mountain-skill-32"
+      }
+    },
+    {
+      "trans": [  -703.6307, 112.8731, 176.1484], // in archway of entrance to central precursor room from elevator, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -703.6307, 112.8731, 176.1484, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-33",
+        "alt-actor":"mountain-skill-33"
+      }
+    },
+    {
+      "trans": [  -702.9258, 113.5749, 187.6213], // left/top of archway of entrance to central precursor room from elevator, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -702.9258, 113.5749, 187.6213, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-34",
+        "alt-actor":"mountain-skill-34"
+      }
+    },
+    {
+      "trans": [ -702.24, 130.22, 162.54], // right/top of archway of entrance to central precursor room from elevator, extended up from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -702.24, 130.22, 162.54, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-35",
+        "alt-actor":"mountain-skill-35"
+      }
+    },
+    {
+      "trans": [  -679.3596, 125.8820, 192.2042], // top of rock wall in hallway from elevator to central precursor room, slide over from ^ then uppercut late spin
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -679.3596, 125.8820, 192.2042, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-36",
+        "alt-actor":"mountain-skill-36"
+      }
+    },
+    {
+      "trans": [ -743.61,  90.82, -38.31], // behind bush/tree near shield metalhead north of central precursor room, past "endless" baby metalheads
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -743.61,  90.82, -38.31, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-37",
+        "alt-actor":"mountain-skill-37"
+      }
+    },
+    {
+      "trans": [  -743.3531, 102.3723, -24.5950], // behind tree root on landing above shield metalhead north of central precursor room, past "endless" baby metalheads
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -743.3531, 102.3723, -24.5950, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-38",
+        "alt-actor":"mountain-skill-38"
+      }
+    },
+    {
+      "trans": [ -748.86, 111.99, -54.79], // on top of bush on landing above shield metalhead north of central precursor room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -748.86, 111.99, -54.79, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-39",
+        "alt-actor":"mountain-skill-39",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -762.18, 127.39, -52.52], // top of rock wall above shield metalhead north of central precursor room, abah from^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -762.18, 127.39, -52.52, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-40",
+        "alt-actor":"mountain-skill-40"
+      }
+    },
+    {
+      "trans": [  -756.9787, 105.0287, -84.8884], // in crevice of rock wall on back path way up north
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -756.9787, 105.0287, -84.8884, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-41",
+        "alt-actor":"mountain-skill-41",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [   -790.4699, 102.3398, 77.9677], // in crevice of rock wall on back path way up north coming back around west
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -790.4699, 102.3398, 77.9677, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-42",
+        "alt-actor":"mountain-skill-42"
+      }
+    },
+    {
+      "trans": [  -717.9472, 81.1550, 89.1419], // behind fallen grind rail heading north out of central precursor room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -717.9472, 81.1550, 89.1419, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-43",
+        "alt-actor":"mountain-skill-43",
+        "bob-scale": ["float", 0.4] // less bob
+      }
+    },
+    {
+      "trans": [ -707.32, 100.76,  41.56], // on small patch of grass just below rhino on cylinder stage, back towards north/center path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -707.32, 100.76,  41.56, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-44",
+        "alt-actor":"mountain-skill-44"
+      }
+    },
+    {
+      "trans": [ -698.88, 115.76,   0.41], // left side of steps in precursor artifact room after rhino on cylinder
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -698.88, 115.76,   0.41, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-45",
+        "alt-actor":"mountain-skill-45",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -700.23, 130.74,  -5.60], // top of arch left of precursor statue in artifact room after rhino on cylinder, abah from^ over invis wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -700.23, 130.74,  -5.60, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-46",
+        "alt-actor":"mountain-skill-46"
+      }
+    },
+    {
+      "trans": [ -691.27, 130.74, -17.66], // top of arch behind precursor statue in artifact room after rhino on cylinder, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -691.27, 130.74, -17.66, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-47",
+        "alt-actor":"mountain-skill-47"
+      }
+    },
+    {
+      "trans": [ -682.32, 130.74,  -5.51], // top of arch right of precursor statue in artifact room after rhino on cylinder, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -682.32, 130.74,  -5.51, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-48",
+        "alt-actor":"mountain-skill-48"
+      }
+    },
+    {
+      "trans": [     -659.4239, 87.9864, 217.0822], // in crevice on wall before shield metalhead on path east>south of central precursor room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -659.4239, 87.9864, 217.0822, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-49",
+        "alt-actor":"mountain-skill-49"
+      }
+    },
+    {
+      "trans": [    -659.8673, 74.5670, 238.4746], // drop down from ledge over void facing forest, by shield MH on east>south path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    -659.8673, 74.5670, 238.4746, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-50",
+        "alt-actor":"mountain-skill-50"
+      }
+    },
+    {
+      "trans": [  -722.6785, 128.9788, 297.4835], // in corner outside balcony of eyeglass precursor room facing forest
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -722.6785, 128.9788, 297.4835, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-51",
+        "alt-actor":"mountain-skill-51"
+      }
+    },
+    {
+      "trans": [  -718.5035, 114.9805, 287.9727], // behind bush near mid level between waterfalls, left side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -718.5035, 114.9805, 287.9727, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-52",
+        "alt-actor":"mountain-skill-52",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [  -715.3395, 111.8979, 266.7703], // in water/behind bush near mid level between waterfalls, right side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -715.3395, 111.8979, 266.7703, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-53",
+        "alt-actor":"mountain-skill-53"
+      }
+    },
+    {
+      "trans": [  -774.6530, 116.6652, 335.3727], // behind tree root on southern path right after ground collapses and platforms take you up a level
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -774.6530, 116.6652, 335.3727, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-54",
+        "alt-actor":"mountain-skill-54"
+      }
+    },
+    {
+      "trans": [     -742.6738, 129.2989, 321.1016], // under tree root in corner outside balcony of eyeglass precursor room facing south/forest
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -742.6738, 129.2989, 321.1016, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-55",
+        "alt-actor":"mountain-skill-55"
+      }
+    },
+    {
+      "trans": [  -763.32, 121.7, 253.11], // under platform in water at top of waterfalls, outside eyeglass precursor room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -763.32, 121.7, 253.11, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-56",
+        "alt-actor":"mountain-skill-56",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [ -843.59,  99.58, 316.36], // on slippery cliff past SW platform with cutscene and breaking bridge, start of climb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -843.59,  99.58, 316.36, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-57",
+        "alt-actor":"mountain-skill-57",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -851.25, 107.23, 311.69], // on slippery cliff in SW, abah from^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -851.25, 107.23, 311.69, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-58",
+        "alt-actor":"mountain-skill-58",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -856.53, 113.30, 303.86], // on slippery cliff in SW, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -856.53, 113.30, 303.86, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-59",
+        "alt-actor":"mountain-skill-59"
+      }
+    },
+    {
+      "trans": [  -851.9099, 125.6219, 266.7913], // below precursor gear artifact collapse area, on left between column and rock wall w/ steps above
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -851.9099, 125.6219, 266.7913, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-60",
+        "alt-actor":"mountain-skill-60"
+      }
+    },
+    {
+      "trans": [  -835.18, 106.08, 266.50], // down at bottom columns below precursor gear artifact collapse area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -835.18, 106.08, 266.50, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-61",
+        "alt-actor":"mountain-skill-61"
+      }
+    },
+    {
+      "trans": [  -843.8455, 109.5677, 251.0476], // in blue beam below precursor gear artifact collapse area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -843.8455, 109.5677, 251.0476, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-62",
+        "alt-actor":"mountain-skill-62",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -843.8455, 122.8480, 251.0476], // in blue beam below precursor gear artifact collapse area, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -843.8455, 122.8480, 251.0476, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-63",
+        "alt-actor":"mountain-skill-63"
+      }
+    },
+    {
+      "trans": [ -845.62, 108.25, 231.88], // on right bottom side below precursor gear artifact collapse area, near outer rock wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -845.62, 108.25, 231.88, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-64",
+        "alt-actor":"mountain-skill-64",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -840.53, 103.21, 213.16], // on rock wall past precursor gear artifact collapse area, abah from ^ or maybe yolo from top
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -840.53, 103.21, 213.16, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-65",
+        "alt-actor":"mountain-skill-65"
+      }
+    },
+    {
+      "trans": [ -829.55, 105.21, 193.73], // on rock wall past precursor gear artifact collapse area, uppercut from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -829.55, 105.21, 193.73, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-66",
+        "alt-actor":"mountain-skill-66",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -849.80, 100.12, 190.62], // on rock wall past precursor gear artifact collapse area, follow around from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -849.80, 100.12, 190.62, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-67",
+        "alt-actor":"mountain-skill-67"
+      }
+    },
+    {
+      "trans": [  -860.19, 101.52, 179.00], // on rock wall past precursor gear artifact collapse area, over west rhino, uppercut from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -860.19, 101.52, 179.00, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-68",
+        "alt-actor":"mountain-skill-68",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -863.30, 112.04, 169.33], // on rock wall past precursor gear artifact collapse area, over west rhino, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -863.30, 112.04, 169.33, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-69",
+        "alt-actor":"mountain-skill-69"
+      }
+    },
+    {
+      "trans": [ -840.39, 124.72, 193.71], // up on top of tall rock plateau, past precursor gear artifact collapse area, abah from skill-66 ^^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -840.39, 124.72, 193.71, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-70",
+        "alt-actor":"mountain-skill-70"
+      }
+    },
+    {
+      "trans": [     -836.5020, 136.2896, 264.1701], // under fallen precursor stuff from gear artifact collapse area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -836.5020, 136.2896, 264.1701, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-71",
+        "alt-actor":"mountain-skill-71"
+      }
+    },
+    {
+      "trans": [   -789.8630, 118.2775, 249.2306], // in bush/rock wall below exit platform from eyeglass artifact room (or swag boosted from gear artifact platform)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -789.8630, 118.2775, 249.2306, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-72",
+        "alt-actor":"mountain-skill-72",
+        "pickup-amount": ["float", 2.0] // abah hint (to get out)
+      }
+    },
+    {
+      "trans": [     -776.6857, 113.4826, 226.1077], // in rock wall crevice up high, extended/boosted from exit platform from gear artifact area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -776.6857, 113.4826, 226.1077, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-73",
+        "alt-actor":"mountain-skill-73"
+      }
+    },
+    {
+      "trans": [  -818.39,  49.69, 186.65], // on slippery rock left side near void at west rhino
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -818.39,  49.69, 186.65, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-74",
+        "alt-actor":"mountain-skill-74",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [    -823.81,  63.88, 188.99], // on rock next to tree on left wall of west rhino area, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -823.81,  63.88, 188.99, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-75",
+        "alt-actor":"mountain-skill-75",
+        "pickup-amount": ["float", 2.0] // abah hint (bounce up and around to top of tree)
+      }
+    },
+    {
+      "trans": [  -824.80,  72.42, 188.90], // on top of tree on left wall of west rhino area, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -824.80,  72.42, 188.90, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-76",
+        "alt-actor":"mountain-skill-76",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -830.10,  79.90, 185.38], // on top of left wall of west rhino area, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -830.10,  79.90, 185.38, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-77",
+        "alt-actor":"mountain-skill-77"
+      }
+    },
+    {
+      "trans": [  -785.7560, 99.5625, 325.3280], // on central rock wall, boosted from SW platform where cutscene for bridge collapse plays
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -785.7560, 99.5625, 325.3280, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-78",
+        "alt-actor":"mountain-skill-78"
+      }
+    },
+    {
+      "trans": [ -737.13, 106.45, -54.42], // behind tree on landing above shield metalhead north of central precursor room, past "endless" baby metalheads
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -737.13, 106.45, -54.42, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-79",
+        "alt-actor":"mountain-skill-79"
+      }
+    },
+    {
+      "trans": [ -731.2130, 80.8428, 181.7342], // hopper in central precursor room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -731.2130, 80.8428, 181.7342, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-80",
+        "alt-actor":"mountain-skill-80"
+        // "alt-actor": "hopper-50"
+      }
+    },
+    {
+      "trans": [ -717.3595, 79.9951, 145.8283], // hopper in central precursor room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -717.3595, 79.9951, 145.8283, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-81",
+        "alt-actor":"mountain-skill-81"
+        // "alt-actor": "hopper-51"
+      }
+    },
+    {
+      "trans": [ -741.6737, 80.7760, 158.6923], // hopper in central precursor room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -741.6737, 80.7760, 158.6923, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-82",
+        "alt-actor":"mountain-skill-82"
+        // "alt-actor": "hopper-52"
+      }
+    },
+    {
+      "trans": [     -779.3984, 80.6543, 131.7894], // around corner, tiny standpoint off of balcony west/north off central room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -779.3984, 80.6543, 131.7894, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-83",
+        "alt-actor":"mountain-skill-83"
+      }
+    },
+    {
+      "trans": [ -892.17,  45.53, 180.79], // slippery rock to left at bottom of avalanche
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -892.17,  45.53, 180.79, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-84",
+        "alt-actor":"mountain-skill-84"
+      }
+    },
+    {
+      "trans": [ -948.08,  43.13, 154.66], // slippery rock to right at bottom of avalanche, boosted from upper part
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -948.08,  43.13, 154.66, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-85",
+        "alt-actor":"mountain-skill-85"
+      }
+    },
+    {
+      "trans": [     -896.7603, 53.0395, 155.2028], // in shrubs on wall behind/below at start of avalanche
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -896.7603, 53.0395, 155.2028, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-86",
+        "alt-actor":"mountain-skill-86"
+      }
+    },
+    {
+      "trans": [   -895.2338, 75.1141, 202.1907], // up in left wall mid avalanche
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -895.2338, 75.1141, 202.1907, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-87",
+        "alt-actor":"mountain-skill-87"
+      }
+    },
+    {
+      "trans": [      -931.0433, 44.2587, 177.8929], // bottom of avalanche, right side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -931.0433, 44.2587, 177.8929, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-88",
+        "alt-actor":"mountain-skill-88",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [         -937.5312, 63.5679, 178.2601 ], // right wall just before avalanche, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [       -937.5312, 63.5679, 178.2601 , 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-89",
+        "alt-actor":"mountain-skill-89"
+      }
+    },
+    {
+      "trans": [  -939.03,  71.72, 170.19], // right wall just before avalanche, extendo from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -939.03,  71.72, 170.19, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-90",
+        "alt-actor":"mountain-skill-90",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -936.02,  82.34, 177.87], // right wall just before avalanche, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -936.02,  82.34, 177.87, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-91",
+        "alt-actor":"mountain-skill-91"
+      }
+    },
+    {
+      "trans": [  -930.9001, 112.8267, 282.8469], // behind shrubs upper right of avalanche
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -930.9001, 112.8267, 282.8469, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-92",
+        "alt-actor":"mountain-skill-92"
+      }
+    },
+    {
+      "trans": [  -897.5158, 125.3871, 287.5498], // behind shrubs upper left of avalanche
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -897.5158, 125.3871, 287.5498, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-93",
+        "alt-actor":"mountain-skill-93"
+      }
+    },
+    {
+      "trans": [  -684.0122, 91.2683, 239.1590], // on wall next to east>south shield MH
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -684.0122, 91.2683, 239.1590, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-94",
+        "alt-actor":"mountain-skill-94",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -683.5198, 104.8576, 236.3624], // up higher on rock wall, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -683.5198, 104.8576, 236.3624, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-95",
+        "alt-actor":"mountain-skill-95"
+      }
+    },
+    {
+      "trans": [ -709.7133, 115.5459, 224.6846], // inside metalhead near shield MH before top of waterfall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -709.7133, 115.5459, 224.6846, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-96",
+        "alt-actor":"mountain-skill-96"
+        // "alt-actor": "metalmonk-68"
+      }
+    },
+    {
+      "trans": [  -781.97, 132.60, 234.45], // on slippery wall past tree at backside of top of waterfall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -781.97, 132.60, 234.45, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-97",
+        "alt-actor":"mountain-skill-97",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -779.96, 149.20, 233.98], // up higher on rock wall near top of waterfall, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -779.96, 149.20, 233.98, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-98",
+        "alt-actor":"mountain-skill-98"
+      }
+    },
+    {
+      "trans": [  -774.3340, 125.3537, 314.3832], // deep in crack between eyeglass room, rocks, roots
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -774.3340, 125.3537, 314.3832, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-99",
+        "alt-actor":"mountain-skill-99"
+      }
+    },
+    {
+      "trans": [  -914.5728, 140.6652, 321.4558], // on wall left of last platforms before steps to gear collapse area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -914.5728, 140.6652, 321.4558, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-100",
+        "alt-actor":"mountain-skill-100"
+      }
+    },
+    {
+      "trans": [  -903.1056, 142.4274, 320.1021], // on wall left of last platforms before steps to gear collapse area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -903.1056, 142.4274, 320.1021, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-101",
+        "alt-actor":"mountain-skill-101"
+      }
+    },
+    {
+      "trans": [  -677.5956, 118.0357, 5.1328], // on pillar right side of precursor artifact room past rhino on stage
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -677.5956, 118.0357, 5.1328, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-102",
+        "alt-actor":"mountain-skill-102",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -669.6418, 130.4445, 6.5764], // top of arch right side of precursor artifact room past rhino on stage, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -669.6418, 130.4445, 6.5764, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-103",
+        "alt-actor":"mountain-skill-103"
+      }
+    },
+    {
+      "trans": [   -664.5260, 127.2244, 19.8085], // top of arch right side of precursor artifact room past rhino on stage, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -664.5260, 127.2244, 19.8085, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-104",
+        "alt-actor":"mountain-skill-104"
+      }
+    },
+    {
+      "trans": [  -726.3013, 80.3055, 332.7202], // in bush near southern rhino
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -726.3013, 80.3055, 332.7202, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-105",
+        "alt-actor":"mountain-skill-105"
+      }
+    },
+    {
+      "trans": [  -681.4603, 76.7131, 328.9104], // over edge near void, by southern rhino
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -681.4603, 76.7131, 328.9104, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-106",
+        "alt-actor":"mountain-skill-106"
+      }
+    },
+    {
+      "trans": [     -969.8850, 148.4906, 315.6803], // on wall before 3 platforms at end of path to gear collapse artifact, jump from crate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -969.8850, 148.4906, 315.6803, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-107",
+        "alt-actor":"mountain-skill-107",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [      -969.4237, 164.4725, 322.3595], // up on rock wall before 3 plats at end of path to gear collapse artifact, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -969.4237, 164.4725, 322.3595, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-108",
+        "alt-actor":"mountain-skill-108"
+      }
+    },
+    {
+      "trans": [      -911.1597, 81.7912, 233.0742], // behind rock in avalanche
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -911.1597, 81.7912, 233.0742, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-109",
+        "alt-actor":"mountain-skill-109"
+      }
+    },
+    {
+      "trans": [     -819.4274, 66.2894, 126.0568], // behind baby tree behind big tree, up from western rhino
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    -819.4274, 66.2894, 126.0568, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-110",
+        "alt-actor":"mountain-skill-110"
+      }
+    },
+    {
+      "trans": [  -896.4265, 71.0638, 110.7788], // up on rock wall on path before avalanche, late spin slide up into standpoint
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -896.4265, 71.0638, 110.7788, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-111",
+        "alt-actor":"mountain-skill-111"
+      }
+    },
+    {
+      "trans": [     -884.9567, 77.8822, 116.7677], // up between rocks overhead path before avalanche, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -884.9567, 77.8822, 116.7677, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-112",
+        "alt-actor":"mountain-skill-112"
+      }
+    },
+    {
+      "trans": [  -889.0501, 73.3134, 146.5870], // another up on rock wall on path before avalanche, late spin slide up into standpoint
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -889.0501, 73.3134, 146.5870, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-113",
+        "alt-actor":"mountain-skill-113"
+      }
+    },
+    {
+      "trans": [  -842.3508, 66.3060, 140.6033], // in corner near dumb oob, up from west rhino
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -842.3508, 66.3060, 140.6033, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-114",
+        "alt-actor":"mountain-skill-114"
+      }
+    },
+    {
+      "trans": [  -818.1576, 51.4544, 124.0085], // in corner standpoint over void, near west rhino (drop from above is easiest)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -818.1576, 51.4544, 124.0085, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-115",
+        "alt-actor":"mountain-skill-115"
+      }
+    },
+    {
+      "trans": [  -744.39,  94.29,  89.44], // between small tree and big tree, up left grindrail on path north of central room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -744.39,  94.29,  89.44, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-116",
+        "alt-actor":"mountain-skill-116"
+      }
+    },
+    {
+      "trans": [      -770.0289, 107.4690, 77.3941], // in rocks overhead on path from up left grindrail on path north of central room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -770.0289, 107.4690, 77.3941, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-117",
+        "alt-actor":"mountain-skill-117"
+      }
+    },
+    {
+      "trans": [  -768.5360, 83.3686, 31.5888], // corner norht path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -768.5360, 83.3686, 31.5888, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-118",
+        "alt-actor":"mountain-skill-118"
+      }
+    },
+    {
+      "trans": [ -761.20,  92.43, 191.13], // on wall of SW balcony of central room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -761.20,  92.43, 191.13, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-119",
+        "alt-actor":"mountain-skill-119",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -761.93, 108.11, 187.87], // up on archway SW balcony of central room, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -761.93, 108.11, 187.87, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-120",
+        "alt-actor":"mountain-skill-120"
+      }
+    },
+    {
+      "trans": [ -757.71, 113.56, 193.21], // above archway against rock wall, SW balcony of central room, uppercut from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -757.71, 113.56, 193.21, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-121",
+        "alt-actor":"mountain-skill-121"
+      }
+    },
+    {
+      "trans": [ -768.49, 123.04, 182.56], // top of archway against rock wall, SW balcony of central room, GP cancel jumps from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -768.49, 123.04, 182.56, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-122",
+        "alt-actor":"mountain-skill-122"
+      }
+    },
+    {
+      "trans": [ -760.21, 130.68, 189.72], // top of building, SW balcony of central room, extendo from^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -760.21, 130.68, 189.72, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-123",
+        "alt-actor":"mountain-skill-123",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -746.64, 142.39, 192.45], // up high rocks against outer wall of central room, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -746.64, 142.39, 192.45, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-124",
+        "alt-actor":"mountain-skill-124",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -747.01, 152.89, 202.36], // top of rocks outside central room, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -747.01, 152.89, 202.36, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-125",
+        "alt-actor":"mountain-skill-125"
+      }
+    },
+    {
+      "trans": [ -733.76, 154.85, 197.14], // top of rocks outside central room, jump from ^ or abah from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -733.76, 154.85, 197.14, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-126",
+        "alt-actor":"mountain-skill-126"
+      }
+    },
+    {
+      "trans": [ -723.04, 145.41, 197.07], // top of rocks outside central room, jump/slide down from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -723.04, 145.41, 197.07, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-127",
+        "alt-actor":"mountain-skill-127"
+      }
+    },
+    {
+      "trans": [  -873.7967, 149.2430, 265.9498], // on rocks against precursor wall near gear artifact collapse area (extendo GP cancel shit from broken precursor crap)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -873.7967, 149.2430, 265.9498, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-128",
+        "alt-actor":"mountain-skill-128",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -874.9918, 165.3120, 269.1580], // up high on rocks against precursor wall near gear artifact collapse area, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -874.9918, 165.3120, 269.1580, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-129",
+        "alt-actor":"mountain-skill-129"
+      }
+    },
+    {
+      "trans": [      -457.3067, 38.1493, 79.2300], // in pocket of rock wall on far east path exiting from mincan
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -457.3067, 38.1493, 79.2300, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-130",
+        "alt-actor":"mountain-skill-130"
+      }
+    },
+    {
+      "trans": [     -650.7044, 71.5582, 109.6897], // in pocket of rock wall in corner east>north
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -650.7044, 71.5582, 109.6897, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-131",
+        "alt-actor":"mountain-skill-131"
+      }
+    },
+    {
+      "trans": [ -772.03, 102.81,  23.78], // on inner rock wall of path north>west
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -772.03, 102.81,  23.78, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-132",
+        "alt-actor":"mountain-skill-132",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -771.66, 121.05,  15.53], // top of inner rock wall on path north>west, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -771.66, 121.05,  15.53, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-133",
+        "alt-actor":"mountain-skill-133"
+      }
+    },
+    {
+      "trans": [  -775.94, 129.85,  11.19], // top of inner rock wall on path north>west, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -775.94, 129.85,  11.19, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-134",
+        "alt-actor":"mountain-skill-134",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -785.78, 141.47,   8.60], // way up on inner rock wall on path north>west, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -785.78, 141.47,   8.60, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-135",
+        "alt-actor":"mountain-skill-135",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -803.22, 160.81,   4.99], // way way up on inner rock wall on path north>west, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -803.22, 160.81,   4.99, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-136",
+        "alt-actor":"mountain-skill-136"
+      }
+    },
+    {
+      "trans": [ -777.97, 113.48, -35.90], // up on rock wall above shield MH around north path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -777.97, 113.48, -35.90, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-137",
+        "alt-actor":"mountain-skill-137"
+      }
+    },
+    {
+      "trans": [     -780.1352, 109.3359, -9.8595], // deep extendo from top path near shield MH around northern path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -780.1352, 109.3359, -9.8595, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-138",
+        "alt-actor":"mountain-skill-138"
+      }
+    },
+    {
+      "trans": [ -738.76, 114.84, -16.79], // fork in tree above shield MH around northern path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -738.76, 114.84, -16.79, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-139",
+        "alt-actor":"mountain-skill-139",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -744.62, 124.14, -19.38], // higher fork in tree above shield MH around northern path, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -744.62, 124.14, -19.38, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-140",
+        "alt-actor":"mountain-skill-140"
+      }
+    },
+    {
+      "trans": [ -654.37, 120.11, -40.83], // on rock wall above small tree, past sliding plat over dark eco on northern path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -654.37, 120.11, -40.83, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-141",
+        "alt-actor":"mountain-skill-141"
+      }
+    },
+    {
+      "trans": [  -670.4539, 113.8388, -41.6694], // on rock wall just past sliding plat over dark eco on northern path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -670.4539, 113.8388, -41.6694, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-142",
+        "alt-actor":"mountain-skill-142"
+      }
+    },
+    {
+      "trans": [      -620.7507, 94.2880, -56.0746], // in crevice at eastern part of secret jetboard path in northern area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -620.7507, 94.2880, -56.0746, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-143",
+        "alt-actor":"mountain-skill-143"
+      }
+    },
+    {
+      "trans": [  -673.11, 102.88, -55.07], // up on wall of western end of secret jetboard path in northern area, tricky extendo
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -673.11, 102.88, -55.07, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-144",
+        "alt-actor":"mountain-skill-144"
+      }
+    },
+    {
+      "trans": [   -687.5632, 91.6430, -67.3829], // in dark eco very north of level
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -687.5632, 91.6430, -67.3829, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-145",
+        "alt-actor":"mountain-skill-145",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [  -693.40, 109.17, 103.03], // in upper tree, boosted from stage with rhino
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -693.40, 109.17, 103.03, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-146",
+        "alt-actor":"mountain-skill-146"
+      }
+    },
+    {
+      "trans": [       -685.5305, 104.7592, 80.1443], // crevice below stage with rhino, against rock wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -685.5305, 104.7592, 80.1443, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-147",
+        "alt-actor":"mountain-skill-147"
+      }
+    },
+    {
+      "trans": [   -703.5040, 106.3199, 120.7673], // up against rock wall / towards central room from rhino on stage
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -703.5040, 106.3199, 120.7673, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-148",
+        "alt-actor":"mountain-skill-148"
+      }
+    },
+    {
+      "trans": [ -721.59, 126.76,   7.85], // up between arches, left side of artifact room past rhino stage
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -721.59, 126.76,   7.85, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-149",
+        "alt-actor":"mountain-skill-149"
+      }
+    },
+    {
+      "trans": [  -710.4784, 146.8615, 20.4771], // up near ceiling in artifact room past rhino stage, abah from top of arch
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -710.4784, 146.8615, 20.4771, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-150",
+        "alt-actor":"mountain-skill-150"
+      }
+    },
+    {
+      "trans": [      -654.8824, 105.3012, 86.4772], // in crevice of rock wall near rhino stage, next to crate on wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -654.8824, 105.3012, 86.4772, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-151",
+        "alt-actor":"mountain-skill-151"
+      }
+    },
+    {
+      "trans": [  -651.5499, 91.4521, 50.7453], // in dark eco behind steps leading up to rhino stage
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -651.5499, 91.4521, 50.7453, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-152",
+        "alt-actor":"mountain-skill-152",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [  -713.6310, 94.1763, 63.6271], // behind small tree at base (below) of rhino stage
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -713.6310, 94.1763, 63.6271, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-153",
+        "alt-actor":"mountain-skill-153"
+      }
+    },
+    {
+      "trans": [ -548.73,  42.71,  37.43], // tiny ledge on rock wall near grindrails/mincan, boosted from plat mid rails
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -548.73,  42.71,  37.43, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-154",
+        "alt-actor":"mountain-skill-154"
+      }
+    },
+    {
+      "trans": [ -558.67,  49.45,  48.42], // ledge on rock wall near grindrails, uppercut/slide from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -558.67,  49.45,  48.42, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-155",
+        "alt-actor":"mountain-skill-155"
+      }
+    },
+    {
+      "trans": [ -530.93,  41.56,  33.21], // ledge on rock wall near grindrails, boosted from plat mid rails
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -530.93,  41.56,  33.21, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-156",
+        "alt-actor":"mountain-skill-156"
+      }
+    },
+    {
+      "trans": [ -483.74,  53.50,  34.53], // up a bit on rock wall near grindrails/mincan, abah cancel from lower rock
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -483.74,  53.50,  34.53, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-157",
+        "alt-actor":"mountain-skill-157"
+      }
+    },
+    {
+      "trans": [     -611.4478, 90.5089, 9.2176], // in dark eco near cube puzzle
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -611.4478, 90.5089, 9.2176, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-158",
+        "alt-actor":"mountain-skill-158"
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [      -602.7400, 174.6519, 275.9643], // up on mountain up high above initial path from top warp (towards forest)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -602.7400, 174.6519, 275.9643, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-01",
+        "alt-actor":"mountain-skill-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   -565.4301, 183.0010, 176.6245], // up on mountain up high above top warp
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -565.4301, 183.0010, 176.6245, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-02",
+        "alt-actor":"mountain-skill-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [     -543.6718, 79.4496, 115.2997], // up in crevice in mountain above gridrails opposite from mincan
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -543.6718, 79.4496, 115.2997, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-03",
+        "alt-actor":"mountain-skill-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ -481.70,  81.09,  68.85], // way up on mountain above grindrails, closer to mincan
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -481.70,  81.09,  68.85, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-04",
+        "alt-actor":"mountain-skill-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [   -692.3604, 156.2912, 30.6878], // up in designs in precursor crap, above rhino sumo stage
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -692.3604, 156.2912, 30.6878, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-05",
+        "alt-actor":"mountain-skill-05",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -713.35, 179.19,  28.55], // up higher on precursor thing above rhino sumo stage, near left blue light
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -713.35, 179.19,  28.55, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-06",
+        "alt-actor":"mountain-skill-06",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [    -671.0198, 186.6841, 13.4977], // up higher on precursor thing above rhino sumo stage, inside right blue light
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -671.0198, 186.6841, 13.4977, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-07",
+        "alt-actor":"mountain-skill-07",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -873.25, 143.32, 187.87], // up on flat section of precursor thing above rhino near artifact collapse stage
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -873.25, 143.32, 187.87, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-08",
+        "alt-actor":"mountain-skill-08",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [     -880.5627, 101.7258, 162.9497], // up on mountain against precursor stuff above bottom of avalanche
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -880.5627, 101.7258, 162.9497, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-09",
+        "alt-actor":"mountain-skill-09",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -877.7053, 190.6204, 243.6135], // up on flat section of precursor thing left of blue lights above artifact collapse stage
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -877.7053, 190.6204, 243.6135, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-10",
+        "alt-actor":"mountain-skill-10",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -854.1184, 205.8301, 202.1114], // up on blue light above artifact collapse stage
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -854.1184, 205.8301, 202.1114, 10], // bounding sphere
+      "lump": {
+        "name":"mountain-skill-ghost-11",
+        "alt-actor":"mountain-skill-11",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+
+    {
+      "trans": [-470.17,  16.17, 135.50], // on tiny ledge just above death plane, off to right after airlock
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-470.17,  16.17, 135.50, 10],
+      "lump": {
+        "name": "skill-ghost-76",
+        "alt-actor": "skill-76"
+      }
+    },
+    {
+      "trans": [-460.9825, 24.8993, 154.4839], // behind overhanging grass on low ledge off to right after airlock
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-460.9825, 24.8993, 154.4839, 10],
+      "lump": {
+        "name": "skill-ghost-77",
+        "alt-actor": "skill-77"
+      }
+    },
+    {
+      "trans": [-486.92,  32.04, 141.13], // crevice between rocks/wall support below exit path from mincan
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-486.92,  32.04, 141.13, 10],
+      "lump": {
+        "name": "skill-ghost-91",
+        "alt-actor": "skill-91"
+      }
+    },
+    {
+      "trans": [-459.54,  48.50, 208.56], // on top of awning above airlock (drop from top of wall ig)
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-459.54,  48.50, 208.56, 10],
+      "lump": {
+        "name": "skill-ghost-92",
+        "alt-actor": "skill-92"
+      }
+    },
+    {
+      "trans": [-466.1079, 46.6974, 226.2471], // in crevice in rock wall next to airlock, jump from ^
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-466.1079, 46.6974, 226.2471, 10],
+      "lump": {
+        "name": "skill-ghost-93",
+        "alt-actor": "skill-93"
+      }
+    },
+    {
+      "trans": [-557.5570, 96.4093, 153.1632], // in "first room" on right rock wall over void, boosted from top area
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-557.5570, 96.4093, 153.1632, 10],
+      "lump": {
+        "name": "skill-ghost-94",
+        "alt-actor": "skill-94"
+      }
+    },
+    {
+      "trans": [-578.4154, 54.8082, 116.9006], // crouch under grind rail on junction closer to mountain
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-578.4154, 54.8082, 116.9006, 10],
+      "lump": {
+        "name": "skill-ghost-95",
+        "alt-actor": "skill-95"
+      }
+    },
+    {
+      "trans": [-534.7777, 49.5831, 67.5401], // in light at junction in grind rail closer to mincan
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-534.7777, 49.5831, 67.5401, 10],
+      "lump": {
+        "name": "skill-ghost-96",
+        "alt-actor": "skill-96"
+      }
+    },
+    {
+      "trans": [-513.04,  77.70, 246.06], // in "first room" on left rock wall over void, uppercut into abah cancel slide from mountain-skill-17
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-513.04,  77.70, 246.06, 10],
+      "lump": {
+        "name": "skill-ghost-97",
+        "alt-actor": "skill-97"
+      }
+    },
+    {
+      "trans": [-493.10,  73.31, 235.26], // in "first room" on left rock wall over void, uppercut from ^
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-493.10,  73.31, 235.26, 10],
+      "lump": {
+        "name": "skill-ghost-98",
+        "alt-actor": "skill-98"
+      }
+    },
+    {
+      "trans": [-562.3528, 141.4705, 235.5564], // higher up in tree at top warp gate, abah from mountain-skill-18
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-562.3528, 141.4705, 235.5564, 10],
+      "lump": {
+        "name": "skill-ghost-99",
+        "alt-actor": "skill-99"
+      }
+    },
+    {
+      "trans": [-662.84,  76.57, 284.90], // on rock in lower waterfall near pad to forest
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-662.84,  76.57, 284.90, 10],
+      "lump": {
+        "name": "skill-ghost-100",
+        "alt-actor": "skill-100"
+      }
+    },
+    {
+      "trans": [-736.43,  87.54, 366.75], // on slippery rock outer side of path past rhino ~ by pad to forest
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-736.43,  87.54, 366.75, 10],
+      "lump": {
+        "name": "skill-ghost-101",
+        "alt-actor": "skill-101"
+      }
+    },
+    {
+      "trans": [-743.4183, 92.9670, 335.2877], // on slippery rock in gap on path past rhino ~ by pad to forest
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-743.4183, 92.9670, 335.2877, 10],
+      "lump": {
+        "name": "skill-ghost-102",
+        "alt-actor": "skill-102"
+      }
+    },
+    {
+      "trans": [-762.5567, 99.6300, 340.1235], // on slippery rock in gap on path past rhino ~ by pad to forest
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-762.5567, 99.6300, 340.1235, 10],
+      "lump": {
+        "name": "skill-ghost-103",
+        "alt-actor": "skill-103"
+      }
+    },
+    {
+      "trans": [-683.11, 102.60, 277.29], // on rock mid waterfall near pad to forest
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-683.11, 102.60, 277.29, 10],
+      "lump": {
+        "name": "skill-ghost-104",
+        "alt-actor": "skill-104"
+      }
+    },
+    {
+      "trans": [-731.5064, 111.2929, 327.5426], // in corner near sliding platform way above rhino ~ by pad to forest
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-731.5064, 111.2929, 327.5426, 10],
+      "lump": {
+        "name": "skill-ghost-105",
+        "alt-actor": "skill-105"
+      }
     }
   ]
 }

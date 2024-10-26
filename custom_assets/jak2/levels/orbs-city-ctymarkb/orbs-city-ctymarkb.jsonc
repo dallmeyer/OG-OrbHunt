@@ -369,37 +369,368 @@
     // 'onintent special cases
     {
       "trans": [ 707.82,  10.18, 743.17  ], // on left - tricky uppercut from outside over invis wall (enjoy softlock)
-        "etype": "skill",  // actor type
-        "game_task": 0, // associated game task (for powercells, etc)
-        "quat" : [0, 0, 0, 1], // quaternion
-        "bsphere": [707.82,  10.18, 743.17, 10], // bounding sphere
-        "lump": {
-          "name": "onintent-skill-1",
-          "lvl-idx-override": ["int32", 45]
-        }
-      },
-      {
-      "trans": [ 708.7,    9.0,     746.2   ], // on pot on left - tricky uppercut from outside over invis wall
-        "etype": "skill",  // actor type
-        "game_task": 0, // associated game task (for powercells, etc)
-        "quat" : [0, 0, 0, 1], // quaternion
-        "bsphere": [708.7,    9.0,     746.2 , 10], // bounding sphere
-        "lump": {
-          "name": "onintent-skill-2",
-          "bob-scale": ["float", -1.0],  // no bob
-          "lvl-idx-override": ["int32", 45]
-        }
-      },
-      {
-      "trans": [717.3490, 9.1150, 742.4205], // on right - tricky uppercut from outside over invis wall
-        "etype": "skill",  // actor type
-        "game_task": 0, // associated game task (for powercells, etc)
-        "quat" : [0, 0, 0, 1], // quaternion
-        "bsphere": [717.3490, 9.1150, 742.4205 , 10], // bounding sphere
-        "lump": {
-          "name": "onintent-skill-3",
-          "lvl-idx-override": ["int32", 45]
-        }
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [707.82,  10.18, 743.17, 10], // bounding sphere
+      "lump": {
+        "name": "onintent-skill-1",
+        "lvl-idx-override": ["int32", 45]
       }
+    },
+    {
+    "trans": [ 708.7,    9.0,     746.2   ], // on pot on left - tricky uppercut from outside over invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [708.7,    9.0,     746.2 , 10], // bounding sphere
+      "lump": {
+        "name": "onintent-skill-2",
+        "bob-scale": ["float", -1.0],  // no bob
+        "lvl-idx-override": ["int32", 45]
+      }
+    },
+    {
+    "trans": [717.3490, 9.1150, 742.4205], // on right - tricky uppercut from outside over invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [717.3490, 9.1150, 742.4205 , 10], // bounding sphere
+      "lump": {
+        "name": "onintent-skill-3",
+        "lvl-idx-override": ["int32", 45]
+      }
+    },
+
+    // GHOSTS
+    {
+      "trans": [  401.42,   9.05, 670.81], // down in gap on left when entering from ctypal
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 401.42,   9.05, 670.81, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-01",
+        "alt-actor":"ctymarkb-skill-01"
+      }
+    },
+    {
+      "trans": [   393.6963, 23.3652, 730.2302], // on wall near ctypal SE entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  393.6963, 23.3652, 730.2302, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-02",
+        "alt-actor":"ctymarkb-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   395.9091, 32.8612, 720.9013], // on rooftop of entrance gate from ctypal, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  395.9091, 32.8612, 720.9013, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-03",
+        "alt-actor":"ctymarkb-skill-03"
+      }
+    },
+    {
+      "trans": [   538.3814, 24.9317, 720.4644], // on rooftop near blue/yellow neon sign and misaligned collision, nice work ND
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  538.3814, 24.9317, 720.4644, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-04",
+        "alt-actor":"ctymarkb-skill-04"
+      }
+    },
+    {
+      "trans": [   424.1213, 11.2965, 450.8733 ], // in KG tank
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  424.1213, 11.2965, 450.8733, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-05",
+        "alt-actor":"ctymarkb-skill-05",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [   735.2887, 38.3658, 445.4908], // on banner above rocket/abah pole (no hint) near ctyindb entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   735.2887, 38.3658, 445.4908, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-06",
+        "alt-actor":"ctymarkb-skill-06"
+      }
+    },
+    {
+      "trans": [    679.9407, 21.4271, 419.5798], // between wall and overpass right at top of ramp, ctyindb side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   679.9407, 21.4271, 419.5798, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-07",
+        "alt-actor":"ctymarkb-skill-07"
+      }
+    },
+    {
+      "trans": [  480.5451, 15.3062, 564.3560], // atop fruitstand umbrellas, west middle
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   480.5451, 15.3062, 564.3560, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-08",
+        "alt-actor":"ctymarkb-skill-08",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  472.1924, 38.2643, 566.1530], // atop banner west middle, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  472.1924, 38.2643, 566.1530, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-09",
+        "alt-actor":"ctymarkb-skill-09"
+      }
+    },
+    {
+      "trans": [  717.0654, 9.55, 727.2903], // inside crate behind onintent
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  717.0654, 9.55, 727.2903, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-10",
+        "alt-actor":"ctymarkb-skill-10"
+        // "alt-actor": "market-crate-365"
+      }
+    },
+    {
+      "trans": [   676.3118, 10.1057, 635.6112], // inside bucket on hallway, sorta SE near path to onintent
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   676.3118, 10.1057, 635.6112, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-11",
+        "alt-actor":"ctymarkb-skill-11",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [ 652.0167, 9.99, 766.0333], // inside sack in corner near onintent
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 652.0167, 9.99, 766.0333, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-12",
+        "alt-actor":"ctymarkb-skill-12"
+        // "alt-actor": "market-sack-a-138"
+      }
+    },
+    {
+      "trans": [ 590.0417, 10.3243, 590.4814], // inside basket under overpass, sorta central
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 590.0417, 10.3243, 590.4814, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-13",
+        "alt-actor":"ctymarkb-skill-13"
+        // "alt-actor": "market-basket-a-143"
+      }
+    },
+    {
+      "trans": [ 485.8320, 9.99, 751.3263], // inside sack covered area not far from ctypal entrance, south side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 485.8320, 9.99, 751.3263, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-14",
+        "alt-actor":"ctymarkb-skill-14"
+        // "alt-actor": "market-sack-b-107"
+      }
+    },
+    {
+      "trans": [  637.8341, 10.2107, 692.2636], // inside basket sorta south side, before path to onintent
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 637.8341, 10.2107, 692.2636, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-15",
+        "alt-actor":"ctymarkb-skill-15"
+        // "alt-actor": "market-basket-b-110"
+      }
+    },
+    {
+      "trans": [      570.0634, 17.1023, 708.6842], // inside fishing net sorta south side near fruitstands
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      570.0634, 17.1023, 708.6842, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-16",
+        "alt-actor":"ctymarkb-skill-16"
+      }
+    },
+    {
+      "trans": [  686.0601, 9.7390, 600.9420], // inside crate behind onintent
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  686.0601, 9.7390, 600.9420, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-17",
+        "alt-actor":"ctymarkb-skill-17"
+        // "alt-actor": "market-crate-152"
+      }
+    },
+    {
+      "trans": [   561.6054, 10.1644, 529.9775], // behind stack of baskets in corner outside tanker area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   561.6054, 10.1644, 529.9775, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-18",
+        "alt-actor":"ctymarkb-skill-18"
+      }
+    },
+    {
+      "trans": [      625.1394, 19.9834, 518.5136], // in gap between columns on hallway central/NEish
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      625.1394, 19.9834, 518.5136, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-19",
+        "alt-actor":"ctymarkb-skill-19"
+      }
+    },
+    {
+      "trans": [  532.4932, 10.3243, 415.1080], // inside basket sorta south side, before path to onintent
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 532.4932, 10.3243, 415.1080, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-20",
+        "alt-actor":"ctymarkb-skill-20"
+        // "alt-actor": "market-basket-a-134"
+      }
+    },
+    {
+      "trans": [ 432.4913, 9.6107, 616.6632], // inside basket sorta south side, before path to onintent
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 432.4913, 9.6107, 616.6632, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-21",
+        "alt-actor":"ctymarkb-skill-21"
+        // "alt-actor": "market-basket-b-120"
+      }
+    },
+    {
+      "trans": [   401.1253, 24.9222, 667.3170], // rooftops near ctypal entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    401.1253, 24.9222, 667.3170, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-22",
+        "alt-actor":"ctymarkb-skill-22"
+      }
+    },
+    {
+      "trans": [   397.3323, 32.5089, 669.7684], // rooftops near ctypal entrance, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    397.3323, 32.5089, 669.7684, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-23",
+        "alt-actor":"ctymarkb-skill-23"
+      }
+    },
+    {
+      "trans": [   395.5480, 35.6593, 661.7201], // rooftops near ctypal entrance, follow from ^ (thru invis one-way wall)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    395.5480, 35.6593, 661.7201, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-24",
+        "alt-actor":"ctymarkb-skill-24"
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [   611.4344, 49.9224, 415.1497], // way up on north wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  611.4344, 49.9224, 415.1497, 10], // bounding sphere
+      "lump": {
+        "name":"ctymarkb-skill-ghost-hover-01",
+        "alt-actor":"ctymarkb-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+
+    // 'onintent special cases
+    {
+      "trans": [ 707.82,  10.18, 743.17  ], // on left - tricky uppercut from outside over invis wall (enjoy softlock)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [707.82,  10.18, 743.17, 10], // bounding sphere
+      "lump": {
+        "name":"onintent-skill-ghost-1",
+      "alt-actor":"onintent-skill-1",
+        "lvl-idx-override": ["int32", 45]
+      }
+    },
+    {
+    "trans": [ 708.7,    9.0,     746.2   ], // on pot on left - tricky uppercut from outside over invis wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [708.7,    9.0,     746.2 , 10], // bounding sphere
+      "lump": {
+        "name":"onintent-skill-ghost-2",
+      "alt-actor":"onintent-skill-2",
+        "bob-scale": ["float", -1.0],  // no bob
+        "lvl-idx-override": ["int32", 45]
+      }
+    },
+    {
+    "trans": [717.3490, 9.1150, 742.4205], // on right - tricky uppercut from outside over invis wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [717.3490, 9.1150, 742.4205 , 10], // bounding sphere
+      "lump": {
+        "name":"onintent-skill-ghost-3",
+      "alt-actor":"onintent-skill-3",
+        "lvl-idx-override": ["int32", 45]
+      }
+    }
   ]
 }

@@ -144,6 +144,85 @@
           1 // amount?
         ]
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [ 1054.7,   38.8,    -545.0    ], // #t near keira transpa
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1054.7,   38.8,    -545.0  , 10], // bounding sphere
+      "lump": {
+        "name":"sagehut-skill-ghost-01",
+        "alt-actor":"sagehut-skill-01"
+      }
+    },
+    {
+      "trans": [ 1041.0,   32.5,    -527.5    ], // #t below wooden platforms (for portal
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1041.0,   32.5,    -527.5  , 10], // bounding sphere
+      "lump": {
+        "name":"sagehut-skill-ghost-02",
+        "alt-actor":"sagehut-skill-02"
+      }
+    },
+    {
+      "trans": [ 1070.6,   50.9,    -568.6    ], // #t left of jak 1 warp gat
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1070.6,   50.9,    -568.6  , 10], // bounding sphere
+      "lump": {
+        "name":"sagehut-skill-ghost-03",
+        "alt-actor":"sagehut-skill-03"
+      }
+    },
+    {
+      "trans": [ 1086.58,  38.5,    -569.07   ], // #t behind planters on lower back edge (just go around lol
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1086.58,  38.5,    -569.07 , 10], // bounding sphere
+      "lump": {
+        "name":"sagehut-skill-ghost-04",
+        "alt-actor":"sagehut-skill-04"
+      }
+    },
+    {
+      "trans": [   1064.1878, 50.3835, -540.3078 ], // behind pots/bags by right window of entrance, use roof from back/below
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1064.1878, 50.3835, -540.3078 , 10], // bounding sphere
+      "lump": {
+        "name":"sagehut-skill-ghost-05",
+        "alt-actor":"sagehut-skill-05"
+      }
+    },
+    {
+      "trans": [  1057.10,  60.28, -550.67], // up on circle rafter of 2nd floor, jump thru infin black portal thing is easiest
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1057.10,  60.28, -550.67, 10], // bounding sphere
+      "lump": {
+        "name":"sagehut-skill-ghost-06",
+        "alt-actor":"sagehut-skill-06"
+      }
+    },
+    {
+      "trans": [  1072.13,  61.32, -560.82], // up on rafter of 2nd floor, uppercut from ^ or maybe just grab from below
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1072.13,  61.32, -560.82, 10], // bounding sphere
+      "lump": {
+        "name":"sagehut-skill-ghost-07",
+        "alt-actor":"sagehut-skill-07"
+      }
     }
   ]
 }

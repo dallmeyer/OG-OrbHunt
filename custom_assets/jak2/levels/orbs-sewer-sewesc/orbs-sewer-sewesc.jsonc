@@ -251,6 +251,170 @@
         "name":"sewesc-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [ 1308.59, -89.0, 607.61], // behind grate at end
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1308.59, -89.0, 607.61, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-01",
+        "alt-actor":"sewesc-skill-01"
+      }
+    },
+    {
+      "trans": [ 1182.38, -41.90, 618.99], // atop door frame to closed off jetboard section (sideflip > extended ff > dismount)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1182.38, -41.90, 618.99, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-02",
+        "alt-actor":"sewesc-skill-02"
+      }
+    },
+    {
+      "trans": [     1190.0125, -66.5104, 519.2733], // in corner at bottom of first elevator
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     1190.0125, -66.5104, 519.2733, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-03",
+        "alt-actor":"sewesc-skill-03"
+      }
+    },
+    {
+      "trans": [      1219.5584, -64.2079, 498.5827], // behind pipe at bottom of first elevator
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     1219.5584, -64.2079, 498.5827, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-04",
+        "alt-actor":"sewesc-skill-04"
+      }
+    },
+    {
+      "trans": [  1129.9102, -39.6170, 474.8370], // in 2nd or 3rd hosehead near start
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1129.9102, -39.6170, 474.8370, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-05",
+        "alt-actor":"sewesc-skill-05"
+        // "alt-actor": "hosehead-9"
+      }
+    },
+    {
+      "trans": [   1155.1619, -66.3132, 479.7130], // behind rubble from escort explosion
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1155.1619, -66.3132, 479.7130, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-06",
+        "alt-actor":"sewesc-skill-06",
+        "bob-scale": ["float", 0.6]
+      }
+    },
+    {
+      "trans": [      1167.1638, -66.5383, 441.1590], // behind middle pipe in escort explosion room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      1167.1638, -66.5383, 441.1590, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-07",
+        "alt-actor":"sewesc-skill-07"
+      }
+    },
+    {
+      "trans": [      1156.9049, -64.5885, 368.5490], // down below platform in corner as soon as you enter room after escort explosion
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [        1156.9049, -64.5885, 368.5490, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-08",
+        "alt-actor":"sewesc-skill-08"
+      }
+    },
+    {
+      "trans": [  1419.1967, -88.8591, 447.7649], // in 2nd trio of hoseheads before ambush
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1419.1967, -88.8591, 447.7649, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-09",
+        "alt-actor":"sewesc-skill-09"
+        // "alt-actor": "hosehead-25"
+      }
+    },
+    {
+      "trans": [   1222.7717, -64.2165, 346.7738], // one of hoseheads on wall after 2nd elevator
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1222.7717, -64.2165, 346.7738, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-10",
+        "alt-actor":"sewesc-skill-10"
+        // "alt-actor": "hosehead-18"
+      }
+    },
+    {
+      "trans": [       1393.2794, -72.4529, 465.4424], // on lamp over pipes with jetboard ramp, in ambush room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [         1393.2794, -72.4529, 465.4424, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-11",
+        "alt-actor":"sewesc-skill-11"
+      }
+    },
+    {
+      "trans": [   1368.3763, -88.5238, 622.1121], // under rubble of broken statue
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1368.3763, -88.5238, 622.1121, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-12",
+        "alt-actor":"sewesc-skill-12"
+      }
+    },
+    {
+      "trans": [    1385.8522, -91.0048, 488.3918], // under rubble in water at escort ambush
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    1385.8522, -91.0048, 488.3918, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-13",
+        "alt-actor":"sewesc-skill-13",
+        "bob-scale": ["float", 0.6]
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [   1377.30, -46.50, 622.82], // closed door from jetboard section across from 1st valve (above statue)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1377.30, -46.50, 622.82, 10], // bounding sphere
+      "lump": {
+        "name":"sewesc-skill-ghost-hover-01",
+        "alt-actor":"sewesc-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
   ]
 }

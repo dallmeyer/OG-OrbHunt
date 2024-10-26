@@ -291,6 +291,222 @@
         "name":"ctypal-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [  253.64,  24.06, 746.16], // in right torch looking at palace door (car launch from steps)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 253.64,  24.06, 746.16, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-01",
+        "alt-actor":"ctypal-skill-01"
+      }
+    },
+    {
+      "trans": [  130.24,  24.04, 746.11], // in left torch looking at palace door (car launch from steps)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 130.24,  24.04, 746.11, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-02",
+        "alt-actor":"ctypal-skill-02"
+      }
+    },
+    {
+      "trans": [   127.3879, 46.1206, 913.5957], // on ear of statue on NW corner of mars tomb (car launch)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  127.3879, 46.1206, 913.5957, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-03",
+        "alt-actor":"ctypal-skill-03"
+      }
+    },
+    {
+      "trans": [   83.2395, 9.6178, 1108.8292], // behind rubble in SW corner by mars tomb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    83.2395, 9.6178, 1108.8292, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-04",
+        "alt-actor":"ctypal-skill-04"
+      }
+    },
+    {
+      "trans": [   122.7514, 9.3869, 983.1078], // behind rubble on west side of mars tomb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   122.7514, 9.3869, 983.1078, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-05",
+        "alt-actor":"ctypal-skill-05"
+      }
+    },
+    {
+      "trans": [   232.1986, 21.3620, 1039.0227], // behind rubble on west side of mars tomb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   232.1986, 21.3620, 1039.0227, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-06",
+        "alt-actor":"ctypal-skill-06"
+      }
+    },
+    {
+      "trans": [  224.3805, 35.4121, 943.4532], // among rubble in middle of mars tomb (car launch)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   224.3805, 35.4121, 943.4532, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-07",
+        "alt-actor":"ctypal-skill-07"
+      }
+    },
+    {
+      "trans": [ 205.35,  40.2, 1043.79], // tip of rubble south side in middle of mars tomb (car launch)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 205.35,  40.2, 1043.79, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-08",
+        "alt-actor":"ctypal-skill-08"
+      }
+    },
+    {
+      "trans": [ 141.67,  44.18, 971.48], // tip of rubble west side in middle of mars tomb (car launch)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 141.67,  44.18, 971.48, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-09",
+        "alt-actor":"ctypal-skill-09"
+      }
+    },
+    {
+      "trans": [  254.4509, 9.7874, 960.1087], // behind rubble on east side of mars tomb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  254.4509, 9.7874, 960.1087, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-10",
+        "alt-actor":"ctypal-skill-10"
+      }
+    },
+    {
+      "trans": [   293.5190, 21.3509, 1101.2568], // on ledge of awning in SE near mars tomb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   293.5190, 21.3509, 1101.2568, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-11",
+        "alt-actor":"ctypal-skill-11",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   300.5937, 35.1688, 1103.0264], // up higher on wall in SE near mars tomb, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   300.5937, 35.1688, 1103.0264, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-12",
+        "alt-actor":"ctypal-skill-12"
+      }
+    },
+    {
+      "trans": [  217.93,  29.99, 763.41], // atop statue head near palace entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  217.93,  29.99, 763.41, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-13",
+        "alt-actor":"ctypal-skill-13"
+      }
+    },
+    {
+      "trans": [    35.5458, 28.8615, 748.7971], // up mid level on wall of palace, SW corner, west side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   35.5458, 28.8615, 748.7971, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-14",
+        "alt-actor":"ctypal-skill-14"
+      }
+    },
+    {
+      "trans": [      322.0130, 37.0577, 658.6431], // up a bit on palace wall, east side, behind trees
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      322.0130, 37.0577, 658.6431, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-15",
+        "alt-actor":"ctypal-skill-15"
+      }
+    },
+    {
+      "trans": [     61.6499, 44.9909, 499.9199], // up high on palace wall, NW corner, hidden behind pillar a bit
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    61.6499, 44.9909, 499.9199, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-16",
+        "alt-actor":"ctypal-skill-16"
+      }
+    },
+    {
+      "trans": [   257.9194, 41.54, 463.5102], // top of tree near upper level of palace wall, north side, to east a bit
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  257.9194, 41.54, 463.5102, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-17",
+        "alt-actor":"ctypal-skill-17",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [   147.5695, 43.9690, 732.8159], // upper part of palace wall, just left of entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   147.5695, 43.9690, 732.8159, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-18",
+        "alt-actor":"ctypal-skill-18"
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [  192.08,  61.08, 734.42], // on top of latch door at palace entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 192.08,  61.08, 734.42, 10], // bounding sphere
+      "lump": {
+        "name":"ctypal-skill-ghost-hover-01",
+        "alt-actor":"ctypal-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
   ]
 }

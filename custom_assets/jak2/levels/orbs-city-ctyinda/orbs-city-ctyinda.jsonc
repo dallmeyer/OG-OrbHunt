@@ -436,6 +436,359 @@
         "name":"ctyinda-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [ 936.0,    28.5,    808.4   ], // #t above pipes in corner - boosted from walkway or jump from zoomer
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [936.0,    28.5,    808.4 , 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-01",
+        "alt-actor":"ctyinda-skill-01"
+      }
+    },
+    {
+      "trans": [ 857.37,   8.8,     1160.71 ], // #t jak 3 crate spot, in corner before hallway to port
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [857.37,   8.8,     1160.7, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-02",
+        "alt-actor":"ctyinda-skill-02"
+      }
+    },
+    {
+      "trans": [  718.2040, 10.0711, 1157.4407], // early path to port, in corner behind invis wall, abah over it from skill-20 vvvv
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  718.2040, 10.0711, 1157.4407, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-03",
+        "alt-actor":"ctyinda-skill-03"
+      }
+    },
+    {
+      "trans": [ 796.8,    35.0,    1213.5  ], // other side of hallway from ^, abbah bounce off vent up high
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [796.8,    35.0,    1213.5, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-04",
+        "alt-actor":"ctyinda-skill-04",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ 809.30,   8.65,    1066.34 ], // #t in pocket next to ramp near hallway to port
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [809.30,   8.65,    1066.3, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-05",
+        "alt-actor":"ctyinda-skill-05"
+      }
+    },
+    {
+      "trans": [ 1018.34,  22.0,    961.06  ], // #t behind some pipes in middle of map, visible from walkway (abbah from below)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1018.34,  22.0,    961.06, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-06",
+        "alt-actor":"ctyinda-skill-06"
+      }
+    },
+    {
+      "trans": [ 1158.93,  8.7,     806.08  ], // #t jak3-esque corner spot, this one at dead end with vent
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1158.93,  8.7,     806.08, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-07",
+        "alt-actor":"ctyinda-skill-07"
+      }
+    },
+    {
+      "trans": [ 1116.5,   33.0,    817.15  ], // #t same area as ^, abbah bounce from vent or zoomer jump up
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1116.5,   33.0,    817.15, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-08",
+        "alt-actor":"ctyinda-skill-08"
+      }
+    },
+    {
+      "trans": [ 1067.33,  11.0,    758.0   ], // #t deadend/hairpin turn onto ramp; behind pipe on left
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1067.33,  11.0,    758.0 , 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-09",
+        "alt-actor":"ctyinda-skill-09"
+      }
+    },
+    {
+      "trans": [ 1066.1,   28.3,    766.18  ], // #t  up above ^ skill-9
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1066.1,   28.3,    766.18, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-10",
+        "alt-actor":"ctyinda-skill-10"
+      }
+    },
+    {
+      "trans": [ 842.0,    37.3,    978.00  ], //  up above vent not far from consite (abbah on vent)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [842.0,    37.3,    978.00, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-11",
+        "alt-actor":"ctyinda-skill-11",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [   767.8986, 25.4983, 1042.0345], // upper level, in corner of pipes in SE, south of consite entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  767.8986, 25.4983, 1042.0345, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-12",
+        "alt-actor":"ctyinda-skill-12",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   760.9017, 43.0288, 1034.7288], // way up on slanted rooftop small standpoint, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  760.9017, 43.0288, 1034.7288, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-13",
+        "alt-actor":"ctyinda-skill-13"
+      }
+    },
+    {
+      "trans": [      754.2694, 32.9824, 963.3637], // up crevice in wall, uppercut from upper walkway, near consite
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      754.2694, 32.9824, 963.3637, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-14",
+        "alt-actor":"ctyinda-skill-14"
+      }
+    },
+    {
+      "trans": [        817.0979, 28.1203, 882.6813], // on wall behind banner, extended from upper walkway, near consite
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [       817.0979, 28.1203, 882.6813, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-15",
+        "alt-actor":"ctyinda-skill-15"
+      }
+    },
+    {
+      "trans": [      914.0367, 8.2596, 987.9296], // on ground in corner behind pipe, kinda central
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [       914.0367, 8.2596, 987.9296, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-16",
+        "alt-actor":"ctyinda-skill-16"
+      }
+    },
+    {
+      "trans": [   759.0493, 24.6921, 1070.0644], // on pipe in corner in last SW block before path to port (car launch)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  759.0493, 24.6921, 1070.0644, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-17",
+        "alt-actor":"ctyinda-skill-17",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   757.6049, 38.2822, 1071.8995], // way up on slanted rooftop small standpoint, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   757.6049, 38.2822, 1071.8995, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-18",
+        "alt-actor":"ctyinda-skill-18"
+      }
+    },
+    {
+      "trans": [  736.81,  20.92, 1187.17], // atop exhaust thing at very start of path to port
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  736.81,  20.92, 1187.17, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-19",
+        "alt-actor":"ctyinda-skill-19"
+      }
+    },
+    {
+      "trans": [    722.4511, 26.8449, 1163.6628], // on pipe in corner on path to port (car launch) (abah hint for skill-03 ^^^^)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   722.4511, 26.8449, 1163.6628, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-20",
+        "alt-actor":"ctyinda-skill-20",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   924.0000, 9.5000, 1147.0000 ], // inside propaganda thing near port path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   924.0000, 9.5000, 1147.0000 , 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-21",
+        "alt-actor":"ctyinda-skill-21"
+        // "alt-actor": "propa-9"
+      }
+    },
+    {
+      "trans": [   980.6520, 43.0076, 1031.4196], // way up on standpoint on wall in central hallway, moving car launch from upper walkway
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  980.6520, 43.0076, 1031.4196, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-22",
+        "alt-actor":"ctyinda-skill-22"
+      }
+    },
+    {
+      "trans": [      1087.5153, 10.1882, 1167.5740], // behind pipes in corner near power station, south wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      1087.5153, 10.1882, 1167.5740, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-23",
+        "alt-actor":"ctyinda-skill-23"
+      }
+    },
+    {
+      "trans": [      1066.8665, 36.7564, 1058.9331], // way up in corner opposing power station, jump from standpoint among pipes
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      1066.8665, 36.7564, 1058.9331, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-24",
+        "alt-actor":"ctyinda-skill-24"
+      }
+    },
+    {
+      "trans": [   1127.6873, 21.0258, 1090.6130], // on top of pipe/red light east wall near power station
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1127.6873, 21.0258, 1090.6130, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-25",
+        "alt-actor":"ctyinda-skill-25"
+      }
+    },
+    {
+      "trans": [   1060.3638, 26.2808, 1002.0052], // on pipe in corner of "L", central-ish
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1060.3638, 26.2808, 1002.0052, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-26",
+        "alt-actor":"ctyinda-skill-26",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  1051.5527, 42.9784, 994.2279], // on standpipe on wall in "L" corner, central-ish, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1051.5527, 42.9784, 994.2279, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-27",
+        "alt-actor":"ctyinda-skill-27"
+      }
+    },
+    {
+      "trans": [      1039.2078, 28.99, 882.5441], // behind some pipe at walkway T junction east of bbush
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      1039.2078, 28.99, 882.5441, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-28",
+        "alt-actor":"ctyinda-skill-28"
+      }
+    },
+    {
+      "trans": [      888.4149, 30.1000, 831.6470], // just before turn to ctyindb, behind u pipe on upper walkway
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      888.4149, 30.1000, 831.6470, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-29",
+        "alt-actor":"ctyinda-skill-29"
+      }
+    },
+    {
+      "trans": [     852.3959, 31.1367, 870.7446], // just before turn to ctyindb, on window ledge in corner
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     852.3959, 31.1367, 870.7446, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-30",
+        "alt-actor":"ctyinda-skill-30"
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [ 956.61,  45.62, 1001.85  ], // (HOVER) aim between pipe and wall, central
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [956.61,  45.62, 1001.85, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-ghost-hover-01",
+        "alt-actor":"ctyinda-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
   ]
 }

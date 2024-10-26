@@ -128,6 +128,99 @@
         "name":"throne-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [ 122.92,   340.6,   531.25  ], // #t  in gap under walkway to thron
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [122.92,   340.6,   531.25, 10], // bounding sphere
+      "lump": {
+        "name":"throne-skill-ghost-1",
+        "alt-actor":"throne-skill-1"
+      }
+    },
+    {
+      "trans": [ 103.0,    374.5,   499.15  ], // #t  window above throne (abbah duh
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [103.0,    374.5,   499.15, 10], // bounding sphere
+      "lump": {
+        "name":"throne-skill-ghost-2",
+        "alt-actor":"throne-skill-2"
+      }
+    },
+    {
+      "trans": [ 183.74,   345.5,   549.98  ], // #t  corner before drop down to palen
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [183.74,   345.5,   549.98, 10], // bounding sphere
+      "lump": {
+        "name":"throne-skill-ghost-3",
+        "alt-actor":"throne-skill-3"
+      }
+    },
+    {
+      "trans": [  173.04, 355.58, 566.11 ], // on column on right, against wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 173.04, 355.58, 566.11, 10], // bounding sphere
+      "lump": {
+        "name":"throne-skill-ghost-4",
+        "alt-actor":"throne-skill-4",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 162.75, 377.66, 575.85 ], // behind flag/banner over entrance door (abah from ^ to ledge over door)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 162.75, 377.66, 575.85, 10], // bounding sphere
+      "lump": {
+        "name":"throne-skill-ghost-5",
+        "alt-actor":"throne-skill-5"
+      }
+    },
+    {
+      "trans": [ 103.8261, 349.1022, 498.5805 ], // under/behind throne on right side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 103.8261, 349.1022, 498.5805, 10], // bounding sphere
+      "lump": {
+        "name":"throne-skill-ghost-6",
+        "alt-actor":"throne-skill-6"
+      }
+    },
+    {
+      "trans": [  91.0622, 356.0379, 509.2021 ], // in between metal frame, left side of throne
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  91.0622, 356.0379, 509.2021, 10], // bounding sphere
+      "lump": {
+        "name":"throne-skill-ghost-7",
+        "alt-actor":"throne-skill-7"
+      }
+    },
+    // HOVER ORBS
+    {
+      "trans": [  140.54, 407.99, 594.10 ], // up in corner, ode to palent skip
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 140.54, 407.99, 594.10, 10], // bounding sphere
+      "lump": {
+        "name":"throne-skill-ghost-hover-01",
+        "alt-actor":"throne-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
   ]
 }

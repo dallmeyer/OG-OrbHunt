@@ -292,6 +292,300 @@
         "bob-scale": ["float", -1.0], // no bob
         "pickup-amount": ["float", 2.0]  // abah
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [ 485.36,   4.0,     91.0  ], // under platform dax comes up on 
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [485.36,   4.0,     91.0, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-ghost-1",
+        "alt-actor":"prison-skill-1"
+      }
+    },
+    {
+      "trans": [ 463.0,    26.78,   54.1  ], // above warpgate
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [463.0,    26.78,   54.1, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-ghost-2",
+        "alt-actor":"prison-skill-2"
+      }
+    },
+    {
+      "trans": [ 528.85,   22.5,    129.86 ], // up/behind pipes on right before 2nd room
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 528.85,   22.5,    129.86, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-3",
+        "alt-actor": "prison-skill-3"
+      }
+    },
+    {
+      "trans": [ 546.2,    14.8,   199.95 ], // on shelf in 2nd room
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 546.2,    14.8,   199.95, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-4",
+        "alt-actor": "prison-skill-4"
+      }
+    },
+    {
+      "trans": [ 497.5,    31.5,    138.3 ], // up high in corner, abah bounce on vault handle in 2nd room
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 497.5,    31.5,    138.3, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-5",
+        "alt-actor": "prison-skill-5"
+      }
+    },
+    {
+      "trans": [ 531.59,   30.2,    171.46 ], // above pipes in 2nd room (extended)
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 531.59,   30.2,    171.46, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-6",
+        "alt-actor": "prison-skill-6"
+      }
+    },
+    {
+      "trans": [ 510.29,   8.3,     59.07 ], // inside 3rd cell
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 510.29,   8.3,     59.07, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-7",
+        "alt-actor": "prison-skill-7"
+      }
+    },
+    {
+      "trans": [ 511.25,   8.59,  96.00 ], // behind crates right before "please tell me you remember how 2 roll"
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 511.25,   8.59,  96.00, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-8",
+        "alt-actor": "prison-skill-8"
+      }
+    },
+    {
+      "trans": [ 471.29,   3.78,  75.48], // drop down on lamp next to walkway to torture area
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [471.29,   3.78,  75.48, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-9",
+        "alt-actor": "prison-skill-9"
+      }
+    },
+    {
+      "trans": [ 550.5,  22.0,  95.7], // vent section between first and second room, hidden behind pipes
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [550.5,  22.0,  95.7, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-10",
+        "alt-actor": "prison-skill-10"
+      }
+    },
+    {
+      "trans": [ 536.37,  31.16, 207.53], // atop vents, far end, in 2nd room
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [536.37,  31.16, 207.53, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-11",
+        "alt-actor": "prison-skill-11"
+      }
+    },
+    {
+      "trans": [435.68,  25.93,  58.39], // up above door from rescue friends 
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [435.68,  25.93,  58.39, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-12",
+        "alt-actor": "prison-skill-12"
+      }
+    },
+    {
+      "trans": [464.0226, 16.4137, 54.0892], // above warp, hint for earlier skill-ghost
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [464.0226, 16.4137, 54.0892, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-13",
+        "alt-actor": "prison-skill-13",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [     509.4263, 28.3660, 118.0711], // in corner on 2nd shelf level of prison cells, extendo from lamp infin jump
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     509.4263, 28.3660, 118.0711, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-14",
+        "alt-actor": "prison-skill-14"
+      }
+    },
+    
+    // HOVER ORBS
+    {
+      "trans": [ 472.1,  27.5,  97.5  ], // on lamp above torture machine
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [472.1,  27.5,  97.5, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-ghost-hover-1",
+        "alt-actor":"prison-skill-hover-1",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 445.10,  28.17, 112.57  ], // corner among pipes, hover or boosted from ^
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [445.10,  28.17, 112.57, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-ghost-hover-2",
+        "alt-actor":"prison-skill-hover-2",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 488.47,  38.92, 119.14 ], // up on pipes, farther along from ^
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [488.47,  38.92, 119.14, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-ghost-hover-3",
+        "alt-actor":"prison-skill-hover-3",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 445.76,  52.3, 108.73 ], // up on pipes, up from ^
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [445.76,  52.3, 108.73, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-ghost-hover-4",
+        "alt-actor":"prison-skill-hover-4",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 432.69,  41.0,  73.15  ], // up high on ledge of doorway where chambers exit
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [432.69,  41.0,  73.15, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-ghost-hover-5",
+        "alt-actor":"prison-skill-hover-5",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 481.29,  41.24,  48.84 ], // upper ledge above prison cells
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [481.29,  41.24,  48.84, 10], // bounding sphere
+      "lump": {
+        "name":"prison-skill-ghost-hover-6",
+        "alt-actor":"prison-skill-hover-6",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    
+    // GUIDE ORBS
+    {
+      "trans": [ 476.0,   15.5,  41.74], // hover guide
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [476.0,   15.5,  41.74, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-guide-1",
+        "alt-actor": "prison-skill-guide-1",
+        "bob-scale": ["float", -1.0], // no bob
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [476.0,   13.1,  41.74], // no hover guide
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [476.0,   13.1,  41.74, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-guide-2",
+        "alt-actor": "prison-skill-guide-2",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ 476.0,   10.7,  41.74], // abah guide
+      "etype": "skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [476.0,   10.7,  41.74, 10], // bounding sphere
+      "lump": {
+        "name": "prison-skill-ghost-guide-3",
+        "alt-actor": "prison-skill-guide-3",
+        "bob-scale": ["float", -1.0], // no bob
+        "pickup-amount": ["float", 2.0]  // abah
+      }
+    },
+
+    {
+      "trans": [472.0, 8.55, 103.1], // behind/under chair at start
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [472.0, 8.55, 103.1, 10],
+      "lump": {
+        "name": "skill-ghost-49",
+        "alt-actor": "skill-49"
+      }
+    },
+    {
+      "trans": [547.14, 12.4, 169.8], // in crack behind boxes along normal path
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [547.14, 12.4, 169.8, 10],
+      "lump": {
+        "name": "skill-ghost-50",
+        "alt-actor": "skill-50"
+      }
     }
   ]
 }

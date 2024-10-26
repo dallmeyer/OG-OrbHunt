@@ -1646,7 +1646,7 @@
 (defun skill-follow-y-offset ((orb-name string) (pd-name string) (y-offset float))
   (let ((orb (the skill (process-by-ename orb-name)))
         (pd (the process-drawable (process-by-ename pd-name))))
-    (when (and orb pd (logtest? (-> orb draw status) (draw-control-status no-draw-bounds)))
+    (when (and orb pd) ;; (logtest? (-> orb draw status) (draw-control-status no-draw-bounds)))
       (vector-copy! (-> orb root trans) (-> pd root trans))
       (+! (-> orb root trans y) y-offset)
       (vector-copy! (-> orb base) (-> orb root trans))
@@ -1658,7 +1658,7 @@
 (defun skill-follow-min-y ((orb-name string) (pd-name string) (min-y float))
   (let ((orb (the skill (process-by-ename orb-name)))
         (pd (the process-drawable (process-by-ename pd-name))))
-    (when (and orb pd (logtest? (-> orb draw status) (draw-control-status no-draw-bounds)))
+    (when (and orb pd) ;; (logtest? (-> orb draw status) (draw-control-status no-draw-bounds)))
       (vector-copy! (-> orb root trans) (-> pd root trans))
       (set! (-> orb root trans y) (fmax min-y (-> orb root trans y)))
       (vector-copy! (-> orb base) (-> orb root trans))
@@ -1981,10 +1981,15 @@
   ;; === ctyfarmb === 
   ;; move orb to follow yakow if its not visible yet
   (let ((orb (the skill (process-by-ename "ctyfarmb-skill-23")))
+        (ghorb (the skill (process-by-ename "ctyfarmb-skill-ghost-23")))
         (yak (the yakow (process-by-ename "yakow-8"))))
     (when (and orb yak (logtest? (-> orb draw status) (draw-control-status no-draw-bounds)))
       (vector-copy! (-> orb root trans) (vector<-cspace! (new-stack-vector0) (-> yak node-list data 21)))
       (vector-copy! (-> orb base) (-> orb root trans))
+      )
+    (when (and ghorb yak)
+      (vector-copy! (-> ghorb root trans) (vector<-cspace! (new-stack-vector0) (-> yak node-list data 21)))
+      (vector-copy! (-> ghorb base) (-> ghorb root trans))
       )
     )
 
@@ -2087,6 +2092,7 @@
   
   ;; move orb to follow centurion if its not visible yet
   (skill-follow-y-offset "drillmid-skill-13" "centurion-11" (meters 0.7))
+  (skill-follow-y-offset "drillmid-skill-ghost-13" "centurion-11" (meters 0.7))
 
   ;; === tomb/tombboss ===
   (let ((door (entity-by-name "tomb-boss-door-1"))) ;; open locked door to tombboss
@@ -2103,13 +2109,21 @@
   
   ;; make orb follow grunt/mine
   (skill-follow-min-y "sewer-skill-27" "grunt-193" (meters -49.5))
+  (skill-follow-min-y "sewer-skill-ghost-27" "grunt-193" (meters -49.5))
   (skill-follow-min-y "sewer-skill-28" "grunt-203" (meters -66.5))
+  (skill-follow-min-y "sewer-skill-ghost-28" "grunt-203" (meters -66.5))
   (skill-follow-y-offset "sewer-skill-55" "sew-mine-b-69" (meters 0.7))
+  (skill-follow-y-offset "sewer-skill-ghost-55" "sew-mine-b-69" (meters 0.7))
   (skill-follow-y-offset "sewer-skill-57" "sew-mine-a-64" (meters 0.7))
+  (skill-follow-y-offset "sewer-skill-ghost-57" "sew-mine-a-64" (meters 0.7))
   (skill-follow-y-offset "sewer-skill-69" "sew-mine-b-76" (meters 0.7))
+  (skill-follow-y-offset "sewer-skill-ghost-69" "sew-mine-b-76" (meters 0.7))
   (skill-follow-y-offset "sewer-skill-70" "sew-mine-a-58" (meters 0.7))
+  (skill-follow-y-offset "sewer-skill-ghost-70" "sew-mine-a-58" (meters 0.7))
   (skill-follow-y-offset "sewer-skill-79" "sew-mine-a-50" (meters 0.7))
+  (skill-follow-y-offset "sewer-skill-ghost-79" "sew-mine-a-50" (meters 0.7))
   (skill-follow-min-y "sewer-skill-90" "amphibian-45" (meters -38.5))
+  (skill-follow-min-y "sewer-skill-ghost-90" "amphibian-45" (meters -38.5))
 
   ;; dont deload elevator trying to load sewescb, or from weird corner in ctyindb
   (let (;; (r (region-lookup-by-id 344))
@@ -2129,8 +2143,11 @@
 
   ;; === sewesc(b) ===
   (skill-follow-min-y "sewesc-skill-05" "hosehead-9" (meters -66.5))
+  (skill-follow-min-y "sewesc-skill-ghost-05" "hosehead-9" (meters -66.5))
   (skill-follow-min-y "sewesc-skill-09" "hosehead-25" (meters -88.86))
+  (skill-follow-min-y "sewesc-skill-ghost-09" "hosehead-25" (meters -88.86))
   (skill-follow-min-y "sewesc-skill-10" "hosehead-18" (meters -90.7))
+  (skill-follow-min-y "sewesc-skill-ghost-10" "hosehead-18" (meters -90.7))
 
   ;; === palshaft/palent/throne ===
   ;; wow what a shitshow, just to return to palent/throne
@@ -2221,9 +2238,13 @@
 
   ;; === under/underb ===
   (skill-follow-min-y "underb-skill-01" "under-mine-39" (meters -64.40))
+  (skill-follow-min-y "underb-skill-ghost-01" "under-mine-39" (meters -64.40))
   (skill-follow-min-y "underb-skill-17" "under-mine-47" (meters -70.17))
+  (skill-follow-min-y "underb-skill-ghost-17" "under-mine-47" (meters -70.17))
   (skill-follow-min-y "underb-skill-12" "jellyfish-49" (meters -56.83))
+  (skill-follow-min-y "underb-skill-ghost-12" "jellyfish-49" (meters -56.83))
   (skill-follow-min-y "underb-skill-23" "jellyfish-56" (meters -63.37))
+  (skill-follow-min-y "underb-skill-ghost-23" "jellyfish-56" (meters -63.37))
   
   ;; keep crate on platform
   (let ((orb (the skill-crate (process-by-ename "under-crate-02")))
@@ -2275,9 +2296,13 @@
   ;; === mountain ===
   ;; move orb to follow hopper if its not visible yet
   (skill-follow-y-offset "mountain-skill-80" "hopper-50" (meters 0.7))
+  (skill-follow-y-offset "mountain-skill-ghost-80" "hopper-50" (meters 0.7))
   (skill-follow-y-offset "mountain-skill-81" "hopper-51" (meters 0.7))
+  (skill-follow-y-offset "mountain-skill-ghost-81" "hopper-51" (meters 0.7))
   (skill-follow-y-offset "mountain-skill-82" "hopper-52" (meters 0.7))
+  (skill-follow-y-offset "mountain-skill-ghost-82" "hopper-52" (meters 0.7))
   (skill-follow-y-offset "mountain-skill-96" "metalmonk-68" (meters 0.7))
+  (skill-follow-y-offset "mountain-skill-ghost-96" "metalmonk-68" (meters 0.7))
 
   ;; bounce crate on platform
   (let ((orb (the skill-crate (process-by-ename "mountain-crate-6")))
@@ -2299,9 +2324,13 @@
   ;; === ruins ===
   ;; move orb to follow amphib/frong if its not visible yet
   (skill-follow-min-y "ruins-skill-102" "amphibian-13" (meters 0.2))
+  (skill-follow-min-y "ruins-skill-ghost-102" "amphibian-13" (meters 0.2))
   (skill-follow-min-y "ruins-skill-105" "fodder-11" (meters 0.2))
+  (skill-follow-min-y "ruins-skill-ghost-105" "fodder-11" (meters 0.2))
   (skill-follow-min-y "ruins-skill-106" "grunt-59" (meters 0.2))
+  (skill-follow-min-y "ruins-skill-ghost-106" "grunt-59" (meters 0.2))
   (skill-follow-min-y "ruins-skill-107" "flitter-64" (meters 0.2))
+  (skill-follow-min-y "ruins-skill-ghost-107" "flitter-64" (meters 0.2))
 
   (clear-entity-kill-mask "skill-1") ;; spawn skill-1!!
   (clear-entity-kill-mask "amphibian-13") ;; spawn amphibian
@@ -2356,8 +2385,11 @@
 
   ;; === nest ====
   (skill-follow-y-offset "nest-skill-01" "mammoth-10" (meters 0.7))
+  (skill-follow-y-offset "nest-skill-ghost-01" "mammoth-10" (meters 0.7))
   (skill-follow-y-offset "nest-skill-02" "mammoth-5" (meters 0.7))
+  (skill-follow-y-offset "nest-skill-ghost-02" "mammoth-5" (meters 0.7))
   (skill-follow-y-offset "nest-skill-03" "mammoth-6" (meters 0.7))
+  (skill-follow-y-offset "nest-skill-ghost-03" "mammoth-6" (meters 0.7))
 
   ;; (move-actor-str-target-offset "ctyport-part-86" 0.0 1.5 0.0)  ;; jakpoop
 

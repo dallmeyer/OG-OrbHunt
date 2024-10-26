@@ -195,6 +195,148 @@
         "name":"stadiumb-skill-hover-05",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [      -328.2978, -27.0473, -421.9954], // on burnup central pipe near first gap
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -328.2978, -27.0473, -421.9954, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-ghost-01",
+        "alt-actor":"stadiumb-skill-01"
+      }
+    },
+    {
+      "trans": [  -171.24, -41.78, -239.92], // behind ramp for ramp over gap, uppercut between lights
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -171.24, -41.78, -239.92, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-ghost-02",
+        "alt-actor":"stadiumb-skill-02"
+      }
+    },
+    {
+      "trans": [      -80.2, -29.0835, -287.0875], // on left wall after turn after ramp over gap
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -80.2, -29.0835, -287.0875, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-ghost-03",
+        "alt-actor":"stadiumb-skill-03"
+      }
+    },
+    {
+      "trans": [    109.1102, 11.7904, -638.1674], // on random dot of slippery collision
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   109.1102, 11.7904, -638.1674, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-ghost-04",
+        "alt-actor":"stadiumb-skill-04",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [    109.1102, 32.7904, -638.1674], // above random dot of slippery collision (abah from ^)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    109.1102, 32.7904, -638.1674, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-ghost-05",
+        "alt-actor":"stadiumb-skill-05"
+      }
+    },
+    {
+      "trans": [ -258.00,  -7.53, -582.00], // western tip, bottom on small ledge that doesnt burn
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -258.00,  -7.53, -582.00, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-ghost-06",
+        "alt-actor":"stadiumb-skill-06"
+      }
+    },
+    {
+      "trans": [     -154.7536, -14.2590, -544.7882], // on small bit of pipe that doeant burn in middle of arena, more on west side (3x sideflip and launch that shit)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -154.7536, -14.2590, -544.7882, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-ghost-07",
+        "alt-actor":"stadiumb-skill-07"
+      }
+    },
+
+    // // HOVER ORBS
+    {
+      "trans": [  -271.6490, -13.6940, -369.5012], // up on small ledge above first gap
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -271.6490, -13.6940, -369.5012, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-ghost-hover-01",
+        "alt-actor":"stadiumb-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [    3.73,  21.60, -492.95], // up on scoreboard near start of race
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   3.73,  21.60, -492.95, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-ghost-hover-02",
+        "alt-actor":"stadiumb-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [    -207.0812, -18.8560, -261.4865], // on archway behind you in race ramp over gap room
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -207.0812, -18.8560, -261.4865, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-ghost-hover-03",
+        "alt-actor":"stadiumb-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  66.75,  36.67, -605.66], // on safe part of rooftop over trapdoor to race
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  66.75,  36.67, -605.66, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-ghost-hover-04",
+        "alt-actor":"stadiumb-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -141.86,  27.45, -683.20], // on beam with overhead light on part of track that comes up over edge of walkway
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -141.86,  27.45, -683.20, 10], // bounding sphere
+      "lump": {
+        "name":"stadiumb-skill-ghost-hover-05",
+        "alt-actor":"stadiumb-skill-hover-05",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
   ]
 }

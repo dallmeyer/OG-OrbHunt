@@ -342,6 +342,251 @@
           1 // amount?
         ]
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [ 12.5,    12.0,    -692.6  ], // behind glass wall at start, go around or over
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [12.5,    12.0,    -692.6, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-01",
+        "alt-actor":"skatea-skill-01"
+      }
+    },
+    {
+      "trans": [ -72.35,  -6.99,   -465.50  ], // behind some ramps and things against wall opposite entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-72.35,  -6.99,   -465.50, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-02",
+        "alt-actor":"skatea-skill-02"
+      }
+    },
+    {
+      "trans": [   96.55,  12.61, -676.28 ], // up on ledge of outer wall near entrance ramp
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  96.55,  12.61, -676.28, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-03",
+        "alt-actor":"skatea-skill-03"
+      }
+    },
+    {
+      "trans": [  143.18,  14.00, -580.36], // in corner at far end of upper walkway
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  143.18,  14.00, -580.36, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-04",
+        "alt-actor":"skatea-skill-04"
+      }
+    },
+    {
+      "trans": [   115.34,  10.28, -643.19], // on top of arch at entrance ramp, follow from ^ (abah or extended around the pillar)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  115.34,  10.28, -643.19, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-05",
+        "alt-actor":"skatea-skill-05"
+      }
+    },
+    {
+      "trans": [    104.0333, 10.2393, -559.5795 ], // on top of post of glass wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   104.0333, 10.2393, -559.5795, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-06",
+        "alt-actor":"skatea-skill-06"
+      }
+    },
+    {
+      "trans": [    72.4272, 10.1691, -518.9370 ], // on top of post of glass wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   72.4272, 10.1691, -518.9370, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-07",
+        "alt-actor":"skatea-skill-07"
+      }
+    },
+    {
+      "trans": [    72.4069, 5.2144, -640.0709 ], // on top of post of glass wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   72.4069, 5.2144, -640.0709, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-08",
+        "alt-actor":"skatea-skill-08"
+      }
+    },
+    {
+      "trans": [     163.1370, 1.0867, -472.6020], // in wall in corner by first grind rail before main skatepark
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      163.1370, 1.0867, -472.6020, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-09",
+        "alt-actor":"skatea-skill-09"
+      }
+    },
+    {
+      "trans": [  -116.0126, 6.1258, -488.2148], // ring of fire
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -116.0126, 6.1258, -488.2148, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-10",
+        "alt-actor":"skatea-skill-10"
+      }
+    },
+    {
+      "trans": [  -83.9966, 6.1258, -488.2148], // ring of fire
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -83.9966, 6.1258, -488.2148, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-11",
+        "alt-actor":"skatea-skill-11"
+      }
+    },
+    {
+      "trans": [   -193.9901, -1.1654, -551.8808], // in "corrugated cardboard" walls on far (west) end
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -193.9901, -1.1654, -551.8808, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-12",
+        "alt-actor":"skatea-skill-12"
+      }
+    },
+    {
+      "trans": [    -178.7764, -0.4001, -644.9630], // in "corrugated cardboard" walls on far (west) end
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -178.7764, -0.4001, -644.9630, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-13",
+        "alt-actor":"skatea-skill-13"
+      }
+    },
+    {
+      "trans": [      -199.8824, -3.3781, -527.9526], // on infin jump ceiling in hallway with jetboard token launch thing
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -199.8824, -3.3781, -527.9526, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-14",
+        "alt-actor":"skatea-skill-14"
+      }
+    },
+    {
+      "trans": [   -117.8427, 1.2525, -536.0266], // just below surface on top of platform with spiralling grind rails around
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -117.8427, 1.2525, -536.0266, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-15",
+        "alt-actor":"skatea-skill-15",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [     -6.5942, -6.7869, -630.2989], // just below surface on west side of pyramid
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     -6.5942, -6.7869, -630.2989, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-16",
+        "alt-actor":"skatea-skill-16"
+      }
+    },
+    {
+      "trans": [      -147.4355, 21.2538, -576.0035], // just under highest ramp, against supporting pillar
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -147.4355, 21.2538, -576.0035, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-17",
+        "alt-actor":"skatea-skill-17"
+      }
+    },
+    {
+      "trans": [      -45.4817, 1.5419, -710.7544], // behind pipes in hallway under north side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      -45.4817, 1.5419, -710.7544, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-18",
+        "alt-actor":"skatea-skill-18"
+      }
+    },
+    {
+      "trans": [   55.3892, -1.2337, -480.6221], // in corner of mid platform south side, behind curved grindrail
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  55.3892, -1.2337, -480.6221, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-19",
+        "alt-actor":"skatea-skill-19"
+      }
+    },
+    {
+      "trans": [  -22.4390, -13.1945, -530.5912], // behind supporting pillar in SE near miniramp
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -22.4390, -13.1945, -530.5912, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-20",
+        "alt-actor":"skatea-skill-20"
+      }
+    },
+    {
+      "trans": [    -117.1170, 24.34, -599.8269], // left grind rail from big jump
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -117.1170, 24.34, -599.8269, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-21",
+        "alt-actor":"skatea-skill-21"
+      }
+    },
+    {
+      "trans": [  -117.1170, 24.34, -551.8820], // right grind rail from big jump
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -117.1170, 24.34, -551.8820, 10], // bounding sphere
+      "lump": {
+        "name":"skatea-skill-ghost-22",
+        "alt-actor":"skatea-skill-22"
+      }
     }
   ]
 }

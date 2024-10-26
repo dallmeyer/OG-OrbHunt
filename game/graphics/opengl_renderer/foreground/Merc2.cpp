@@ -614,8 +614,8 @@ void Merc2::handle_pc_model(const DmaTransfer& setup,
 
   // allocate lights
   if (current_lights.w1) {
-    if (render_state->version != GameVersion::Jak3) {
-      current_lights.w1 = 0;  // force off merc fade in jak2/1 - a bunch of stuff uses this
+    if (render_state->version == GameVersion::Jak1) {
+      current_lights.w1 = 0;  // force off merc fade in jak1 - a bunch of stuff uses this
     }
   }
   u32 lights = alloc_lights(current_lights);
@@ -630,7 +630,7 @@ void Merc2::handle_pc_model(const DmaTransfer& setup,
   args.hash = hash;
   args.lights = lights;
   args.first_bone = first_bone;
-  args.no_texture = render_state->version == GameVersion::Jak3 && model_no_texture;
+  args.no_texture = render_state->version != GameVersion::Jak1 && model_no_texture;
 
   // loop over effects, creating draws for each
   for (size_t ei = 0; ei < model->effects.size(); ei++) {

@@ -433,6 +433,396 @@
         "name":"drill-skill-hover-07",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [  51.0669, 31.9585, -48.6984], // up high between supports on orange sphere before first turret track (abah from ledge below)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  51.0669, 31.9585, -48.6984, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-01",
+        "alt-actor":"drill-skill-01"
+      }
+    },
+    {
+      "trans": [  46.6841, 8.6426, -59.9913], // hanging off edge of platform back of orange sphere before first turret track
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  46.6841, 8.6426, -59.9913, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-02",
+        "alt-actor":"drill-skill-02"
+      }
+    },
+    {
+      "trans": [  27.1941, 16.4907, -34.1492], // around back of orange sphere at start, computer room side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  27.1941, 16.4907, -34.1492, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-03",
+        "alt-actor":"drill-skill-03"
+      }
+    },
+    {
+      "trans": [ 123.70,   0.07, -85.35], // on lower corner ledge, boosted from first elec gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  123.70,   0.07, -85.35, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-04",
+        "alt-actor":"drill-skill-04"
+      }
+    },
+    {
+      "trans": [  81.66,   0.53, -110.38], // on lower corner ledge around from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  81.66,   0.53, -110.38, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-05",
+        "alt-actor":"drill-skill-05"
+      }
+    },
+    {
+      "trans": [ 116.50,   0.24, -162.84], // keep going around from^, cross over unused area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 116.50,   0.24, -162.84, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-06",
+        "alt-actor":"drill-skill-06",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 118.04,  13.55, -161.59], // 2nd ring on thing next to unused area, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 118.04,  13.55, -161.59, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-07",
+        "alt-actor":"drill-skill-07",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 116.66,  24.46, -161.00], // 3rd ring, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 116.66,  24.46, -161.00, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-08",
+        "alt-actor":"drill-skill-08"
+      }
+    },
+    {
+      "trans": [  76.21,   1.72, -206.34], // around back/corner of unused area, behind support in corner
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  76.21,   1.72, -206.34, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-09",
+        "alt-actor":"drill-skill-09"
+      }
+    },
+    {
+      "trans": [  28.04,   0.59, -163.46], // tucked into corner of machine around back of unused area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   28.04,   0.59, -163.46, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-10",
+        "alt-actor":"drill-skill-10"
+      }
+    },
+    {
+      "trans": [  -20.47,   0.79, -152.20], // tucked into corner of machine, further down around back of unused area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -20.47,   0.79, -152.20, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-11",
+        "alt-actor":"drill-skill-11"
+      }
+    },
+    {
+      "trans": [ -62.92,  -7.52, -143.08], // back of lower edge of slippery square around orange sphere in unused area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -62.92,  -7.52, -143.08, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-12",
+        "alt-actor":"drill-skill-12",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -66.22,   0.96, -143.38], // slippery square around orange sphere in unused area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -66.22,   0.96, -143.38, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-13",
+        "alt-actor":"drill-skill-13",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -55.86,  21.47, -144.64], // up on orange sphere in unused area, abah from ^ to standopint just below
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -55.86,  21.47, -144.64, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-14",
+        "alt-actor":"drill-skill-14",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -54.92,  32.84, -144.49], // up somewhat high on orange sphere in unused area, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -54.92,  32.84, -144.49, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-15",
+        "alt-actor":"drill-skill-15"
+      }
+    },
+    {
+      "trans": [  36.8835, 8.3311, -163.5155], // in front corner of unused area, behind flame/smoke
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  36.8835, 8.3311, -163.5155, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-16",
+        "alt-actor":"drill-skill-16"
+      }
+    },
+    {
+      "trans": [  36.7759, 9.8991, -167.7927], // around backside of unused area, in corner to climb up onto structure
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  36.7759, 9.8991, -167.7927, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-17",
+        "alt-actor":"drill-skill-17"
+      }
+    },
+    {
+      "trans": [  42.95,  17.40, -177.02], // up from ^ on structure in back of unused area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   42.95,  17.40, -177.02, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-18",
+        "alt-actor":"drill-skill-18"
+      }
+    },
+    {
+      "trans": [   53.61,   8.44, -189.65], // in back of unused area, between pipe and smoking vent (precise crouch jump from below/left)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    53.61,   8.44, -189.65, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-19",
+        "alt-actor":"drill-skill-19"
+      }
+    },
+    {
+      "trans": [       155.2587, 23.5672, -165.1436], // just outside fence near light at exit warp (after 3rd turret track)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      155.2587, 23.5672, -165.1436, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-20",
+        "alt-actor":"drill-skill-20"
+      }
+    },
+    {
+      "trans": [ 178.95,  24.59, -162.90], // outside fence at exit warp (but actually you wanna grab this between 1st and 2nd turret tracks)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 178.95,  24.59, -162.90, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-21",
+        "alt-actor":"drill-skill-21"
+      }
+    },
+    {
+      "trans": [     182.4532, 24.5464, -196.2522], // one more outside fence at exit warp, on corner
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     182.4532, 24.5464, -196.2522, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-22",
+        "alt-actor":"drill-skill-22"
+      }
+    },
+    {
+      "trans": [ 86.07,  28.65, -29.80], // top of first elec gate (dark giant)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 86.07,  28.65, -29.80, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-23",
+        "alt-actor":"drill-skill-23"
+      }
+    },
+    {
+      "trans": [ 192.78,  34.80, -96.49], // tiny ledge above light before 2nd turret track - abah from below
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 192.78,  34.80, -96.49, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-24",
+        "alt-actor":"drill-skill-24"
+      }
+    },
+    {
+      "trans": [ -219.26,  10.09, -135.97], // small slippery ledge over void, a bit before 3rd turret track
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -219.26,  10.09, -135.97, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-25",
+        "alt-actor":"drill-skill-25"
+      }
+    },
+    {
+      "trans": [ -188.86,  12.70, -186.89], // tiny ledge against wall, just before 3rd turret track
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -188.86,  12.70, -186.89, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-26",
+        "alt-actor":"drill-skill-26"
+      }
+    },
+    {
+      "trans": [  -143.2739, 20.6148, -178.5402], // hanging down from ledge were 3rd turret track starts
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -143.2739, 20.6148, -178.5402, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-27",
+        "alt-actor":"drill-skill-27"
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [  124.13,  24.48,   6.28], // small ledge on mid/east building, just past first elec gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 124.13,  24.48,   6.28, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-hover-01",
+        "alt-actor":"drill-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [  -31.28,  46.22, -161.45], // way up high on second structure in unused area, hover from back of unused area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -31.28,  46.22, -161.45, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-hover-02",
+        "alt-actor":"drill-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [    66.17,  50.84, -164.31], // way up high on first structure in unused area, facing control room - hover from front of unused area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   66.17,  50.84, -164.31, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-hover-03",
+        "alt-actor":"drill-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 219.43,  24.48,   6.67], // on small ledge on next building, backwards after finishing first turret track
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 219.43,  24.48,   6.67, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-hover-04",
+        "alt-actor":"drill-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 211.20,  12.07, 218.07], // on SE corner, debatably oob
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 211.20,  12.07, 218.07, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-hover-05",
+        "alt-actor":"drill-skill-hover-05",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ -164.86,  60.79, -96.59], // NW corner ish, between tall cylinder and half cylinder roof
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -164.86,  60.79, -96.59, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-hover-06",
+        "alt-actor":"drill-skill-hover-06",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ -65.84,  72.76, -82.97], // where the two half cylinder roofs meet
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -65.84,  72.76, -82.97, 10], // bounding sphere
+      "lump": {
+        "name":"drill-skill-ghost-hover-07",
+        "alt-actor":"drill-skill-hover-07",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
     }
   ]
 }

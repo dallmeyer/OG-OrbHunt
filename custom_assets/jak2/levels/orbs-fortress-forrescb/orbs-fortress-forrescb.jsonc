@@ -665,6 +665,650 @@
           1 // amount?
         ]
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [     534.0186, 5.9886, 245.2635], // down low in gap in room before elec gate (end of first guard section)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     534.0186, 5.9886, 245.2635, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-01",
+        "alt-actor":"forrescb-skill-01"
+                        }
+                },
+    {
+      "trans": [      524.9536, 28.8858, 218.0454], // up in right corner, room with elec gate (end of first guard section)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     524.9536, 28.8858, 218.0454, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-02",
+        "alt-actor":"forrescb-skill-02"
+                        }
+                },
+    {
+      "trans": [    535.8412, 12.5625, 272.7738], // behind machine on left just before elec gate (end of first guard section)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    535.8412, 12.5625, 272.7738, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-03",
+        "alt-actor":"forrescb-skill-03"
+                        }
+                },
+    {
+      "trans": [  485.80,   7.39, 260.57], // on low pipe below turret in section after elec gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 485.80,   7.39, 260.57, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-04",
+        "alt-actor":"forrescb-skill-04"
+                        }
+                },
+    {
+      "trans": [ 481.66,  26.96, 272.46], // top of machine left of turrets past elec gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 481.66,  26.96, 272.46, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-05",
+        "alt-actor":"forrescb-skill-05"
+                        }
+                },
+    {
+      "trans": [ 467.29,  23.57, 272.90], // hanging off next machine in corner from ^, left of turrets past elec gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 467.29,  23.57, 272.90, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-06",
+        "alt-actor":"forrescb-skill-06"
+                        }
+                },
+    {
+      "trans": [ 469.32,  24.54, 259.82], // top of pipes above turrets past elec gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 469.32,  24.54, 259.82, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-07",
+        "alt-actor":"forrescb-skill-07"
+                        }
+                },
+    {
+      "trans": [ 453.42,  26.96, 260.37], // top of machines left/just past turrets past elec gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 453.42,  26.96, 260.37, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-08",
+        "alt-actor":"forrescb-skill-08"
+                        }
+                },
+    {
+      "trans": [ 451.89,  24.08, 236.87], // top of pipes on right just past turrets past elec gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 451.89,  24.08, 236.87, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-09",
+        "alt-actor":"forrescb-skill-09"
+                        }
+                },
+    {
+      "trans": [  459.8191, 28.0170, 245.6491], // top of pipes in middle over turrets past elec gate, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  459.8191, 28.0170, 245.6491, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-10",
+        "alt-actor":"forrescb-skill-10"
+                        }
+                },
+    {
+      "trans": [  468.26,  24.4, 234.25], // between machines on wall right of turrets past elec gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  468.26,  24.4, 234.25, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-11",
+        "alt-actor":"forrescb-skill-11"
+                        }
+                },
+    {
+      "trans": [  477.17,  28.32, 238.25], // between boxes in ceiling over turrets past elec gate, jump from machines on right wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  477.17,  28.32, 238.25, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-12",
+        "alt-actor":"forrescb-skill-12"
+                        }
+                },
+    {
+      "trans": [  460.0280, 7.1922, 244.6756], // on low pipe under one of last of turrets past elec gate
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  460.0280, 7.1922, 244.6756, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-13",
+        "alt-actor":"forrescb-skill-13"
+                        }
+                },
+    {
+      "trans": [  409.7333, 1.6709, 269.8257], // next to left edge/bottom of halfpipe
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  409.7333, 1.6709, 269.8257, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-14",
+        "alt-actor":"forrescb-skill-14"
+                        }
+                },
+    {
+      "trans": [ 396.85,  17.58, 273.44], // on pipe against wall next to left end of halfpipe
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 396.85,  17.58, 273.44, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-15",
+        "alt-actor":"forrescb-skill-15",
+        "pickup-amount": ["float", 2.0] // abah hint
+                        }
+                },
+    {
+      "trans": [  396.95,  25.13, 263.78], // atop pipe at left end of halfpipe, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 396.95,  25.13, 263.78, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-16",
+        "alt-actor":"forrescb-skill-16"
+                        }
+                },
+    {
+      "trans": [  417.7517, 19.3619, 276.4474], // on top of machine behind tall invis wall at left end of halfpipe, jump from upper pipes^ or abah again
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  417.7517, 19.3619, 276.4474, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-17",
+        "alt-actor":"forrescb-skill-17"
+                        }
+                },
+    {
+      "trans": [  407.7728, 24.8600, 255.2747], // atop pipes over halfpipe, left central, jump from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  407.7728, 24.8600, 255.2747, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-18",
+        "alt-actor":"forrescb-skill-18"
+                        }
+                },
+
+    {
+      "trans": [ 398.92,  32.11, 258.77], // on top of vent on square above halfpipe, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 398.92,  32.11, 258.77, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-19",
+        "alt-actor":"forrescb-skill-19"
+                        }
+                },
+    {
+      "trans": [ 399.05,  32.11, 242.57], // on top of vent on square above halfpipe, hopscotch from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 399.05,  32.11, 242.57, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-20",
+        "alt-actor":"forrescb-skill-20"
+      }
+    },
+    {
+      "trans": [ 399.07,  32.11, 226.17], // on top of vent on square above halfpipe, hopscotch from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 399.07,  32.11, 226.17, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-21",
+        "alt-actor":"forrescb-skill-21"
+                        }
+                },
+    {
+      "trans": [ 399.58,  32.14, 209.68], // on top of vent on square above halfpipe, hopscotch from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 399.58,  32.14, 209.68, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-22",
+        "alt-actor":"forrescb-skill-22"
+      }
+    },
+    {
+      "trans": [ 399.77,  32.14, 192.17], // on top of vent on square above halfpipe, hopscotch from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 399.77,  32.14, 192.17, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-23",
+        "alt-actor":"forrescb-skill-23"
+                        }
+                },
+    {
+      "trans": [ 414.75,  32.14, 258.80], // on top of vent on square above halfpipe, hopscotch from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 414.75,  32.14, 258.80, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-24",
+        "alt-actor":"forrescb-skill-24"
+      }
+    },
+    {
+      "trans": [ 414.70,  32.14, 242.47], // on top of vent on square above halfpipe, hopscotch from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 414.70,  32.14, 242.47, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-25",
+        "alt-actor":"forrescb-skill-25"
+                        }
+                },
+    {
+      "trans": [ 414.67,  32.14, 226.07], // on top of vent on square above halfpipe, hopscotch from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 414.67,  32.14, 226.07, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-26",
+        "alt-actor":"forrescb-skill-26"
+      }
+    },
+    {
+      "trans": [ 415.85,  32.11, 209.73], // on top of vent on square above halfpipe, hopscotch from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  415.85,  32.11, 209.73, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-27",
+        "alt-actor":"forrescb-skill-27"
+                        }
+                },
+    {
+      "trans": [ 415.8, 32.11,  192.0], // on top of vent on square above halfpipe, hopscotch from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  415.8,      32.11,  192.0, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-28",
+        "alt-actor":"forrescb-skill-28"
+      }
+    },
+    {
+      "trans": [  396.6188, 24.8907, 233.8706], // pipes over halfpipe, left side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   396.6188, 24.8907, 233.8706, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-29",
+        "alt-actor":"forrescb-skill-29"
+                        }
+                },
+    {
+      "trans": [  417.8288, 24.8934, 218.9721], // pipes over halfpipe, middle
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   417.8288, 24.8934, 218.9721, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-30",
+        "alt-actor":"forrescb-skill-30"
+      }
+    },
+    {
+      "trans": [  404.8692, 24.8347, 196.1254], // pipes over halfpipe, right side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   404.8692, 24.8347, 196.1254, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-31",
+        "alt-actor":"forrescb-skill-31"
+                        }
+                },
+    {
+      "trans": [  418.0164, 25.0047, 179.3903], // pipes over halfpipe, far right end
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   418.0164, 25.0047, 179.3903, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-32",
+        "alt-actor":"forrescb-skill-32"
+      }
+    },
+    {
+      "trans": [ 406.82,  17.42, 174.61], // pipe on wall at far right end of halfpipe
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 406.82,  17.42, 174.61, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-33",
+        "alt-actor":"forrescb-skill-33"
+      }
+    },
+    {
+      "trans": [    432.7912, 12.7766, 214.6251], // behind metal sitcking out on right as u leave halfpipe
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     432.7912, 12.7766, 214.6251, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-34",
+        "alt-actor":"forrescb-skill-34"
+      }
+    },
+    {
+      "trans": [ 466.79,  12.53, 209.14], // on rail between turrets after halfpipe
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 466.79,  12.53, 209.14, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-35",
+        "alt-actor":"forrescb-skill-35"
+      }
+    },
+    {
+      "trans": [ 471.54,  24.58, 212.38], // pipe above pair of turrets with rail
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 471.54,  24.58, 212.38, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-36",
+        "alt-actor":"forrescb-skill-36"
+      }
+    },
+    {
+      "trans": [ 484.10,  27.77, 212.36], // pipe up a bit from ^ over pair of turrets with rail
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 484.10,  27.77, 212.36, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-37",
+        "alt-actor":"forrescb-skill-37"
+      }
+    },
+    {
+      "trans": [ 479.68,  20.62, 221.57], // behind/on pipe on wall near pair of turrets with rail
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 479.68,  20.62, 221.57, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-38",
+        "alt-actor":"forrescb-skill-38"
+      }
+    },
+    {
+      "trans": [ 472.57,  26.91, 224.406], // up on machine on wall near pair of turrets with rail, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 472.57,  26.91, 224.40, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-39",
+        "alt-actor":"forrescb-skill-39"
+      }
+    },
+    {
+      "trans": [  516.7161, 12.5610, 190.1503], // in crevice on left side of machines, before overhead guards section
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  516.7161, 12.5610, 190.1503, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-40",
+        "alt-actor":"forrescb-skill-40"
+      }
+    },
+    {
+      "trans": [  517.5260, 28.6337, 202.7117], // on top of machines before overhead guards section, extended from infin jump ceiling
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  517.5260, 28.6337, 202.7117, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-41",
+        "alt-actor":"forrescb-skill-41"
+      }
+    },
+    {
+      "trans": [   458.1457, 29.8430, 184.2413], // up high in corner gap just past overhead guards, from pipe/infin jump ceiling
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   458.1457, 29.8430, 184.2413, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-42",
+        "alt-actor":"forrescb-skill-42"
+      }
+    },
+    {
+      "trans": [      475.4631, 25.83, 141.4365], // up high in corner near end of overhead guard section, between perpendicular computers
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     475.4631, 25.83, 141.4365, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-43",
+        "alt-actor":"forrescb-skill-43",
+        "bob-scale": ["float", 0.35]
+      }
+    },
+    {
+      "trans": [ 474.39,  21.74, 184.31], // behind pipes against wall in overhead guard section
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 474.39,  21.74, 184.31, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-44",
+        "alt-actor":"forrescb-skill-44"
+      }
+    },
+    {
+      "trans": [ 438.62,   6.02, 141.98], // on pipe under ramp after overhead guards, tricky direction change extended/boosted whatever past deathplane
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 438.62,   6.02, 141.98, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-45",
+        "alt-actor":"forrescb-skill-45"
+      }
+    },
+    {
+      "trans": [ 449.18,   8.11, 141.86], // on pipe under ramp after overhead guards, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 449.18,   8.11, 141.86, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-46",
+        "alt-actor":"forrescb-skill-46"
+      }
+    },
+    {
+      "trans": [ 480.56,   7.38, 201.66], // on pipe below one of turret pair with rail
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 480.56,   7.38, 201.66, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-47",
+        "alt-actor":"forrescb-skill-47"
+      }
+    },
+    {
+      "trans": [  475.1696, 7.2024, 219.9100], // on pipe below other one of turret pair with rail
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  475.1696, 7.2024, 219.9100, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-48",
+        "alt-actor":"forrescb-skill-48"
+      }
+    },
+    {
+      "trans": [ 382.42,  21.80, 170.25], // in corner behind all the computers and 3 guards
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  382.42,  21.80, 170.25, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-49",
+        "alt-actor":"forrescb-skill-49"
+      }
+    },
+    {
+      "trans": [  382.2740, 21.4582, 136.5798], // in corner by left of 2nd pair of turrets
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  382.2740, 21.4582, 136.5798, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-50",
+        "alt-actor":"forrescb-skill-50"
+      }
+    },
+    {
+      "trans": [     414.8606, 18.0573, 125.0284], // behind right of 2nd pair of turrets
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     414.8606, 18.0573, 125.0284, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-51",
+        "alt-actor":"forrescb-skill-51"
+      }
+    },
+    {
+      "trans": [   401.91,  12.33, 104.37], // under bridge before last room before prison, extended
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   401.91,  12.33, 104.37, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-52",
+        "alt-actor":"forrescb-skill-52"
+      }
+    },
+    {
+      "trans": [  402.9997, 28.9396, 76.1049], // on lamp before entering last room before prison, can extended from pipes
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   402.9997, 28.9396, 76.1049, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-53",
+        "alt-actor":"forrescb-skill-53"
+      }
+    },
+    {
+      "trans": [  382.7098, 17.3901, 70.8928], // last room before prison, immediate left in corner behind computer
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   382.7098, 17.3901, 70.8928, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-54",
+        "alt-actor":"forrescb-skill-54"
+      }
+    },
+    {
+      "trans": [     382.3175, 21.2758, 31.2306], // last room before prison, in corner between computers
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     382.3175, 21.2758, 31.2306, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-55",
+        "alt-actor":"forrescb-skill-55"
+      }
+    },
+    {
+      "trans": [     416.7386, 29.7195, 30.7959], // last room before prison, atop machines (abah or good crouch jump off light below)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     416.7386, 29.7195, 30.7959, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-56",
+        "alt-actor":"forrescb-skill-56"
+      }
+    },
+    {
+      "trans": [  426.6917, 9.1873, 61.6523], // last room before prison, corner riiight before prison
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  426.6917, 9.1873, 61.6523, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-57",
+        "alt-actor":"forrescb-skill-57"
+      }
+    },
+    {
+      "trans": [  403.9799, 25.4156, 143.3314], // in lamp between 3 guards and pair of turrets
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  403.9799, 25.4156, 143.3314, 10], // bounding sphere
+      "lump": {
+        "name":"forrescb-skill-ghost-58",
+        "alt-actor":"forrescb-skill-58",
+        "bob-scale": ["float", 0.40]
+      }
     }
   ]
 }

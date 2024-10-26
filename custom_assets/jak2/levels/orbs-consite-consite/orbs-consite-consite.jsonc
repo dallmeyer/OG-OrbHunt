@@ -1182,6 +1182,1278 @@
         "name":"consite-skill-hover-21",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [ 600.8361, 15.6120, 857.0685], // on top of spool stack
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [600.8361, 15.6120, 857.0685, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-01",
+        "alt-actor":"consite-skill-01"
+      }
+    },
+    {
+      "trans": [ 576.0824, 17.5909, 845.6328], // on small stable ledge on wall, extended from spools^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [576.0824, 17.5909, 845.6328, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-02",
+        "alt-actor":"consite-skill-02"
+      }
+    },
+    {
+      "trans": [577.91,  20.76, 816.67], // on small stable ledge on wall, right across slippery top wall from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [577.91,  20.76, 816.67, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-03",
+        "alt-actor":"consite-skill-03"
+      }
+    },
+    {
+      "trans": [574.78,  23.33, 804.29], // in crack between rocks up on wall right from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [574.78,  23.33, 804.29, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-04",
+        "alt-actor":"consite-skill-04"
+      }
+    },
+    {
+      "trans": [600.6551, 25.3985, 793.7210], // further down wall from ^, before scaffolding
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [600.6551, 25.3985, 793.7210, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-05",
+        "alt-actor":"consite-skill-05"
+      }
+    },
+    {
+      "trans": [613.6659, 27.2683, 804.8513], // on scaffolding, uppercut from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [613.6659, 27.2683, 804.8513, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-06",
+        "alt-actor":"consite-skill-06",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [606.5206, 36.1876, 805.0822], // on scaffolding, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [606.5206, 36.1876, 805.0822, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-07",
+        "alt-actor":"consite-skill-07"
+      }
+    },
+    {
+      "trans": [574.43,   7.25, 895.41], // on wall at end of chain of fallen crane
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [574.43,   7.25, 895.41, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-08",
+        "alt-actor":"consite-skill-08"
+      }
+    },
+    {
+      "trans": [572.09,  22.17, 895.44], // up from ^ on wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [572.09,  22.17, 895.44, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-09",
+        "alt-actor":"consite-skill-09"
+      }
+    },
+    {
+      "trans": [571.91,  23.03, 875.76], // in crevice behind light post
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [571.91,  23.03, 875.76, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-10",
+        "alt-actor":"consite-skill-10",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [574.2937, 35.9049, 874.8944], // up on top of light post, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [574.2937, 35.9049, 874.8944, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-11",
+        "alt-actor":"consite-skill-11"
+      }
+    },
+    {
+      "trans": [568.07,  23.56, 935.38], // in corner of fencing on narrow ledge
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [568.07,  23.56, 935.38, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-12",
+        "alt-actor":"consite-skill-12"
+      }
+    },
+    {
+      "trans": [568.07,  23.56, 939.47], // other side of fence from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [568.07,  23.56, 939.47, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-13",
+        "alt-actor":"consite-skill-13"
+      }
+    },
+    {
+      "trans": [561.86,  27.03, 951.13], // back and arrow last support thing from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [561.86,  27.03, 951.13, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-14",
+        "alt-actor":"consite-skill-14"
+      }
+    },
+    {
+      "trans": [558.75,  23.56, 919.66], // follow backside from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [558.75,  23.56, 919.66, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-15",
+        "alt-actor":"consite-skill-15"
+      }
+    },
+    {
+      "trans": [563.35,  27.03, 888.70], // between supports, keep following from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [563.35,  27.03, 888.70, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-16",
+        "alt-actor":"consite-skill-16"
+      }
+    },
+    {
+      "trans": [ 664.7376, -0.2449, 843.1026], // at top of bomb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 664.7376, -0.2449, 843.1026, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-17",
+        "alt-actor":"consite-skill-17"
+      }
+    },
+    {
+      "trans": [ 664.8096, -11.8028, 818.2485], // under bomb wing(?)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 664.8096, -11.8028, 818.2485, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-18",
+        "alt-actor":"consite-skill-18"
+      }
+    },
+    {
+      "trans": [ 715.2651, -8.9103, 843.8991], // under barrels/debris
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 715.2651, -8.9103, 843.8991, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-19",
+        "alt-actor":"consite-skill-19"
+      }
+    },
+    {
+      "trans": [686.04,  18.80, 908.35], // on barrel on higher scaffolding near ramp
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 686.04,  18.80, 908.35, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-20",
+        "alt-actor":"consite-skill-20"
+      }
+    },
+    {
+      "trans": [686.5048, 36.4325, 922.0984], // up from ^, on edge of scaffolding you cant actually get to
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 686.5048, 36.4325, 922.0984, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-21",
+        "alt-actor":"consite-skill-21"
+      }
+    },
+    {
+      "trans": [665.50,  14.61, 912.45], // near ^^, on the side of these platforms that are solid
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 665.50,  14.61, 912.45, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-22",
+        "alt-actor":"consite-skill-22"
+      }
+    },
+    {
+      "trans": [712.4183, 1.45, 805.8723], // behind plank near top of staircase of barrels
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [712.4183, 1.45, 805.8723, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-23",
+        "alt-actor":"consite-skill-23"
+      }
+    },
+    {
+      "trans": [732.9077, -7.0803, 810.8870], // in corner partially behind metal sheet
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [732.9077, -7.0803, 810.8870, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-24",
+        "alt-actor":"consite-skill-24"
+      }
+    },
+    {
+      "trans": [724.2335, -9.4093, 904.8081], // behind barrels right below entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [724.2335, -9.4093, 904.8081, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-25",
+        "alt-actor":"consite-skill-25"
+      }
+    },
+    {
+      "trans": [730.59,  -9.65, 872.25], // sEcReT aReA behind metal sheet, wall parallel/closest to consiteb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [730.59,  -9.65, 872.25, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-26",
+        "alt-actor":"consite-skill-26"
+      }
+    },
+    {
+      "trans": [732.30,  25.25, 896.70], // on slippery ledge up/to side of entrance door
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [732.30,  25.25, 896.70, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-27",
+        "alt-actor":"consite-skill-27",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [732.30,  34.21, 903.62], // on ledge directly above entrance door
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [732.30,  34.21, 903.62, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-28",
+        "alt-actor":"consite-skill-28"
+      }
+    },
+    {
+      "trans": [733.39,  34.23, 948.44], // on small stable metal bit "OOB" near entrance door, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [733.39,  34.23, 948.44, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-29",
+        "alt-actor":"consite-skill-29"
+      }
+    },
+    {
+      "trans": [733.44,  34.23, 969.54], // further out from ^, keep going...
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [733.44,  34.23, 969.54, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-30",
+        "alt-actor":"consite-skill-30"
+      }
+    },
+    {
+      "trans": [717.77,  22.75, 1001.20], // boosted across to "OOB" support crap from^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [717.77,  22.75, 1001.20, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-31",
+        "alt-actor":"consite-skill-31"
+      }
+    },
+    {
+      "trans": [700.34,  22.75, 1001.00], // keep going from^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [700.34,  22.75, 1001.00, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-32",
+        "alt-actor":"consite-skill-32"
+      }
+    },
+    {
+      "trans": [689.64,  19.29, 1006.81], // keep going from^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [689.64,  19.29, 1006.81, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-33",
+        "alt-actor":"consite-skill-33"
+      }
+    },
+    {
+      "trans": [700.99,  14.39, 1019.16], // lower back lip of pipe behind ^^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [700.99,  14.39, 1019.16, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-34",
+        "alt-actor":"consite-skill-34"
+      }
+    },
+    {
+      "trans": [668.92,  22.75, 1005.32], // backside of ledges, follow from ^^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [668.92,  22.75, 1005.32, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-35",
+        "alt-actor":"consite-skill-35",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [668.44,  36.87, 1015.35], // upper lip of pipe, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [668.44,  36.87, 1015.35, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-36",
+        "alt-actor":"consite-skill-36",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [668.75,  50.83, 1006.81], // upper support ledges above ^^^, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [668.75,  50.83, 1006.81, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-37",
+        "alt-actor":"consite-skill-37"
+      }
+    },
+    {
+      "trans": [624.17,  53.87, 1005.10], // further down upper support ledges from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [624.17,  53.87, 1005.10, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-38",
+        "alt-actor":"consite-skill-38",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [623.23,  67.45, 1018.32], // lip of pipe way up, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [623.23,  67.45, 1018.32, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-39",
+        "alt-actor":"consite-skill-39"
+      }
+    },
+    {
+      "trans": [613.09,  31.85, 978.67], // come back down from ^, big ol uppertcut to lip of pipe in "OOB" area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [613.09,  31.85, 978.67, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-40",
+        "alt-actor":"consite-skill-40"
+      }
+    },
+    {
+      "trans": [605.64,  14.23, 955.27], // uppercut from ^ to next pipe lower lip
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [605.64,  14.23, 955.27, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-41",
+        "alt-actor":"consite-skill-41"
+      }
+    },
+    {
+      "trans": [732.40,  -1.42, 843.73], // slippery ledge on wall near barrels+ + debris
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [732.40,  -1.42, 843.73, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-42",
+        "alt-actor":"consite-skill-42",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [733.5772, 17.4990, 839.4168], // weird temp standpoint on wall, abah from^ and chain jump to v
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [733.5772, 17.4990, 839.4168, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-43",
+        "alt-actor":"consite-skill-43"
+      }
+    },
+    {
+      "trans": [722.44,  18.91, 829.56], // up on solid plank on scaffolding, quick jump from standpoint^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [722.44,  18.91, 829.56, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-44",
+        "alt-actor":"consite-skill-44"
+      }
+    },
+    {
+      "trans": [725.45,  19.20, 816.30], // another solid plank on scaffolding, from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [725.45,  19.20, 816.30, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-45",
+        "alt-actor":"consite-skill-45"
+      }
+    },
+    {
+      "trans": [731.53,  15.06, 811.82], // standpoint, top of metal sheet
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [731.53,  15.06, 811.82, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-46",
+        "alt-actor":"consite-skill-46"
+      }
+    },
+    {
+      "trans": [ 733.4680, 17.8774, 798.5493], // standpoint on metal support on wall, uppercut from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 733.4680, 17.8774, 798.5493, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-47",
+        "alt-actor":"consite-skill-47"
+      }
+    },
+    {
+      "trans": [  719.6042, -9.6132, 852.8532], // under debris
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  719.6042, -9.6132, 852.8532, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-48",
+        "alt-actor":"consite-skill-48"
+      }
+    },
+    {
+      "trans": [ 723.54,  14.63, 895.66], // between pipes near entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [723.54,  14.63, 895.66, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-49",
+        "alt-actor":"consite-skill-49"
+      }
+    },
+    {
+      "trans": [732.30,  14.77, 883.47], // between 3rd+4th pipes against wall, uppercut from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 732.30,  14.77, 883.47, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-50",
+        "alt-actor":"consite-skill-50"
+      }
+    },
+    {
+      "trans": [613.44,  21.94, 775.42], // on base of support "OOB", dark giant uppercut from skill-07
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [613.44,  21.94, 775.42, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-51",
+        "alt-actor":"consite-skill-51"
+      }
+    },
+    {
+      "trans": [644.94,  25.41, 773.83], // further down from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [644.94,  25.41, 773.83, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-52",
+        "alt-actor":"consite-skill-52",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [650.3277, 36.6272, 779.4007], // lip of pipe, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [650.3277, 36.6272, 779.4007, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-53",
+        "alt-actor":"consite-skill-53"
+      }
+    },
+    {
+      "trans": [693.50,  25.41, 767.72], // further down on supports, in back corner
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [693.50,  25.41, 767.72, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-54",
+        "alt-actor":"consite-skill-54"
+      }
+    },
+    {
+      "trans": [732.01,  41.31, 888.76], // where pipe hits wall, uppercut from skill-28
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [732.01,  41.31, 888.76, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-55",
+        "alt-actor":"consite-skill-55"
+      }
+    },
+    {
+      "trans": [718.68,  45.96, 888.71], // lip of pipe, up and around from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [718.68,  45.96, 888.71, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-56",
+        "alt-actor":"consite-skill-56",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [720.48,  57.17, 882.05], // lip of pipe, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [720.48,  57.17, 882.05, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-57",
+        "alt-actor":"consite-skill-57"
+      }
+    },
+    {
+      "trans": [731.88,  58.53, 874.77], // slipper ledge against (fake) wall, uppercut from ^ into sliding abah on this
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [731.88,  58.53, 874.77, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-58",
+        "alt-actor":"consite-skill-58",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [732.06,  72.34, 888.75], // between pipes against wall, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [732.06,  72.34, 888.75, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-59",
+        "alt-actor":"consite-skill-59"
+      }
+    },
+    {
+      "trans": [732.77,  85.57, 884.87], // on stable standpoint up from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [732.77,  85.57, 884.87, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-60",
+        "alt-actor":"consite-skill-60"
+      }
+    },
+    {
+      "trans": [737.94,  91.95, 900.28], // right from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [737.94,  91.95, 900.28, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-61",
+        "alt-actor":"consite-skill-61"
+      }
+    },
+    {
+      "trans": [734.50,  87.26, 857.10], // boosted from ^^ 60
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [734.50,  87.26, 857.10, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-62",
+        "alt-actor":"consite-skill-62"
+      }
+    },
+    {
+      "trans": [737.37,  87.26, 823.62], // farther down from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [737.37,  87.26, 823.62, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-63",
+        "alt-actor":"consite-skill-63"
+      }
+    },
+    {
+      "trans": [727.2378, 105.9408, 853.6936], // infin jump right side from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [727.2378, 105.9408, 853.6936, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-64",
+        "alt-actor":"consite-skill-64"
+      }
+    },
+    {
+      "trans": [ 727.3011, 134.9910, 841.9185], // infin jump left side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 727.3011, 134.9910, 841.9185, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-65",
+        "alt-actor":"consite-skill-65"
+      }
+    },
+    {
+      "trans": [ 737.7466, 162.7035, 847.5452], // top of infin jump
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 737.7466, 162.7035, 847.5452, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-66",
+        "alt-actor":"consite-skill-66"
+      }
+    },
+    {
+      "trans": [723.47, 120.44, 813.36], // top lip of pipe adjacent to infin jump ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [723.47, 120.44, 813.36, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-67",
+        "alt-actor":"consite-skill-67"
+      }
+    },
+    {
+      "trans": [734.11, 153.32, 904.59], // support base up high, boosted/extended from top of infin jump
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [734.11, 153.32, 904.59, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-68",
+        "alt-actor":"consite-skill-68"
+      }
+    },
+    {
+      "trans": [726.13,  64.12, 816.15], // bottom lip of pipe from -67^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [726.13,  64.12, 816.15, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-69",
+        "alt-actor":"consite-skill-69"
+      }
+    },
+    {
+      "trans": [734.63,  55.72, 825.37], // base of support, uppercut from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [734.63,  55.72, 825.37, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-70",
+        "alt-actor":"consite-skill-70"
+      }
+    },
+    {
+      "trans": [733.65,  54.07, 844.44], // stable metal below base of support, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [733.65,  54.07, 844.44, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-71",
+        "alt-actor":"consite-skill-71"
+      }
+    },
+    {
+      "trans": [733.71,  62.49, 916.94], // up on stable metal way above entrance, uppercut around and down from -61
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [733.71,  62.49, 916.94, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-72",
+        "alt-actor":"consite-skill-72"
+      }
+    },
+    {
+      "trans": [698.33,  40.88, 945.62], // on pipe lip "OOB" near entrance, boosted from stable metal down a bit from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [698.33,  40.88, 945.62, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-73",
+        "alt-actor":"consite-skill-73"
+      }
+    },
+    {
+      "trans": [683.09,  32.82, 968.73], // on lower pipe lip, uppercut from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [683.09,  32.82, 968.73, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-74",
+        "alt-actor":"consite-skill-74"
+      }
+    },
+    {
+      "trans": [721.07,  51.25, 1001.79], // between support and wall way up high, either follow from earlier trail or boosted from stable metal down from ^^ -72
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [721.07,  51.25, 1001.79, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-75",
+        "alt-actor":"consite-skill-75"
+      }
+    },
+    {
+      "trans": [740.15, 124.27, 797.31], // base of support in corner, either yolo from top of infin jump or uppercut from top of adjacent pipe
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [740.15, 124.27, 797.31, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-76",
+        "alt-actor":"consite-skill-76"
+      }
+    },
+    {
+      "trans": [703.95,  73.31, 785.62], // lip of pipe on deepest wall, slippery wall shenanigans or good extended from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [703.95,  73.31, 785.62, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-77",
+        "alt-actor":"consite-skill-77",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [693.23,  86.35, 774.91], // ledge abah up from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [693.23,  86.35, 774.91, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-78",
+        "alt-actor":"consite-skill-78"
+      }
+    },
+    {
+      "trans": [698.82,  93.60, 784.76], // lip of pipe, abah/uppercut from wall from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [698.82,  93.60, 784.76, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-79",
+        "alt-actor":"consite-skill-79"
+      }
+    },
+    {
+      "trans": [703.79,  98.6, 772.45], // between pipes against wall, uppercut/abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [703.79,  98.6, 772.45, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-80",
+        "alt-actor":"consite-skill-80"
+      }
+    },
+    {
+      "trans": [691.69,  58.27, 772.37], // support base, drop down from ^^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [691.69,  58.27, 772.37, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-81",
+        "alt-actor":"consite-skill-81"
+      }
+    },
+    {
+      "trans": [613.52,  58.27, 773.71], // other end from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [613.52,  58.27, 773.71, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-82",
+        "alt-actor":"consite-skill-82",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [613.20,  77.88, 779.33], // on pipe seam, abah from ^ into standpoint/chained abah
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [613.20,  77.88, 779.33, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-83",
+        "alt-actor":"consite-skill-83",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [639.71,  87.55, 766.64], // abah up from ^, (down a bit from skill-86)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [639.71,  87.55, 766.64, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-84",
+        "alt-actor":"consite-skill-84"
+      }
+    },
+    {
+      "trans": [589.15,  95.87, 775.73], // behind/under/lip of pipe, uppercut/slippery wall shenanigans from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [589.15,  95.87, 775.73, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-85",
+        "alt-actor":"consite-skill-85"
+      }
+    },
+    {
+      "trans": [613.52,  89.39, 767.73], // abah up from skill-83, behind beam near skill-84
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [613.52,  89.39, 767.73, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-86",
+        "alt-actor":"consite-skill-86",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [615.32, 106.50, 750.41], // top of pipe against wall, abah into abah cancel from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [615.32, 106.50, 750.41, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-87",
+        "alt-actor":"consite-skill-87",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [615.17, 121.95, 748.38], // top of wall, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [615.17, 121.95, 748.38, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-88",
+        "alt-actor":"consite-skill-88"
+      }
+    },
+    {
+      "trans": [629.12, 117.47, 771.43], // top of support platforms, uppercut over from^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [629.12, 117.47, 771.43, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-89",
+        "alt-actor":"consite-skill-89"
+      }
+    },
+    //HOVER ORBS
+    {
+      "trans": [ 639.0232, 72.0995, 920.0397], // in teeth of claw
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [639.0232, 72.0995, 920.0397, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-01",
+        "alt-actor":"consite-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 653.97,  95.54, 965.72], // on piston of claw holding sheet of metal
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [653.97,  95.54, 965.72, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-02",
+        "alt-actor":"consite-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 555.26, 124.53, 868.36], // on top of claw
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [555.26, 124.53, 868.36, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-03",
+        "alt-actor":"consite-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 639.13, 147.03, 919.98], // top end of crane overhang
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [639.13, 147.03, 919.98, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-04",
+        "alt-actor":"consite-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [702.51, 156.07, 968.58], // top neck of crane overhang
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [702.51, 156.07, 968.58, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-05",
+        "alt-actor":"consite-skill-hover-05",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [694.47, 150.38, 991.43], // top of left infin jump oval
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [694.47, 150.38, 991.43, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-06",
+        "alt-actor":"consite-skill-hover-06",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [631.05, 150.38, 991.43], // top of right infin jump oval
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [631.05, 150.38, 991.43, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-07",
+        "alt-actor":"consite-skill-hover-07",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [738.75, 184.87, 884.34], // top of support near single infin jump oval (the one you do on foot)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [738.75, 184.87, 884.34, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-08",
+        "alt-actor":"consite-skill-hover-08",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [492.06, 199.47, 915.89], // in gap top of crane for 2nd highest claw
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [492.06, 199.47, 915.89, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-09",
+        "alt-actor":"consite-skill-hover-09",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [515.07, 182.98, 883.77], // top of left sphere
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [515.07, 182.98, 883.77, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-10",
+        "alt-actor":"consite-skill-hover-10",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [509.66, 185.02, 849.61], // lip of pipe between spheres
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [509.66, 185.02, 849.61, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-11",
+        "alt-actor":"consite-skill-hover-11",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [532.63, 181.00, 839.45], // behind metal in teeth of highest claw
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [532.63, 181.00, 839.45, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-12",
+        "alt-actor":"consite-skill-hover-12",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [509.64, 182.84, 786.13], // top of right sphere
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [509.64, 182.84, 786.13, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-13",
+        "alt-actor":"consite-skill-hover-13",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [548.88,  89.63, 804.00], // on support base up high, behind big metal sheet
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [548.88,  89.63, 804.00, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-14",
+        "alt-actor":"consite-skill-hover-14",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [486.43, 128.77, 824.37], // back behind spheres, top of supports between pillars
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [486.43, 128.77, 824.37, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-15",
+        "alt-actor":"consite-skill-hover-15",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [444.98, 232.98, 791.11], // way on back of 2nd highest crane (highest claw)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [444.98, 232.98, 791.11, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-16",
+        "alt-actor":"consite-skill-hover-16",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [605.43, 196.74, 754.24], // top of 2nd highest crane w/ no claw
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [605.43, 196.74, 754.24, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-17",
+        "alt-actor":"consite-skill-hover-17",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [616.44, 256.68, 1031.95], // highest standpoint in consite :)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [616.44, 256.68, 1031.95, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-18",
+        "alt-actor":"consite-skill-hover-18",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [739.65, 152.35, 797.28], // top of support in corner, nearish single oval infin jump
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [739.65, 152.35, 797.28, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-19",
+        "alt-actor":"consite-skill-hover-19",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [694.71, 212.89, 1003.06], // top of middle support in group of 5, above pair of infin jump ovals
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [694.71, 212.89, 1003.06, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-20",
+        "alt-actor":"consite-skill-hover-20",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [456.74, 157.38, 1170.17], // deep in the back corner "OOB"
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [456.74, 157.38, 1170.17, 10], // bounding sphere
+      "lump": {
+        "name":"consite-skill-ghost-hover-21",
+        "alt-actor":"consite-skill-hover-21",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+
+    {
+      "trans": [703.9286, -9.4515, 904.7067], // under walkway/behind barrels, not far from where it normally is
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [703.9286, -9.4515, 904.7067, 10],
+      "lump": {
+        "name": "skill-ghost-83",
+        "alt-actor": "skill-83"
+      }
+    },
+    {
+      "trans": [578.3135, 6.0213, 828.8388], // behind stable rock up on wall behind spools where it normally is
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [578.3135, 6.0213, 828.8388, 10],
+      "lump": {
+        "name": "skill-ghost-84",
+        "alt-actor": "skill-84"
+      }
     }
   ]
 }

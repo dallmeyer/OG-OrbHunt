@@ -105,6 +105,74 @@
       "lump": {
         "name":"garage-skill-06"
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [ 126.4,    12.5,    -442.7  ], // in box inside barrel in back of garage
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [126.4,    12.5,    -442.7, 10], // bounding sphere
+      "lump": {
+        "name":"garage-skill-ghost-01",
+        "alt-actor":"garage-skill-01"
+      }
+    },
+    {
+      "trans": [ 105.5,    24.5,    -407.7], // above lamp
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [105.5,    24.5,    -407.7, 10], // bounding sphere
+      "lump": {
+        "name":"garage-skill-ghost-02",
+        "alt-actor":"garage-skill-02"
+      }
+    },
+    {
+      "trans": [  75.3216, 13.1395, -414.2237], // in barrel behind curtain (darkbomb)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  75.3216, 13.1395, -414.2237, 10], // bounding sphere
+      "lump": {
+        "name":"garage-skill-ghost-03",
+        "alt-actor":"garage-skill-03"
+      }
+    },
+    {
+      "trans": [  83.7726, 15.9195, -408.8407], // in rift rider behind curtain (darkbomb)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  83.7726, 15.9195, -408.8407, 10], // bounding sphere
+      "lump": {
+        "name":"garage-skill-ghost-04",
+        "alt-actor":"garage-skill-04"
+      }
+    },
+    {
+      "trans": [   96.6198, 12.2946, -401.4052 ], // in corner behind shelf behind curtain (darkbomb)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  96.6198, 12.2946, -401.4052, 10], // bounding sphere
+      "lump": {
+        "name":"garage-skill-ghost-05",
+        "alt-actor":"garage-skill-05"
+      }
+    },
+    {
+      "trans": [   81.2817, 28.4062, -396.3110], // way up in corner behind curtain (darkbomb)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  81.2817, 28.4062, -396.3110, 10], // bounding sphere
+      "lump": {
+        "name":"garage-skill-ghost-06",
+        "alt-actor":"garage-skill-06"
+      }
     }
   ]
 }

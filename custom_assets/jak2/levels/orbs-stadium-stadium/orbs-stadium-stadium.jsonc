@@ -245,6 +245,164 @@
           1 // amount?
         ]
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [ 171.35,   31.00,   -511.70  ], // outside, up behind sculpture's head on left side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [171.35,   31.00,   -511.70, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-01",
+        "alt-actor":"stadium-skill-01"
+      }
+    },
+    {
+      "trans": [   133.5833, 18.7298, -474.5724  ], // atop vehicle barrier pole outside garage
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  133.5833, 18.7298, -474.5724, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-02",
+        "alt-actor":"stadium-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   130.5138, 34.9398, -477.4038  ], // up near ceiling outside garage, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  130.5138, 34.9398, -477.4038, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-03",
+        "alt-actor":"stadium-skill-03"
+      }
+    },
+    {
+      "trans": [   248.9786, 35.7757, -479.5149 ], // on 1 of 3 tall statues above fountains
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   248.9786, 35.7757, -479.5149, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-04",
+        "alt-actor":"stadium-skill-04"
+      }
+    },
+    {
+      "trans": [   268.2328, 35.7961, -576.0061 ], // on 1 of 3 tall statues above fountains
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   268.2328, 35.7961, -576.0061, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-05",
+        "alt-actor":"stadium-skill-05"
+      }
+    },
+    {
+      "trans": [   249.0518, 35.7845, -672.5407 ], // on 1 of 3 tall statues above fountains
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   249.0518, 35.7845, -672.5407, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-06",
+        "alt-actor":"stadium-skill-06"
+      }
+    },
+    {
+      "trans": [   147.2218, 25.9300, -721.6923], // in corner on far right outer wall (might need car launch)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   147.2218, 25.9300, -721.6923, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-07",
+        "alt-actor":"stadium-skill-07",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [    142.5079, 44.1038, -716.8207], // way up on right outer wall of stadium, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   142.5079, 44.1038, -716.8207, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-08",
+        "alt-actor":"stadium-skill-08"
+      }
+    },
+    {
+      "trans": [     327.5066, 42.7529, -678.8514], // on top of archway to where computer normally is (car launch into infin jump)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    327.5066, 42.7529, -678.8514, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-09",
+        "alt-actor":"stadium-skill-09"
+      }
+    },
+    {
+      "trans": [   266.1966, 4.3501, -746.6622], // behind tree against mid wall in NE
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   266.1966, 4.3501, -746.6622, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-10",
+        "alt-actor":"stadium-skill-10"
+      }
+    },
+    {
+      "trans": [      224.4946, 13.6790, -572.1774], // behind shrubs on middle dividing wall of stadium
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      224.4946, 13.6790, -572.1774, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-11",
+        "alt-actor":"stadium-skill-11"
+      }
+    },
+    {
+      "trans": [   361.51,  -1.02, -564.25], // behind shrubs on middle city wall grassy section
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  361.51,  -1.02, -564.25, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-12",
+        "alt-actor":"stadium-skill-12"
+      }
+    },
+    {
+      "trans": [  313.64,  11.59, -432.68], // up on ledge wrapping around from ctygenb entrance
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  313.64,  11.59, -432.68, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-13",
+        "alt-actor":"stadium-skill-13"
+      }
+    },
+    {
+      "trans": [      230.6995, 9.3395, -669.2800], // inside northern fountain
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      230.6995, 9.3395, -669.2800, 10], // bounding sphere
+      "lump": {
+        "name":"stadium-skill-ghost-14",
+        "alt-actor":"stadium-skill-14"
+      }
     }
   ]
 }

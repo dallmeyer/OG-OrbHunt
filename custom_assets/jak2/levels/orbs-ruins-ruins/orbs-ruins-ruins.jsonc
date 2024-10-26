@@ -1584,6 +1584,1620 @@
         "name":"ruins-skill-hover-09",
         "pickup-amount": ["float", 3.0]  // goldge
       }
+    },
+
+    // GHOSTS
+    {
+      "trans": [  874.67,  18.77, -230.51], // on mid level broken building early flag route
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 874.67,  18.77, -230.51, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-01",
+        "alt-actor":"ruins-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  910.46,  33.25, -229.31], // on upper level, backside broken building early flag route, abah up from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 910.46,  33.25, -229.31, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-02",
+        "alt-actor":"ruins-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  910.40,  50.40, -229.98], // on top of broken building early flag route, abah up from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 910.40,  50.40, -229.98, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-03",
+        "alt-actor":"ruins-skill-03"
+      }
+    },
+    {
+      "trans": [  929.60,  56.61, -232.58], // on top of broken building early flag route, follow around from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 929.60,  56.61, -232.58, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-04",
+        "alt-actor":"ruins-skill-04"
+      }
+    },
+    {
+      "trans": [  996.33,  22.21, -205.21], // on broken building off to side just before tower climb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 996.33,  22.21, -205.21, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-05",
+        "alt-actor":"ruins-skill-05"
+      }
+    },
+    {
+      "trans": [  997.17,  30.98, -220.27], // on broken building off to side just before tower climb, abah from lower part (no hint)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  997.17,  30.98, -220.27, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-06",
+        "alt-actor":"ruins-skill-06"
+      }
+    },
+    {
+      "trans": [  1015.88,  37.97, -264.96], // up on pillar of flag route just before starting tower climb (abah from lower bit, no hint)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1015.88,  37.97, -264.96, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-07",
+        "alt-actor":"ruins-skill-07"
+      }
+    },
+    {
+      "trans": [  1052.06,  27.60, -240.03], // lowest part of tower climb, right next to rubble (boosted over, go around invis wall on right)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1052.06,  27.60, -240.03, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-08",
+        "alt-actor":"ruins-skill-08"
+      }
+    },
+    {
+      "trans": [  1054.82,  53.33, -235.75], // shitty lil infin jump spot - hint for rough dark giant climb back to top of tower
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1054.82,  53.33, -235.75, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-09",
+        "alt-actor":"ruins-skill-09"
+      }
+    },
+    {
+      "trans": [  1051.12,  61.60, -250.30], // top of tower, in crevice on outside
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1051.12,  61.60, -250.30, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-10",
+        "alt-actor":"ruins-skill-10"
+      }
+    },
+    {
+      "trans": [  1055.23,  65.61, -272.26], // top of tower, on tip of broken wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1055.23,  65.61, -272.26, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-11",
+        "alt-actor":"ruins-skill-11"
+      }
+    },
+    {
+      "trans": [  1015.03,  11.69, -266.94], // back of building with all the fodders, before tower climb
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1015.03,  11.69, -266.94, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-12",
+        "alt-actor":"ruins-skill-12"
+      }
+    },
+    {
+      "trans": [  1050.66,   8.45, -264.68], // in rubble near water, below tower
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1050.66,   8.45, -264.68, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-13",
+        "alt-actor":"ruins-skill-13"
+      }
+    },
+    {
+      "trans": [  1204.54,  11.65, -253.69], // broken wall in SE edge
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1204.54,  11.65, -253.69, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-14",
+        "alt-actor":"ruins-skill-14"
+      }
+    },
+    {
+      "trans": [  1208.68,  13.13, -242.23], // broken wall in SE edge, jump over invis wall from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1208.68,  13.13, -242.23, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-15",
+        "alt-actor":"ruins-skill-15"
+      }
+    },
+    {
+      "trans": [ 1082.22,  -1.54, -226.11], // in water behind rubble against central tower
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1082.22,  -1.54, -226.11, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-16",
+        "alt-actor":"ruins-skill-16"
+      }
+    },
+    {
+      "trans": [ 1171.43,   4.58, -154.07], // outer wall in SW corner, hint for going "oob"
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1171.43,   4.58, -154.07, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-17",
+        "alt-actor":"ruins-skill-17"
+      }
+    },
+    {
+      "trans": [ 1250.31,  57.71, -71.90], // on top of distant wall with ground standpoints, SW corner
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1250.31,  57.71, -71.90, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-18",
+        "alt-actor":"ruins-skill-18"
+      }
+    },
+    {
+      "trans": [ 1201.98,  -1.6, -301.29], // in water behind big support on eastern edge (southish)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1201.98,  -1.6, -301.29, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-19",
+        "alt-actor":"ruins-skill-19"
+      }
+    },
+    {
+      "trans": [ 1133.78,  46.59, -242.39], // on tower climb, end of first section where path has crumbled
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1133.78,  46.59, -242.39, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-20",
+        "alt-actor":"ruins-skill-20"
+      }
+    },
+    {
+      "trans": [ 1135.90,   9.62, -327.80], // some rubble in middle of water, sorta SE
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1135.90,   9.62, -327.80, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-21",
+        "alt-actor":"ruins-skill-21"
+      }
+    },
+    {
+      "trans": [  1104.4591, 2.7949, -155.3318], // in gap in outer southern wall, get over invis wall first
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1104.4591, 2.7949, -155.3318, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-22",
+        "alt-actor":"ruins-skill-22"
+      }
+    },
+    {
+      "trans": [ 1154.50,  19.03, -191.82], // on slippery column of broken building in SE, sideflip dismount from mid tower
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1154.50,  19.03, -191.82, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-23",
+        "alt-actor":"ruins-skill-23"
+      }
+    },
+    {
+      "trans": [ 1044.48,  88.66, -35.93], // on top of distant wall with ground standpoints, south
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1044.48,  88.66, -35.93, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-24",
+        "alt-actor":"ruins-skill-24"
+      }
+    },
+    {
+      "trans": [ 995.76,  56.17, -56.03], // on top of slippery wall far south, sideflip dismount from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 995.76,  56.17, -56.03, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-25",
+        "alt-actor":"ruins-skill-25"
+      }
+    },
+    {
+      "trans": [ 999.75,  26.55, -81.13], // mid slippery wall far south, jump down from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 999.75,  26.55, -81.13, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-26",
+        "alt-actor":"ruins-skill-26"
+      }
+    },
+    {
+      "trans": [ 1016.98,  18.16, -56.07], // on arch far south, jump down from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1016.98,  18.16, -56.07, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-27",
+        "alt-actor":"ruins-skill-27"
+      }
+    },
+    {
+      "trans": [ 1046.06,  76.63, -57.35], // on top of slippery wall far south, jump down from infin wall^^^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1046.06,  76.63, -57.35, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-28",
+        "alt-actor":"ruins-skill-28"
+      }
+    },
+    {
+      "trans": [ 1043.65,  26.55, -106.69], // on top of slippery wall far south, sideflip extended ff dismount from ^^^^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1043.65,  26.55, -106.69, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-29",
+        "alt-actor":"ruins-skill-29"
+      }
+    },
+    {
+      "trans": [ 1025.55,  26.22, -150.08], // on top of slippery wall far south, follow from ^ or maybe drop from tower?
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1025.55,  26.22, -150.08, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-30",
+        "alt-actor":"ruins-skill-30"
+      }
+    },
+    {
+      "trans": [  823.4351, 79.8203, -75.3860], // top of city wall towards south, infin jump on corner of wall from below
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  823.4351, 79.8203, -75.3860, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-31",
+        "alt-actor":"ruins-skill-31"
+      }
+    },
+    {
+      "trans": [ 823.4351,  79.8203, 308.37], // top of city wall far south, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 823.4351,  79.8203, 308.37, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-32",
+        "alt-actor":"ruins-skill-32"
+      }
+    },
+    {
+      "trans": [ 848.79,  -1.94, 314.51], // in water at south end of city wall, below ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 848.79,  -1.94, 314.51, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-33",
+        "alt-actor":"ruins-skill-33"
+      }
+    },
+    {
+      "trans": [ 1066.31,   2.86, -414.25], // behind rubble in water path under buildings, where vanilla orbs are
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1066.31,   2.86, -414.25, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-34",
+        "alt-actor":"ruins-skill-34"
+      }
+    },
+    {
+      "trans": [ 1031.90,   0.51, -470.43], // in corner in water path under buildings, where vanilla orbs are
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1031.90,   0.51, -470.43, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-35",
+        "alt-actor":"ruins-skill-35"
+      }
+    },
+    {
+      "trans": [ 1059.43,  55.69, -279.63], // on inside of broken wall at very top of tower, lower steps
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1059.43,  55.69, -279.63, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-36",
+        "alt-actor":"ruins-skill-36"
+      }
+    },
+    {
+      "trans": [ 1172.93,  19.02, -413.72], // in corner just outside of walls in eastern/north area, jump over broken pillar in corner to get around
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1172.93,  19.02, -413.72, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-37",
+        "alt-actor":"ruins-skill-37"
+      }
+    },
+    {
+      "trans": [  1156.211, 21.76, -441.923], // behind broken window/invis wall in eastern/north area, follow from ^ behind invis wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1156.211, 21.76, -441.923, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-38",
+        "alt-actor":"ruins-skill-38"
+      }
+    },
+    {
+      "trans": [ 1149.29,  19.89, -383.52], // on right side of building east, behind invis wall, follow from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1149.29,  19.89, -383.52, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-39",
+        "alt-actor":"ruins-skill-39"
+      }
+    },
+    {
+      "trans": [ 1170.69,  -1.57, -414.44], // in water behind/right side of building east, behind invis wall, follow from ^^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1170.69,  -1.57, -414.44, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-40",
+        "alt-actor":"ruins-skill-40"
+      }
+    },
+    {
+      "trans": [ 1133.34,  -1.57, -462.46], // in water behind building east, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1133.34,  -1.57, -462.46, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-41",
+        "alt-actor":"ruins-skill-41"
+      }
+    },
+    {
+      "trans": [ 1173.25,  66.52, -538.38], // distant wall infin jump climb, NE corner
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1173.25,  66.52, -538.38, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-42",
+        "alt-actor":"ruins-skill-42"
+      }
+    },
+    {
+      "trans": [ 1142.50,  60.16, -538.24], // slippery pillar up high in NE corner, boosted or maybe sideflip dismount from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1142.50,  60.16, -538.24, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-43",
+        "alt-actor":"ruins-skill-43"
+      }
+    },
+    {
+      "trans": [ 1047.31,  17.24, -398.30], // on pillar under roof below path to sagehut, boosted or smth from earlier path
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1047.31,  17.24, -398.30, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-44",
+        "alt-actor":"ruins-skill-44"
+      }
+    },
+    {
+      "trans": [ 905.50,  16.60, -495.84], // next to arch, not far from mech start
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 905.50,  16.60, -495.84, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-45",
+        "alt-actor":"ruins-skill-45"
+      }
+    },
+    {
+      "trans": [ 928.20,  16.60, -472.58], // in corner right in arch, not far from mech start
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 928.20,  16.60, -472.58, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-46",
+        "alt-actor":"ruins-skill-46"
+      }
+    },
+    {
+      "trans": [ 922.95,  53.12, -473.85], // up on broken/slanted wall, NW but central-ish, abah from lower section (no hint)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 922.95,  53.12, -473.85, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-47",
+        "alt-actor":"ruins-skill-47"
+      }
+    },
+    {
+      "trans": [ 992.89,  -1.5, -323.82], // behind slab of rock on broken wall in middle of water, almost dead center
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 992.89,  -1.5, -323.82, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-48",
+        "alt-actor":"ruins-skill-48"
+      }
+    },
+    {
+      "trans": [ 835.85,  12.50, -349.58], // up on wall at entrance by airlock
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 835.85,  12.50, -349.58, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-49",
+        "alt-actor":"ruins-skill-49"
+      }
+    },
+    {
+      "trans": [ 847.46,  -1.5, -419.14], // under rubble west side, just north from airlock (go around invis wall on left)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 847.46,  -1.5, -419.14, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-50",
+        "alt-actor":"ruins-skill-50"
+      }
+    },
+    {
+      "trans": [ 1010.12,  42.30, -449.07], // on wall on outside of building before sagehut (facing most of level)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1010.12,  42.30, -449.07, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-51",
+        "alt-actor":"ruins-skill-51",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1019.44,  56.83, -456.48], // up on pillar of building before sagehut, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1019.44,  56.83, -456.48, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-52",
+        "alt-actor":"ruins-skill-52"
+      }
+    },
+    {
+      "trans": [ 978.71,  21.27, -479.69], // on mid wall of building before sagehut
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 978.71,  21.27, -479.69, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-53",
+        "alt-actor":"ruins-skill-53"
+      }
+    },
+    {
+      "trans": [ 1060.99,  33.51, -407.96], // on column of arch leaving NE building with 4 columns
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1060.99,  33.51, -407.96, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-54",
+        "alt-actor":"ruins-skill-54",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1054.42,  42.48, -413.06], // up on top of arch leaving NE building w 4 columns, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1054.42,  42.48, -413.06, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-55",
+        "alt-actor":"ruins-skill-55"
+      }
+    },
+    {
+      "trans": [ 1042.39,  45.83, -426.13], // up on pillar in NE buliding w 4 columns, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1042.39,  45.83, -426.13, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-56",
+        "alt-actor":"ruins-skill-56"
+      }
+    },
+    {
+      "trans": [ 1062.04,  45.83, -447.06], // up on pillar in NE buliding w 4 columns, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1062.04,  45.83, -447.06, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-57",
+        "alt-actor":"ruins-skill-57"
+      }
+    },
+    {
+      "trans": [ 1078.73,  48.20, -414.55], // up "on" column in NE buliding w 4 columns, follow from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1078.73,  48.20, -414.55, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-58",
+        "alt-actor":"ruins-skill-58"
+      }
+    },
+    {
+      "trans": [ 1099.79,  45.83, -430.97], // up on pillar in NE buliding w 4 columns, follow from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1099.79,  45.83, -430.97, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-59",
+        "alt-actor":"ruins-skill-59"
+      }
+    },
+    {
+      "trans": [  1110.5554, 26.0442, -458.2261], // around corner on ground after couple steps before building with 4 columns
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1110.5554, 26.0442, -458.2261, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-60",
+        "alt-actor":"ruins-skill-60"
+      }
+    },
+    {
+      "trans": [  1103.3022, 33.2463, -450.6499], // up mid on small pillar ledge before/on building w 4 cols, uppercut spin from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1103.3022, 33.2463, -450.6499, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-61",
+        "alt-actor":"ruins-skill-61"
+      }
+    },
+    {
+      "trans": [  1099.3405, 39.5998, -453.9475], // up on small archway standpoint entering building w 4 cols, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1099.3405, 39.5998, -453.9475, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-62",
+        "alt-actor":"ruins-skill-62"
+      }
+    },
+    {
+      "trans": [  1112.1627, 45.5404, -460.2215], // on top of pillar above steps just before buliding w 4 cols, extended from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1112.1627, 45.5404, -460.2215, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-63",
+        "alt-actor":"ruins-skill-63"
+      }
+    },
+    {
+      "trans": [  1108.0612, 39.1803, -429.6177], // on top of pillar in corner of room before building w 4 cols, follow pillar tops from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1108.0612, 39.1803, -429.6177, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-64",
+        "alt-actor":"ruins-skill-64"
+      }
+    },
+    {
+      "trans": [  1159.8294, 40.7818, -429.8741], // on top of pillar in room before building w 4 cols, follow pillar tops from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1159.8294, 40.7818, -429.8741, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-65",
+        "alt-actor":"ruins-skill-65"
+      }
+    },
+    {
+      "trans": [  1151.2457, 23.5503, -398.4657], // on rubble in room before building w 4 cols
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1151.2457, 23.5503, -398.4657, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-66",
+        "alt-actor":"ruins-skill-66",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  1161.0693, 40.9052, -400.1213], // on top of pillar in room before building w 4 cols, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1161.0693, 40.9052, -400.1213, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-67",
+        "alt-actor":"ruins-skill-67"
+      }
+    },
+    {
+      "trans": [     1091.1539, 23.6848, -403.9199], // in corner on rubble near 4 exterior cols, before room in back
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     1091.1539, 23.6848, -403.9199, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-68",
+        "alt-actor":"ruins-skill-68"
+      }
+    },
+    {
+      "trans": [  1083.79,  -1.5, -392.72], // in water in corner behind rubble before arch doorway to water path (where vanilla orbs)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1083.79,  -1.5, -392.72, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-69",
+        "alt-actor":"ruins-skill-69"
+      }
+    },
+    {
+      "trans": [  846.16,  11.17, -158.96], // on broken wall in SW corner near city wall
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   846.16,  11.17, -158.96, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-70",
+        "alt-actor":"ruins-skill-70"
+      }
+    },
+    {
+      "trans": [      926.45, 1.47, -370.92], // under wooden steps near start, crawl thru hole in back left
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      926.45, 1.47, -370.92, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-71",
+        "alt-actor":"ruins-skill-71"
+      }
+    },
+    {
+      "trans": [  998.78,  -2.10, -497.15], // in water behind rubble on water path (where vanilla orbs)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  998.78,  -2.10, -497.15, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-72",
+        "alt-actor":"ruins-skill-72"
+      }
+    },
+    {
+      "trans": [   966.4345, -1.5, -515.2660], // in water behind plants sort of north to left of water path (where vanilla orbs)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   966.4345, -1.5, -515.2660, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-73",
+        "alt-actor":"ruins-skill-73"
+      }
+    },
+    {
+      "trans": [   940.58,  -1.5, -384.28], // in water behind rubble below raised walkway with wooden steps near start
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   940.58,  -1.5, -384.28, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-74",
+        "alt-actor":"ruins-skill-74"
+      }
+    },
+    {
+      "trans": [   825.7633, 96.9819, -166.0096], // on top of point on city wall, slide across last solid section from skill-31, infin jump up
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   825.7633, 96.9819, -166.0096, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-75",
+        "alt-actor":"ruins-skill-75"
+      }
+    },
+    {
+      "trans": [    823.9393, 84.9033, -199.5087], // on top of point on city wall, boosted from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   823.9393, 84.9033, -199.5087, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-76",
+        "alt-actor":"ruins-skill-76"
+      }
+    },
+    {
+      "trans": [    823.9393, 84.9033, -228.425], // on top of point on city wall, boosted from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   823.9393, 84.9033, -228.425, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-77",
+        "alt-actor":"ruins-skill-77"
+      }
+    },
+    {
+      "trans": [    1127.1511, 50.9875, -487.6990], // on upper broken wall in NE behind main path, uppercut from top of pillars above room before building w 4 cols
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    1127.1511, 50.9875, -487.6990, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-78",
+        "alt-actor":"ruins-skill-78",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [    1130.0915, 63.6247, -485.6899], // on upper broken wall in NE behind main path, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1130.0915, 63.6247, -485.6899, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-79",
+        "alt-actor":"ruins-skill-79",
+        "pickup-amount": ["float", 2.0] // abah hint (for crate-7)
+      }
+    },
+    {
+      "trans": [   1082.36,  86.90, -522.14], // up on corner of high wall, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1082.36,  86.90, -522.14, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-80",
+        "alt-actor":"ruins-skill-80"
+      }
+    },
+    {
+      "trans": [   1097.6119, 1.5741, -343.6869], // on support beam of exterior 4 cols area, back/right side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1097.6119, 1.5741, -343.6869, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-81",
+        "alt-actor":"ruins-skill-81"
+      }
+    },
+    {
+      "trans": [   1082.93,  28.31, -617.41], // on pillar in far north wall, east-ish. jetboard launch/dismount from sagehut
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1082.93,  28.31, -617.41, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-82",
+        "alt-actor":"ruins-skill-82"
+      }
+    },
+    {
+      "trans": [   1097.61,  31.29, -633.83], // on pillar in far north wall, east-ish. extended from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1097.61,  31.29, -633.83, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-83",
+        "alt-actor":"ruins-skill-83"
+      }
+    },
+    {
+      "trans": [   1068.2008, 40.3401, -632.0511], // on broken pillar in far north wall, east-ish. jump over from ^ then abah up (no hint)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1068.2008, 40.3401, -632.0511, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-84",
+        "alt-actor":"ruins-skill-84"
+      }
+    },
+    {
+      "trans": [       1009.7503, 8.5385, -312.9876], // in broken wall under stone walkway, past where 2 sniper MHs usually are
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      1009.7503, 8.5385, -312.9876, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-85",
+        "alt-actor":"ruins-skill-85"
+      }
+    },
+    {
+      "trans": [   880.1531, 3.3598, -433.8579], // in 2nd breakable wall in early mech section
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [    880.1531, 3.3598, -433.8579, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-86",
+        "alt-actor":"ruins-skill-86"
+        // "alt-actor": "ruins-breakable-wall-2"
+      }
+    },
+    {
+      "trans": [   884.5545, 11.7255, -501.0379], // around outside corner of second part of mech section, visible from center of level
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   884.5545, 11.7255, -501.0379, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-87",
+        "alt-actor":"ruins-skill-87"
+      }
+    },
+    {
+      "trans": [   905.0929, 8.7555, -508.6135], // atop rubble over water between mech building and sagehut building
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   905.0929, 8.7555, -508.6135, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-88",
+        "alt-actor":"ruins-skill-88"
+      }
+    },
+    {
+      "trans": [  919.97,  24.52, -512.31], // on broken part of arch under NE buildings, follow up from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  919.97,  24.52, -512.31, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-89",
+        "alt-actor":"ruins-skill-89"
+      }
+    },
+    {
+      "trans": [      932.0264, 12.1447, -551.2892], // on pillar lower on back of mech building
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      932.0264, 12.1447, -551.2892, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-90",
+        "alt-actor":"ruins-skill-90"
+      }
+    },
+    {
+      "trans": [  858.1088, 23.3903, -426.7496], // on pillar on building just north of start, dark giant up here easiest lol
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  858.1088, 23.3903, -426.7496, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-91",
+        "alt-actor":"ruins-skill-91"
+      }
+    },
+    {
+      "trans": [  836.3881, 29.2883, -428.0887], // on corner of slippery wall above metal awning, cross from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  836.3881, 29.2883, -428.0887, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-92",
+        "alt-actor":"ruins-skill-92",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [     864.9357, 43.8371, -443.9435], // up on slippery floor way up on north of start, abah onto roof and over from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     864.9357, 43.8371, -443.9435, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-93",
+        "alt-actor":"ruins-skill-93"
+      }
+    },
+    {
+      "trans": [ 844.30,  53.28, -458.24], // up corner of broken building way up high, abah up from ^ this floor (no hint)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 844.30,  53.28, -458.24, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-94",
+        "alt-actor":"ruins-skill-94"
+      }
+    },
+    {
+      "trans": [  860.2953, 36.0634, -457.6027], // in corner between metal awnings up high, keep going over and down a bit from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  860.2953, 36.0634, -457.6027, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-95",
+        "alt-actor":"ruins-skill-95"
+      }
+    },
+    {
+      "trans": [  847.1770, 23.4832, -467.7720], // on broken part of arch in hallway in early mech section, jump spin from lower ledge
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  847.1770, 23.4832, -467.7720, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-96",
+        "alt-actor":"ruins-skill-96",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [   850.0980, 29.0409, -467.6258], // up on pillar above hallway in early mech section, jump from shitty standpoint^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   850.0980, 29.0409, -467.6258, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-97",
+        "alt-actor":"ruins-skill-97"
+      }
+    },
+    {
+      "trans": [ 843.13,  30.38, -515.26], // up on top arch further down hallway in early mech section, follow from ^, deep extended in the middle (or use oobish blocks)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 843.13,  30.38, -515.26, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-98",
+        "alt-actor":"ruins-skill-98"
+      }
+    },
+    {
+      "trans": [   835.25,  29.26, -504.98], // up on pillar above hallway in early mech section, follow from ^, deep extended in the middle (or use oobish blocks)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   835.25,  29.26, -504.98, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-99",
+        "alt-actor":"ruins-skill-99"
+      }
+    },
+    {
+      "trans": [  890.25,  24.99, -557.12], // under rubble around central tower on NW building, crawl around from left side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  890.25,  24.99, -557.12, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-100",
+        "alt-actor":"ruins-skill-100"
+      }
+    },
+    {
+      "trans": [  1124.72,  39.52, -414.15], // on small slippery ledge from pillar extending, hallway between 4 col rooms
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1124.72,  39.52, -414.15, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-101",
+        "alt-actor":"ruins-skill-101"
+      }
+    },
+    {
+      "trans": [  939.2908, 0.4150, -303.0163], // early amphib
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  939.2908, 0.4150, -303.0163, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-102",
+        "alt-actor":"ruins-skill-102"
+        // "alt-actor": "amphibian-13"
+      }
+    },
+    {
+      "trans": [   859.2145, 0.1409, -291.5115], // behind steps where 2 amphibs, SWish
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   859.2145, 0.1409, -291.5115, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-103",
+        "alt-actor":"ruins-skill-103"
+      }
+    },
+    {
+      "trans": [   874.1871, 9.0354, -258.2072], // on steps leading out after flag mission, SWish
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   874.1871, 9.0354, -258.2072, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-104",
+        "alt-actor":"ruins-skill-104"
+      }
+    },
+    {
+      "trans": [  881.2635, 0.5194, -335.3090], // first fodder
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  881.2635, 0.5194, -335.3090, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-105",
+        "alt-actor":"ruins-skill-105"
+        // "alt-actor": "fodder-11"
+      }
+    },
+    {
+      "trans": [  951.0590, 3.9989, -433.8086], // grunt on circular plat
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  951.0590, 3.9989, -433.8086, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-106",
+        "alt-actor":"ruins-skill-106"
+        // "alt-actor": "grunt-59"
+      }
+    },
+    {
+      "trans": [  1007.4900, 0.4631, -369.8259], // flitter next to 5 siblings
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1007.4900, 0.4631, -369.8259, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-107",
+        "alt-actor":"ruins-skill-107"
+        // "alt-actor": "flitter-64"
+      }
+    },
+    {
+      "trans": [      1051.7000, -1.3460, -340.3759], // in water under wood section leading to 4 cols area (need to sink and walk in weird collision crevice)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [      1051.7000, -1.3460, -340.3759, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-108",
+        "alt-actor":"ruins-skill-108"
+      }
+    },
+    {
+      "trans": [ 861.96,  -1.5, -512.50], // in water behind rubble west side, kinda north
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 861.96,  -1.5, -512.50, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-109",
+        "alt-actor":"ruins-skill-109"
+      }
+    },
+    {
+      "trans": [     1004.5885, 0.7307, -454.4703], // behind rock slab on shore near vanilla water orbs area
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     1004.5885, 0.7307, -454.4703, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-110",
+        "alt-actor":"ruins-skill-110"
+      }
+    },
+    {
+      "trans": [   964.02,  10.51, -332.97], // on broken wall in middle of water, south central
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  964.02,  10.51, -332.97, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-111",
+        "alt-actor":"ruins-skill-111"
+      }
+    },
+    {
+      "trans": [ 1243.47,  57.80, -229.75], // on ground collision distant wall, east side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1243.47,  57.80, -229.75, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-112",
+        "alt-actor":"ruins-skill-112"
+      }
+    },
+    {
+      "trans": [ 1190.38,  15.72, -236.26], // on broken wall on far east/south, extended from skill-15^^^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1190.38,  15.72, -236.26, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-113",
+        "alt-actor":"ruins-skill-113"
+      }
+    },
+    {
+      "trans": [ 1208.78,  24.97, -234.48], // on broken wall on far east/south, extended from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1208.78,  24.97, -234.48, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-114",
+        "alt-actor":"ruins-skill-114"
+      }
+    },
+    {
+      "trans": [ 1213.78,  24.97, -234.32], // backside of broken wall on far east/south, jump around from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1213.78,  24.97, -234.32, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-115",
+        "alt-actor":"ruins-skill-115",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1212.01,  42.68, -235.26], // up higher on broken wall on far east/south, abah from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1212.01,  42.68, -235.26, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-116",
+        "alt-actor":"ruins-skill-116"
+      }
+    },
+    {
+      "trans": [ 1212.53,  32.51, -213.04], // on broken column of broken wall in SE corner, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1212.53,  32.51, -213.04, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-117",
+        "alt-actor":"ruins-skill-117"
+      }
+    },
+    {
+      "trans": [ 1211.11,  25.14, -192.36], // on pillar of broken wall in SE corner, jump from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1211.11,  25.14, -192.36, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-118",
+        "alt-actor":"ruins-skill-118",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1210.71,  40.30, -171.22], // on back of broken wall in SE corner, abah up from ^ and extended over
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1210.71,  40.30, -171.22, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-119",
+        "alt-actor":"ruins-skill-119"
+      }
+    },
+    {
+      "trans": [ 1191.23,  32.71, -153.46], // on broken pillar on broken wall in SE corner, extended over couple times from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1191.23,  32.71, -153.46, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-120",
+        "alt-actor":"ruins-skill-120"
+      }
+    },
+    {
+      "trans": [ 1172.52,  19.14, -154.20], // on lower pillar on broken wall in SE corner, extended over couple times from ^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1172.52,  19.14, -154.20, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-121",
+        "alt-actor":"ruins-skill-121"
+      }
+    },
+    {
+      "trans": [ 1208.52,  19.14, -136.01], // on lower pillar on broken wall in SE corner, extended over couple times from ^^
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1208.52,  19.14, -136.01, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-122",
+        "alt-actor":"ruins-skill-122"
+      }
+    },
+    {
+      "trans": [ 1288.88,  68.20, -490.09], // on distant ground collision wall, east side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1288.88,  68.20, -490.09, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-123",
+        "alt-actor":"ruins-skill-123"
+      }
+    },
+    {
+      "trans": [ 1068.65,  66.54, -751.12], // on distant ground collision wall, north side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1068.65,  66.54, -751.12, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-124",
+        "alt-actor":"ruins-skill-124"
+      }
+    },
+    {
+      "trans": [ 978.38,  52.26, -696.87], // on distant ground collision wall, north side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 978.38,  52.26, -696.87, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-125",
+        "alt-actor":"ruins-skill-125"
+      }
+    },
+    {
+      "trans": [ 925.43,  42.46, -709.62], // on distant ground collision wall, north side
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 925.43,  42.46, -709.62, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-126",
+        "alt-actor":"ruins-skill-126"
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [997.29,  80.0, -656.2], // atop wall in far back behind sagehut
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [997.29,  80.0, -656.2, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-hover-01",
+        "alt-actor":"ruins-skill-hover-01",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 1222.47,  94.96, -307.73], // way up on point of "city" wall far east, south ish
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1222.47,  94.96, -307.73, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-hover-02",
+        "alt-actor":"ruins-skill-hover-02",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 864.23,  90.64, -453.72], // on rooftop of west building near city wall, north-ish (same as ^)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 864.23,  90.64, -453.72, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-hover-03",
+        "alt-actor":"ruins-skill-hover-03",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 875.12, 100.51, -543.40], // on rooftop of NW building
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 875.12, 100.51, -543.40, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-hover-04",
+        "alt-actor":"ruins-skill-hover-04",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 963.70,  85.51, -508.88], // on rooftop of north, west-ish building
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 963.70,  85.51, -508.88, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-hover-05",
+        "alt-actor":"ruins-skill-hover-05",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 993.97,  97.08, -499.66], // on rooftop of north building (near ^)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 993.97,  97.08, -499.66, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-hover-06",
+        "alt-actor":"ruins-skill-hover-06",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 1044.69,  78.83, -463.49], // on rooftop of north-ish, east-ish building
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1044.69,  78.83, -463.49, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-hover-07",
+        "alt-actor":"ruins-skill-hover-07",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 1108.93,  89.21, -422.82], // on rooftop of east-ish, north-ish building
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1108.93,  89.21, -422.82, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-hover-08",
+        "alt-actor":"ruins-skill-hover-08",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+    {
+      "trans": [ 833.27,  96.81, -643.60], // on corner of city wall, NW
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 833.27,  96.81, -643.60, 10], // bounding sphere
+      "lump": {
+        "name":"ruins-skill-ghost-hover-09",
+        "alt-actor":"ruins-skill-hover-09",
+        "pickup-amount": ["float", 3.0]  // goldge
+      }
+    },
+
+    {
+      "trans": [1039.73,  21.83, -479.80], // this weird one doesn't normally spawn? but we fix and move it - on ledge behind wall near sagehut reveal cutscene
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [1039.73,  21.83, -479.80, 10],
+      "lump": {
+        "name": "skill-ghost-1",
+        "alt-actor": "skill-1"
+      }
+    },
+    {
+      "trans": [930.25,  41.71, -522.40], // on arch/design in intermediate wall NW-ish
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [930.25,  41.71, -522.40, 10],
+      "lump": {
+        "name": "skill-ghost-2",
+        "alt-actor": "skill-2"
+      }
+    },
+    {
+      "trans": [1085.02,  21.69, -512.20], // behind wall on path near sagehut
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [1085.02,  21.69, -512.20, 10],
+      "lump": {
+        "name": "skill-ghost-3",
+        "alt-actor": "skill-3"
+      }
+    },
+    {
+      "trans": [937.10,  40.66, -460.02], // on end of intermed wall NW-ish but towards center
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [937.10,  40.66, -460.02, 10],
+      "lump": {
+        "name": "skill-ghost-4",
+        "alt-actor": "skill-4"
+      }
+    },
+    {
+      "trans": [958.87,  21.83, -523.58], // on lower ledge NWish, drop down in back area towards sagehut
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [958.87,  21.83, -523.58, 10],
+      "lump": {
+        "name": "skill-ghost-5",
+        "alt-actor": "skill-5"
+      }
+    },
+    {
+      "trans": [898.41,  40.84, -587.96], // outer edge of NWish walls, behind broken column
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [898.41,  40.84, -587.96, 10],
+      "lump": {
+        "name": "skill-ghost-6",
+        "alt-actor": "skill-6"
+      }
+    },
+    {
+      "trans": [876.2080, 6.9939, -270.8826], // tucked under walkway in early part of flag route
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [876.2080, 6.9939, -270.8826, 10],
+      "lump": {
+        "name": "skill-ghost-7",
+        "alt-actor": "skill-7"
+      }
+    },
+    {
+      "trans": [927.24,  -0.94, -260.78], // in water behind rubble in early part of flag route
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [927.24,  -0.94, -260.78, 10],
+      "lump": {
+        "name": "skill-ghost-89",
+        "alt-actor": "skill-89"
+      }
+    },
+    {
+      "trans": [1018.12,  12.59, -240.26], // behind low broken wall near lots of fodder, just before steps to tower/flag climb
+      "etype": "skill-ghost",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [1018.12,  12.59, -240.26, 10],
+      "lump": {
+        "name": "skill-ghost-90",
+        "alt-actor": "skill-90"
+      }
     }
 
   ]
