@@ -701,56 +701,6 @@
       }
     },
 
-    // CRATES
-    {
-      "trans": [ 121.78, 428.94, 493.37], // on glass rooftop near edge, abah from skill-06^
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [   0.0,  0.9982,  0.0,  0.0584], // quaternion
-      "bsphere": [  121.78, 428.94, 493.37, 10], // bounding sphere
-      "lump": {
-        "name": "palroof-crate-1",
-        "crate-type": "iron",
-        "eco-info": [
-          "int32",
-          22, // (pickup-type skill)
-          1 // amount?
-        ]
-      }
-    },
-    {
-      "trans": [ 235.65, 411.15, 712.01], // on outer wall, in "oob" section past phase 3
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [   0.0,  0.9698,  0.0,  -0.2436], // quaternion
-      "bsphere": [  235.65, 411.15, 712.01, 10], // bounding sphere
-      "lump": {
-        "name": "palroof-crate-2",
-        "crate-type": "iron",
-        "eco-info": [
-          "int32",
-          22, // (pickup-type skill)
-          1 // amount?
-        ]
-      }
-    },
-    {
-      "trans": [ 208.38, 411.34, 721.98], // on outer wall, in "oob" section past phase 3
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [   0.0,  -0.9863,  0.0,  0.1644], // quaternion
-      "bsphere": [ 208.38, 411.34, 721.98, 10], // bounding sphere
-      "lump": {
-        "name": "palroof-crate-3",
-        "crate-type": "iron",
-        "eco-info": [
-          "int32",
-          22, // (pickup-type skill)
-          1 // amount?
-        ]
-      }
-    },
-
     // HOVER ORBS
     {
       "trans": [ 151.92, 435.97, 629.43], // on door frame to elevator exiting phase 3

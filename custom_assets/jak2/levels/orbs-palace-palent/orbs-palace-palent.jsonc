@@ -1223,41 +1223,6 @@
       }
     },
 
-    // CRATES
-    {
-      "trans": [ 203.73, 345.18, 617.47], // in conf room
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, -0.3267, 0, -0.9451], // quaternion
-      "bsphere": [ 203.73, 345.18, 617.47, 10], // bounding sphere
-      "lump": {
-        "name": "palent-crate-1",
-        "crate-type": "iron",
-        "eco-info": [
-          "int32",
-          22, // (pickup-type skill)
-          1 // amount?
-        ]
-      }
-    },
-    {
-      "trans": [ 193.12, 345.18, 628.40], // in initial part of second guard section
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 0], // quaternion
-      "bsphere": [ 193.12, 345.18, 628.40, 10], // bounding sphere
-      "lump": {
-        "name": "palent-crate-2",
-        "crate-type": "iron",
-        "light-index": ["int32", 10],
-        "eco-info": [
-          "int32",
-          22, // (pickup-type skill)
-          1 // amount?
-        ]
-      }
-    },
-
     // HOVER ORBS
     {
       "trans": [  153.19, 377.19, 609.04], // pillar up high on other end of central hallway, near elevator

@@ -611,56 +611,6 @@
         "name":"ctysluma-skill-ghost-23",
         "alt-actor":"ctysluma-skill-23"
       }
-    },
-
-    // CRATES
-    {
-      "trans": [  1134.9078, 16.5950, 74.9669 ], // above doorway near/opposite hideout
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ -0.7072, 0.0033, -0.7069, 0.0034], // quaternion
-      "bsphere": [  1134.9078, 16.5950, 74.9669 , 10], // bounding sphere
-      "lump": {
-        "name": "ctysluma-crate-1",
-        "crate-type": "iron",
-        "eco-info": [
-          "int32",
-          22, // (pickup-type skill)
-          1 // amount?
-        ]
-      }
-    },
-    {
-      "trans": [ 821.7354, 8.1450, 286.2108], // behind fruit stand towards fortress
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ -0.0001, 0.7524, -0.0001, 0.6586], // quaternion
-      "bsphere": [ 821.7354, 8.1450, 286.2108, 10], // bounding sphere
-      "lump": {
-        "name": "ctysluma-crate-2",
-        "crate-type": "iron",
-        "eco-info": [
-          "int32",
-          22, // (pickup-type skill)
-          1 // amount?
-        ]
-      }
-    },
-    {
-      "trans": [  1141.6962, 21.2807, 143.7433 ], // on rooftop near stack of fruit stands / yellow barrier skip deathwarp
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [  0.0000, 0.2158, 0.0000, 0.9764 ], // quaternion
-      "bsphere": [  1141.6962, 21.2807, 143.7433 , 10], // bounding sphere
-      "lump": {
-        "name": "ctysluma-crate-3",
-        "crate-type": "iron",
-        "eco-info": [
-          "int32",
-          22, // (pickup-type skill)
-          1 // amount?
-        ]
-      }
     }
 
   ]

@@ -674,24 +674,6 @@
       }
     },
 
-    // CRATES
-    {
-      "trans": [ 633.11,  50.0,  91.34], // down below platform where you do boosted, next to another crate
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0.0000, -0.5695, 0.0000, -0.8219], // quaternion
-      "bsphere": [ 633.11,  50.0,  91.34, 10], // bounding sphere
-      "lump": {
-        "name": "forexita-crate-1",
-        "crate-type": "iron",
-        "eco-info": [
-          "int32",
-          22, // (pickup-type skill)
-          1 // amount?
-        ]
-      }
-    },
-
     // HOVER ORBS
     {
       "trans": [ 566.58, 115.77, 166.99], // up on pipes, left wall right after checkpoint
