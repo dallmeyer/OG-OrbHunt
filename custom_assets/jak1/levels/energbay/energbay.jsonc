@@ -1378,11 +1378,11 @@
           }
         },
         {
-          "trans": [464.73,  80.17, 908.09  ], // translation - on outer edge of rock wall just past turbine 2
+          "trans": [464.73,  80.77, 908.09  ], // translation - on outer edge of rock wall just past turbine 2
           "etype": "money",  // actor type
           "game_task": 0, // associated game task (for powercells, etc)
           "quat" : [0, 0, 0, 1], // quaternion
-          "bsphere": [464.73,  80.17, 908.09  , 10], // bounding sphere
+          "bsphere": [464.73,  80.77, 908.09  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-money-116"//,
             // "options":["int32", 1024] // big hitbox
