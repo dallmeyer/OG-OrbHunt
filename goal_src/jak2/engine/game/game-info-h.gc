@@ -347,6 +347,7 @@
    (homing-beacon           int32)
    (dark-eco-pickup         int32)
    (green-eco-pickup        int32)
+   (skill-per-level         uint8         LEVEL_ID_LEN)
    )
   (:methods
     (initialize! (_type_ symbol game-save string) _type_)

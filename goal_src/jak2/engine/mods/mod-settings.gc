@@ -376,7 +376,6 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 
 (define *level-orb-active* (new 'static 'boxed-array :type symbol :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
 (define *level-orb-collected-counts* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
-(define *level-orb-total-counts* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
 
 (define *level-orb-total-counts-fixed* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   0 ;; "" ;; 0 (none)

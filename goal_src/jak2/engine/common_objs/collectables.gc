@@ -1937,6 +1937,14 @@ This commonly includes things such as:
              )
       (kill-and-free-particles (-> self part))
       )
+    
+    ;; increment skill-per-level
+    (let ((par (ppointer->process (-> self parent))))
+      (if (= (-> par type symbol) 'skill-crate)
+        (increment-skill-per-level (-> (the process-drawable par) entity))
+        (increment-skill-per-level (-> self entity))
+        ))
+
     (process-entity-status! self (entity-perm-status bit-15) #f)
     (process-entity-status! self (entity-perm-status dead) #t)
     )

@@ -1562,7 +1562,8 @@
           )
         ;; og:preserve-this give skill directly
         (#when PC_PORT
-          (send-event *target* 'get-pickup (pickup-type skill) (* (the float (-> self egg-count)) (-> *FACT-bank* super-skill-inc))))
+          (send-event *target* 'get-pickup (pickup-type skill) (* (the float (-> self egg-count)) (-> *FACT-bank* super-skill-inc)))
+          (increment-skill-per-level-side-mish  (-> *game-info* sub-task-list (-> self task-bronze) task) (* (-> self egg-count) (-> *FACT-bank* super-skill-inc))))
         (go-virtual end-course)
         )
       )

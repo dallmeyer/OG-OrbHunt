@@ -1300,7 +1300,7 @@
       (when (!= line-height 0.0)
         (set! (-> *progress-state* missions-total-spacing) 0.0)
         (dotimes (pre-offset-idx scroll-offset)  ;; [0, scroll-offset)
-          (let* ((collected-count (-> *mod-settings* save-data which orb-counts (+ pre-offset-idx 1)))
+          (let* ((collected-count (-> *game-info* skill-per-level (+ pre-offset-idx 1)))
                  (total-count (-> *level-orb-total-counts-fixed* (+ pre-offset-idx 1)))
                  (line-text (if (nonzero? collected-count) (-> *level-id-names* (+ pre-offset-idx 1)) "???"))
                  (line-padding 3.0)
@@ -1322,7 +1322,7 @@
       (set! default-y-origin-4x3 (- default-y-origin-4x3 (the int (-> *progress-state* missions-total-spacing))))
       (cond
         ((< (-> progress sliding-height) 0.0)
-          (let* ((collected-count (-> *mod-settings* save-data which orb-counts (+ scroll-offset 1)))
+          (let* ((collected-count (-> *game-info* skill-per-level (+ scroll-offset 1)))
                 (total-count (-> *level-orb-total-counts-fixed* (+ scroll-offset 1)))
                 (line-text (if (nonzero? collected-count) (-> *level-id-names* (+ scroll-offset 1)) "???"))
                 (line-padding 3.0)
@@ -1336,7 +1336,7 @@
             )
           )
         (else
-          (let* ((collected-count (-> *mod-settings* save-data which orb-counts (- scroll-offset 0)))
+          (let* ((collected-count (-> *game-info* skill-per-level (- scroll-offset 0)))
                  (total-count (-> *level-orb-total-counts-fixed* (- scroll-offset 0)))
                  (line-text (if (nonzero? collected-count) (-> *level-id-names* (- scroll-offset 0)) "???"))
                  (line-padding 3.0)
@@ -1356,7 +1356,7 @@
       ;; main lines?
       (set! (-> font-ctx origin y) (the float (+ default-y-origin-4x3 (the int line-height))))
       (while (and (< (+ task-info-idx 1) LEVEL_ID_LEN) (< (+ task-info-idx 1) (+ scroll-offset 11))) ;; [task-info-index, scroll-offset + 10)
-        (let* ((collected-count (-> *mod-settings* save-data which orb-counts (+ task-info-idx 1)))
+        (let* ((collected-count (-> *game-info* skill-per-level (+ task-info-idx 1)))
                  (total-count (-> *level-orb-total-counts-fixed* (+ task-info-idx 1)))
                  (line-text (if (nonzero? collected-count) (-> *level-id-names* (+ task-info-idx 1)) "???"))
                  (line-padding 3.0)
