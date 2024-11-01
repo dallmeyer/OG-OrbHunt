@@ -2048,7 +2048,7 @@ This commonly includes things such as:
   (set! (-> this notify) (the-as handle #f))
   (set! (-> this fact) (new 'process 'fact-info this (pickup-type skill) 1.0))
   (let ((a0-11 (-> this entity)))
-    (if (when a0-11
+    (if (when (and a0-11 (= (-> this type symbol) 'skill)) ;; orb hunt dont set task for ghosts, no perm will be saved
           (let ((a0-12 (-> a0-11 extra perm task)))
             (if a0-12
                 (= a0-12 (game-task none))

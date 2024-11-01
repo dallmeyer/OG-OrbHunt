@@ -1248,6 +1248,7 @@
              (aid (-> entity-perm aid))
              )
         (when (or (nonzero? (-> entity-perm task)) (logtest? (-> entity-perm status) (entity-perm-status save)))
+          (dbg-format 0 "copy-perms-from-level on aid ~D~%" aid)
           (let ((actor-perm (actor-perm this aid)))
             (cond
               (actor-perm
