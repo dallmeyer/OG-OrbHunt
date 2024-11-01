@@ -420,11 +420,11 @@
       }
     },
     {
-      "trans": [ 207.42, 497.60, 569.53], // up/out on pillar past elev exit from phase 3
+      "trans": [ 105.64, 456.35, 637.83], // up/out on pillar past elev exit from phase 3
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 207.42, 497.60, 569.53, 10], // bounding sphere
+      "bsphere": [ 105.64, 456.35, 637.83, 10], // bounding sphere
       "lump": {
         "name":"palroof-skill-hover-08",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -787,11 +787,11 @@
       }
     },
     {
-      "trans": [ 207.42, 497.60, 569.53], // up/out on pillar past elev exit from phase 3
+      "trans": [ 105.64, 456.35, 637.83], // up/out on pillar past elev exit from phase 3
       "etype":"skill-ghost",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 207.42, 497.60, 569.53, 10], // bounding sphere
+      "bsphere": [ 105.64, 456.35, 637.83, 10], // bounding sphere
       "lump": {
         "name":"palroof-skill-ghost-hover-08",
         "alt-actor":"palroof-skill-hover-08",
