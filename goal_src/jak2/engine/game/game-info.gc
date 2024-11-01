@@ -7,6 +7,10 @@
 
 ;; initialize was manually fixed.
 
+(define *orb-count-updated?* #f)
+(define-extern increment-skill-per-level-side-mish (function game-task int none))
+(define-extern increment-skill-per-level (function entity-actor none))
+
 (define-extern demo? (function symbol))
 (define-extern task-resolution-close! (function game-task symbol))
 (define-extern *lightning-darkjak-pill* lightning-spec)
@@ -530,6 +534,8 @@
        (set! (-> this level-opened v1-98) (the-as uint 0))
        (nop!)
        )
+     (dotimes (i LEVEL_ID_LEN)
+      (set! (-> this skill-per-level i) (the-as uint 0)))
      (let ((v1-102 (-> *game-info* sub-task-list)))
        (dotimes (a0-41 (-> v1-102 length))
          (when (nonzero? a0-41)
@@ -1242,6 +1248,7 @@
              (aid (-> entity-perm aid))
              )
         (when (or (nonzero? (-> entity-perm task)) (logtest? (-> entity-perm status) (entity-perm-status save)))
+          (dbg-format 0 "copy-perms-from-level on aid ~D~%" aid)
           (let ((actor-perm (actor-perm this aid)))
             (cond
               (actor-perm

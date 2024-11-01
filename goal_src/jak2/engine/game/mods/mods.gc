@@ -39,7 +39,6 @@
          ;; (set-vector! (-> (the process-drawable actor) root trans) (meters x) (meters y) (meters z) 1.0)
     
   (none))
-  
 
 ;; prints the position (root trans) of a process-drawable
 (defmacro pd-pos-m (procname)
@@ -61,8 +60,6 @@
         )
       )
     (none)))
-    
-  
 
 (defmacro mod-copy-mesh-and-path (dst-name src-name)
   `(let ((dst (the nav-enemy (process-by-ename ,dst-name)))
@@ -74,18 +71,12 @@
       (curve-copy! (-> dst path curve) (-> src path curve))
       (set! (-> dst path num-cverts) (-> src path num-cverts))
       (set! (-> dst path cverts) (-> src path cverts)))))
-      
-    
-  
 
 (defmacro mod-no-collectable-bob (collectablename height)
   `(begin
     (when (process-by-ename ,collectablename)
       (set! (-> (the collectable (process-by-ename ,collectablename)) bob-amount) 0.0)
       (set! (-> (the collectable (process-by-ename ,collectablename)) root trans y) (meters ,height)))))
-      
-    
-  
 
 ;; takes a path-control and xyz values to offsets every node in the path by
 ;; (defmacro shift-path! (path x y z)
@@ -221,6 +212,82 @@
     )
   )
 
+(defun increment-skill-per-level-side-mish ((tsk game-task) (amount int))
+  (case tsk
+    ;; "Gardens (North)" ;;  farma
+    (((game-task city-burning-bush-get-to-8) (game-task city-burning-bush-collection-3))
+      (+! (-> *game-info* skill-per-level 23) amount))
+    ;; "Gardens (South)" ;;  farmb
+    (((game-task city-burning-bush-get-to-5))
+      (+! (-> *game-info* skill-per-level 24) amount))
+    ;; "Main Town (Northwest)" ;; 
+    (((game-task city-burning-bush-get-to-14) (game-task city-burning-bush-get-to-11))
+      (+! (-> *game-info* skill-per-level 33) amount))
+    ;; "Main Town (Northeast)" ;; 
+    (((game-task city-burning-bush-collection-1) (game-task city-burning-bush-get-to-9))
+      (+! (-> *game-info* skill-per-level 32) amount))
+    ;; "Main Town (Southeast)" ;; 
+    (((game-task city-burning-bush-collection-2))
+      (+! (-> *game-info* skill-per-level 34) amount))
+    ;; "Industrial Zone (South)" ;; 
+    (((game-task city-burning-bush-get-to-10))
+      (+! (-> *game-info* skill-per-level 30) amount))
+    ;; "Industrial Zone (North)" ;; 
+    (((game-task city-burning-bush-get-to-2))
+      (+! (-> *game-info* skill-per-level 29) amount))
+    ;; "Bazaar (West)" ;;  ctymarka
+    (((game-task city-burning-bush-racepoint-1) (game-task city-burning-bush-shuttle-1) (game-task city-burning-bush-get-to-12) (game-task city-burning-bush-bombbot-1))
+      (+! (-> *game-info* skill-per-level 2) amount))
+    ;; "Bazaar (East)" ;;  ctymarkb          
+    (((game-task city-burning-bush-get-to-7))
+      (+! (-> *game-info* skill-per-level 1) amount))
+    (((game-task city-burning-bush-get-to-6))
+      (+! (-> *game-info* skill-per-level 1) amount))
+    ;; "Central Haven (Palace Grounds)" ;; 
+    (((game-task city-burning-bush-get-to-15))
+      (+! (-> *game-info* skill-per-level 3) amount))
+    ;; "Port" ;; 
+    (((game-task city-burning-bush-get-to-3) (game-task city-burning-bush-ring-2) (game-task city-burning-bush-race-port) (game-task city-burning-bush-race-errol))
+      (+! (-> *game-info* skill-per-level 52) amount))
+    ;; "Slums (Southeast)" ;; 
+    (((game-task city-burning-bush-get-to-1) (game-task city-burning-bush-get-to-13))
+      (+! (-> *game-info* skill-per-level 59) amount))
+    ;; "Slums (Northwest)" ;; 
+    (((game-task city-burning-bush-ring-1) (game-task city-burning-bush-ring-3))
+      (+! (-> *game-info* skill-per-level 58) amount))
+    ;; "Water Slums" ;; 
+    (((game-task city-burning-bush-get-to-4))
+      (+! (-> *game-info* skill-per-level 70) amount))
+    ;; "Gun Course" ;;
+    (((game-task city-red-gun-training) (game-task city-yellow-gun-training) (game-task city-blue-gun-training) (game-task city-dark-gun-training))
+      (+! (-> *game-info* skill-per-level 25) amount))
+    ;; "Onin's Tent" ;; 
+    (((game-task city-play-onin-game))
+      (+! (-> *game-info* skill-per-level 45) amount))
+    ;; "Stadium (JET Board)" ;; 
+    (((game-task stadium-burning-bush-race-board))
+      (+! (-> *game-info* skill-per-level 65) amount))
+    ;; "Stadium (Class 3)" ;; 
+    (((game-task stadium-burning-bush-race-class3))
+      (+! (-> *game-info* skill-per-level 62) amount))
+    ;; "Stadium (Class 2)" ;; 
+    (((game-task stadium-burning-bush-race-class2))
+      (+! (-> *game-info* skill-per-level 61) amount))
+    ;; "Stadium (Class 1)" ;; 
+    (((game-task stadium-burning-bush-race-class1))
+      (+! (-> *game-info* skill-per-level 60) amount))
+    )
+    (if (nonzero? amount) (true! *orb-count-updated?*))
+  (none))
+
+(defun increment-skill-per-level ((ent entity-actor))
+  (let* ((lvl-idx (-> *level-load-info-level-id-remap* (-> ent extra level info index)))
+         (lvl-idx-override (res-lump-value ent 'lvl-idx-override int :default (the-as uint128 -1) :time -1000000000.0))
+         (final-lvl-idx (if (>= lvl-idx-override 0) lvl-idx-override lvl-idx)))
+    (+! (-> *game-info* skill-per-level final-lvl-idx) 1))
+  (true! *orb-count-updated?*)
+  (none))
+
 (defun-extern hover-need-to-cooldown? symbol)
 (define *auto-saving?* #f)
 (define *last-auto-save-time* (the time-frame #f))
@@ -291,7 +358,6 @@
         (dotimes (idx LEVEL_ID_LEN)
           (false! (-> *level-orb-active* idx))
           (set! (-> *level-orb-collected-counts* idx) 0)
-          (set! (-> *level-orb-total-counts* idx) 0)
           )
 
         (dotimes (s4-2 LEVEL_MAX)
@@ -307,7 +373,6 @@
                              (final-lvl-idx (if (>= lvl-idx-override 0) lvl-idx-override lvl-idx)))
                         (case (-> (the entity-actor (-> entity-link entity)) etype symbol)
                           (('skill)
-                            (+! (-> *level-orb-total-counts* final-lvl-idx) 1)
                             ;; only consider final-lvl-idx active if not overridden from some other level
                             (if (< lvl-idx-override 0)
                               (true! (-> *level-orb-active* final-lvl-idx))
@@ -317,7 +382,6 @@
                               )
                             )
                           (('skill-crate)
-                            (+! (-> *level-orb-total-counts* final-lvl-idx) 1)
                             ;; only consider final-lvl-idx active if not overridden from some other level
                             (if (< lvl-idx-override 0)
                               (true! (-> *level-orb-active* final-lvl-idx))
@@ -338,110 +402,95 @@
 
         ;; side mish orbs for any other loaded levels
         (dotimes (lvl-idx LEVEL_ID_LEN)
-          (when (nonzero? (-> *level-orb-total-counts* lvl-idx))
+          (when (-> *level-orb-active* lvl-idx)
             (case lvl-idx
               ((23) ;; "Gardens (North)" ;;  farma
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-8))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-collection-3))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
               ((24) ;; "Gardens (South)" ;;  farmb
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-5))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
               ((33) ;; "Main Town (Northwest)" ;; 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-14))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-11))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
               ((32) ;; "Main Town (Northeast)" ;; 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-collection-1))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-9))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
               ((34) ;; "Main Town (Southeast)" ;; 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-collection-2))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
               ((30) ;; "Industrial Zone (South)" ;; 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-10))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
               ((29) ;; "Industrial Zone (North)" ;; 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-2))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
               ((2) ;; "Bazaar (West)" ;;  ctymarka
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-racepoint-1))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                   
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-shuttle-1))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                   
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-12))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                   
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-bombbot-1))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
-              ((1) ;; "Bazaar (East)" ;;  ctymarkb
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+              ((1) ;; "Bazaar (East)" or "Onin's Tent" ;;  ctymarkb
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-7))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-6))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
+
+                (when (task-node-closed? (game-task-node city-play-onin-game-skill))
+                  (+! (-> *level-orb-collected-counts* 45) 3) ;; count towards onin tent instead of ctymarkb
+                  )
                 )
               ((3) ;; "Central Haven (Palace Grounds)" ;; 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-15))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
               ((52) ;; "Port" ;; 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-3))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-ring-2))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
@@ -449,41 +498,34 @@
                 (let ((port-rank (get-cur-rank (game-score bush-port)))
                       (errol-rank (get-cur-rank (game-score bush-errol)))
                       )
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 port-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 port-rank))
                     )
                     
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 errol-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 errol-rank))
                     )
                   )
                 )
               ((59) ;; "Slums (Southeast)" ;; 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-1))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-13))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
               ((58) ;; "Slums (Northwest)" ;; 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-ring-1))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-ring-3))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
                 )
               ((70) ;; "Water Slums" ;; 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-complete? *game-info* (game-task city-burning-bush-get-to-4))
                   (+! (-> *level-orb-collected-counts* lvl-idx) 3)
                   )
@@ -494,36 +536,25 @@
                       (blue-rank (get-cur-rank (game-score gungame-blue)))
                       (dark-rank (get-cur-rank (game-score gungame-dark)))
                       )
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 red-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 red-rank))
                     )
                     
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 yellow-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 yellow-rank))
                     )
                     
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 blue-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 blue-rank))
                     )
                     
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 dark-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 dark-rank))
                     )
                   )
                 )
-              ((45) ;; "Onin's Tent" ;; 
-                (+! (-> *level-orb-total-counts* lvl-idx) 3)
-                (when (task-node-closed? (game-task-node city-play-onin-game-skill))
-                  (+! (-> *level-orb-collected-counts* lvl-idx) 3)
-                  )                
-                )
               ((65) ;; "Stadium (JET Board)" ;; 
                 (let ((sk8-rank (get-cur-rank (game-score judge-skatea))))
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 sk8-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 sk8-rank))
                     )
@@ -532,12 +563,10 @@
               ((62) ;; "Stadium (Class 3)" ;; 
                 (let ((race-rank (get-cur-rank (game-score bush-race-1)))
                       (rev-rank (get-cur-rank (game-score reverse-race-1))))
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 race-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 race-rank))
                     )
 
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 rev-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 rev-rank))
                     )
@@ -546,12 +575,10 @@
               ((61) ;; "Stadium (Class 2)" ;; 
                 (let ((race-rank (get-cur-rank (game-score bush-race-2)))
                       (rev-rank (get-cur-rank (game-score reverse-race-2))))
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 race-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 race-rank))
                     )
                     
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 rev-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 rev-rank))
                     )
@@ -560,12 +587,10 @@
               ((60) ;; "Stadium (Class 1)" ;; 
                 (let ((race-rank (get-cur-rank (game-score bush-race-3)))
                       (rev-rank (get-cur-rank (game-score reverse-race-3))))
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 race-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 race-rank))
                     )
                     
-                  (+! (-> *level-orb-total-counts* lvl-idx) 9)
                   (when (< 0 rev-rank)
                     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 rev-rank))
                     )
@@ -575,32 +600,23 @@
             )
           )
         
-        ;; update saved orb counts, if needed
-        (when (>= (-> *game-info* auto-save-which) 0)
-          (let ((save-idx (-> *game-info* auto-save-which))
-                (orb-count-updated? #f))
-            (dotimes (idx LEVEL_ID_LEN)
-              (when (and (nonzero? (-> *level-orb-collected-counts* idx))
-                        (> (-> *level-orb-collected-counts* idx) (-> *mod-settings* save-data save-idx orb-counts idx))
-                        )
-                (format 0 "updating mod-settings orb-count for ~S to ~D ~%" (-> *level-id-names* idx) (-> *level-orb-collected-counts* idx))
-                (set! (-> *mod-settings* save-data save-idx orb-counts idx) (-> *level-orb-collected-counts* idx))
-                (true! orb-count-updated?)
-                )
-              )
+        ;; check if game-info needs to be synced from current entities
+        (dotimes (idx LEVEL_ID_LEN)
+          (when (< (-> *game-info* skill-per-level idx) (-> *level-orb-collected-counts* idx))
+            (set! (-> *game-info* skill-per-level idx) (the uint (-> *level-orb-collected-counts* idx)))))
 
-            ;; autosave, if enabled
-            (when (and orb-count-updated?
-                       (-> *mod-settings* orb-autosave?)
-                       (not *auto-saving?*)
-                       ;; dont autosave with bad checkpoint
-                       (not (or (name= (-> *game-info* current-continue name) 'tmp)
-                                (name= (-> *game-info* current-continue name) 'default))))
-              (format 0 "autosave on orb pickup~%")
-              (true! *auto-saving?*)
-              (auto-save-user)  ;; autosave on orb pickup
-              )
-            )
+        ;; autosave from orb update, if needed
+        (when (and *orb-count-updated?*
+                   (>= (-> *game-info* auto-save-which) 0)
+                   (-> *mod-settings* orb-autosave?))
+                   (not *auto-saving?*)
+                   ;; dont autosave with bad checkpoint
+                   (not (or (name= (-> *game-info* current-continue name) 'tmp)
+                            (name= (-> *game-info* current-continue name) 'default)))
+          (format 0 "autosave on orb pickup~%")
+          (true! *auto-saving?*)
+          (auto-save-user)  ;; autosave on orb pickup
+          (false! *orb-count-updated?*)
           )
 
         (when (not (movie?))
@@ -612,12 +628,9 @@
                 )
             (dotimes (idx LEVEL_ID_LEN)
               (when (or (-> *level-orb-active* idx)
-                        (and (= idx 45) (nonzero? (-> *level-orb-total-counts* idx))) ;; onintent has orbs in ctymark(a/b? idk)
+                        (and (= idx 45) (-> *level-orb-active* 1)) ;; onintent has orbs in ctymarkb
                         )
-                (let* ((coll (if (>= save-idx 0) ;; prefer to read the save data one
-                                 (-> *mod-settings* save-data save-idx orb-counts idx)
-                                 (-> *level-orb-collected-counts* idx)
-                                 ))
+                (let* ((coll (-> *game-info* skill-per-level idx))
                        (tot (-> *level-orb-total-counts-fixed* idx))
                        (color-str
                           (cond
@@ -637,7 +650,6 @@
               )
             
             (when (nonzero? row-offset)
-              ;; (set! (-> font-ctx origin x) xpos)
               (set! (-> font-ctx origin x) 507.0)
               (set! (-> font-ctx origin y) (- 409.0 (* 9.0 row-offset)))
               (set! (-> font-ctx color) (font-color white))
