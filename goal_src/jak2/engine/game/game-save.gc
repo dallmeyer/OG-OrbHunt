@@ -1115,15 +1115,13 @@
   )
 
 (defmethod load-game ((this game-info) (arg0 game-save))
-  (let ((v1-0 (the-as object (-> arg0 tag)))
-        (oh-break #f))
-    (while (and (not oh-break)
-                (< (the-as int v1-0) (the-as int (&-> arg0 tag 0 user-int8 (-> arg0 length)))))
-      (dbg-format 0 "load-game found tag at ~D with type ~S (~D) and count ~D ~%" 
-        v1-0
-        (game-save-elt->string (-> (the-as (inline-array game-save-tag) v1-0) 0 elt-type))
-        (-> (the-as (inline-array game-save-tag) v1-0) 0 elt-type)
-        (-> (the-as (inline-array game-save-tag) v1-0) 0 elt-count))
+  (let ((v1-0 (the-as object (-> arg0 tag))))
+    (while (< (the-as int v1-0) (the-as int (&-> arg0 tag 0 user-int8 (-> arg0 length))))
+      ;; (dbg-format 0 "load-game found tag at ~D with type ~S (~D) and count ~D ~%" 
+      ;;   v1-0
+      ;;   (game-save-elt->string (-> (the-as (inline-array game-save-tag) v1-0) 0 elt-type))
+      ;;   (-> (the-as (inline-array game-save-tag) v1-0) 0 elt-type)
+      ;;   (-> (the-as (inline-array game-save-tag) v1-0) 0 elt-count))
       (case (-> (the-as (inline-array game-save-tag) v1-0) 0 elt-type)
         ;; og:preserve-this Moved saving these settings to pc-settings
         ;; (((game-save-elt sfx-volume))
@@ -1309,7 +1307,6 @@
            )
          )
         (((game-save-elt skill-per-level))
-         (format 0 "LOADING SAVE AND FOUND SKILL-PER-LEVEL!!!!")
          (let ((v1-67 (min LEVEL_ID_LEN (-> (the-as (inline-array game-save-tag) s4-0) 0 elt-count))))
            (dotimes (a0-89 v1-67)
              (set! (-> this skill-per-level a0-89)
