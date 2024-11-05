@@ -1591,7 +1591,7 @@ void TextureAnimator::run_clut_blender_group(DmaTransfer& tf,
   auto& blenders = m_clut_blender_groups.at(idx);
   const int tbps_size = sizeof(u32) * 4 * ((blenders.blenders.size() + 3) / 4);
   float f;
-  // ASSERT(tf.size_bytes == 16 + tbps_size);
+  ASSERT(tf.size_bytes == 16 + tbps_size);
   memcpy(&f, tf.data, sizeof(float));
   float weights[2] = {1.f - f, f};
   blenders.last_updated_frame = frame_idx;
