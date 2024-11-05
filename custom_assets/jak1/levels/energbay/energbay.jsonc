@@ -1964,11 +1964,11 @@
           }
         },
         {
-          "trans": [867.00,  58.35, 675.20  ], // translation - for one orb in water
+          "trans": [743.2855, 6.9092, 954.5048], // translation - above orb crate (force zoomer instead of red eco crystal)
           "etype": "crate",  // actor type
           "game_task": 0, // associated game task (for powercells, etc)
           "quat" : [-0.061, 0.560, -0.047, 0.825], // quaternion
-          "bsphere": [867.00,  58.35, 675.20  , 10], // bounding sphere
+          "bsphere": [743.2855, 6.9092, 954.5048, 10], // bounding sphere
           "lump": {
             "name":"energy-bay-crate-wood-08-red",
             "crate-type":"'wood",
@@ -2838,11 +2838,11 @@
           }
         },
         {
-          "trans": [577.82, 16.00, 760.65], // translation
+          "trans": [777.59,   1.41, 597.25  ], // translation - could use for orb in water
           "etype": "eco",  // actor type
           "game_task": 0, // associated game task (for powercells, etc)
           "quat" : [0, 0, 0, 1], // quaternion
-          "bsphere": [577.82, 16.00, 760.65, 10], // bounding sphere
+          "bsphere": [777.59,   1.41, 597.25  , 10], // bounding sphere
           "lump": {
             "name":"energy-bay-eco-06",
             "eco-info": ["int32", 3, 1] //1 = blue eco
