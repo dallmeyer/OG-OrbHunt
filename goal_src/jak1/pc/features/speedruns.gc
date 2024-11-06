@@ -456,7 +456,7 @@
 (define *baby-mode-orb-dist* (the-as float #f))
 
 (defun draw-closest-orb ()
-  (when (and (-> *setting-control* current allow-pause) (-> *pc-settings* closest-orb?))
+  (when (and (-> *setting-control* current allow-pause) (-> *pc-settings* closest-orb?) (main-hud-shown?))
     (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf)) (bucket-id debug-no-zbuf))
       (if (= *baby-mode-orb-dist* #f)
         (draw-string-xy (string-format "Closest Orb: N/A") buf 0 210 (font-color transparent) (font-flags kerning))

@@ -1668,6 +1668,14 @@
   0
   (none))
 
+(defun main-hud-shown? ()
+  (and (not (hidden? (the-as hud (ppointer->process (-> *hud-parts* money)))))
+       (not (hidden? (the-as hud (ppointer->process (-> *hud-parts* fuel-cell)))))
+       (not (hidden? (the-as hud (ppointer->process (-> *hud-parts* health)))))
+      ;;  (not (hidden? (the-as hud (ppointer->process (-> *hud-parts* buzzers)))))
+       )
+  )
+
 (defun hud-hidden? ()
   (local-vars (gp-0 symbol))
   (cond
