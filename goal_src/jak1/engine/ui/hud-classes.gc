@@ -1669,7 +1669,12 @@
   (none))
 
 (defun main-hud-shown? ()
-  (and (not (hidden? (the-as hud (ppointer->process (-> *hud-parts* money)))))
+  (and *target*
+       *hud-parts*
+       (-> *hud-parts* money)
+       (-> *hud-parts* fuel-cell)
+       (-> *hud-parts* health)
+       (not (hidden? (the-as hud (ppointer->process (-> *hud-parts* money)))))
        (not (hidden? (the-as hud (ppointer->process (-> *hud-parts* fuel-cell)))))
        (not (hidden? (the-as hud (ppointer->process (-> *hud-parts* health)))))
       ;;  (not (hidden? (the-as hud (ppointer->process (-> *hud-parts* buzzers)))))
