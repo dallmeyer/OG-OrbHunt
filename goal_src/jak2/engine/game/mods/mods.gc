@@ -2013,18 +2013,27 @@
          (barge (if boat-mgr (the process-drawable (ppointer->process (-> boat-mgr child)))))
          (tmp-vec (new-stack-vector0))
          )
-    (when (and orb barge)
-      (set! (-> orb root trans x) (-> barge root trans x))
-      (set! (-> orb root trans z) (-> barge root trans z))
-      ;; convert the quaternion to a vector representing rotation around z axis (isnt it the y axis in GOAL tho?)
-      (vector-z-quaternion! tmp-vec (-> barge root quat))
-      ;; shift orbs's position opposite the barge angle, by 1m
-      (vector-! (-> orb root trans) (-> orb root trans) (vector-normalize! tmp-vec (meters 9.45)))
-      (set! (-> orb root trans y) (fmin (-> orb root trans y) (meters 3.7)))
+    (cond 
+      ((and orb barge)
+        (set! (-> orb root trans x) (-> barge root trans x))
+        (set! (-> orb root trans z) (-> barge root trans z))
+        ;; convert the quaternion to a vector representing rotation around z axis (isnt it the y axis in GOAL tho?)
+        (vector-z-quaternion! tmp-vec (-> barge root quat))
+        ;; shift orbs's position opposite the barge angle, by 1m
+        (vector-! (-> orb root trans) (-> orb root trans) (vector-normalize! tmp-vec (meters 9.45)))
+        (set! (-> orb root trans y) (fmin (-> orb root trans y) (meters 3.7)))
 
-      (set! (-> orb base x) (-> orb root trans x))
-      (set! (-> orb base y) (meters 2.7))
-      (set! (-> orb base z) (-> orb root trans z))
+        (set! (-> orb base x) (-> orb root trans x))
+        (set! (-> orb base y) (meters 2.7))
+        (set! (-> orb base z) (-> orb root trans z))
+
+        ;; make sure orb not hidden
+        (logclear! (-> orb draw status) (draw-control-status no-draw-bounds))
+        )
+      (orb
+        ;; orb but couldn't find barge? make it invis just in case
+        (logior! (-> orb draw status) (draw-control-status no-draw-bounds))
+        )
       )
     )
 
