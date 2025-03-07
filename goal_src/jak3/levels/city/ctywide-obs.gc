@@ -2617,7 +2617,7 @@
             (dotimes (s5-1 (length (-> self actor-group 0)))
               (let ((s4-1 (-> self actor-group 0 data s5-1 actor)))
                 (when s4-1
-                  (if (and (is-object-visible? (-> s4-1 extra level) (-> s4-1 vis-id))
+                  (if (and (is-object-visible? (-> s4-1 extra level) (-> s4-1 vis-id) s4-1)
                            (let ((s3-0 sphere-in-view-frustum?)
                                  (a0-13 (new 'stack 'sphere))
                                  )

@@ -1908,7 +1908,12 @@
     )
   :trans (behavior ()
     ;; og:preserve-this - High FPS Fix
-    (if (and (recently-pressed? x)
+    (if (and (or (recently-pressed? x) ;; orb hunt - hold X and do optimal abah for free
+                 (and (-> *mod-settings* easy-abah?)
+                      (cpad-hold? 0 x)
+                      (= 45 (- (current-time) (-> self state-time)))
+                      )
+                 )
              (can-jump? #f)
              )
         (target-jump-go)

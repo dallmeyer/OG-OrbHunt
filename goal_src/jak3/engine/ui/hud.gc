@@ -745,6 +745,27 @@
   (none)
   )
 
+(define-extern *show-mini-bigmap* symbol)
+(define-extern *mini-bigmap-toggle-time* time-frame)
+
+(defun have-minimap? ()
+  (let ((map-gui (lookup-gui-connection *gui-control* (the process #f) (gui-channel hud-lower-right) "hud-map" (new 'static 'sound-id))))
+    (and (logtest? (minimap-flag minimap) (-> *setting-control* user-current minimap))
+         (!= map-gui #f)
+         (!= (gui-status pending) (get-status *gui-control* (-> map-gui id)))
+         (!= (gui-action hidden) (-> map-gui action)))
+    )
+  )
+
+(defun allow-mini-bigmap? ()
+  (and *target*
+      ;;  (-> *pc-settings* baby-mode?)
+       (pause-allowed?)
+       (not (hud-hidden?))
+       (not (have-minimap?))
+       )
+  )
+
 (defmethod update-values! ((this hud))
   (with-pp
     (let ((s5-0 #f))
@@ -872,6 +893,10 @@
 
 (defmethod hidden? ((this hud))
   (and (-> this next-state) (= (-> this next-state name) 'hud-hidden))
+  )
+
+(defun fully-in? ((this hud))
+  (the-as symbol (and (-> this next-state) (= (-> this next-state name) 'hud-in)))
   )
 
 ;; WARN: Return type mismatch (pointer process) vs (pointer manipy).
@@ -1338,6 +1363,35 @@
       )
     (else
       (set! gp-0 #t)
+      )
+    )
+  gp-0
+  )
+
+(defun hud-skill-shown? ()
+  (local-vars (gp-0 symbol))
+  (cond
+    (*target*
+      (set! gp-0 #f)
+      (let ((v1-2 (-> *hud-engine* alive-list next0)))
+        *hud-engine*
+        (let ((s5-0 (-> v1-2 next0)))
+          (while (!= v1-2 (-> *hud-engine* alive-list-end))
+            (let ((h (the-as hud (-> (the-as connection v1-2) param1))))
+              (if (and (fully-in? h)
+                       (= (-> h type) hud-skill))
+                (set! gp-0 #t)
+                )
+              )
+            (set! v1-2 s5-0)
+            *hud-engine*
+            (set! s5-0 (-> s5-0 next0))
+            )
+          )
+        )
+      )
+    (else
+      (set! gp-0 #f)
       )
     )
   gp-0

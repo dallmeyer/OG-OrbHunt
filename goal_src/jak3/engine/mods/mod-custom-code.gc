@@ -26,68 +26,6 @@ an orb |#
     (orb-placer-maintenance)
     )
 
-  ;; debug stuff for jak spawn/despawn
-  (when (and *debug-segment*
-             (cpad-hold? 0 l3)
-             (cpad-pressed? 0 r3))
-    ;; probably trying to control jak/camera, turn off edit mode
-    (set! *orb-placer-enabled?* #f)
-    ;; toggle target
-    (cond
-      (*target*
-        (stop 'debug)
-        )
-      (else
-        (start 'play (get-current-continue-forced *game-info*))
-        (send-event *camera* 'set-slave-option (cam-slave-options COLLIDE))
-        (send-event *camera* 'set-slave-option (cam-slave-options LINE_OF_SIGHT))
-        )
-      )
-    )
-
-  (none)
-  )
-
-(defun orb-hunt-update ()
-  (runs-every-frame)
-
-  (when (board-hovering?)
-    (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
-                                        (bucket-id debug-no-zbuf1))
-      (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 5 400 0.0 (font-color default) (font-flags shadow kerning large))))
-        (set! (-> font-ctx scale) 0.325)
-        (draw-string-adv "Nice Hover" buf font-ctx)
-        )
-      )
-    )
-
-  ;; Draw info to the screen
-  ;; (draw-orb-hunt-text)
-
-  ;; (when (-> *mod-settings* pseudo-savestates?)
-  ;;   (when (and (or (not *progress-process*) (gone? (-> *progress-process* 0)))
-  ;;              (>= (- (-> *display* base-clock frame-counter) (-> *game-info* blackout-time)) (seconds 0.1))
-  ;;              )
-  ;;     ;; call post-init function
-  ;;     (when (and *target* *practice-spawn-post-init*)
-  ;;       (*practice-spawn-post-init*)
-  ;;       (set! *practice-spawn-post-init* #f)
-  ;;       )
-
-  ;;     (when (cpad-hold? 0 r3)
-  ;;       (cond
-  ;;         ((cpad-pressed? 0 up)
-  ;;           (format 0 "player tried to load tmp checkpoint~%")
-  ;;           (speedrun-practice-spawn)
-  ;;           )
-  ;;         ((cpad-pressed? 0 down)
-  ;;           (format 0 "player tried to save tmp checkpoint~%")
-  ;;           (speedrun-practice-store-temp-checkpoint)
-  ;;           )
-  ;;         )
-  ;;       )
-  ;;     )
-  ;;   )
   (none)
   )
 
@@ -187,11 +125,11 @@ an orb |#
 (set! *runs-on-settings-saved-defined?* #t)
     
 (defun runs-on-game-saved ((which-slot int))
-  ;; (false! *auto-saving?*)
-  ;; (set! *last-auto-save-time* (get-current-time))
+  (false! *auto-saving?*)
+  (set! *last-auto-save-time* (get-current-time))
 
   ;; uncomment the below line to piggy-back and save your mod-settings whenever the game is saved are saved to slot # "which-slot"
-  ;; (commit-to-file *mod-settings*)
+  (commit-to-file *mod-settings*)
 
   (none)
   )

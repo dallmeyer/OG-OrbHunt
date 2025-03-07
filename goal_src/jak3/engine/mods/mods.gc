@@ -1,0 +1,1371 @@
+;;-*-Lisp-*-
+(in-package goal)
+
+;; more for testing purposes than anything
+(defun move-actor-str-target-offset ((actor-name string) (x float) (y float) (z float))
+  (cond 
+    ((entity-by-name actor-name)
+     (let* ((entity-actor (entity-by-name actor-name))
+            (actor (the process-drawable (-> entity-actor extra process))))
+            
+       (when actor
+         (vector-copy! (-> actor root trans) (target-pos 0))
+         (+! (-> actor root trans x) (meters x))
+         (+! (-> actor root trans y) (meters y))
+         (+! (-> actor root trans z) (meters z))
+         (vector-copy! (-> entity-actor trans) (target-pos 0))
+         (+! (-> entity-actor trans x) (meters x))
+         (+! (-> entity-actor trans y) (meters y))
+         (+! (-> entity-actor trans z) (meters z))
+         (vector-copy! (-> entity-actor extra trans) (target-pos 0))
+         (+! (-> entity-actor extra trans x) (meters x))
+         (+! (-> entity-actor extra trans y) (meters y))
+         (+! (-> entity-actor extra trans z) (meters z))))))
+    
+  (none))
+
+(defun move-actor-str ((actor-name string) (x float) (y float) (z float))
+  (cond 
+    ((string= actor-name "target")
+     (set-vector-meters! (-> *target* root trans) x y z))
+      
+    ((entity-by-name actor-name)
+     (let* ((entity-actor (entity-by-name actor-name))
+            (actor (-> entity-actor extra process)))
+            
+       (when actor
+         (set-vector! (-> entity-actor trans) (meters x) (meters y) (meters z) 1.0)
+         (set-vector! (-> entity-actor extra trans) (meters x) (meters y) (meters z) 1.0)))))
+         ;; (set-vector! (-> (the process-drawable actor) root trans) (meters x) (meters y) (meters z) 1.0)
+    
+  (none))
+
+;; prints the position (root trans) of a process-drawable
+(defmacro pd-pos-m (procname)
+  `(let ((obj (the process-drawable 
+                (case ,procname :comp name= 
+                  (("target" "")
+                    *target*)
+                  (else 
+                    (process-by-ename ,procname))
+                  ))))
+    (when obj
+      (let ((vec (-> obj root trans))
+            (q (-> obj root quat)))
+        (format 0 "~%~S:~%" ,procname)
+        (format 0 "~m ~m ~m  |||  " (-> vec x) (-> vec y) (-> vec z))
+        (format 0 " Q:  ~f  ~f  ~f  ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
+        (format 0 "~m, ~m, ~m  |||  " (-> vec x) (-> vec y) (-> vec z))
+        (format 0 " Q:  ~f, ~f, ~f, ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
+        )
+      )
+    (none)))
+
+(defmacro mod-copy-mesh-and-path (dst-name src-name)
+  `(let ((dst (the nav-enemy (process-by-ename ,dst-name)))
+         (src (the nav-enemy (process-by-ename ,src-name))))
+         
+    (when (and src dst)
+      (set! (-> dst nav mesh) (-> src nav mesh))
+      (set! (-> dst path flags) (-> src path flags))
+      (curve-copy! (-> dst path curve) (-> src path curve))
+      (set! (-> dst path num-cverts) (-> src path num-cverts))
+      (set! (-> dst path cverts) (-> src path cverts)))))
+
+(defmacro mod-no-collectable-bob (collectablename height)
+  `(begin
+    (when (process-by-ename ,collectablename)
+      (set! (-> (the collectable (process-by-ename ,collectablename)) bob-amount) 0.0)
+      (set! (-> (the collectable (process-by-ename ,collectablename)) root trans y) (meters ,height)))))
+
+;; takes a path-control and xyz values to offsets every node in the path by
+;; (defmacro shift-path! (path x y z)
+;;   `(let ((voff (static-vector-meters ,x ,y ,z)))
+;;     (dotimes (idx (-> ,path num-cverts))
+;;       (vector+! (-> ,path cverts idx) (-> ,path cverts idx) voff)
+;;       )
+;;     )
+;;   )
+
+;; (defmacro path-print-meters (path)
+;;   `(dotimes (idx (-> ,path num-cverts))
+;;     (print-vector3m (-> ,path cverts idx))
+;;     )
+;;   )
+
+(defmacro move-pd-str (actor-name x y z)
+  `(let ((pd (the process-drawable (process-by-ename ,actor-name))))
+    (when pd
+      (set-vector-meters! (-> pd root trans) ,x ,y ,z))
+      
+    (none)))
+    
+  
+
+(defmacro set-pd-quat (actor-name x y z w)
+  `(let ((pd (the process-drawable (process-by-ename ,actor-name))))
+    (when pd
+      (set-vector! (-> pd root quat) ,x ,y ,z ,w))
+      
+    (none)))
+    
+  
+
+;; (defun mod-override-plat-path ((obj plat) (arg0 entity-actor))
+;;   (case (-> obj name) :comp name=
+;;     (('citb-launcher-4) ;; back and forth - shortcut to other side
+;;       (set-vector-meters! (-> obj path cverts 0) 2630.9350 -23.0000 -4715.0468)
+;;       (set-vector-meters! (-> obj path cverts 1) 2649.4807 -23.0000 -4715.1137)
+;;       )
+;;     )
+;;   (none)
+;;   )
+
+(defmacro spawn-skill-old (x y z bob? name)
+  `(spawn-skill-internal ,x ,y ,z ,bob? ,name 1.0))
+  
+
+(defmacro spawn-gold-skill-old (x y z bob? name)
+  `(spawn-skill-internal ,x ,y ,z ,bob? ,name (-> *FACT-bank* super-skill-inc)))
+  
+
+(defun spawn-skill-internal ((x float) (y float) (z float) (bob? symbol) (name string) (amount float))
+  (dbg-format 0 "trying to spawn ~A~%" name)
+  (cond
+    ((process-by-name name *active-pool*)
+     (format 0 "~A is already spawned, skipping" name)
+     )
+    (else
+      (let ((fax (new 'static 'fact-info)))
+        (set! (-> fax pickup-type) (pickup-type skill))
+        (set! (-> fax pickup-amount) amount)
+        (set! (-> fax pickup-spawn-amount) amount)
+        ;; make sure it doesn't timeout and disappear
+        (logior! (-> fax options) (actor-option fade-out))
+        (set! (-> fax fade-time) (the-as time-frame 0))
+        (if bob?
+          (logior! (-> fax options) (actor-option force-bob))
+          (logclear! (-> fax options) (actor-option force-bob)))
+          
+        (let ((vec (new 'stack-no-clear 'vector)))
+          (set-vector-meters! vec x y z)
+          (let ((proc (ppointer->process (birth-pickup-at-point-named vec (pickup-type skill) amount #t *active-pool* fax name))))
+            ;; (copy-string<-string (-> proc name) ,name) ;; lol this overwrote the "skill" string for everyone
+            (dbg-format 0 "spawned ~A~%" proc)))))))
+
+(define *baby-mode-orb-dist* (the-as float #f))
+(defun baby-mode-find-closest-orb ()
+  (when (-> *mod-settings* closest-orb?)
+    ;; find closest orb
+    (set! *baby-mode-orb-dist* (the-as float #f))
+    (when (not (or (= *master-mode* 'menu) (= *master-mode* 'progress)))
+      (dotimes (s4-0 (-> *level* length))
+        (let ((v1-8 (-> *level* level s4-0)))
+          (when (= (-> v1-8 status) 'active)
+            (let ((s3-0 (-> v1-8 bsp level entity)))
+              (dotimes (s2-0 (-> s3-0 length))
+                (let* ((s0-0 (-> s3-0 data s2-0 entity))
+                      (s1-0 (-> s0-0 extra trans))
+                      (proc (-> s0-0 extra process)))
+                      
+                  (when (and proc 
+                            ;; open orbs/crates
+                            (or (type-type? (-> proc type) skill)
+                                (and (type-type? (-> proc type) crate) 
+                                     (= (-> (the crate proc) fact pickup-type) (pickup-type skill))
+                                     )
+                                )
+                            (not (type-type? (-> proc type) skill-ghost))
+                            (not (logtest? (-> s0-0 extra status) (entity-perm-status subtask-complete))) ;; crate respawn check
+                            )
+                    (let ((dist (vector-vector-distance 
+                                  (target-pos 0) 
+                                  (-> (the process-drawable (-> s0-0 extra process)) root trans))))
+                      (if (or (= *baby-mode-orb-dist* #f) (< dist *baby-mode-orb-dist*))
+                        (set! *baby-mode-orb-dist* dist))))))))))))
+  (none))
+  
+;; (defun get-cur-rank ((score game-score))
+;;   (let* ((game-score-idx (the uint8 score))
+;;          (old-rank 0)
+;;          (orig-scores (-> *highscore-info-array* game-score-idx))
+;;          (sv-32 0)
+;;          )
+;;     (let ((s0-0 (get-game-score-ref *game-info* (the-as int game-score-idx)))
+;;           (s1-0 (new 'stack-no-clear 'array 'int8 4))
+;;           )
+;;       (dotimes (v1-5 4)
+;;         (set! (-> s1-0 v1-5) 0)
+;;         )
+;;       (while (< sv-32 8)
+;;         (let ((v1-13 (get-rank orig-scores (-> s0-0 sv-32))))
+;;           (+! (-> s1-0 v1-13) 1)
+;;           )
+;;         (set! sv-32 (+ sv-32 1))
+;;         )
+;;       (dotimes (v1-20 4)
+;;         (if (< 1 (-> s1-0 v1-20))
+;;             (set! old-rank v1-20)
+;;             )
+;;         )
+;;       )
+
+;;     old-rank
+;;     )
+;;   )
+
+(defun increment-skill-per-level-side-mish ((tsk game-task) (amount int))
+;;   (case tsk
+;;     ;; "Bazaar (West)" ;;  ctymarka
+;;     (((game-task city-burning-bush-racepoint-1) (game-task city-burning-bush-shuttle-1) (game-task city-burning-bush-get-to-12) (game-task city-burning-bush-bombbot-1))
+;;       (+! (-> *game-info* skill-per-level 2) amount))
+;;     ;; "Stadium (Class 1)" ;; 
+;;     (((game-task stadium-burning-bush-race-class1))
+;;       (+! (-> *game-info* skill-per-level 60) amount))
+;;     )
+;;     (if (nonzero? amount) (true! *orb-count-updated?*))
+  (none))
+
+(defun increment-skill-per-level ((ent entity-actor))
+  (let* ((lvl-idx (-> *level-load-info-level-id-remap* (-> ent extra level info index)))
+         (lvl-idx-override (res-lump-value ent 'lvl-idx-override int :default (the-as uint128 -1) :time -1000000000.0))
+         (final-lvl-idx (if (>= lvl-idx-override 0) lvl-idx-override lvl-idx)))
+    (+! (-> *game-info* skill-per-level final-lvl-idx) 1))
+  (true! *orb-count-updated?*)
+  (none))
+
+(defun-extern hover-need-to-cooldown? symbol)
+(define *auto-saving?* #f)
+(define *last-auto-save-time* (the time-frame #f))
+(define *last-l3-time* (the time-frame #f))
+(define *tmp-orb-hunt-str* (new 'global 'string 2048 (the-as string #f)))
+(defun draw-orb-hunt-text ()
+  ;; track L3 presses
+  (when (or (cpad-hold? 0 l3) (cpad-pressed? 0 l3)) (set-g-time! *last-l3-time*))
+
+  (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
+                                (bucket-id debug-no-zbuf1))
+    ;; reset bucket settings prior to drawing - font won't do this for us, and
+    ;; draw-raw-image can sometimes mess them up. (intro sequence)
+    (dma-buffer-add-gs-set-flusha buf (alpha-1 (new 'static 'gs-alpha :b #x1 :d #x1)) (tex1-1 (new 'static 'gs-tex1 :mmag #x1 :mmin #x1)))
+
+    ;; init font-ctx for bottom-left corner
+    (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 5 400 0.0 (font-color default) (font-flags shadow kerning large))))
+      (set! (-> font-ctx scale) 0.325)
+
+      (when (and (pause-allowed?) (not (paused?)))
+        (clear *pc-encoded-temp-string*)
+        (when (and (hud-skill-shown?)
+                   (-> *mod-settings* closest-orb?)
+                   *last-l3-time* 
+                   (not (g-time-elapsed? *last-l3-time* (seconds 3.2)))
+                   )
+          ;; show closest orb text while hud is up + L3 pressed recently
+          (cond
+            ((= *baby-mode-orb-dist* #f)
+              (pc-encode-utf8-string "Closest Orb: N/A" *pc-encoded-temp-string*)
+              (set! (-> font-ctx color) (font-color transparent))
+              (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
+              )
+            (else
+              (pc-encode-utf8-string (string-format "Closest Orb: ~,,1Mm" *baby-mode-orb-dist*)
+                                      *pc-encoded-temp-string*)
+              ;; color based on distance
+              (set! (-> font-ctx color)
+                    (cond
+                      ((< *baby-mode-orb-dist* (meters  5.0)) (font-color red))
+                      ((< *baby-mode-orb-dist* (meters 10.0)) (font-color orange))
+                      ((< *baby-mode-orb-dist* (meters 20.0)) (font-color progress-old-yellow))
+                      ((< *baby-mode-orb-dist* (meters 30.0)) (font-color flat-yellow))
+                      ((< *baby-mode-orb-dist* (meters 40.0)) (font-color progress-old-blue))
+                      ((< *baby-mode-orb-dist* (meters 50.0)) (font-color cyan))
+                      (else (font-color blue))
+                      )
+                    )
+              (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
+              )
+            )
+          ;; bump buffer Y pos
+          (set! (-> font-ctx origin x) 5.0)
+          (-! (-> font-ctx origin y) 10.0)
+          )
+
+        (clear *pc-encoded-temp-string*)
+        (when (hover-need-to-cooldown?)
+          ;; show hover cooldown text
+          (clear *tmp-orb-hunt-str*)
+          (format *tmp-orb-hunt-str* "Hover cooldown: ~Ds" (/ (- (+ *last-hover-time* (seconds 30)) (get-current-time)) TICKS_PER_SECOND))
+          (pc-encode-utf8-string *tmp-orb-hunt-str* *pc-encoded-temp-string*)
+          (set! (-> font-ctx color) (font-color orange))
+          (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
+          )
+
+        ;; refresh orb counts for active levels
+        (dotimes (idx LEVEL_ID_LEN)
+          (false! (-> *level-orb-active* idx))
+          (set! (-> *level-orb-collected-counts* idx) 0)
+          )
+
+        (dotimes (s4-2 LEVEL_MAX)
+          (cond
+            ((= (-> *level* level s4-2 status) 'active)
+              (let ((lvl-idx (-> *level-load-info-level-id-remap* (-> *level* level s4-2 info index)))
+                    (entities (-> *level* level s4-2 entity)))
+                ;; open orbs
+                (dotimes (idx (-> entities length))
+                  (let ((entity-link (-> entities data idx)))
+                    (when (and (-> entity-link entity) (nonzero? (-> entity-link entity)))
+                      (let* ((lvl-idx-override (res-lump-value (-> entity-link entity) 'lvl-idx-override int :default (the-as uint128 -1) :time -1000000000.0))
+                             (final-lvl-idx (if (>= lvl-idx-override 0) lvl-idx-override lvl-idx)))
+                        (case (-> (the entity-actor (-> entity-link entity)) etype symbol)
+                          (('skill)
+                            ;; only consider final-lvl-idx active if not overridden from some other level
+                            (if (< lvl-idx-override 0)
+                              (true! (-> *level-orb-active* final-lvl-idx))
+                              )
+                            (when (logtest? (-> entity-link status) (entity-perm-status dead))
+                              (+! (-> *level-orb-collected-counts* final-lvl-idx) 1)
+                              )
+                            )
+                          (('skill-crate 'market-crate 'wascity-market-crate 'crate 'wascity-market-sack-a 'market-sack-a 'market-basket-a 'wascity-market-basket-a 'wascity-market-sack-b 'market-sack-b 'market-basket-b 'wascity-market-basket-b 'urn-a 'urn-b 'urn-c)
+                            (let ((e-info (res-lump-value (-> entity-link entity) 'eco-info uint128 :time -1000000000.0)))
+                              (when (= (the-as uint e-info) 24) ;; holding skill
+                                ;; only consider final-lvl-idx active if not overridden from some other level
+                                (if (< lvl-idx-override 0)
+                                  (true! (-> *level-orb-active* final-lvl-idx))
+                                  )
+                                (when (nonzero? (-> entity-link perm user-int8 1))
+                                  (+! (-> *level-orb-collected-counts* final-lvl-idx) 1)
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+
+        ;; side mish orbs for any other loaded levels
+        (dotimes (lvl-idx LEVEL_ID_LEN)
+          (when (-> *level-orb-active* lvl-idx)
+            ;; (case lvl-idx
+            ;;   ((23) ;; "Gardens (North)" ;;  farma
+            ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-8))
+            ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
+            ;;       )
+
+            ;;     (when (task-complete? *game-info* (game-task city-burning-bush-collection-3))
+            ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
+            ;;       )
+            ;;     )
+            ;;   ((24) ;; "Gardens (South)" ;;  farmb
+            ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-5))
+            ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
+            ;;       )
+            ;;     )
+            ;;   ((1) ;; "Bazaar (East)" or "Onin's Tent" ;;  ctymarkb
+            ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-7))
+            ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
+            ;;       )
+
+            ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-6))
+            ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
+            ;;       )
+
+            ;;     (when (task-node-closed? (game-task-node city-play-onin-game-skill))
+            ;;       (+! (-> *level-orb-collected-counts* 45) 3) ;; count towards onin tent instead of ctymarkb
+            ;;       )
+            ;;     )
+            ;;   ((25) ;; "Gun Course" ;;
+            ;;     (let ((red-rank (get-cur-rank (game-score gungame-red)))
+            ;;           (yellow-rank (get-cur-rank (game-score gungame-yellow)))
+            ;;           (blue-rank (get-cur-rank (game-score gungame-blue)))
+            ;;           (dark-rank (get-cur-rank (game-score gungame-dark)))
+            ;;           )
+            ;;       (when (< 0 red-rank)
+            ;;         (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 red-rank))
+            ;;         )
+                    
+            ;;       (when (< 0 yellow-rank)
+            ;;         (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 yellow-rank))
+            ;;         )
+                    
+            ;;       (when (< 0 blue-rank)
+            ;;         (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 blue-rank))
+            ;;         )
+                    
+            ;;       (when (< 0 dark-rank)
+            ;;         (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 dark-rank))
+            ;;         )
+            ;;       )
+            ;;     )
+            ;;   )
+            )
+          )
+        
+        ;; check if game-info needs to be synced from current entities
+        (dotimes (idx LEVEL_ID_LEN)
+          (when (< (-> *game-info* skill-per-level idx) (-> *level-orb-collected-counts* idx))
+            (set! (-> *game-info* skill-per-level idx) (the uint (-> *level-orb-collected-counts* idx)))))
+
+        ;; autosave from orb update, if needed
+        (when (and *orb-count-updated?*
+                   (>= (-> *game-info* auto-save-which) 0)
+                   (-> *mod-settings* orb-autosave?))
+                   (not *auto-saving?*)
+                   ;; dont autosave with bad checkpoint
+                   (not (or (name= (-> *game-info* current-continue name) 'tmp)
+                            (name= (-> *game-info* current-continue name) 'default)))
+          (format 0 "autosave on orb pickup~%")
+          (true! *auto-saving?*)
+          (auto-save-user)  ;; autosave on orb pickup
+          (false! *orb-count-updated?*)
+          )
+
+        (when (not (movie?))
+          ;; print orb counts
+          (clear *tmp-orb-hunt-str*)
+          (let ((save-idx (-> *game-info* auto-save-which))
+                (row-offset 0)
+                (xpos (if (= 1.0 (-> *pc-settings* aspect-ratio-scale)) 507.0 1019.0))
+                )
+            (dotimes (idx LEVEL_ID_LEN)
+              (when (or (-> *level-orb-active* idx)
+                        ;; (and (= idx 45) (-> *level-orb-active* 1)) ;; onintent has orbs in ctymarkb
+                        )
+                (let* ((coll (-> *game-info* skill-per-level idx))
+                       (tot (-> *level-orb-total-counts-fixed* idx))
+                       (color-str
+                          (cond
+                            ((= coll tot) "<COLOR_GREEN>") ;; green if 100%
+                            ((nonzero? coll) "<COLOR_ORANGE>") ;; nonzero, orange
+                            (else "<COLOR_FLAT-YELLOW>") ;; zero, slight yellow
+                            )))
+                  (format *tmp-orb-hunt-str* (string-format "<COLOR_DEFAULT>~S ~S~D / ~D~%"
+                                                (-> *level-id-names* idx)
+                                                color-str
+                                                coll
+                                                tot
+                                                ))
+                  (+! row-offset 1)
+                  )
+                )
+              )
+            
+            (when (nonzero? row-offset)
+              (set! (-> font-ctx origin x) 507.0)
+              (set! (-> font-ctx origin y) (- 409.0 (* 9.0 row-offset)))
+              (set! (-> font-ctx color) (font-color white))
+              (logior! (-> font-ctx flags) (font-flags right))
+              
+              (clear *pc-encoded-temp-string*)
+              (pc-encode-utf8-string *tmp-orb-hunt-str* *pc-encoded-temp-string*)
+              (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
+              )
+            )
+          )
+        )
+      )
+    )
+  
+  (none))
+
+(defun mod-spawn-new-entities ((level symbol))
+  ;; (format 0 "spawning extra mod entities for level ~A~%" level)
+  (case level
+    )
+    
+  (none))
+
+;; (defun prison-door-button-check ((button-name string) (door-name string))
+;;   (when *target*
+;;     (case (-> *target* state name)
+;;       ;; if target is attacking...
+;;       (('target-attack 'target-running-attack 'target-attack-uppercut-jump 'target-attack-air 'target-flop)
+;;        (let ((button (the part-spawner (process-by-ename button-name)))
+;;              (door (process-by-ename door-name)))
+              
+;;          ;; ... and button and door both exist, and player is close enough ...
+;;          (when (and button door (-> button root) (-> button root trans))
+;;            (let ((button-vec (-> button root trans))
+;;                  (target-vec (new 'stack 'vector))
+;;                  )
+;;              (vector-copy! target-vec (-> *target* root trans))
+;;              (+! (-> target-vec y) (meters 1.5))
+;;              (when (<= (vector-vector-distance target-vec button-vec) (meters 2.0))
+;;                ;; ... then we (try to) open door ...
+;;                (when (send-event door 'open)
+;;                  ;; ... if successful we play sounds and turn off lights
+;;                  (sound-play "door-open")
+;;                  (set! (-> button part data 0 flags) (the sp-launch-state-flags 0))
+;;                  (set! (-> button part data 1 flags) (the sp-launch-state-flags 0))
+;;                  (set! (-> button part data 2 flags) (the sp-launch-state-flags 0))))))))))
+    
+;;   (none))
+  
+
+;; (defun stdmb-hatch-check ((stdmb-hatch string))
+;;   (when (and *target* (not (side-mish-active?)))
+;;     (case (-> *target* state name)
+;;       ;; if target is attacking...
+;;       (('target-flop)
+;;        (let ((hatch (the process-drawable (process-by-ename stdmb-hatch))))
+              
+;;          ;; ... and hatch exists, and player is close enough ...
+;;          (when (and hatch (-> hatch root) (-> hatch root trans))
+;;            (let ((hatch-vec (-> hatch root trans)))
+;;              (when (<= (vector-vector-distance (-> *target* root trans) hatch-vec) (meters 4.0))
+;;                ;; ... then we (try to) open hatch ...
+;;                (when (send-event hatch 'open)
+;;                  ;; ... if successful we play sound
+;;                  (sound-play "timer-warn")))))))))
+;;   (none))
+
+;; (defun random-orb-pos ((orb skill))
+;;   (case (-> orb name) :comp name= 
+;;     (('castle-skill-84)
+;;       (case (rand-vu-int-count 4)
+;;         ;; west (original)
+;;         ((0) (set-vector-meters! (-> orb root trans) -266.45  53.37 -1720.35))
+;;         ;; south
+;;         ((1) (set-vector-meters! (-> orb root trans) -257.70  53.37 -1711.35))
+;;         ;; east
+;;         ((2) (set-vector-meters! (-> orb root trans) -243.28  53.37 -1724.83))
+;;         ;; north
+;;         ((3) (set-vector-meters! (-> orb root trans) -258.47  53.37 -1734.51))
+;;         )
+;;       )
+;;     )
+;;   (none)
+;;   )
+  
+;; (defun skill-float-up ((orb skill) (rate meters) (min meters) (max meters))
+;;   (when (and (not (logtest? (-> *kernel-context* prevent-from-run) (-> orb mask)))
+;;              (logtest? (-> orb draw status) (draw-control-status on-screen))
+;;              )
+;;     (+! (-> orb root trans y) rate)
+;;     (when (> (-> orb root trans y) max) 
+;;       ;; possibly warp orb to different point
+;;       (random-orb-pos orb)
+;;       ;; reset height
+;;       (set! (-> orb root trans y) min)
+;;       )
+;;     ;; sync base
+;;     (vector-copy! (-> orb base) (-> orb root trans))
+;;     )
+;;   (none)
+;;   )
+
+
+(defun mod-override-init-position ((obj process-drawable) (arg0 entity-actor))
+  (case (-> obj name) :comp name=
+    ;; ====== ORBS / CITY ======
+    ;; none
+    ;; ====== ORBS / FORTRESS ======
+    ;; === prison (first 2 rooms) ===
+    ;; (('skill-49) (set-vector-meters! (-> arg0 extra trans)  472.0 8.55 103.1)) ;; behind/under chair at start
+
+    ;; ====== BURNING BUSH / ORB HUNT ======
+    ;; === ctygena (canals near farm) ===
+    (('burning-bush-16) ;; orbhunt - 
+     (set-vector-meters! (-> arg0 extra trans) -382.6  23.40 -279.4) ;; awning near first turn from farm
+     ;; fix rotation. 2 is 'rotoffset. do this to display: (set-entity! *entity-debug-inspect* (entity-by-name "burning-bush-8"))
+     (set! (-> (the (pointer float) (get-tag-index-data arg0 2))) (degrees 180.0))
+     )
+     
+    )
+  (none))
+  
+
+;; (defun mod-turbo-jetboard? () 
+;;   (or (= (level-status *level* 'stadiumb) 'active)
+;;       (= (level-status *level* 'stadiumc) 'active)
+;;       (= (level-status *level* 'stadiumd) 'active)))
+      
+(define *last-hover-time* (the time-frame #f))
+(define *hover-collected-grace-time* (the time-frame #f))
+(define *last-no-hover-zone-time* (the time-frame #f))
+
+(defun hover-need-to-cooldown? ()
+  ;; need to cooldown if we have a last hover time and it isn't 1m ago
+  (if (and (-> *mod-settings* hover-restriction?)
+           *last-hover-time*
+           (not (g-time-elapsed? *last-hover-time* (seconds 30)))
+           )
+    #t
+    #f
+    )
+  )
+
+(defun try-play-no-hover-zone-audio ()
+  (when (or (not *last-no-hover-zone-time*)
+            (g-time-elapsed? *last-no-hover-zone-time* (seconds 5)))
+    ;; "no hover zone" dialogue if its been 5s since last one
+    (add-process *gui-control* *target* (gui-channel guard) (gui-action play) "kg007" -50.0 0)
+    ;; remember last time we played this dialogue
+    (set-g-time! *last-no-hover-zone-time*)
+    )
+  (none)
+  )
+
+(defun skill-alt-actor-check? ((skill collectable) (for-pickup? symbol))
+  (let ((alt-actor (entity-actor-lookup (-> skill entity) 'alt-actor 0)))
+    (when (and alt-actor (-> alt-actor extra process))
+      (when (and for-pickup? ;; visibility check would skip this
+                *target* 
+                (= (-> *target* next-state) target-hit)
+                )
+        ;; we have some alt-actor but jak is getting knocked, no pickup
+        (return #f)
+        )
+
+      (case (-> alt-actor etype symbol)
+        ;; (('yakow)
+        ;;   (when (zero? (-> (the yakow (-> alt-actor extra process)) incoming-attack-id))
+        ;;     ;; yakow hasnt been attacked yet, prevent pickup/hide
+        ;;     (return #f)
+        ;;     )          
+        ;;   )
+        (('ruins-breakable-wall)
+          (when (name= (-> alt-actor extra process state name) 'unbroken)
+            ;; wall is intact, prevent pickup/hide
+            (return #f)
+            )
+          )
+        (else
+          (when (not (or (name= (-> alt-actor extra process state name) 'die)
+                         (name= (-> alt-actor extra process state name) 'joint-exploder-shatter)
+                         ))
+            ;; alt-actor is not dead/triggered, prevent pickup/hide
+            (return #f)
+            )
+          )
+        )
+      )
+    )
+  ;; allow pickup
+  #t
+  )
+
+(defun clear-entity-dead-status ((name string))
+  (let ((actor (entity-by-name name)))
+    (when actor
+      (logclear! (-> actor extra perm status) (entity-perm-status dead))
+      )
+    )
+  (none)
+  )
+
+(defun clear-entity-kill-mask ((name string))
+  (let ((actor (entity-by-name name))
+        )
+    (when actor
+      (set! (-> (res-lump-data actor 'kill-mask (pointer task-mask))) (task-mask))
+      (set! (-> actor extra kill-mask) (task-mask))
+      )
+    )
+  (none)
+  )
+
+(defun skill-follow-y-offset ((orb-name string) (pd-name string) (y-offset float))
+  (let ((orb (the skill (process-by-ename orb-name)))
+        (pd (the process-drawable (process-by-ename pd-name))))
+    (when (and orb pd) ;; (logtest? (-> orb draw status) (draw-control-status no-draw-bounds)))
+      (vector-copy! (-> orb root trans) (-> pd root trans))
+      (+! (-> orb root trans y) y-offset)
+      (vector-copy! (-> orb base) (-> orb root trans))
+      )
+    )
+  (none)
+  )
+
+(defun skill-follow-min-y ((orb-name string) (pd-name string) (min-y float))
+  (let ((orb (the skill (process-by-ename orb-name)))
+        (pd (the process-drawable (process-by-ename pd-name))))
+    (when (and orb pd) ;; (logtest? (-> orb draw status) (draw-control-status no-draw-bounds)))
+      (vector-copy! (-> orb root trans) (-> pd root trans))
+      (set! (-> orb root trans y) (fmax min-y (-> orb root trans y)))
+      (vector-copy! (-> orb base) (-> orb root trans))
+      )
+    )
+  (none)
+  )
+
+
+(defun level-status ((this level-group) (arg0 symbol))
+  "Get the status of a level by name, return #f if no level is found."
+  (let ((v1-1 (level-get *level* arg0)))
+    (if v1-1
+        (-> v1-1 status))))
+
+(defun active-level? ((lvl-name symbol))
+  (= (level-status *level* lvl-name) 'active)
+  )
+
+(define *zoom-sensitivity-scale* 1.0)
+(define *show-mini-bigmap* #f)
+(define *mini-bigmap-toggle-time* (the time-frame #f))
+(define-extern *credits-rolling?* symbol)
+(define-extern start-credits-yolo (function none))
+(defun mod-run-each-frame ()
+  (task-close! "city-win-resolution") ;; NG+ or something
+;;   (task-close! "city-oracle-level3-training") ;; close oracle stuff
+;;   (logior! (-> *game-info* features) (game-feature board darkjak darkjak-bomb0 darkjak-bomb1 darkjak-invinc darkjak-giant)) ;; give board and dark jak stuff
+
+  (baby-mode-find-closest-orb)
+
+  ;; debug stuff for jak spawn/despawn
+  (when (and *debug-segment*
+             (cpad-hold? 0 l3)
+             (cpad-pressed? 0 r3))
+    ;; probably trying to control jak/camera, turn off edit mode
+    (set! *orb-placer-enabled?* #f)
+    ;; toggle target
+    (cond
+      (*target*
+        (stop 'debug)
+        )
+      (else
+        (start 'play (get-current-continue-forced *game-info*))
+        (send-event *camera* 'set-slave-option (cam-slave-options COLLIDE))
+        (send-event *camera* 'set-slave-option (cam-slave-options LINE_OF_SIGHT))
+        )
+      )
+    )
+
+  ;; check for orb tagging / "zooming"
+  (when (and *target* (name= (-> *target* state name) 'target-look-around)
+             (pause-allowed?) (not (paused?)))
+    ;; we're first-person, draw reticle
+    (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
+                                (bucket-id debug-no-zbuf1))
+      ;; reset bucket settings prior to drawing - font won't do this for us, and
+      ;; draw-raw-image can sometimes mess them up. (intro sequence)
+      (dma-buffer-add-gs-set-flusha buf (alpha-1 (new 'static 'gs-alpha :b #x1 :d #x1)) (tex1-1 (new 'static 'gs-tex1 :mmag #x1 :mmin #x1)))
+
+      ;; init font-ctx for dead center
+      (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 256 203 0.0 (font-color default) (font-flags kerning large middle))))
+        (set! (-> font-ctx scale) 0.325)
+        (set! (-> font-ctx color) (font-color transparent))
+        (draw-string-adv "o" buf font-ctx)
+        )
+      )
+
+    ;; ...and zoomed in/out (but not both)
+    (when (!= (cpad-pressed? 0 l2) (cpad-pressed? 0 r2))
+      (let* ((cur (* 0.005493164 (-> *math-camera* fov)))
+             (arg2 (fmax 28.0 (fmin 64.0 (+ cur (if (cpad-pressed? 0 r2) -12.0 12.0)))))
+             )
+        (set! *zoom-sensitivity-scale* (/ 64.0 arg2))
+        (set-setting-by-param *setting-control* 'fov #f (* 182.04445 arg2) 0)
+        (if *camera-combiner*
+          (set! (-> *camera-combiner* fov) (* 182.04445 arg2))
+          )
+        (if (and *camera* (-> *camera* slave))
+          (set! (-> *camera* slave 0 fov) (* 182.04445 arg2))
+          )
+        )
+      )
+    
+    ;; ...and pressed a face button
+    (when (cpad-pressed? 0 triangle square circle x l1 r1)
+      (let ((v-cam (new-stack-vector0))
+          (v-tmp (new-stack-vector0))
+          (skill-pos-offset (new-stack-vector0))
+          (dist 0.0)
+          (off 0.0)
+          (ratio 0.0)
+          )
+        ;; figure out where we're looking
+        (vector-matrix*! v-cam (new 'static 'vector :z 1.0) (math-camera-matrix))
+
+        ;; check if any orbs are in our line of sight
+        (dotimes (s4-2 LEVEL_MAX)
+          (cond
+            ((= (-> *level* level s4-2 status) 'active)
+              (let ((entities (-> *level* level s4-2 entity)))
+                (dotimes (idx (-> entities length))
+                  (let ((entity-link (-> entities data idx)))
+                    (when (and (-> entity-link entity) (nonzero? (-> entity-link entity))
+                              (-> entity-link process)
+                              (= (-> (the entity-actor (-> entity-link entity)) etype symbol) 'skill)
+                              )
+                      (let ((s (the skill (-> entity-link process))))
+                        ;; we have a live orb, figure out how far away it is relative to camera
+                        (vector-copy! skill-pos-offset (-> s root trans))
+                        (+! (-> skill-pos-offset y) (meters 0.6)) ;; from base of orb to middle
+                        (vector-! v-tmp skill-pos-offset (camera-pos))
+                        (set! dist (vector-length v-tmp))
+
+                        ;; project in v-cam direction with length dist, then compare position to actual orb
+                        (vector-copy! v-tmp v-cam)
+                        (vector-normalize! v-tmp dist)
+                        (vector+! v-tmp (camera-pos) v-tmp)
+
+                        ;; figure out how far off our projection would be
+                        (set! off (vector-vector-distance v-tmp skill-pos-offset))
+                        ;; compute ratio scaled based on cube root of the distance to orb
+                        (set! ratio (/ (cube-root dist) off))
+
+                        ;; the closer we are, the less accurate the vectors need to be, so lower threshold
+                        (when (> ratio 0.011)
+                          (dbg-format 0 "tagging orb ~A~%" (-> s name))
+                          (show-hud #f)
+                          (set! *mini-bigmap-toggle-time* (get-current-time))
+                          (true! *show-mini-bigmap*)
+                          (process-entity-status! s (entity-perm-status bit-15) #t)  ;; overload this bit for crate orbs
+                          (sound-play "skill-pickup" :pitch -0.75)
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+
+  ;; hover check/cooldown stuff
+  (cond
+    ((and (board-hovering?) 
+          (or (not *hover-collected-grace-time*)
+              (g-time-elapsed? *hover-collected-grace-time* (seconds 2))
+              )
+          )
+      ;; hovering and we didnt recently pickup a hover orb -> update last hover time
+      (set-g-time! *last-hover-time*)
+      )
+    ((not (hover-need-to-cooldown?))
+      (set! *last-hover-time* (the time-frame #f))
+      )
+    )
+
+  ;; loading hacks
+;;   (cond
+;;     ((in-bubble-m? 394.40 -138.27 1423.79 20.0)  ;; bottom of tombe trampolines, load tomba/b
+;;       (script-eval '(want-load 'tomba 'tombb 'tombe))
+;;       (script-eval '(want-display 'tomba 'display))
+;;       (script-eval '(want-display 'tombb 'display))  ;; tombb is the important one, since it gets swapped out for tombboss
+;;       (script-eval '(want-display 'tombe 'display))
+;;       )
+;;     ((in-bubble-m? 394.40 -66.68 1423.79 20.0)  ;; top of tombe trampolines, load tomba/tombboss
+;;       (script-eval '(want-load 'tomba 'tombboss 'tombe))
+;;       (script-eval '(want-display 'tomba 'display))
+;;       (script-eval '(want-display 'tombboss 'display))  ;; tombboss is the important one, since it gets swapped out for tombb
+;;       (script-eval '(want-display 'tombe 'display))
+;;       )
+;;     ((or (in-bubble-m? 1041.11  46.58 -531.95  250.0) 
+;;          (in-bubble-m? 1023.41  36.59 -483.86 100.0))  ;; near sagehut, make sure its loaded
+;;       (script-eval '(want-load 'ruins 'sagehut))
+;;       (script-eval '(want-display 'ruins 'display))
+;;       (script-eval '(want-display 'sagehut 'display))
+;;       )
+;;     ((or (in-bubble-m? -647.28  93.7 182.52   60.0)  ;; middle of mountain, make sure mtnext loaded
+;;          (in-bubble-m? -588.62 125.53 236.58     60.0)  ;; top/start of mountain, make sure mtnext loaded
+;;          (in-bubble-m? -696.70 116.64 301.04       80.0))  ;; over gap near forest plat, make sure mtnext loaded
+;;       (script-eval '(want-load 'mountain 'mtnext))
+;;       (script-eval '(want-display 'mountain 'display))
+;;       (script-eval '(want-display 'mtnext 'display))
+;;       )
+;;     )
+
+  ;; mooon things
+;;   (cond
+;;     ((and (pause-allowed?) (= (level-status *level* 'mooon) 'active))
+;;       ;; low grav
+;;       (when *target* (set! (-> *target* control dynam gravity-length) (meters 20)))
+;;       (set! (-> *TARGET-bank* jump-height-max) (meters 7.0))
+;;       (set! (-> *TARGET-bank* double-jump-height-max) (meters 5.0))
+;;       (set! (-> *TARGET_BOARD-bank* jump-height-max) (meters 7.0))
+;;       (set! (-> *TARGET_BOARD-bank* duck-jump-height-max) (meters 10.0))
+;;       (set! (-> *TARGET_BOARD-bank* trickx-jump-height-max) (meters 2.4))
+;;       (set! (-> *TARGET_BOARD-bank* tricky-jump-height-max) (meters 2.4))
+
+;;       ;; evening always
+;;       (send-event (ppointer->process *time-of-day*) 'change 'hour 23)
+;;       (set! (-> *time-of-day-context* mode) (the-as time-of-day-palette-id (/ 6 8)))
+
+;;       ;; credits
+;;       (when (and (not *credits-rolling?*) (pause-allowed?) (not (paused?)))
+;;         ;; show prompt
+;;         (let ((gp-0 (new 'stack 'font-context *font-default-matrix* 100 320 0.0 (font-color default) (font-flags large middle shadow kerning))))
+;;           (set! (-> gp-0 width) (the float 340))
+;;           (set! (-> gp-0 height) (the float 80))
+;;           (set! (-> gp-0 scale) 0.9)
+;;           (print-game-text
+;;             (lookup-text! *common-text* (text-id roll-credits) #f)
+;;             gp-0
+;;             #f
+;;             44
+;;             (bucket-id progress)
+;;             )
+;;           )
+
+;;         ;; check for combo to start credits
+;;         (when (and (or (cpad-pressed? 0 l1) (cpad-hold? 0 l1))
+;;                    (or (cpad-pressed? 0 r1) (cpad-hold? 0 r1))
+;;                    (or (cpad-pressed? 0 l2) (cpad-hold? 0 l2))
+;;                    (or (cpad-pressed? 0 r2) (cpad-hold? 0 r2))
+;;                    )
+;;           (start-credits-yolo)
+;;           )
+;;         )
+;;       )
+;;     (else
+;;       ;; normal grav
+;;       ;; (when *target* (set! (-> *target* control dynam gravity-length) (meters 50)))
+;;       (set! (-> *TARGET-bank* jump-height-max) (meters 3.5))
+;;       (set! (-> *TARGET-bank* double-jump-height-max) (meters 2.5))
+;;       (set! (-> *TARGET_BOARD-bank* jump-height-max) (meters 3.5))
+;;       (set! (-> *TARGET_BOARD-bank* duck-jump-height-max) (meters 5.0))
+;;       (set! (-> *TARGET_BOARD-bank* trickx-jump-height-max) (meters 1.2))
+;;       (set! (-> *TARGET_BOARD-bank* tricky-jump-height-max) (meters 1.2))
+;;       )
+;;     )
+
+  ;; exit stadium race tasks if you portal to one of the other stadium areas
+;;   (cond
+;;     ((and (or (task-closed? "stadium-burning-bush-race-class3-introduction")
+;;               (task-closed? "stadium-burning-bush-race-class3-r-introduction")
+;;               )
+;;           (or (active-level? 'skatea) (active-level? 'stadiumc) (active-level? 'stadiumd)))
+;;       ;; kill class 3 if in jetboard/class2/class1
+;;       (task-node-close! (game-task-node stadium-burning-bush-race-class3-resolution))
+;;       (task-node-close! (game-task-node stadium-burning-bush-race-class3-r-resolution))
+;;       )
+;;     ((and (or (task-closed? "stadium-burning-bush-race-class2-introduction")
+;;               (task-closed? "stadium-burning-bush-race-class2-r-introduction")
+;;               )
+;;           (or (active-level? 'skatea) (active-level? 'stadiumb) (active-level? 'stadiumd)))
+;;       ;; kill class 2 if in jetboard/class3/class1
+;;       (task-node-close! (game-task-node stadium-burning-bush-race-class2-resolution))
+;;       (task-node-close! (game-task-node stadium-burning-bush-race-class2-r-resolution))
+;;       )
+;;     ((and (or (task-closed? "stadium-burning-bush-race-class1-introduction")
+;;               (task-closed? "stadium-burning-bush-race-class1-r-introduction")
+;;               )
+;;           (or (active-level? 'skatea) (active-level? 'stadiumb) (active-level? 'stadiumc)))
+;;       ;; kill class 1 if in jetboard/class3/class2
+;;       (task-node-close! (game-task-node stadium-burning-bush-race-class1-resolution))
+;;       (task-node-close! (game-task-node stadium-burning-bush-race-class1-r-resolution))
+;;       )
+;;     ;; probably only this one below is really needed
+;;     ((and (or (task-closed? "stadium-burning-bush-race-board-introduction")
+;;               )
+;;           (or (active-level? 'stadiumb) (active-level? 'stadiumc) (active-level? 'stadiumd)))
+;;       ;; kill jeboard if in class3/class2/class1
+;;       (task-node-close! (game-task-node stadium-burning-bush-race-board-resolution))
+;;       )
+;;     )
+
+  ;; === sewer(b) ===
+;;   (clear-entity-kill-mask "skill-125") ;; spawn skill-125!!
+  
+  ;; make orb follow grunt/mine
+;;   (skill-follow-min-y "sewer-skill-ghost-28" "grunt-203" (meters -66.5))
+;;   (skill-follow-y-offset "sewer-skill-55" "sew-mine-b-69" (meters 0.7))
+
+  ;; dev stuff
+  (when (and (cpad-pressed? 0 select) (not (cpad-hold? 0 l3)) (not (paused?)) (not (movie?)))
+    ;; collision renderer, either debug or toggle
+    (when (or *debug-segment* (-> *mod-settings* collision-renderer-toggle?))
+      (toggleCollisionRenderer)
+      (true! *collision-wireframe*)
+      ;; hideskip nojak
+      (pc-set-collision-mask (pc-collision-mode skiphide) (the int (pc-pat-skip-hack nojak probe)) #t)
+      )
+
+    ;; debug only helper shit
+    (when *debug-segment*
+      ;; disable camera collision/line of sight
+      (if (logtest? (-> *camera* slave-options) 32)
+        (send-event *camera* 'clear-slave-option (cam-slave-options COLLIDE))
+        )
+      (if (logtest? (-> *camera* slave-options) 512)
+        (send-event *camera* 'clear-slave-option (cam-slave-options LINE_OF_SIGHT))
+        )         
+      
+      ;; show bug report level info
+      (true! *display-bug-report*)
+      (when (cpad-hold? 0 start)
+        ;; mark game won and give cheats
+        (task-close! "city-win-resolution")
+        )
+      (logior! (-> *game-info* secrets) (game-secrets endless-dark endless-light invulnerable endless-ammo))
+      )
+    )
+  
+  ;; ensure we turn off collision renderer if you disable the setting
+  (when (and (not *debug-segment*)
+             (not (-> *mod-settings* collision-renderer-toggle?)))
+    (disableCollisionRenderer)
+    )
+
+  ;; mini-bigmap stuff
+  (when (not *progress-process*)
+
+    (cond
+      ((and *show-mini-bigmap*
+            (or ;; timeout 
+                (g-time-elapsed? *mini-bigmap-toggle-time* (seconds 3.0))
+                (and (= (-> *bigmap* bigmap-index) 20)
+                    ;;  (not (= (-> (level-get-target-inside *level*) name) 'consite))
+                    ;;  (not (= (-> (level-get-target-inside *level*) name) 'consiteb))
+                     )
+                ))
+        (dbg-format 0 "disabling drawing ~D~%" (get-current-time))
+        (disable-drawing *bigmap*)
+        (set! *mini-bigmap-toggle-time* (get-current-time))
+        (false! *show-mini-bigmap*)
+        )
+      ((and *show-mini-bigmap*
+            (allow-mini-bigmap?)
+            )
+        (let ((x1 (+ 2048 (* (-> *pc-settings* aspect-ratio-scale) (- 2304 2048)))))
+          (enable-drawing *bigmap*)
+          (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
+                (icon-texture-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
+                )
+            (cond
+              ((and (not (-> *bigmap* loading-flag)) (= (-> *bigmap* bigmap-image status) 'active) (= (-> *bigmap* tpage status) 'active))
+                ;; loaded, draw it
+                ;; (draw *bigmap* 1792 1840 2304 2256)  ;; original "full" screen
+                ;; (draw *bigmap* 1984 1996 2112 2100) ;; middle
+                ;; (draw *bigmap* 1792 1840 1920 1944) ;; top left ish
+                ;; (draw *bigmap* 2176 1840 2304 1944) ;; top right ish
+                ;; (draw *bigmap* 1792 2152 1920 2256) ;; bottom left ish
+                ;; mini-bigmap
+                (draw! *bigmap* ;; bottom right
+                  (- x1 128)
+                  2112
+                  x1  ;; + 128
+                  2216  ;; + 104
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+
+  (none))
+
+(defun give-orba ((tgt-lvl-idx int))
+  (dotimes (s4-2 LEVEL_MAX)
+    (cond
+      ((and (= (-> *level* level s4-2 status) 'active))
+        (let ((lvl-idx (-> *level-load-info-level-id-remap* (-> *level* level s4-2 info index)))
+              (entities (-> *level* level s4-2 entity)))
+          ;; open orbs
+          (dotimes (idx (-> entities length))
+            (let ((entity-link (-> entities data idx)))
+              (when (and (-> entity-link entity) (nonzero? (-> entity-link entity)))
+                (let* ((lvl-idx-override (res-lump-value (-> entity-link entity) 'lvl-idx-override int :default (the-as uint128 -1) :time -1000000000.0))
+                        (final-lvl-idx (if (>= lvl-idx-override 0) lvl-idx-override lvl-idx)))
+                  (when (= final-lvl-idx tgt-lvl-idx)
+                    (when (not (logtest? (-> entity-link status) (entity-perm-status dead)))
+                      (case (-> (the entity-actor (-> entity-link entity)) etype symbol)
+                        (('skill)
+                          (format 0 "picking up ~A~%" (res-lump-struct (-> entity-link entity) 'name string))
+                          (+! (-> *game-info* skill) 1)
+                          (+! (-> *game-info* skill-total) 1)
+                          (logior! (-> entity-link status) (entity-perm-status dead))
+                          )
+                        (('skill-crate 'market-crate 'wascity-market-crate 'crate 'wascity-market-sack-a 'market-sack-a 'market-basket-a 'wascity-market-basket-a 'wascity-market-sack-b 'market-sack-b 'market-basket-b 'wascity-market-basket-b 'urn-a 'urn-b 'urn-c)
+                          (let ((e-info (res-lump-value (-> entity-link entity) 'eco-info uint128 :time -1000000000.0)))
+                            (when (= (the-as uint e-info) 24) ;; holding skill
+                              (format 0 "picking up ~A~%" (res-lump-struct (-> entity-link entity) 'name string))
+                              (+! (-> *game-info* skill) 1)
+                              (+! (-> *game-info* skill-total) 1)
+                              (logior! (-> entity-link status) (entity-perm-status dead bit-4 bit-5 subtask-complete))
+                              (set! (-> entity-link perm task) (game-task complete))
+                              (set! (-> entity-link perm user-uint64) #x102)
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+
+(define *tmp-continue-point* (new 'static 'continue-point
+                             :name "tmp"
+                             :level #f
+                             :trans (new 'static 'vector :w 1.0)
+                             :camera-trans (new 'static 'vector :w 1.0)
+                             :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x4e76 0 -25885))
+                             :camera-rot (new 'static 'array int16 9 #x6fe8 0 #x3e1a -6936 #x7328 #x30d7 -14302 -14299 #x64ae) ;; idk just stole this from existing continue-point
+                             :on-goto #f
+                             :vis-nick #f
+                             :vehicle-type 0
+                             :want-count 10
+                             :want (new 'static 'inline-array level-buffer-state-small 10
+                                    (new 'static 'level-buffer-state-small :name #f :display? #f)
+                                    (new 'static 'level-buffer-state-small :name #f :display? #f)
+                                    (new 'static 'level-buffer-state-small :name #f :display? #f)
+                                    (new 'static 'level-buffer-state-small :name #f :display? #f)
+                                    (new 'static 'level-buffer-state-small :name #f :display? #f)
+                                    (new 'static 'level-buffer-state-small :name #f :display? #f)
+                                    (new 'static 'level-buffer-state-small :name #f :display? #f)
+                                    (new 'static 'level-buffer-state-small :name #f :display? #f)
+                                    (new 'static 'level-buffer-state-small :name #f :display? #f)
+                                    (new 'static 'level-buffer-state-small :name #f :display? #f))
+                             :want-sound (new 'static 'array symbol 3 #f #f #f))
+  )
+
+(define *practice-spawn-post-init* (the-as (function none) #f))
+(define *last-checkpoint-load-time* (the time-frame #f))
+
+(define *last-real-continue-point* (the-as continue-point #f))
+(defun generic-post-init ()
+  ;; try give vehicle
+  (cond
+    ((nonzero? (-> *tmp-continue-point* vehicle-type))
+      (send-event *target* 'change-mode 'pilot #f (-> *tmp-continue-point* vehicle-type) #t))
+    ((logtest? (-> *tmp-continue-point* flags) (continue-flags flut))
+      (send-event *target* 'change-mode 'flut #f))
+    )
+
+  ;; restore old continue point
+  (when *last-real-continue-point*
+    (set! (-> *game-info* current-continue) *last-real-continue-point*))
+  
+  ;; ;; copy exclusive tasks to re-open
+  ;; (when (nonzero? *tmp-bbush-stored*)
+  ;;   (bbush-task-restart! *tmp-bbush-stored*))
+
+  (none)
+  )
+
+(define-extern speedrun-practice-spawn (function none)) ;; defined at end of this file
+(define-extern speedrun-practice-store-temp-checkpoint (function none)) ;; defined at end of this file
+(define-extern draw-orb-hunt-text (function none))
+(define-extern *auto-saving?* symbol)
+(define-extern *last-auto-save-time* time-frame)
+(defun orb-hunt-update ()
+  (mod-run-each-frame)
+
+  ;; Draw info to the screen
+  (draw-orb-hunt-text)
+
+  (when (-> *mod-settings* pseudo-savestates?)
+    (when (and (or (not *progress-process*) (gone? (-> *progress-process* 0)))
+               (>= (- (-> *display* base-clock frame-counter) (-> *game-info* blackout-time)) (seconds 0.1))
+               )
+      ;; call post-init function
+      (when (and *target* *practice-spawn-post-init*)
+        (*practice-spawn-post-init*)
+        (set! *practice-spawn-post-init* #f)
+        )
+
+      (when (cpad-hold? 0 r3)
+        (cond
+          ((cpad-pressed? 0 up)
+            (format 0 "player tried to load tmp checkpoint~%")
+            (speedrun-practice-spawn)
+            )
+          ((cpad-pressed? 0 down)
+            (format 0 "player tried to save tmp checkpoint~%")
+            (speedrun-practice-store-temp-checkpoint)
+            )
+          )
+        )
+      )
+    )
+  (none)
+  )
+
+
+
+(defun speedrun-practice-temp-checkpoint ()
+  (when (-> *tmp-continue-point* level)
+    (set! (-> *game-info* mode) 'play)
+    (cond
+      ;; (*tmp-flut?* (set! *practice-spawn-post-init* get-on-flutflut))
+      ;; (*tmp-zoomer?* (set! *practice-spawn-post-init* get-on-zoomer))
+      (else (set! *practice-spawn-post-init* generic-post-init))
+      )
+    ;; commented out to prevent malding 
+    ;; (if (cpad-hold? 0 r2)  ;; fully reset game if r2 held too
+    ;;   (initialize! *game-info* 'game (the-as game-save #f) "default")
+    ;;   )
+    (when (not (string= (-> *game-info* current-continue name) "tmp"))
+      (set! *last-real-continue-point* (-> *game-info* current-continue))
+      )
+    (set! (-> *game-info* current-continue) *tmp-continue-point*)
+    (cheats-sound-play #f)
+    (initialize! *game-info* 'dead (the-as game-save #f) (the-as string #f) (the-as resetter-spec #f))
+    ;; (speedrun-reset-common-settings)
+    )
+  (none)
+  )
+
+(defun continue-point-copy! ((dst continue-point) (src continue-point))
+  (set! (-> dst level) (or (-> src level) (-> *last-real-continue-point* level)))
+  (set! (-> dst quat long) (-> src quat long))
+  (set! (-> dst vis-nick) (-> src vis-nick))
+  (dotimes (idx 10)
+    ;; clear levels
+    (set! (-> dst want idx name) #f)
+    (set! (-> dst want idx display?) #f)
+    (when (or (= (-> *level* level idx status) 'active)
+              (= (-> *level* level idx status) 'loaded)
+              (= (-> *level* level idx status) 'loading))
+      ;; (format 0 "adding ~S to tmp checkpoint, display: ~A~%" (-> *level* level idx name) (-> *level* level idx display?))
+      (set! (-> dst want idx name) (-> *level* level idx name))
+      (set! (-> dst want idx display?) (-> *level* level idx display?))
+
+      (when (name= (-> *level* level idx name) (-> dst level))
+        ;; (format 0 "  forcing 'display for ~S since this is our continue point level~%" (-> *level* level idx name))
+        (set! (-> dst want idx display?) 'display)
+        )
+      )
+    )
+  (dotimes (idx 3)
+    (set! (-> dst want-sound idx)  (-> src want-sound idx))
+    )
+  (none)
+  )
+
+(defun camera-rot-copy! ((dst continue-point) (src matrix))
+  (set! (-> dst camera-rot 0) (the int (* 32767.0 (-> src rvec x))))
+  (set! (-> dst camera-rot 1) (the int (* 32767.0 (-> src rvec y))))
+  (set! (-> dst camera-rot 2) (the int (* 32767.0 (-> src rvec z))))
+  (set! (-> dst camera-rot 3) (the int (* 32767.0 (-> src uvec x))))
+  (set! (-> dst camera-rot 4) (the int (* 32767.0 (-> src uvec y))))
+  (set! (-> dst camera-rot 5) (the int (* 32767.0 (-> src uvec z))))
+  (set! (-> dst camera-rot 6) (the int (* 32767.0 (-> src fvec x))))
+  (set! (-> dst camera-rot 7) (the int (* 32767.0 (-> src fvec y))))
+  (set! (-> dst camera-rot 8) (the int (* 32767.0 (-> src fvec z))))
+  (none)
+  )
+
+(defun speedrun-practice-store-temp-checkpoint ()
+  (when (and *target* )
+    (cond
+      ((or (side-mish-active?)
+           (not (progress-allowed?))
+           *auto-saving?*
+           (and *last-auto-save-time* (not (g-time-elapsed? *last-auto-save-time* (seconds 3))))
+           (focus-test? *target* dead hit grabbed)
+           )
+        (sound-play "smack-surface")  
+        )
+      (else
+        (case (-> *target* state)
+          ;; only store temp checkpoint if in one of these states
+          ((target-look-around target-stance target-duck-stance target-wade-stance target-gun-stance target-pilot-stance target-flut-stance target-indax-stance)
+            ;; assume current continue is good enough for the current location
+            (continue-point-copy! *tmp-continue-point* (-> *game-info* current-continue))
+            (vector-copy! (-> *tmp-continue-point* trans) (-> *target* root trans))
+            (set! (-> *tmp-continue-point* quat x) (the int (* 32767.0 (-> *target* root quat x))))
+            (set! (-> *tmp-continue-point* quat y) (the int (* 32767.0 (-> *target* root quat y))))
+            (set! (-> *tmp-continue-point* quat z) (the int (* 32767.0 (-> *target* root quat z))))
+            (set! (-> *tmp-continue-point* quat w) (the int (* 32767.0 (-> *target* root quat w))))
+            (vector-copy! (-> *tmp-continue-point* camera-trans) (-> *camera-combiner* trans))
+            (camera-rot-copy! *tmp-continue-point* (-> *camera-combiner* inv-camera-rot))
+
+            (set! (-> *tmp-continue-point* vehicle-type) 0)
+            (when (focus-test? *target* pilot)
+              (set! (-> *tmp-continue-point* vehicle-type) (the-as uint (-> *game-info* current-vehicle)))
+              )
+
+            (cond 
+              ((focus-test? *target* flut)
+                (logior! (-> *tmp-continue-point* flags) (continue-flags flut)))
+              (else
+                (logclear! (-> *tmp-continue-point* flags) (continue-flags flut))))
+
+            ;; some weird bug where current continue has #f or default level?
+            (when (or (not (-> *tmp-continue-point* level))
+                      (= (-> *tmp-continue-point* vis-nick) 'default-level))
+              (let ((lvl (level-get-target-inside *level*)))
+                (dbg-format 0 "current continue has #f level, using inside level ~A~%" lvl)
+                (set! (-> *tmp-continue-point* level) (-> lvl name))
+                (set! (-> *tmp-continue-point* vis-nick) (-> lvl name))
+                )
+              )
+            (cheats-sound-play #t)
+            
+            ;; autosave in debug mode
+            (when (and *debug-segment*
+                       (not *auto-saving?*)
+                       (>= (-> *game-info* auto-save-which) 0)
+                       ;; dont autosave with bad checkpoint
+                       (not (or (name= (-> *game-info* current-continue name) 'tmp)
+                                (name= (-> *game-info* current-continue name) 'default))))
+              (format 0 "autosave on checkpoint debug mode~%")
+              (true! *auto-saving?*)
+              (auto-save-user)
+              )
+            )
+          (else
+            (sound-play "smack-surface")
+            )
+          )
+        )
+      )
+    )
+  (none)
+  )
+
+(defun speedrun-practice-spawn ()
+  (cond
+    ((or (not (progress-allowed?))
+         *auto-saving?*
+         (and *last-auto-save-time* (not (g-time-elapsed? *last-auto-save-time* (seconds 3))))
+         (focus-test? *target* dead hit grabbed)
+         )
+      (sound-play "smack-surface")  
+      )
+    ((not *target*)
+      ;; only respawn from no target when in debug
+      (when *debug-segment*
+        (set! *last-checkpoint-load-time* (get-current-time))
+        ;; reset any previous post-target-init callback
+        (set! *practice-spawn-post-init* #f)
+        (speedrun-practice-temp-checkpoint)
+        )
+      )
+    ((or (not *last-checkpoint-load-time*)
+         (g-time-elapsed? *last-checkpoint-load-time* (seconds 1))
+         )
+      ;; if we havent yet used checkpoint load, or its been more than 1s since last load, OK to load
+      
+      (set! *last-checkpoint-load-time* (get-current-time))
+      ;; reset any previous post-target-init callback
+      (set! *practice-spawn-post-init* #f)
+      (speedrun-practice-temp-checkpoint)
+      )
+    (else
+      (sound-play "smack-surface")
+      )
+    )
+      
+  (none)
+  )
+
+(defun get-active-pat-mode-info ()
+  (case (-> *mod-settings* slip-assist)
+    (((slip-assist-mode normal)) *pat-mode-info*)
+    (((slip-assist-mode no-slip)) *no-slip-pat-mode-info*)
+    (((slip-assist-mode spiderman)) *spiderman-pat-mode-info*)
+    )
+  )

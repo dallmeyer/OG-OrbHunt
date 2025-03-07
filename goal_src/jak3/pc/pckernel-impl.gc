@@ -332,3 +332,58 @@
   )
 
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; mod-settings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; CHANGE THE FILENAME SO YOUR SETTINGS DON'T CONFLICT WITH OTHER MODS' SETTINGS
+(define *mod-settings-filename* "orbhunt-settings.gc")
+
+(defconstant LEVEL_ID_LEN 92)
+
+(defenum slip-assist-mode
+  :type uint8
+  (normal)
+  (no-slip)
+  (spiderman)
+  )
+
+;; Per-save data should be stored here. The overall mod-settings-jak2 has an array of 4 of these
+(deftype mod-save-file (basic)
+  (
+    ;; add/replace per-save fields here
+    (orb-counts         uint8  LEVEL_ID_LEN)
+    )
+  )
+
+;; ;; Overall settings file for the mod, contains an array of 4 mod-save-files for per-save data
+(deftype mod-settings-jak3 (basic)
+  (
+    (save-data    mod-save-file 4 :inline)
+
+    (orb-autosave?                symbol)
+    (skill-starburst?             symbol)
+    (orb-ghosts?                  symbol)
+    (closest-orb?                 symbol)
+    (orb-map-icons?               symbol)
+    (pseudo-savestates?           symbol)
+    (easy-abah?                   symbol)
+    (collision-renderer-toggle?   symbol)
+    (hover-restriction?           symbol)
+    (slip-assist                  slip-assist-mode)
+    )
+  (:methods
+    (new (symbol type) _type_)
+    (initialize (_type_) _type_)
+    (reset (_type_ symbol) int)
+    (read-from-file (_type_ string) symbol)
+    (commit-to-file (_type_) none)
+    (write-to-file (_type_ string) symbol)
+    (handle-input-settings (_type_ file-stream) object)
+    (handle-output-settings (_type_ file-stream) object)
+    (load-settings (_type_) int)
+    )
+  )
+
+(define *mod-settings* (the mod-settings-jak3 #f))
