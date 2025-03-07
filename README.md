@@ -1,6 +1,6 @@
 # OpenGOAL - The Precursor Orb Hunt
 
-Play via the [opengoal-mod-launcher](https://jakmods.dev)!
+Play via the [JakMods mod list](https://jakmods.dev)!
 
 ## [Jak and Daxter: The Precursor Orb Hunt](README_JAK1.md)
 [<img src="https://raw.githubusercontent.com/dallmeyer/OG-OrbHunt/main/ModImage.png" height="400">](README_JAK1.md)
