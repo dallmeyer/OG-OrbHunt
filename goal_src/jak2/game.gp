@@ -541,7 +541,14 @@
 
 
 (build-custom-level "test-zone")
+;; the DGO file
+(goal-src "levels/test-zone/test-zone-obs.gc" "process-focusable")
 (custom-level-cgo "TSZ.DGO" "test-zone/testzone.gd")
+
+;; generate the art group for a custom actor.
+;; requires a .glb model file in custom_assets/jak1/models/custom_levels
+;; to also generate a collide-mesh, add :gen-mesh #t
+(build-actor "test-actor" :force-run #t :gen-mesh #t)
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; ANIMATIONS

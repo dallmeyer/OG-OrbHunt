@@ -137,6 +137,11 @@
 
 (define format _format)
 
+(define-extern ORB_HUNT_DEBUG? symbol)
+(defmacro dbg-format (&rest args)
+  `(when (and *debug-segment* (cpad-hold? 0 l2) ORB_HUNT_DEBUG?) (format ,@args))
+  )
+
 (deftype vec4s (uint128)
   "Vector of four floats, packed into a 128-bit integer as bitfields.
 This behaves like a value type.
@@ -254,6 +259,18 @@ This is the main vector type."
       )
     )
   #f
+  )
+
+(defmacro as-type (this type)
+  "If this is the specified type, return this cast to that type. Otherwise, return #f."
+  (with-gensyms (obj)
+    `(the ,type (let ((,obj ,this))
+                  (if (type? ,obj ,type)
+                      ,obj
+                      )
+                  )
+          )
+    )
   )
 
 (defun find-parent-method ((typ type) (method-id int))

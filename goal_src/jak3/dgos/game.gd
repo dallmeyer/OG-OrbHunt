@@ -418,6 +418,7 @@
   "visvol-edit.o"
   "collision-editor.o"
   "speech-manager.o"
+  "anim-tester-x.o" ;; added
   "vag-player.o" ;; added
   "default-menu-pc.o" ;; added
   "dir-tpages.go"
@@ -482,7 +483,9 @@
   "shield-sphere.o"
   "entity-debug.o" ;; added
   "orb-placer-h.o"  ;; added
-  "mod-common-functions.o"  ;; added
+  "mod-settings.o" ;; added ;;mod-base-change
+  "mod-common-functions.o" ;; added
+  "mods.o"
   "orb-placer.o"  ;; added
   "mod-custom-code.o"  ;; added
   "mod-debug.o" ;; added 

@@ -354,7 +354,7 @@
    (task-node-commands      (array game-task-node-command))
    (task-node-exclusive     (array uint16))
    (task-counter            uint32)
-   (unknown-arr4            (array uint16))
+   (talker-state            (array uint16))
    (level-opened            uint8          32)
    (total-deaths            int32)
    (continue-deaths         int32)
@@ -415,6 +415,7 @@
    (current-vehicle         vehicle-type-u8)
    (vehicle-turbo-ready     float)
    (percent-complete        float)
+   (skill-per-level         uint8         LEVEL_ID_LEN)
    )
   (:methods
     (initialize! (_type_ symbol game-save string resetter-spec) _type_)

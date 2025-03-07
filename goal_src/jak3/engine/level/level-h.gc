@@ -193,6 +193,7 @@
   (city-borrow-high-priority 19)
   (ocean-all 20)
   (desert 21)
+  (orb-hunt 22)
   )
 ;; ---level-flags
 
@@ -415,7 +416,7 @@
   (:methods
     (deactivate (_type_) _type_)
     (unload! (_type_) _type_)
-    (is-object-visible? (_type_ int) symbol)
+    (is-object-visible? (_type_ int entity) symbol)
     (level-method-12 () none)
     (bsp-name (_type_) symbol)
     (compute-memory-usage! (_type_ symbol) memory-usage-block)
@@ -495,7 +496,7 @@
     (update-vis-volumes (_type_) none)
     (level-group-method-24 (_type_) none)
     (print-volume-sizes (_type_) none)
-    (status-of-level-and-borrows (_type_ symbol symbol) symbol)
+    (level-status? (_type_ symbol symbol) symbol)
     (do-nothing (_type_) none)
     (load-in-progress? (_type_) symbol)
     (is-load-allowed? (_type_ (pointer symbol)) symbol)

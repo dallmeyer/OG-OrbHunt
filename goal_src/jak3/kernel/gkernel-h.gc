@@ -257,7 +257,7 @@
     (deactivate  (_type_) none)
     (init-from-entity! (_type_ entity-actor) object) ;; todo check
     (run-logic? (_type_) symbol)
-    (process-tree-method-13 () none)
+    (entity-info-slot () none)
     )
   :no-runtime-type
   )
@@ -686,8 +686,16 @@
   `(set! ,time (current-time))
   )
 
+(defmacro set-g-time! (time)
+  `(set! ,time (get-current-time))
+  )
+
 (defmacro time-elapsed? (time duration)
   `(>= (- (current-time) ,time) ,duration)
+  )
+  
+(defmacro g-time-elapsed? (time duration)
+  `(>= (- (get-current-time) ,time) ,duration)
   )
 
 (defmacro suspend-for (time &rest body)
