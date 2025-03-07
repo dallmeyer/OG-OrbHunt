@@ -47,331 +47,400 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;; Change #f to #t here to show the input display by default
 (define *show-input-display* #f)
 
-(define *level-load-info-level-id-remap* (new 'static 'boxed-array :type uint8 :length 249 :allocated-length 249
+(define *level-load-info-level-id-remap* (new 'static 'boxed-array :type uint8 :length 400 :allocated-length 400
   0 ;; none
-  0 ;; default -> none (lots of test levels use this index too)
-  0 ;; intro -> none
-  0 ;; demo -> none
-  0 ;; title -> ctysluma
-  53 ;; vinroom -> power station
-  13 ;; drillmid -> drill plat A (first area)
-  14 ;; drill -> drill plat B (on rails/ship area)
-  12 ;; drillb -> drill plat C (titan suit section)
-  0 ;; drillmtn -> none (?)
-  57 ;; sewer -> sewers
-  57 ;; sewerb -> sewers
-  57 ;; sewesc -> sewers
-  57 ;; sewescb -> sewers
-  36 ;; tomba -> center tomb
-  39 ;; tombb -> left tomb
-  40 ;; tombc -> right tomb
-  38 ;; tombd -> entrance?center tomb
-  37 ;; tombe (daxter chase)
-  0 ;; tombext -> none (?)
-  35 ;; tombboss
-  69 ;; under -> underport
-  68 ;; underb -> underport
-  47 ;; palcab
-  50 ;; palshaft
-  49 ;; palboss -> roof
-  49 ;; palroof -> roof
-  0 ;; palout -> none?
-  51 ;; throne 
-  0 ;; lbrnermk -> none
-  0 ;; lashthrn -> none
-  0 ;; lthrnout -> none
-  48 ;; palent
-  20 ;; prison
-  0 ;; ldjakbrn -> none
-  0 ;; lprsncst
-  19 ;; forexita
-  18 ;; forexitb
-  21 ;; forresca
-  22 ;; forrescb
-  15 ;; fordumpa
-  17 ;; fordumpb
-  16 ;; fordumpc
-  9 ;; fordumpd
-  66 ;; strip
-  6 ;; ruins
-  7 ;; sagehut
-  54 ;; atoll
-  54 ;; atollext
-  43 ;; mountain
-  43 ;; mtnext -> mountain
-  27 ;; forest
-  27 ;; forestb
-  44 ;; mincan
-  0 ;; ctywide -> none
-  0 ;; lwidea -> none
-  0 ;; lwideb -> none
-  0 ;; lwidec -> none
-  0 ;; ctykora -> none
-  0 ;; ctyasha -> none
-  33 ;; ctygena
-  32 ;; ctygenb
-  34 ;; ctygenc
-  59 ;; ctysluma
-  58 ;; ctyslumb
-  70 ;; ctyslumc
-  52 ;; ctyport
-  0 ;; ljkdxash
-  23 ;; ctyfarma
-  24 ;; ctyfarmb
-  30 ;; ctyinda
-  4 ;; consite
-  4 ;; consiteb
-  29 ;; ctyindb
-  2 ;; ctymarka
-  1 ;; ctymarkb
-  3 ;; ctypal
-  63 ;; stadium
-  62 ;; stadiumb
-  61 ;; stadiumc
-  60 ;; stadiumd
-  65 ;; skatea
-  64 ;; garage
-  0 ;; stadblmp
-  0 ;; lwidesta
-  0 ;; lerrol
-  0 ;; lkeirift
-  0 ;; lracelit
-  0 ;; lracebb
-  0 ;; lracebf
-  0 ;; lracecb
-  0 ;; lracecf
-  0 ;; lracedb
-  0 ;; lracedf
-  0 ;; lgarcsta
-  0 ;; lsamergd
-  0 ;; lerbrngd
-  0 ;; lsmysbrt
-  0 ;; lashgrd
-  45 ;; onintent
-  0 ;; ltentout
-  0 ;; ltentob
-  0 ;; kiosk
-  46 ;; oracle
-  67 ;; hideout
-  0 ;; ltrntess
-  0 ;; ltrnkrkd
-  0 ;; ltrnysam
-  0 ;; lysamsam
-  0 ;; lyskdcd
-  0 ;; lkiddoge
-  0 ;; lhelldog
-  0 ;; lpackage
-  0 ;; lsack
-  0 ;; lportrun
-  0 ;; lshuttle
-  0 ;; lmeetbrt
-  0 ;; lpower
-  0 ;; lerlchal
-  0 ;; lprtrace
+  0 ;; default-level
+  0 ;; intro
+  0 ;; title
+  42 ;; vinroom
+  0 ;; ljkdxvin
+  0 ;; lvincst
+  40 ;; powergd
+  0 ;; ctywide
+  0 ;; ctywide-ff
+  0 ;; ctywide-ff-kg
+  0 ;; ctywide-ff-mh
+  0 ;; ctywide-kg
+  0 ;; ctywide-mh
+  0 ;; ctywide-mh-kg
+  0 ;; citycast
+  0 ;; gridcst
+  0 ;; ctycara
+  0 ;; ctycarkg
+  0 ;; ctycarb
+  0 ;; ctycarc
+  0 ;; ctypepa
+  0 ;; lpatkcs
+  0 ;; lblowtmh
+  0 ;; lblowtkg
+  0 ;; ctypepb
+  0 ;; lblowcst
+  0 ;; ctypepc
+  0 ;; ctypesa
+  0 ;; ctypesb
+  0 ;; ctypesc
+  0 ;; intpfall
+  23 ;; ctygenb
+  57 ;; ctysluma
+  38 ;; ctyslumb
+  0 ;; slumbset
+  37 ;; ctyslumc
+  41 ;; ctyport
+  0 ;; ctyfarma
+  0 ;; ctyfarmb
+  22 ;; ctyinda
+  21 ;; ctyindb
+  62 ;; stadium
+  0 ;; stadiuma
+  0 ;; lppatrol
+  0 ;; lpattack
+  63 ;; stadiumb
+  0 ;; towera
+  26 ;; towerb
+  0 ;; towerc
+  0 ;; towercst
+  27 ;; ltowera
+  0 ;; ltowcity
+  28 ;; ltowerb
+  1 ;; rubblea
+  2 ;; rubblea2
+  3 ;; rubbleb
+  4 ;; rubblec
+  5 ;; rublcst
   0 ;; lbombbot
+  0 ;; ljinx
+  0 ;; lctypatk
+  0 ;; lctyhijk
+  0 ;; lctypalt
+  0 ;; lctyass
+  0 ;; lctydest
+  0 ;; lctyprot
+  0 ;; lctyblow
+  0 ;; lctysnpr
+  39 ;; onintent
   0 ;; lbbush
-  0 ;; lprotect
-  28 ;; hiphog
-  0 ;; ltess
-  0 ;; lhipout
-  0 ;; lwhack
-  0 ;; lguard
-  0 ;; lcguard
-  0 ;; lerltess
-  25 ;; gungame
-  10 ;; dig1
-  10 ;; dig3a
-  8 ;; dig3b
-  31 ;; caspad
-  71 ;; castle
-  72 ;; casboss
-  0 ;; casext
-  0 ;; cascity
-  55 ;; village1
+  36 ;; hiphog
+  0 ;; ltnjxhip
+  17 ;; gungame
+  0 ;; gungame1
+  0 ;; gungame2
+  0 ;; citylow
+  14 ;; freehq
+  0 ;; freecast
+  0 ;; lfreeout
+  0 ;; mhctycst
+  25 ;; mhcitya
+  24 ;; mhcityb
+  0 ;; lmhcitya
+  0 ;; lmhcityb
+  64 ;; comba
+  65 ;; combb
+  66 ;; combc
+  67 ;; combd
+  68 ;; combe
+  0 ;; combm
+  65 ;; combn
+  0 ;; combx
+  0 ;; raila
+  71 ;; railb
+  72 ;; railb2
+  73 ;; railc
+  74 ;; raild
+  75 ;; raile
+  76 ;; railf
+  70 ;; railx
+  0 ;; lcitysml
+  0 ;; railcst
+  12 ;; minea
+  0 ;; lpeckfly
+  11 ;; mineb
+  10 ;; minec
+  13 ;; mined
+  0 ;; minee
+  0 ;; sewa
+  52 ;; sewb
+  53 ;; sewc
+  54 ;; sewd
+  55 ;; sewe
+  56 ;; sewf
+  48 ;; sewg
+  49 ;; sewh
+  50 ;; sewi
+  51 ;; sewj
+  47 ;; sewk
+  43 ;; sewl
+  44 ;; sewm
+  45 ;; sewn
+  46 ;; sewo
+  0 ;; forestx
+  19 ;; foresta
+  0 ;; lforplnt
+  0 ;; lforring
+  0 ;; lformach
+  20 ;; forestb
+  0 ;; wasintro
   0 ;; introcst
-  0 ;; lcitylow
-  0 ;; lintcstb
-  0 ;; ljakdax
-  41 ;; nest
-  42 ;; nestb
+  0 ;; intpalrf
+  0 ;; inttitle
+  0 ;; wasall
+  0 ;; waswide
+  58 ;; wascitya
+  0 ;; lseemwca
+  59 ;; wascityb
+  0 ;; wascast
+  0 ;; wasseem
+  0 ;; waspgame
+  0 ;; wasdefen
+  0 ;; wcaseem
+  0 ;; wasleapr
+  16 ;; wasdoors
   0 ;; outrocst
-  0 ;; portwall
-  0 ;; loutcstb
-  0 ;; island1
-  0 ;; skatepark
-  26 ;; halfpipe
+  0 ;; outcast3
+  0 ;; loutro
+  0 ;; loutro2
+  0 ;; loutro3
+  60 ;; wasstada
+  78 ;; wasstadb
+  0 ;; wasstadc
+  0 ;; arenacst
+  0 ;; museum
+  0 ;; museum2
+  0 ;; museum3
+  0 ;; museum3b
+  0 ;; museum4
+  0 ;; museum4b
+  0 ;; temp
+  0 ;; ldampeck
+  0 ;; ldmpckgn
+  0 ;; ldamsig
+  0 ;; ldampksm
+  0 ;; lkleever
+  0 ;; lsig
+  0 ;; lsigklv
+  0 ;; lsigjakc
+  0 ;; loninsim
+  0 ;; ljakc
+  0 ;; ljakndax
+  0 ;; lsamos
+  0 ;; ljakcklv
+  0 ;; ljkcdmkl
+  0 ;; ldamklev
+  0 ;; lashelin
+  0 ;; ljak
+  0 ;; ljakklev
+  0 ;; ljaksig
+  0 ;; ljkdmpk
+  0 ;; ljndklev
+  0 ;; ltorn
+  0 ;; lerrol
+  0 ;; ltornsam
+  0 ;; ltornjnx
+  0 ;; ltnfxhip
+  0 ;; lwlandm
+  0 ;; ltrtwhls
+  0 ;; lsnkwhls
+  0 ;; lbiped
+  0 ;; lmech
+  0 ;; lprenme
+  0 ;; lgunnorm
+  0 ;; lgunrnc
+  0 ;; waschase
+  61 ;; waspala
+  0 ;; lwstdpck
+  0 ;; ljkfeet
+  85 ;; desert
+  0 ;; warpcast
+  88 ;; deserta
+  0 ;; desbcst
+  0 ;; deserrol
+  87 ;; desertb
+  93 ;; desertc
+  86 ;; desertd
+  92 ;; deserte
+  89 ;; desertf
+  91 ;; desertg
+  0 ;; ldesgcst
+  90 ;; deserth
+  77 ;; deswalk
+  0 ;; desert-game
+  0 ;; desrace1
+  0 ;; desboss1
+  0 ;; desboss2
+  0 ;; desinter
+  0 ;; destrack
+  0 ;; desrally
+  0 ;; deshover
+  0 ;; deshunt
+  0 ;; desliz
+  0 ;; desresc
+  0 ;; desrescc
+  0 ;; desrescg
+  0 ;; desoasis
+  0 ;; oasiscst
+  0 ;; desjump
+  0 ;; deschase
+  0 ;; desbattl
+  0 ;; lwassig
+  0 ;; lwasbbv
+  0 ;; lnstcst
+  0 ;; lbbring1
+  0 ;; lbbring2
+  0 ;; lbbring3
+  0 ;; lbbring4
+  0 ;; lbbring5
+  0 ;; lbbring6
+  0 ;; lbbring7
+  0 ;; lbbtcha1
+  0 ;; lbbtcha2
+  0 ;; lbbtcha3
+  0 ;; lbbspid
+  0 ;; lbbspirt
+  0 ;; lbbsprt2
+  0 ;; lbbsprt3
+  0 ;; lbbsdrp1
+  0 ;; lbbsdrp2
+  0 ;; lbbsdrp3
+  29 ;; nsta
+  30 ;; nstb
+  0 ;; lnstoba
+  0 ;; lnstobb
+  0 ;; lnstobc
+  32 ;; templex
+  31 ;; templea
+  35 ;; templeb
+  33 ;; templec
+  34 ;; templed
+  0 ;; templee
+  0 ;; hanga
+  0 ;; hangb
+  80 ;; volcanox
+  79 ;; volcanoa
+  0 ;; factorya
+  0 ;; lfactory
+  0 ;; lfaccar
+  15 ;; lfacrm1
+  81 ;; lfacrm2
+  0 ;; lfaccity
+  0 ;; lfacctyb
+  83 ;; factoryb
+  84 ;; factoryc
+  82 ;; factoryd
+  0 ;; lfacout
+  0 ;; warinta
+  9 ;; precura
+  8 ;; precurb
+  7 ;; precurc
+  0 ;; lprecurc
+  6 ;; precurd
+  0 ;; bikearena
+  18 ;; halfpipe
+  0 ;; sndtest
   0 ;; vistest
-  0 ;; woodstest
+  0 ;; bsbs
   0 ;; tobytest
+  0 ;; hermtest
   0 ;; chartest
-  0 ;; dptest
   0 ;; ctyfence
-  53 ;; orbs-city-vinroom
-  33 ;; orbs-city-ctygena
-  32 ;; orbs-city-ctygenb
-  34 ;; orbs-city-ctygenc
-  59 ;; orbs-city-ctysluma (orbs-oc4)
-  58 ;; orbs-city-ctyslumb
-  70 ;; orbs-city-ctyslumc
-  52 ;; orbs-city-ctyport
-  23 ;; orbs-city-ctyfarma
-  24 ;; orbs-city-ctyfarmb
-  30 ;; orbs-city-ctyinda
-  29 ;; orbs-city-ctyindb
-  2 ;; orbs-city-ctymarka
-  1 ;; orbs-city-ctymarkb
-  3 ;; orbs-city-ctypal
-  45 ;; orbs-city-onintent
-  46 ;; orbs-city-oracle
-  67 ;; orbs-city-hideout
-  28 ;; orbs-city-hiphog
-  25 ;; orbs-city-gungame
-  20 ;; orbs-fortress-prison
-  19 ;; orbs-fortress-forexita
-  18 ;; orbs-fortress-forexitb
-  21 ;; orbs-fortress-forresca
-  22 ;; orbs-fortress-forrescb
-  15 ;; orbs-fortress-fordumpa
-  17 ;; orbs-fortress-fordumpb
-  16 ;; orbs-fortress-fordumpc
-  9 ;; orbs-dig-dig1
-  63 ;; orbs-stadium-stadium
-  62 ;; orbs-stadium-stadiumb
-  61 ;; orbs-stadium-stadiumc
-  60 ;; orbs-stadium-stadiumd
-  65 ;; orbs-stadium-skatea
-  64 ;; orbs-stadium-garage
-  47 ;; orbs-palace-palcab
-  50 ;; orbs-palace-palshaft
-  49 ;; orbs-palace-palroof
-  51 ;; orbs-palace-throne
-  48 ;; orbs-palace-palent
-  31 ;; orbs-castle-caspad
-  71 ;; orbs-castle-castle
-  72 ;; orbs-castle-casboss
-  6 ;; orbs-ruins-ruins
-  7 ;; orbs-ruins-sagehut
-  54 ;; orbs-atoll-atoll
-  57 ;; orbs-sewer-sewer ;; sewer/sewerb
-  66 ;; orbs-strip-strip
-  43 ;; orbs-mountain-mountain
-  44 ;; orbs-mountain-mincan
-  27 ;; orbs-forest-forest
-  27 ;; orbs-forest-forestb (removed but index is still there)
-  14 ;; orbs-drill-drill
-  13 ;; orbs-drill-drillmid
-  12 ;; orbs-drill-drillb
-  36 ;; orbs-tomb-tomba
-  39 ;; orbs-tomb-tombb
-  40 ;; orbs-tomb-tombc
-  38 ;; orbs-tomb-tombd
-  37 ;; orbs-tomb-tombe
-  35 ;; orbs-tomb-tombboss
-  10 ;; orbs-dig-dig3a
-  8 ;; orbs-dig-dig3b
-  4 ;; orbs-consite-consite
-  5 ;; orbs-consite-consiteb
-  69 ;; orbs-under-under
-  68 ;; orbs-under-underb
-  41 ;; orbs-nest-nest
-  42 ;; orbs-nest-nestb
-  55 ;; orbs-default-village1
-  26 ;; orbs-default-halfpipe
-  56 ;; orbs-sewer-sewesc ;; sewesc/sewescb
-  11 ;; orbs-drill-ctrlroom
-  0 ;; otit
-
-
-  ;; PS3 levels excluded
-  ;; 0 ;; 4aaron
-  ;; 0 ;; 4pal01
-  ;; 0 ;; andrew01
-  ;; 0 ;; bsbs
-  ;; 0 ;; eitest
-  ;; 0 ;; miketest
-  ;; 0 ;; tatetest
-  ;; 0 ;; teststdc
-  ;; 0 ;; teststdd
-  ;; 0 ;; wasall
-  ;; 0 ;; stadocc
-
-  ;; 0 ;; test-zone ;; out of place
+  0 ;; testisle
+  0 ;; gregtest
+  0 ;; 4amy
   ))
 
 (define *level-id-names* (new 'static 'boxed-array :type string :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   "" ;; 0 (none)
-  "Bazaar (East)" ;; 1
-  "Bazaar (West)" ;; 2
-  "Central Haven (Palace/Tomb)" ;; 3
-  "Construction Site" ;; 4
-  "Construction Site (Entrance)" ;; 5
-  "Dead Town" ;; 6
-  "Dead Town (Hut)" ;; 7
-  "Dig Site (North)" ;; 8
-  "Dig Site (Old)" ;; 9
-  "Dig Site (South)" ;; 10
-  "Drill Platform (Control Room)" ;; 11
-  "Drill Platform (Interior)" ;; 12
-  "Drill Platform (Main)" ;; 13
-  "Drill Platform (Rails)" ;; 14
-  "Fortress (Ammo Dump NE)" ;; 15
-  "Fortress (Ammo Dump SE)" ;; 16
-  "Fortress (Ammo Dump West)" ;; 17
-  "Fortress (Escape North)" ;; 18
-  "Fortress (Escape South)" ;; 19
-  "Fortress (Prison)" ;; 20
-  "Fortress (Rescue East)" ;; 21
-  "Fortress (Rescue West)" ;; 22
-  "Gardens (North)" ;; 23
-  "Gardens (South)" ;; 24
-  "Gun Course" ;; 25
-  "Halfpipe" ;; 26
-  "Haven Forest" ;; 27
-  "Hip Hog Heaven Saloon" ;; 28
-  "Industrial Zone (North)" ;; 29
-  "Industrial Zone (South)" ;; 30
-  "Landing Pad" ;; 31
-  "Main Town (Northeast)" ;; 32
-  "Main Town (Northwest)" ;; 33
-  "Main Town (Southeast)" ;; 34
-  "Mars Tomb (Boss)" ;; 35
-  "Mars Tomb (Center)" ;; 36
-  "Mars Tomb (Daxter Chase)" ;; 37
-  "Mars Tomb (Entrance)" ;; 38
-  "Mars Tomb (Left)" ;; 39
-  "Mars Tomb (Right)" ;; 40
-  "Metal Head Nest (Exterior)" ;; 41
-  "Metal Head Nest (Interior)" ;; 42
-  "Mountain Temple" ;; 43
-  "No Man's Canyon" ;; 44
-  "Onin's Tent" ;; 45
-  "Oracle" ;; 46
-  "Palace (Cables)" ;; 47
-  "Palace (Interior)" ;; 48
-  "Palace (Rooftop)" ;; 49
-  "Palace (Shaft/Lobby)" ;; 50
-  "Palace (Throne)" ;; 51
-  "Port" ;; 52
-  "Power Station" ;; 53
-  "Pumping Station" ;; 54
-  "Sandover Village" ;; 55
-  "Sewers" ;; 56
-  "Sewers (Old)" ;; 57
-  "Slums (Northwest)" ;; 58
-  "Slums (Southeast)" ;; 59
-  "Stadium (Class 1)" ;; 60
-  "Stadium (Class 2)" ;; 61
-  "Stadium (Class 3)" ;; 62
-  "Stadium (Exterior)" ;; 63
-  "Stadium (Garage)" ;; 64
-  "Stadium (JET Board)" ;; 65
-  "Strip Mine" ;; 66
-  "Underground Hideout" ;; 67
-  "Underport (Mech)" ;; 68
-  "Underport (Sig)" ;; 69
-  "Water Slums" ;; 70
-  "Spargus (East)" ;; 71
-  "Spargus (West)" ;; 72
+  "BTR 1"	;; 1
+  "BTR 2"	;; 2
+  "BTR 3"	;; 3
+  "BTR 4"	;; 4
+  "BTR End"	;; 5
+  "Dark Ship (Escape)"	;; 6
+  "Dark Ship (Jak Section)"	;; 7
+  "Dark Ship (Mech Mid)"	;; 8
+  "Dark Ship (Start/Mech End)"	;; 9
+  "Eco Mine (Bomb Train)"	;; 10
+  "Eco Mine (Cave)"	;; 11
+  "Eco Mine (Elevators?)"	;; 12
+  "Eco Mine (Robot Fight)"	;; 13
+  "Freedom HQ"	;; 14
+  "Freedom HQ (Hanger)"	;; 15
+  "Garage"	;; 16
+  "Gun Course"	;; 17
+  "Halfpipe"	;; 18
+  "Haven Forest (North)"	;; 19
+  "Haven Forest (South)"	;; 20
+  "Industrial Zone (North)"	;; 21
+  "Industrial Zone (South)"	;; 22
+  "Main Town Ruins"	;; 23
+  "Metal Head City (North)"	;; 24
+  "Metal Head City (South)"	;; 25
+  "Metal Head Tower"	;; 26
+  "Metal Head Tower (Entrance)"	;; 27
+  "Metal Head Tower (Top)"	;; 28
+  "Metalhead Nest (North)"	;; 29
+  "Metalhead Nest (South)"	;; 30
+  "Monk Temple (Entrance, Circle Room)"	;; 31
+  "Monk Temple (Exterior)"	;; 32
+  "Monk Temple (Jetboard)"	;; 33
+  "Monk Temple (Light Jak Flight)"	;; 34
+  "Monk Temple (Poles, Rotators, Precursor Triangle Room)"	;; 35
+  "Naughty Ottsel"	;; 36
+  "New Haven (North)"	;; 37
+  "New Haven (South)"	;; 38
+  "Onin's Tent"	;; 39
+  "Pac Man"	;; 40
+  "Port"	;; 41
+  "Power Station"	;; 42
+  "Sewers 1.1"	;; 43
+  "Sewers 1.2"	;; 44
+  "Sewers 1.3"	;; 45
+  "Sewers 1.4"	;; 46
+  "Sewers 2.1"	;; 47
+  "Sewers 2.2"	;; 48
+  "Sewers 2.3"	;; 49
+  "Sewers 2.4"	;; 50
+  "Sewers 2.5"	;; 51
+  "Sewers 3.1"	;; 52
+  "Sewers 3.2"	;; 53
+  "Sewers 3.3"	;; 54
+  "Sewers 3.4"	;; 55
+  "Sewers 3.5"	;; 56
+  "Slums"	;; 57
+  "Spargus (East)"	;; 58
+  "Spargus (West)"	;; 59
+  "Spargus Arena"	;; 60
+  "Spargus Palace"	;; 61
+  "Stadium Ruins East"	;; 62
+  "Stadium Ruins West"	;; 63
+  "Subrails 1 Entrance"	;; 64
+  "Subrails 1 Exit"	;; 65
+  "Subrails 1.1"	;; 66
+  "Subrails 1.2"	;; 67
+  "Subrails 1.3"	;; 68
+  "Subrails 1.4"	;; 69
+  "Subrails 2 Exit (Precursor reveal)"	;; 70
+  "Subrails 2.1"	;; 71
+  "Subrails 2.2"	;; 72
+  "Subrails 2.3"	;; 73
+  "Subrails 2.4"	;; 74
+  "Subrails 2.5"	;; 75
+  "Subrails 2.6"	;; 76
+  "Terraformer (Final Boss)"	;; 77
+  "Training Course"	;; 78
+  "Volcano"	;; 79
+  "Volcano (Entrance/Exit)"	;; 80
+  "War Factory (Entrance)"	;; 81
+  "War Factory (Erol Fight)"	;; 82
+  "War Factory (Exterior)"	;; 83
+  "War Factory (Interior)"	;; 84
+  "Wasteland (Caves)"	;; 85
+  "Wasteland (East)"	;; 86
+  "Wasteland (Northeast)"	;; 87
+  "Wasteland (Northwest)"	;; 88
+  "Wasteland (South)"	;; 89
+  "Wasteland (Southeast but further south)"	;; 90
+  "Wasteland (Southeast)"	;; 91
+  "Wasteland (Southwest)"	;; 92
+  "Wasteland (West)"	;; 93
   ))
 
 (define *level-orb-active* (new 'static 'boxed-array :type symbol :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
@@ -379,78 +448,99 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 
 (define *level-orb-total-counts-fixed* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   0 ;; "" ;; 0 (none)
-  34   ;; Bazaar (East)
-  40   ;; Bazaar (West)
-  25   ;; Central Haven (Palace Grounds)
-  112  ;; Construction Site
-  5    ;; Construction Site (Entrance)
-  154  ;; Dead Town
-  8    ;; Dead Town (Hut)
-  36   ;; Dig Site (North)
-  18   ;; Dig Site (Old)
-  46   ;; Dig Site (South)
-  4    ;; Drill Platform (Control Room)
-  30   ;; Drill Platform (Interior)
-  52   ;; Drill Platform (Main)
-  36   ;; Drill Platform (Rails)
-  33   ;; Fortress (Ammo Dump Northeast)
-  19   ;; Fortress (Ammo Dump Southeast)
-  38   ;; Fortress (Ammo Dump West)
-  20   ;; Fortress (Escape North)
-  35   ;; Fortress (Escape South)
-  25   ;; Fortress (Prison)
-  25   ;; Fortress (Rescue East)
-  60   ;; Fortress (Rescue West)
-  29   ;; Gardens (North)
-  30   ;; Gardens (South)
-  47   ;; Gun Course
-  26   ;; Halfpipe
-  98   ;; Haven Forest
-  4    ;; Hip Hog Heaven Saloon
-  49   ;; Industrial Zone (North)
-  38   ;; Industrial Zone (South)
-  115  ;; Landing Pad
-  55   ;; Main Town (Northeast)
-  42   ;; Main Town (Northwest)
-  29   ;; Main Town (Southeast)
-  28   ;; Mars Tomb (Boss)
-  23   ;; Mars Tomb (Center)
-  14   ;; Mars Tomb (Daxter Chase)
-  3    ;; Mars Tomb (Entrance)
-  35   ;; Mars Tomb (Left)
-  40   ;; Mars Tomb (Right)
-  170  ;; Metal Head Nest (Exterior)
-  46   ;; Metal Head Nest (Interior)
-  194  ;; Mountain Temple
-  66   ;; No Man's Canyon
-  6    ;; Onin's Tent
-  2    ;; Oracle
-  19   ;; Palace (Cables)
-  60   ;; Palace (Interior)
-  36   ;; Palace (Rooftop)
-  8    ;; Palace (Shaft/Lobby)
-  8    ;; Palace (Throne)
-  56   ;; Port
-  2    ;; Power Station
-  95   ;; Pumping Station
-  69   ;; Sandover Village
-  16   ;; Sewers
-  99   ;; Sewers (Old)
-  47   ;; Slums (Northwest)
-  32   ;; Slums (Southeast)
-  24   ;; Stadium (Class 1)
-  33   ;; Stadium (Class 2)
-  30   ;; Stadium (Class 3)
-  16   ;; Stadium (Exterior)
-  6    ;; Stadium (Garage)
-  34   ;; Stadium (JET Board)
-  103  ;; Strip Mine
-  4    ;; Underground Hideout
-  47   ;; Underport (Mech)
-  29   ;; Underport (Sig)
-  48   ;; Water Slums
-  143  ;; Weapons Factory (Interior)
-  17   ;; Weapons Factory (Rooftop)
+  0 ;; "BTR 1"	;; 1
+  0 ;; "BTR 2"	;; 2
+  0 ;; "BTR 3"	;; 3
+  0 ;; "BTR 4"	;; 4
+  0 ;; "BTR End"	;; 5
+  0 ;; "Dark Ship (Escape)"	;; 6
+  0 ;; "Dark Ship (Jak Section)"	;; 7
+  0 ;; "Dark Ship (Mech Mid)"	;; 8
+  0 ;; "Dark Ship (Start/Mech End)"	;; 9
+  0 ;; "Eco Mine (Bomb Train)"	;; 10
+  0 ;; "Eco Mine (Cave)"	;; 11
+  0 ;; "Eco Mine (Elevators?)"	;; 12
+  0 ;; "Eco Mine (Robot Fight)"	;; 13
+  0 ;; "Freedom HQ"	;; 14
+  0 ;; "Freedom HQ (Hanger)"	;; 15
+  0 ;; "Garage"	;; 16
+  0 ;; "Gun Course"	;; 17
+  0 ;; "Halfpipe"	;; 18
+  0 ;; "Haven Forest (North)"	;; 19
+  0 ;; "Haven Forest (South)"	;; 20
+  0 ;; "Industrial Zone (North)"	;; 21
+  0 ;; "Industrial Zone (South)"	;; 22
+  0 ;; "Main Town Ruins"	;; 23
+  0 ;; "Metal Head City (North)"	;; 24
+  0 ;; "Metal Head City (South)"	;; 25
+  0 ;; "Metal Head Tower"	;; 26
+  0 ;; "Metal Head Tower (Entrance)"	;; 27
+  0 ;; "Metal Head Tower (Top)"	;; 28
+  0 ;; "Metalhead Nest (North)"	;; 29
+  0 ;; "Metalhead Nest (South)"	;; 30
+  0 ;; "Monk Temple (Entrance, Circle Room)"	;; 31
+  0 ;; "Monk Temple (Exterior)"	;; 32
+  0 ;; "Monk Temple (Jetboard)"	;; 33
+  0 ;; "Monk Temple (Light Jak Flight)"	;; 34
+  0 ;; "Monk Temple (Poles, Rotators, Precursor Triangle Room)"	;; 35
+  0 ;; "Naughty Ottsel"	;; 36
+  0 ;; "New Haven (North)"	;; 37
+  0 ;; "New Haven (South)"	;; 38
+  0 ;; "Onin's Tent"	;; 39
+  0 ;; "Pac Man"	;; 40
+  0 ;; "Port"	;; 41
+  0 ;; "Power Station"	;; 42
+  0 ;; "Sewers 1.1"	;; 43
+  0 ;; "Sewers 1.2"	;; 44
+  0 ;; "Sewers 1.3"	;; 45
+  0 ;; "Sewers 1.4"	;; 46
+  0 ;; "Sewers 2.1"	;; 47
+  0 ;; "Sewers 2.2"	;; 48
+  0 ;; "Sewers 2.3"	;; 49
+  0 ;; "Sewers 2.4"	;; 50
+  0 ;; "Sewers 2.5"	;; 51
+  0 ;; "Sewers 3.1"	;; 52
+  0 ;; "Sewers 3.2"	;; 53
+  0 ;; "Sewers 3.3"	;; 54
+  0 ;; "Sewers 3.4"	;; 55
+  0 ;; "Sewers 3.5"	;; 56
+  0 ;; "Slums"	;; 57
+  27 ;; "Spargus (East)"	;; 58
+  21 ;; "Spargus (West)"	;; 59
+  0 ;; "Spargus Arena"	;; 60
+  0 ;; "Spargus Palace"	;; 61
+  0 ;; "Stadium Ruins East"	;; 62
+  0 ;; "Stadium Ruins West"	;; 63
+  0 ;; "Subrails 1 Entrance"	;; 64
+  0 ;; "Subrails 1 Exit"	;; 65
+  0 ;; "Subrails 1.1"	;; 66
+  0 ;; "Subrails 1.2"	;; 67
+  0 ;; "Subrails 1.3"	;; 68
+  0 ;; "Subrails 1.4"	;; 69
+  0 ;; "Subrails 2 Exit (Precursor reveal)"	;; 70
+  0 ;; "Subrails 2.1"	;; 71
+  0 ;; "Subrails 2.2"	;; 72
+  0 ;; "Subrails 2.3"	;; 73
+  0 ;; "Subrails 2.4"	;; 74
+  0 ;; "Subrails 2.5"	;; 75
+  0 ;; "Subrails 2.6"	;; 76
+  0 ;; "Terraformer (Final Boss)"	;; 77
+  0 ;; "Training Course"	;; 78
+  0 ;; "Volcano"	;; 79
+  0 ;; "Volcano (Entrance/Exit)"	;; 80
+  0 ;; "War Factory (Entrance)"	;; 81
+  0 ;; "War Factory (Erol Fight)"	;; 82
+  0 ;; "War Factory (Exterior)"	;; 83
+  0 ;; "War Factory (Interior)"	;; 84
+  0 ;; "Wasteland (Caves)"	;; 85
+  0 ;; "Wasteland (East)"	;; 86
+  0 ;; "Wasteland (Northeast)"	;; 87
+  0 ;; "Wasteland (Northwest)"	;; 88
+  0 ;; "Wasteland (South)"	;; 89
+  0 ;; "Wasteland (Southeast but further south)"	;; 90
+  0 ;; "Wasteland (Southeast)"	;; 91
+  0 ;; "Wasteland (Southwest)"	;; 92
+  0 ;; "Wasteland (West)"	;; 93
   ))
 
 (define *total-orbs* 0)

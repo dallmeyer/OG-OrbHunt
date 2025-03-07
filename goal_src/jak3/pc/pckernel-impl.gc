@@ -340,7 +340,7 @@
 ;; CHANGE THE FILENAME SO YOUR SETTINGS DON'T CONFLICT WITH OTHER MODS' SETTINGS
 (define *mod-settings-filename* "orbhunt-settings.gc")
 
-(defconstant LEVEL_ID_LEN 92)
+(defconstant LEVEL_ID_LEN 94)
 
 (defenum slip-assist-mode
   :type uint8

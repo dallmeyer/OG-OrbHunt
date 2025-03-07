@@ -320,7 +320,8 @@
                         (case (-> (the entity-actor (-> entity-link entity)) etype symbol)
                           (('skill)
                             ;; only consider final-lvl-idx active if not overridden from some other level
-                            (if (< lvl-idx-override 0)
+                            (when (< lvl-idx-override 0)
+                              (dbg-format 0 "og idx ~D -> ~D~%" (-> *level* level s4-2 info index) lvl-idx)
                               (true! (-> *level-orb-active* final-lvl-idx))
                               )
                             (when (logtest? (-> entity-link status) (entity-perm-status dead))
@@ -438,6 +439,7 @@
               (when (or (-> *level-orb-active* idx)
                         ;; (and (= idx 45) (-> *level-orb-active* 1)) ;; onintent has orbs in ctymarkb
                         )
+                (dbg-format 0 "lvl-idx ~D is active ~%" idx)
                 (let* ((coll (-> *game-info* skill-per-level idx))
                        (tot (-> *level-orb-total-counts-fixed* idx))
                        (color-str
