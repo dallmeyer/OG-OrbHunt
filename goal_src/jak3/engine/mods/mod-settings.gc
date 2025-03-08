@@ -38,7 +38,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define ORB_HUNT_DEBUG? #f) ;; when #t, hold L2 for extra debug prints
-(define startingDebugContinuePoint "ctyslumb-burning-bush")
+(define startingDebugContinuePoint "game-start")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -162,7 +162,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   53 ;; sewc
   54 ;; sewd
   55 ;; sewe
-  56 ;; sewf
+  47 ;; sewf  ;; NOT 56, use same level
   48 ;; sewg
   49 ;; sewh
   50 ;; sewi
@@ -345,7 +345,97 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   0 ;; gregtest
   0 ;; 4amy
 
-  58	;; orbs-o00 wascitya
+  1	;; orbs-rubblea
+  2	;; orbs-rubblea2
+  3	;; orbs-rubbleb
+  4	;; orbs-rubblec
+  5	;; orbs-rublcst
+  6	;; orbs-precurd
+  7	;; orbs-precurc
+  8	;; orbs-precurb
+  9	;; orbs-precura
+  10	;; orbs-minec
+  11	;; orbs-mineb
+  12	;; orbs-minea
+  13	;; orbs-mined
+  14	;; orbs-freehq
+  15	;; orbs-lfacrm1
+  16	;; orbs-wasdoors
+  17	;; orbs-gungame
+  18	;; orbs-halfpipe
+  19	;; orbs-foresta
+  20	;; orbs-forestb
+  21	;; orbs-ctyindb
+  22	;; orbs-ctyinda
+  23	;; orbs-ctygenb
+  24	;; orbs-mhcityb
+  25	;; orbs-mhcitya
+  26	;; orbs-towerb
+  27	;; orbs-ltowera
+  28	;; orbs-ltowerb
+  29	;; orbs-nsta
+  30	;; orbs-nstb
+  31	;; orbs-templea
+  32	;; orbs-templex
+  33	;; orbs-templec
+  34	;; orbs-templed
+  35	;; orbs-templeb
+  36	;; orbs-hiphog
+  37	;; orbs-ctyslumc
+  38	;; orbs-ctyslumb
+  40	;; orbs-powergd
+  41	;; orbs-ctyport
+  42	;; orbs-vinroom
+  43	;; orbs-sewl
+  44	;; orbs-sewm
+  45	;; orbs-sewn
+  46	;; orbs-sewo
+  47	;; orbs-sewksewf
+  48	;; orbs-sewg
+  49	;; orbs-sewh
+  50	;; orbs-sewi
+  51	;; orbs-sewj
+  52	;; orbs-sewb
+  53	;; orbs-sewc
+  54	;; orbs-sewd
+  55	;; orbs-sewe
+  57	;; orbs-ctysluma
+  58	;; orbs-wascitya
+  59	;; orbs-wascityb
+  60	;; orbs-wasstada
+  61	;; orbs-waspala
+  62	;; orbs-stadium
+  63	;; orbs-stadiumb
+  64	;; orbs-comba
+  65	;; orbs-combn
+  66	;; orbs-combb
+  67	;; orbs-combc
+  68	;; orbs-combd
+  69	;; orbs-combe
+  70	;; orbs-railx
+  71	;; orbs-railb
+  72	;; orbs-railb2
+  73	;; orbs-railc
+  74	;; orbs-raild
+  75	;; orbs-raile
+  76	;; orbs-railf
+  77	;; orbs-deswalk
+  78	;; orbs-wasstadb
+  79	;; orbs-volcanoa
+  80	;; orbs-volcanox
+  81	;; orbs-lfacrm2
+  82	;; orbs-factoryd
+  83	;; orbs-factoryb
+  84	;; orbs-factoryc
+  85	;; orbs-desert
+  86	;; orbs-desertd
+  87	;; orbs-desertb
+  88	;; orbs-deserta
+  89	;; orbs-desertf
+  90	;; orbs-deserth
+  91	;; orbs-desertg
+  92	;; orbs-deserte
+  93	;; orbs-desertc
   ))
 
 (define *level-id-names* (new 'static 'boxed-array :type string :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
@@ -396,7 +486,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Sewers 1.2"	;; 44
   "Sewers 1.3"	;; 45
   "Sewers 1.4"	;; 46
-  "Sewers 2.1"	;; 47
+  "Sewers 2.1 / 3.5"	;; 47
   "Sewers 2.2"	;; 48
   "Sewers 2.3"	;; 49
   "Sewers 2.4"	;; 50
@@ -405,7 +495,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Sewers 3.2"	;; 53
   "Sewers 3.3"	;; 54
   "Sewers 3.4"	;; 55
-  "Sewers 3.5"	;; 56
+  "" ;; "Sewers 3.5"	;; 56
   "Slums"	;; 57
   "Spargus (East)"	;; 58
   "Spargus (West)"	;; 59
@@ -439,7 +529,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Wasteland (Northeast)"	;; 87
   "Wasteland (Northwest)"	;; 88
   "Wasteland (South)"	;; 89
-  "Wasteland (Southeast but further south)"	;; 90
+  "Wasteland (Southeast, further South)"	;; 90
   "Wasteland (Southeast)"	;; 91
   "Wasteland (Southwest)"	;; 92
   "Wasteland (West)"	;; 93

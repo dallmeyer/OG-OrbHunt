@@ -406,6 +406,7 @@
   (none)
   )
 
+(define-extern startingDebugContinuePoint string)
 (defmethod initialize! ((this game-info) (mode symbol) (arg2 game-save) (continue-name string) (reset-spec resetter-spec))
   (local-vars
     (sv-96 process)
@@ -492,7 +493,7 @@
           "title-start"
           )
          ((and *debug-segment* (= mode 'boot))
-          "wascity-start"
+          startingDebugContinuePoint ;; "wascity-start"
           )
          (else
            "title-start"
