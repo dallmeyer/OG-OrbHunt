@@ -227,11 +227,13 @@
   (none))
 
 (defun increment-skill-per-level ((ent entity-actor))
-  (let* ((lvl-idx (-> *level-load-info-level-id-remap* (-> ent extra level info index)))
-         (lvl-idx-override (res-lump-value ent 'lvl-idx-override int :default (the-as uint128 -1) :time -1000000000.0))
-         (final-lvl-idx (if (>= lvl-idx-override 0) lvl-idx-override lvl-idx)))
-    (+! (-> *game-info* skill-per-level final-lvl-idx) 1))
-  (true! *orb-count-updated?*)
+  (when ent
+    (let* ((lvl-idx (-> *level-load-info-level-id-remap* (-> ent extra level info index)))
+          (lvl-idx-override (res-lump-value ent 'lvl-idx-override int :default (the-as uint128 -1) :time -1000000000.0))
+          (final-lvl-idx (if (>= lvl-idx-override 0) lvl-idx-override lvl-idx)))
+      (+! (-> *game-info* skill-per-level final-lvl-idx) 1))
+    (true! *orb-count-updated?*)
+    )
   (none))
 
 (defun-extern hover-need-to-cooldown? symbol)
@@ -571,14 +573,42 @@
     ;; ====== ORBS / FORTRESS ======
     ;; === prison (first 2 rooms) ===
     ;; (('skill-49) (set-vector-meters! (-> arg0 extra trans)  472.0 8.55 103.1)) ;; behind/under chair at start
+    ;; ====== ORBS / WASCITYA (spargus east) =======
+    (('skill-153) (set-vector-meters! (-> arg0 extra trans) 2190.15  52.7  -274.97 )) ;; on rooftop between wascityb/wasstada, jump from awning trampoline behind invis wall and up
+    (('skill-215) (set-vector-meters! (-> arg0 extra trans) 2268.1621 35.1424 -327.1119)) ;; behind support beam against rock wall on rooftop left of wasstada entrance
+    (('skill-152) (set-vector-meters! (-> arg0 extra trans) 2155.9523 51.5318 -168.5149)) ;; rooftop above torch on wall opposite wasstada towards wascityb, leaper shenanigans
+    (('skill-204) (set-vector-meters! (-> arg0 extra trans) 2109.06  57.91  -197.50 )) ;; rooftop along wall opposite wasstada towards wascityb, leaper shenanigans from ^
+    (('skill-197) (set-vector-meters! (-> arg0 extra trans) 2181.2036 56.3234 -127.9972)) ;; above window shade on rooftop up from ^^
+    (('skill-199) (set-vector-meters! (-> arg0 extra trans) 2456.1828  52.0929  -261.5411)) ;; above torch on rooftop right of wasstada, leaper shenanigans hint
+    (('skill-191) (set-vector-meters! (-> arg0 extra trans) 2512.52  32.87  -264.13)) ;; in NE corner, jak kinda gets stuck here lol
+    (('skill-193) (set-vector-meters! (-> arg0 extra trans) 2293.248  51.0  10.648)) ;; on rooftop up from leaper proxy
+    (('skill-196) (set-vector-meters! (-> arg0 extra trans) 2521.0671  64.7488  -60.2245)) ;; way up in corner, leaper ground pound climb
+    (('skill-198) (set-vector-meters! (-> arg0 extra trans) 2265.53  55.60  124.97 )) ;; archway above door to garage, leaper jumps from right side is ez
+    (('skill-194) (set-vector-meters! (-> arg0 extra trans) 2185.9807  50.6666  -0.8634)) ;; up in corner/rooftop above trampoline, leaper ground pound climb hint
+    (('skill-200) (set-vector-meters! (-> arg0 extra trans) 2429.9228  49.9902  29.2615)) ;; rooftop connected to one from leaper proxy, think u can also gp climb right to here
+    ;; (('skill-192) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-195) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-190) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-151) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-201) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-202) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-203) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-150) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-140) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-149) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('wascity-market-basket-a-24) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('urn-c-5) (set-vector! (-> arg0 quat) 0.0 0.0 0.0 1.0) (set-vector-meters! (-> arg0 extra trans) 2318.19  57.79  84.75)) ;; way up / around on flut proxy roof, towards garage
+    (('wascity-market-basket-b-17) (set-vector-meters! (-> arg0 extra trans) 2179.71  42.93  -58.65 )) ;; rooftop on right side towards garage, leaper shenanigans from further down
+    (('wascity-market-sack-b-40) (set-vector-meters! (-> arg0 extra trans) 2429.66  51.29  -271.22)) ;; rooftop on right side of wasstada, around corner from vanilla (leaper shenanigans over invis wall, skill-199 hint)
+    ;; (('wascity-market-crate-59) (set-vector-meters! (-> arg0 extra trans) )) ;; 
 
     ;; ====== BURNING BUSH / ORB HUNT ======
     ;; === ctygena (canals near farm) ===
-    (('burning-bush-16) ;; orbhunt - 
-     (set-vector-meters! (-> arg0 extra trans) -382.6  23.40 -279.4) ;; awning near first turn from farm
-     ;; fix rotation. 2 is 'rotoffset. do this to display: (set-entity! *entity-debug-inspect* (entity-by-name "burning-bush-8"))
-     (set! (-> (the (pointer float) (get-tag-index-data arg0 2))) (degrees 180.0))
-     )
+    ;; (('burning-bush-16) ;; orbhunt - 
+    ;;  (set-vector-meters! (-> arg0 extra trans) -382.6  23.40 -279.4) ;; awning near first turn from farm
+    ;;  ;; fix rotation. 2 is 'rotoffset. do this to display: (set-entity! *entity-debug-inspect* (entity-by-name "burning-bush-8"))
+    ;;  (set! (-> (the (pointer float) (get-tag-index-data arg0 2))) (degrees 180.0))
+    ;;  )
      
     )
   (none))
@@ -714,7 +744,12 @@
 (define *mini-bigmap-toggle-time* (the time-frame #f))
 (define-extern *credits-rolling?* symbol)
 (define-extern start-credits-yolo (function none))
+(define-extern orb-placer-maintenance (function none))
 (defun mod-run-each-frame ()
+  (when *debug-segment*
+    (orb-placer-maintenance)
+    )
+    
   (task-close! "city-win-resolution") ;; NG+ or something
 ;;   (task-close! "city-oracle-level3-training") ;; close oracle stuff
 ;;   (logior! (-> *game-info* features) (game-feature board darkjak darkjak-bomb0 darkjak-bomb1 darkjak-invinc darkjak-giant)) ;; give board and dark jak stuff
@@ -977,6 +1012,11 @@
 
   ;; dev stuff
   (when (and (cpad-pressed? 0 select) (not (cpad-hold? 0 l3)) (not (paused?)) (not (movie?)))
+    (when *target*
+      (format 0 "~,,2M,  ~,,2M,  ~,,2M ~%" (-> *target* root trans x) (-> *target* root trans y) (-> *target* root trans z))
+      (format 0 "~,,2M  ~,,2M  ~,,2M ~%" (-> *target* root trans x) (-> *target* root trans y) (-> *target* root trans z))
+      )
+
     ;; collision renderer, either debug or toggle
     (when (or *debug-segment* (-> *mod-settings* collision-renderer-toggle?))
       (toggleCollisionRenderer)

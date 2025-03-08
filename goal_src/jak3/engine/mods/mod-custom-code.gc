@@ -22,9 +22,6 @@ an orb |#
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun runs-every-frame ()
-  (when *debug-segment*
-    (orb-placer-maintenance)
-    )
 
   (none)
   )

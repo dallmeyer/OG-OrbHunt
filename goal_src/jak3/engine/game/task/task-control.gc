@@ -223,7 +223,8 @@
                          (set! (-> (the-as level-load-info v1-1) borrow alias) a0-11)
                          )
                         (else
-                          (set! (-> (the-as level-load-info v1-1) borrow borrow-info (/ (the-as int s5-0) 8)) a0-11)
+                          ;; orb hunt - TODO figure out if this broke anything lol
+                          ;; (set! (-> (the-as level-load-info v1-1) borrow borrow-info (/ (the-as int s5-0) 8)) a0-11)
                           )
                         )
                       )

@@ -500,6 +500,14 @@
          )
        #f
        )
+     (when *debug-segment*
+      (set! (-> *mod-settings* orb-ghosts?) #t)
+      (set! (-> *mod-settings* closest-orb?) #t)
+      (set! (-> *mod-settings* orb-map-icons?) #t)
+      (set! (-> *mod-settings* pseudo-savestates?) #t)
+      ;; (set! (-> *mod-settings* easy-abah?) #f)
+      (set! (-> *mod-settings* hover-restriction?) #t)
+      )
      (set! mode 'game)
      (set! (-> this auto-save-count) 0)
      (set! (-> *setting-control* user-default auto-save) #f)

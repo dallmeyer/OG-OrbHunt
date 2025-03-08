@@ -344,6 +344,8 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   0 ;; testisle
   0 ;; gregtest
   0 ;; 4amy
+
+  58	;; orbs-o00 wascitya
   ))
 
 (define *level-id-names* (new 'static 'boxed-array :type string :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN

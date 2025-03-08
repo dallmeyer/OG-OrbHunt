@@ -811,13 +811,13 @@
 
   (set! (-> obj orb-autosave?) #t)
   (set! (-> obj skill-starburst?) #f)
-  (set! (-> obj orb-ghosts?) #f)
+  (set! (-> obj orb-ghosts?) #t)
   (set! (-> obj closest-orb?) #f)
   (set! (-> obj orb-map-icons?) #f)
   (set! (-> obj pseudo-savestates?) #f)
   (set! (-> obj easy-abah?) #f)
   (set! (-> obj collision-renderer-toggle?) #f)
-  (set! (-> obj hover-restriction?) #f)
+  (set! (-> obj hover-restriction?) #t)
   (set! (-> obj slip-assist) (slip-assist-mode normal))
 
   0)

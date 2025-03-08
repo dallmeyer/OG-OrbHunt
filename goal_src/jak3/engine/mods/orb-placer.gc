@@ -151,7 +151,8 @@
   (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
     (let ((orb (the skill (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
       (when orb
-        (format 0 " ~m, ~m, ~m~%" (-> orb base x) (-> orb base y) (-> orb base z))
+        (format 0 " ~2m, ~2m, ~2m~%" (-> orb base x) (-> orb base y) (-> orb base z))
+        (format 0 " ~2m  ~2m  ~2m~%" (-> orb base x) (-> orb base y) (-> orb base z))
         )
       )
     )
@@ -164,7 +165,7 @@
     (let ((orb-handle (-> *orb-placer-orbs* i)))
       (when (and (nonzero? orb-handle) (handle->process orb-handle))
         (let ((orb (the skill (handle->process orb-handle))))
-          (format 0 " ~m, ~m, ~m~%" (-> orb base x) (-> orb base y) (-> orb base z))
+          (format 0 " ~2m, ~2m, ~2m~%" (-> orb base x) (-> orb base y) (-> orb base z))
           )
         )
       )
@@ -180,6 +181,10 @@
     (orb-placer-list-maintenace #f)
 
     (when (and (not (paused?)) *orb-placer-enabled?*)
+      ;; handle disable toggle
+      (when (cpad-pressed? 0 triangle)
+        (not! *orb-placer-enabled?*))
+
       (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
                                         (bucket-id debug-no-zbuf1))
         (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 510 2 0.0 (font-color red) (font-flags right shadow kerning large))))

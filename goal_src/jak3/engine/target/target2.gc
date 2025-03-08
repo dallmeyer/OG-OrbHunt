@@ -251,6 +251,7 @@
     )
   :exit (behavior ()
     (set! (-> self cam-user-mode) 'normal)
+    (set-setting-by-param *setting-control* 'fov #f (* 182.04445 64.0) 0)
     (target-exit)
     (remove-setting! 'mode-name)
     )

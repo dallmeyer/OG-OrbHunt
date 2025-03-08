@@ -406,6 +406,9 @@
 (goal-src "levels/test-zone/test-zone-obs.gc" "process-focusable")
 (custom-level-cgo "TSZ.DGO" "test-zone/testzone.gd")
 
+(build-custom-level "orbs-o00")
+(custom-level-cgo "O00.DGO" "orbs-o00/orbs-o00.gd")
+
 ;; generate the art group for a custom actor.
 ;; requires a .glb model file in custom_assets/jak3/models/custom_levels
 ;; to also generate a collide-mesh, add :gen-mesh #t
