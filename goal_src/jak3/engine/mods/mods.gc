@@ -568,11 +568,6 @@
 
 (defun mod-override-init-position ((obj process-drawable) (arg0 entity-actor))
   (case (-> obj name) :comp name=
-    ;; ====== ORBS / CITY ======
-    ;; none
-    ;; ====== ORBS / FORTRESS ======
-    ;; === prison (first 2 rooms) ===
-    ;; (('skill-49) (set-vector-meters! (-> arg0 extra trans)  472.0 8.55 103.1)) ;; behind/under chair at start
     ;; ====== ORBS / WASCITYA (spargus east) =======
     (('skill-153) (set-vector-meters! (-> arg0 extra trans) 2190.15  52.7  -274.97 )) ;; on rooftop between wascityb/wasstada, jump from awning trampoline behind invis wall and up
     (('skill-215) (set-vector-meters! (-> arg0 extra trans) 2268.1621 35.1424 -327.1119)) ;; behind support beam against rock wall on rooftop left of wasstada entrance
@@ -581,34 +576,47 @@
     (('skill-197) (set-vector-meters! (-> arg0 extra trans) 2181.2036 56.3234 -127.9972)) ;; above window shade on rooftop up from ^^
     (('skill-199) (set-vector-meters! (-> arg0 extra trans) 2456.1828  52.0929  -261.5411)) ;; above torch on rooftop right of wasstada, leaper shenanigans hint
     (('skill-191) (set-vector-meters! (-> arg0 extra trans) 2512.52  32.87  -264.13)) ;; in NE corner, jak kinda gets stuck here lol
-    (('skill-193) (set-vector-meters! (-> arg0 extra trans) 2293.248  51.0  10.648)) ;; on rooftop up from leaper proxy
+    (('skill-193) (set-vector-meters! (-> arg0 extra trans) 2279.86  40.39  -23.81)) ;; on rooftop up from leaper proxy
     (('skill-196) (set-vector-meters! (-> arg0 extra trans) 2521.0671  64.7488  -60.2245)) ;; way up in corner, leaper ground pound climb
     (('skill-198) (set-vector-meters! (-> arg0 extra trans) 2265.53  55.60  124.97 )) ;; archway above door to garage, leaper jumps from right side is ez
     (('skill-194) (set-vector-meters! (-> arg0 extra trans) 2185.9807  50.6666  -0.8634)) ;; up in corner/rooftop above trampoline, leaper ground pound climb hint
     (('skill-200) (set-vector-meters! (-> arg0 extra trans) 2429.9228  49.9902  29.2615)) ;; rooftop connected to one from leaper proxy, think u can also gp climb right to here
-    ;; (('skill-192) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-195) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-190) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-151) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-201) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-202) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-203) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-150) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-140) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-149) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('wascity-market-basket-a-24) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-192) (set-vector-meters! (-> arg0 extra trans) 2488.8442  21.8861  -193.2280)) ;; behind rocks against loose wall, below vanilla orb location
+    (('skill-195) (set-vector-meters! (-> arg0 extra trans) 2271.4248  30.1314  -136.6333)) ;; inside flame of torch in middle
+    (('skill-190) (set-vector-meters! (-> arg0 extra trans) 2540.8210 34.8293 -120.8247)) ;; in corner on east wall
+    (('skill-151) (set-vector-meters! (-> arg0 extra trans) 2056.7946 29.3255 -315.4466)) ;; in crevice of rocks on left wall just before wascityb
+    (('skill-201) (set-vector-meters! (-> arg0 extra trans) 2281.2519 80.8620 -160.0431)) ;; jetboard jump from end of spiral grind
+    (('skill-202) (set-vector-meters! (-> arg0 extra trans) 2348.4277  41.8501  -2.9000)) ;; leaper proxy hint
+    (('skill-203) (set-vector-meters! (-> arg0 extra trans) 2225.1616 33.3377 78.1152)) ;; tight lil corner on right wall before garage
+    (('skill-150) (set-vector-meters! (-> arg0 extra trans) 2355.97  21.23  -337.44 )) ;; crevice just right of wasstada entrance
+    (('skill-140) (set-vector-meters! (-> arg0 extra trans) 2423.1967 49.1520 -154.9888)) ;; up under windowsill at start of grindrail line
+    (('skill-149) (set-vector-meters! (-> arg0 extra trans) 2237.25  53.73  -177.98 )) ;; above lower windmill (l2->extended ff jetboard jump from nearby roof)
+    (('wascity-market-basket-a-24) (set-vector-meters! (-> arg0 extra trans) 2524.96  34.45  -157.65 )) ;; in corner on east wall 
     (('urn-c-5) (set-vector! (-> arg0 quat) 0.0 0.0 0.0 1.0) (set-vector-meters! (-> arg0 extra trans) 2318.19  57.79  84.75)) ;; way up / around on flut proxy roof, towards garage
     (('wascity-market-basket-b-17) (set-vector-meters! (-> arg0 extra trans) 2179.71  42.93  -58.65 )) ;; rooftop on right side towards garage, leaper shenanigans from further down
     (('wascity-market-sack-b-40) (set-vector-meters! (-> arg0 extra trans) 2429.66  51.29  -271.22)) ;; rooftop on right side of wasstada, around corner from vanilla (leaper shenanigans over invis wall, skill-199 hint)
-    ;; (('wascity-market-crate-59) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('wascity-market-crate-59) (set-vector-meters! (-> arg0 extra trans) 2347.09  39.03  -198.77 )) ;; under grindrail on roof
 
     ;; ====== BURNING BUSH / ORB HUNT ======
-    ;; === ctygena (canals near farm) ===
-    ;; (('burning-bush-16) ;; orbhunt - 
-    ;;  (set-vector-meters! (-> arg0 extra trans) -382.6  23.40 -279.4) ;; awning near first turn from farm
-    ;;  ;; fix rotation. 2 is 'rotoffset. do this to display: (set-entity! *entity-debug-inspect* (entity-by-name "burning-bush-8"))
-    ;;  (set! (-> (the (pointer float) (get-tag-index-data arg0 2))) (degrees 180.0))
-    ;;  )
+    ;; === WASCITYA (spargus east) ===
+    (('des-burning-bush-19)
+      (set-vector-meters! (-> arg0 extra trans) 2283.91  44.57  -140.29) ;; 
+      )
+    (('des-burning-bush-20)
+      (set-vector-meters! (-> arg0 extra trans) 2294.16  50.40  9.99) ;; 
+      )
+    (('des-burning-bush-35)
+      (set-vector-meters! (-> arg0 extra trans) 2279.04  21.77  -6.85 ) ;; 
+      )
+    (('des-burning-bush-18)
+      (set-vector-meters! (-> arg0 extra trans) 2305.98  39.81  110.94 ) ;; 
+      )
+    (('des-burning-bush-30)
+      (set-vector-meters! (-> arg0 extra trans) 2235.13  31.04  -183.59 ) ;; 
+      )
+    (('des-burning-bush-21)
+      (set-vector-meters! (-> arg0 extra trans) 2411.80  40.28  -281.46 ) ;; 
+      )
      
     )
   (none))
@@ -1253,6 +1261,7 @@
       )
     (set! (-> *game-info* current-continue) *tmp-continue-point*)
     (cheats-sound-play #f)
+    (format 0 "init! gameinfo~%")
     (initialize! *game-info* 'dead (the-as game-save #f) (the-as string #f) (the-as resetter-spec #f))
     ;; (speedrun-reset-common-settings)
     )
@@ -1260,7 +1269,8 @@
   )
 
 (defun continue-point-copy! ((dst continue-point) (src continue-point))
-  (set! (-> dst level) (or (-> src level) (-> *last-real-continue-point* level)))
+  ;; (set! (-> dst level) (or (-> src level) (-> *last-real-continue-point* level)))
+  (set! (-> dst level) 'level-default) ;; idk but it works
   (set! (-> dst quat long) (-> src quat long))
   (set! (-> dst vis-nick) (-> src vis-nick))
   (dotimes (idx 10)

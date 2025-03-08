@@ -5,7 +5,8 @@
 ;; name in dgo: board-states
 ;; dgos: GAME
 
-(define-extern *target-board-hold-tricks* int)
+(define-extern *target-board-l1-hold-tricks* int)
+(define-extern *target-board-l2-hold-tricks* int)
 
 ;; DECOMP BEGINS
 
@@ -229,7 +230,7 @@
                          )
                     )
            (set! (-> self board unk-float006) f28-1)
-           (+! *target-board-hold-tricks* 1)
+           (+! *target-board-l1-hold-tricks* 1)
            (go
              target-board-tricky
              (-> *TARGET_BOARD-bank* tricky-jump-height-min)
@@ -297,7 +298,7 @@
                          )
                     )
            (set! (-> self board unk-float006) f28-2)
-          ;;  (+! *target-board-hold-tricks* 1)
+           (+! *target-board-l2-hold-tricks* 1)
            (go
              target-board-hold
              (-> *TARGET_BOARD-bank* trickz-jump-height-min)
@@ -321,7 +322,6 @@
                          )
                     )
            (set! (-> self board unk-float005) f30-2)
-          ;;  (+! *target-board-hold-tricks* 1)
            (go
              target-board-hold
              (-> *TARGET_BOARD-bank* trickz-jump-height-min)
@@ -1783,9 +1783,10 @@
     (set! (-> self control dynam gravity-length) 147456.0)
     )
   :exit (behavior ()
-    ;; (when (and (-> self next-state) (!= 'target-board-hold (-> self next-state name)))
-    ;;   (set! *target-board-hold-tricks* 0)
-    ;;   )
+    (when (and (-> self next-state) (!= 'target-board-hold (-> self next-state name)))
+      (set! *target-board-l1-hold-tricks* 0)
+      (set! *target-board-l2-hold-tricks* 0)
+      )
     (set! (-> self board unk-float006) 0.0)
     (set-time! (-> self board hold-exit-time))
     (let ((v1-3 (the-as sound-rpc-set-param (get-sound-buffer-entry))))
@@ -2022,7 +2023,8 @@
     )
   :exit (behavior ()
     (when (and (-> self next-state) (!= 'target-board-tricky (-> self next-state name)))
-      (set! *target-board-hold-tricks* 0)
+      (set! *target-board-l1-hold-tricks* 0)
+      (set! *target-board-l2-hold-tricks* 0)
       )
     (send-event (ppointer->process (-> self sidekick)) 'matrix 'board)
     (set! (-> self board unk-float006) 0.0)
