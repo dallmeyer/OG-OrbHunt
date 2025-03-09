@@ -568,6 +568,12 @@
 
 (defun mod-override-init-position ((obj process-drawable) (arg0 entity-actor))
   (case (-> obj name) :comp name=
+    ;; ====== ORBS / WASSTADA (spargus arena) =======
+    (('skill-211) (set-vector-meters! (-> arg0 extra trans) 2322.89  94.74  -392.67 )) ;; straight up from flag proxy 
+    (('urn-a-25) (set-vector-meters! (-> arg0 extra trans) 2272.74  98.13  -404.08 ) ;; up over invis wall onto awnings clockwise, flag proxy ofc
+      (set-vector! (-> arg0 quat) 0.1503      -0.7040      -0.0343      -0.6931))
+    (('urn-a-27) (set-vector-meters! (-> arg0 extra trans) 2436.15  95.60  -531.34 ) ;; way up on awnings counterclockwise, flag proxy, jetboard
+      (set-vector! (-> arg0 quat) -0.0116      -0.7445      -0.0268       0.6669))
     ;; ====== ORBS / WASCITYA (spargus east) =======
     (('skill-153) (set-vector-meters! (-> arg0 extra trans) 2190.15  52.7  -274.97 )) ;; on rooftop between wascityb/wasstada, jump from awning trampoline behind invis wall and up
     (('skill-215) (set-vector-meters! (-> arg0 extra trans) 2268.1621 35.1424 -327.1119)) ;; behind support beam against rock wall on rooftop left of wasstada entrance

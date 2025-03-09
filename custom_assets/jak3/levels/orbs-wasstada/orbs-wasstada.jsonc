@@ -46,27 +46,57 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [ 2463.23,  88.56,  -478.81 ], // bleachers counterclockwise far end, top level
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2463.23,  88.56,  -478.81  , 10], // bounding sphere
+      "lump": {
+        "name":"wasstada-skill-01"//,
+        // "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  2426.0151, 19.6161, -535.3304], // on tiny bit of collision near lava, counterclockwise
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2426.0151, 19.6161, -535.3304, 10], // bounding sphere
+      "lump": {
+        "name":"wasstada-skill-02"
+      }
+    },
+    {
+      "trans": [ 2288.83,  60.52,  -556.76 ], // on torch on open end, left side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2288.83,  60.52,  -556.76 , 10], // bounding sphere
+      "lump": {
+        "name":"wasstada-skill-03"
+      }
+    },
+    {
+      "trans": [ 2187.83,  33.93,  -502.86 ], // on bottom of bleachers, clockwise far end, lowest level
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2187.83,  33.93,  -502.86 , 10], // bounding sphere
+      "lump": {
+        "name":"wasstada-skill-04"
+      }
+    },
+    {
+      "trans": [  2432.5202, 90.4454, -422.7102], // on awning support, just a bit counterclockwise (flag proxy prob)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2432.5202, 90.4454, -422.7102, 10], // bounding sphere
+      "lump": {
+        "name":"wasstada-skill-05"
+      }
+    }//,
     
     
 

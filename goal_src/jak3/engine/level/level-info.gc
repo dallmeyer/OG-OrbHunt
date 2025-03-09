@@ -10842,8 +10842,8 @@
                    :callback-list '((5 . *wasstada-alpha-texture-anim-array*))
                    :borrow (new 'static 'level-borrow-info
                      :alias #f
-                     :borrow-size (new 'static 'array uint16 5 #x898 #x0 #x0 #x0 #x0)
-                     :borrow-info (new 'static 'array object 5 '(wasstadb display) #f #f #f #f)
+                     :borrow-size (new 'static 'array uint16 5 #x898 #xa #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(wasstadb display) '(orbs-wasstada display) #f #f #f)
                      )
                    :bottom-height (meters 10)
                    :fog-height (meters 80)
