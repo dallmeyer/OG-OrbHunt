@@ -96,7 +96,68 @@
       "lump": {
         "name":"wasstada-skill-05"
       }
+    },
+    {
+      "trans": [ 2308.56,  11.59,  -602.95 ], // around back of big stone pillar near lava - gunvuln, splat, profit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2308.56,  11.59,  -602.95 , 10], // bounding sphere
+      "lump": {
+        "name":"wasstada-skill-06"
+      }
+    },
+    {
+      "trans": [ 2310.47,  13.98,  -395.54 ], // usual's gunvuln spot
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2310.47,  13.98,  -395.54 , 10], // bounding sphere
+      "lump": {
+        "name":"wasstada-skill-07"
+      }
+    },
+    {
+      "trans": [ 2198.51,  95.91,  -506.15  ], // top of awnings clockwise
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2198.51,  95.91,  -506.15  , 10], // bounding sphere
+      "lump": {
+        "name":"wasstada-skill-08"
+      }
+    },
+    {
+      "trans": [ 2239.14,  81.06,  -415.73  ], // bleachers, clockwise a bit, top level
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2239.14,  81.06,  -415.73  , 10], // bounding sphere
+      "lump": {
+        "name":"wasstada-skill-09"
+      }
+    },
+    {
+      "trans": [ 2453.86,  53.83,  -507.22 ], // torch near bleachers, counterclockwise, mid level
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2453.86,  53.83,  -507.22 , 10], // bounding sphere
+      "lump": {
+        "name":"wasstada-skill-10"
+      }
+    },
+    {
+      "trans": [2207.67,  13.26,  -526.23 ], // random non-burn spot on rock near lava, clockwise below end of bleachers (slight hint towards orb in bleachers)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2207.67,  13.26,  -526.23 , 10], // bounding sphere
+      "lump": {
+        "name":"wasstada-skill-11"
+      }
     }//,
+
     
     
 

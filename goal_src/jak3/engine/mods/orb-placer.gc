@@ -180,11 +180,13 @@
   (when *debug-segment*
     (orb-placer-list-maintenace #f)
 
-    (when (and (not (paused?)) *orb-placer-enabled?*)
-      ;; handle disable toggle
+    (when (and (not (paused?)) (or (not *target*) *orb-placer-enabled?*))
+      ;; handle toggle
       (when (cpad-pressed? 0 triangle)
         (not! *orb-placer-enabled?*))
+      )
 
+    (when (and (not (paused?)) *orb-placer-enabled?*)
       (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
                                         (bucket-id debug-no-zbuf1))
         (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 510 2 0.0 (font-color red) (font-flags right shadow kerning large))))

@@ -46,27 +46,37 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [  2378.6196, 48.6402, -445.3172], // on small standpt on side of course near ground pound spot
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2378.6196, 48.6402, -445.3172, 10], // bounding sphere
+      "lump": {
+        "name":"wasstadb-skill-01"
+      }
+    },
+    {
+      "trans": [  2348.34,  41.60,  -458.75], // inside training dummy on small ledge prob nobody notices
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2348.34,  41.60,  -458.75, 10], // bounding sphere
+      "lump": {
+        "name":"wasstadb-skill-02",
+        "alt-actor": "wstd-training-dummy-1"
+      }
+    },
+    {
+      "trans": [  2318.08,  11.37,  -498.78 ], // bottom of support near lava, under platforms
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2318.08,  11.37,  -498.78 , 10], // bounding sphere
+      "lump": {
+        "name":"wasstadb-skill-03"
+      }
+    }//,
     
     
 
