@@ -581,35 +581,36 @@
           )
         (when (and (zero? gp-0) (-> self active?) (zero? (-> self shutoff-delay-time)))
           (set-time! (-> self shutoff-delay-time))
-          (when (string= (-> self name) "rub-elec-gate-1")
-            (if (res-lump-struct (-> self entity) 'camera-name structure)
-                (process-spawn
-                  external-camera-controller
-                  (-> self entity)
-                  1200
-                  #f
-                  :name "external-camera-controller"
-                  :to *entity-pool*
-                  )
-                )
-            (let ((a1-15 (new 'stack-no-clear 'event-message-block)))
-              (set! (-> a1-15 from) (process->ppointer self))
-              (set! (-> a1-15 num-params) 0)
-              (set! (-> a1-15 message) 'camera-cut)
-              (let ((t9-7 send-event-function)
-                    (v1-45 (-> *game-info* sub-task-list (game-task-node palace-ruins-attack-resolution)))
-                    )
-                (t9-7
-                  (handle->process (if (-> v1-45 manager)
-                                       (-> v1-45 manager manager)
-                                       (the-as handle #f)
-                                       )
-                                   )
-                  a1-15
-                  )
-                )
-              )
-            )
+          ;; orbhunt - disable weird camera thing in hubblea2
+          ;; (when (string= (-> self name) "rub-elec-gate-1")
+          ;;   (if (res-lump-struct (-> self entity) 'camera-name structure)
+          ;;       (process-spawn
+          ;;         external-camera-controller
+          ;;         (-> self entity)
+          ;;         1200
+          ;;         #f
+          ;;         :name "external-camera-controller"
+          ;;         :to *entity-pool*
+          ;;         )
+          ;;       )
+          ;;   (let ((a1-15 (new 'stack-no-clear 'event-message-block)))
+          ;;     (set! (-> a1-15 from) (process->ppointer self))
+          ;;     (set! (-> a1-15 num-params) 0)
+          ;;     (set! (-> a1-15 message) 'camera-cut)
+          ;;     (let ((t9-7 send-event-function)
+          ;;           (v1-45 (-> *game-info* sub-task-list (game-task-node palace-ruins-attack-resolution)))
+          ;;           )
+          ;;       (t9-7
+          ;;         (handle->process (if (-> v1-45 manager)
+          ;;                              (-> v1-45 manager manager)
+          ;;                              (the-as handle #f)
+          ;;                              )
+          ;;                          )
+          ;;         a1-15
+          ;;         )
+          ;;       )
+          ;;     )
+          ;;   )
           )
         )
       )

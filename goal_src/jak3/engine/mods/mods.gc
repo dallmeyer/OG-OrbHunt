@@ -574,6 +574,7 @@
       (set-vector! (-> arg0 quat) 0.1503      -0.7040      -0.0343      -0.6931))
     (('urn-a-27) (set-vector-meters! (-> arg0 extra trans) 2436.15  95.60  -531.34 ) ;; way up on awnings counterclockwise, flag proxy, jetboard
       (set-vector! (-> arg0 quat) -0.0116      -0.7445      -0.0268       0.6669))
+    (('urn-a-26) (set-vector-meters! (-> arg0 extra trans) 2278.66  32.01  -471.37 )) ;; healthpack - on training course "island"
     
     ;; ====== WASSTADB (training course) =======
     (('wstd-training-dummy-1) (set-vector-meters! (-> arg0 extra trans) 2348.34  41.00  -458.75 ) ;; on small side ledge probably nobody notices

@@ -4105,7 +4105,11 @@
                   :bigmap-id (bigmap-id rubble)
                   :continues '()
                   :callback-list '((3 . *darkjak-highres-texture-anim-array*))
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #xa #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-rublcst display) #f #f #f #f)
+                     )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)
                   :max-rain 1.0
