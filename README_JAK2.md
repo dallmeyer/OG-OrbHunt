@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/dallmeyer/OG-OrbHunt/main/ModImage2.png" height="400">
 
-Play via the [openGOAL mod-launcher](https://jakmods.dev)!
+Play via the [JakMods mod list](https://jakmods.dev)!
 
 ## Concept
 The core idea is the same as the [Jak 1 Orb Hunt](README_JAK1.md) - it's a collectathon across all the Jak II levels. This time however, it's not just the vanilla collectables that are moved around 😈 Since the Precursor Orbs in Jak II only exist in a handful of levels, and there's only 286(ish) in total, it just wasn't really enough to spread across the entire game. Soooo I added a few Orbs...
