@@ -1332,9 +1332,11 @@
   (set! *hit-ground-hard-mods* a0-90)
   )
 
+(define-extern *last-lightjak-swoop-falling-again-height* float)
 (defstate target-hit-ground-hard (target)
   :event target-standard-event-handler
   :enter (behavior ((arg0 float))
+    (set! *last-lightjak-swoop-falling-again-height* (meters 1000000.0))
     (set! (-> self control last-running-attack-end-time) 0)
     (set! (-> self control last-attack-end-time) 0)
     (set-forward-vel 0.0)

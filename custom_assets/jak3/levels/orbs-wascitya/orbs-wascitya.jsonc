@@ -53,7 +53,7 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
       "lump": {
-        "name":"wascitya-skill-1",
+        "name":"wascitya-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
@@ -64,7 +64,40 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
       "lump": {
-        "name":"wascitya-skill-2"
+        "name":"wascitya-skill-02"
+      }
+    },
+    {
+      "trans": [ 2368.9460, 17.2882, -282.3383], // in cactus outside wasstada
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2368.9460, 17.2882, -282.3383, 10], // bounding sphere
+      "lump": {
+        "name":"wascitya-skill-03",
+        "alt-actor": "wascity-cactus-8"
+      }
+    },
+    {
+      "trans": [ 2390.5595, 15.2575, -101.5452], // in dogat near light eco vent
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2390.5595, 15.2575, -101.5452, 10], // bounding sphere
+      "lump": {
+        "name":"wascitya-skill-04",
+        "alt-actor": "dogat-18"
+      }
+    },
+    {
+      "trans": [ 2275.5957, 31.4207, 11.0294], // in tizard towards garage
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2275.5957, 31.4207, 11.0294, 10], // bounding sphere
+      "lump": {
+        "name":"wascitya-skill-05",
+        "alt-actor": "tizard-5"
       }
     },
     

@@ -2003,7 +2003,8 @@
     (until (ja-done? 0)
       (suspend)
       (ja :num! (seek!))
-      (if (and (cpad-pressed? (-> self control cpad number) x) (time-elapsed? (-> self state-time) (seconds 0.5)))
+      (when (and (cpad-pressed? (-> self control cpad number) x) (time-elapsed? (-> self state-time) (seconds 0.5)))
+          (format 0 "lightjak-swoop -> again 0.003~%")
           (go
             target-lightjak-swoop-again
             (* 0.0033333334 (the float (- (-> self control sliding-start-time) (-> self state-time))))
@@ -2092,10 +2093,11 @@
     (until (ja-done? 0)
       (suspend)
       (ja :num! (seek!))
-      (if (and (cpad-pressed? (-> self control cpad number) x)
+      (when (and (cpad-pressed? (-> self control cpad number) x)
                (time-elapsed? (-> self state-time) (seconds 0.5))
                (and (>= (ja-aframe-num 0) 54.0) 0)
                )
+          (format 0 "lightjak-swoop-again -> again 0.003~%")
           (go
             target-lightjak-swoop-again
             (* 0.0033333334 (the float (- (-> self control sliding-start-time) (-> self state-time))))
@@ -2107,6 +2109,8 @@
   :post target-post
   )
 
+(define *last-lightjak-flight-glitch-time* (the-as time-frame #f))
+(define *last-lightjak-swoop-falling-again-height* (meters 1000000.0))
 (defstate target-lightjak-swoop-falling (target)
   :event target-jump-event-handler
   :enter (behavior ((arg0 symbol))
@@ -2119,7 +2123,7 @@
     )
   :exit (-> target-lightjak-swoop exit)
   :trans (behavior ()
-    (if (and (cpad-pressed? (-> self control cpad number) x)
+    (when (and (cpad-pressed? (-> self control cpad number) x)
              (not (and (< (target-height-above-ground) 8192.0)
                        (or (= (-> self control gspot-pat-surfce mode) (pat-mode ground))
                            (= (-> self control gspot-pat-surfce mode) (pat-mode halfpipe))
@@ -2128,6 +2132,13 @@
                   )
              (= (-> self fact shield-level) 0.0)
              )
+        ;; (format 0 "lightjak-swoop-falling -> again 1.0~%")
+        (when (> (-> self root trans y) *last-lightjak-swoop-falling-again-height*)
+          ;; gained height since last time we came thru here - probably doing light jak flight glitch
+          (set-g-time! *last-lightjak-flight-glitch-time*)
+          )
+        ;; track our height coming thru here
+        (set! *last-lightjak-swoop-falling-again-height* (-> self root trans y))
         (go target-lightjak-swoop-again 1.0)
         )
     (target-falling-trans

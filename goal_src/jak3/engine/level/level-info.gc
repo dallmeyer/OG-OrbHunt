@@ -19551,6 +19551,7 @@
                       :want-count 2
                       :want (new 'static 'inline-array level-buffer-state-small 2
                         (new 'static 'level-buffer-state-small :name 'precura :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'precurb :display? 'display)
                         (new 'static 'level-buffer-state-small :name 'precurc :display? #f)
                         )
                       :want-sound (new 'static 'array symbol 3 'precur1 'precur2 'precur3)

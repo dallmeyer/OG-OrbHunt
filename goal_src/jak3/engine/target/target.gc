@@ -63,9 +63,11 @@
   :post target-no-move-post
   )
 
+(define-extern *last-lightjak-swoop-falling-again-height* float)
 (defstate target-stance (target)
   :event target-standard-event-handler
   :enter (behavior ()
+    (set! *last-lightjak-swoop-falling-again-height* (meters 1000000.0))
     (set! (-> self control mod-surface) *walk-mods*)
     (set-time! (-> self state-time))
     )
@@ -1813,6 +1815,7 @@
   :event target-walk-event-handler
   :enter (behavior ((arg0 symbol))
     (set! (-> self control turn-go-the-long-way) 0.0)
+    (set! *last-lightjak-swoop-falling-again-height* (meters 1000000.0))
     (cond
       ((or (= arg0 'stuck) (focus-test? self indax))
        )

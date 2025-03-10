@@ -237,6 +237,7 @@
   (none))
 
 (defun-extern hover-need-to-cooldown? symbol)
+(defun-extern lightjak-flight-need-to-cooldown? symbol)
 (define *auto-saving?* #f)
 (define *last-auto-save-time* (the time-frame #f))
 (define *last-l3-time* (the time-frame #f))
@@ -293,10 +294,22 @@
           )
 
         (clear *pc-encoded-temp-string*)
-        (when (hover-need-to-cooldown?)
+        (when (or (hover-need-to-cooldown?) (lightjak-flight-need-to-cooldown?))
           ;; show hover cooldown text
           (clear *tmp-orb-hunt-str*)
-          (format *tmp-orb-hunt-str* "Hover cooldown: ~Ds" (/ (- (+ *last-hover-time* (seconds 30)) (get-current-time)) TICKS_PER_SECOND))
+          (cond
+            ((and *last-hover-time* *last-lightjak-flight-glitch-time*)
+              (if (< *last-hover-time* *last-lightjak-flight-glitch-time*)
+                (format *tmp-orb-hunt-str* "Light Jak flight glitch cooldown: ~Ds" (/ (- (+ *last-lightjak-flight-glitch-time* (seconds 30)) (get-current-time)) TICKS_PER_SECOND))
+                (format *tmp-orb-hunt-str* "Hover glitch cooldown: ~Ds" (/ (- (+ *last-hover-time* (seconds 30)) (get-current-time)) TICKS_PER_SECOND))
+                ))
+            (*last-hover-time*
+              (format *tmp-orb-hunt-str* "Hover glitch cooldown: ~Ds" (/ (- (+ *last-hover-time* (seconds 30)) (get-current-time)) TICKS_PER_SECOND))
+              )
+            (else 
+              (format *tmp-orb-hunt-str* "Light Jak flight glitch cooldown: ~Ds" (/ (- (+ *last-lightjak-flight-glitch-time* (seconds 30)) (get-current-time)) TICKS_PER_SECOND))
+              )
+            )
           (pc-encode-utf8-string *tmp-orb-hunt-str* *pc-encoded-temp-string*)
           (set! (-> font-ctx color) (font-color orange))
           (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
@@ -645,9 +658,18 @@
 (defun hover-need-to-cooldown? ()
   ;; need to cooldown if we have a last hover time and it isn't 1m ago
   (if (and (-> *mod-settings* hover-restriction?)
-           *last-hover-time*
-           (not (g-time-elapsed? *last-hover-time* (seconds 30)))
-           )
+           *last-hover-time* 
+           (not (g-time-elapsed? *last-hover-time* (seconds 30))))
+    #t
+    #f
+    )
+  )
+
+(defun lightjak-flight-need-to-cooldown? ()
+  ;; need to cooldown if we have a last hover time and it isn't 1m ago
+  (if (and (-> *mod-settings* hover-restriction?)
+           *last-lightjak-flight-glitch-time*
+           (not (g-time-elapsed? *last-lightjak-flight-glitch-time* (seconds 30))))
     #t
     #f
     )
@@ -682,21 +704,15 @@
         ;;     (return #f)
         ;;     )          
         ;;   )
-        (('wstd-training-dummy)
-          (when (not (name= (-> alt-actor extra process state name) 'die))
-            ;; dummy is intact, prevent pickup/hide
-            (return #f)
-            )
-          (when (and for-pickup? (not (g-time-elapsed? (-> (the process-drawable (-> alt-actor extra process)) state-time) (seconds 0.3))))
-            ;; visible for a bit before allow pickup
-            (return #f)
-            )
-          )
         (else
           (when (not (or (name= (-> alt-actor extra process state name) 'die)
                          (name= (-> alt-actor extra process state name) 'joint-exploder-shatter)
                          ))
             ;; alt-actor is not dead/triggered, prevent pickup/hide
+            (return #f)
+            )
+          (when (and for-pickup? (not (g-time-elapsed? (-> (the process-drawable (-> alt-actor extra process)) state-time) (seconds 0.3))))
+            ;; visible for a bit before allow pickup
             (return #f)
             )
           )
@@ -907,6 +923,9 @@
       (set! *last-hover-time* (the time-frame #f))
       )
     )
+  
+  (when (not (lightjak-flight-need-to-cooldown?))
+    (set! *last-lightjak-flight-glitch-time* (the time-frame #f)))
 
   ;; loading hacks
 ;;   (cond
@@ -1030,8 +1049,9 @@
 ;;   (clear-entity-kill-mask "skill-125") ;; spawn skill-125!!
   
   ;; make orb follow grunt/mine
-;;   (skill-follow-min-y "sewer-skill-ghost-28" "grunt-203" (meters -66.5))
-;;   (skill-follow-y-offset "sewer-skill-55" "sew-mine-b-69" (meters 0.7))
+  ;; (skill-follow-min-y "sewer-skill-ghost-28" "grunt-203" (meters -66.5))
+  (skill-follow-y-offset "wascitya-skill-04" "dogat-18" (meters 0.7))
+  (skill-follow-y-offset "wascitya-skill-05" "tizard-5" (meters 0.7))
 
   ;; dev stuff
   (when (and (cpad-pressed? 0 select) (not (cpad-hold? 0 l3)) (not (paused?)) (not (movie?)))
