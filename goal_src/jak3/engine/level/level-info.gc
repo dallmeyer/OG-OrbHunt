@@ -19538,6 +19538,24 @@
                       :want-sound (new 'static 'array symbol 3 'precur1 'precur2 'precur3)
                       )
                     (new 'static 'continue-point
+                      :name "precurab-end"
+                      :level 'precura
+                      :flags (continue-flags no-auto)
+                      :trans (new 'static 'vector :x (meters -191.8890) :y (meters 534.1389) :z (meters -56.8060) :w 1.0)
+                      :camera-trans (new 'static 'vector :x -823754.75 :y 2221199.8 :z -277565.44 :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x7765 0 -11805))
+                      :camera-rot (new 'static 'array int16 9 -22212 0 #x5e17 -11524 #x7064 -10626 -21151 -15675 -19502)
+                      :on-goto #f
+                      :vis-nick 'precura
+                      :vehicle-type #x1b
+                      :want-count 2
+                      :want (new 'static 'inline-array level-buffer-state-small 2
+                        (new 'static 'level-buffer-state-small :name 'precura :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'precurb :display? 'display)
+                        )
+                      :want-sound (new 'static 'array symbol 3 'precur1 'precur2 'precur3)
+                      )
+                    (new 'static 'continue-point
                       :name "precura-start"
                       :level 'precura
                       :flags (continue-flags no-auto)

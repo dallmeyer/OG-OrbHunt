@@ -956,6 +956,25 @@
 ;;       )
 ;;     )
 
+;; precura/b
+;; open door to precurb (mech section)
+(let ((door (entity-by-name "precura-door-a-2"))
+      )
+  (when door (set! (cdr (res-lump-struct door 'open-test pair)) '((entity-status? "dp-bipedal-109" subtask-complete no-birth) (entity-status? "dp-bipedal-110" subtask-complete no-birth) (entity-status? "dp-bipedal-111" subtask-complete no-birth) (entity-status? "dp-bipedal-176" subtask-complete no-birth) (entity-status? "dp-bipedal-177" subtask-complete no-birth))))
+  )
+;; prevent precurb deload in final room of mech section
+(let ((r54 (region-lookup-by-id 1354))
+      (r58 (region-lookup-by-id 1358))
+      (door (entity-by-name "precur-door-b-3")))
+  (when door 
+    (set! (cdr (res-lump-struct door 'on-inside pair)) '((want-load 'precura 'precurb)))
+    )
+  (when r54 
+    (set! (-> r54 on-enter) '(want-load 'precura 'precurb)))
+  (when r58
+    (set! (-> r58 on-enter) '(want-load 'precura 'precurb)))
+  )
+
   ;; mooon things
 ;;   (cond
 ;;     ((and (pause-allowed?) (= (level-status *level* 'mooon) 'active))

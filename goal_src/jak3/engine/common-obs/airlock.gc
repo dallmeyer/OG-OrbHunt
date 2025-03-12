@@ -339,7 +339,7 @@
                     (persist-with-delay *setting-control* 'pilot (seconds 0.1) 'pilot #f 0.0 0)
                     )
                 (or (and (< f30-0 (-> this open-distance 0))
-                         (or (not (-> this were-behind?)) (< f30-0 20480.0))
+                         (or (type-type? (-> this type) precur-door-b) (not (-> this were-behind?)) (< f30-0 20480.0))
                          (and (or (< 409.6 f30-0)
                                   (begin
                                     (let ((a0-21 (-> this entity)))

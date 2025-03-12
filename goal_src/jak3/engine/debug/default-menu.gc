@@ -6846,7 +6846,7 @@
         (function "rubblec/rublcst"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "rubblec-fma"))))
         (function "precurd"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "precurd-start"))))
         (function "precurc"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "precurc-start"))))
-        (function "precurb"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "precurb-start"))))
+        (function "precurb"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "precurab-end"))))
         (function "precura"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "precura-start"))))
         (function "minec"       #f ,(lambda () (start 'play (get-continue-by-name *game-info* "minec-start"))))
         (function "mineb"       #f ,(lambda () (start 'play (get-continue-by-name *game-info* "mineb-start"))))
