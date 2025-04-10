@@ -46,27 +46,174 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [ -145.66,  216.48,  287.02 ], // green lamp on fake door side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -145.66,  216.48,  287.02 , 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-01"
+        // "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -150.00,  223.31,  284.11 ], // up above fake door from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -150.00,  223.31,  284.11 , 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-02"
+      }
+    },
+    {
+      "trans": [-155.77,  218.73,  274.79  ], // up above fake door from ^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -155.77,  218.73,  274.79  , 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-03"
+      }
+    },
+    {
+      "trans": [  -141.8650, 229.9752, 271.6652], // extended from ^^ (or maybe shitty abah)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -141.8650, 229.9752, 271.6652, 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-04"
+      }
+    },
+    {
+      "trans": [  171.1500, 202.5166, 264.6708], // corner right next to entrance door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  171.1500, 202.5166, 264.6708, 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-05",
+        "bob-scale": ["float", 0.4]
+      }
+    },
+    {
+      "trans": [ 160.75,  214.84,  278.50 ], // green lamp at entrance door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 160.75,  214.84,  278.50 , 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-06"
+      }
+    },
+    {
+      "trans": [ 171.04,  223.59,  264.38 ], // up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  171.04,  223.59,  264.38 , 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-07"
+      }
+    },
+    {
+      "trans": [ -19.88,  203.81,  618.92 ], // lil precur ledge behind warp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -19.88,  203.81,  618.92  , 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-08",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -20.1322, 222.8086, 615.3251], // abah from ^, up between cables behind warp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -20.1322, 222.8086, 615.3251, 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-09"
+      }
+    },
+    {
+      "trans": [15.72,  202.09,  575.80 ], // lol corner just behind warp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 15.72,  202.09,  575.80 , 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-10"
+      }
+    },
+    {
+      "trans": [ 31.0013, 214.8136, 572.2695], // green bulbs around warp gate
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 31.0013, 214.8136, 572.2695, 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-11",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 21.2736, 228.7852, 572.5061], // green bulbs around warp gate, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 21.2736, 228.7852, 572.5061, 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-12"
+      }
+    },
+    {
+      "trans": [ 4.9627, 233.4160, 572.3522], // green bulbs around warp gate
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 4.9627, 233.4160, 572.3522, 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-13"
+      }
+    },
+    {
+      "trans": [ -12.7309, 219.8242, 572.0300], // green bulbs around warp gate
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -12.7309, 219.8242, 572.0300, 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-14"
+      }
+    },
+
+
+    {
+      "trans": [ -132.70,  241.38,  265.75 ], // green bulb above fake door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -132.70,  241.38,  265.75 , 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-hover-01",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [ 146.49,  241.10,  257.73  ], // green bulb above entrance door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 146.49,  241.10,  257.73 , 10], // bounding sphere
+      "lump": {
+        "name":"precurd-skill-hover-02",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    }
     
     
 
