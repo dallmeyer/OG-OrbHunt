@@ -58,11 +58,11 @@
       }
     },
     {
-      "trans": [ 393.23,  41.44,  729.57 ], // up on top corner of half fallen pillar in back, abah around invis wall from ^
+      "trans": [ 393.23,  42.04,  729.57 ], // up on top corner of half fallen pillar in back, abah around invis wall from ^
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 393.23,  41.44,  729.57 , 10], // bounding sphere
+      "bsphere": [ 393.23,  42.04,  729.57 , 10], // bounding sphere
       "lump": {
         "name":"rublcst-skill-02"
       }
@@ -76,7 +76,49 @@
       "lump": {
         "name":"rublcst-skill-03"
       }
+    },
+    {
+      "trans": [ 185.11,  37.49,  805.48 ], // standpoint on rubble near far south wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 185.11,  37.49,  805.48 , 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-04"
+      }
+    },
+    {
+      "trans": [ 152.48,  47.12,  807.13 ], // up from ^ on far south wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  152.48,  47.12,  807.13 , 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-05"
+      }
+    },
+    {
+      "trans": [  -6.40,  29.76,  706.49  ], // behind broken grate on west/south wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -6.40,  29.76,  706.49 , 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-06"
+      }
+    },
+    {
+      "trans": [ -2.76,  53.60,  725.29 ], // up from ^ on west/south wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -2.76,  53.60,  725.29 , 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-07"
+      }
     }//,
+    
+    
     
     
 

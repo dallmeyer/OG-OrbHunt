@@ -997,6 +997,25 @@
   (none)
   )
 
+(defun print-level-bits ()
+  (dotimes (s5-1 11)
+    (let ((s4-51 (-> *level* level s5-1)))
+      (when (!= (-> s4-51 status) 'inactive)
+        (format 0 "~Tlevel ~2D ~16S " s5-1 (-> s4-51 name))
+        (format
+          0
+          "~16S bits #b~18,'0B~%"
+          (if (nonzero? (-> s4-51 info))
+              (level-memory-mode->string (-> s4-51 info memory-mode))
+              )
+          (-> s4-51 memory-mask)
+          )
+        )
+      )
+    )
+  (none)
+  )
+
 (defmethod load-begin ((this level))
   "Start loading data of a level."
   (local-vars
@@ -2429,7 +2448,9 @@
   "Is drawable arg0 visible? Note that this will return #f if the visibility data is not loaded."
   ;; hack to force visibility of stuff moved (rather than update visibility data)
   (case (-> (the entity-actor actor) etype symbol)
-    (('skill 'crate 'skill-crate 'skill-ghost 'burning-bush 'market-crate 'wascity-market-crate 'wascity-market-sack-a 'market-sack-a 'market-basket-a 'wascity-market-basket-a 'wascity-market-sack-b 'market-sack-b 'market-basket-b 'wascity-market-basket-b 'urn-a 'urn-b 'urn-c 'burning-bush 'des-burning-bush)
+    (('skill 'crate 'skill-crate 'skill-ghost
+      'market-crate 'wascity-market-crate 'wascity-market-sack-a 'market-sack-a 'market-basket-a 'wascity-market-basket-a 'wascity-market-sack-b 'market-sack-b 'market-basket-b 'wascity-market-basket-b 'urn-a 'urn-b 'urn-c 
+      'burning-bush 'des-burning-bush 'warp-gate)
      (return #t)))
 
   ;; check the vis bits!

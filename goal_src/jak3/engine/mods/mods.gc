@@ -319,6 +319,7 @@
         (dotimes (idx LEVEL_ID_LEN)
           (false! (-> *level-orb-active* idx))
           (set! (-> *level-orb-collected-counts* idx) 0)
+          (set! (-> *level-orb-total-counts* idx) 0)
           )
 
         (dotimes (s4-2 LEVEL_MAX)
@@ -339,6 +340,7 @@
                               (dbg-format 0 "og idx ~D -> ~D~%" (-> *level* level s4-2 info index) lvl-idx)
                               (true! (-> *level-orb-active* final-lvl-idx))
                               )
+                            (+! (-> *level-orb-total-counts* final-lvl-idx) 1)
                             (when (logtest? (-> entity-link status) (entity-perm-status dead))
                               (+! (-> *level-orb-collected-counts* final-lvl-idx) 1)
                               )
@@ -350,6 +352,7 @@
                                 (if (< lvl-idx-override 0)
                                   (true! (-> *level-orb-active* final-lvl-idx))
                                   )
+                                (+! (-> *level-orb-total-counts* final-lvl-idx) 1)
                                 (when (nonzero? (-> entity-link perm user-int8 1))
                                   (+! (-> *level-orb-collected-counts* final-lvl-idx) 1)
                                   )
@@ -371,24 +374,29 @@
           (when (-> *level-orb-active* lvl-idx)
             ;; (case lvl-idx
             ;;   ((23) ;; "Gardens (North)" ;;  farma
+            ;;     (+! (-> *level-orb-total-counts* lvl-idx) 3)
             ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-8))
             ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
             ;;       )
 
+            ;;     (+! (-> *level-orb-total-counts* lvl-idx) 3)
             ;;     (when (task-complete? *game-info* (game-task city-burning-bush-collection-3))
             ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
             ;;       )
             ;;     )
             ;;   ((24) ;; "Gardens (South)" ;;  farmb
+            ;;     (+! (-> *level-orb-total-counts* lvl-idx) 3)
             ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-5))
             ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
             ;;       )
             ;;     )
             ;;   ((1) ;; "Bazaar (East)" or "Onin's Tent" ;;  ctymarkb
+            ;;     (+! (-> *level-orb-total-counts* lvl-idx) 3)
             ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-7))
             ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
             ;;       )
 
+            ;;     (+! (-> *level-orb-total-counts* lvl-idx) 3)
             ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-6))
             ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
             ;;       )
@@ -456,7 +464,8 @@
                         )
                 (dbg-format 0 "lvl-idx ~D is active ~%" idx)
                 (let* ((coll (-> *game-info* skill-per-level idx))
-                       (tot (-> *level-orb-total-counts-fixed* idx))
+                       (tot (-> *level-orb-total-counts* idx))
+                      ;;  (tot (-> *level-orb-total-counts-fixed* idx))
                        (color-str
                           (cond
                             ((= coll tot) "<COLOR_GREEN>") ;; green if 100%
@@ -679,7 +688,7 @@
   (when (or (not *last-no-hover-zone-time*)
             (g-time-elapsed? *last-no-hover-zone-time* (seconds 5)))
     ;; "no hover zone" dialogue if its been 5s since last one
-    (add-process *gui-control* *target* (gui-channel guard) (gui-action play) "kg007" -50.0 0)
+    (play-sound-file "nohoverzone.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 100.0)))
     ;; remember last time we played this dialogue
     (set-g-time! *last-no-hover-zone-time*)
     )
@@ -975,6 +984,12 @@
     (set! (-> r58 on-enter) '(want-load 'precura 'precurb)))
   )
 
+;; deswalk 
+(let ((r1525 (region-lookup-by-id 1525)))
+  (when r1525
+    (set! (-> r1525 on-enter) '(want-load 'wasall 'desert 'desinter 'desertb 'desertd))) ;; no endlessfall, just swap deswalk out for desertd
+  )
+
   ;; mooon things
 ;;   (cond
 ;;     ((and (pause-allowed?) (= (level-status *level* 'mooon) 'active))
@@ -1103,7 +1118,7 @@
         ;; mark game won and give cheats
         (task-close! "city-win-resolution")
         )
-      (logior! (-> *game-info* secrets) (game-secrets endless-dark endless-light invulnerable endless-ammo))
+      (logior! (-> *game-info* secrets) (game-secrets endless-dark endless-light invulnerable endless-ammo board-fast vehicle-hit-points unlimited-turbos))
       )
     )
   

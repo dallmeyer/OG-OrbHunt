@@ -495,7 +495,14 @@
         (set! (-> this on-close) (the-as pair (car (cdr (cdr (cdr s5-0))))))
         )
       (else
-        (set! (-> this continue) #f)
+        (case-str (-> this name)
+          (("desertb-warp-gate-1") ;; desertb -> deswalk
+            (set! (-> this continue) (get-continue-by-name *game-info* "deswalk-warp"))
+            )
+          (else
+            (set! (-> this continue) #f)
+            )
+          )
         )
       )
     )

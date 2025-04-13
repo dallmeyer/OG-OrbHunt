@@ -76,6 +76,28 @@
       "lump": {
         "name":"wasstadb-skill-03"
       }
+    },
+    {
+      "trans": [   2289.0207, 49.3570, -515.2686 ], // bottom of flagpole in NW corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2289.0207, 49.3570, -515.2686, 10], // bounding sphere
+      "lump": {
+        "name":"wasstadb-skill-04",
+        "pickup-amount": ["float", 2.0]
+      }
+    },
+    {
+      "trans": [   2288.9084, 68.6649, -513.4479], // top of flagpole in NW corner, abah from^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2288.9084, 68.6649, -513.4479, 10], // bounding sphere
+      "lump": {
+        "name":"wasstadb-skill-05",
+        "bob-scale": ["float", -1.0]
+      }
     }//,
     
     
