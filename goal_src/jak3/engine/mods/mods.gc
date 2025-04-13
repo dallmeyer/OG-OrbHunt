@@ -650,6 +650,31 @@
     (('des-burning-bush-21)
       (set-vector-meters! (-> arg0 extra trans) 2411.80  40.28  -281.46 ) ;; 
       )
+
+    ;; ===== WASCITYB (spargus west) ======
+    (('skill-139) (set-vector-meters! (-> arg0 extra trans) 2017.3160 55.1388 -374.2029)) ;; in torch along wall on right side leading to throne room
+    (('skill-133) (set-vector-meters! (-> arg0 extra trans) 2020.5428 79.6620 -374.8247)) ;; abah from wascityb-skill-03 hint from ^ torch
+    (('skill-217) (set-vector-meters! (-> arg0 extra trans) 1977.4611  32.5940  -436.0137)) ;; small crevice just left of elevator to throne room
+    (('skill-220) (set-vector-meters! (-> arg0 extra trans) 1967.62  37.08  -358.46 )) ;; between stoops not far from elevator
+    (('skill-142) (set-vector-meters! (-> arg0 extra trans) 1963.98  58.53  -246.22 )) ;; window awning on path from wascitya, leaper jump
+    (('skill-216) (set-vector-meters! (-> arg0 extra trans) 1946.85  58.9  -242.27 )) ;; opposite side of building from ^, leaper jump
+    (('skill-218) (set-vector-meters! (-> arg0 extra trans) 1909.30  37.71  -244.14 )) ;; crevice along path from wascitya
+    (('skill-219) (set-vector-meters! (-> arg0 extra trans) 1838.0230  27.1001  -426.4093)) ;; corner crevice on eastern wall by beach
+    (('skill-221) (set-vector-meters! (-> arg0 extra trans) 1803.1005  9.5955  -450.0989)) ;; deep crevice in rocks along shore, more east
+    (('skill-137) (set-vector-meters! (-> arg0 extra trans) 1455.23  60.50  -534.49)) ;; coconut on tree western beach (abah from other tree, wascityb-skill-04)
+    (('skill-138) (set-vector-meters! (-> arg0 extra trans) 1412.3383 40.2142 -483.8695)) ;; up under invis wall in crevice on wall near west end of beach
+    (('skill-136) (set-vector-meters! (-> arg0 extra trans) 1506.6127  99.1709  -185.0385)) ;; leaper climb hint 
+    (('skill-141) (set-vector-meters! (-> arg0 extra trans) 1733.9438  80.4723  -177.9469)) ;; crevice along peninsula wall, can also fall in from rooftop above
+    (('wascity-market-crate-20) (set-vector-meters! (-> arg0 extra trans) 1499.68  91.47  -222.95 )) ;; on rooftop kinda west side towards beach, leaper GP climb skill-136
+    (('wascity-market-basket-b-1) (set-vector-meters! (-> arg0 extra trans) 1470.97  70.26  -278.76 )) ;; further along footop from ^
+    (('wascity-market-crate-63) (set-vector-meters! (-> arg0 extra trans) 1494.24  62.48  -225.29 )) ;; crevice along wall, kinda towards west beach
+    (('wascity-market-basket-a-3) (set-vector-meters! (-> arg0 extra trans) 1724.57  98.27  -206.53)) ;; on small stone cylinder next to rooftop, with invis wall around it
+    (('wascity-market-sack-a-3) (set-vector-meters! (-> arg0 extra trans) 1695.40  95.55  -235.37 )) ;; on intended rooftop :O
+    (('wascity-market-basket-a-43) (set-vector-meters! (-> arg0 extra trans) 1726.19  6.86  -449.41 )) ;; on island with vanilla orb, underwater a bit
+    (('wascity-market-basket-a-35) 
+      (set-vector-meters! (-> arg0 extra trans) 1596.44  20.03  -481.41 ) ;; backside of turret cliff
+      (quaternion-set! (-> arg0 quat) -0.0298      -0.6506       0.0735       0.7552)) 
+    (('wascity-market-sack-a-11) (set-vector-meters! (-> arg0 extra trans) 1584.20  34.75  -291.85 )) ;; crevice between stoops, housing island (near beach)
      
     )
   (none))

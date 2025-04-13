@@ -66,6 +66,151 @@
       "lump": {
         "name":"wascityb-skill-02"
       }
+    },
+    {
+      "trans": [  2022.01,  59.11,  -368.67 ], // window awning from torch on wall right side leading to throne room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2022.01,  59.11,  -368.67 , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-skill-03",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  1446.22,  45.12,  -541.99 ], // coconut on tree west beach (boosted/extended/concussor)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1446.22,  45.12,  -541.99 , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-skill-04",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+
+    
+    {
+      "trans": [1878.06,  34.31,  -533.06 ], // eastern edge of beach over invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1878.06,  34.31,  -533.06 , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-01",
+        "pickup-amount": ["float", 3.0] 
+      }
+    },
+    {
+      "trans": [ 1890.7644, 13.0880, -535.4968], // further down from ^, lower crevice
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1890.7644, 13.0880, -535.4968, 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-02",
+        "pickup-amount": ["float", 3.0] 
+      }
+    },
+    {
+      "trans": [1932.6053, -1.42, -548.5115], // very end from ^^, dive
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1932.6053, -1.42, -548.5115, 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-03",
+        "pickup-amount": ["float", 3.0] 
+      }
+    },
+    {
+      "trans": [ 1416.07,  27.93,  -540.70 ], // western edge of beach, over invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1416.07,  27.93,  -540.70 , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-04",
+        "pickup-amount": ["float", 3.0] 
+      }
+    },
+    {
+      "trans": [ 1382.67,  21.77,  -545.84 ], // western edge of beach, over invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1382.67,  21.77,  -545.84 , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-05",
+        "pickup-amount": ["float", 3.0] 
+      }
+    },
+    {
+      "trans": [ 1830.15,  98.25,  -166.82 ], // back rooftop leading towards path to wascitya, over/behind invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1830.15,  98.25,  -166.82 , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-06",
+        "pickup-amount": ["float", 3.0] 
+      }
+    },
+    {
+      "trans": [ 1824.96,  98.25,  -195.69  ], // follow from ^, back rooftop leading towards path to wascitya, over/behind invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1824.96,  98.25,  -195.69 , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-07",
+        "pickup-amount": ["float", 3.0] 
+      }
+    },
+    {
+      "trans": [  1825.48,  88.19,  -218.14 ], // follow from ^, back rooftop leading towards path to wascitya, over/behind invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1825.48,  88.19,  -218.14 , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-08",
+        "pickup-amount": ["float", 3.0] 
+      }
+    },
+    {
+      "trans": [   1832.60,  86.27,  -261.66  ], // follow from ^, chimney on back rooftop leading towards path to wascitya, over/behind invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1832.60,  86.27,  -261.66 , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-09",
+        "pickup-amount": ["float", 3.0] 
+      }
+    },
+    {
+      "trans": [ 1848.86,  58.18,  -367.11 ], // rooftop of wall neat east beach, over/behind invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1848.86,  58.18,  -367.11 , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-10",
+        "pickup-amount": ["float", 3.0] 
+      }
+    },
+    {
+      "trans": [ 1834.21,  58.56,  -434.11 ], // follow from ^, over/behind invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1834.21,  58.56,  -434.11  , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-11",
+        "pickup-amount": ["float", 3.0] 
+      }
     }//,
     
     

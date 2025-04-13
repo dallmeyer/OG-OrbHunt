@@ -9815,7 +9815,11 @@
                        )
                      )
                    :callback-list '()
-                   :borrow #f
+                   :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #xa #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-wascityb display) #f #f #f #f)
+                     )
                    :bottom-height (meters -150)
                    :fog-height (meters 80)
                    :fog-mult 10.0
@@ -10338,8 +10342,8 @@
                    :callback-list '((36 . wasdoors-deactivate) (35 . wasdoors-activate))
                    :borrow (new 'static 'level-borrow-info
                      :alias #f
-                     :borrow-size (new 'static 'array uint16 5 #x4dd #x0 #x0 #x0 #x0)
-                     :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                     :borrow-size (new 'static 'array uint16 5 #x4dd #xa #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 #f '(orbs-wasdoors display) #f #f #f)
                      )
                    :bottom-height (meters -150)
                    :fog-height (meters 80)

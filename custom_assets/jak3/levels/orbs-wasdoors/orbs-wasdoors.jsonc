@@ -46,27 +46,66 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [ 2264.96,  55.60,  140.83 ], // above door back to city
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2264.96,  55.60,  140.83 , 10], // bounding sphere
+      "lump": {
+        "name":"wasdoors-skill-01"
+      }
+    },
+    {
+      "trans": [ 2221.35,  60.52,  148.49 ], // atop gas can ball thing 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2221.35,  60.52,  148.49 , 10], // bounding sphere
+      "lump": {
+        "name":"wasdoors-skill-02"
+      }
+    },
+    {
+      "trans": [  2189.8100, 50.0383, 210.9091], // on stone wall right side of door to desert
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2189.8100, 50.0383, 210.9091, 10], // bounding sphere
+      "lump": {
+        "name":"wasdoors-skill-03"
+      }
+    },
+    {
+      "trans": [   2318.1625, 49.4139, 152.7366], // behind metal support for gas tank on other side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   2318.1625, 49.4139, 152.7366, 10], // bounding sphere
+      "lump": {
+        "name":"wasdoors-skill-04"
+      }
+    },
+    {
+      "trans": [  2307.7551, 51.7339, 219.6560], // in torch left side of door to desert
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2307.7551, 51.7339, 219.6560, 10], // bounding sphere
+      "lump": {
+        "name":"wasdoors-skill-05"
+      }
+    },
+    {
+      "trans": [  2264.59,  77.77,  225.97 ], // way up above door to desert (dune hopper shenanigans)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2264.59,  77.77,  225.97 , 10], // bounding sphere
+      "lump": {
+        "name":"wasdoors-skill-06"
+      }
+    }//,
     
     
 
