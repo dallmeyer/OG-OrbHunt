@@ -89,7 +89,19 @@
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
+    {
+      "trans": [  1656.6596, 121.4460, -200.1462], // boost jump mega extendo ff from higher rail
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1656.6596, 121.4460, -200.1462, 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-skill-05"
+      }
+    },
 
+
+    //  
     
     {
       "trans": [1878.06,  34.31,  -533.06 ], // eastern edge of beach over invis wall
@@ -180,11 +192,11 @@
       }
     },
     {
-      "trans": [   1832.60,  86.27,  -261.66  ], // follow from ^, chimney on back rooftop leading towards path to wascitya, over/behind invis wall
+      "trans": [   1832.60,  86.07,  -261.66  ], // follow from ^, chimney on back rooftop leading towards path to wascitya, over/behind invis wall
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1832.60,  86.27,  -261.66 , 10], // bounding sphere
+      "bsphere": [ 1832.60,  86.07,  -261.66 , 10], // bounding sphere
       "lump": {
         "name":"wascityb-hover-skill-09",
         "pickup-amount": ["float", 3.0] 

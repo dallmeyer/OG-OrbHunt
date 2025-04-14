@@ -116,6 +116,26 @@
       "lump": {
         "name":"rublcst-skill-07"
       }
+    },
+    {
+      "trans": [ 191.50,  12.62,  498.11 ], // small tile of ground collision near subrails 2 entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 191.50,  12.62,  498.11 , 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-08"
+      }
+    },
+    {
+      "trans": [ 137.17,  17.91,  529.11 ], // top of support rubble right of subrails 2 entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 137.17,  17.91,  529.11 , 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-09"
+      }
     }//,
     
     
