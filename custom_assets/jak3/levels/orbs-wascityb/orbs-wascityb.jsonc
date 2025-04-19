@@ -99,6 +99,46 @@
         "name":"wascityb-skill-05"
       }
     },
+    {
+      "trans": [  1607.3668, 64.7340, -483.4711], // under turret
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1607.3668, 64.7340, -483.4711, 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-skill-06"
+      }
+    },
+    {
+      "trans": [ 1659.9693, 120.9813, -82.2111], // up in corner, mid south
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1659.9693, 120.9813, -82.2111, 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-skill-07"
+      }
+    },
+    {
+      "trans": [ 1576.88,  59.52,  -318.42 ], // pocket of rooftop on biggest "island" of houses
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1576.88,  59.52,  -318.42 , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-skill-08"
+      }
+    },
+    {
+      "trans": [  1617.3322, 92.5506, -202.4370], // rooftop under grind rail on medium "island" of houses
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1617.3322, 92.5506, -202.4370, 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-skill-09"
+      }
+    },
 
 
     //  

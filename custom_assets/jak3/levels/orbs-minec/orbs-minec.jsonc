@@ -46,17 +46,47 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
+    {
+      "trans": [   148.6576, 97.9888, 15.4459], // slippery metal behind lamp near jetboard proxy
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  148.6576, 97.9888, 15.4459, 10], // bounding sphere
+      "lump": {
+        "name":"minec-skill-01"
+      }
+    },
+    {
+      "trans": [  153.9078, 99.1089, 22.0686], // behind lamp near jetboard proxy
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  153.9078, 99.1089, 22.0686, 10], // bounding sphere
+      "lump": {
+        "name":"minec-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   156.5783, 113.2240, 25.1256], // lamp near jetboard proxy, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  156.5783, 113.2240, 25.1256, 10], // bounding sphere
+      "lump": {
+        "name":"minec-skill-03"
+      }
+    },
+    {
+      "trans": [  175.6930, 98.4187, 47.0816], // jetboard proxy spot
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  175.6930, 98.4187, 47.0816, 10], // bounding sphere
+      "lump": {
+        "name":"minec-skill-04"
+      }
+    }//,
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
     //   "etype": "skill",  // actor type

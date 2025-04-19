@@ -744,21 +744,20 @@
   #t
   )
 
-(define-extern *zoom-sensitivity-scale* float)
 (defun clmf-input ((arg0 vector) (arg1 vector) (arg2 int))
   (vector-reset! arg0)
   (vector-reset! arg1)
   (cond
     ((cpad-hold? arg2 l3)
      (set! (-> arg0 z)
-           (- (-> arg0 z) (* *zoom-sensitivity-scale* (analog-input (the-as int (-> *cpad-list* cpads arg2 rightx)) 128.0 48.0 110.0 1.0)))
+           (- (-> arg0 z) (analog-input (the-as int (-> *cpad-list* cpads arg2 rightx)) 128.0 48.0 110.0 1.0))
            )
      )
     (else
       (set! (-> arg0 y)
-            (- (-> arg0 y) (* *zoom-sensitivity-scale* (analog-input (the-as int (-> *cpad-list* cpads arg2 rightx)) 128.0 48.0 110.0 1.0)))
+            (- (-> arg0 y) (analog-input (the-as int (-> *cpad-list* cpads arg2 rightx)) 128.0 48.0 110.0 1.0))
             )
-      (+! (-> arg0 x) (* *zoom-sensitivity-scale* (analog-input (the-as int (-> *cpad-list* cpads arg2 righty)) 128.0 48.0 110.0 1.0)))
+      (+! (-> arg0 x) (analog-input (the-as int (-> *cpad-list* cpads arg2 righty)) 128.0 48.0 110.0 1.0))
       (set! (-> arg1 x)
             (- (-> arg1 x) (analog-input (the-as int (-> *cpad-list* cpads arg2 leftx)) 128.0 48.0 110.0 1.0))
             )

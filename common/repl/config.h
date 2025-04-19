@@ -46,7 +46,8 @@ struct Config {
        "Halt the attached process so you can re-launch a crashed game", "(:stop)"},
       {KeyBind::Modifier::CTRL, "G", "Attach the debugger to the process", "(dbgc)"},
       {KeyBind::Modifier::CTRL, "B", "Displays the most recently caught backtrace", "(:di)"},
-      {KeyBind::Modifier::CTRL, "N", "Full build of the game", "(mi)"}};
+      {KeyBind::Modifier::CTRL, "N", "Full build of the game", "(mi)"},
+      {KeyBind::Modifier::CTRL, "Y", "Build the game (engine only)", "(mng)"}};
   bool per_game_history = true;
   bool permissive_redefinitions = false;
   std::string iso_path;

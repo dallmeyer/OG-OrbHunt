@@ -665,7 +665,9 @@
     (('skill-138) (set-vector-meters! (-> arg0 extra trans) 1412.3383 40.2142 -483.8695)) ;; up under invis wall in crevice on wall near west end of beach
     (('skill-136) (set-vector-meters! (-> arg0 extra trans) 1506.6127  99.1709  -185.0385)) ;; leaper climb hint 
     (('skill-141) (set-vector-meters! (-> arg0 extra trans) 1733.9438  80.4723  -177.9469)) ;; crevice along peninsula wall, can also fall in from rooftop above
-    (('wascity-market-crate-20) (set-vector-meters! (-> arg0 extra trans) 1499.68  91.47  -222.95 )) ;; on rooftop kinda west side towards beach, leaper GP climb skill-136
+    (('wascity-market-crate-20) 
+      (set-vector-meters! (-> arg0 extra trans) 1499.68  91.47  -222.95 ) ;; on rooftop kinda west side towards beach, leaper GP climb skill-136
+      (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
     (('wascity-market-basket-b-1) (set-vector-meters! (-> arg0 extra trans) 1470.97  70.26  -278.76 )) ;; further along footop from ^
     (('wascity-market-crate-63) (set-vector-meters! (-> arg0 extra trans) 1494.24  62.48  -225.29 )) ;; crevice along wall, kinda towards west beach
     (('wascity-market-basket-a-3) (set-vector-meters! (-> arg0 extra trans) 1724.57  98.27  -206.53)) ;; on small stone cylinder next to rooftop, with invis wall around it
@@ -871,7 +873,7 @@
       (let* ((cur (* 0.005493164 (-> *math-camera* fov)))
              (arg2 (fmax 28.0 (fmin 64.0 (+ cur (if (cpad-pressed? 0 r2) -12.0 12.0)))))
              )
-        (set! *zoom-sensitivity-scale* (/ 64.0 arg2))
+        (set! *zoom-sensitivity-scale* (+ 1.0 (/ (- 64.0 arg2) 24.0)))
         (set-setting-by-param *setting-control* 'fov #f (* 182.04445 arg2) 0)
         (if *camera-combiner*
           (set! (-> *camera-combiner* fov) (* 182.04445 arg2))

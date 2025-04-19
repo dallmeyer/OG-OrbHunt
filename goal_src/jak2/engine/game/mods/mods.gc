@@ -1736,7 +1736,7 @@
       (let* ((cur (* 0.005493164 (-> *math-camera* fov)))
              (arg2 (fmax 28.0 (fmin 64.0 (+ cur (if (cpad-pressed? 0 r2) -12.0 12.0)))))
              )
-        (set! *zoom-sensitivity-scale* (/ 64.0 arg2))
+        (set! *zoom-sensitivity-scale* (+ 1.0 (/ (- 64.0 arg2) 24.0)))
         (set-setting-by-param *setting-control* 'fov #f (* 182.04445 arg2) 0)
         (if *camera-combiner*
           (set! (-> *camera-combiner* fov) (* 182.04445 arg2))
