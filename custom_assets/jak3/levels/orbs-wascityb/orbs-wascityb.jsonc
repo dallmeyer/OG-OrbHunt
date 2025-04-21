@@ -139,7 +139,28 @@
         "name":"wascityb-skill-09"
       }
     },
-
+    {
+      "trans": [ 1583.5533, 68.9588, -216.8838], // inside tizard on medium "island" of houses
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1583.5533, 68.9588, -216.8838, 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-skill-10",
+        "alt-actor": "tizard-7"
+      }
+    },
+    {
+      "trans": [ 1765.8718, 32.9198, -295.3297], // inside dogat near fruit stands
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1765.8718, 32.9198, -295.3297, 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-skill-11",
+        "alt-actor": "dogat-9"
+      }
+    },
 
     //  
     

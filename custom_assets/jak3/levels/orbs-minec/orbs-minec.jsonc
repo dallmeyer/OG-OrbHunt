@@ -86,17 +86,38 @@
       "lump": {
         "name":"minec-skill-04"
       }
+    },
+    {
+      "trans": [  259.2615, 80.3807, 73.4657], // behind lamp at starting elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   259.2615, 80.3807, 73.4657, 10], // bounding sphere
+      "lump": {
+        "name":"minec-skill-05"
+      }
+    },
+    {
+      "trans": [  259.0149, 97.9563, 70.5155], // top of lamp at starting elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  259.0149, 97.9563, 70.5155, 10], // bounding sphere
+      "lump": {
+        "name":"minec-skill-06",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  261.6960, 110.3993, 64.8543], // under robot above starting elevator, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ -0.6089,      -0.0029,      -0.7931,      -0.0037], // quaternion
+      "bsphere": [  261.6960, 110.3993, 64.8543, 10], // bounding sphere
+      "lump": {
+        "name":"minec-skill-07"
+      }
     }//,
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
     
     
 

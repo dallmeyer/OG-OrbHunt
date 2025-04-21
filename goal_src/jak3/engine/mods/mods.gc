@@ -1017,6 +1017,14 @@
     (set! (-> r1525 on-enter) '(want-load 'wasall 'desert 'desinter 'desertb 'desertd))) ;; no endlessfall, just swap deswalk out for desertd
   )
 
+;; keep elevator active
+(let ((elev (entity-by-name "min-boss-elev-1")))
+  (when elev 
+    (set! (cdr (res-lump-struct elev 'on-deactivate pair)) '((want-continue "minea-boss") (want-sound 'mine7 'mine8 'mine9)))
+    (set! (cdr (res-lump-struct elev 'on-notice pair)) '((send-event self 'query 'bottom?) #f))
+    )
+  )
+
   ;; mooon things
 ;;   (cond
 ;;     ((and (pause-allowed?) (= (level-status *level* 'mooon) 'active))
@@ -1113,6 +1121,9 @@
   ;; (skill-follow-min-y "sewer-skill-ghost-28" "grunt-203" (meters -66.5))
   (skill-follow-y-offset "wascitya-skill-04" "dogat-18" (meters 0.7))
   (skill-follow-y-offset "wascitya-skill-05" "tizard-5" (meters 0.7))
+
+  (skill-follow-y-offset "wascityb-skill-10" "tizard-7" (meters 0.7))
+  (skill-follow-y-offset "wascityb-skill-11" "dogat-9" (meters 0.7))
 
   ;; dev stuff
   (when (and (cpad-pressed? 0 select) (not (cpad-hold? 0 l3)) (not (paused?)) (not (movie?)))

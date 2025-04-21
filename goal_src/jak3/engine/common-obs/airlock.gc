@@ -652,6 +652,12 @@
                             (script-eval (the-as pair gp-0))
                             )
                         )
+                      ;; hack instead of adding res lump for on-activate
+                      (case (-> self name) :comp name=  
+                        (('com-airlock-inner-117)
+                          (script-eval '(want-load 'minee 'mined))
+                          )
+                        )
                       (destination-loaded? self #f)
                       )
                     )

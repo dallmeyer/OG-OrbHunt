@@ -46,27 +46,211 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [ 346.8703, 102.3812, -128.3062], // upper elevator before robot, right door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 346.8703, 102.3812, -128.3062, 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 342.14,  117.62,  -116.08 ], // upper elevator before robot, on top of right door, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 342.14,  117.62,  -116.08 , 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-02"
+      }
+    },
+    {
+      "trans": [   332.6077, 128.5252, -102.4798], // upper elevator before robot, up on wall behind beam / above right door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  332.6077, 128.5252, -102.4798, 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-03"
+      }
+    },
+    {
+      "trans": [   320.0363, 102.1075, -96.7323], // upper elevator before robot, behind steel beams in right corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  320.0363, 102.1075, -96.7323, 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-04"
+      }
+    },
+    {
+      "trans": [  328.4420, 103.3994, -170.0015], // upper elevator before robot, between left/mid doors
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  328.4420, 103.3994, -170.0015, 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-05",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 313.59,  117.62,  -168.53 ], // upper elevator before robot, on top of left door, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 313.59,  117.62,  -168.53 , 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-06"
+      }
+    },
+    {
+      "trans": [ 344.57,  117.62,  -152.47 ], // upper elevator before robot, on top of mid door, abah from ^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 344.57,  117.62,  -152.47  , 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-07"
+      }
+    },
+    {
+      "trans": [  299.6251, 122.6341, -165.2689], // upper elevator before robot, on bolts above left door
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  299.6251, 122.6341, -165.2689 , 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-08"
+      }
+    },
+    {
+      "trans": [ 293.90,  116.21,  -146.14 ], // upper elevator before robot, mid pipe near left door, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 293.90,  116.21,  -146.14 , 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-09",
+        "pickup-amount": ["float", 2.0 ] // abah hint
+      }
+    },
+    {
+      "trans": [293.29,  133.65,  -144.39 ], // upper elevator before robot, up high on pipe near left door, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [293.29,  133.65,  -144.39 , 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-10"
+      }
+    },
+    {
+      "trans": [  311.2515, 137.7857, -134.2803], // upper elevator before robot, up high beam near ceiling, IJ from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  311.2515, 137.7857, -134.2803, 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-11"
+      }
+    },
+    {
+      "trans": [  350.0605, 123.9559, -132.9443], // upper elevator before robot, up on beam joint between mid/right doors
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  350.0605, 123.9559, -132.9443, 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-12"
+      }
+    },
+    {
+      "trans": [ 319.72,  120.33,  -96.01 ], // upper elevator before robot, on steel beams in corner, jump around from skill-03^^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 319.72,  120.33,  -96.01 , 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-13",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  311.5857, 131.5794, -110.2170], // upper elevator before robot, up high on pipe near right door, abah (to IJ) from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  311.5857, 131.5794, -110.2170, 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-14"
+      }
+    },
+    {
+      "trans": [ 268.95,  122.10,  -133.80 ], // upper elevator before robot, on I beam in corner near entrance, IJ from above is easy
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  268.95,  122.10,  -133.80 , 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-15"
+      }
+    },
+    {
+      "trans": [ 290.2584, 63.7590, -142.2108], // lower elevator before robot, in box
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 290.2584, 63.7590, -142.2108, 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-16"
+      }
+    },
+    {
+      "trans": [ 337.5830, 60.3490, -130.4477], // lower elevator before robot, behind box
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 337.5830, 60.3490, -130.4477, 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-17"
+      }
+    },
+    {
+      "trans": [  331.6168, 78.7872, -148.4505], // lower elevator before robot, atop lamp
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  331.6168, 78.7872, -148.4505, 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-18",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  313.2148, 89.1440, -117.7733], // lower elevator before robot, on ceiling in back, abah to IJ from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  313.2148, 89.1440, -117.7733, 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-19"
+      }
+    },
+    {
+      "trans": [  285.8742, 137.4551, -98.5618], // upper elevator before robot, in corner on pipe by ceiling, IJ from skill-14^^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  285.8742, 137.4551, -98.5618, 10], // bounding sphere
+      "lump": {
+        "name":"minea-skill-15"
+      }
+    }//,
     
     
 
