@@ -1017,11 +1017,36 @@
     (set! (-> r1525 on-enter) '(want-load 'wasall 'desert 'desinter 'desertb 'desertd))) ;; no endlessfall, just swap deswalk out for desertd
   )
 
-;; keep elevator active
-(let ((elev (entity-by-name "min-boss-elev-1")))
+;; keep minea (c->b, into cave) elevator active; work in reverse
+(let ((elev (entity-by-name "min-elevator-6"))
+      (elev-proc (the elevator (process-by-ename "min-elevator-6"))))
+  (when elev 
+    (set! (cdr (res-lump-struct elev 'on-deactivate pair)) '((send-event self 'use-camera #f) (task-close! "mine-explore-elevator") (want-vis 'mineb) (want-continue "mineb-start") (want-sound 'mine1 'mine2 'mine3)))
+    (set! (cdr (res-lump-struct elev 'on-notice pair)) '((task-closed? "mine-explore-elevator") (cond ((and (eq? (level-status? 'mineb) 'active) (not (send-event self 'query 'bottom?))) (send-event self 'jump-to 'bottom)) ((and (eq? (level-status? 'minec) 'active) (not (send-event self 'query 'top?))) (send-event self 'jump-to 'top)))))
+    )
+  (when elev-proc 
+    (set! (-> elev-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mineb #f)))))
+    )
+  )
+;; load correct levels for minea (b->c, out of cave) elevator; require switch to be hit and player riding; work in reverse
+(let ((elev (entity-by-name "min-bomb-elevator-1"))
+      (elev-proc (the elevator (process-by-ename "min-bomb-elevator-1"))))
+  (when elev 
+    (set! (cdr (res-lump-struct elev 'on-activate pair)) '((send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mineb #f) (want-display 'mineb 'display)))))
+    )
+  (when elev-proc 
+    (set! (-> elev-proc activate-test) '(and (send-event self 'player-ridden-cooldown?) (not (send-event "min-crane-switch-8" 'up?))))
+    )
+  )
+;; keep minea (c->d, into boss) elevator active; work in reverse
+(let ((elev (entity-by-name "min-boss-elev-1"))
+      (elev-proc (the elevator (process-by-ename "min-boss-elev-1"))))
   (when elev 
     (set! (cdr (res-lump-struct elev 'on-deactivate pair)) '((want-continue "minea-boss") (want-sound 'mine7 'mine8 'mine9)))
     (set! (cdr (res-lump-struct elev 'on-notice pair)) '((send-event self 'query 'bottom?) #f))
+    )
+  (when elev-proc 
+    (set! (-> elev-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mined #f)))))
     )
   )
 
