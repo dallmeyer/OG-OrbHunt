@@ -47,14 +47,44 @@
 
   "actors" : [
     {
+      "trans": [  948.2604, 26.6788, 513.7640], // on pipe next to upper walkway, near jetboard grind rail stuff
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  948.2604, 26.6788, 513.7640, 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  944.4631, 42.9406, 516.6648], // up in crevice along wall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   944.4631, 42.9406, 516.6648, 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-02"
+      }
+    },
+    {
+      "trans": [ 958.0862,  54.2021,  519.5587 ], // near top of jetboard grind rail around corner of building, jump from crevice^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 958.0862,  54.2021,  519.5587 , 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-03"
+      }
+    },
+    {
       "trans": [   1075.3057, 41.3150, 558.2810], // small standpoint on broken wall, zoomer launch from walkway, concussor jump, you got it
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [   1075.3057, 41.3150, 558.2810, 10], // bounding sphere
       "lump": {
-        "name":"ctyindb-skill-01"
-        // "pickup-amount": ["float", 2.0] // abah hint
+        "name":"ctyindb-skill-04"
       }
     },
     {
@@ -64,10 +94,121 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [   1083.2377, 43.5351, 555.0173, 10], // bounding sphere
       "lump": {
-        "name":"ctyindb-skill-02"
+        "name":"ctyindb-skill-05"
+      }
+    },
+    {
+      "trans": [  1091.5449, 52.3283, 534.5784], // concussor jump over invis wall from ^ onto pipe
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1091.5449, 52.3283, 534.5784, 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-06"
+      }
+    },
+    {
+      "trans": [  1140.7889, 56.8038, 527.1602], // concussor jump along pipe from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1140.7889, 56.8038, 527.1602, 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-07"
+      }
+    },
+    {
+      "trans": [  1146.2282, 32.8867, 557.3011], // pipe in corner, concussor jump from vanilla plats (easiest to get an abah/cancel going early here, before jak crouches)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1091.5449, 52.3283, 534.5784, 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-08"
+      }
+    },
+    {
+      "trans": [  1145.8721, 42.9642, 552.8160], // up on wall from ^, dont need abah but its prob easier
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1145.8721, 42.9642, 552.8160, 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-09"
+      }
+    },
+    {
+      "trans": [ 1150.66,  49.38,  547.07 ], // up in corner of wall from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1150.66,  49.38,  547.07 , 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-10"
+      }
+    },{
+      "trans": [  1141.5704, 27.1001, 416.7070], // on pipe right next to slums connection
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1141.5704, 27.1001, 416.7070, 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-11",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  1128.4476, 41.7670, 404.8108], // way up on wall right next to slums connection, abah from ^ (hint for getting over invis wall)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1128.4476, 41.7670, 404.8108, 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-12"
+      }
+    },
+    {
+      "trans": [  1129.2973, 10.1184, 399.0198], // between pipes right by slums connection follow from ^^ over invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1129.2973, 10.1184, 399.0198, 10], // bounding sphere
+      "lump": {
+        "name":"ctyindb-skill-13"
+      }
+    },
+    {
+      "trans": [     1161.3287, 10.1808, 518.2760], // on edge of pipe base platform in corner near ctysluma (ctyindb-skill-33 from OH2)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [     1161.3287, 10.1808, 518.2760, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-14",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   1159.1506, 26.6099, 516.2239], // on pipe in corner near ctysluma, abah from ^ (ctyindb-skill-34 from OH2)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1159.1506, 26.6099, 516.2239, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-15",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   1161.8981, 42.9826, 514.4287], // way up on top of window in corner, abah from ^ (ctyindb-skill-35 from OH2)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1161.8981, 42.9826, 514.4287, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-16"
       }
     }//,
-    
     
 
     // GHOSTS

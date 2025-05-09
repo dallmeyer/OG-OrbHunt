@@ -590,6 +590,15 @@
 
 (defun mod-override-init-position ((obj process-drawable) (arg0 entity-actor))
   (case (-> obj name) :comp name=
+    ;; ====== CTYINDB (industrial north) =======
+    (('skill-134) (set-vector-meters! (-> arg0 extra trans)  1113.9781  8.9507  686.8352)) ;; crawl behind pipe in corner, towards ctyinda
+    (('skill-178) (set-vector-meters! (-> arg0 extra trans)  1039.5916  21.5289  550.8125)) ;; "inside" ramp from fallen pipe, just have to go in from one side
+    (('skill-179) (set-vector-meters! (-> arg0 extra trans)  986.4072  50.3802  601.7383)) ;; up high on wall near section with fallen pipe, abah from pipe underneath (no hint)
+    (('crate-1135) (set-vector-meters! (-> arg0 extra trans) 944.9800 9.9099 390.6400) ;; in corner behind pipes towards slums
+      (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 -1.0))
+    (('crate-1136) (set-vector-meters! (-> arg0 extra trans) 1048.2800 20.8600 400.9299) ;; on top of weird broken fence thing near slums, just jump from zoomer up here
+      (quaternion-set! (-> arg0 quat) 0.0000  0.7038  0.0000  0.7103))
+
     ;; ====== WASSTADA (spargus arena) =======
     (('skill-211) (set-vector-meters! (-> arg0 extra trans) 2322.89  94.74  -392.67 )) ;; straight up from flag proxy 
     (('urn-a-25) (set-vector-meters! (-> arg0 extra trans) 2272.74  98.13  -404.08 ) ;; up over invis wall onto awnings clockwise, flag proxy ofc
@@ -600,9 +609,9 @@
     
     ;; ====== WASSTADB (training course) =======
     (('wstd-training-dummy-1) (set-vector-meters! (-> arg0 extra trans) 2348.34  41.00  -458.75 ) ;; on small side ledge probably nobody notices
-      (set-vector! (-> arg0 quat) 0.0000       0.7088       0.0000      -0.7053))
+      (quaternion-set! (-> arg0 quat) 0.0000       0.7088       0.0000      -0.7053))
     (('wstd-training-dummy-978) (set-vector-meters! (-> arg0 extra trans) 2334.68  41.05  -519.24 ) ;; on side steps u only see if u suck
-      (set-vector! (-> arg0 quat) 0.0000      -0.7041       0.0000      -0.7100))
+      (quaternion-set! (-> arg0 quat) 0.0000      -0.7041       0.0000      -0.7100))
 
     ;; ====== WASCITYA (spargus east) =======
     (('skill-153) (set-vector-meters! (-> arg0 extra trans) 2190.15  52.7  -274.97 )) ;; on rooftop between wascityb/wasstada, jump from awning trampoline behind invis wall and up
@@ -628,7 +637,7 @@
     (('skill-140) (set-vector-meters! (-> arg0 extra trans) 2423.1967 49.1520 -154.9888)) ;; up under windowsill at start of grindrail line
     (('skill-149) (set-vector-meters! (-> arg0 extra trans) 2237.25  53.73  -177.98 )) ;; above lower windmill (l2->extended ff jetboard jump from nearby roof)
     (('wascity-market-basket-a-24) (set-vector-meters! (-> arg0 extra trans) 2524.96  34.45  -157.65 )) ;; in corner on east wall 
-    (('urn-c-5) (set-vector! (-> arg0 quat) 0.0 0.0 0.0 1.0) (set-vector-meters! (-> arg0 extra trans) 2318.19  57.79  84.75)) ;; way up / around on flut proxy roof, towards garage
+    (('urn-c-5) (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0) (set-vector-meters! (-> arg0 extra trans) 2318.19  57.79  84.75)) ;; way up / around on flut proxy roof, towards garage
     (('wascity-market-basket-b-17) (set-vector-meters! (-> arg0 extra trans) 2179.71  42.93  -58.65 )) ;; rooftop on right side towards garage, leaper shenanigans from further down
     (('wascity-market-sack-b-40) (set-vector-meters! (-> arg0 extra trans) 2429.66  51.29  -271.22)) ;; rooftop on right side of wasstada, around corner from vanilla (leaper shenanigans over invis wall, skill-199 hint)
     (('wascity-market-crate-59) (set-vector-meters! (-> arg0 extra trans) 2347.09  39.03  -198.77 )) ;; under grindrail on roof
