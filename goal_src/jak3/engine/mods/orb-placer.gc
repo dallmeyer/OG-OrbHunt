@@ -45,7 +45,7 @@
         (when (nonzero? orb-handle)
           (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
           (set! *orb-placer-selected-idx* *orb-placer-count*)
-          (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
+          ;; (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
           (+! *orb-placer-count* 1)
           (orb-placer-list-maintenace #t)
           )
@@ -68,18 +68,23 @@
         (let ((orb-proc (the skill (handle->process orb-handle))))
           (when (and orb-proc (!= (-> orb-proc next-state name) 'dead-state))
             ;; ensure correct highlighting
-            (orb-placer-highlight 
-              orb-proc
-              is-selected?
-              )
+            ;; (orb-placer-highlight 
+            ;;   orb-proc
+            ;;   is-selected?
+            ;;   )
 
             ;; draw z-debug text
-            (add-debug-text-3d
+            (add-debug-text-3d-scaled
               #t
               (bucket-id debug-no-zbuf1)
               (-> *orb-placer-temp-strs* i)
               (-> orb-proc base)
-              (if is-selected? (font-color red) (font-color white))
+              (if is-selected?
+                (font-color red)
+                (font-color white))
+              (if is-selected?
+                2.0
+                1.0)
               (new 'static 'vector2h :y 16)
               )
 
@@ -137,7 +142,7 @@
         (when (nonzero? orb-handle)
           (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
           (set! *orb-placer-selected-idx* *orb-placer-count*)
-          (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
+          ;; (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
           (+! *orb-placer-count* 1)
           (orb-placer-list-maintenace #t)
           )
@@ -145,6 +150,35 @@
       )
     )
   (none)
+  )
+
+(defun orb-placer-toggle-marking ()
+  (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
+    (let ((orb (the skill (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
+      (when orb
+        (format 0 "toggle orb from ~D to " (the int (-> orb pickup-amount)))
+        (set! (-> orb pickup-amount) (the float (+ (mod (the int (-> orb pickup-amount)) 3) 1)))
+        (format 0 "~D ~%" (the int (-> orb pickup-amount)))
+
+        (set! (-> orb fact pickup-amount) (-> orb pickup-amount))
+        ;; update color
+        (cond
+          ((= (-> orb pickup-amount) 2.0)  ;; abah hint
+            (set-vector! (-> orb draw color-mult) 0.0 0.0 0.8 1.0)
+            (set-vector! (-> orb draw color-emissive) 0.1 0.1 1.0 1.0)
+            )
+          ((>= (-> orb pickup-amount) (-> *FACT-bank* super-skill-inc)) ;; hover
+            (set-vector! (-> orb draw color-mult) 0.8 0.8 0.0 1.0)
+            (set-vector! (-> orb draw color-emissive) 0.0 1.0 0.2 1.0)
+            )
+          (else ;; normal
+            (set-vector! (-> orb draw color-mult) 0.8 0.8 0.8 1.0)
+            (set-vector! (-> orb draw color-emissive) 0.2 0.2 0.2 1.0)
+            )
+          )
+        )
+      )
+    )
   )
 
 (defun orb-placer-print-selected ()
@@ -243,7 +277,7 @@
                     (let ((orb (the skill (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
                       (when orb
                         ;; highlight it
-                        (orb-placer-highlight orb #t)
+                        ;; (orb-placer-highlight orb #t)
 
                         ;; respond to controller input
 

@@ -598,6 +598,18 @@
       (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 -1.0))
     (('crate-1136) (set-vector-meters! (-> arg0 extra trans) 1048.2800 20.8600 400.9299) ;; on top of weird broken fence thing near slums, just jump from zoomer up here
       (quaternion-set! (-> arg0 quat) 0.0000  0.7038  0.0000  0.7103))
+    (('burning-bush-39) (set-vector-meters! (-> arg0 extra trans) 969.1300 51.8899 560.2600) ;; at top of broken pipe jetboard grind before turning right
+      (quaternion-set! (-> arg0 quat) 0.1823  0.7556  -0.1409  0.6130))
+
+    ;; ====== CTYINDA (industrial south) ========
+    (('skill-180) (set-vector-meters! (-> arg0 extra trans) 810.42  7.99  1067.37 )) ;; between ramp and wall near port
+    ;; (('skill-181) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-182) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-183) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-208) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1137) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1138) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1139) (set-vector-meters! (-> arg0 extra trans) )) ;; 
 
     ;; ====== WASSTADA (spargus arena) =======
     (('skill-211) (set-vector-meters! (-> arg0 extra trans) 2322.89  94.74  -392.67 )) ;; straight up from flag proxy 

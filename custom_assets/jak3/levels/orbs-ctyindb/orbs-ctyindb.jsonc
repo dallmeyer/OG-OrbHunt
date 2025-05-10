@@ -68,11 +68,11 @@
       }
     },
     {
-      "trans": [ 958.0862,  54.2021,  519.5587 ], // near top of jetboard grind rail around corner of building, jump from crevice^^
+      "trans": [ 951.92,  56.95,  529.82  ], // top of building behind invis wall near jetboard grind rail, jump spin repeat up thru crevice^^
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 958.0862,  54.2021,  519.5587 , 10], // bounding sphere
+      "bsphere": [ 951.92,  56.95,  529.82 , 10], // bounding sphere
       "lump": {
         "name":"ctyindb-skill-03"
       }
@@ -158,11 +158,11 @@
       }
     },
     {
-      "trans": [  1128.4476, 41.7670, 404.8108], // way up on wall right next to slums connection, abah from ^ (hint for getting over invis wall)
+      "trans": [  1130.5782, 42.5137, 408.2530], // way up on wall right next to slums connection, abah from ^ (hint for getting over invis wall)
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1128.4476, 41.7670, 404.8108, 10], // bounding sphere
+      "bsphere": [  1130.5782, 42.5137, 408.2530, 10], // bounding sphere
       "lump": {
         "name":"ctyindb-skill-12"
       }
@@ -208,8 +208,69 @@
       "lump": {
         "name": "ctyindb-skill-16"
       }
-    }//,
+    },
+    {
+      "trans": [ 982.9714, 29.7130, 399.4176], // up behind u shaped pipe above walkway ramp near slums
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 982.9714, 29.7130, 399.4176, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-17"
+      }
+    },
+    {
+      "trans": [ 1068.7395, 24.3816, 494.5780], // up in corner behind pipes in "2nd room", abah between wall and ledge below (no hint)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1068.7395, 24.3816, 494.5780, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-18"
+      }
+    },
+    {
+      "trans": [   945.9544, 42.3152, 594.3948], // up in buttcrack on wall, hint for getting over invis wall to orb below vvv
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  945.9544, 42.3152, 594.3948 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-19"
+      }
+    },
+    {
+      "trans": [  942.0988, 10.2067, 593.9316 ], // behind pipes ground level behind invis wall, jetboard over from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  942.0988, 10.2067, 593.9316 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-20"
+      }
+    },
+    {
+      "trans": [  812.1538, 8.2865, 736.5597], // between wall and ramp near ctyinda
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  812.1538, 8.2865, 736.5597, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-21"
+      }
+    },
     
+    {
+      "trans": [   985.2556, 48.0416, 481.1967], // triangular gap up above camera(?) just past first "room" from slums
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  985.2556, 48.0416, 481.1967, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-hover-01",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    }//,
 
     // GHOSTS
     // {

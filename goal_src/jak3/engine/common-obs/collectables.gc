@@ -144,6 +144,9 @@
          )
      (vector-reset! (-> this root transv))
      )
+    ((logtest? (-> this fact options) (actor-option force-bob))
+      ;; do nothing, keep bob-amount
+      )
     (else
       (logior! (-> this flags) (collectable-flag bounce))
       (logclear! (-> this flags) (collectable-flag pickup))
@@ -1596,7 +1599,7 @@
         )
       )
     (process-drawable-from-entity! this (-> this entity))
-    (initialize-options this 0 1024.0 (the-as fact-info #f))
+    (initialize-options this 0 bob-amount (the-as fact-info #f))
     (update-transforms (-> this root))
     (go-to-initial-state this)
     )

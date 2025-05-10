@@ -46,54 +46,50 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
-    
-    
+    {
+      "trans": [ 1120.5,   31.05,   1120.6  ], // in center hologram (jetboard lulz)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1120.5,   31.05,   1120.6, 10], // bounding sphere
+      "lump": {
+        "name": "vinroom-skill-1",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+
+    // CRATES
+    {
+      "trans": [ 1119.0156, 25.5000, 1112.7435 ], // to left side (jetboard lulz)
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0001, -0.1239, -0.0001, -0.9922], // quaternion
+      "bsphere": [  1119.0156, 25.5000, 1112.7435 , 10], // bounding sphere
+      "lump": {
+        "name": "vinroom-crate-01",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          24, // (pickup-type skill)
+          1 // amount
+        ]
+      }
+    },
 
     // GHOSTS
-    // {
-    //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-1",
-    //     "pickup-amount": ["float", 2.0], // abah hint
-    //     "alt-actor":"wascitya-skill-1"
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-2",
-    //     "alt-actor":"wascitya-skill-2"
-    //   }
-    // }
+    {
+      "trans": [ 1120.5,   31.05,   1120.6  ], // in center hologram (jetboard lulz)
+      "etype":"skill-ghost",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [1120.5,   31.05,   1120.6, 10], // bounding sphere
+      "lump": {
+        "name":"vinroom-skill-ghost-1",
+        "alt-actor":"vinroom-skill-1",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    }
     
   ]
 }

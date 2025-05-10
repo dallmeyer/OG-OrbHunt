@@ -459,8 +459,8 @@
                   :callback-list '()
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #xbb8 #x0 #x0 #x0 #x0)
-                    :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                    :borrow-size (new 'static 'array uint16 5 #x20 #xbb8 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-vinroom display) #f #f #f #f)
                     )
                   :bottom-height (meters -15)
                   :fog-height (meters 80)
@@ -3025,7 +3025,11 @@
                       )
                     )
                   :callback-list '()
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #x20 #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-ctyinda display) #f #f #f #f)
+                    )
                   :bottom-height (meters -15)
                   :fog-height (meters 80)
                   :max-rain 1.0
@@ -4650,8 +4654,8 @@
                  :callback-list '((35 . hiphog-activate) (23 . init-mood-hiphog))
                  :borrow (new 'static 'level-borrow-info
                    :alias #f
-                   :borrow-size (new 'static 'array uint16 5 #x82a #x0 #x0 #x0 #x0)
-                   :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                   :borrow-size (new 'static 'array uint16 5 #x20 #x82a #x0 #x0 #x0)
+                   :borrow-info (new 'static 'array object 5 '(orbs-hiphog display) #f #f #f #f)
                    )
                  :bottom-height (meters -15)
                  :fog-height (meters 80)

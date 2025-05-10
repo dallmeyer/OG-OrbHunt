@@ -46,27 +46,36 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [  -93.8272, 11.9404, 1304.2862], // top of guns in middle of room, punchboard in or find the magic edge to walk up
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -93.8272, 11.9404, 1304.2862, 10], // bounding sphere
+      "lump": {
+        "name":"hiphog-skill-01"
+      }
+    },
+    {
+      "trans": [ -85.01,  10.97,  1308.74 ], // on holo/table in middle of room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -85.01,  10.97,  1308.74 , 10], // bounding sphere
+      "lump": {
+        "name":"hiphog-skill-02"
+      }
+    },
+    {
+      "trans": [ -77.59,  14.71,  1297.10  ], // above trash can on right, more punchboard shiz
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -77.59,  14.71,  1297.10 , 10], // bounding sphere
+      "lump": {
+        "name":"hiphog-skill-03"
+      }
+    }//,
     
     
 
