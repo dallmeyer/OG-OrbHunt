@@ -602,14 +602,17 @@
       (quaternion-set! (-> arg0 quat) 0.1823  0.7556  -0.1409  0.6130))
 
     ;; ====== CTYINDA (industrial south) ========
-    (('skill-180) (set-vector-meters! (-> arg0 extra trans) 810.42  7.99  1067.37 )) ;; between ramp and wall near port
-    ;; (('skill-181) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-182) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-183) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-208) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1137) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1138) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1139) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-180) (set-vector-meters! (-> arg0 extra trans) 810.42  8.6  1067.37 )) ;; between ramp and wall near port
+    (('skill-181) (set-vector-meters! (-> arg0 extra trans) 852.8791 26.9578 872.4902)) ;; up in corner small crevice between buildings, above parking spot near ctyindb
+    (('skill-182) (set-vector-meters! (-> arg0 extra trans) 992.6550 26.7788 825.8588)) ;; in corner behind circling pipe, boosted from platforms nearby
+    (('skill-183) (set-vector-meters! (-> arg0 extra trans) 1098.4771 10.1819 1171.3032)) ;; in corner near vinroom
+    (('skill-208) (set-vector-meters! (-> arg0 extra trans) 856.3762 28.3448 1155.3575)) ;; on ledge below pipe in corner near hallway to port, above vanilla orb spot (abah from below or extended around from walkway)
+    (('crate-1137) (set-vector-meters! (-> arg0 extra trans) 1065.5700 7.9899 1058.6699) ;; in corner near vinroom
+      (quaternion-set! (-> arg0 quat) 0.0000  0.2823  0.0000  0.9593))
+    (('crate-1138) (set-vector-meters! (-> arg0 extra trans) 733.3499 10.0399 1159.1199 ) ;; behind broken pipes in hallway to port, follow orb trail over invis wall
+      (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 -1.0))
+    (('crate-1139) (set-vector-meters! (-> arg0 extra trans) 1060.56  9.86  1042.28 ) ;; behind pipes near funny collision hole by sewers
+      (quaternion-set! (-> arg0 quat) 0.0 -1.0 0.0 0.0))
 
     ;; ====== WASSTADA (spargus arena) =======
     (('skill-211) (set-vector-meters! (-> arg0 extra trans) 2322.89  94.74  -392.67 )) ;; straight up from flag proxy 

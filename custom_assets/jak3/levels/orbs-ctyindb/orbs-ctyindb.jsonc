@@ -259,6 +259,36 @@
         "name": "ctyindb-skill-21"
       }
     },
+    {
+      "trans": [ 848.4726, 38.3168, 619.6204], // up on windowsill in "room" before ctyinda, either abah from grindrail or just yolo jetboard from walkway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 848.4726, 38.3168, 619.6204, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-22"
+      }
+    },
+    {
+      "trans": [  874.8527, 28.1031, 752.8920], // up on ledge of building tucked around corner, either boosted/extended/concussor from walkway or just jetboard launch pad jump
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 874.8527, 28.1031, 752.8920, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-23"
+      }
+    },
+    {
+      "trans": [ 844.0896, 10.3329, 792.4963], // behind pipe on small ledge on hallway to ctyinda, left side has small gap you can punch thru
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 844.0896, 10.3329, 792.4963, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-24"
+      }
+    },
     
     {
       "trans": [   985.2556, 48.0416, 481.1967], // triangular gap up above camera(?) just past first "room" from slums

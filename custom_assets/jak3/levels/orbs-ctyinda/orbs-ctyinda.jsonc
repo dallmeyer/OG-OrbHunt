@@ -77,9 +77,83 @@
       "lump": {
         "name":"ctyinda-skill-03"
       }
-    }//,
+    },
+    {
+      "trans": [  740.2265, 9.4561, 1169.3504], // on small broken ledge in hallway to port
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  740.2265, 9.4561, 1169.3504, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-04",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  748.7360, 27.1057, 1168.8527], // on end of pipe in corner in hallway to port, abah from ^ (or maybe zoomer jump)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  748.7360, 27.1057, 1168.8527, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-05",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  734.7328, 42.5794, 1162.2843], // up on wall above broken pipes in hallway to port, hint for getting over invis wall to crate-1138, abah from^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  734.7328, 42.5794, 1162.2843, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-06"
+      }
+    },
+    {
+      "trans": [  720.4904, 28.4171, 1163.0517], // up on pipe in corner in hallway to port, zoomer jump
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  720.4904, 28.4171, 1163.0517, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-07"
+      }
+    },
     
-    
+    {
+      "trans": [ 854.3255, 45.1176, 797.5418], // small gap between walls/pipes overhead hallway to/from ctyindb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 854.3255, 45.1176, 797.5418, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-hover-01",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [ 1124.48,  58.03,  1092.02 ], // small standpoint on walls around vinroom, left side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1124.48,  58.03,  1092.02 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-hover-02",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [ 1096.25,  58.03,  1134.55 ], // small standpoint on walls around vinroom, right side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1096.25,  58.03,  1134.55 , 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-hover-03",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    }
 
     // GHOSTS
     // {
