@@ -120,37 +120,56 @@
         "name":"ctyinda-skill-07"
       }
     },
-    
     {
-      "trans": [ 854.3255, 45.1176, 797.5418], // small gap between walls/pipes overhead hallway to/from ctyindb
+      "trans": [   1040.2500, 16.6798, 904.7310], // in light / support for walkway
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   1040.2500, 16.6798, 904.7310, 10], // bounding sphere
+      "lump": {
+        "name":"ctyinda-skill-08"
+      }
+    },
+    {
+      "trans": [ 854.3255, 45.1176, 797.5418], // small gap between walls/pipes overhead hallway to/from ctyindb, use jetboard launcher
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [ 854.3255, 45.1176, 797.5418, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-09"
+      }
+    },
+    {
+      "trans": [  1017.7474, 8.7706, 960.8829], // crevice between pipes and wall not far from sewers, have to punch I think
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1017.7474, 8.7706, 960.8829, 10], // bounding sphere
+      "lump": {
+        "name": "ctyinda-skill-10"
+      }
+    },
+
+    {
+      "trans": [ 1124.48,  57.9,  1092.02 ], // small standpoint on walls around vinroom, left side
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1124.48,  57.9,  1092.02 , 10], // bounding sphere
       "lump": {
         "name": "ctyinda-skill-hover-01",
         "pickup-amount": ["float", 3.0] // hover
       }
     },
     {
-      "trans": [ 1124.48,  58.03,  1092.02 ], // small standpoint on walls around vinroom, left side
+      "trans": [ 1096.2099, 57.9, 1134.6000], // small standpoint on walls around vinroom, right side
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1124.48,  58.03,  1092.02 , 10], // bounding sphere
+      "bsphere": [ 1096.2099, 57.9, 1134.6000, 10], // bounding sphere
       "lump": {
         "name": "ctyinda-skill-hover-02",
-        "pickup-amount": ["float", 3.0] // hover
-      }
-    },
-    {
-      "trans": [ 1096.25,  58.03,  1134.55 ], // small standpoint on walls around vinroom, right side
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1096.25,  58.03,  1134.55 , 10], // bounding sphere
-      "lump": {
-        "name": "ctyinda-skill-hover-03",
         "pickup-amount": ["float", 3.0] // hover
       }
     }

@@ -6830,7 +6830,7 @@
 
 (define *popup-menu-context* (new 'debug 'debug-menu-context))
 (define-extern startingDebugContinuePoint string)
-(define-extern *orb-placer-enabled?* symbol)
+(define-extern *entity-placer-active?* symbol)
 
 (defun popup-menu-context-make-default-menus ((arg0 debug-menu-context))
   (debug-menu-make-from-template
@@ -6936,7 +6936,7 @@
        (flag "Target" #f ,(lambda ((arg0 object) (arg1 debug-menu-msg))
                             (when (= arg1 (debug-menu-msg press))
                               ;; probably trying to control jak/camera, turn off edit mode
-                              (set! *orb-placer-enabled?* #f)
+                              (set! *entity-placer-active?* #f)
                               ;; toggle target
                               (if *target*
                                   (stop 'debug)

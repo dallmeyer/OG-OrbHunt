@@ -1,7 +1,9 @@
 (declare-file (debug))
 
 ;; controls whether the orb-placer process will run
-(define *orb-placer-enabled?* #f)
+(define *entity-placer-active?* #f)
+;; when orb-placer process is alive, controls whether we're in "edit" mode
+(define *entity-placer-edit-mode?* #f)
 
 ;; number of orbs orb-placer has placed
 (define *orb-placer-count* 0)

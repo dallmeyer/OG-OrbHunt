@@ -289,16 +289,24 @@
         "name": "ctyindb-skill-24"
       }
     },
-    
     {
-      "trans": [   985.2556, 48.0416, 481.1967], // triangular gap up above camera(?) just past first "room" from slums
+      "trans": [ 765.7849, 8.3032, 615.2931], // in NW corner of southern half (ctyindb-skill-10 from OH2)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 765.7849, 8.3032, 615.2931, 10], // bounding sphere
+      "lump": {
+        "name": "ctyindb-skill-25"
+      }
+    },
+    {
+      "trans": [   985.2556, 48.0416, 481.1967], // triangular gap up above camera(?) just past first "room" from slums, yolo from grindrail
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [  985.2556, 48.0416, 481.1967, 10], // bounding sphere
       "lump": {
-        "name": "ctyindb-skill-hover-01",
-        "pickup-amount": ["float", 3.0] // hover
+        "name": "ctyindb-skill-26"
       }
     }//,
 

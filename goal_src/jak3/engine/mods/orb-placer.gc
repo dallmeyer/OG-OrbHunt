@@ -8,12 +8,14 @@
       ((= *orb-placer-selected-idx* idx)
         ;; deselect
         (set! *orb-placer-selected-idx* -1)
-        (set! *orb-placer-enabled?* #f)
+        (false! *entity-placer-active?*)
+        (false! *entity-placer-edit-mode?*)
         )
       (else
         ;; select
         (set! *orb-placer-selected-idx* idx)
-        (set! *orb-placer-enabled?* #t)
+        (true! *entity-placer-active?*)
+        (true! *entity-placer-edit-mode?*)
         )
       )
     )
@@ -21,6 +23,7 @@
   )
 
 (defun orb-placer-highlight ((orb skill) (highlight? symbol))
+  ;; this is disabled
   (cond 
     (highlight?
       (set-vector! (-> orb draw color-mult) 0.8 0.8 0.0 1.0)
@@ -63,7 +66,7 @@
 
   (dotimes (i *orb-placer-count*)
     (let ((orb-handle (-> *orb-placer-orbs* i))
-          (is-selected? (and *orb-placer-enabled?* (= i *orb-placer-selected-idx*))))
+          (is-selected? (and *entity-placer-active?* (= i *orb-placer-selected-idx*))))
       (when (and (nonzero? orb-handle) (handle->process orb-handle))
         (let ((orb-proc (the skill (handle->process orb-handle))))
           (when (and orb-proc (!= (-> orb-proc next-state name) 'dead-state))
@@ -142,6 +145,7 @@
         (when (nonzero? orb-handle)
           (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
           (set! *orb-placer-selected-idx* *orb-placer-count*)
+          (true! *entity-placer-edit-mode?*)
           ;; (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
           (+! *orb-placer-count* 1)
           (orb-placer-list-maintenace #t)
@@ -208,34 +212,171 @@
   (none)
   )
 
+(define *last-deactivate-time* (the-as time-frame #f))
+(defun debug-check-process-drawable-move ((proc process-drawable))
+  (let ((pad (-> *cpad-list* cpads 0))
+        (vec *orb-offset-tmp-vec*)
+        (proc-extra-vec (the vector #f))
+        (moved? #f))
+    ;; update extra vectors for certain types
+    (cond
+      ((type-type? (-> proc type) skill)
+        (set! proc-extra-vec (-> (the money proc) base))
+        )
+      ((type-type? (-> proc type) crate)
+        (set! proc-extra-vec (-> (the crate proc) base))
+        )
+      )
+
+    ;; X/Z based on camera
+    (when (nonzero? (-> pad stick0-speed))
+      (set! (-> vec x) (sin (-> pad stick0-dir)))
+      (set! (-> vec y) 0.0)
+      (set! (-> vec z) (cos (-> pad stick0-dir)))
+      (set! (-> vec w) 0.0)
+      ;; camera magic
+      (vector-matrix*! vec vec (matrix-local->world #t #f))
+      (vector-flatten! vec vec (-> *camera* local-down))
+      (vector-float*! vec vec (* (-> pad stick0-speed) 512.0))
+
+      ;; actually move orb
+      (vector+! (-> proc root trans) (-> proc root trans) vec)
+      (when proc-extra-vec (vector+! proc-extra-vec proc-extra-vec vec))
+      (true! moved?)
+      )
+
+    (cond
+      ;; fine tune/axis-aligned X/Z
+      ((or (cpad-pressed? 0 down) (cpad-hold? 0 down))
+        (+! (-> proc root trans z) (meters 0.01))
+        (when proc-extra-vec (+! (-> proc-extra-vec z) (meters 0.01)))
+        (true! moved?)
+        )
+      ((or (cpad-pressed? 0 up) (cpad-hold? 0 up))
+        (+! (-> proc root trans z) (meters -0.01))
+        (when proc-extra-vec (+! (-> proc-extra-vec z) (meters -0.01)))
+        (true! moved?)
+        )
+      ((or (cpad-pressed? 0 right) (cpad-hold? 0 right))
+        (+! (-> proc root trans x) (meters 0.01))
+        (when proc-extra-vec (+! (-> proc-extra-vec x) (meters 0.01)))
+        (true! moved?)
+        )
+      ((or (cpad-pressed? 0 left) (cpad-hold? 0 left))
+        (+! (-> proc root trans x) (meters -0.01))
+        (when proc-extra-vec (+! (-> proc-extra-vec x) (meters -0.01)))
+        (true! moved?)
+        )
+      ;; Y (up/down)
+      ((cpad-hold? 0 r2)
+        (+! (-> proc root trans y) (meters 0.08))
+        (when proc-extra-vec (+! (-> proc-extra-vec y) (meters 0.08)))
+        (true! moved?)
+        )
+      ((cpad-hold? 0 l2)
+        (+! (-> proc root trans y) (meters -0.08))
+        (when proc-extra-vec (+! (-> proc-extra-vec y) (meters -0.08)))
+        (true! moved?)
+        )
+      ((or (cpad-pressed? 0 r1) (cpad-hold? 0 r1))
+        (+! (-> proc root trans y) (meters 0.01))
+        (when proc-extra-vec (+! (-> proc-extra-vec y) (meters 0.01)))
+        (true! moved?)
+        )
+      ((or (cpad-pressed? 0 l1) (cpad-hold? 0 l1))
+        (+! (-> proc root trans y) (meters -0.01))
+        (when proc-extra-vec (+! (-> proc-extra-vec y) (meters -0.01)))
+        (true! moved?)
+        )
+      )
+
+    ;; rotation, just around Y axis
+    (let ((d 0.0))
+      (cond
+        ((or (cpad-pressed? 0 circle) (cpad-hold? 0 circle)) (set! d -0.5))
+        ((or (cpad-pressed? 0 square) (cpad-hold? 0 square)) (set! d 0.5)))
+      (when (nonzero? d)
+        (quaternion-rotate-y! (-> proc root quat) (-> proc root quat) (degrees d))
+        (true! moved?)
+        ))
+
+    (when (-> proc entity)
+        ;; update entity too
+        (if proc-extra-vec
+          (vector-copy! (-> (the entity-actor (-> proc entity)) extra trans) proc-extra-vec)
+          (vector-copy! (-> (the entity-actor (-> proc entity)) extra trans) (-> proc root trans)))
+        (quaternion-copy! (-> (the entity-actor (-> proc entity)) quat) (-> proc root quat))
+        
+        (when (and moved? 
+                  (or (not *last-deactivate-time*)
+                      (g-time-elapsed? *last-deactivate-time* (seconds 0.2))))
+          (case (-> proc type symbol)
+            (('skill)
+              ;; deactivate not needed
+              )
+            (else
+              ;; deactivate proc to force it respawn w updated position
+              (set-g-time! *last-deactivate-time*)
+              (deactivate proc))))
+
+        (when (and (not moved?)
+                   *last-deactivate-time*
+                   (g-time-elapsed? *last-deactivate-time* (seconds 0.2)))
+          (case (-> proc type symbol)
+            (('skill)
+              ;; deactivate not needed
+              )
+            (else
+              ;; flush deactivate to force it respawn w updated position
+              (set! *last-deactivate-time* (the-as time-frame #f))
+              (deactivate proc))))
+        )
+    
+    (when moved?
+      ;; un sleep 
+      (logclear! (-> proc mask) (process-mask sleep))
+      ;; force update transforms
+      (when (type-type? (-> proc root type) collide-shape)
+        (update-transforms (the collide-shape (-> proc root)))))
+    )
+
+  (none))
+
 ;; called from run-every-frame to ensure orb-placer is spawned/killed
 (define *orb-offset-tmp-vec* (new 'global 'vector))
+(define *orb-placer-tmp-str* (new 'global 'string 2048 (the-as string #f)))
 (defun orb-placer-maintenance ()
   (when *debug-segment*
     (orb-placer-list-maintenace #f)
 
-    (when (and (not (paused?)) (or (not *target*) *orb-placer-enabled?*))
-      ;; handle toggle
+    (when (and (not (paused?)) *entity-placer-active?*)
+      ;; handle edit mode toggle
       (when (cpad-pressed? 0 triangle)
-        (not! *orb-placer-enabled?*))
-      )
-
-    (when (and (not (paused?)) *orb-placer-enabled?*)
+        (not! *entity-placer-edit-mode?*))
+      
       (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
                                         (bucket-id debug-no-zbuf1))
-        (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 510 2 0.0 (font-color red) (font-flags right shadow kerning large))))
-          (set! (-> font-ctx scale) 0.325)
-          (draw-string-adv "Orb Placer Edit Mode" buf font-ctx)
+        (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 510 2 0.0 (font-color red) (font-flags right shadow kerning))))
+          (format (clear *orb-placer-tmp-str*) "Entity Placer Edit Mode~%")
+          (cond
+            (*entity-placer-edit-mode?*
+              (format *orb-placer-tmp-str* "~6LACTIVE" buf font-ctx)
+              )
+            (else
+              (format *orb-placer-tmp-str* "~2LPAUSED" buf font-ctx)
+              )
+            )
+          ;; (pc-encode-utf8-string *orb-placer-tmp-str* *pc-encoded-temp-string*)
+          (draw-string-adv *orb-placer-tmp-str* buf font-ctx)
           )
         )
-      )
-          
+      )          
 
     (cond
       ((process-by-name "orb-placer" *active-pool*)
         ;; orb-placer exists
         ;; if its not enabled, kill it
-        (when (not (and *debug-segment* *orb-placer-enabled?*))
+        (when (not (and *debug-segment* *entity-placer-active?*))
           (kill-by-name "orb-placer" *active-pool*)
 
           ;; make sure target is ungrabbed
@@ -251,7 +392,7 @@
       (else
         ;; orb-placer doesn't exist
         ;; if its enabled, spawn it
-        (when (and *debug-segment* *orb-placer-enabled?*)
+        (when (and *debug-segment* *entity-placer-active?*)
           ;; process-spawn-function, spawns a process that runs the function you give it
           (process-spawn-function process :name "orb-placer"
             (lambda :behavior process ()
@@ -262,76 +403,38 @@
                     (vec *orb-offset-tmp-vec*))
                 (loop
                   ;; Loop runs once per frame while process is active
+                  (cond
+                    ((not *entity-placer-edit-mode?*) ;; disabled
+                      ;; make sure target is released
+                      (when (and *target* (= (-> *target* next-state name) 'target-grab))
+                        (send-event *target* 'end-mode))
+                      ;; unlock freecam if no target
+                      (when (and (not *target*) (get-setting *setting-control* 'mode-name))
+                        (remove-setting-by-arg0 *setting-control* 'mode-name))
+                      )
+                    (else ;; active
+                      ;; make sure target is grabbed
+                      (when (and *target* (!= (-> *target* next-state name) 'target-grab))
+                        (send-event *target* 'change-mode 'grab)
+                        )
+                      ;; lock freecam if no target
+                      (when (and (not *target*) (not (send-event *camera* 'query-state cam-fixed)))
+                        (set-setting-by-param *setting-control* 'mode-name 'cam-fixed 0 0)
+                        )
 
-                  ;; make sure target is grabbed
-                  (when (and *target* (!= (-> *target* next-state name) 'target-grab))
-                    (send-event *target* 'change-mode 'grab)
-                    )
-                  ;; lock freecam if no target
-                  (when (and (not *target*) (not (send-event *camera* 'query-state cam-fixed)))
-                    (set-setting-by-param *setting-control* 'mode-name 'cam-fixed 0 0)
-                    )
-
-                  ;; if we have an orb selected and the handle is nonzero...
-                  (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
-                    (let ((orb (the skill (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
-                      (when orb
-                        ;; highlight it
-                        ;; (orb-placer-highlight orb #t)
-
-                        ;; respond to controller input
-
-                        ;; X/Z based on camera
-                        (when (nonzero? (-> pad stick0-speed))
-                          (set! (-> vec x) (sin (-> pad stick0-dir)))
-                          (set! (-> vec y) 0.0)
-                          (set! (-> vec z) (cos (-> pad stick0-dir)))
-                          (set! (-> vec w) 0.0)
-                          ;; camera magic
-                          (vector-matrix*! vec vec (matrix-local->world #t #f))
-                          (vector-flatten! vec vec (-> *camera* local-down))
-                          (vector-float*! vec vec (* (-> pad stick0-speed) 512.0))
-                          
-                          ;; actually move orb
-                          (vector+! (-> orb root trans) (-> orb root trans) vec)
-                          (vector+! (-> orb base) (-> orb base) vec)
+                      (cond
+                        ;; prefer selected entity over orb placer selection
+                        ((and (-> *entity-debug-inspect* entity) (-> *entity-debug-inspect* entity extra process) (type-type? (-> *entity-debug-inspect* entity extra process type) process-drawable))
+                          ;; respond to controller input
+                          (debug-check-process-drawable-move (the process-drawable (-> *entity-debug-inspect* entity extra process)))
                           )
-                        
-
-                        (cond
-                          ;; fine tune/axis-aligned X/Z
-                          ((cpad-pressed? 0 down)
-                            (+! (-> orb root trans z) (meters 0.03))
-                            (+! (-> orb base z) (meters 0.03))
-                            )
-                          ((cpad-pressed? 0 up)
-                            (+! (-> orb root trans z) (meters -0.03))
-                            (+! (-> orb base z) (meters -0.03))
-                            )
-                          ((cpad-pressed? 0 right)
-                            (+! (-> orb root trans x) (meters 0.03))
-                            (+! (-> orb base x) (meters 0.03))
-                            )
-                          ((cpad-pressed? 0 left)
-                            (+! (-> orb root trans x) (meters -0.03))
-                            (+! (-> orb base x) (meters -0.03))
-                            )
-                          ;; Y (up/down)
-                          ((cpad-hold? 0 r2)
-                            (+! (-> orb root trans y) (meters 0.08))
-                            (+! (-> orb base y) (meters 0.08))
-                            )
-                          ((cpad-hold? 0 l2)
-                            (+! (-> orb root trans y) (meters -0.08))
-                            (+! (-> orb base y) (meters -0.08))
-                            )
-                          ((cpad-pressed? 0 r1)
-                            (+! (-> orb root trans y) (meters 0.03))
-                            (+! (-> orb base y) (meters 0.03))
-                            )
-                          ((cpad-pressed? 0 l1)
-                            (+! (-> orb root trans y) (meters -0.03))
-                            (+! (-> orb base y) (meters -0.03))
+                        ;; if we have an orb selected and the handle is nonzero...
+                        ((and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
+                          (let ((orb (the skill (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
+                            (when orb
+                              ;; respond to controller input
+                              (debug-check-process-drawable-move orb)
+                              )
                             )
                           )
                         )

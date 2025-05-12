@@ -41,25 +41,33 @@
   (none))
 
 ;; prints the position (root trans) of a process-drawable
-(defmacro pd-pos-m (procname)
-  `(let ((obj (the process-drawable 
-                (case ,procname :comp name= 
+(defun pd-pos-m ((procname string))
+  (let ((obj (the process-drawable 
+                (case procname :comp name= 
                   (("target" "")
                     *target*)
                   (else 
-                    (process-by-ename ,procname))
+                    (process-by-ename procname))
                   ))))
     (when obj
-      (let ((vec (-> obj root trans))
-            (q (-> obj root quat)))
-        (format 0 "~%~S:~%" ,procname)
-        (format 0 "~m ~m ~m  |||  " (-> vec x) (-> vec y) (-> vec z))
-        (format 0 " Q:  ~f  ~f  ~f  ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
-        (format 0 "~m, ~m, ~m  |||  " (-> vec x) (-> vec y) (-> vec z))
-        (format 0 " Q:  ~f, ~f, ~f, ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
-        )
-      )
+      (print-pd obj))
     (none)))
+
+(defun print-pd ((pd process-drawable))
+  (let ((vec (cond
+              ((type-type? (-> pd type) skill)
+                (-> (the skill pd) base))
+              (else
+                (-> pd root trans))))
+        (q (-> pd root quat)))
+    (format 0 "~%~S:~%" (-> pd name))
+    (format 0 "~m ~m ~m  |||  " (-> vec x) (-> vec y) (-> vec z))
+    (format 0 " Q:  ~f  ~f  ~f  ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
+    (format 0 "~m, ~m, ~m  |||  " (-> vec x) (-> vec y) (-> vec z))
+    (format 0 " Q:  ~f, ~f, ~f, ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
+    )
+  (none)
+  )
 
 (defmacro mod-copy-mesh-and-path (dst-name src-name)
   `(let ((dst (the nav-enemy (process-by-ename ,dst-name)))
@@ -600,6 +608,8 @@
       (quaternion-set! (-> arg0 quat) 0.0000  0.7038  0.0000  0.7103))
     (('burning-bush-39) (set-vector-meters! (-> arg0 extra trans) 969.1300 51.8899 560.2600) ;; at top of broken pipe jetboard grind before turning right
       (quaternion-set! (-> arg0 quat) 0.1823  0.7556  -0.1409  0.6130))
+    (('burning-bush-40) (set-vector-meters! (-> arg0 extra trans) 1082.8267 24.5556 607.5993) ;; on grindrail where vanilla orb challenge is
+      (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 -1.0))
 
     ;; ====== CTYINDA (industrial south) ========
     (('skill-180) (set-vector-meters! (-> arg0 extra trans) 810.42  8.6  1067.37 )) ;; between ramp and wall near port
@@ -613,6 +623,16 @@
       (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 -1.0))
     (('crate-1139) (set-vector-meters! (-> arg0 extra trans) 1060.56  9.86  1042.28 ) ;; behind pipes near funny collision hole by sewers
       (quaternion-set! (-> arg0 quat) 0.0 -1.0 0.0 0.0))
+    ;; (('burning-bush-28) (set-vector-meters! (-> arg0 extra trans) ) ;; 
+    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
+    (('burning-bush-41) (set-vector-meters! (-> arg0 extra trans) 1040.1009 7.9687 1156.8247) ;; between walkway ramp and wall near vinroom
+      (quaternion-set! (-> arg0 quat) 0.0 1.0 0.0 0.0))
+    (('burning-bush-42) (set-vector-meters! (-> arg0 extra trans) 1157.0253 7.9987 968.8895) ;; in corner where jinx eco grid mission ends
+      (quaternion-set! (-> arg0 quat)  0.0000  -0.6233  0.0000  0.7819))
+    ;; (('burning-bush-43) (set-vector-meters! (-> arg0 extra trans) ) ;; 
+    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
+    ;; (('burning-bush-49) (set-vector-meters! (-> arg0 extra trans) ) ;; 
+    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
 
     ;; ====== WASSTADA (spargus arena) =======
     (('skill-211) (set-vector-meters! (-> arg0 extra trans) 2322.89  94.74  -392.67 )) ;; straight up from flag proxy 
@@ -860,7 +880,7 @@
              (cpad-hold? 0 l3)
              (cpad-pressed? 0 r3))
     ;; probably trying to control jak/camera, turn off edit mode
-    (set! *orb-placer-enabled?* #f)
+    (set! *entity-placer-active?* #f)
     ;; toggle target
     (cond
       (*target*
