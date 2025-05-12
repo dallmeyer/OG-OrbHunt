@@ -598,7 +598,7 @@
 
 (defun mod-override-init-position ((obj process-drawable) (arg0 entity-actor))
   (case (-> obj name) :comp name=
-    ;; ====== CTYINDB (industrial north) =======
+    ;; ====== CTYINDB (industrial north) ======
     (('skill-134) (set-vector-meters! (-> arg0 extra trans)  1113.9781  8.9507  686.8352)) ;; crawl behind pipe in corner, towards ctyinda
     (('skill-178) (set-vector-meters! (-> arg0 extra trans)  1039.5916  21.5289  550.8125)) ;; "inside" ramp from fallen pipe, just have to go in from one side
     (('skill-179) (set-vector-meters! (-> arg0 extra trans)  986.4072  50.3802  601.7383)) ;; up high on wall near section with fallen pipe, abah from pipe underneath (no hint)
@@ -611,7 +611,7 @@
     (('burning-bush-40) (set-vector-meters! (-> arg0 extra trans) 1082.8267 24.5556 607.5993) ;; on grindrail where vanilla orb challenge is
       (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 -1.0))
 
-    ;; ====== CTYINDA (industrial south) ========
+    ;; ====== CTYINDA (industrial south) ======
     (('skill-180) (set-vector-meters! (-> arg0 extra trans) 810.42  8.6  1067.37 )) ;; between ramp and wall near port
     (('skill-181) (set-vector-meters! (-> arg0 extra trans) 852.8791 26.9578 872.4902)) ;; up in corner small crevice between buildings, above parking spot near ctyindb
     (('skill-182) (set-vector-meters! (-> arg0 extra trans) 992.6550 26.7788 825.8588)) ;; in corner behind circling pipe, boosted from platforms nearby
@@ -634,21 +634,133 @@
     ;; (('burning-bush-49) (set-vector-meters! (-> arg0 extra trans) ) ;; 
     ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
 
-    ;; ====== WASSTADA (spargus arena) =======
-    (('skill-211) (set-vector-meters! (-> arg0 extra trans) 2322.89  94.74  -392.67 )) ;; straight up from flag proxy 
-    (('urn-a-25) (set-vector-meters! (-> arg0 extra trans) 2272.74  98.13  -404.08 ) ;; up over invis wall onto awnings clockwise, flag proxy ofc
-      (set-vector! (-> arg0 quat) 0.1503      -0.7040      -0.0343      -0.6931))
-    (('urn-a-27) (set-vector-meters! (-> arg0 extra trans) 2436.15  95.60  -531.34 ) ;; way up on awnings counterclockwise, flag proxy, jetboard
-      (set-vector! (-> arg0 quat) -0.0116      -0.7445      -0.0268       0.6669))
-    (('urn-a-26) (set-vector-meters! (-> arg0 extra trans) 2278.66  32.01  -471.37 )) ;; healthpack - on training course "island"
-    
-    ;; ====== WASSTADB (training course) =======
-    (('wstd-training-dummy-1) (set-vector-meters! (-> arg0 extra trans) 2348.34  41.00  -458.75 ) ;; on small side ledge probably nobody notices
-      (quaternion-set! (-> arg0 quat) 0.0000       0.7088       0.0000      -0.7053))
-    (('wstd-training-dummy-978) (set-vector-meters! (-> arg0 extra trans) 2334.68  41.05  -519.24 ) ;; on side steps u only see if u suck
-      (quaternion-set! (-> arg0 quat) 0.0000      -0.7041       0.0000      -0.7100))
+    ;; ====== CTYGENB (main town ruins) ======
+    (('skill-184) (set-vector-meters! (-> arg0 extra trans)  142.4263  5.7946  -96.2793)) ;; under rubble at funny oob spot :tf:
+    (('skill-189) (set-vector-meters! (-> arg0 extra trans)  385.6683 19.9105 -280.8059)) ;; near stadium entrance, IJ wall hint
+    (('skill-135) (set-vector-meters! (-> arg0 extra trans)  385.6057 8.3034 -278.8738)) ;; behind IJ wall from ^
+    ;; (('skill-155) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-154) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-168) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1140) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1141) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('burning-bush-25) (set-vector-meters! (-> arg0 extra trans) ) ;; 
+    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
+    ;; (('burning-bush-31) (set-vector-meters! (-> arg0 extra trans) ) ;; 
+    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
+    ;; (('burning-bush-32) (set-vector-meters! (-> arg0 extra trans) ) ;; 
+    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
+    ;; (('burning-bush-33) (set-vector-meters! (-> arg0 extra trans) ) ;; 
+    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
 
-    ;; ====== WASCITYA (spargus east) =======
+    ;; ====== NSTA (metal head nest (cave) (north) ()) ======
+    ;; (('skill-234) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-233) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-235) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-229) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-230) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-231) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-232) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-228) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; ====== TEMPLEX (monk temple exterior) ======
+    ;; (('skill-212) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-213) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-214) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; ====== TEMPLED (monk temple light jak flight) ======
+    ;; (('urn-a-15) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; ====== TEMPLEB (monk temple poles/rotators/precursor triangle room) ======
+    ;; (('skill-212) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-213) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-214) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-a-33) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-b-25) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-a-32) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-c-13) (set-vector-meters! (-> arg0 extra trans) )) ;; triple orb!
+    ;; (('urn-a-34) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-a-31) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-b-26) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-c-30) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-c-31) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-c-29) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-b-7) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; ====== CTYSLUMC (new haven north) ======
+    ;; (('skill-171) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-170) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-169) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-207) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; ====== CTYSLUMB (new haven south) ======
+    ;; (('skill-175) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-172) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-206) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-205) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-174) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-173) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; ====== CTYPORT (port) ======
+    ;; (('skill-144) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-145) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-146) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-147) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-227) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-186) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-157) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-185) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-156) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-158) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-143) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-148) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-159) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-160) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-161) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-164) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-167) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-162) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-163) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-165) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-166) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-225) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-226) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-188) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-187) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1142) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1143) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1326) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1345) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1344) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    
+    ;; ====== SEWM (sewers 1.2) ======
+    ;; (('crate-1236) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1237) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; ====== SEWO (sewers 1.4) ======
+    ;; (('crate-1273) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1270) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    
+    ;; ====== SEWH (sewers 2.3) ======
+    ;; (('crate-1275) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1278) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1277) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; ====== SEWB (sewers 3.1) ======
+    ;; (('crate-1266) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1309) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1268) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; ====== SEWD (sewers 3.3) ======
+    ;; (('crate-1303) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1304) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1306) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; ====== CTYSLUMA (slums) ======
+    ;; (('skill-176) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1134) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1133) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; ====== WASCITYA (spargus east) ======
     (('skill-153) (set-vector-meters! (-> arg0 extra trans) 2190.15  52.7  -274.97 )) ;; on rooftop between wascityb/wasstada, jump from awning trampoline behind invis wall and up
     (('skill-215) (set-vector-meters! (-> arg0 extra trans) 2268.1621 35.1424 -327.1119)) ;; behind support beam against rock wall on rooftop left of wasstada entrance
     (('skill-152) (set-vector-meters! (-> arg0 extra trans) 2155.9523 51.5318 -168.5149)) ;; rooftop above torch on wall opposite wasstada towards wascityb, leaper shenanigans
@@ -695,7 +807,7 @@
       (set-vector-meters! (-> arg0 extra trans) 2411.80  40.28  -281.46 ) ;; 
       )
 
-    ;; ===== WASCITYB (spargus west) ======
+    ;; ====== WASCITYB (spargus west) ======
     (('skill-139) (set-vector-meters! (-> arg0 extra trans) 2017.3160 55.1388 -374.2029)) ;; in torch along wall on right side leading to throne room
     (('skill-133) (set-vector-meters! (-> arg0 extra trans) 2020.5428 79.6620 -374.8247)) ;; abah from wascityb-skill-03 hint from ^ torch
     (('skill-217) (set-vector-meters! (-> arg0 extra trans) 1977.4611  32.5940  -436.0137)) ;; small crevice just left of elevator to throne room
@@ -722,9 +834,40 @@
       (quaternion-set! (-> arg0 quat) -0.0298      -0.6506       0.0735       0.7552)) 
     (('wascity-market-sack-a-11) (set-vector-meters! (-> arg0 extra trans) 1584.20  34.75  -291.85 )) ;; crevice between stoops, housing island (near beach)
      
+    ;; ====== WASSTADA (spargus arena) ======
+    (('skill-211) (set-vector-meters! (-> arg0 extra trans) 2322.89  94.74  -392.67 )) ;; straight up from flag proxy 
+    (('urn-a-25) (set-vector-meters! (-> arg0 extra trans) 2272.74  98.13  -404.08 ) ;; up over invis wall onto awnings clockwise, flag proxy ofc
+      (set-vector! (-> arg0 quat) 0.1503      -0.7040      -0.0343      -0.6931))
+    (('urn-a-27) (set-vector-meters! (-> arg0 extra trans) 2436.15  95.60  -531.34 ) ;; way up on awnings counterclockwise, flag proxy, jetboard
+      (set-vector! (-> arg0 quat) -0.0116      -0.7445      -0.0268       0.6669))
+    (('urn-a-26) (set-vector-meters! (-> arg0 extra trans) 2278.66  32.01  -471.37 )) ;; healthpack - on training course "island"
+    
+    ;; ====== WASPALA (spargus palace) ======
+    ;; (('skill-209) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-222) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-210) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-a-16) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-c-17) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; ====== STADIUM (stadium ruins east) ======
+    ;; (('skill-239) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-223) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-224) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-236) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-238) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-237) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1214) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1216) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('crate-1217) (set-vector-meters! (-> arg0 extra trans) )) ;; double orb!
+
+    ;; ====== WASSTADB (training course) ======
+    (('wstd-training-dummy-1) (set-vector-meters! (-> arg0 extra trans) 2348.34  41.00  -458.75 ) ;; on small side ledge probably nobody notices
+      (quaternion-set! (-> arg0 quat) 0.0000       0.7088       0.0000      -0.7053))
+    (('wstd-training-dummy-978) (set-vector-meters! (-> arg0 extra trans) 2334.68  41.05  -519.24 ) ;; on side steps u only see if u suck
+      (quaternion-set! (-> arg0 quat) 0.0000      -0.7041       0.0000      -0.7100))
+
     )
   (none))
-  
 
 ;; (defun mod-turbo-jetboard? () 
 ;;   (or (= (level-status *level* 'stadiumb) 'active)

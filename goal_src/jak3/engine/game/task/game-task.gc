@@ -18138,7 +18138,7 @@
             :name "city-bbush-get-to-28-introduction"
             :when-open (new 'static 'boxed-array :type game-task-event
               (new 'static 'game-task-event
-                :actor (game-task-actor burning-bush-genb-3)
+                :actor (game-task-actor burning-bush-genb-3) ;; should this be genb-2?
                 :action (game-task-action show)
                 :tex (game-task-icon gaticon-04)
                 :scene "t-bb10i"
@@ -18262,7 +18262,7 @@
             :name "city-bbush-get-to-29-introduction"
             :when-open (new 'static 'boxed-array :type game-task-event
               (new 'static 'game-task-event
-                :actor (game-task-actor burning-bush-genb-4)
+                :actor (game-task-actor burning-bush-genb-4) ;; should this be genb-3?
                 :action (game-task-action show)
                 :tex (game-task-icon gaticon-04)
                 :scene "t-bb04i"
@@ -18386,7 +18386,7 @@
             :name "city-bbush-get-to-30-introduction"
             :when-open (new 'static 'boxed-array :type game-task-event
               (new 'static 'game-task-event
-                :actor (game-task-actor burning-bush-genb-5)
+                :actor (game-task-actor burning-bush-genb-5) ;; should this be genb-4?
                 :action (game-task-action show)
                 :tex (game-task-icon gaticon-04)
                 :scene "t-bb06i"

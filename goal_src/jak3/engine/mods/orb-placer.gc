@@ -83,7 +83,7 @@
               (-> *orb-placer-temp-strs* i)
               (-> orb-proc base)
               (if is-selected?
-                (font-color red)
+                (if *entity-placer-edit-mode?* (font-color green) (font-color red))
                 (font-color white))
               (if is-selected?
                 2.0
