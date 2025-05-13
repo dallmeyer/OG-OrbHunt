@@ -638,8 +638,8 @@
     (('skill-184) (set-vector-meters! (-> arg0 extra trans)  142.4263  5.7946  -96.2793)) ;; under rubble at funny oob spot :tf:
     (('skill-189) (set-vector-meters! (-> arg0 extra trans)  385.6683 19.9105 -280.8059)) ;; near stadium entrance, IJ wall hint
     (('skill-135) (set-vector-meters! (-> arg0 extra trans)  385.6057 8.3034 -278.8738)) ;; behind IJ wall from ^
-    ;; (('skill-155) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-154) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-155) (set-vector-meters! (-> arg0 extra trans)  275.1310  33.9039  -45.5778)) ;; up in west, southish corner, above bbush. concussor crevice jumps
+    (('skill-154) (set-vector-meters! (-> arg0 extra trans) 250.7003 1.3349 -270.3506)) ;; between rubble and ramp from canal
     ;; (('skill-168) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('crate-1140) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('crate-1141) (set-vector-meters! (-> arg0 extra trans) )) ;; 
@@ -649,8 +649,8 @@
     ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
     ;; (('burning-bush-32) (set-vector-meters! (-> arg0 extra trans) ) ;; 
     ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
-    ;; (('burning-bush-33) (set-vector-meters! (-> arg0 extra trans) ) ;; 
-    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
+    (('burning-bush-33) (set-vector-meters! (-> arg0 extra trans) 268.3970 8.0664 -44.4095) ;; in west, southish corner
+      (quaternion-set! (-> arg0 quat) 0.0 1.0 0.0 0.0))
 
     ;; ====== NSTA (metal head nest (cave) (north) ()) ======
     ;; (('skill-234) (set-vector-meters! (-> arg0 extra trans) )) ;; 

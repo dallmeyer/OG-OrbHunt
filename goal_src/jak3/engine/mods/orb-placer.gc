@@ -212,6 +212,7 @@
   (none)
   )
 
+(define *orb-offset-tmp-vec* (new 'global 'vector))
 (define *last-deactivate-time* (the-as time-frame #f))
 (defun debug-check-process-drawable-move ((proc process-drawable))
   (let ((pad (-> *cpad-list* cpads 0))
@@ -343,7 +344,6 @@
   (none))
 
 ;; called from run-every-frame to ensure orb-placer is spawned/killed
-(define *orb-offset-tmp-vec* (new 'global 'vector))
 (define *orb-placer-tmp-str* (new 'global 'string 2048 (the-as string #f)))
 (defun orb-placer-maintenance ()
   (when *debug-segment*
