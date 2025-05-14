@@ -640,15 +640,15 @@
     (('skill-135) (set-vector-meters! (-> arg0 extra trans)  385.6057 8.3034 -278.8738)) ;; behind IJ wall from ^
     (('skill-155) (set-vector-meters! (-> arg0 extra trans)  275.1310  33.9039  -45.5778)) ;; up in west, southish corner, above bbush. concussor crevice jumps
     (('skill-154) (set-vector-meters! (-> arg0 extra trans) 250.7003 1.3349 -270.3506)) ;; between rubble and ramp from canal
-    ;; (('skill-168) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1140) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1141) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('burning-bush-25) (set-vector-meters! (-> arg0 extra trans) ) ;; 
-    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
-    ;; (('burning-bush-31) (set-vector-meters! (-> arg0 extra trans) ) ;; 
-    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
-    ;; (('burning-bush-32) (set-vector-meters! (-> arg0 extra trans) ) ;; 
-    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
+    (('skill-168) (set-vector-meters! (-> arg0 extra trans)  344.9586 25.0751 -81.9843)) ;; on pole above door/awning in lil pocket near new haven
+    (('crate-1140) (set-vector-meters! (-> arg0 extra trans) 357.54  33.61  -69.56 )) ;; on top of vents near new haven, extended concussor from ^
+    (('crate-1141) (set-vector-meters! (-> arg0 extra trans)  142.6752 18.7872 -133.9132)) ;; under rubble with grind rail in middle area
+    (('burning-bush-25) (set-vector-meters! (-> arg0 extra trans) 334.2557 8.0999 -55.3177) ;; 
+      (quaternion-set! (-> arg0 quat) 0.0000  0.9999  0.0000  -0.0003))
+    (('burning-bush-31) (set-vector-meters! (-> arg0 extra trans) 381.4006 8.0999 -134.5408) ;; 
+      (quaternion-set! (-> arg0 quat) 0.0000  0.5319  -0.0000  -0.8467))
+    (('burning-bush-32) (set-vector-meters! (-> arg0 extra trans) 278.3242 7.9766 -315.7193) ;; 
+      (quaternion-set! (-> arg0 quat) 0.0000  0.1879  0.0000  -0.9821))
     (('burning-bush-33) (set-vector-meters! (-> arg0 extra trans) 268.3970 8.0664 -44.4095) ;; in west, southish corner
       (quaternion-set! (-> arg0 quat) 0.0 1.0 0.0 0.0))
 

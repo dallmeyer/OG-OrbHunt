@@ -411,6 +411,15 @@
                       ;; unlock freecam if no target
                       (when (and (not *target*) (get-setting *setting-control* 'mode-name))
                         (remove-setting-by-arg0 *setting-control* 'mode-name))
+                      ;; orb cleanup
+                      (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
+                        (let ((orb (the skill (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
+                          (when orb
+                            (logclear! (-> orb draw status) (draw-control-status force-fade))
+                            (set! (-> orb draw force-fade) (the-as uint 128))
+                            )
+                          )
+                        )
                       )
                     (else ;; active
                       ;; make sure target is grabbed
@@ -434,6 +443,13 @@
                             (when orb
                               ;; respond to controller input
                               (debug-check-process-drawable-move orb)
+                              ;; cycle alpha every so often to indicate edit mode
+                              (when (= (mod (get-current-time) 90) 0)
+                                (logior! (-> orb draw status) (draw-control-status force-fade))
+                                (if (< (-> orb draw force-fade) (the-as uint 64))
+                                  (set! (-> orb draw force-fade) (the-as uint 100))
+                                  (set! (-> orb draw force-fade) (the-as uint 48)))
+                                )
                               )
                             )
                           )

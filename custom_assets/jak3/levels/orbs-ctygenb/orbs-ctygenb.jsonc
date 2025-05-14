@@ -128,8 +128,28 @@
       "lump": {
         "name":"ctygenb-skill-08"
       }
+    },
+    {
+      "trans": [   343.6113, 18.7863, -155.0029], // red light mid east bottom half
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  343.6113, 18.7863, -155.0029, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenb-skill-09",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 344.5361, 39.8554, -157.0796], // way up on pipe mid east bottom half, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 344.5361, 39.8554, -157.0796, 10], // bounding sphere
+      "lump": {
+        "name":"ctygenb-skill-10"
+      }
     }//,
-    
     
 
     // GHOSTS
