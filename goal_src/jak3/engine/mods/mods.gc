@@ -653,11 +653,11 @@
       (quaternion-set! (-> arg0 quat) 0.0 1.0 0.0 0.0))
 
     ;; ====== NSTA (metal head nest (cave) (north) ()) ======
-    ;; (('skill-234) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-233) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-235) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-229) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-230) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-234) (set-vector-meters! (-> arg0 extra trans) 1797.5676  -5.1098  1778.1246 )) ;; up in hole in ceiling in entrance hallway, extended concussor from IJ on yellow/orange egg thing
+    (('skill-233) (set-vector-meters! (-> arg0 extra trans) 1822.1123 -7.2554 1753.7292)) ;; ^ again but now quad chain IJ eggs lmao
+    (('skill-235) (set-vector-meters! (-> arg0 extra trans)  1829.3707  -44.7529  1644.6341)) ;; near vanilla orbs, but tucked into corner you kinda crouch walk into 
+    (('skill-229) (set-vector-meters! (-> arg0 extra trans) 1850.85  -30.97  1612.76 )) ;; on yellow/orange egg above where vanilla orbs are
+    (('skill-230) (set-vector-meters! (-> arg0 extra trans)  1546.9666  -90.9417  862.4261)) ;; in corner behind stalags at top of first room, can crawl in/out from right side
     ;; (('skill-231) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('skill-232) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('skill-228) (set-vector-meters! (-> arg0 extra trans) )) ;; 
