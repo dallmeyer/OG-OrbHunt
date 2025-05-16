@@ -658,9 +658,9 @@
     (('skill-235) (set-vector-meters! (-> arg0 extra trans)  1829.3707  -44.7529  1644.6341)) ;; near vanilla orbs, but tucked into corner you kinda crouch walk into 
     (('skill-229) (set-vector-meters! (-> arg0 extra trans) 1850.85  -30.97  1612.76 )) ;; on yellow/orange egg above where vanilla orbs are
     (('skill-230) (set-vector-meters! (-> arg0 extra trans)  1546.9666  -90.9417  862.4261)) ;; in corner behind stalags at top of first room, can crawl in/out from right side
-    ;; (('skill-231) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-232) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-228) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-231) (set-vector-meters! (-> arg0 extra trans) 1529.72  -116.1  861.99 )) ;; first room, in lower corner near black hole
+    (('skill-232) (set-vector-meters! (-> arg0 extra trans)  1658.8945  -116.9093  994.7319)) ;; first room, under entrance ramp near funny oob
+    (('skill-228) (set-vector-meters! (-> arg0 extra trans) 1602.0628 -115.3197 866.8390)) ;; in crevice / almost black hole between wall and ramp
 
     ;; ====== TEMPLEX (monk temple exterior) ======
     ;; (('skill-212) (set-vector-meters! (-> arg0 extra trans) )) ;; 
