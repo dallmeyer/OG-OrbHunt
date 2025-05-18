@@ -4,5 +4,7 @@
 ;; the actual file name still needs to be 8.3
 ("O83.DGO"
  (
+  "oasis-defense.o"
+  "hellcat-ag.go"
   "orbs-factoryb.go"
   ))

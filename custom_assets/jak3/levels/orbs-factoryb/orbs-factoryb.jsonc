@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["hellcat-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -46,6 +46,27 @@
    "textures": [],
 
   "actors" : [
+    {
+      "trans": [ 376.34,  412.5711,  408.22 ], // hellcat to lfacrm1
+      "etype": "desoasis-hellcat",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0.0000, 0.8419, 0.0000, 0.5395], // quaternion
+      "bsphere": [ 376.34,  412.5711,  408.22 , 10], // bounding sphere
+      "lump": {
+        "name":"factoryb-hellcat-1"
+      }
+    },
+    {
+      "trans": [ 376.34,  412.5711,  408.22 ], // warp to lfacrm1
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0000,      -0.8683,       0.0000,       0.4959], // quaternion
+      "bsphere": [  376.34,  412.5711,  408.22 , 10], // bounding sphere
+      "lump": {
+        "name":"factoryb-warp-gate-1"
+      }
+    }//,
+
     // {
     //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
     //   "etype": "skill",  // actor type

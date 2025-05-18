@@ -17171,7 +17171,11 @@
                       )
                     )
                   :callback-list '((6 . *templex-water-texture-anim-array*))
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #x20 #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-templex display) #f #f #f #f)
+                    )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)
                   :fog-mult 1.0
@@ -18779,7 +18783,7 @@
                   :level-flags (level-flags ocean-near-translucent)
                   :packages '()
                   :run-packages '("common")
-                  :memory-mode (level-memory-mode borrow)
+                  :memory-mode (level-memory-mode small-edge)
                   :music-bank #f
                   :extra-sound-bank #f
                   :mood-func 'update-mood-lfacrm1
@@ -18803,7 +18807,26 @@
                       :vehicle-type #x1b
                       :want-count 3
                       :want (new 'static 'inline-array level-buffer-state-small 4
-                        (new 'static 'level-buffer-state-small :name 'towerc :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'lfacrm1 :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'ctywide-ff :display? #f)
+                        (new 'static 'level-buffer-state-small :name 'ctyslumc :display? #f)
+                        (new 'static 'level-buffer-state-small)
+                        )
+                      :want-sound (new 'static 'array symbol 3 'ctyslmch #f #f)
+                      )
+                    (new 'static 'continue-point
+                      :name "lfacrm1-warp"
+                      :level 'lfacrm1
+                      :flags (continue-flags no-auto)
+                      :trans (new 'static 'vector :x (meters 689.1457) :y (meters 2.4221) :z (meters -523.1431) :w 1.0)
+                      :camera-trans (new 'static 'vector  :x (meters 692.6090) :y (meters 6.7159) :z (meters -531.7631) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x7fa3 0 #x985))
+                      :camera-rot (new 'static 'array int16 9 30769 0 11265 -1450 32494 3961 -11172 -4218 30513)
+                      :on-goto #f
+                      :vis-nick 'towerc
+                      :want-count 3
+                      :want (new 'static 'inline-array level-buffer-state-small 4
+                        (new 'static 'level-buffer-state-small :name 'lfacrm1 :display? 'display)
                         (new 'static 'level-buffer-state-small :name 'ctywide-ff :display? #f)
                         (new 'static 'level-buffer-state-small :name 'ctyslumc :display? #f)
                         (new 'static 'level-buffer-state-small)
@@ -18812,7 +18835,11 @@
                       )
                     )
                   :callback-list '()
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #x500 #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-lfacrm1 display) #f #f #f #f)
+                    )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)
                   :fog-mult 1.0
@@ -18979,12 +19006,29 @@
                          )
                        :want-sound (new 'static 'array symbol 3 'factory1 'factory2 'factory3)
                        )
+                      (new 'static 'continue-point
+                       :name "factoryb-warp"
+                       :level 'factoryb
+                       :flags (continue-flags no-auto)
+                       :trans (new 'static 'vector :x (meters 363.14) :y (meters 410.73) :z (meters 409.80) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 367.4524) :y (meters 415.8853) :z (meters 421.5327) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -23457 0 #x595a))
+                       :camera-rot (new 'static 'array int16 9 -29797 0 13630 -1556 32552 -3402 -13541 -3742 -29602)
+                       :on-goto #f
+                       :vis-nick 'factoryb
+                       :want-count 2
+                       :want (new 'static 'inline-array level-buffer-state-small 2
+                         (new 'static 'level-buffer-state-small :name 'factorya :display? 'display)
+                         (new 'static 'level-buffer-state-small :name 'factoryb :display? 'display)
+                         )
+                       :want-sound (new 'static 'array symbol 3 'factory1 'factory2 'factory3)
+                       )
                      )
                    :callback-list '((35 . factoryb-activate) (6 . *factoryb-water-texture-anim-array*))
                    :borrow (new 'static 'level-borrow-info
                      :alias #f
-                     :borrow-size (new 'static 'array uint16 5 #xc4e #x0 #x0 #x0 #x0)
-                     :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                     :borrow-size (new 'static 'array uint16 5 #xc4e #x100 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(lfaccity display) '(orbs-factoryb display) #f #f #f)
                      )
                    :bottom-height (meters -150)
                    :fog-height (meters 80)

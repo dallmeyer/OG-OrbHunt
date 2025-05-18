@@ -46,27 +46,110 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [   4389.9326, 35.7684, 3993.7333], // around left/back of wall as you first get to temple from desert
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   4389.9326, 35.7684, 3993.7333, 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-01",
+        "bob-scale": ["float", 0.4] // less bob
+      }
+    },
+    {
+      "trans": [ 4241.5029, 66.0604, 3896.4008 ], // crevice in rocks on right before right turn towards temple
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 4241.5029, 66.0604, 3896.4008 , 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-02"
+      }
+    },
+    {
+      "trans": [ 4234.88,  74.14,  3897.64 ], // crevice in rocks up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 4234.88,  74.14,  3897.64 , 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-03",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 4231.62,  98.05,  3909.96 ], // atop rock pillar on right before right turn towards temple, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 4231.62,  98.05,  3909.96 , 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-04"
+      }
+    },
+    {
+      "trans": [  4277.0952, 110.1016, 4188.1010 ], // right wall approaching temple, crevice near waterfall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  4277.0952, 110.1016, 4188.1010, 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-05"
+      }
+    },
+    {
+      "trans": [  4268.7207, 100.6715, 4201.1850 ], // right wall approaching temple, behind tree near waterfall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  4268.7207, 100.6715, 4201.1850, 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-06",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  4263.5532, 110.9937, 4200.6694 ], // right wall approaching temple, behind tree near waterfall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  4263.5532, 110.9937, 4200.6694, 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-07",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  4255.9785, 124.4804, 4202.7192 ], // right wall approaching temple, behind tree near waterfall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  4255.9785, 124.4804, 4202.7192, 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-08"
+      }
+    },
+    {
+      "trans": [ 4098.31,  188.69,  4298.36 ], // top most part of 'fence' outside temple
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  4098.31,  188.69,  4298.36 , 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-09"
+      }
+    },
+    {
+      "trans": [  4101.6684, 138.4788, 4342.5336 ], // crevice between left wall and 'fence' outside temple (come from top to get over invis wall)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   4101.6684, 138.4788, 4342.5336 , 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-10"
+      }
+    }//,
     
     
 

@@ -1464,7 +1464,11 @@
     (format #t "~%(static-continue-point ~A ()~%" (symbol->string-debug (-> v1-1 name)))
     )
   (format #t "                       (target :x (meters ~m) :y (meters ~m) :z (meters ~m) " (-> arg0 trans x) (-> arg0 trans y) (-> arg0 trans z))
-  (format #t "~f ~f ~f ~f)~%" (-> arg0 quat x) (-> arg0 quat y) (-> arg0 quat z) (-> arg0 quat w))
+  (format #t "~d ~d ~d ~d)~%" 
+    (the int (* 32767.0 (-> arg0 quat x)))
+    (the int (* 32767.0 (-> arg0 quat y)))
+    (the int (* 32767.0 (-> arg0 quat z)))
+    (the int (* 32767.0 (-> arg0 quat w))))
   (let ((gp-1 *math-camera*))
     (format
       #t

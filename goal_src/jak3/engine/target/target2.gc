@@ -1814,7 +1814,7 @@
   (set! (-> v1-28 name) 'float)
   (set! (-> v1-28 target-speed) 81920.0)
   (set! (-> v1-28 transv-max) 81920.0)
-  (set! (-> v1-28 flags) (surface-flag gun-off))
+  ;; (set! (-> v1-28 flags) (surface-flag gun-off)) ;; allow gun out while floating
   (set! *float-mods* v1-28)
   )
 

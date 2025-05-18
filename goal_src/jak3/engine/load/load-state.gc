@@ -298,7 +298,7 @@
   (when arg2
     (let ((s1-0 (lookup-level-info arg2)))
       ;; (inspect s1-0)
-      (format 0 "add-want-level ~A~%" arg2)
+      ;; (format 0 "add-want-level ~A~%" arg2)
       (cond
         ((>= (-> arg1 0) 10)
          )
@@ -352,7 +352,7 @@
                         (a2-2 (car v1-38))
                         (a3-2 (car (cdr v1-38)))
                         )
-                    (format 0 "load-state ~A borrow loop ~A ~A~%" arg2 a2-2 a3-2)
+                    ;; (format 0 "load-state ~A borrow loop ~A ~A~%" arg2 a2-2 a3-2)
                     (set! a3-2 (cond
                                  ((or (not arg3) (= a3-2 'copy))
                                   arg3

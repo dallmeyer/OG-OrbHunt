@@ -663,9 +663,9 @@
     (('skill-228) (set-vector-meters! (-> arg0 extra trans) 1602.0628 -115.3197 866.8390)) ;; in crevice / almost black hole between wall and ramp
 
     ;; ====== TEMPLEX (monk temple exterior) ======
-    ;; (('skill-212) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-213) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-214) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-212) (set-vector-meters! (-> arg0 extra trans) 4363.12  72.31  4008.60 )) ;; up on left wall as you first approach temple from desert (need to go behind invis wall from far left/early on)
+    (('skill-213) (set-vector-meters! (-> arg0 extra trans) 4375.0493 83.5116 4014.6745)) ;; in crevice up on left wall, follow from ^
+    (('skill-214) (set-vector-meters! (-> arg0 extra trans) 4396.57  73.89  4048.61 )) ;; around back of left wall before it gets OOB-y, follow from ^
 
     ;; ====== TEMPLED (monk temple light jak flight) ======
     ;; (('urn-a-15) (set-vector-meters! (-> arg0 extra trans) )) ;; 
@@ -1012,7 +1012,7 @@
     (orb-placer-maintenance)
     )
     
-  (task-close! "city-win-resolution") ;; NG+ or something
+  (task-close! "city-win-introduction") ;; NG+ or something
 ;;   (task-close! "city-oracle-level3-training") ;; close oracle stuff
 ;;   (logior! (-> *game-info* features) (game-feature board darkjak darkjak-bomb0 darkjak-bomb1 darkjak-invinc darkjak-giant)) ;; give board and dark jak stuff
 
@@ -1237,6 +1237,21 @@
     )
   )
 
+;; allow lfacrm1 door to open (ctyslumc->ffacrm1, shuttle behind freehq)
+(let ((door (entity-by-name "cty-door-3"))
+      (r1804 (region-lookup-by-id 1804))
+      )
+  (when door
+    (set! (cdr (res-lump-struct door 'on-activate pair)) '(((task-closed? "factory-sky-battle-introduction") (when (send-event self 'front) (want-display 'lfacrm1 'display)))))
+    (set! (cdr (res-lump-struct door 'on-cross pair)) '(#f))
+    (set! (cdr (res-lump-struct door 'on-notice pair)) '(((task-closed? "factory-sky-battle-introduction") '(ctyslumc lfacrm1))))
+    ;; (set! (cdr (res-lump-struct door 'on-notice pair)) '(((and (task-closed? "factory-sky-battle-introduction") (or (eq? (level-status? 'lfacrm1) 'loaded) (eq? (level-status? 'lfacrm1) 'active))) '(ctyslumc factorya))))
+    )
+  (when r1804 
+    (set! (-> r1804 on-enter) '(when (task-closed? "factory-sky-battle-introduction") (want-load 'ctywide-ff 'ctyslumc 'lfacrm1)))
+    )
+  )
+  
   ;; mooon things
 ;;   (cond
 ;;     ((and (pause-allowed?) (= (level-status *level* 'mooon) 'active))
@@ -1366,7 +1381,7 @@
       (true! *display-bug-report*)
       (when (cpad-hold? 0 start)
         ;; mark game won and give cheats
-        (task-close! "city-win-resolution")
+        (task-close! "city-win-introduction")
         )
       (logior! (-> *game-info* secrets) (game-secrets endless-dark endless-light invulnerable endless-ammo board-fast vehicle-hit-points unlimited-turbos))
       )
