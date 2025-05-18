@@ -1252,6 +1252,27 @@
     )
   )
   
+;; keep lfacrm2 elevators (lfacrm2->factoryc, into interior) elevator active; work in reverse
+(let ((elev1 (entity-by-name "fac-elevator-a-1"))
+      (elev1-proc (the elevator (process-by-ename "fac-elevator-a-1")))
+      (elev2 (entity-by-name "fac-elevator-a-2"))
+      (elev2-proc (the elevator (process-by-ename "fac-elevator-a-2"))))
+  (when elev1 
+    (set! (cdr (res-lump-struct elev1 'on-deactivate pair)) '((send-event self 'use-camera #f)))
+    (set! (cdr (res-lump-struct elev1 'on-notice pair)) '((when (task-closed? "factory-assault-indax-1") #f)))
+    )
+  ;; (when elev1-proc 
+  ;;   (set! (-> elev1-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mined #f)))))
+  ;;   )
+  (when elev2
+    (set! (cdr (res-lump-struct elev2 'on-deactivate pair)) '((send-event self 'use-camera #f)))
+    (set! (cdr (res-lump-struct elev2 'on-notice pair)) '((when (task-closed? "factory-assault-resolution") #f)))
+    )
+  ;; (when elev2-proc 
+  ;;   (set! (-> elev2-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mined #f)))))
+  ;;   )
+  )
+  
   ;; mooon things
 ;;   (cond
 ;;     ((and (pause-allowed?) (= (level-status *level* 'mooon) 'active))

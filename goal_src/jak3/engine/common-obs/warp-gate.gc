@@ -502,16 +502,22 @@
           (("lfacrm1-warp-gate-1") ;; lfacrm1 -> factoryb
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
             (set! (-> this continue) (get-continue-by-name *game-info* "factoryb-warp"))
-            (set! (-> this on-activate) '())
-            (set! (-> this wait-for) '())
-            (set! (-> this on-close) '())
             )
           (("factoryb-warp-gate-1") ;; factoryb -> lfacrm1
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
             (set! (-> this continue) (get-continue-by-name *game-info* "lfacrm1-warp"))
-            (set! (-> this on-activate) '())
-            (set! (-> this wait-for) '())
-            (set! (-> this on-close) '())
+            )
+          (("factoryb-warp-gate-2") ;; factoryb -> lfacrm2
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "lfacrm2-warp"))
+            )
+          (("lfacrm2-warp-gate-1") ;; lfacrm2 -> factoryb
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "factoryb-warp-2"))
+            )
+          (("factoryd-warp-gate-1") ;; factoryd -> vinroom
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "vinroom-warp"))
             )
           (else
             (set! (-> this continue) #f)
@@ -602,7 +608,18 @@
               )
             (set! (-> gp-0 flags) (font-flags shadow kerning large))
             (print-game-text
-              (lookup-text! *common-text* (text-id text-0083) #f)
+              (case-str (-> self name)
+                (("factoryb-warp-gate-2") ;; factoryb -> lfacrm2
+                  "Press ~Y~22L<~Z~Y~26L;~Z~Y~1L>~Z~Y~23L[~Z~+26H to enter."
+                  )
+                (("lfacrm2-warp-gate-1") ;; lfacrm2 -> factoryb
+                  "Press ~Y~22L<~Z~Y~26L;~Z~Y~1L>~Z~Y~23L[~Z~+26H to exit."
+                  )
+                (else
+                  ;; Press TRIANGLE to use.
+                  (lookup-text! *common-text* (text-id text-0083) #f)
+                  )
+                )
               gp-0
               #f
               44
@@ -662,7 +679,7 @@
     (set! (-> *level* play?) #t)
     (apply-settings *setting-control*)
     (case-str (-> self name)
-      (("lfacrm1-warp-gate-1" "factoryb-warp-gate-1") 
+      (("lfacrm1-warp-gate-1" "factoryb-warp-gate-1" "factoryb-warp-gate-2" "lfacrm2-warp-gate-1") 
         ;; skip target-warp-out, just go to continue
         )
       (else

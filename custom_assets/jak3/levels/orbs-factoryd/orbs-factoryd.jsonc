@@ -46,6 +46,16 @@
    "textures": [],
 
   "actors" : [
+    {
+      "trans": [ 249.97,  524.59,  -155.17  ], // warp to vinroom
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0000,      0.0,       0.0000,      1.0], // quaternion
+      "bsphere": [  249.97,  524.59,  -155.17  , 10], // bounding sphere
+      "lump": {
+        "name":"factoryd-warp-gate-1"
+      }
+    }//,
     // {
     //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
     //   "etype": "skill",  // actor type

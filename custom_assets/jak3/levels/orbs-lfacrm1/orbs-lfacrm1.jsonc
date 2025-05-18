@@ -64,30 +64,69 @@
       "lump": {
         "name":"lfacrm1-warp-gate-1"
       }
+    },
+    
+    {
+      "trans": [  672.0440, 2.9398, -481.2869], // behind coils/boxes 
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 672.0440, 2.9398, -481.2869, 10], // bounding sphere
+      "lump": {
+        "name":"lfacrm1-skill-01"
+      }
+    },
+    {
+      "trans": [  671.1990, 4.0236, -517.5745], // in half open chest
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  671.1990, 4.0236, -517.5745, 10], // bounding sphere
+      "lump": {
+        "name":"lfacrm1-skill-02"
+      }
+    },
+    {
+      "trans": [   691.3646, 11.4783, -488.8078], // on top of wall panel with button
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  691.3646, 11.4783, -488.8078, 10], // bounding sphere
+      "lump": {
+        "name":"lfacrm1-skill-03",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  690.5697, 29.9617, -483.7754], // top of pipe in corner, abah from ^ (IJ hint)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  690.5697, 29.9617, -483.7754, 10], // bounding sphere
+      "lump": {
+        "name":"lfacrm1-skill-04"
+      }
+    },
+    {
+      "trans": [  662.5319, 32.5127, -498.8061], // up near ceiling, IJ around from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  662.5319, 32.5127, -498.8061, 10], // bounding sphere
+      "lump": {
+        "name":"lfacrm1-skill-05"
+      }
+    },
+    {
+      "trans": [   692.2802, 22.8543, -520.2703], // behind pipes above entrance
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   692.2802, 22.8543, -520.2703, 10], // bounding sphere
+      "lump": {
+        "name":"lfacrm1-skill-06"
+      }
     }//,
-    
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
-    
     
 
     // GHOSTS

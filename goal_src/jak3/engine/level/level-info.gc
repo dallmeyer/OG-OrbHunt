@@ -18695,7 +18695,7 @@
                    :borrow (new 'static 'level-borrow-info
                      :alias #f
                      :borrow-size (new 'static 'array uint16 5 #x285 #x8fc #x0 #x0 #x0)
-                     :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                     :borrow-info (new 'static 'array object 5 '(orbs-lfacrm2 display) '(lfacrm2 display) #f #f #f)
                      )
                    :bottom-height (meters -150)
                    :fog-height (meters 80)
@@ -18888,6 +18888,23 @@
                         )
                       :want-sound (new 'static 'array symbol 3 'factory4 'factory5 'factory6)
                       )
+                    (new 'static 'continue-point
+                      :name "lfacrm2-warp"
+                      :level 'lfacrm2
+                      :flags (continue-flags no-auto)
+                      :trans (new 'static 'vector :x 1016789.0 :y 1980975.9 :z 240304.53 :w 1.0)
+                      :camera-trans (new 'static 'vector :x 1015779.75 :y 1996601.8 :z 209614.84 :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x161 0 #x7ffb))
+                      :camera-rot (new 'static 'array int16 9 #x7feb 0 -1107 #xde #x7d4b #x1a19 #x439 -6684 #x7d3b)
+                      :on-goto #f
+                      :vis-nick 'lfacrm2
+                      :want-count 2
+                      :want (new 'static 'inline-array level-buffer-state-small 2
+                        (new 'static 'level-buffer-state-small :name 'factorya :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'factoryc :display? #f)
+                        )
+                      :want-sound (new 'static 'array symbol 3 'factory4 'factory5 'factory6)
+                      )
                     )
                   :callback-list '()
                   :borrow #f
@@ -19014,6 +19031,23 @@
                        :camera-trans (new 'static 'vector :x (meters 367.4524) :y (meters 415.8853) :z (meters 421.5327) :w 1.0)
                        :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -23457 0 #x595a))
                        :camera-rot (new 'static 'array int16 9 -29797 0 13630 -1556 32552 -3402 -13541 -3742 -29602)
+                       :on-goto #f
+                       :vis-nick 'factoryb
+                       :want-count 2
+                       :want (new 'static 'inline-array level-buffer-state-small 2
+                         (new 'static 'level-buffer-state-small :name 'factorya :display? 'display)
+                         (new 'static 'level-buffer-state-small :name 'factoryb :display? 'display)
+                         )
+                       :want-sound (new 'static 'array symbol 3 'factory1 'factory2 'factory3)
+                       )
+                      (new 'static 'continue-point
+                       :name "factoryb-warp-2"
+                       :level 'factoryb
+                       :flags (continue-flags no-auto)
+                       :trans (new 'static 'vector :x (meters 375.8821) :y (meters 333.9850) :z (meters 370.6488) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 384.9967) :y (meters 339.1249) :z (meters 362.1145) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -32325 0 5358))
+                       :camera-rot (new 'static 'array int16 9 19442 0 26375 -3469 32482 2557 -26146 -4310 19273)
                        :on-goto #f
                        :vis-nick 'factoryb
                        :want-count 2
@@ -19403,8 +19437,8 @@
       )
     :borrow (new 'static 'level-borrow-info
       :alias #f
-      :borrow-size (new 'static 'array uint16 5 #xc4e #x0 #x0 #x0 #x0)
-      :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+      :borrow-size (new 'static 'array uint16 5 #xc4e #x100 #x0 #x0 #x0)
+      :borrow-info (new 'static 'array object 5 '(lfaccity display) '(orbs-factoryc display)  #f #f #f)
       )
     :bottom-height (meters -150)
     :fog-height (meters 80)
@@ -19492,7 +19526,7 @@
                    :borrow (new 'static 'level-borrow-info
                      :alias #f
                      :borrow-size (new 'static 'array uint16 5 #xc4e #x9c4 #x0 #x0 #x0)
-                     :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                     :borrow-info (new 'static 'array object 5 #f '(orbs-factoryd display) #f #f #f)
                      )
                    :bottom-height (meters 516)
                    :fog-height (meters 80)

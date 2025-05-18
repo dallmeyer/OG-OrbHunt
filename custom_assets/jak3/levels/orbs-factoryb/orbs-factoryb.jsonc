@@ -57,7 +57,7 @@
       }
     },
     {
-      "trans": [ 376.34,  412.5711,  408.22 ], // warp to lfacrm1
+      "trans": [ 376.34,  412.5711,  408.22 ], // warp to lfacrm1 (back to city)
       "etype": "warp-gate",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [ 0.0000,      -0.8683,       0.0000,       0.4959], // quaternion
@@ -65,29 +65,51 @@
       "lump": {
         "name":"factoryb-warp-gate-1"
       }
-    }//,
+    },
+    {
+      "trans": [ 376.15,  334.52,  379.83 ], // warp to lfacrm2 (inside factory)
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0000,      -0.8683,       0.0000,       0.4959], // quaternion
+      "bsphere": [ 376.15,  334.52,  379.83  , 10], // bounding sphere
+      "lump": {
+        "name":"factoryb-warp-gate-2"
+      }
+    },
 
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    // assume hellcat is parked in SW corner as reference point
+    {
+      "trans": [ 344.3623, 352.4402, 403.7684], // pipe along SW tower, abah from ground
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  344.3623, 352.4402, 403.7684, 10], // bounding sphere
+      "lump": {
+        "name":"factoryb-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 344.3623, 364.3188, 413.6615], // taller pipe along SW tower, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  344.3623, 364.3188, 413.6615, 10], // bounding sphere
+      "lump": {
+        "name":"factoryb-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 321.8909, 377.5333, 408.5950], // pipe under walkway from SW tower, abah from ^ and slide/concussor across
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  321.8909, 377.5333, 408.5950, 10], // bounding sphere
+      "lump": {
+        "name":"factoryb-skill-03"
+      }
+    }//,
     
     
 
