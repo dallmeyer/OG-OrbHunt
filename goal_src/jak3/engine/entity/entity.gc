@@ -1921,6 +1921,16 @@
   (vector-copy! (-> arg0 root trans) (-> arg1 extra trans))
   (quaternion-copy! (-> arg0 root quat) (-> arg1 quat))
   (vector-identity! (-> arg0 root scale))
+  (let* ((scale-x 1.0) ;; TFL notes: added a scale option for every process-drawable in the lump
+          (scale-y 1.0)
+          (scale-z 1.0)
+          (tag (new 'static 'res-tag))
+          (res (res-lump-data arg1 'scale (pointer float) :tag-ptr (& tag))))
+    (when res
+      (case (-> tag elt-count)
+        ((1) (set! scale-x (-> res 0)) (set! scale-y (-> res 0)) (set! scale-z (-> res 0)))
+        ((3) (set! scale-x (-> res 0)) (set! scale-y (-> res 1)) (set! scale-z (-> res 2)))))
+    (set-vector! (-> arg0 root scale) scale-x scale-y scale-z 1.0))
   (none)
   )
 

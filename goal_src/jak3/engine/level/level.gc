@@ -2450,7 +2450,7 @@
   (case (-> (the entity-actor actor) etype symbol)
     (('skill 'crate 'skill-crate 'skill-ghost
       'market-crate 'wascity-market-crate 'wascity-market-sack-a 'market-sack-a 'market-basket-a 'wascity-market-basket-a 'wascity-market-sack-b 'market-sack-b 'market-basket-b 'wascity-market-basket-b 'urn-a 'urn-b 'urn-c 
-      'burning-bush 'des-burning-bush 'warp-gate 'desoasis-hellcat)
+      'burning-bush 'des-burning-bush 'warp-gate 'desoasis-hellcat 'cty-door)
      (return #t)))
 
   ;; check the vis bits!

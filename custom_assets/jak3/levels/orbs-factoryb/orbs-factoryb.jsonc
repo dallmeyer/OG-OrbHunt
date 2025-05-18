@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": ["hellcat-ag"],
+  "art_groups": ["hellcat-ag", "cty-door-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -74,6 +74,17 @@
       "bsphere": [ 376.15,  334.52,  379.83  , 10], // bounding sphere
       "lump": {
         "name":"factoryb-warp-gate-2"
+      }
+    },
+    {
+      "trans": [ 375.8096, 333.9394, 379.8299], // door to lfacrm2 (inside factory)
+      "etype": "cty-door",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0000,      0.0,       0.0000,       -1.0], // quaternion
+      "bsphere": [ 375.8096, 333.9394, 379.8299  , 10], // bounding sphere
+      "lump": {
+        "name":"factoryb-cty-door-1",
+        "scale": ["float", 1.6]
       }
     },
 
