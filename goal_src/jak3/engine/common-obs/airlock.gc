@@ -289,6 +289,11 @@
   )
 
 (defmethod want-cross-airlock? ((this com-airlock))
+  (case-str (-> this name)
+    (("factoryb-cty-door-1" "lfacrm2-cty-door-1") ;; factoryb <-> lfacrm2 keep open when manually opened
+      (return (= (-> this state name) 'open))
+      )
+    )
   (local-vars (a0-22 entity-actor))
   (let* ((tpos (target-pos 0))
          (f30-0 (check-crossing-distance this tpos #t))
@@ -579,6 +584,14 @@
            )
        (and (-> self next-state) (= (-> self next-state name) 'close))
        )
+      (('trigger)
+        ;; hack for factoryb-cty-door-1/lfacrm2-cty-door-1
+        (go-virtual open #f)
+        )      
+      (('untrigger)
+        ;; hack for factoryb-cty-door-1/lfacrm2-cty-door-1
+        (go-virtual close #f)
+        )
       (('front)
        (let ((f30-0 (check-crossing-distance self (target-pos 0) #f))
              (f0-3 (check-crossing-distance self (camera-pos) #f))

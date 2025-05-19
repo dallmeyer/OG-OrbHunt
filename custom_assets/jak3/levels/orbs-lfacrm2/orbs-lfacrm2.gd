@@ -4,5 +4,7 @@
 ;; the actual file name still needs to be 8.3
 ("O81.DGO"
  (
+  "warp-gate-ag.go"
+  "cty-door-ag.go"
   "orbs-lfacrm2.go"
   ))

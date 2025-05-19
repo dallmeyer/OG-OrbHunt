@@ -1151,33 +1151,11 @@
     (set! *last-lightjak-flight-glitch-time* (the time-frame #f)))
 
   ;; loading hacks
-;;   (cond
-;;     ((in-bubble-m? 394.40 -138.27 1423.79 20.0)  ;; bottom of tombe trampolines, load tomba/b
-;;       (script-eval '(want-load 'tomba 'tombb 'tombe))
-;;       (script-eval '(want-display 'tomba 'display))
-;;       (script-eval '(want-display 'tombb 'display))  ;; tombb is the important one, since it gets swapped out for tombboss
-;;       (script-eval '(want-display 'tombe 'display))
-;;       )
-;;     ((in-bubble-m? 394.40 -66.68 1423.79 20.0)  ;; top of tombe trampolines, load tomba/tombboss
-;;       (script-eval '(want-load 'tomba 'tombboss 'tombe))
-;;       (script-eval '(want-display 'tomba 'display))
-;;       (script-eval '(want-display 'tombboss 'display))  ;; tombboss is the important one, since it gets swapped out for tombb
-;;       (script-eval '(want-display 'tombe 'display))
-;;       )
-;;     ((or (in-bubble-m? 1041.11  46.58 -531.95  250.0) 
-;;          (in-bubble-m? 1023.41  36.59 -483.86 100.0))  ;; near sagehut, make sure its loaded
-;;       (script-eval '(want-load 'ruins 'sagehut))
-;;       (script-eval '(want-display 'ruins 'display))
-;;       (script-eval '(want-display 'sagehut 'display))
-;;       )
-;;     ((or (in-bubble-m? -647.28  93.7 182.52   60.0)  ;; middle of mountain, make sure mtnext loaded
-;;          (in-bubble-m? -588.62 125.53 236.58     60.0)  ;; top/start of mountain, make sure mtnext loaded
-;;          (in-bubble-m? -696.70 116.64 301.04       80.0))  ;; over gap near forest plat, make sure mtnext loaded
-;;       (script-eval '(want-load 'mountain 'mtnext))
-;;       (script-eval '(want-display 'mountain 'display))
-;;       (script-eval '(want-display 'mtnext 'display))
-;;       )
-;;     )
+  (cond
+    ((in-bubble-m? 169.71  474.42  -40.11 12.0)  ;; halfway down elevator factoryd > factoryc, should be no-op when going up since not loaded
+      (script-eval '(want-display 'factoryc 'display))
+      )
+    )
 
 ;; precura/b
 ;; open door to precurb (mech section)
@@ -1262,22 +1240,30 @@
     (set! (cdr (res-lump-struct elev1 'on-notice pair)) '((when (task-closed? "factory-assault-indax-1") #f)))
     )
   ;; (when elev1-proc 
-  ;;   (set! (-> elev1-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mined #f)))))
-  ;;   )
+    ;; (set! (-> elev1-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mined #f)))))
+    ;; )
   (when elev2
     (set! (cdr (res-lump-struct elev2 'on-deactivate pair)) '((send-event self 'use-camera #f)))
     (set! (cdr (res-lump-struct elev2 'on-notice pair)) '((when (task-closed? "factory-assault-resolution") #f)))
     )
-  ;; (when elev2-proc 
-  ;;   (set! (-> elev2-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mined #f)))))
-  ;;   )
+  (when elev2-proc 
+    ;; load factoryc (displayed by loading hack bubble); make sure door to factoryb is closed
+    ;; (set! (-> elev2-proc on-down) '(begin (print (target-below-meters? 500)) (want-load 'factorya 'factoryc) (send-event "lfacrm2-cty-door-1" 'untrigger)))
+    (set! (-> elev2-proc on-running) '(when (and (target-below-meters? 500) (send-event "fac-elevator-a-2" 'query 'going-down?)) (want-load 'factorya 'factoryc) (send-event "lfacrm2-cty-door-1" 'untrigger)))
+    )
   )
 
-  (let ((door (the cty-door (process-by-ename "factoryb-cty-door-1"))))
-    (when door
-      (set! (-> door level-name) '(when #t '(lfacrm2)))
-      )
+;; pick some level to check loaded for these doors to open - just used the level they're in since they're warp-gates anyway
+(let ((door (the cty-door (process-by-ename "factoryb-cty-door-1"))))
+  (when door
+    (set! (-> door level-name) '(when #t '(factoryb)))
     )
+  )
+(let ((door (the cty-door (process-by-ename "lfacrm2-cty-door-1"))))
+  (when door
+    (set! (-> door level-name) '(when #t '(factorya)))
+    )
+  )
   
   ;; mooon things
 ;;   (cond

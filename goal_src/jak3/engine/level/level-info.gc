@@ -19520,6 +19520,24 @@
                          (new 'static 'level-buffer-state-small :name 'factoryd :display? 'display)
                          )
                        :want-sound (new 'static 'array symbol 3 'factory7 'factory8 'factory9)
+                       )                      
+                     (new 'static 'continue-point
+                       :name "factoryd-warp"
+                       :level 'factoryd
+                       :flags (continue-flags no-auto warp-gate)
+                       :trans (new 'static 'vector :x (meters 249.6969) :y (meters 523.6241) :z (meters -149.5735) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 255.1974) :y (meters 528.1132) :z (meters -141.2246) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 -53 1567 -2 32729))
+                       :camera-rot (new 'static 'array int16 9 -26219 0 19652 -2886 32411 -3851 -19438 -4812 -25935)
+                       :on-goto #f
+                       :vis-nick 'factoryd
+                       :vehicle-type #x1b
+                       :want-count 2
+                       :want (new 'static 'inline-array level-buffer-state-small 2
+                         (new 'static 'level-buffer-state-small :name 'factorya :display? 'display)
+                         (new 'static 'level-buffer-state-small :name 'factoryd :display? 'display)
+                         )
+                       :want-sound (new 'static 'array symbol 3 'factory7 'factory8 'factory9)
                        )
                      )
                    :callback-list '((34 . factoryd-logout) (35 . factoryd-activate) (33 . factoryd-login))

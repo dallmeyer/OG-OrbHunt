@@ -6,5 +6,6 @@
  (
   "oasis-defense.o"
   "hellcat-ag.go"
+  "warp-gate-ag.go"
   "orbs-lfacrm1.go"
   ))

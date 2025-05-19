@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["cty-door-ag", "warp-gate-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -55,29 +55,38 @@
       "lump": {
         "name":"lfacrm2-warp-gate-1"
       }
+    },    
+    {
+      "trans": [245.8070, 483.9104, 49.2262 ], // door to factoryb (factory exterior)
+      "etype": "cty-door",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0000,      0.0,       0.0000,       -1.0], // quaternion
+      "bsphere": [ 245.8070, 483.9104, 49.2262  , 10], // bounding sphere
+      "lump": {
+        "name":"lfacrm2-cty-door-1",
+        "scale": ["float", 1.6]
+      }
+    },
+    {
+      "trans": [  233.6113, 494.8557, 61.1541], // vent on wall, concussor hj up to standpoint, then zoomwalk sideways so you can uppercut off for vvv
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  233.6113, 494.8557, 61.1541, 10], // bounding sphere
+      "lump": {
+        "name":"lfacrm2-skill-01"
+      }
+    },
+    {
+      "trans": [  247.1938, 505.8463, 68.0417], // up in middle of room near ceiling, uppercut concussor yolo from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  247.1938, 505.8463, 68.0417, 10], // bounding sphere
+      "lump": {
+        "name":"lfacrm2-skill-02"
+      }
     }//,
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
-    
     
 
     // GHOSTS

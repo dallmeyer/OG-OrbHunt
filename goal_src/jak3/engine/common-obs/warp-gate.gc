@@ -519,6 +519,9 @@
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
             (set! (-> this continue) (get-continue-by-name *game-info* "vinroom-warp"))
             )
+          (("warp-gate-21") ;; vinroom -> factoryd
+            (set! (-> this continue) (get-continue-by-name *game-info* "factoryd-warp"))
+            )
           (else
             (set! (-> this continue) #f)
             )
@@ -587,7 +590,7 @@
                      )
                    (time-elapsed? (-> self state-time) (seconds 0.1))
                    )
-          (if (and (cpad-pressed? 0 triangle) (process-grab? *target* #f))
+          (if (and (cpad-pressed? 0 triangle)) ;; (process-grab? *target* #f)) ;; dont require grabbing target
               (go-virtual use (-> self continue))
               )
           (script-eval (-> self on-close))
@@ -679,8 +682,29 @@
     (set! (-> *level* play?) #t)
     (apply-settings *setting-control*)
     (case-str (-> self name)
-      (("lfacrm1-warp-gate-1" "factoryb-warp-gate-1" "factoryb-warp-gate-2" "lfacrm2-warp-gate-1") 
+      (("lfacrm1-warp-gate-1") ;; hellcat as warp gates
         ;; skip target-warp-out, just go to continue
+        (sound-play "vehicl-ignition") ;; play zoomer startup sound for immersion (hi zed)
+        (suspend-for (seconds 0.5)) ;; let player hear sound for a bit
+        )
+      (("factoryb-warp-gate-1") ;; hellcat as warp gates
+        ;; skip target-warp-out, just go to continue
+        (sound-play "hellcat-firealt") ;; play some other sound for immersion (hi zed)
+        (suspend-for (seconds 0.5)) ;; let player hear sound for a bit
+        )
+      (("factoryb-warp-gate-2") ;; real fake door
+        ;; skip target-warp-out, open door and just go to continue
+        (send-event (process-by-ename "factoryb-cty-door-1") 'trigger)
+        (send-event (process-by-ename "lfacrm2-cty-door-1") 'untrigger) ;; make sure other door is closed
+        (sound-play "gtower-open") ;; play some other sound so its not weirdly silent
+        (suspend-for (seconds 0.5)) ;; let player see door open for a bit
+        )
+      (("lfacrm2-warp-gate-1") ;; real fake door
+        ;; skip target-warp-out, open door and just go to continue
+        (send-event (process-by-ename "factoryb-cty-door-1") 'untrigger) ;; make sure other door is closed
+        (send-event (process-by-ename "lfacrm2-cty-door-1") 'trigger)
+        (sound-play "fac-hatch-open") ;; play some other sound so its not weirdly silent
+        (suspend-for (seconds 0.5)) ;; let player see door open for a bit
         )
       (else
         ;; normal warp gate behavior
@@ -791,7 +815,7 @@
 
 ;; WARN: Return type mismatch object vs none.
 (defbehavior warp-gate-init warp-gate ((arg0 entity-actor) (arg1 vector))
-  (stack-size-set! (-> self main-thread) 512)
+  (stack-size-set! (-> self main-thread) 1024)
   (init-skel-and-collide! self)
   (if arg0
       (process-drawable-from-entity! self arg0)

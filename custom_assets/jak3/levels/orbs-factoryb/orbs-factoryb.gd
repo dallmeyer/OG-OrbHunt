@@ -6,6 +6,7 @@
  (
   "oasis-defense.o"
   "hellcat-ag.go"
+  "warp-gate-ag.go"
   "cty-door-ag.go"
   "orbs-factoryb.go"
   ))
