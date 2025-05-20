@@ -1175,6 +1175,13 @@
   (when r58
     (set! (-> r58 on-enter) '(want-load 'precura 'precurb)))
   )
+;; precurc/d
+;; door to elevator to precurd
+(let ((door (entity-by-name "precur-door-a-1")))
+  (when door 
+    (set! (cdr (res-lump-struct door 'open-test pair)) '((or (task-closed? "precursor-destroy-ship-resolution") (and (entity-status? "dp-bipedal-100" subtask-complete no-birth) (entity-status? "dp-bipedal-101" subtask-complete no-birth) (entity-status? "dp-bipedal-102" subtask-complete no-birth) (entity-status? "dp-bipedal-103" subtask-complete no-birth)))))
+    )
+  )
 
 ;; deswalk 
 (let ((r1525 (region-lookup-by-id 1525)))

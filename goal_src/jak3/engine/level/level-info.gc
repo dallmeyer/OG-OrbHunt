@@ -8608,8 +8608,8 @@
                   :callback-list '((6 . *foresta-water-texture-anim-array*))
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #x79e #x0 #x0 #x0 #x0)
-                    :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                    :borrow-size (new 'static 'array uint16 5 #x79e #x500 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 #f '(orbs-foresta display) #f #f #f)
                     )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)

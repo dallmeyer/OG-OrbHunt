@@ -47,11 +47,11 @@
 
   "actors" : [
     {
-      "trans": [8.6700, 202.00, 575.8497 ], // warp to factoryb
+      "trans": [8.6700, 201.00, 575.8497 ], // warp to factoryb
       "etype": "warp-gate",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [ 0.0000, 0.7065, 0.0000, 0.7077], // quaternion
-      "bsphere": [ 8.6700, 202.00, 575.8497 , 10], // bounding sphere
+      "bsphere": [ 8.6700, 201.00, 575.8497 , 10], // bounding sphere
       "lump": {
         "name":"precurd-warp-gate-1",
         "scale": ["float", 2.0]

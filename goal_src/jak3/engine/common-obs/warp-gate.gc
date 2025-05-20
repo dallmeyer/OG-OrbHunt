@@ -522,6 +522,10 @@
           (("warp-gate-21") ;; vinroom -> factoryd
             (set! (-> this continue) (get-continue-by-name *game-info* "factoryd-warp"))
             )
+          (("foresta-warp-gate-1") ;; foresta -> precura
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "precura-start"))
+            )
           (("precurd-warp-gate-1") ;; precurd -> desertb
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
             (set! (-> this continue) (get-continue-by-name *game-info* "desertb-warp"))
@@ -690,6 +694,9 @@
     (set! (-> *level* play?) #t)
     (apply-settings *setting-control*)
     (case-str (-> self name)
+      (("foresta-warp-gate-1") ;; telescope to precura
+        ;; skip target-warp-out, just go to continue
+        )
       (("lfacrm1-warp-gate-1") ;; hellcat as warp gates
         ;; skip target-warp-out, just go to continue
         (sound-play "vehicl-ignition") ;; play zoomer startup sound for immersion (hi zed)
