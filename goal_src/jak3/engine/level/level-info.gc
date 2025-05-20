@@ -14406,6 +14406,26 @@
                       :want-sound (new 'static 'array symbol 3 'wasall1 'desert1 'desert2)
                       )
                     (new 'static 'continue-point
+                      :name "desertb-warp"
+                      :level 'desertb
+                      :flags (continue-flags warp-gate no-auto)
+                      :trans (new 'static 'vector :x (meters 2315.0617) :y (meters 31.4898) :z (meters 260.6951) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 2322.7880) :y (meters 36.3074) :z (meters 268.8649) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 11 -2445 48 -32675))
+                      :camera-rot (new 'static 'array int16 9 -22039 0 24247 -3446 32434 -3132 -24001 -4656 -21815)
+                      :on-goto #f
+                      :vis-nick 'desert
+                      :vehicle-type #x1b
+                      :want-count 4
+                      :want (new 'static 'inline-array level-buffer-state-small 4
+                        (new 'static 'level-buffer-state-small :name 'wasall :display? 'special)
+                        (new 'static 'level-buffer-state-small :name 'desert-game :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'wasdoors :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'desertb :display? 'display)
+                        )
+                      :want-sound (new 'static 'array symbol 3 'wasall1 'desert1 'desert2)
+                      )
+                    (new 'static 'continue-point
                       :name "desert-final-boss-res-movie"
                       :level 'desertb
                       :flags (continue-flags scene-wait no-auto vehicle-movie)
@@ -20006,7 +20026,7 @@
                   :callback-list '((23 . init-mood-precurd))
                   :borrow (new 'static 'level-borrow-info
                      :alias #f
-                     :borrow-size (new 'static 'array uint16 5 #xa #x0 #x0 #x0 #x0)
+                     :borrow-size (new 'static 'array uint16 5 #x500 #x0 #x0 #x0 #x0)
                      :borrow-info (new 'static 'array object 5 '(orbs-precurd display) #f #f #f #f)
                      )
                   :bottom-height (meters -20)

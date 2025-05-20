@@ -55,6 +55,16 @@
       "lump": {
         "name":"desertb-warp-gate-1"
       }
+    },
+    {
+      "trans": [ 2314.37,  34.20,  255.44 ], // warp gate from precurd, one-way, near garage doors
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0000,  0.6029,  0.0000,  -0.7978], // quaternion
+      "bsphere": [ 2314.37,  34.20,  255.44 , 10], // bounding sphere
+      "lump": {
+        "name":"desertb-warp-gate-2"
+      }
     }//,
 
     // {
