@@ -3297,9 +3297,33 @@
                         )
                       :want-sound (new 'static 'array symbol 3 'ruintsk1 'ruintsk2 'ruintsk3)
                       )
+                    (new 'static 'continue-point
+                      :name "stadium-warp"
+                      :level 'stadium
+                      :flags (continue-flags no-auto)
+                      :trans (new 'static 'vector :x (meters 263.4477) :y (meters 20.6489) :z (meters -625.0525) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 270.6054) :y (meters 26.3688) :z (meters -613.3674) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -32702 0 2062))
+                      :camera-rot (new 'static 'array int16 9 -30029 0 13112 -1571 32530 -3599 -13017 -3928 -29812)
+                      :on-goto #f
+                      :vis-nick 'stadium
+                      :vehicle-type #x1b
+                      :want-count 3
+                      :want (new 'static 'inline-array level-buffer-state-small 4
+                        (new 'static 'level-buffer-state-small :name 'stadiuma :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'stadium :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'ctygenb :display? 'display)
+                        (new 'static 'level-buffer-state-small)
+                        )
+                      :want-sound (new 'static 'array symbol 3 'ruintsk1 'ruintsk2 'ruintsk3)
+                      )
                     )
                   :callback-list '()
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #x400 #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-stadium display) #f #f #f #f)
+                    )
                   :bottom-height (meters -100)
                   :fog-height (meters 80)
                   :fog-mult 1.0
@@ -20125,9 +20149,30 @@
                          )
                        :want-sound (new 'static 'array symbol 3 #f #f #f)
                        )
+                      (new 'static 'continue-point
+                       :name "halfpipe-warp"
+                       :level 'halfpipe
+                       :trans (new 'static 'vector :x (meters 9.7231) :y (meters -50.5019) :z (meters 104.0750) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 16.9791) :y (meters -45.4516) :z (meters 113.7991) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4  0 -32435 0 4652))
+                       :camera-rot (new 'static 'array int16 9 -26292 0 19554 -2364 32526 -3178 -19410 -3961 -26100)
+                       :on-goto #f
+                       :vis-nick #f
+                       :vehicle-type #x1b
+                       :want-count 1
+                       :want (new 'static 'inline-array level-buffer-state-small 2
+                         (new 'static 'level-buffer-state-small :name 'halfpipe :display? 'display)
+                         (new 'static 'level-buffer-state-small)
+                         )
+                       :want-sound (new 'static 'array symbol 3 #f #f #f)
+                       )
                      )
                    :callback-list '()
-                   :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #xa00 #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-halfpipe display) #f #f #f #f)
+                    )
                    :bottom-height (meters -10000000)
                    :fog-height (meters 80)
                    :max-rain 1.0

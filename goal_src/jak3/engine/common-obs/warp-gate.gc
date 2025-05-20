@@ -534,6 +534,22 @@
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
             ;; (set! (-> this continue) (get-continue-by-name *game-info* "precurd-warp")) ;; one way
             )
+          (("halfpipe-warp-gate-01") ;; halfpipe -> stadium
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "stadium-warp"))
+            )
+          (("halfpipe-air-train-01") ;; halfpipe -> stadium
+            (logclear! (-> this draw status) (draw-control-status no-draw)) ;; show air-train
+            (set! (-> this continue) #f)
+            )
+          (("stadium-warp-gate-01") ;; stadium -> halfpipe
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "halfpipe-warp"))
+            )
+          (("stadium-air-train-01") ;; stadium -> halfpipe
+            (logclear! (-> this draw status) (draw-control-status no-draw)) ;; show air-train
+            (set! (-> this continue) #f)
+            )
           (else
             (set! (-> this continue) #f)
             )
@@ -695,6 +711,12 @@
     (apply-settings *setting-control*)
     (case-str (-> self name)
       (("foresta-warp-gate-1") ;; telescope to precura
+        ;; skip target-warp-out, just go to continue
+        )
+      (("halfpipe-warp-gate-01") ;; halfpipe -> stadium
+        ;; skip target-warp-out, just go to continue
+        )
+      (("stadium-warp-gate-01") ;; stadium -> halfpipe
         ;; skip target-warp-out, just go to continue
         )
       (("lfacrm1-warp-gate-1") ;; hellcat as warp gates
