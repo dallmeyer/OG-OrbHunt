@@ -534,6 +534,14 @@
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
             ;; (set! (-> this continue) (get-continue-by-name *game-info* "precurd-warp")) ;; one way
             )
+          (("towerb-warp-gate-1") ;; towerb -> ltowerb; hidden warp on final plat
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "ltowerb-warp"))
+            )
+          (("ltowerb-warp-gate-1") ;; ltowerb -> lfacrm1; hellcat as warp gate
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "lfacrm1-warp"))
+            )
           (("halfpipe-warp-gate-01") ;; halfpipe -> stadium
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
             (set! (-> this continue) (get-continue-by-name *game-info* "stadium-warp"))
@@ -719,12 +727,20 @@
       (("stadium-warp-gate-01") ;; stadium -> halfpipe
         ;; skip target-warp-out, just go to continue
         )
-      (("lfacrm1-warp-gate-1") ;; hellcat as warp gates
+      (("towerb-warp-gate-1") ;; towerb -> ltowerb; hidden warp on final plat
+        ;; skip target-warp-out, just go to continue
+        )
+      (("ltowerb-warp-gate-1") ;; ltowerb -> lfacrm1; hellcat as warp gate
+        ;; skip target-warp-out, just go to continue
+        ;; (sound-play "hellcat-firealt") ;; play some other sound for immersion (hi zed)
+        (suspend-for (seconds 0.5)) ;; let player hear sound for a bit
+        )
+      (("lfacrm1-warp-gate-1") ;; lfacrm1 -> factoryb; hellcat as warp gate
         ;; skip target-warp-out, just go to continue
         (sound-play "vehicl-ignition") ;; play zoomer startup sound for immersion (hi zed)
         (suspend-for (seconds 0.5)) ;; let player hear sound for a bit
         )
-      (("factoryb-warp-gate-1") ;; hellcat as warp gates
+      (("factoryb-warp-gate-1") ;; factoryb -> lfacrm1; hellcat as warp gate
         ;; skip target-warp-out, just go to continue
         (sound-play "hellcat-firealt") ;; play some other sound for immersion (hi zed)
         (suspend-for (seconds 0.5)) ;; let player hear sound for a bit

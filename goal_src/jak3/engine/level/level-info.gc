@@ -3557,8 +3557,8 @@
                  :callback-list '((34 . towera-logout) (35 . towera-activate) (33 . towera-login))
                  :borrow (new 'static 'level-borrow-info
                    :alias #f
-                   :borrow-size (new 'static 'array uint16 5 #x13a1 #x0 #x0 #x0 #x0)
-                   :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                   :borrow-size (new 'static 'array uint16 5 #x13a1 #xa #x0 #x0 #x0)
+                   :borrow-info (new 'static 'array object 5 '(ltowera display) '(orbs-ltowera display) #f #f #f)
                    )
                  :bottom-height (meters -150)
                  :fog-height (meters 80)
@@ -3673,7 +3673,11 @@
                      )
                    )
                  :callback-list '((23 . init-mood-tower) (6 . *towerb-water-texture-anim-array*))
-                 :borrow #f
+                 :borrow (new 'static 'level-borrow-info
+                   :alias #f
+                   :borrow-size (new 'static 'array uint16 5 #x50 #xa0 #x0 #x0)
+                   :borrow-info (new 'static 'array object 5 '(orbs-towerb display) '(orbs-ltowerb display) #f #f #f)
+                   )
                  :bottom-height (meters -150)
                  :fog-height (meters 80)
                  :fog-mult 1.0
@@ -3709,8 +3713,8 @@
                  :callback-list '()
                  :borrow (new 'static 'level-borrow-info
                    :alias #f
-                   :borrow-size (new 'static 'array uint16 5 #xbea #x898 #x0 #x0 #x0)
-                   :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                   :borrow-size (new 'static 'array uint16 5 #x13a1 #x0 #x0 #x0 #x0)
+                   :borrow-info (new 'static 'array object 5 '(ltowerb display) #f #f #f #f)
                    )
                  :bottom-height (meters -150)
                  :fog-height (meters 80)
@@ -3853,6 +3857,26 @@
                       :camera-trans (new 'static 'vector :x -394470.6 :y 1790757.6 :z 1845024.0 :w 1.0)
                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -2814 0 #x7f82))
                       :camera-rot (new 'static 'array int16 9 #x7c55 0 #x1e62 -943 #x7f0c #xf17 -7719 -3974 #x7b69)
+                      :on-goto #f
+                      :vis-nick 'ltowerb
+                      :vehicle-type #x1b
+                      :want-count 3
+                      :want (new 'static 'inline-array level-buffer-state-small 4
+                        (new 'static 'level-buffer-state-small :name 'towera :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'towerb :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'towerc :display? 'display)
+                        (new 'static 'level-buffer-state-small)
+                        )
+                      :want-sound (new 'static 'array symbol 3 'tower1 'tower2 'tower3)
+                      )
+                    (new 'static 'continue-point
+                      :name "ltowerb-warp"
+                      :level 'ltowerb
+                      :flags (continue-flags no-auto)
+                      :trans (new 'static 'vector  :x (meters -117.6115) :y (meters 431.9760) :z (meters 446.4063) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters -126.0672) :y (meters 437.1265) :z (meters 455.6127) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 46 -31847 -20 -7708))
+                      :camera-rot (new 'static 'array int16 9 -24160 0 -22135 2692 32523 -2938 21970 -3985 -23980)
                       :on-goto #f
                       :vis-nick 'ltowerb
                       :vehicle-type #x1b

@@ -4,5 +4,8 @@
 ;; the actual file name still needs to be 8.3
 ("O28.DGO"
  (
+  "oasis-defense.o"
+  "hellcat-ag.go"
+  "warp-gate-ag.go"
   "orbs-ltowerb.go"
   ))

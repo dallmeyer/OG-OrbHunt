@@ -4,5 +4,6 @@
 ;; the actual file name still needs to be 8.3
 ("O26.DGO"
  (
+  "warp-gate-ag.go"
   "orbs-towerb.go"
   ))
