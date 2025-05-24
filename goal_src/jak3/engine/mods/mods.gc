@@ -1155,122 +1155,142 @@
     ((in-bubble-m? 169.71  474.42  -40.11 12.0)  ;; halfway down elevator factoryd > factoryc, should be no-op when going up since not loaded
       (script-eval '(want-display 'factoryc 'display))
       )
-    )
-
-;; precura/b
-;; open door to precurb (mech section)
-(let ((door (entity-by-name "precura-door-a-2"))
+    ((in-bubble-m?  14.2037  -3460.4550  -979.4643 100.0) ;; end of subrails 2 jump to railx
+      (script-eval '(continue "railx-warp"))
       )
-  (when door (set! (cdr (res-lump-struct door 'open-test pair)) '((entity-status? "dp-bipedal-109" subtask-complete no-birth) (entity-status? "dp-bipedal-110" subtask-complete no-birth) (entity-status? "dp-bipedal-111" subtask-complete no-birth) (entity-status? "dp-bipedal-176" subtask-complete no-birth) (entity-status? "dp-bipedal-177" subtask-complete no-birth))))
-  )
-;; prevent precurb deload in final room of mech section
-(let ((r54 (region-lookup-by-id 1354))
-      (r58 (region-lookup-by-id 1358))
-      (door (entity-by-name "precur-door-b-3")))
-  (when door 
-    (set! (cdr (res-lump-struct door 'on-inside pair)) '((want-load 'precura 'precurb)))
     )
-  (when r54 
-    (set! (-> r54 on-enter) '(want-load 'precura 'precurb)))
-  (when r58
-    (set! (-> r58 on-enter) '(want-load 'precura 'precurb)))
-  )
-;; precurc/d
-;; door to elevator to precurd
-(let ((door (entity-by-name "precur-door-a-1")))
-  (when door 
-    (set! (cdr (res-lump-struct door 'open-test pair)) '((or (task-closed? "precursor-destroy-ship-resolution") (and (entity-status? "dp-bipedal-100" subtask-complete no-birth) (entity-status? "dp-bipedal-101" subtask-complete no-birth) (entity-status? "dp-bipedal-102" subtask-complete no-birth) (entity-status? "dp-bipedal-103" subtask-complete no-birth)))))
-    )
-  )
 
-;; deswalk 
-(let ((r1525 (region-lookup-by-id 1525)))
-  (when r1525
-    (set! (-> r1525 on-enter) '(want-load 'wasall 'desert 'desinter 'desertb 'desertd))) ;; no endlessfall, just swap deswalk out for desertd
-  )
-
-;; keep minea (c->b, into cave) elevator active; work in reverse
-(let ((elev (entity-by-name "min-elevator-6"))
-      (elev-proc (the elevator (process-by-ename "min-elevator-6"))))
-  (when elev 
-    (set! (cdr (res-lump-struct elev 'on-deactivate pair)) '((send-event self 'use-camera #f) (task-close! "mine-explore-elevator") (want-vis 'mineb) (want-continue "mineb-start") (want-sound 'mine1 'mine2 'mine3)))
-    (set! (cdr (res-lump-struct elev 'on-notice pair)) '((task-closed? "mine-explore-elevator") (cond ((and (eq? (level-status? 'mineb) 'active) (not (send-event self 'query 'bottom?))) (send-event self 'jump-to 'bottom)) ((and (eq? (level-status? 'minec) 'active) (not (send-event self 'query 'top?))) (send-event self 'jump-to 'top)))))
-    )
-  (when elev-proc 
-    (set! (-> elev-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mineb #f)))))
-    )
-  )
-;; load correct levels for minea (b->c, out of cave) elevator; require switch to be hit and player riding; work in reverse
-(let ((elev (entity-by-name "min-bomb-elevator-1"))
-      (elev-proc (the elevator (process-by-ename "min-bomb-elevator-1"))))
-  (when elev 
-    (set! (cdr (res-lump-struct elev 'on-activate pair)) '((send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mineb #f) (want-display 'mineb 'display)))))
-    )
-  (when elev-proc 
-    (set! (-> elev-proc activate-test) '(and (send-event self 'player-ridden-cooldown?) (not (send-event "min-crane-switch-8" 'up?))))
-    )
-  )
-;; keep minea (c->d, into boss) elevator active; work in reverse
-(let ((elev (entity-by-name "min-boss-elev-1"))
-      (elev-proc (the elevator (process-by-ename "min-boss-elev-1"))))
-  (when elev 
-    (set! (cdr (res-lump-struct elev 'on-deactivate pair)) '((want-continue "minea-boss") (want-sound 'mine7 'mine8 'mine9)))
-    (set! (cdr (res-lump-struct elev 'on-notice pair)) '((send-event self 'query 'bottom?) #f))
-    )
-  (when elev-proc 
-    (set! (-> elev-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mined #f)))))
-    )
-  )
-
-;; allow lfacrm1 door to open (ctyslumc->ffacrm1, shuttle behind freehq)
-(let ((door (entity-by-name "cty-door-3"))
-      (r1804 (region-lookup-by-id 1804))
+  ;; palette hacks
+  (case (-> (level-get-target-inside *level*) name)
+    (('railx)
+      ;; turn on some palettes so not dark
+      (set! (-> *time-of-day-context* mode) (time-of-day-palette-id palette-0 palette-1 palette-2 palette-3 palette-4 palette-5 palette-6 palette-7))
       )
-  (when door
-    (set! (cdr (res-lump-struct door 'on-activate pair)) '(((task-closed? "factory-sky-battle-introduction") (when (send-event self 'front) (want-display 'lfacrm1 'display)))))
-    (set! (cdr (res-lump-struct door 'on-cross pair)) '(#f))
-    (set! (cdr (res-lump-struct door 'on-notice pair)) '(((task-closed? "factory-sky-battle-introduction") '(ctyslumc lfacrm1))))
-    ;; (set! (cdr (res-lump-struct door 'on-notice pair)) '(((and (task-closed? "factory-sky-battle-introduction") (or (eq? (level-status? 'lfacrm1) 'loaded) (eq? (level-status? 'lfacrm1) 'active))) '(ctyslumc factorya))))
+    (else
+      ;; default palette
+      (time-of-day-setup #t)
+      )
     )
-  (when r1804 
-    (set! (-> r1804 on-enter) '(when (task-closed? "factory-sky-battle-introduction") (want-load 'ctywide-ff 'ctyslumc 'lfacrm1)))
-    )
-  )
-  
-;; keep lfacrm2 elevators (lfacrm2->factoryc, into interior) elevator active; work in reverse
-(let ((elev1 (entity-by-name "fac-elevator-a-1"))
-      (elev1-proc (the elevator (process-by-ename "fac-elevator-a-1")))
-      (elev2 (entity-by-name "fac-elevator-a-2"))
-      (elev2-proc (the elevator (process-by-ename "fac-elevator-a-2"))))
-  (when elev1 
-    (set! (cdr (res-lump-struct elev1 'on-deactivate pair)) '((send-event self 'use-camera #f)))
-    (set! (cdr (res-lump-struct elev1 'on-notice pair)) '((when (task-closed? "factory-assault-indax-1") #f)))
-    )
-  ;; (when elev1-proc 
-    ;; (set! (-> elev1-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mined #f)))))
-    ;; )
-  (when elev2
-    (set! (cdr (res-lump-struct elev2 'on-deactivate pair)) '((send-event self 'use-camera #f)))
-    (set! (cdr (res-lump-struct elev2 'on-notice pair)) '((when (task-closed? "factory-assault-resolution") #f)))
-    )
-  (when elev2-proc 
-    ;; load factoryc (displayed by loading hack bubble); make sure door to factoryb is closed
-    ;; (set! (-> elev2-proc on-down) '(begin (print (target-below-meters? 500)) (want-load 'factorya 'factoryc) (send-event "lfacrm2-cty-door-1" 'untrigger)))
-    (set! (-> elev2-proc on-running) '(when (and (target-below-meters? 500) (send-event "fac-elevator-a-2" 'query 'going-down?)) (want-load 'factorya 'factoryc) (send-event "lfacrm2-cty-door-1" 'untrigger)))
-    )
-  )
 
-;; pick some level to check loaded for these doors to open - just used the level they're in since they're warp-gates anyway
-(let ((door (the cty-door (process-by-ename "factoryb-cty-door-1"))))
-  (when door
-    (set! (-> door level-name) '(when #t '(factoryb)))
+  ;; precura/b
+  ;; open door to precurb (mech section)
+  (let ((door (entity-by-name "precura-door-a-2"))
+        )
+    (when door (set! (cdr (res-lump-struct door 'open-test pair)) '((entity-status? "dp-bipedal-109" subtask-complete no-birth) (entity-status? "dp-bipedal-110" subtask-complete no-birth) (entity-status? "dp-bipedal-111" subtask-complete no-birth) (entity-status? "dp-bipedal-176" subtask-complete no-birth) (entity-status? "dp-bipedal-177" subtask-complete no-birth))))
     )
-  )
-(let ((door (the cty-door (process-by-ename "lfacrm2-cty-door-1"))))
-  (when door
-    (set! (-> door level-name) '(when #t '(factorya)))
+  ;; prevent precurb deload in final room of mech section
+  (let ((r54 (region-lookup-by-id 1354))
+        (r58 (region-lookup-by-id 1358))
+        (door (entity-by-name "precur-door-b-3")))
+    (when door 
+      (set! (cdr (res-lump-struct door 'on-inside pair)) '((want-load 'precura 'precurb)))
+      )
+    (when r54 
+      (set! (-> r54 on-enter) '(want-load 'precura 'precurb)))
+    (when r58
+      (set! (-> r58 on-enter) '(want-load 'precura 'precurb)))
     )
-  )
+  ;; precurc/d
+  ;; door to elevator to precurd
+  (let ((door (entity-by-name "precur-door-a-1")))
+    (when door 
+      (set! (cdr (res-lump-struct door 'open-test pair)) '((or (task-closed? "precursor-destroy-ship-resolution") (and (entity-status? "dp-bipedal-100" subtask-complete no-birth) (entity-status? "dp-bipedal-101" subtask-complete no-birth) (entity-status? "dp-bipedal-102" subtask-complete no-birth) (entity-status? "dp-bipedal-103" subtask-complete no-birth)))))
+      )
+    )
+
+  ;; deswalk 
+  (let ((r1525 (region-lookup-by-id 1525)))
+    (when r1525
+      (set! (-> r1525 on-enter) '(want-load 'wasall 'desert 'desinter 'desertb 'desertd))) ;; no endlessfall, just swap deswalk out for desertd
+    )
+
+  ;; keep minea (c->b, into cave) elevator active; work in reverse
+  (let ((elev (entity-by-name "min-elevator-6"))
+        (elev-proc (the elevator (process-by-ename "min-elevator-6"))))
+    (when elev 
+      (set! (cdr (res-lump-struct elev 'on-deactivate pair)) '((send-event self 'use-camera #f) (task-close! "mine-explore-elevator") (want-vis 'mineb) (want-continue "mineb-start") (want-sound 'mine1 'mine2 'mine3)))
+      (set! (cdr (res-lump-struct elev 'on-notice pair)) '((task-closed? "mine-explore-elevator") (cond ((and (eq? (level-status? 'mineb) 'active) (not (send-event self 'query 'bottom?))) (send-event self 'jump-to 'bottom)) ((and (eq? (level-status? 'minec) 'active) (not (send-event self 'query 'top?))) (send-event self 'jump-to 'top)))))
+      )
+    (when elev-proc 
+      (set! (-> elev-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mineb #f)))))
+      )
+    )
+  ;; load correct levels for minea (b->c, out of cave) elevator; require switch to be hit and player riding; work in reverse
+  (let ((elev (entity-by-name "min-bomb-elevator-1"))
+        (elev-proc (the elevator (process-by-ename "min-bomb-elevator-1"))))
+    (when elev 
+      (set! (cdr (res-lump-struct elev 'on-activate pair)) '((send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mineb #f) (want-display 'mineb 'display)))))
+      )
+    (when elev-proc 
+      (set! (-> elev-proc activate-test) '(and (send-event self 'player-ridden-cooldown?) (not (send-event "min-crane-switch-8" 'up?))))
+      )
+    )
+  ;; keep minea (c->d, into boss) elevator active; work in reverse
+  (let ((elev (entity-by-name "min-boss-elev-1"))
+        (elev-proc (the elevator (process-by-ename "min-boss-elev-1"))))
+    (when elev 
+      (set! (cdr (res-lump-struct elev 'on-deactivate pair)) '((want-continue "minea-boss") (want-sound 'mine7 'mine8 'mine9)))
+      (set! (cdr (res-lump-struct elev 'on-notice pair)) '((send-event self 'query 'bottom?) #f))
+      )
+    (when elev-proc 
+      (set! (-> elev-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mined #f)))))
+      )
+    )
+
+  ;; allow lfacrm1 door to open (ctyslumc->ffacrm1, shuttle behind freehq)
+  (let ((door (entity-by-name "cty-door-3"))
+        (r1804 (region-lookup-by-id 1804))
+        )
+    (when door
+      (set! (cdr (res-lump-struct door 'on-activate pair)) '(((task-closed? "factory-sky-battle-introduction") (when (send-event self 'front) (want-display 'lfacrm1 'display)))))
+      (set! (cdr (res-lump-struct door 'on-cross pair)) '(#f))
+      (set! (cdr (res-lump-struct door 'on-notice pair)) '(((task-closed? "factory-sky-battle-introduction") '(ctyslumc lfacrm1))))
+      ;; (set! (cdr (res-lump-struct door 'on-notice pair)) '(((and (task-closed? "factory-sky-battle-introduction") (or (eq? (level-status? 'lfacrm1) 'loaded) (eq? (level-status? 'lfacrm1) 'active))) '(ctyslumc factorya))))
+      )
+    (when r1804 
+      (set! (-> r1804 on-enter) '(when (task-closed? "factory-sky-battle-introduction") (want-load 'ctywide-ff 'ctyslumc 'lfacrm1)))
+      )
+    )
+    
+  ;; keep lfacrm2 elevators (lfacrm2->factoryc, into interior) elevator active; work in reverse
+  (let ((elev1 (entity-by-name "fac-elevator-a-1"))
+        (elev1-proc (the elevator (process-by-ename "fac-elevator-a-1")))
+        (elev2 (entity-by-name "fac-elevator-a-2"))
+        (elev2-proc (the elevator (process-by-ename "fac-elevator-a-2"))))
+    (when elev1 
+      (set! (cdr (res-lump-struct elev1 'on-deactivate pair)) '((send-event self 'use-camera #f)))
+      (set! (cdr (res-lump-struct elev1 'on-notice pair)) '((when (task-closed? "factory-assault-indax-1") #f)))
+      )
+    ;; (when elev1-proc 
+      ;; (set! (-> elev1-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mined #f)))))
+      ;; )
+    (when elev2
+      (set! (cdr (res-lump-struct elev2 'on-deactivate pair)) '((send-event self 'use-camera #f)))
+      (set! (cdr (res-lump-struct elev2 'on-notice pair)) '((when (task-closed? "factory-assault-resolution") #f)))
+      )
+    (when elev2-proc 
+      ;; load factoryc (displayed by loading hack bubble); make sure door to factoryb is closed
+      ;; (set! (-> elev2-proc on-down) '(begin (print (target-below-meters? 500)) (want-load 'factorya 'factoryc) (send-event "lfacrm2-cty-door-1" 'untrigger)))
+      (set! (-> elev2-proc on-running) '(when (and (target-below-meters? 500) (send-event "fac-elevator-a-2" 'query 'going-down?)) (want-load 'factorya 'factoryc) (send-event "lfacrm2-cty-door-1" 'untrigger)))
+      )
+    )
+
+  ;; pick some level to check loaded for these doors to open - just used the level they're in since they're warp-gates anyway
+  (let ((door (the cty-door (process-by-ename "factoryb-cty-door-1"))))
+    (when door
+      (set! (-> door level-name) '(when #t '(factoryb)))
+      )
+    )
+  (let ((door (the cty-door (process-by-ename "lfacrm2-cty-door-1"))))
+    (when door
+      (set! (-> door level-name) '(when #t '(factorya)))
+      )
+    )
+
+  ;; railx (subrails 2) - kill doors to final room so you can warp out
+  (when (process-by-ename "rail-oracle-door-2")
+    (script-eval '(kill "rail-oracle-door-2"))
+    )
   
   ;; mooon things
 ;;   (cond

@@ -6507,7 +6507,7 @@
                   )
                 :callback-list '((23 . init-mood-comb))
                 :borrow #f
-                :bottom-height (meters -10000)
+                :bottom-height (meters -5000)
                 :fog-height (meters 80)
                 :fog-mult 1.0
                 :mood-range (new 'static 'mood-range :max-cloud 1.0 :min-fog 0.5 :max-fog 1.0)
@@ -6588,12 +6588,30 @@
                       )
                     :want-sound (new 'static 'array symbol 3 #f #f #f)
                     )
+                  (new 'static 'continue-point
+                    :name "railx-warp"
+                    :level 'railx
+                    :flags (continue-flags no-auto)
+                    :trans (new 'static 'vector :x (meters 16.7056) :y (meters -3546.6889) :z (meters -1328.2020) :w 1.0)
+                    :camera-trans (new 'static 'vector :x (meters 17.5072) :y (meters -3541.6286) :z (meters -1316.0439) :w 1.0)
+                    :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 31664 0 -8428))
+                    :camera-rot (new 'static 'array int16 9 -32690 0 2233 -269 32527 -3942 -2217 -3951 -32452)
+                    :on-goto #f
+                    :vis-nick 'railx
+                    :vehicle-type #x1b
+                    :want-count 2
+                    :want (new 'static 'inline-array level-buffer-state-small 2
+                      (new 'static 'level-buffer-state-small :name 'railx :display? 'display)
+                      (new 'static 'level-buffer-state-small :name 'railcst :display? 'special)
+                      )
+                    :want-sound (new 'static 'array symbol 3 #f #f #f)
+                    )
                   )
                 :callback-list '((23 . init-mood-railx))
                 :borrow (new 'static 'level-borrow-info
                   :alias #f
-                  :borrow-size (new 'static 'array uint16 5 #xa28 #x0 #x0 #x0 #x0)
-                  :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                  :borrow-size (new 'static 'array uint16 5 #xa28 #xa #x0 #x0 #x0)
+                  :borrow-info (new 'static 'array object 5 #f '(orbs-railx display) #f #f #f)
                   )
                 :bottom-height (meters -10000)
                 :fog-height (meters 80)

@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["warp-gate-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -46,27 +46,37 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [  16.4961, -3549.5139, -1144.6785 ], // warp to precurd
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.0000,  0.5568,  0.0000,  0.8306], // quaternion
+      "bsphere": [ 16.4961, -3549.5139, -1144.6785, 10], // bounding sphere
+      "lump": {
+        "name":"railx-warp-gate-1",
+        "distance": ["float", 750664.0]
+      }
+    },
+    {
+      "trans": [ 13.7699, -3543.6296, -1336.6304 ], // on red/orange screen border
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 13.7699, -3543.6296, -1336.6304, 10], // bounding sphere
+      "lump": {
+        "name":"railx-skill-01"
+      }
+    },
+    {
+      "trans": [  20.4993, -3536.6462, -1340.0930], // up on smaller screen between cables (no collision)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  20.4993, -3536.6462, -1340.0930, 10], // bounding sphere
+      "lump": {
+        "name":"railx-skill-02"
+      }
+    }//,
     
     
 
