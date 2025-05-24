@@ -3004,7 +3004,7 @@
       (((game-task-action talk))
        (let ((a0-5 (-> self root trans)))
          (when (and (time-elapsed? (-> self state-time) (seconds 3))
-                    (and (and *target* (and (>= 40960.0 (vector-vector-distance a0-5 (-> *target* control trans)))
+                    (and (and *target* (and (>= 8192.0 (vector-vector-distance a0-5 (-> *target* control trans)))
                                             (not (logtest? (focus-status teleporting) (-> *target* focus-status)))
                                             )
                               )
@@ -3029,14 +3029,15 @@
                )
              (set! (-> gp-0 flags) (font-flags shadow kerning large))
              (print-game-text
-               (lookup-text! *common-text* (text-id text-0087) #f)
+              ;;  (lookup-text! *common-text* (text-id text-0087) #f)
+               "Press ~Y~22L<~Z~Y~25L@~Z~Y~1L>~Z~Y~23L[~Z~+26H to ~+7Vp~-7Vla~+7Vy~-7V ~+7Vg~-7Vame as Daxter."
                gp-0
                #f
                44
                (bucket-id hud-draw-hud-alpha)
                )
              )
-           (if (cpad-pressed? 0 triangle)
+           (if (cpad-pressed? 0 circle)
                (go-virtual wait-for-start)
                )
            )

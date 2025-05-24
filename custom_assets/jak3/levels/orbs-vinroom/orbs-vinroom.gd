@@ -4,5 +4,8 @@
 ;; the actual file name still needs to be 8.3
 ("O42.DGO"
  (
+  "vinroom-scenes.o"
+  "arcade-ag.go"
+  "warp-gate-ag.go"
   "orbs-vinroom.go"
   ))

@@ -34,10 +34,12 @@
    // The base actor id for your custom level. If you have multiple levels, this should be unique!
    "base_id": 142000,
 
+  "custom_models": ["arcade"],
+
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["warp-gate-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -46,6 +48,29 @@
    "textures": [],
 
   "actors" : [
+    {
+      "trans": [ 1128.9082, 25.5000, 1124.1481 ], // 
+      "etype": "arcade",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0000, 0.9812, 0.0000, 0.1925], // quaternion
+      "bsphere": [ 1128.9082, 25.5000, 1124.1481 , 10], // bounding sphere
+      "lump": {
+        "name": "vinroom-arcade-1",
+        "scale": ["float", 0.75]
+      }
+    },
+    {
+      "trans": [ 1129.89,  25.50,  1120.49 ], // 
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0000, 0.9479, 0.0000, -0.3183], // quaternion
+      "bsphere": [ 1129.89,  25.50,  1120.49 , 10], // bounding sphere
+      "lump": {
+        "name": "vinroom-warp-gate-1",
+        "distance": ["float", 8096.0] // 2m
+      }
+    },
+
     {
       "trans": [ 1120.5,   31.05,   1120.6  ], // in center hologram (jetboard lulz)
       "etype": "skill",  // actor type

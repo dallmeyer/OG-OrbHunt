@@ -532,7 +532,7 @@
             )
           (("desertb-warp-gate-2") ;; desertb ( <- precurd )
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            ;; (set! (-> this continue) (get-continue-by-name *game-info* "precurd-warp")) ;; one way
+            (set! (-> this continue) #f) ;; one way
             )
           (("towerb-warp-gate-1") ;; towerb -> ltowerb; hidden warp on final plat
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
@@ -547,7 +547,7 @@
             (set! (-> this continue) (get-continue-by-name *game-info* "stadium-warp"))
             )
           (("halfpipe-air-train-01") ;; halfpipe -> stadium
-            (logclear! (-> this draw status) (draw-control-status no-draw)) ;; show air-train
+            ;; (logclear! (-> this draw status) (draw-control-status no-draw)) ;; show air-train
             (set! (-> this continue) #f)
             )
           (("stadium-warp-gate-01") ;; stadium -> halfpipe
@@ -555,7 +555,7 @@
             (set! (-> this continue) (get-continue-by-name *game-info* "halfpipe-warp"))
             )
           (("stadium-air-train-01") ;; stadium -> halfpipe
-            (logclear! (-> this draw status) (draw-control-status no-draw)) ;; show air-train
+            ;; (logclear! (-> this draw status) (draw-control-status no-draw)) ;; show air-train
             (set! (-> this continue) #f)
             )
           (("rublcst-warp-gate-1") ;; rublcst -> railb
@@ -565,6 +565,14 @@
           (("railx-warp-gate-1") ;; railx -> precurd
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
             (set! (-> this continue) (get-continue-by-name *game-info* "precurd-start"))
+            )
+          (("vinroom-warp-gate-1") ;; vinroom -> powergd
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "powergd-warp"))
+            )
+          (("powergd-warp-gate-1") ;; powergd -> vinroom 
+            ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "vinroom-game-exit"))
             )
           (else
             (set! (-> this continue) #f)
@@ -634,7 +642,9 @@
                      )
                    (time-elapsed? (-> self state-time) (seconds 0.1))
                    )
-          (if (and (cpad-pressed? 0 triangle)) ;; (process-grab? *target* #f)) ;; dont require grabbing target
+          (if (or (and (cpad-pressed? 0 square) (name= (-> self name) "vinroom-warp-gate-1")) ;; allow square press for vinroom arcase
+                  (and (cpad-pressed? 0 triangle)) ;; (process-grab? *target* #f)) ;; dont require grabbing target
+                  )
               (go-virtual use (-> self continue))
               )
           (script-eval (-> self on-close))
@@ -661,6 +671,12 @@
                   )
                 (("lfacrm2-warp-gate-1") ;; lfacrm2 -> factoryb
                   "Press ~Y~22L<~Z~Y~26L;~Z~Y~1L>~Z~Y~23L[~Z~+26H to exit."
+                  )
+                (("vinroom-warp-gate-1") ;; vinroom -> powergd
+                  "Press ~Y~22L<~Z~Y~24L#~Z~Y~1L>~Z~Y~23L[~Z~+26H to ~+7Vp~-7Vla~+7Vy~-7V ~+7Vg~-7Vame as Jak."
+                  )
+                (("powergd-warp-gate-1") ;; powergd -> vinroom
+                  "Press ~Y~22L<~Z~Y~26L;~Z~Y~1L>~Z~Y~23L[~Z~+26H to leave ~+7Vg~-7Vame."
                   )
                 (else
                   ;; Press TRIANGLE to use.
@@ -768,6 +784,9 @@
         (suspend-for (seconds 0.5)) ;; let player see door open for a bit
         )
       (("rublcst-warp-gate-1") ;; rublcst -> railb; hidden warpgate in h-sled
+        ;; skip target-warp-out, just go to continue
+        )
+      (("vinroom-warp-gate-1") ;; vinroom -> powergd; hidden warpgate in arcade
         ;; skip target-warp-out, just go to continue
         )
       (else

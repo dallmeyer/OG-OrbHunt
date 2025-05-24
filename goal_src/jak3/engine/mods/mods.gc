@@ -760,6 +760,10 @@
     ;; (('crate-1134) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('crate-1133) (set-vector-meters! (-> arg0 extra trans) )) ;; 
 
+    
+    ;; ====== VINROOM (power station) ======
+    (('power-game-1) (set-vector-meters! (-> arg0 extra trans) 1126.64  25.49  1127.56  )) ;; shifted over to separate play game as jak vs dax
+
     ;; ====== WASCITYA (spargus east) ======
     (('skill-153) (set-vector-meters! (-> arg0 extra trans) 2190.15  52.7  -274.97 )) ;; on rooftop between wascityb/wasstada, jump from awning trampoline behind invis wall and up
     (('skill-215) (set-vector-meters! (-> arg0 extra trans) 2268.1621 35.1424 -327.1119)) ;; behind support beam against rock wall on rooftop left of wasstada entrance
