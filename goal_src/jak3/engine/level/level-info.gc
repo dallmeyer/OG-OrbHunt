@@ -4170,7 +4170,7 @@
                   :callback-list '((3 . *darkjak-highres-texture-anim-array*))
                   :borrow (new 'static 'level-borrow-info
                      :alias #f
-                     :borrow-size (new 'static 'array uint16 5 #xa #x0 #x0 #x0 #x0)
+                     :borrow-size (new 'static 'array uint16 5 #x400 #x0 #x0 #x0 #x0)
                      :borrow-info (new 'static 'array object 5 '(orbs-rublcst display) #f #f #f #f)
                      )
                   :bottom-height (meters -150)
@@ -20197,7 +20197,7 @@
                     :borrow-size (new 'static 'array uint16 5 #xa00 #x0 #x0 #x0 #x0)
                     :borrow-info (new 'static 'array object 5 '(orbs-halfpipe display) #f #f #f #f)
                     )
-                   :bottom-height (meters -10000000)
+                   :bottom-height (meters -100)
                    :fog-height (meters 80)
                    :max-rain 1.0
                    :fog-mult 1.0
