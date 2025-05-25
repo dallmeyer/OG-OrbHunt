@@ -567,7 +567,8 @@
             (set! (-> this continue) (get-continue-by-name *game-info* "precurd-start"))
             )
           (("vinroom-warp-gate-1") ;; vinroom -> powergd
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this on-notice) '(begin (send-event self 'vinroom-powergd-toggle) #f)) ;; lol what a mess
             (set! (-> this continue) (get-continue-by-name *game-info* "powergd-warp"))
             )
           (("powergd-warp-gate-1") ;; powergd -> vinroom 
@@ -601,6 +602,7 @@
   :code sleep-code
   )
 
+(define-extern powergd-borrow-toggle (function symbol none))
 (defstate idle (warp-gate)
   :virtual #t
   :event (behavior ((proc process) (argc int) (message symbol) (block event-message-block))
@@ -611,6 +613,10 @@
       (('effect)
        (script-eval '(part-tracker "group-warpgate" entity self joint "outerOut"))
        )
+      (('vinroom-powergd-toggle)
+        ;; in powergd or close to warp gate, we want powergd / far from warp gate, no powergd (give cty stuff room to load)
+        (powergd-borrow-toggle (or (= (-> (level-get-target-inside *level*) name) 'powergd) (< (vector-vector-distance (-> self root trans) (target-pos 0)) (meters 8))))
+        )
       )
     )
   :code (behavior ()

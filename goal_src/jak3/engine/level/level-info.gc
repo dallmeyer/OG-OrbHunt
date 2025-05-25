@@ -480,7 +480,7 @@
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
                     :borrow-size (new 'static 'array uint16 5 #xbb8 #x300 #x0 #x0 #x0)
-                    :borrow-info (new 'static 'array object 5 '(powergd display) '(orbs-vinroom display) #f #f #f)
+                    :borrow-info (new 'static 'array object 5 #f '(orbs-vinroom display) #f #f #f)
                     )
                   :bottom-height (meters -15)
                   :fog-height (meters 80)
@@ -488,6 +488,25 @@
                   :mood-range (new 'static 'mood-range :max-cloud 1.0 :min-fog 0.5 :max-fog 1.0)
                   )
         )
+
+(defun powergd-borrow-toggle ((on? symbol))
+  (cond
+    (on?
+      (set! (-> vinroom borrow borrow-info 0) '(powergd display))
+      (when (not (level-status *level* 'powergd))
+        (script-eval '(want-load 'vinroom 'ctyinda))
+        ;; trigger borrow level re-eval
+        (add-borrow-levels *load-state*))
+      )
+    (else
+      (set! (-> vinroom borrow borrow-info 0) #f)
+      (when (level-status *level* 'powergd)
+        ;; trigger borrow level re-eval
+        (add-borrow-levels *load-state*))
+      )
+    )
+  (none)
+  )
 
 (define ljkdxvin (new 'static 'level-load-info
                    :name 'ljkdxvin
@@ -567,7 +586,7 @@
                   :level-flags (level-flags ocean-near-translucent)
                   :packages '()
                   :run-packages '("common")
-                  :memory-mode (level-memory-mode borrow)
+                  :memory-mode (level-memory-mode small-edge)
                   :music-bank #f
                   :extra-sound-bank #f
                   :mood-func 'update-mood-copy-parent
@@ -604,7 +623,7 @@
                     :borrow-size (new 'static 'array uint16 5 #x300 #x0 #x0 #x0 #x0)
                     :borrow-info (new 'static 'array object 5 '(orbs-powergd display) #f #f #f #f)
                     )
-                  :bottom-height (meters -15)
+                  :bottom-height (meters -210)
                   :fog-height (meters 80)
                   :fog-mult 1.0
                   :mood-range (new 'static 'mood-range :max-cloud 1.0 :min-fog 0.5 :max-fog 1.0)
@@ -21207,6 +21226,9 @@
 (define orbs-desertg (orbs-borrow-level 384 'orbs-desertg 'orbs-desertg-vis 'o91 'update-mood-default))
 (define orbs-deserte (orbs-borrow-level 385 'orbs-deserte 'orbs-deserte-vis 'o92 'update-mood-default))
 (define orbs-desertc (orbs-borrow-level 386 'orbs-desertc 'orbs-desertc-vis 'o93 'update-mood-default))
+
+(set! (-> orbs-powergd priority) 10)
+(set! (-> orbs-vinroom priority) 10)
 
 ;; (define otit  (orbs-borrow-level #xe5 'otit  'otit-vis  'o1k 'update-mood-default))
 

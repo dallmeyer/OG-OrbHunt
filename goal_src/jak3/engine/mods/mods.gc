@@ -1400,6 +1400,15 @@
       )
     )
   
+  ;; vinroom - some hacks to make door unlock
+  (let ((door (entity-by-name "vin-door-ctyinda-6"))
+        )
+    (when door
+      (set! (car (res-lump-struct door 'on-notice pair)) 'when)
+      (set! (cdr (res-lump-struct door 'on-notice pair)) '((and (want-display 'ctywide-kg 'display) (want-display 'ctyinda 'display)) '(ctyinda)))
+      )
+    )
+
   ;; mooon things
 ;;   (cond
 ;;     ((and (pause-allowed?) (= (level-status *level* 'mooon) 'active))
