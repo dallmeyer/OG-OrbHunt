@@ -549,9 +549,10 @@
           (t9-0)
           )
       )
-    (if (task-node-closed? (game-task-node volcano-darkeco-catch-flut))
-        (go-virtual disappear)
-        )
+    ;; orb hunt X flutflut legacy
+    ;; (if (task-node-closed? (game-task-node volcano-darkeco-catch-flut))
+    ;;     (go-virtual disappear)
+    ;;     )
     )
   )
 
@@ -750,9 +751,10 @@
 
 (defmethod enemy-common-post ((this flut-wild))
   "Common implementation of post. Runs ja-post."
-  (if (task-node-closed? (game-task-node volcano-darkeco-catch-flut))
-      (go (method-of-object this disappear))
-      )
+  ;; orb hunt X flutflut legacy
+  ;; (if (task-node-closed? (game-task-node volcano-darkeco-catch-flut))
+  ;;     (go (method-of-object this disappear))
+  ;;     )
   (if (time-elapsed? (-> this focus-ignore-timer) (seconds 2))
       (logclear! (-> this focus-status) (focus-status ignore))
       (logior! (-> this focus-status) (focus-status ignore))
@@ -918,10 +920,10 @@
 
 (defmethod go-fallback-init ((this flut-wild))
   "If there's no specific settings for initial state, go to this state after spawning."
-  (if (task-node-closed? (game-task-node volcano-darkeco-catch-flut))
-      (go (method-of-object this disappear))
+  ;; (if (task-node-closed? (game-task-node volcano-darkeco-catch-flut))
+  ;;     (go (method-of-object this disappear))
       ((method-of-type nav-enemy go-fallback-init) this)
-      )
+      ;; )
   )
 
 (defmethod init-enemy! ((this flut-wild))

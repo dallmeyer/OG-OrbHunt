@@ -5903,7 +5903,11 @@
                   (23 . init-mood-comb)
                   (6 . *comb-field-texture-anim-array*)
                   )
-                :borrow #f
+                :borrow (new 'static 'level-borrow-info
+                  :alias #f
+                  :borrow-size (new 'static 'array uint16 5 #x500 #x0 #x0 #x0 #x0)
+                  :borrow-info (new 'static 'array object 5 '(orbs-comba display) #f #f #f #f)
+                  )
                 :bottom-height (meters -10000)
                 :fog-height (meters 80)
                 :fog-mult 1.0
@@ -18096,7 +18100,8 @@
                       :want (new 'static 'inline-array level-buffer-state-small 4
                         (new 'static 'level-buffer-state-small :name 'templea :display? 'special)
                         (new 'static 'level-buffer-state-small :name 'templed :display? 'display)
-                        (new 'static 'level-buffer-state-small :name 'combx :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'templeb :display? 'display)
+                        ;; (new 'static 'level-buffer-state-small :name 'combx :display? 'display)
                         (new 'static 'level-buffer-state-small)
                         )
                       :want-sound (new 'static 'array symbol 3 'temple3 'temple4 'temple5)
@@ -18141,9 +18146,33 @@
                         )
                       :want-sound (new 'static 'array symbol 3 'temple3 'temple4 'temple5)
                       )
+                    (new 'static 'continue-point
+                      :name "templed-elevator"
+                      :level 'templed
+                      :flags (continue-flags no-auto)
+                      :trans (new 'static 'vector :x (meters 4324.6118) :y (meters 77.2344) :z (meters 4509.1796) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 4334.4379) :y (meters 81.7255) :z (meters 4511.1108) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 24687 0 -21545))
+                      :camera-rot (new 'static 'array int16 9 -6282 0 32159 -4663 32420 -910 -31819 -4751 -6215)
+                      :on-goto #f
+                      :vis-nick 'templed
+                      :vehicle-type #x1b
+                      :want-count 3
+                      :want (new 'static 'inline-array level-buffer-state-small 4
+                        (new 'static 'level-buffer-state-small :name 'templea :display? 'special)
+                        (new 'static 'level-buffer-state-small :name 'templeb :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'templed :display? 'display)
+                        (new 'static 'level-buffer-state-small)
+                        )
+                      :want-sound (new 'static 'array symbol 3 'temple3 'temple4 'temple5)
+                      )
                     )
                   :callback-list '((23 . init-mood-templed))
-                  :borrow #f
+                :borrow (new 'static 'level-borrow-info
+                  :alias #f
+                  :borrow-size (new 'static 'array uint16 5 #x500 #x0 #x0 #x0 #x0)
+                  :borrow-info (new 'static 'array object 5 '(orbs-templed display) #f #f #f #f)
+                  )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)
                   :fog-mult 1.0

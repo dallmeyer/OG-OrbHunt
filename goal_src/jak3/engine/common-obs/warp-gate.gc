@@ -574,6 +574,18 @@
             ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
             (set! (-> this continue) (get-continue-by-name *game-info* "vinroom-game-exit"))
             )
+          (("templed-warp-gate-1") ;; templed -> comba
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "comba-elevator"))
+            )
+          (("comba-warp-gate-1") ;; comba -> templed
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "templed-elevator"))
+            )
+          (("templex-warp-gate-1") ;; templex -> volcanox
+            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "volcanox-start"))            
+            )
           (else
             (set! (-> this continue) #f)
             )
@@ -787,6 +799,15 @@
         ;; skip target-warp-out, just go to continue
         )
       (("vinroom-warp-gate-1") ;; vinroom -> powergd; hidden warpgate in arcade
+        ;; skip target-warp-out, just go to continue
+        )
+      (("templed-warp-gate-1") ;; templed -> comba
+        ;; skip target-warp-out, just go to continue
+        )
+      (("comba-warp-gate-1") ;; comba -> templed
+        ;; skip target-warp-out, just go to continue
+        )
+      (("templex-warp-gate-1") ;; templex -> volcanox
         ;; skip target-warp-out, just go to continue
         )
       (else

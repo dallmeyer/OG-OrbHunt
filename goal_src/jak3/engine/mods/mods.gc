@@ -676,8 +676,9 @@
     ;; (('skill-214) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('urn-a-33) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('urn-b-25) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('urn-a-32) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('urn-c-13) (set-vector-meters! (-> arg0 extra trans) )) ;; triple orb!
+    (('urn-a-32)  (set-vector-meters! (-> arg0 extra trans) 4238.7963 113.6875 4792.2919) ;; triple orb! way up in corner in SE, controlled candle proxy
+      (quaternion-set! (-> arg0 quat) -0.0323  0.9042  -0.2678  -0.3308))
+    ;; (('urn-c-13) (set-vector-meters! (-> arg0 extra trans) )) ;; vanilla triple orb! use for hover?
     ;; (('urn-a-34) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('urn-a-31) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('urn-b-26) (set-vector-meters! (-> arg0 extra trans) )) ;; 
@@ -1162,6 +1163,21 @@
     ((in-bubble-m?  14.2037  -3460.4550  -979.4643 100.0) ;; end of subrails 2 jump to railx
       (script-eval '(continue "railx-warp"))
       )
+    ((in-bubble-m? 4235.20  66.03  4685.42 25.0) ;; hallway from triangle room to upper templed (rescue seem/light jak flight section)
+      (script-eval '(want-load 'templea 'templeb 'templed))
+      )
+    ((in-bubble-m? 4210.62  57.16  4704.14 25.0) ;; exiting ^ hallway back to triangle room
+      (script-eval '(want-load 'templea 'templeb 'templec))
+      )
+    ((in-bubble-m? 4276.21  53.38  4784.63 25.0) ;; hallway from triangle room to lower templed (where big skip happen :O)
+      (script-eval '(want-load 'templea 'templeb 'templed))
+      )
+    ((in-bubble-m? 4248.67  51.63  4785.09 25.0) ;; exiting ^ hallway back to triangle room
+      (script-eval '(want-load 'templea 'templeb 'templec))
+      )
+    ((in-bubble-m? 4157.98  47.86  4530.81 20.0) ;; hallway from precursor room to rotator room
+      (script-eval '(want-display 'templed 'display))
+      )
     )
 
   ;; palette hacks
@@ -1294,6 +1310,94 @@
   ;; railx (subrails 2) - kill doors to final room so you can warp out
   (when (process-by-ename "rail-oracle-door-2")
     (script-eval '(kill "rail-oracle-door-2"))
+    )
+
+  ;; temple
+  (let ((adoor2 (entity-by-name "tpl-door-a-2"))
+        (adoor3 (entity-by-name "tpl-door-a-3"))
+        (adoor5 (entity-by-name "tpl-door-a-5"))
+        (adoor7 (entity-by-name "tpl-door-a-7"))
+        (adoor8 (entity-by-name "tpl-door-a-8"))
+        (adoor13 (entity-by-name "tpl-door-a-13"))
+        (adoor15 (entity-by-name "tpl-door-a-15"))
+        (bdoor1 (entity-by-name "tpl-door-b-1"))
+        (mardoor4 (entity-by-name "tpl-mardoor-4"))
+        (mardoor5 (entity-by-name "tpl-mardoor-5"))
+        (r1382 (region-lookup-by-id 1382))
+        (r1698 (region-lookup-by-id 1698))
+        (r1373 (region-lookup-by-id 1373))
+        (r1762 (region-lookup-by-id 1762))
+        (r1764 (region-lookup-by-id 1764))
+        (r1778 (region-lookup-by-id 1778))
+        )
+    ;; open door templeb > templec
+    (when adoor2
+      (set! (cdr (res-lump-struct adoor2 'on-notice pair)) '((want-display 'templec 'display) '(templeb templec)))
+      )
+    ;; open door templea > templeb
+    (when adoor3
+      (set! (cdr (res-lump-struct adoor3 'on-notice pair)) '(#t '(templeb)))
+      )
+    ;; open door templeb > templed
+    (when adoor5
+      (set! (cdr (res-lump-struct adoor5 'on-notice pair)) '((want-display 'templed 'display) '(templeb templed)))
+      )
+    ;; open door templeb > templec?
+    (when adoor7
+      (set! (cdr (res-lump-struct adoor7 'on-notice pair)) '((want-display 'templec 'display) '(templeb templec)))
+      )
+    ;; open door templeb > templed
+    (when adoor8
+      (set! (cdr (res-lump-struct adoor8 'on-exit pair)) '(task-close! "temple-tests-door-3"))
+      (set! (cdr (res-lump-struct adoor8 'on-notice pair)) '(#t '(templea templeb templed)))
+      )
+    ;; open door templeb > templed
+    (when adoor13
+      (set! (cdr (res-lump-struct adoor13 'on-notice pair)) '((want-display 'templed 'display) '(templed)))
+      )
+    ;; open door templea > templec
+    (when adoor15
+      (set! (cdr (res-lump-struct adoor15 'on-notice pair)) '(#t '(templec)))
+      )
+    ;; open door templec > templeb
+    (when bdoor1
+      ;; (set! (cdr (res-lump-struct bdoor1 'on-enter pair)) '(want-display 'templec 'display))
+      (set! (cdr (res-lump-struct bdoor1 'on-exit pair)) '(task-close! "temple-tests-door-2"))
+      (set! (cdr (res-lump-struct bdoor1 'on-notice pair)) '((want-display 'templec 'display) '(templea templeb templec)))
+      )
+    ;; restore bridge
+    (clear-entity-kill-mask "tpl-break-bridge-1")
+    ;; open door templea > templec
+    (when mardoor4
+      (set! (cdr (res-lump-struct mardoor4 'on-notice pair)) '(#t '(templea templec)))
+      )
+    ;; open door templed > comb
+    (when mardoor5
+      (set! (cdr (res-lump-struct mardoor5 'on-notice pair)) '(#t '(templed)))
+      )
+    ;; no cutscene at templec > comb top of elevator, just go to continue at bottom
+    (when r1382
+      (set! (-> r1382 on-enter) #f)
+      )
+    ;; templec/d swap hack in hallway between circle room and rotator room
+    (when r1698
+      (set! (-> r1698 on-enter) '(want-load 'templea 'templeb 'templed))
+      (set! (-> r1698 on-exit) '(want-load 'templea 'templeb 'templec))
+      )
+    ;; default to loading templec from entrance, wait to load templed in hallway^ right before it gets displayed
+    (when r1373
+      (set! (-> r1373 on-enter) '(want-load 'templea 'templeb 'templec))
+      )
+    ;; templec/d swap hack on upper level of rotator room
+    (when r1762
+      (set! (-> r1762 on-enter) '(begin (send-event *target* 'end-mode 'freeze #t) (want-load 'templea 'templeb 'templed) (want-continue "templeb-fans-mid")))
+      (set! (-> r1762 on-exit) '(want-load 'templea 'templeb 'templec))
+      )
+    ;; templec/d swap hack from precursor room
+    (when r1778
+      (set! (-> r1778 on-enter) '(begin (want-load 'templea 'templeb 'templed) (want-display 'templea 'display)))
+      (set! (-> r1778 on-exit) '(begin (want-load 'templea 'templeb 'templec) (want-display 'templea 'special)))
+      )
     )
   
   ;; mooon things

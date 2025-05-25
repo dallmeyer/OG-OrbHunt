@@ -495,14 +495,16 @@
           "tpl-hide-sunken-brick-01.mb"
           "tpl-hide-collision-01.mb"
           )
-       (task-node-closed? (game-task-node temple-defend-introduction))
+       ;; orbhunt - unblock paths
+       #f ;; (task-node-closed? (game-task-node temple-defend-introduction)) 
        this
        )
-     (prototypes-game-visible-set!
-       '("tpl-hall-alter-tunnel-section-jnt-hide.mb" "tpl-hall-alter-tunnel-section-hide.mb")
-       (not (task-node-closed? (game-task-node temple-tests-resolution)))
-       this
-       )
+    ;; orbhunt - unblock paths
+    ;;  (prototypes-game-visible-set!
+    ;;    '("tpl-hall-alter-tunnel-section-jnt-hide.mb" "tpl-hall-alter-tunnel-section-hide.mb")
+    ;;    (not (task-node-closed? (game-task-node temple-tests-resolution)))
+    ;;    this
+    ;;    )
      )
     (('ctywide)
      (prototypes-game-visible-set!
@@ -515,7 +517,7 @@
        this
        )
      (prototypes-game-visible-set!
-       '("palcab-lowres-mhcity-tower-shell-blasted-01.mb" "palcab-lowres-mhcity-tower-shell-blasted-02.mb")
+       '("palcab-lowres-mhcity-tower-shell-blasted-01.mb" "palcab-lowres-mhcity-tower-she2l-blasted-02.mb")
        (task-node-closed? (game-task-node tower-destroy-resolution))
        this
        )
