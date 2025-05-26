@@ -4,5 +4,6 @@
 ;; the actual file name still needs to be 8.3
 ("O47.DGO"
  (
-  "orbs-sewksewf.go"
+  "warp-gate-ag.go"
+  "orbs-sewk.go"
   ))

@@ -541,8 +541,8 @@
 (build-custom-level "orbs-sewo")
 (custom-level-cgo "O46.DGO" "orbs-sewo/orbs-sewo.gd")
 
-(build-custom-level "orbs-sewksewf")
-(custom-level-cgo "O47.DGO" "orbs-sewksewf/orbs-sewksewf.gd")
+(build-custom-level "orbs-sewk")
+(custom-level-cgo "O47.DGO" "orbs-sewk/orbs-sewk.gd")
 
 (build-custom-level "orbs-sewg")
 (custom-level-cgo "O48.DGO" "orbs-sewg/orbs-sewg.gd")
@@ -678,6 +678,9 @@
 
 (build-custom-level "orbs-desertc")
 (custom-level-cgo "O93.DGO" "orbs-desertc/orbs-desertc.gd")
+
+(build-custom-level "orbs-sewf")
+(custom-level-cgo "O94.DGO" "orbs-sewf/orbs-sewf.gd")
 
 ;; generate the art group for a custom actor.
 ;; requires a .glb model file in custom_assets/jak3/models/custom_levels

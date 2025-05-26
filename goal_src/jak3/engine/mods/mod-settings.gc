@@ -390,7 +390,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   44	;; orbs-sewm
   45	;; orbs-sewn
   46	;; orbs-sewo
-  47	;; orbs-sewksewf
+  47	;; orbs-sewk
   48	;; orbs-sewg
   49	;; orbs-sewh
   50	;; orbs-sewi
@@ -436,6 +436,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   91	;; orbs-desertg
   92	;; orbs-deserte
   93	;; orbs-desertc
+  56	;; orbs-sewf
   ))
 
 (define *level-id-names* (new 'static 'boxed-array :type string :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
@@ -486,7 +487,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Sewers 1.2"	;; 44
   "Sewers 1.3"	;; 45
   "Sewers 1.4"	;; 46
-  "Sewers 2.1 / 3.5"	;; 47
+  "Sewers 2.1"	;; 47
   "Sewers 2.2"	;; 48
   "Sewers 2.3"	;; 49
   "Sewers 2.4"	;; 50
@@ -495,7 +496,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Sewers 3.2"	;; 53
   "Sewers 3.3"	;; 54
   "Sewers 3.4"	;; 55
-  "" ;; "Sewers 3.5"	;; 56
+  "Sewers 3.5"	;; 56
   "Slums"	;; 57
   "Spargus (East)"	;; 58
   "Spargus (West)"	;; 59

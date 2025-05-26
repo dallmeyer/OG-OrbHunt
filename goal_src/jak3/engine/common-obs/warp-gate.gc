@@ -585,7 +585,15 @@
             )
           (("templex-warp-gate-1") ;; templex -> volcanox
             (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "volcanox-start"))            
+            (set! (-> this continue) (get-continue-by-name *game-info* "volcanox-start"))
+            )
+          (("sewk-warp-gate-1") ;; sewk -> sewf
+            ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "sewf-warp"))
+            )
+          (("sewf-warp-gate-1") ;; sewf -> sewk
+            ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
+            (set! (-> this continue) (get-continue-by-name *game-info* "sewk-warp"))
             )
           (else
             (set! (-> this continue) #f)

@@ -1409,6 +1409,13 @@
       )
     )
 
+  ;; sewers
+  (let ((door (entity-by-name "com-airlock-outer-mhcity-3")))
+    (when door
+      (set! (cdr (res-lump-struct door 'on-exit pair)) '((want-display 'sewa #f) (when (send-event self 'front) (want-load 'mhcityb 'ctywide-mh 'towera) (want-display 'towera 'display) (want-sound 'ctyprtdh 'mhcity1h 'mhcity2h))))
+      )
+    )
+
   ;; mooon things
 ;;   (cond
 ;;     ((and (pause-allowed?) (= (level-status *level* 'mooon) 'active))

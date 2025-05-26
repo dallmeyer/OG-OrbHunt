@@ -47,7 +47,7 @@ levels = [
     ["orbs-sewm", "44"],
     ["orbs-sewn", "45"],
     ["orbs-sewo", "46"],
-    ["orbs-sewksewf", "47"],
+    ["orbs-sewk", "47"],
     ["orbs-sewg", "48"],
     ["orbs-sewh", "49"],
     ["orbs-sewi", "50"],
@@ -93,6 +93,7 @@ levels = [
     ["orbs-desertg", "91"],
     ["orbs-deserte", "92"],
     ["orbs-desertc", "93"],
+    ["orbs-sewf", "94"],
 ]
 
 d = "C:/Users/matt/Documents/Projects/OG-OrbHunt/custom_assets/jak3/levels/"

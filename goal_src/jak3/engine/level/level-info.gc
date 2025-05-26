@@ -489,6 +489,7 @@
                   )
         )
 
+(define-extern level-status (function level-group symbol symbol))
 (defun powergd-borrow-toggle ((on? symbol))
   (cond
     (on?
@@ -7806,9 +7807,33 @@
                      )
                    :want-sound (new 'static 'array symbol 3 'sewer2 'sewer3 'sewer4)
                    )
+                 (new 'static 'continue-point
+                   :name "sewf-warp"
+                   :level 'sewf
+                   :flags (continue-flags warp-gate)
+                   :trans (new 'static 'vector :x (meters -488.6250) :y (meters -128.8894) :z (meters 66.3832) :w 1.0)
+                   :camera-trans (new 'static 'vector :x (meters -499.3323) :y (meters -123.8930) :z (meters 61.1231) :w 1.0)
+                   :quat (new 'static 'vector4h :data (new 'static 'array int16 4 3 26313 -4 19526))
+                   :camera-rot (new 'static 'array int16 9 14027 0 -29612 3483 32539 1650 29406 -3855 13930)
+                   :on-goto #f
+                   :vis-nick 'sewf
+                   :vehicle-type #x1b
+                   :want-count 3
+                   :want (new 'static 'inline-array level-buffer-state-small 4
+                     (new 'static 'level-buffer-state-small :name 'sewa :display? 'display)
+                     (new 'static 'level-buffer-state-small :name 'sewf :display? 'display)
+                     (new 'static 'level-buffer-state-small :name 'sewe :display? 'display)
+                     (new 'static 'level-buffer-state-small)
+                     )
+                   :want-sound (new 'static 'array symbol 3 'sewer2 'sewer3 'sewer4)
+                   )
                  )
                :callback-list '((23 . init-mood-sewb))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                :alias #f
+                :borrow-size (new 'static 'array uint16 5 #x300 #x0 #x0 #x0 #x0)
+                :borrow-info (new 'static 'array object 5 '(orbs-sewf display) #f #f #f #f)
+                )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -8156,9 +8181,33 @@
                      )
                    :want-sound (new 'static 'array symbol 3 'sewer5 'sewer4 'sewer6)
                    )
+                 (new 'static 'continue-point
+                   :name "sewk-warp"
+                   :level 'sewk
+                   :flags (continue-flags warp-gate)
+                   :trans (new 'static 'vector :x (meters 488.8886) :y (meters -129.0259) :z (meters 195.4638) :w 1.0)
+                   :camera-trans (new 'static 'vector :x (meters 482.9472) :y (meters -123.8992) :z (meters 184.5606) :w 1.0)
+                   :quat (new 'static 'vector4h :data (new 'static 'array int16 4 4 6461 -4 -32123))
+                   :camera-rot (new 'static 'array int16 9 29182 0 -14902 1749 32540 3425 14799 -3845 28980)
+                   :on-goto #f
+                   :vis-nick 'sewk
+                   :vehicle-type #x1b
+                   :want-count 3
+                   :want (new 'static 'inline-array level-buffer-state-small 4
+                     (new 'static 'level-buffer-state-small :name 'sewa :display? 'display)
+                     (new 'static 'level-buffer-state-small :name 'sewg :display? 'display)
+                     (new 'static 'level-buffer-state-small :name 'sewk :display? 'display)
+                     (new 'static 'level-buffer-state-small)
+                     )
+                   :want-sound (new 'static 'array symbol 3 'sewer5 'sewer4 'sewer6)
+                   )
                  )
                :callback-list '((23 . init-mood-sewb))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                :alias #f
+                :borrow-size (new 'static 'array uint16 5 #x300 #x0 #x0 #x0 #x0)
+                :borrow-info (new 'static 'array object 5 '(orbs-sewk display) #f #f #f #f)
+                )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -21180,7 +21229,7 @@
 (define orbs-sewm (orbs-borrow-level 338 'orbs-sewm 'orbs-sewm-vis 'o44 'update-mood-default))
 (define orbs-sewn (orbs-borrow-level 339 'orbs-sewn 'orbs-sewn-vis 'o45 'update-mood-default))
 (define orbs-sewo (orbs-borrow-level 340 'orbs-sewo 'orbs-sewo-vis 'o46 'update-mood-default))
-(define orbs-sewksewf (orbs-borrow-level 341 'orbs-sewksewf 'orbs-sewksewf-vis 'o47 'update-mood-default))
+(define orbs-sewk (orbs-borrow-level 341 'orbs-sewk 'orbs-sewk-vis 'o47 'update-mood-default))
 (define orbs-sewg (orbs-borrow-level 342 'orbs-sewg 'orbs-sewg-vis 'o48 'update-mood-default))
 (define orbs-sewh (orbs-borrow-level 343 'orbs-sewh 'orbs-sewh-vis 'o49 'update-mood-default))
 (define orbs-sewi (orbs-borrow-level 344 'orbs-sewi 'orbs-sewi-vis 'o50 'update-mood-default))
@@ -21226,6 +21275,7 @@
 (define orbs-desertg (orbs-borrow-level 384 'orbs-desertg 'orbs-desertg-vis 'o91 'update-mood-default))
 (define orbs-deserte (orbs-borrow-level 385 'orbs-deserte 'orbs-deserte-vis 'o92 'update-mood-default))
 (define orbs-desertc (orbs-borrow-level 386 'orbs-desertc 'orbs-desertc-vis 'o93 'update-mood-default))
+(define orbs-sewf (orbs-borrow-level 387 'orbs-sewf 'orbs-sewf-vis 'o94 'update-mood-default))
 
 (set! (-> orbs-powergd priority) 10)
 (set! (-> orbs-vinroom priority) 10)
@@ -21235,6 +21285,7 @@
 (#when PC_PORT
   ;; (cons! *level-load-list* 'test-zone)
 
+  (cons! *level-load-list* 'orbs-sewf)
   (cons! *level-load-list* 'orbs-desertc)
   (cons! *level-load-list* 'orbs-deserte)
   (cons! *level-load-list* 'orbs-desertg)
@@ -21280,7 +21331,7 @@
   (cons! *level-load-list* 'orbs-sewi)
   (cons! *level-load-list* 'orbs-sewh)
   (cons! *level-load-list* 'orbs-sewg)
-  (cons! *level-load-list* 'orbs-sewksewf)
+  (cons! *level-load-list* 'orbs-sewk)
   (cons! *level-load-list* 'orbs-sewo)
   (cons! *level-load-list* 'orbs-sewn)
   (cons! *level-load-list* 'orbs-sewm)

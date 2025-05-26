@@ -1,7 +1,7 @@
 {
   // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
   // the name of this file, and the folder this file is in must have the same name.
-  "long_name": "orbs-sewksewf",
+  "long_name": "orbs-sewk",
   // The file name, should be upper case and 8 characters or less.
   "iso_name": "O47",
   // The nickname, should be exactly 3 characters
@@ -10,7 +10,7 @@
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_assets/jak3/levels/orbs-sewksewf/orbs-sewksewf.glb", // wascitya
+  "gltf_file": "custom_assets/jak3/levels/orbs-sewk/orbs-sewk.glb", // wascitya
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["warp-gate-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -46,28 +46,68 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
-    
+    {
+      "trans": [ 493.57,  -129.02,  195.46 ], // warp gate to sewf
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0000,  -0.9996,  0.0000,  0.0258], // quaternion
+      "bsphere": [ 493.57,  -129.02,  195.46 , 10], // bounding sphere
+      "lump": {
+        "name":"sewk-warp-gate-1"
+      }
+    },
+
+    {
+      "trans": [  372.8670, -107.4263, 245.4077], // on lamp above airlock to sewg
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  372.8670, -107.4263, 245.4077, 10], // bounding sphere
+      "lump": {
+        "name":"sewk-skill-01"
+      }
+    },
+    {
+      "trans": [  474.0458, -115.2888, 248.9233], // right pipe on wall above stinky pipes
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   474.0458, -115.2888, 248.9233, 10], // bounding sphere
+      "lump": {
+        "name":"sewk-skill-02"
+      }
+    },
+    {
+      "trans": [  467.6437, -110.6961, 246.9843], // lip of pipe, up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   467.6437, -110.6961, 246.9843, 10], // bounding sphere
+      "lump": {
+        "name":"sewk-skill-03",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   451.8100, -100.1320, 254.0823], // up behind pipe, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   451.8100, -100.1320, 254.0823, 10], // bounding sphere
+      "lump": {
+        "name":"sewk-skill-04"
+      }
+    },
+    {
+      "trans": [  455.4602, -117.3088, 213.2098], // on top of pipe near elevator
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  455.4602, -117.3088, 213.2098, 10], // bounding sphere
+      "lump": {
+        "name":"sewk-skill-05"
+      }
+    }//,
     
 
     // GHOSTS
