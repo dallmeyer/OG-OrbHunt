@@ -17583,10 +17583,11 @@
                       :on-goto #f
                       :vis-nick 'templeb
                       :vehicle-type #x1b
-                      :want-count 2
-                      :want (new 'static 'inline-array level-buffer-state-small 2
+                      :want-count 3
+                      :want (new 'static 'inline-array level-buffer-state-small 3
                         (new 'static 'level-buffer-state-small :name 'templea :display? 'special)
                         (new 'static 'level-buffer-state-small :name 'templeb :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'templec :display? #f)
                         )
                       :want-sound (new 'static 'array symbol 3 'temple3 'temple4 'temple5)
                       )

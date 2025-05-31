@@ -671,21 +671,24 @@
     ;; (('urn-a-15) (set-vector-meters! (-> arg0 extra trans) )) ;; 
 
     ;; ====== TEMPLEB (monk temple poles/rotators/precursor triangle room) ======
-    ;; (('skill-212) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-213) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-214) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('urn-a-33) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('urn-b-25) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    (('urn-a-32)  (set-vector-meters! (-> arg0 extra trans) 4238.7963 113.6875 4792.2919) ;; triple orb! way up in corner in SE, controlled candle proxy
-      (quaternion-set! (-> arg0 quat) -0.0323  0.9042  -0.2678  -0.3308))
-    ;; (('urn-c-13) (set-vector-meters! (-> arg0 extra trans) )) ;; vanilla triple orb! use for hover?
-    ;; (('urn-a-34) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('urn-a-31) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('urn-b-26) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-212) (set-vector-meters! (-> arg0 extra trans)  4121.2294  64.0372  4728.5834)) ;; middle finger of oracle, hint for orb urn on torch
+    (('skill-213) (set-vector-meters! (-> arg0 extra trans)   4210.1816  75.7331  4704.5761)) ;; up on door frame in triangle room leading to templed, hint for orb urn on torch
+    (('skill-214) (set-vector-meters! (-> arg0 extra trans) 4159.7138 67.7620 4815.9785)) ;; up on torch in treasure room
+    (('urn-b-26) (set-vector-meters! (-> arg0 extra trans) 4135.6640 74.3720 4720.2871)) ;; up on torch between central oracles, concussor high jump from skill-212 (or abah)
+    (('urn-b-25) (set-vector-meters! (-> arg0 extra trans) 4181.1923 74.3720 4720.8168)) ;; up on torch between central oracles, concussor extended from skill-213 ^ (or maybe abah or something)
+    (('urn-a-34) (set-vector-meters! (-> arg0 extra trans) 4144.6430 38.5877 4759.5078) ;; below oracle hand, on stable but also slippery ground?
+      (quaternion-set! (-> arg0 quat) 0.0525  0.9363  0.1948  0.2873))      
+    (('urn-a-32) (set-vector-meters! (-> arg0 extra trans) 4249.6513 113.7980 4773.1738) ;; way up in corner in SE, controlled candle proxy
+      (quaternion-set! (-> arg0 quat) -0.1289  0.6170  0.2435  0.7371))
+    (('urn-a-31) (set-vector-meters! (-> arg0 extra trans) 4147.0590 114.0964 4636.5400) ;; way up in corner in North, controlled candle proxy
+      (quaternion-set! (-> arg0 quat) -0.0841  -0.8766  -0.2621  0.3946))
+    (('urn-a-33) (set-vector-meters! (-> arg0 extra trans) 4080.4311 113.7913 4793.5332) ;; way up in corner in SW, controlled candle proxy
+      (quaternion-set! (-> arg0 quat) -0.2754  -0.3221  0.0077  0.9056))
     ;; (('urn-c-30) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('urn-c-31) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('urn-c-29) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('urn-b-7) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('urn-c-13) (set-vector-meters! (-> arg0 extra trans) )) ;; vanilla triple orb! use for hover?
 
     ;; ====== CTYSLUMC (new haven north) ======
     ;; (('skill-171) (set-vector-meters! (-> arg0 extra trans) )) ;; 
