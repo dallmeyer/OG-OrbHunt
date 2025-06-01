@@ -441,8 +441,8 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [  80.81,  38.58, -462.11, 10], // bounding sphere
       "lump": {
-        "name":"nestb-skill-hover-01",
-        "pickup-amount": ["float", 3.0]  // goldge
+        "name":"nestb-skill-hover-01"//,
+        // "pickup-amount": ["float", 3.0]  // goldge PSYCH
       }
     },
     {
@@ -968,8 +968,8 @@
       "bsphere": [  80.81,  38.58, -462.11, 10], // bounding sphere
       "lump": {
         "name":"nestb-skill-ghost-hover-01",
-        "alt-actor":"nestb-skill-hover-01",
-        "pickup-amount": ["float", 3.0]  // goldge
+        "alt-actor":"nestb-skill-hover-01"//,
+        // "pickup-amount": ["float", 3.0]  // goldge PSYCH
       }
     },
     {
