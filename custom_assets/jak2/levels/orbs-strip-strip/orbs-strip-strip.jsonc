@@ -508,11 +508,11 @@
       }
     },
     {
-      "trans": [ 2639.48, 135.17, -107.95], // slippery ledge back right from start
+      "trans": [ 2608.43, 146.67, -225.63], // upper ledge on NE curve, boost crouch jump extended FF dismount yknow the drill
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 2639.48, 135.17, -107.95, 10], // bounding sphere
+      "bsphere": [ 2608.43, 146.67, -225.63, 10], // bounding sphere
       "lump": {
         "name":"strip-skill-47"
       }
@@ -1543,11 +1543,11 @@
       }
     },
     {
-      "trans": [ 2639.48, 135.17, -107.95], // slippery ledge back right from start
+      "trans": [ 2608.43, 146.67, -225.63], // upper ledge on NE curve, boost crouch jump extended FF dismount yknow the drill
       "etype":"skill-ghost",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 2639.48, 135.17, -107.95, 10], // bounding sphere
+      "bsphere": [ 2608.43, 146.67, -225.63, 10], // bounding sphere
       "lump": {
         "name":"strip-skill-ghost-47",
         "alt-actor":"strip-skill-47"

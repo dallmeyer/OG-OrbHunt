@@ -281,11 +281,13 @@
   (none))
 
 (defun increment-skill-per-level ((ent entity-actor))
-  (let* ((lvl-idx (-> *level-load-info-level-id-remap* (-> ent extra level info index)))
-         (lvl-idx-override (res-lump-value ent 'lvl-idx-override int :default (the-as uint128 -1) :time -1000000000.0))
-         (final-lvl-idx (if (>= lvl-idx-override 0) lvl-idx-override lvl-idx)))
-    (+! (-> *game-info* skill-per-level final-lvl-idx) 1))
-  (true! *orb-count-updated?*)
+  (when ent
+    (let* ((lvl-idx (-> *level-load-info-level-id-remap* (-> ent extra level info index)))
+          (lvl-idx-override (res-lump-value ent 'lvl-idx-override int :default (the-as uint128 -1) :time -1000000000.0))
+          (final-lvl-idx (if (>= lvl-idx-override 0) lvl-idx-override lvl-idx)))
+      (+! (-> *game-info* skill-per-level final-lvl-idx) 1))
+    (true! *orb-count-updated?*)
+    )
   (none))
 
 (defun-extern hover-need-to-cooldown? symbol)
