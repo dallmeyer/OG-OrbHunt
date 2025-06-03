@@ -17948,7 +17948,11 @@
                       )
                     )
                   :callback-list '((23 . init-mood-templea) (7 . *templeb-warp-texture-anim-array*))
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #xa #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-templeb display) #f #f #f #f)
+                    )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)
                   :fog-mult 1.0
@@ -18042,7 +18046,11 @@
                       )
                     )
                   :callback-list '((23 . init-mood-templea) (6 . *templec-water-texture-anim-array*))
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #xa #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-templec display) #f #f #f #f)
+                    )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)
                   :fog-mult 1.0

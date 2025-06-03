@@ -668,7 +668,7 @@
     (('skill-214) (set-vector-meters! (-> arg0 extra trans) 4396.57  73.89  4048.61 )) ;; around back of left wall before it gets OOB-y, follow from ^
 
     ;; ====== TEMPLED (monk temple light jak flight) ======
-    ;; (('urn-a-15) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('urn-a-15) (set-vector-meters! (-> arg0 extra trans) 4248.67  118.32  4648.52 )) ;; top of pillar climb in SW corner (follow orb trail, templeb-skill-13 ish)
 
     ;; ====== TEMPLEB (monk temple poles/rotators/precursor triangle room) ======
     (('skill-212) (set-vector-meters! (-> arg0 extra trans)  4121.2294  64.0372  4728.5834)) ;; middle finger of oracle, hint for orb urn on torch
@@ -684,7 +684,7 @@
       (quaternion-set! (-> arg0 quat) -0.0841  -0.8766  -0.2621  0.3946))
     (('urn-a-33) (set-vector-meters! (-> arg0 extra trans) 4080.4311 113.7913 4793.5332) ;; way up in corner in SW, controlled candle proxy
       (quaternion-set! (-> arg0 quat) -0.2754  -0.3221  0.0077  0.9056))
-    ;; (('urn-c-30) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('urn-c-30) (set-vector-meters! (-> arg0 extra trans) 4210.01  75.44  4704.68 )) ;; triangle room, top of arch above NE doorway to upper templed, come from torch
     ;; (('urn-c-31) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('urn-c-29) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('urn-b-7) (set-vector-meters! (-> arg0 extra trans) )) ;; 
@@ -1332,6 +1332,8 @@
         (r1762 (region-lookup-by-id 1762))
         (r1764 (region-lookup-by-id 1764))
         (r1778 (region-lookup-by-id 1778))
+        (r1615 (region-lookup-by-id 1615))
+        (r1938 (region-lookup-by-id 1938))
         )
     ;; open door templeb > templec
     (when adoor2
@@ -1401,6 +1403,11 @@
       (set! (-> r1778 on-enter) '(begin (want-load 'templea 'templeb 'templed) (want-display 'templea 'display)))
       (set! (-> r1778 on-exit) '(begin (want-load 'templea 'templeb 'templec) (want-display 'templea 'special)))
       )
+    ;; get rid of some deathplanes in templed
+    (when r1615
+      (set! (-> r1615 on-enter) #f))
+    (when r1938
+      (set! (-> r1938 on-enter) #f))
     )
   
   ;; vinroom - some hacks to make door unlock
@@ -1815,7 +1822,7 @@
     (cond
       ((or (side-mish-active?)
            (not (progress-allowed?))
-           *auto-saving?*
+          ;;  *auto-saving?* ;; TODO - this seems busted, not getting cleared?
            (and *last-auto-save-time* (not (g-time-elapsed? *last-auto-save-time* (seconds 3))))
            (focus-test? *target* dead hit grabbed)
            )
@@ -1882,7 +1889,7 @@
 (defun speedrun-practice-spawn ()
   (cond
     ((or (not (progress-allowed?))
-         *auto-saving?*
+        ;;  *auto-saving?* ;; TODO - this seems busted, not getting cleared?
          (and *last-auto-save-time* (not (g-time-elapsed? *last-auto-save-time* (seconds 3))))
          (focus-test? *target* dead hit grabbed)
          )
