@@ -682,6 +682,12 @@
 (build-custom-level "orbs-sewf")
 (custom-level-cgo "O94.DGO" "orbs-sewf/orbs-sewf.gd")
 
+(build-custom-level "orbs-ctyfarma")
+(custom-level-cgo "O95.DGO" "orbs-ctyfarma/orbs-ctyfarma.gd")
+
+(build-custom-level "orbs-ctyfarmb")
+(custom-level-cgo "O96.DGO" "orbs-ctyfarmb/orbs-ctyfarmb.gd")
+
 ;; generate the art group for a custom actor.
 ;; requires a .glb model file in custom_assets/jak3/models/custom_levels
 ;; to also generate a collide-mesh, add :gen-mesh #t

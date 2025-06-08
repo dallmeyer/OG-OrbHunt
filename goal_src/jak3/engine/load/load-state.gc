@@ -458,6 +458,7 @@
   (none)
   )
 
+(define last-cant-display-warning-time (the-as time-frame #f))
 (defmethod want-display-level ((this load-state) (arg0 symbol) (arg1 symbol))
   (dotimes (v1-0 10)
     (when (= (-> this want v1-0 name) arg0)
@@ -466,8 +467,9 @@
       (return 0)
       )
     )
-  (if arg1
+  (when (and arg1 (or (not last-cant-display-warning-time) (time-elapsed? last-cant-display-warning-time (seconds 5))))
       (format 0 "ERROR: can't display ~A because it isn't loaded~%" arg0)
+      (set-time! last-cant-display-warning-time)
       )
   0
   )

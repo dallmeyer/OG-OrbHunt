@@ -4,5 +4,9 @@
 ;; the actual file name still needs to be 8.3
 ("O25.DGO"
  (
+  "warp-gate-ag.go"
+  "tpage-256.go" ;; ctyfarmb-vis-pris (yakows)
+  "yakow.o"
+  "yakow-ag.go"
   "orbs-mhcitya.go"
   ))

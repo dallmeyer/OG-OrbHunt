@@ -685,16 +685,19 @@
     (('urn-a-33) (set-vector-meters! (-> arg0 extra trans) 4080.4311 113.7913 4793.5332) ;; way up in corner in SW, controlled candle proxy
       (quaternion-set! (-> arg0 quat) -0.2754  -0.3221  0.0077  0.9056))
     (('urn-c-30) (set-vector-meters! (-> arg0 extra trans) 4210.01  75.44  4704.68 )) ;; triangle room, top of arch above NE doorway to upper templed, come from torch
-    ;; (('urn-c-31) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('urn-c-29) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('urn-b-7) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('urn-c-13) (set-vector-meters! (-> arg0 extra trans) )) ;; vanilla triple orb! use for hover?
-
+    (('urn-c-31) (set-vector-meters! (-> arg0 extra trans) 4125.91  82.66  4455.02 )) ;; on small ledge on precursor thing in middle of upper rotator room
+    (('urn-c-29) (set-vector-meters! (-> arg0 extra trans) 4158.41  82.81  4488.81 )) ;; on small ledge on precursor thing in middle of upper rotator room
+    (('urn-b-7) (set-vector-meters! (-> arg0 extra trans) 4151.1772 78.7900 4527.4663) ;; on ground standpoint wall near templed to comb bridge
+      (quaternion-set! (-> arg0 quat) -0.3511  -0.1783  0.0683  0.9166))
+    (('urn-c-13)  ;; vanilla triple orb! 
+      (set-vector-meters! (-> arg0 extra trans) 4108.5952 132.5621 4706.1166) ;; way way up on NW pillar, you can proxy here but staying in-bounds is impossible maybe, so this is a semi-hover orb
+      (quaternion-set! (-> arg0 quat)  -0.2549  -0.5888  0.1041  -0.7598))
+    
     ;; ====== CTYSLUMC (new haven north) ======
-    ;; (('skill-171) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-170) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-169) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-207) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-171) (set-vector-meters! (-> arg0 extra trans)  497.8662  21.4755  -556.8512)) ;; on top of ledge above fake door opposite from freedomhq
+    (('skill-170) (set-vector-meters! (-> arg0 extra trans)  746.4497  21.3800  -582.8273)) ;; another ledge above fake door, near hanger
+    (('skill-169) (set-vector-meters! (-> arg0 extra trans) 558.4760 32.9201 -556.4490)) ;; fountain outside freedomhq, just moved way up to top of water effect. jetboard triangle turn super jump thing
+    (('skill-207) (set-vector-meters! (-> arg0 extra trans) 396.1460 -9.7146 -589.5195)) ;; underwater behind pipes in corner near NW
 
     ;; ====== CTYSLUMB (new haven south) ======
     ;; (('skill-175) (set-vector-meters! (-> arg0 extra trans) )) ;; 
@@ -735,6 +738,14 @@
     ;; (('crate-1326) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('crate-1345) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('crate-1344) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+
+    ;; CTYFARMB
+    (('yakow-12)
+      (set-vector-meters! (-> arg0 extra trans) -25.62  10.36 926.80)
+      )
+    (('yakow-8)
+      (logior! (-> arg0 extra perm status) (entity-perm-status dead)) ;; relocated to mhcitya
+      )
     
     ;; ====== SEWM (sewers 1.2) ======
     ;; (('crate-1236) (set-vector-meters! (-> arg0 extra trans) )) ;; 
@@ -929,12 +940,12 @@
         )
 
       (case (-> alt-actor etype symbol)
-        ;; (('yakow)
-        ;;   (when (zero? (-> (the yakow (-> alt-actor extra process)) incoming-attack-id))
-        ;;     ;; yakow hasnt been attacked yet, prevent pickup/hide
-        ;;     (return #f)
-        ;;     )          
-        ;;   )
+        (('yakow 'yakow-dummy)
+          (when (zero? (-> (the yakow (-> alt-actor extra process)) incoming-attack-id))
+            ;; yakow hasnt been attacked yet, prevent pickup/hide
+            (return #f)
+            )          
+          )
         (else
           (when (not (or (name= (-> alt-actor extra process state name) 'die)
                          (name= (-> alt-actor extra process state name) 'joint-exploder-shatter)
@@ -1409,6 +1420,11 @@
     (when r1938
       (set! (-> r1938 on-enter) #f))
     )
+
+  ;; make urn with triple orb (vanilla) gold
+  (let ((hover-urn (the process-drawable (process-by-ename "urn-c-13"))))
+    (when hover-urn
+      (set-vector! (-> hover-urn draw color-emissive) 1.0 1.0 0.0 1.0)))
   
   ;; vinroom - some hacks to make door unlock
   (let ((door (entity-by-name "vin-door-ctyinda-6"))

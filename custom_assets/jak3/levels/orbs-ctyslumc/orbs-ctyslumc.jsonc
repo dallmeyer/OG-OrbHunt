@@ -46,28 +46,72 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [   586.9774, 9.2204, -738.9550], // on support for grindrail in back section (the one not where hanger is)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   586.9774, 9.2204, -738.9550, 10], // bounding sphere
+      "lump": {
+        "name":"ctyslumc-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   569.2645, 32.6833, -744.9090], // up high on building above random ground collision, abah from^ (prob not needed, but makes it more obvi)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   569.2645, 32.6833, -744.9090, 10], // bounding sphere
+      "lump": {
+        "name":"ctyslumc-skill-02"
+      }
+    },
     
+    {
+      "trans": [  449.21,  53.45,  -538.95 ], // on top of wall in front of you as you come from ctyslumb to c
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  449.21,  53.45,  -538.95 , 10], // bounding sphere
+      "lump": {
+        "name":"ctyslumc-skill-hover-01",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [   457.9325, 43.7382, -611.7075], // on top of archway to back section (without hanger)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  457.9325, 43.7382, -611.7075, 10], // bounding sphere
+      "lump": {
+        "name":"ctyslumc-skill-hover-02",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [  574.1774, 52.7645, -656.5083], // on top of wall behind billboard near fountain (slight troll, collision stops in the very middle lol)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  574.1774, 52.7645, -656.5083, 10], // bounding sphere
+      "lump": {
+        "name":"ctyslumc-skill-hover-03",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [  580.1682, 32.5416, -432.7756], // on top of south wall in corner near veger poster
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   580.1682, 32.5416, -432.7756, 10], // bounding sphere
+      "lump": {
+        "name":"ctyslumc-skill-hover-04",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    }//,
     
 
     // GHOSTS

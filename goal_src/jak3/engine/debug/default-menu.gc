@@ -6871,6 +6871,8 @@
        (menu
         "Continue"
         (function "temp"      #f ,(lambda () (start 'play (get-continue-by-name *game-info* startingDebugContinuePoint))))
+        (function "ctyfarma"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "ctyfarma-warp"))))
+        (function "ctyfarmb"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "ctyfarmb-warp"))))
         (function "rubblea"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "rubblea-start"))))
         (function "rubblea2"    #f ,(lambda () (start 'play (get-continue-by-name *game-info* "rubblea2-start"))))
         (function "rubbleb"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "rubbleb-start"))))

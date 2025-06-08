@@ -489,6 +489,7 @@
   "ragdoll-test.o"
   "debris.o"
   "shield-sphere.o"
+  "yakow.o"
   "entity-debug.o" ;; added
   "orb-placer-h.o"  ;; added
   "mod-settings.o" ;; added ;;mod-base-change

@@ -57463,63 +57463,170 @@
 ;; ctyfarm-obs                    ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(deftype farm-marrow (process-drawable)
-  ()
-  :method-count-assert 21
-  :size-assert         #xc8
-  :flag-assert         #x15005000c8
-  (:state-methods
-    idle ;; 20
+;; (deftype farm-marrow (process-drawable)
+;;   ()
+;;   :method-count-assert 21
+;;   :size-assert         #xc8
+;;   :flag-assert         #x15005000c8
+;;   (:state-methods
+;;     idle ;; 20
+;;     )
+;;   )
+
+;; (deftype farm-beetree (process-drawable)
+;;   ()
+;;   :method-count-assert 21
+;;   :size-assert         #xc8
+;;   :flag-assert         #x15005000c8
+;;   (:state-methods
+;;     idle ;; 20
+;;     )
+;;   )
+
+;; (deftype farm-cabbage (process-drawable)
+;;   ()
+;;   :method-count-assert 21
+;;   :size-assert         #xc8
+;;   :flag-assert         #x15005000c8
+;;   (:state-methods
+;;     idle ;; 20
+;;     )
+;;   )
+
+;; (deftype farm-small-cabbage (process-drawable)
+;;   ()
+;;   :method-count-assert 21
+;;   :size-assert         #xc8
+;;   :flag-assert         #x15005000c8
+;;   (:state-methods
+;;     idle ;; 20
+;;     )
+;;   )
+
+;; (deftype farm-chilirots (process-drawable)
+;;   ()
+;;   :method-count-assert 21
+;;   :size-assert         #xc8
+;;   :flag-assert         #x15005000c8
+;;   (:state-methods
+;;     idle ;; 20
+;;     )
+;;   )
+
+;; (deftype farm-sprinkler-barrels (process-drawable)
+;;   ()
+;;   :method-count-assert 21
+;;   :size-assert         #xc8
+;;   :flag-assert         #x15005000c8
+;;   (:state-methods
+;;     idle ;; 20
+;;     )
+;;   )
+
+;; replaced with jak 2 versions, commented out assets since process-focusable has changed
+
+(deftype shaker (structure)
+  ((axis         vector :inline :offset-assert 0)
+   (start-time   time-frame         :offset-assert 16)
+   (decay-time   float          :offset-assert 24)
+   (amplitude    float          :offset-assert 28)
+   (freq         float          :offset-assert 32)
+   (y-decay-time float          :offset-assert 36)
+   (y-amplitude  float          :offset-assert 40)
+   (y-freq       float          :offset-assert 44)
+   (shake        float          :offset-assert 48)
+   (y-shake      float          :offset-assert 52)
+   )
+  ;; :method-count-assert 10
+  ;; :size-assert         #x38
+  ;; :flag-assert         #xa00000038
+  (:methods
+    (shaker-method-9 (_type_) none) ;; 9
     )
   )
 
-(deftype farm-beetree (process-drawable)
-  ()
-  :method-count-assert 21
-  :size-assert         #xc8
-  :flag-assert         #x15005000c8
+(deftype farm-marrow (process-focusable)
+  ((shakers            shaker 5 :inline :offset-assert 208)
+   (incoming-attack-id uint32    :offset-assert 528)
+   )
+  ;; :method-count-assert 32
+  ;; :size-assert         #x214
+  ;; :flag-assert         #x1f01a00214
   (:state-methods
-    idle ;; 20
+    idle
+    die
+    )
+  (:methods
+    (farm-marrow-method-29 (_type_) none) ;; 29
+    (farm-marrow-method-30 (_type_) none) ;; 30
     )
   )
 
-(deftype farm-cabbage (process-drawable)
-  ()
-  :method-count-assert 21
-  :size-assert         #xc8
-  :flag-assert         #x15005000c8
+(deftype farm-beetree (process-focusable)
+  ((shakers            shaker 2 :inline :offset-assert 208)
+   (incoming-attack-id uint32    :offset-assert 336)
+   )
+  ;; :method-count-assert 32
+  ;; :size-assert         #x154
+  ;; :flag-assert         #x1f00e00154
   (:state-methods
-    idle ;; 20
+    idle
+    die
+    )
+  (:methods
+    (farm-beetree-method-29 (_type_) none) ;; 29
+    (farm-beetree-method-30 (_type_) none) ;; 30
     )
   )
 
-(deftype farm-small-cabbage (process-drawable)
-  ()
-  :method-count-assert 21
-  :size-assert         #xc8
-  :flag-assert         #x15005000c8
+(deftype farm-cabbage (process-focusable)
+  ((shakers            shaker 2 :inline :offset-assert 208)
+   (incoming-attack-id uint32    :offset-assert 336)
+   )
+  ;; :method-count-assert 32
+  ;; :size-assert         #x154
+  ;; :flag-assert         #x1f00e00154
   (:state-methods
-    idle ;; 20
+    idle
+    die
+    )
+  (:methods
+    (farm-cabbage-method-29 (_type_) none) ;; 29
+    (farm-cabbage-method-30 (_type_) none) ;; 30
     )
   )
 
-(deftype farm-chilirots (process-drawable)
-  ()
-  :method-count-assert 21
-  :size-assert         #xc8
-  :flag-assert         #x15005000c8
+(deftype farm-small-cabbage (process-focusable)
+  ((shakers            shaker 1 :inline :offset-assert 208)
+   (incoming-attack-id uint32    :offset-assert 272)
+   )
+  ;; :method-count-assert 32
+  ;; :size-assert         #x114
+  ;; :flag-assert         #x1f00a00114
   (:state-methods
-    idle ;; 20
+    idle
+    die
+    )
+  (:methods
+    (farm-small-cabbage-method-29 (_type_) none) ;; 29
+    (farm-small-cabbage-method-30 (_type_) none) ;; 30
     )
   )
 
-(deftype farm-sprinkler-barrels (process-drawable)
-  ()
-  :method-count-assert 21
-  :size-assert         #xc8
-  :flag-assert         #x15005000c8
+(deftype farm-chilirots (process-focusable)
+  ((shakers            shaker 4 :inline :offset-assert 208)
+   (incoming-attack-id uint32    :offset-assert 464)
+   )
+  ;; :method-count-assert 32
+  ;; :size-assert         #x1d4
+  ;; :flag-assert         #x1f016001d4
   (:state-methods
-    idle ;; 20
+    idle
+    die
+    )
+  (:methods
+    (farm-chilirots-method-29 (_type_) none) ;; 29
+    (farm-chilirots-method-30 (_type_) none) ;; 30
     )
   )
 
