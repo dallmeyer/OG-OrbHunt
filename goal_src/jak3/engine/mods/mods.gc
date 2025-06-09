@@ -700,12 +700,14 @@
     (('skill-207) (set-vector-meters! (-> arg0 extra trans) 396.1460 -9.7146 -589.5195)) ;; underwater behind pipes in corner near NW
 
     ;; ====== CTYSLUMB (new haven south) ======
-    ;; (('skill-175) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-172) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-206) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-205) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-174) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-173) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-175) (set-vector-meters! (-> arg0 extra trans)  402.1042  20.9327  -181.6336)) ;; on pipe in corner near speedrun oob to ruins
+    (('skill-172) (set-vector-meters! (-> arg0 extra trans)  394.0835  21.3836  -166.6652)) ;; on high windowsill in corner just down from ctysluma, zoomer launch
+    (('skill-206) (set-vector-meters! (-> arg0 extra trans)   392.3831  21.1201  -19.2109)) ;; in pipes on wall near ctygenb entrance
+    (('skill-205) (set-vector-meters! (-> arg0 extra trans)  416.1460  28.5568  -11.5396)) ;; up on ledge, shitty extended concussor from ^
+    (('skill-174) (set-vector-meters! (-> arg0 extra trans)  726.9362  -9.8939  -67.7004)) ;; underwater in crevice near entrance from ctysluma
+    (('skill-173) (set-vector-meters! (-> arg0 extra trans)  541.6387 46.0828 -274.0468)) ;; up on ledge above windowsill with bushes and ctyslumb-skill-03 
+    (('crate-1132) (set-vector-meters! (-> arg0 extra trans) 540.3664 52.0341 -240.8164) ;; up from ^ on top of building
+      (quaternion-set! (-> arg0 quat) 0.0486  0.7096  -0.0681  0.6995))
 
     ;; ====== CTYPORT (port) ======
     ;; (('skill-144) (set-vector-meters! (-> arg0 extra trans) )) ;; 
@@ -771,7 +773,7 @@
     ;; (('crate-1306) (set-vector-meters! (-> arg0 extra trans) )) ;; 
 
     ;; ====== CTYSLUMA (slums) ======
-    ;; (('skill-176) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-176) (set-vector-meters! (-> arg0 extra trans)  737.9973  8.5156  -93.4688)) ;; in corner behind fence at entrance to ctyslumb
     ;; (('crate-1134) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('crate-1133) (set-vector-meters! (-> arg0 extra trans) )) ;; 
 

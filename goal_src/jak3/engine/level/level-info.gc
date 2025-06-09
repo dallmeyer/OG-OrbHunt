@@ -1994,7 +1994,11 @@
                        )
                      )
                    :callback-list '((23 . init-mood-ctyslumb) (6 . *ctyslumb-water-texture-anim-array*))
-                   :borrow #f
+                   :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #xa #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-ctyslumb display) #f #f #f #f)
+                    )
                    :bottom-height (meters -15)
                    :fog-height (meters 80)
                    :max-rain 1.0
