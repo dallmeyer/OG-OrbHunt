@@ -348,6 +348,12 @@
     )
   )
 
+(define *pid-search-id* 0)
+(defun process-by-pid ((arg0 int))
+  (set! *pid-search-id* arg0)
+  (search-process-tree *active-pool* (lambda ((proc process)) (= (-> proc pid) *pid-search-id*)))
+  )
+
 (defun entity-process-count ((arg0 symbol))
   (let ((gp-0 0))
     (dotimes (s4-0 (-> *level* length))

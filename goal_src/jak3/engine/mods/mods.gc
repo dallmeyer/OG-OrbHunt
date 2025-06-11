@@ -710,34 +710,38 @@
       (quaternion-set! (-> arg0 quat) 0.0486  0.7096  -0.0681  0.6995))
 
     ;; ====== CTYPORT (port) ======
-    ;; (('skill-144) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-145) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-146) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-147) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-227) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-186) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-157) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-185) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-156) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-158) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-143) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-148) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-159) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-160) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-161) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-164) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-167) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-162) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-163) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-165) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-166) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-225) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    ;; (('skill-144) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-145) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-146) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-147) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-227) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-186) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-157) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-185) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-156) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-158) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-143) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-148) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-159) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-160) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-161) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-164) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+
+    (('skill-167) (set-vector-meters! (-> arg0 extra trans)  321.9746  26.8046  1729.9516)) ;; intended pipe steps to vanilla orbs
+    (('skill-162) (set-vector-meters! (-> arg0 extra trans)  350.8096  57.7852  1764.5488)) ;; intended pipe steps to vanilla orbs
+    (('skill-163) (set-vector-meters! (-> arg0 extra trans)  66.7415  35.6970  1729.4565)) ;; intended pipe steps to vanilla orbs
+    (('skill-165) (set-vector-meters! (-> arg0 extra trans)  35.3857  52.1248  1764.6433)) ;; intended pipe steps to vanilla orbs
+    (('skill-166) (set-vector-meters! (-> arg0 extra trans)  -58.1490  29.0910  1326.2271)) ;; naughty ottsel roof
+    (('skill-225) (set-vector-meters! (-> arg0 extra trans)  206.2570  44.8846  1378.6987)) ;; up on fallen pipe in middle near sewers, just zoomer launch to spam concussor/spin
     ;; (('skill-226) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('skill-188) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-187) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1142) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1143) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1326) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-187) (set-vector-meters! (-> arg0 extra trans)  161.9607  20.5184  1206.4691)) ;; near sewers / towards where mars tomb would be, up behind metal sheet
+    (('crate-1142) (set-vector-meters! (-> arg0 extra trans) 112.5644 5.2090 1328.3836) ;; behind big balls near sewers
+      (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 -1.0))
+    (('crate-1143) (set-vector-meters! (-> arg0 extra trans) -220.9320 -1.0825 1637.4323) ;; on ramp into water where underport exit would be
+      (quaternion-set! (-> arg0 quat) -0.2641  -0.5464  0.2458  -0.7557))
+    (('crate-1326) (set-vector-meters! (-> arg0 extra trans) -407.2276 5.1906 1255.4074) ;; behind big balls near mhcity
+      (quaternion-set! (-> arg0 quat)  -0.0000  -0.8427  0.0001  -0.5383))
     ;; (('crate-1345) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('crate-1344) (set-vector-meters! (-> arg0 extra trans) )) ;; 
 
@@ -1011,6 +1015,84 @@
   (none)
   )
 
+
+(define *port-barge-orb-names* (the-as (array string) 
+  (new 'static 'boxed-array :type string :length 16 :allocated-length 16
+    "skill-144"
+    "skill-145"
+    "skill-146"
+    "skill-147"
+    "skill-227"
+    "skill-186"
+    "skill-157"
+    "skill-185"
+    "skill-156"
+    "skill-158"
+    "skill-143"
+    "skill-148"
+    "skill-159"
+    "skill-160"
+    "skill-161"
+    "skill-164"
+    )))
+(define *port-barge-temp-idx* 0)
+(define *port-barge-pids* (the-as (array int)
+  (new 'global 'boxed-array int32 16)))
+
+(defun move-port-barge-orbs ()
+  ;; reset idx and list
+  (set! *port-barge-temp-idx* 0)
+  (dotimes (i 16)
+    (set! (-> *port-barge-pids* i) 0))
+  ;; look for barges
+  (when *vehicle-manager*
+    (iterate-process-tree *vehicle-manager*
+      (lambda ((arg0 process-drawable))
+        (when (= (-> arg0 type symbol) 'barge)
+          (set! (-> *port-barge-pids* *port-barge-temp-idx*) (-> arg0 pid))
+          (dbg-format 0 "found barge pid ~D~%" (-> arg0 pid))
+          (+! *port-barge-temp-idx* 1)
+          )
+        #t
+        )
+      *null-kernel-context*)
+    ;; sort barge pids for consistent orb assignment - buggy results, yolo it
+    (qs-sort *port-barge-pids*)
+    ;; map orbs to barges, if we got any
+    (dotimes (i *port-barge-temp-idx*)
+      (let* ((orb (the skill (process-by-ename (-> *port-barge-orb-names* i))))
+             (bpid (-> *port-barge-pids* i))
+             (barge (the process-drawable (process-by-pid bpid)))
+             (tmp-vec (new-stack-vector0))
+             )
+        (cond 
+          ((and (nonzero? bpid) orb barge)
+            (dbg-format 0 "moving ~S to barge pid ~D~%" (-> *port-barge-orb-names* i) bpid)
+            (set! (-> orb root trans x) (-> barge root trans x))
+            (set! (-> orb root trans z) (-> barge root trans z))
+            ;; convert the quaternion to a vector representing rotation around z axis (isnt it the y axis in GOAL tho?)
+            (vector-z-quaternion! tmp-vec (-> barge root quat))
+            ;; shift orbs's position opposite the barge angle, by 1m
+            (vector-! (-> orb root trans) (-> orb root trans) (vector-normalize! tmp-vec (meters 9.45)))
+            (set! (-> orb root trans y) (fmin (-> orb root trans y) (meters 3.7)))
+
+            (set! (-> orb base x) (-> orb root trans x))
+            (set! (-> orb base y) (meters 2.7))
+            (set! (-> orb base z) (-> orb root trans z))
+
+            ;; make sure orb not hidden
+            (logclear! (-> orb draw status) (draw-control-status no-draw-bounds))
+            )
+          (orb
+            (dbg-format 0 "hiding barge-less orb ~S~%" (-> *port-barge-orb-names* i))
+            ;; orb but couldn't find barge? make it invis just in case
+            (logior! (-> orb draw status) (draw-control-status no-draw-bounds))
+            )
+          )
+        )
+      )
+    )
+  (none))
 
 (defun level-status ((this level-group) (arg0 symbol))
   "Get the status of a level by name, return #f if no level is found."
@@ -1443,6 +1525,9 @@
       (set! (cdr (res-lump-struct door 'on-exit pair)) '((want-display 'sewa #f) (when (send-event self 'front) (want-load 'mhcityb 'ctywide-mh 'towera) (want-display 'towera 'display) (want-sound 'ctyprtdh 'mhcity1h 'mhcity2h))))
       )
     )
+
+  ;; ====== CTYPORT (port) ======
+  (move-port-barge-orbs)
 
   ;; mooon things
 ;;   (cond
