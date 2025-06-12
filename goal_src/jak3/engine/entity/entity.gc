@@ -1923,7 +1923,7 @@
 ;; WARN: Return type mismatch process-drawable vs none.
 (defun process-drawable-from-entity! ((arg0 process-drawable) (arg1 entity-actor))
   (logior! (-> arg0 mask) (process-mask actor-pause))
-  (mod-override-init-position arg0 arg1)
+  (when (not *entity-placer-active?*) (mod-override-init-position arg0 arg1))
   (vector-copy! (-> arg0 root trans) (-> arg1 extra trans))
   (quaternion-copy! (-> arg0 root quat) (-> arg1 quat))
   (vector-identity! (-> arg0 root scale))

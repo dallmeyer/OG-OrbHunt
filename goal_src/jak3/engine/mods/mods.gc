@@ -726,6 +726,7 @@
     ;; (('skill-160) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
     ;; (('skill-161) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
     ;; (('skill-164) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
+    ;; (('skill-226) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
 
     (('skill-167) (set-vector-meters! (-> arg0 extra trans)  321.9746  26.8046  1729.9516)) ;; intended pipe steps to vanilla orbs
     (('skill-162) (set-vector-meters! (-> arg0 extra trans)  350.8096  57.7852  1764.5488)) ;; intended pipe steps to vanilla orbs
@@ -733,8 +734,7 @@
     (('skill-165) (set-vector-meters! (-> arg0 extra trans)  35.3857  52.1248  1764.6433)) ;; intended pipe steps to vanilla orbs
     (('skill-166) (set-vector-meters! (-> arg0 extra trans)  -58.1490  29.0910  1326.2271)) ;; naughty ottsel roof
     (('skill-225) (set-vector-meters! (-> arg0 extra trans)  206.2570  44.8846  1378.6987)) ;; up on fallen pipe in middle near sewers, just zoomer launch to spam concussor/spin
-    ;; (('skill-226) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-188) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-188) (set-vector-meters! (-> arg0 extra trans)  56.0662  26.2693  1951.6672)) ;; up on city wall in back
     (('skill-187) (set-vector-meters! (-> arg0 extra trans)  161.9607  20.5184  1206.4691)) ;; near sewers / towards where mars tomb would be, up behind metal sheet
     (('crate-1142) (set-vector-meters! (-> arg0 extra trans) 112.5644 5.2090 1328.3836) ;; behind big balls near sewers
       (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 -1.0))
@@ -742,8 +742,10 @@
       (quaternion-set! (-> arg0 quat) -0.2641  -0.5464  0.2458  -0.7557))
     (('crate-1326) (set-vector-meters! (-> arg0 extra trans) -407.2276 5.1906 1255.4074) ;; behind big balls near mhcity
       (quaternion-set! (-> arg0 quat)  -0.0000  -0.8427  0.0001  -0.5383))
-    ;; (('crate-1345) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1344) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('crate-1345) (set-vector-meters! (-> arg0 extra trans) 782.4699 5.1906 1249.3962) ;; behind big balls near ctyinda
+      (quaternion-set! (-> arg0 quat) 0.0001  0.6394  -0.0000  -0.7688))
+    (('crate-1344) (set-vector-meters! (-> arg0 extra trans) 725.9799 41.1748 1417.6951) ;; on top of big ball on path to ctyinda
+      (quaternion-set! (-> arg0 quat)  -0.0157  -0.9826  0.1555  -0.0998))
 
     ;; CTYFARMB
     (('yakow-12)
@@ -754,8 +756,10 @@
       )
     
     ;; ====== SEWM (sewers 1.2) ======
-    ;; (('crate-1236) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1237) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('crate-1236) (set-vector-meters! (-> arg0 extra trans) 187.7550 -161.3462 -268.1669) ;; on beam behind invis wall at first waterfall (into void)
+      (quaternion-set! (-> arg0 quat) 0.1662  0.9841  0.0613  -0.0071))
+    (('crate-1237) (set-vector-meters! (-> arg0 extra trans) 303.4149 -121.4953 -281.6883) ;; 
+      (quaternion-set! (-> arg0 quat) 0.0000  0.6966  0.0000  0.7174))
 
     ;; ====== SEWO (sewers 1.4) ======
     ;; (('crate-1273) (set-vector-meters! (-> arg0 extra trans) )) ;; 
@@ -1015,9 +1019,8 @@
   (none)
   )
 
-
 (define *port-barge-orb-names* (the-as (array string) 
-  (new 'static 'boxed-array :type string :length 16 :allocated-length 16
+  (new 'static 'boxed-array :type string :length 17 :allocated-length 17
     "skill-144"
     "skill-145"
     "skill-146"
@@ -1034,15 +1037,16 @@
     "skill-160"
     "skill-161"
     "skill-164"
+    "skill-226"
     )))
 (define *port-barge-temp-idx* 0)
 (define *port-barge-pids* (the-as (array int)
-  (new 'global 'boxed-array int32 16)))
+  (new 'global 'boxed-array int32 17)))
 
 (defun move-port-barge-orbs ()
   ;; reset idx and list
   (set! *port-barge-temp-idx* 0)
-  (dotimes (i 16)
+  (dotimes (i 17)
     (set! (-> *port-barge-pids* i) 0))
   ;; look for barges
   (when *vehicle-manager*
