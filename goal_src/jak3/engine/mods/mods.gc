@@ -859,7 +859,7 @@
     ;; ====== CTYSLUMA (slums) ======
     (('skill-176) (set-vector-meters! (-> arg0 extra trans)  737.9973  8.5156  -93.4688)) ;; in corner behind fence at entrance to ctyslumb
     (('crate-1134) (set-vector-meters! (-> arg0 extra trans) 1127.86  30.61  290.19)) ;; up on mid rooftop near ctyindb, abah from across the street
-    ;; (('crate-1133) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('crate-1133) (set-vector-meters! (-> arg0 extra trans) 795.46  30.60  88.92 )) ;; on mid rooftop corner, near island before new haven
 
     
     ;; ====== VINROOM (power station) ======
@@ -948,9 +948,9 @@
     (('urn-a-26) (set-vector-meters! (-> arg0 extra trans) 2278.66  32.01  -471.37 )) ;; healthpack - on training course "island"
     
     ;; ====== WASPALA (spargus palace) ======
-    ;; (('skill-209) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-222) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-210) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('skill-209) (set-vector-meters! (-> arg0 extra trans)  2022.1783  266.9973  -402.9075)) ;; top of precursor statue behind throne
+    (('skill-222) (set-vector-meters! (-> arg0 extra trans) 1978.9605 242.2532 -399.8515)) ;; in corner behind wheel behidn throne (dark jak)
+    (('skill-210) (set-vector-meters! (-> arg0 extra trans)  2001.1348  247.4380  -414.0994)) ;; RIGHT behind throne
     ;; (('urn-a-16) (set-vector-meters! (-> arg0 extra trans) )) ;; 
     ;; (('urn-c-17) (set-vector-meters! (-> arg0 extra trans) )) ;; 
 
