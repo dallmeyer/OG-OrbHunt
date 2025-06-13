@@ -1919,6 +1919,7 @@
   (none)
   )
 
+(define-extern *entity-placer-active?* symbol)
 (define-extern mod-override-init-position (function process-drawable entity-actor none))
 ;; WARN: Return type mismatch process-drawable vs none.
 (defun process-drawable-from-entity! ((arg0 process-drawable) (arg1 entity-actor))

@@ -726,8 +726,8 @@
     ;; (('skill-160) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
     ;; (('skill-161) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
     ;; (('skill-164) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
-    ;; (('skill-226) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
 
+    (('skill-226) (set-vector-meters! (-> arg0 extra trans) 272.02  5.20  1327.21 )) ;; behind balls in center, ctyinda side
     (('skill-167) (set-vector-meters! (-> arg0 extra trans)  321.9746  26.8046  1729.9516)) ;; intended pipe steps to vanilla orbs
     (('skill-162) (set-vector-meters! (-> arg0 extra trans)  350.8096  57.7852  1764.5488)) ;; intended pipe steps to vanilla orbs
     (('skill-163) (set-vector-meters! (-> arg0 extra trans)  66.7415  35.6970  1729.4565)) ;; intended pipe steps to vanilla orbs
@@ -747,6 +747,75 @@
     (('crate-1344) (set-vector-meters! (-> arg0 extra trans) 725.9799 41.1748 1417.6951) ;; on top of big ball on path to ctyinda
       (quaternion-set! (-> arg0 quat)  -0.0157  -0.9826  0.1555  -0.0998))
 
+    ;; non-orb crates
+    (('crate-1317) (set-vector-meters! (-> arg0 extra trans) -23.60  18.57  1444.92 ) ;; pipes outside path to dev pic
+      (quaternion-set! (-> arg0 quat) 0.0000  0.3545  0.0000  0.9350))
+    (('crate-1318) (set-vector-meters! (-> arg0 extra trans) -38.0943 0.5999 1428.9041 ) ;; pipes outside path to dev pic
+      (quaternion-set! (-> arg0 quat) -0.1385  0.8611  -0.3566  -0.3346))
+    (('crate-1319) (set-vector-meters! (-> arg0 extra trans) -54.32  3.44  1423.12 )) ;; along hidden route to dev pic
+    (('crate-1323) (set-vector-meters! (-> arg0 extra trans) -53.66  7.05  1422.11 )) ;; along hidden route to dev pic
+    (('crate-1325) (set-vector-meters! (-> arg0 extra trans) -53.64  12.55  1422.10 )) ;; along hidden route to dev pic
+    (('crate-1327) (set-vector-meters! (-> arg0 extra trans) -54.39  18.52  1423.05 )) ;; along hidden route to dev pic
+    (('crate-1330) (set-vector-meters! (-> arg0 extra trans) -53.53  22.01  1422.00 )) ;; along hidden route to dev pic
+    (('crate-1331) (set-vector-meters! (-> arg0 extra trans) -53.53  27.57  1422.00 )) ;; along hidden route to dev pic
+    (('crate-1332) (set-vector-meters! (-> arg0 extra trans) -54.36  33.51  1423.08 )) ;; along hidden route to dev pic
+    (('crate-1334) (set-vector-meters! (-> arg0 extra trans) -53.59  36.90  1422.05 )) ;; along hidden route to dev pic
+    (('crate-1320) (set-vector-meters! (-> arg0 extra trans) -53.59  42.31  1422.05 )) ;; along hidden route to dev pic
+    (('crate-1321) (set-vector-meters! (-> arg0 extra trans) -51.64  44.33  1420.30 )) ;; along hidden route to dev pic
+    (('crate-1322) (set-vector-meters! (-> arg0 extra trans) -47.93  48.04  1417.66 )) ;; along hidden route to dev pic
+    (('crate-1324) (set-vector-meters! (-> arg0 extra trans) -56.5890 57.7427 1408.7154 ) ;; along hidden route to dev pic
+      (quaternion-set! (-> arg0 quat) 0.2487  0.3983  -0.0822  0.8790))
+    (('crate-1328) (set-vector-meters! (-> arg0 extra trans) -69.81  63.59  1394.47 )) ;; along hidden route to dev pic
+    (('crate-1329) (set-vector-meters! (-> arg0 extra trans) -75.00  63.72  1388.56 )) ;; along hidden route to dev pic
+    (('crate-1333) (set-vector-meters! (-> arg0 extra trans) -93.61  63.97  1368.69 )) ;; along hidden route to dev pic
+    (('crate-1335) (set-vector-meters! (-> arg0 extra trans) -99.15  41.49  1362.10 )) ;; dropping down to rooftop with pic
+    (('crate-1336) (set-vector-meters! (-> arg0 extra trans) -117.90  44.74  1371.52 )) ;; dev pic
+    (('crate-1198) (set-vector-meters! (-> arg0 extra trans) -116.4020 27.6321 1383.7844)) ;; grindrail near hiphog
+    (('crate-1337) (set-vector-meters! (-> arg0 extra trans) -147.6550 32.0821 1411.0551)) ;; ^
+    (('crate-1338) (set-vector-meters! (-> arg0 extra trans) -192.8882 32.0821 1439.5035 )) ;; ^^
+    (('crate-1339) (set-vector-meters! (-> arg0 extra trans) -223.2357 32.0621 1432.1665)) ;; ^^^
+    (('crate-1343) (set-vector-meters! (-> arg0 extra trans) -272.2278 27.6521 1401.4531 )) ;; ^^^^
+    (('crate-1340) (set-vector-meters! (-> arg0 extra trans) 164.67  49.91  1750.76 )) ;; grindrail between towers
+    (('crate-1341) (set-vector-meters! (-> arg0 extra trans) 220.17  50.16  1745.23 )) ;; ^
+    (('crate-1342) (set-vector-meters! (-> arg0 extra trans) 7.79  40.85  1640.84 )) ;; grindrail from tower closer to mhcity
+    (('crate-1346) (set-vector-meters! (-> arg0 extra trans) -19.84  32.72  1583.98 )) ;; ^
+    (('crate-1348) (set-vector-meters! (-> arg0 extra trans) -77.03  40.41  1500.50 )) ;; jetboard-only section at end of grindrail, closer to mhcity
+    (('crate-1349) (set-vector-meters! (-> arg0 extra trans) 370.81  40.61  1636.50 )) ;; grindrail from tower closer to ctyinda
+    (('crate-1353) (set-vector-meters! (-> arg0 extra trans) 407.07  33.11  1581.74 )) ;; ^
+    (('crate-1197) (set-vector-meters! (-> arg0 extra trans) 457.54  40.49  1496.28 )) ;; jetboard-only section at end of grindrail, closer to ctyinda
+    (('crate-1159) (set-vector-meters! (-> arg0 extra trans) 581.05  7.70  1428.58 )) ;; behind invis wall behind pipes, before hallway to ctyinda
+    (('crate-1350) (set-vector-meters! (-> arg0 extra trans) 605.2816 -0.8129 1635.5150 ) ;; on ramp under water where cut jak2 turret mission would be
+      (quaternion-set! (-> arg0 quat) -0.2031  0.3632  -0.2984  -0.8588))
+    (('crate-1351) (set-vector-meters! (-> arg0 extra trans) 550.70  -1.44  1495.30 ) ;; on ramp under water from hallway to ctyinda
+      (quaternion-set! (-> arg0 quat) 0.3136  -0.4345  0.1785  0.8251))
+    (('crate-1352) (set-vector-meters! (-> arg0 extra trans) 466.5300 -0.9845 1404.2291) ;; on ramp under water near gun course
+      (quaternion-set! (-> arg0 quat) -0.3468  0.3846  -0.1002  -0.8495))
+    (('crate-1354) (set-vector-meters! (-> arg0 extra trans) 261.1956 -1.1142 1390.6545) ;; on ramp under water near sewers
+      (quaternion-set! (-> arg0 quat)  0.3604  -0.1219  0.0122  0.9246))
+    (('crate-1347) (set-vector-meters! (-> arg0 extra trans) 122.3066 -1.0431 1390.3979) ;; on ramp under water near sewers other side
+      (quaternion-set! (-> arg0 quat)  -0.3468  -0.0694  0.0263  -0.9349))
+    (('crate-1355) (set-vector-meters! (-> arg0 extra trans) -83.8939 -1.0173 1405.5980 ) ;; on ramp under water near hiphog
+      (quaternion-set! (-> arg0 quat)  -0.3238  -0.2392  0.1544  -0.9022))
+    (('crate-1356) (set-vector-meters! (-> arg0 extra trans) -167.8282 -1.1060 1497.0976 ) ;; on ramp under water from hallway to mhcity
+      (quaternion-set! (-> arg0 quat)  -0.3070  -0.4231  0.1883  -0.8313))
+    (('crate-1199) (set-vector-meters! (-> arg0 extra trans) 71.4860 -1.0699 1676.9094) ;; on ramp under water near tower mhcity/inside
+      (quaternion-set! (-> arg0 quat)  -0.0281  -0.9049  0.3598  -0.2254))
+    (('crate-1200) (set-vector-meters! (-> arg0 extra trans) 25.3639 -0.9923 1818.7943) ;; on ramp under water near tower mhcity/outside
+      (quaternion-set! (-> arg0 quat)  0.3575  -0.2135  0.0326  0.9085))
+    (('crate-1157) (set-vector-meters! (-> arg0 extra trans) 359.1248 -1.0982 1818.8353 ) ;; on ramp under water near tower cytinda/outside
+      (quaternion-set! (-> arg0 quat)  -0.3484  -0.0701  0.0814  -0.9311))
+    (('crate-1201) (set-vector-meters! (-> arg0 extra trans) 312.9546 -1.0952 1677.0134 ) ;; on ramp under water near tower ctyinda/inside
+      (quaternion-set! (-> arg0 quat)  -0.0820  0.9301  -0.3509  -0.0698))
+    (('crate-1158) (set-vector-meters! (-> arg0 extra trans) -281.27  7.69  1648.33 )) ;; far end where underport exit would be
+    (('crate-1202) (set-vector-meters! (-> arg0 extra trans) 666.61  7.64  1648.06 )) ;; other end where cut jak2 turret mission would be
+    (('crate-1064) (set-vector-meters! (-> arg0 extra trans) 216.54  2.94  1210.57 )) ;; behind rubble where mars tomb would be
+    (('crate-1065) (set-vector-meters! (-> arg0 extra trans) 177.63  3.09  1206.90 )) ;; ^
+    (('crate-1066) (set-vector-meters! (-> arg0 extra trans) -345.74  8.73  1430.68 )) ;; behind ball on mhcity path
+    (('crate-1160) (set-vector-meters! (-> arg0 extra trans) 526.15  26.41  1409.38 )) ;; grindrail near guncourse
+    (('crate-1063) (set-vector-meters! (-> arg0 extra trans) 494.67  32.03  1376.07 )) ;; ^
+    (('crate-1062) (set-vector-meters! (-> arg0 extra trans) 433.97  39.16  1381.25 )) ;; ^^
+    (('crate-1067) (set-vector-meters! (-> arg0 extra trans) -342.58  4.25  1236.97 )) ;; behind some metal head roots near mhcity
+
     ;; CTYFARMB
     (('yakow-12)
       (set-vector-meters! (-> arg0 extra trans) -25.62  10.36 926.80)
@@ -762,8 +831,15 @@
       (quaternion-set! (-> arg0 quat) 0.0000  0.6966  0.0000  0.7174))
 
     ;; ====== SEWO (sewers 1.4) ======
-    ;; (('crate-1273) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1270) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('crate-1273) (set-vector-meters! (-> arg0 extra trans) -484.62  -128.62  -358.97 )) ;; on pipes on unused walkway, funny oob haha you dieded
+    (('crate-1270) (set-vector-meters! (-> arg0 extra trans) -416.0042 -124.8511 -269.3194) ;; above doorway back to sewers 1
+      (quaternion-set! (-> arg0 quat)  0.1540  -0.8189  0.2581  0.4888))
+
+    ;; non-orb crates
+    (('crate-1272) (set-vector-meters! (-> arg0 extra trans) -518.41  -140.01  -321.93 )) ;; on unused pipe walkway
+    (('crate-1274) (set-vector-meters! (-> arg0 extra trans) -521.41  -140.00  -309.80 )) ;; on unused pipe walkway
+    (('crate-1269) (set-vector-meters! (-> arg0 extra trans) -531.16  -140.00  -305.56 )) ;; on unused pipe walkway
+    (('crate-1271) (set-vector-meters! (-> arg0 extra trans) -530.23  -137.96  -292.15 )) ;; on unused pipe walkway
     
     ;; ====== SEWH (sewers 2.3) ======
     ;; (('crate-1275) (set-vector-meters! (-> arg0 extra trans) )) ;; 
@@ -782,7 +858,7 @@
 
     ;; ====== CTYSLUMA (slums) ======
     (('skill-176) (set-vector-meters! (-> arg0 extra trans)  737.9973  8.5156  -93.4688)) ;; in corner behind fence at entrance to ctyslumb
-    ;; (('crate-1134) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('crate-1134) (set-vector-meters! (-> arg0 extra trans) 1127.86  30.61  290.19)) ;; up on mid rooftop near ctyindb, abah from across the street
     ;; (('crate-1133) (set-vector-meters! (-> arg0 extra trans) )) ;; 
 
     
@@ -1020,7 +1096,7 @@
   )
 
 (define *port-barge-orb-names* (the-as (array string) 
-  (new 'static 'boxed-array :type string :length 17 :allocated-length 17
+  (new 'static 'boxed-array :type string :length 16 :allocated-length 16
     "skill-144"
     "skill-145"
     "skill-146"
@@ -1037,16 +1113,15 @@
     "skill-160"
     "skill-161"
     "skill-164"
-    "skill-226"
     )))
 (define *port-barge-temp-idx* 0)
 (define *port-barge-pids* (the-as (array int)
-  (new 'global 'boxed-array int32 17)))
+  (new 'global 'boxed-array int32 16)))
 
 (defun move-port-barge-orbs ()
   ;; reset idx and list
   (set! *port-barge-temp-idx* 0)
-  (dotimes (i 17)
+  (dotimes (i 16)
     (set! (-> *port-barge-pids* i) 0))
   ;; look for barges
   (when *vehicle-manager*

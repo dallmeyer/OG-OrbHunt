@@ -46,17 +46,18 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
+    {
+      "trans": [  -164.5250, 4.4958, 1456.8996], // under walkway over pipes on mhcity side. jump up from water under poop pipe
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -164.5250, 4.4958, 1456.8996, 10], // bounding sphere
+      "lump": {
+        "name":"ctyport-skill-01",
+        "bob-scale": ["float", 0.25]
+        // "pickup-amount": ["float", 2.0] // abah hint
+      }
+    }//,
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
     //   "etype": "skill",  // actor type
