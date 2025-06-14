@@ -951,20 +951,37 @@
     (('skill-209) (set-vector-meters! (-> arg0 extra trans)  2022.1783  266.9973  -402.9075)) ;; top of precursor statue behind throne
     (('skill-222) (set-vector-meters! (-> arg0 extra trans) 1978.9605 242.2532 -399.8515)) ;; in corner behind wheel behidn throne (dark jak)
     (('skill-210) (set-vector-meters! (-> arg0 extra trans)  2001.1348  247.4380  -414.0994)) ;; RIGHT behind throne
-    ;; (('urn-a-16) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('urn-c-17) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('urn-a-16) (set-vector-meters! (-> arg0 extra trans) 1990.4197 241.4400 -493.3398 )) ;; in water on far side from throne
+    (('urn-c-17) (set-vector-meters! (-> arg0 extra trans) 1956.5202 239.8999 -427.5701 )) ;; in water off to side of throne
+    ;; non-orb urns
+    (('urn-b-12) (set-vector-meters! (-> arg0 extra trans) 2036.12  241.16  -489.26 )) ;; 
+    (('urn-c-16) (set-vector-meters! (-> arg0 extra trans) 1962.37  239.81  -488.02 )) ;; 
+    (('urn-b-13) (set-vector-meters! (-> arg0 extra trans) 1990.65  239.72  -439.61 )) ;; 
+    (('urn-a-17) (set-vector-meters! (-> arg0 extra trans) 2025.98  246.96  -443.00 )) ;; 
+    (('urn-c-26) (set-vector-meters! (-> arg0 extra trans) 1987.22  241.94  -398.45 )) ;; 
+    (('urn-a-28) (set-vector-meters! (-> arg0 extra trans) 1982.27  241.59  -422.41 )) ;; 
+    (('urn-a-20) (set-vector-meters! (-> arg0 extra trans) 1956.26  242.07  -418.81 )) ;; 
+    (('urn-a-19) (set-vector-meters! (-> arg0 extra trans) 2020.44  239.34  -443.81 )) ;; 
+    (('urn-c-18) (set-vector-meters! (-> arg0 extra trans) 2056.26  239.66  -435.66 )) ;; 
+    (('urn-b-14) (set-vector-meters! (-> arg0 extra trans) 2007.43  239.72  -442.72 )) ;; 
+    (('urn-a-18) (set-vector-meters! (-> arg0 extra trans) 2054.6799 239.9299 -489.9201 )) ;; 
+    (('urn-c-20) (set-vector-meters! (-> arg0 extra trans) 2000.3804 241.7799 -398.5659 )) ;; 
+    (('urn-b-16) (set-vector-meters! (-> arg0 extra trans) 2005.16  239.91  -453.31 )) ;; 
+    (('urn-c-19) (set-vector-meters! (-> arg0 extra trans) 1993.78  241.71  -430.47 )) ;; 
+    (('urn-b-15) (set-vector-meters! (-> arg0 extra trans) 1989.21  239.77  -450.14 )) ;; 
 
     ;; ====== STADIUM (stadium ruins east) ======
-    ;; (('skill-239) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-223) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-224) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-236) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-238) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('skill-237) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1214) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1216) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1217) (set-vector-meters! (-> arg0 extra trans) )) ;; double orb!
-
+    (('skill-239) (set-vector-meters! (-> arg0 extra trans)  373.3389  27.0050  -483.0043)) ;; top of exposed rebar grid near start
+    (('skill-223) (set-vector-meters! (-> arg0 extra trans) 388.77  8.92  -456.03 )) ;; behind invis wall at start, concussor over from ^
+    (('skill-224) (set-vector-meters! (-> arg0 extra trans)  349.2544  8.8823  -432.2265)) ;; down in crevice, immediate left from starting tunnel
+    (('skill-236) (set-vector-meters! (-> arg0 extra trans)  353.2688  42.7480  -465.0366)) ;; top of archway overhead at start (bunch of ways to get up to IJ)
+    (('skill-238) (set-vector-meters! (-> arg0 extra trans) 346.01  11.59  -428.10 )) ;; from top of archway^ concussor boosted over invis wall just over rubble, orb is on ledge below "oob"
+    (('skill-237) (set-vector-meters! (-> arg0 extra trans) 235.61  1.70  -403.73 )) ;; on far end of exposed rebar in first side area near start
+    (('crate-1214) (set-vector-meters! (-> arg0 extra trans) 388.28  15.98  -479.31 ) ;; behind invis wall at start, concussor over from skill-239
+      (quaternion-set! (-> arg0 quat) -0.0050  -0.9368  -0.2658  0.2271))
+    (('crate-1216) (set-vector-meters! (-> arg0 extra trans) 370.92  36.52  -490.88 )) ;; on edge of wall near start, jump over invis wall from skill-236
+    (('crate-1217) (set-vector-meters! (-> arg0 extra trans) 207.75  48.73  -468.10 )) ;; on lower part of rooftop, have to go close to left edge to drop from invis floor (double orb!)
+    
     ;; ====== WASSTADB (training course) ======
     (('wstd-training-dummy-1) (set-vector-meters! (-> arg0 extra trans) 2348.34  41.00  -458.75 ) ;; on small side ledge probably nobody notices
       (quaternion-set! (-> arg0 quat) 0.0000       0.7088       0.0000      -0.7053))

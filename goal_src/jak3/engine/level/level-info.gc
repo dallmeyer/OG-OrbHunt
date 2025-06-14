@@ -12829,8 +12829,8 @@
                   :callback-list '((6 . *waspal-water-texture-anim-array*))
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #x52d #x0 #x0 #x0 #x0)
-                    :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                    :borrow-size (new 'static 'array uint16 5 #x52d #xa #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 #f '(orbs-waspala display) #f #f #f)
                     )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)

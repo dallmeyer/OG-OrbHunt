@@ -46,27 +46,46 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [  1979.0856, 253.1992, -427.3380], // IJ pillar, hint for next orb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1979.0856, 253.1992, -427.3380, 10], // bounding sphere
+      "lump": {
+        "name":"waspala-skill-01"
+      }
+    },
+    {
+      "trans": [  1993.5583, 263.6470, -441.6374], // in drainage hole of center water feature, uppercut from IJ wall^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1993.5583, 263.6470, -441.6374, 10], // bounding sphere
+      "lump": {
+        "name":"waspala-skill-02"
+      }
+    },
+    {
+      "trans": [  2031.4676, 269.0754, -502.3874], // up on IJ wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2031.4676, 269.0754, -502.3874, 10], // bounding sphere
+      "lump": {
+        "name":"waspala-skill-03"
+      }
+    },
+    {
+      "trans": [  2063.0305, 240.3232, -445.3686], // in drainage hole of center water feature, uppercut from IJ wall^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2063.0305, 240.3232, -445.3686, 10], // bounding sphere
+      "lump": {
+        "name":"waspala-skill-04"
+      }
+    }//,
     
     
 
