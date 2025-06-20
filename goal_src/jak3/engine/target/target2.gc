@@ -84,37 +84,37 @@
     ((-> target-stance enter))
     (let ((v1-2 (rand-vu-int-count 7)))
       (cond
-        ((zero? v1-2)
+        ((zero? v1-2) ;; dax stretch
          (set! (-> self spool-anim)
                (new 'static 'spool-anim :name "jak-ambient-1" :anim-name "jak-ambient-1" :parts 1 :command-list '())
                )
          )
-        ((= v1-2 1)
+        ((= v1-2 1) ;; look around
          (set! (-> self spool-anim)
                (new 'static 'spool-anim :name "jak-ambient-2" :anim-name "jak-ambient-2" :parts 1 :command-list '())
                )
          )
-        ((= v1-2 2)
+        ((= v1-2 2) ;; jak 1 powercell throwback
          (set! (-> self spool-anim)
                (new 'static 'spool-anim :name "jak-ambient-3" :anim-name "jak-ambient-3" :parts 1 :command-list '())
                )
          )
-        ((= v1-2 3)
+        ((= v1-2 3) ;; jak stretch
          (set! (-> self spool-anim)
                (new 'static 'spool-anim :name "jak-ambient-4" :anim-name "jak-ambient-4" :parts 1 :command-list '())
                )
          )
-        ((= v1-2 4)
+        ((= v1-2 4) ;; dax peekaboo
          (set! (-> self spool-anim)
                (new 'static 'spool-anim :name "jak-ambient-5" :anim-name "jak-ambient-5" :parts 1 :command-list '())
                )
          )
-        ((= v1-2 5)
+        ((= v1-2 5) ;; dax itchy
          (set! (-> self spool-anim)
                (new 'static 'spool-anim :name "jak-ambient-6" :anim-name "jak-ambient-6" :parts 1 :command-list '())
                )
          )
-        (else
+        (else ;; stank face
           (set! (-> self spool-anim)
                 (new 'static 'spool-anim :name "jak-ambient-7" :anim-name "jak-ambient-7" :parts 1 :command-list '())
                 )
@@ -310,6 +310,7 @@
     )
   )
 
+(define-extern spawn-fuel-cell (function vector string (pointer process)))
 (defstate target-grab (target)
   :event (behavior ((proc process) (argc int) (message symbol) (block event-message-block))
     (local-vars (v0-0 object))
@@ -617,11 +618,62 @@
              )
            (set! (-> self control unknown-word04) (the-as uint 'stance))
            )
+          (('fuel-cell)
+            (while (let ((v1-15 (file-status *art-control* (-> self spool-anim name) 0)))
+                    (not (or (= v1-15 'locked) (= v1-15 'active)))
+                    )
+              (suspend)
+              (ja :num! (loop!))
+              )
+            (let ((cell (spawn-fuel-cell (-> self root trans) "fuel-cell-0")))
+              (ja-play-spooled-anim
+                (-> self spool-anim)
+                (the-as art-joint-anim jakb-stance-loop-ja)
+                (the-as art-joint-anim jakb-stance-loop-ja)
+                (the-as
+                  (function process-drawable symbol)
+                  (lambda :behavior target () (cpad-hold? 0 triangle))
+                  )
+                (spooler-flags)
+                )
+              ;; exit
+              (set-time! (-> self ambient-time))
+              (let ((a0-0 (-> self spool-anim)))
+                (when (and a0-0 (= (-> *setting-control* user-current spooling) (process->ppointer self)))
+                  (ja-abort-spooled-anim a0-0 (the-as art-joint-anim #f) -1)
+                  (ja-channel-set! 1)
+                  (ja :group! jakb-stance-loop-ja :num! min)
+                  )
+                )
+              (set! (-> self spool-anim) #f)
+              ;; idk everything else does this
+              (set! (-> self control unknown-word04) (the-as uint 'stance))
+              (format 0 "sucking cell~%")
+              (send-event (ppointer->process cell) 'suck)
+              )
+            (go target-stance)
+           )
           )
         )
       (label cfg-131)
       )
     #f
+    )
+  :trans (behavior ()
+    (when (= (-> self control unknown-spool-anim00) 'fuel-cell)
+      (set! (-> self spool-anim) ;; jak 1 powercell throwback
+        (new 'static 'spool-anim :name "jak-ambient-3" :anim-name "jak-ambient-3" :parts 1 :command-list '()))
+      (gui-control-method-12
+        *gui-control*
+        self
+        (gui-channel art-load)
+        (gui-action queue)
+        (-> self spool-anim name)
+        0
+        -99.0
+        (new 'static 'sound-id)
+        )
+      )
     )
   :post (behavior ()
     (if (logtest? (-> self control status) (collide-status on-surface))

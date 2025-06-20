@@ -138,7 +138,7 @@
   
 
 (defun spawn-skill-internal ((x float) (y float) (z float) (bob? symbol) (name string) (amount float))
-  (dbg-format 0 "trying to spawn ~A~%" name)
+  (dbg-format 0 "trying to spawn skill ~A~%" name)
   (cond
     ((process-by-name name *active-pool*)
      (format 0 "~A is already spawned, skipping" name)
@@ -158,8 +158,38 @@
         (let ((vec (new 'stack-no-clear 'vector)))
           (set-vector-meters! vec x y z)
           (let ((proc (ppointer->process (birth-pickup-at-point-named vec (pickup-type skill) amount #t *active-pool* fax name))))
-            ;; (copy-string<-string (-> proc name) ,name) ;; lol this overwrote the "skill" string for everyone
             (dbg-format 0 "spawned ~A~%" proc)))))))
+
+(defun spawn-fuel-cell2 ((x float) (y float) (z float) (name string))
+  (cond
+    ((process-by-name name *active-pool*)
+     (format 0 "~A is already spawned, skipping" name)
+     (the-as (pointer process) #f)
+     )
+    (else
+      (let ((fax (new 'static 'fact-info)))
+        (set! (-> fax pickup-type) (pickup-type fuel-cell))
+        (set! (-> fax pickup-amount) 1.0)
+        (set! (-> fax pickup-spawn-amount) 1.0)
+        ;; make sure it doesn't timeout and disappear
+        (logior! (-> fax options) (actor-option fade-out))
+        (set! (-> fax fade-time) (the-as time-frame 0))
+          
+        (let ((vec (new 'stack-no-clear 'vector)))
+          (set-vector-meters! vec x y z)
+          (let ((ptr (birth-pickup-at-point-named vec (pickup-type fuel-cell) 1.0 #t *active-pool* fax name)))
+            (format 0 "spawned ~A~%" (ppointer->process ptr))
+            ptr ;; return ptr
+            )
+          )
+        )
+      )
+    )
+  )
+
+(defun spawn-fuel-cell ((vec vector) (name string))
+  (spawn-fuel-cell2 (/ (-> vec x) 4096) (/ (+ (-> vec y) (meters 4.0)) 4096) (/ (-> vec z) 4096) name)
+  )
 
 (define *baby-mode-orb-dist* (the-as float #f))
 (defun baby-mode-find-closest-orb ()
@@ -1764,6 +1794,10 @@
   (when (and (not *debug-segment*)
              (not (-> *mod-settings* collision-renderer-toggle?)))
     (disableCollisionRenderer)
+    )
+
+  (when (cpad-pressed? 0 triangle)
+     (go-process *target* target-grab 'fuel-cell)
     )
 
   ;; mini-bigmap stuff

@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["torn-highres-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -75,7 +75,37 @@
       "lump": {
         "name":"hiphog-skill-03"
       }
-    }//,
+    },
+
+    {
+      "trans": [ -104.61,  10.05,  1290.62], // behind bar (beam reflexor and pray or nuke, crawl to get behind bar)
+      "etype": "skill-crate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0000, 0.8812, 0.0000, 0.4725], // quaternion
+      "bsphere": [ -104.61,  10.05,  1290.62, 10], // bounding sphere
+      "lump": {
+        "name": "hiphog-crate-01",
+        "crate-type": "iron",
+        "light-index": ["int32", 10],
+        "eco-info": [
+          "int32",
+          24, // (pickup-type skill)
+          1 // amount
+        ]
+      }
+    },
+
+    {
+      "trans": [ -109.43770599365234, 9.858799934387207, 1300.718994140625], // 
+      "etype": "torn-npc",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0, 0.11317040771245956, 0.0, 0.9935755729675293], // quaternion
+      "bsphere": [ -109.43770599365234, 9.858799934387207, 1300.718994140625, 6.928219795227051], // bounding sphere
+      "lump": {
+        "name": "hiphog-torn-npc",
+        "task-actor": ["int32", 54]
+      }
+  }//,
     
     
 

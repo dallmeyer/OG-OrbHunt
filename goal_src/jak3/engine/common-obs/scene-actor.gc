@@ -346,7 +346,7 @@
     (((game-task-actor torn-hipbar))
      (-> this draw art-group data 6)
      )
-    (((game-task-actor torn-hipbooth))
+    (((game-task-actor torn-hipbooth) (game-task-actor torn-orbhunt))
      (-> this draw art-group data 5)
      )
     (else

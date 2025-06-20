@@ -445,6 +445,7 @@
   "tpage-12.go"
   "texture-finish.o"
   "collectables-ag.go"
+  "pre-artifact-d-ag.go" ;; added orbhunt
   "crate-ag.go"
   "talk-box-ag.go"
   "scenecamera-ag.go"

@@ -418,9 +418,9 @@
           (update (-> this tpage))
           (update (-> this tpage2))
           (when (and (-> this loading-flag)
-                    (= (file-status (-> this bigmap-image) "world-map" (the-as int (-> this load-index))) 'active)
-                    (= (file-status (-> this tpage) "progress-minimap" 0) 'active)
-                    (= (file-status (-> this tpage2) "progress-minimap" 1) 'active)
+                    (= map-texture-status 'active)
+                    (= icon-texture1-status 'active)
+                    (= icon-texture2-status 'active)
                     (not (load-in-progress? *level*))
                     )
             (let ((s5-0 (-> *level* loading-level))
@@ -432,18 +432,22 @@
               (set! (-> *level* loading-level) #f)
               (set! (-> *texture-relocate-later* memcpy) #f)
               (set! loading-level (-> this tpage heap))
-              (set! (-> this progress-minimap)
-                    (the-as
-                      texture-page
-                      (link (-> this tpage buf) (-> this tpage load-file data) (-> this tpage len) (-> this tpage heap) 4)
+              (when (not (-> this progress-minimap))
+                (set! (-> this progress-minimap)
+                      (the-as
+                        texture-page
+                        (link (-> this tpage buf) (-> this tpage load-file data) (-> this tpage len) (-> this tpage heap) 4)
+                        )
                       )
-                    )
-              (set! (-> this progress-minimap2)
-                    (the-as
-                      texture-page
-                      (link (-> this tpage2 buf) (-> this tpage2 load-file data) (-> this tpage2 len) (-> this tpage2 heap) 4)
+                )
+              (when (not (-> this progress-minimap2))
+                (set! (-> this progress-minimap2)
+                      (the-as
+                        texture-page
+                        (link (-> this tpage2 buf) (-> this tpage2 load-file data) (-> this tpage2 len) (-> this tpage2 heap) 4)
+                        )
                       )
-                    )
+                )
               (set! (-> *level* loading-level) s5-0)
               (set! (-> *texture-pool* allocate-func) s4-0)
               (set! (-> *texture-relocate-later* memcpy) s3-0)
