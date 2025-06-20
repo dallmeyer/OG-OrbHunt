@@ -1757,6 +1757,9 @@
                                                              ((= arg1 'dead)
                                                               'dead
                                                               )
+                                                             ((= arg1 'fuel-cell)
+                                                              'fuel-cell
+                                                              )
                                                              (else
                                                                #t
                                                                )

@@ -96,7 +96,7 @@
     },
 
     {
-      "trans": [ -109.43770599365234, 9.858799934387207, 1300.718994140625], // 
+      "trans": [ -109.43770599365234, 9.858799934387207, 1300.718994140625], // torn in back left booth
       "etype": "torn-npc",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [ 0.0, 0.11317040771245956, 0.0, 0.9935755729675293], // quaternion
@@ -105,7 +105,18 @@
         "name": "hiphog-torn-npc",
         "task-actor": ["int32", 54]
       }
-  }//,
+    },
+    {
+      "trans": [ -109.43770599365234, 13.5, 1300.718994140625], // 
+      "etype": "fuel-cell",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0, 0.11317040771245956, 0.0, 0.9935755729675293], // quaternion
+      "bsphere": [ -109.43770599365234, 13.5, 1300.718994140625, 6.928219795227051], // bounding sphere
+      "lump": {
+        "name": "hiphog-fuel-cell",
+        "level-idx": ["int32", 38]
+      }
+    }//,
     
     
 

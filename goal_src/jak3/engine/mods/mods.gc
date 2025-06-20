@@ -1230,6 +1230,10 @@
   (= (level-status *level* lvl-name) 'active)
   )
 
+(defun all-orbs-check? ((idx uint))
+  (= (-> *level-orb-collected-counts* idx) (-> *level-orb-total-counts* idx))
+  )
+
 (define *zoom-sensitivity-scale* 1.0)
 (define *show-mini-bigmap* #f)
 (define *mini-bigmap-toggle-time* (the time-frame #f))
@@ -1796,9 +1800,9 @@
     (disableCollisionRenderer)
     )
 
-  (when (cpad-pressed? 0 triangle)
-     (go-process *target* target-grab 'fuel-cell)
-    )
+  ;; (when (cpad-pressed? 0 triangle)
+  ;;    (go-process *target* target-grab 'fuel-cell)
+  ;;   )
 
   ;; mini-bigmap stuff
   (when (and #f ;; disabled for now

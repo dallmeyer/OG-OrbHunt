@@ -1265,7 +1265,10 @@
                      (set! v0-0 (when (not (focus-test? self dead))
                                   (if (not (-> arg3 param 1))
                                       #t
-                                      (go target-grab 'stance)
+                                      (if (= (-> arg3 param 1) 'fuel-cell)
+                                        (go target-grab 'fuel-cell)
+                                        (go target-grab 'stance)
+                                        )
                                       )
                                   )
                            )

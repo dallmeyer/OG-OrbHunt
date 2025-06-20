@@ -2126,13 +2126,69 @@
               )
 
 (deftype fuel-cell (money)
-  ((pos   vector         :inline)
-   (angs  vector         :inline)
-   )
+  ((level-index uint8))
+  (:state-methods
+    pending
+    )
+  )
+
+(define-extern all-orbs-check? (function uint symbol))
+(defstate pending (fuel-cell)
+  :virtual #t
+  :event collectable-standard-event-handler
+  :enter (behavior ()
+    ;; dont draw, dont collide
+    (logior! (-> self draw status) (draw-control-status no-draw-bounds))
+    (clear-collide-with-as (-> self root))
+    )
+  :code (behavior ()
+    (until #f
+      (when (and *target* (< (vector-vector-distance (-> self root trans) (-> *target* control trans)) (meters 9.0))
+                 (all-orbs-check? (-> self level-index)))
+          ;; player has all orbs for this level! show prompt
+          (kill-current-talker '() '(daxter voicebox ambient) 'exit)
+          (talker-surpress!)
+          (when (can-display-query? self "process-taskable" -99.0)
+            (let ((s5-2 (new 'stack 'font-context *font-default-matrix* 32 280 0.0 (font-color default) (font-flags shadow kerning))))
+              (set-width! s5-2 340)
+              (set-height! s5-2 80)
+              (let ((v1-98 s5-2)
+                    (a0-39 (-> *setting-control* user-default language))
+                    )
+                (set! (-> v1-98 scale) (if (or (= a0-39 (language-enum korean)) (= a0-39 (language-enum russian)))
+                                          0.9
+                                          0.7
+                                          )
+                      )
+                )
+              (set! (-> s5-2 flags) (font-flags shadow kerning middle-vert large))
+              (print-game-text
+                (lookup-text! *common-text* (text-id press-triangle-to-talk) #f)
+                s5-2
+                #f
+                44
+                (bucket-id hud-draw-hud-alpha)
+                )
+              )
+            ;; check for triangle press and make sure we grab target successfully
+            (when (and (cpad-pressed? 0 triangle)
+                       (process-grab? *target* 'fuel-cell))
+              ;; reveal fuel-cell, allow for collision, and wait for suck
+              (logclear! (-> self draw status) (draw-control-status no-draw-bounds))
+              (restore-collide-with-as (-> self root))
+              (go-virtual wait)
+              )
+            )
+          )
+      (common-post self)
+      (suspend)
+      )
+    #f
+    )
   )
 
 (defmethod initialize-allocations ((this fuel-cell))
-  (stack-size-set! (-> this main-thread) 128)
+  (stack-size-set! (-> this main-thread) 256)
   (let ((s5-0 (new 'process 'collide-shape-moving this (collide-list-enum hit-by-player))))
     (set! (-> s5-0 dynam) (copy *standard-dynamics* 'process))
     (set! (-> s5-0 reaction) cshape-reaction-default)
@@ -2157,29 +2213,39 @@
   (set! (-> this actor-pause) #t)
   (set! (-> this notify) (the-as handle #f))
   (set! (-> this fact) (new 'process 'fact-info this (pickup-type fuel-cell) 1.0))
-  (let ((a0-11 (-> this entity)))
-    (if (when a0-11
-          (let ((a0-12 (-> a0-11 extra perm task)))
-            (if a0-12
-                (= a0-12 (game-task none))
-                )
-            )
-          )
-        (set! (-> this entity extra perm task) (game-task complete))
-        )
-    )
+  ;; (let ((a0-11 (-> this entity)))
+  ;;   (if (when a0-11
+  ;;         (let ((a0-12 (-> a0-11 extra perm task)))
+  ;;           (if a0-12
+  ;;               (= a0-12 (game-task none))
+  ;;               )
+  ;;           )
+  ;;         )
+  ;;       (set! (-> this entity extra perm task) (game-task complete))
+  ;;       )
+  ;;   )
   (initialize-skeleton
     this
     (the-as skeleton-group (art-group-get-by-name *level* "skel-pre-artifact-d" (the-as (pointer level) #f)))
     (the-as pair 0)
     )
-  (if (-> this entity)
-      (nav-mesh-connect-from-ent this)
-      )
+  (when (-> this entity)
+    (nav-mesh-connect-from-ent this)
+    (set! (-> this level-index) (res-lump-value (-> this entity) 'level-idx int32 :time -1000000000.0))
+    )
   (set-vector! (-> this draw color-mult) 0.8 0.8 0.8 1.0)
   (set-vector! (-> this draw color-emissive) 0.2 0.2 0.2 1.0)
   0
   (none)
+  )
+
+(defmethod init-from-entity! ((this fuel-cell) (arg0 entity-actor))
+  "Set up a newly created process from the entity that created it."
+  (initialize-allocations this)
+  (process-drawable-from-entity! this (-> this entity))
+  (initialize-options this 0 512.0 (the-as fact-info #f))
+  (update-transforms (-> this root))
+  (go (method-of-object this pending))
   )
 
 (defbehavior fuel-cell-init-by-other fuel-cell ((arg0 vector) (arg1 vector) (arg2 fact-info) (arg3 entity-actor) (arg4 time-frame))

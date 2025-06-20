@@ -2184,6 +2184,24 @@
   (none)
   )
 
+(defun clear-collide-with-as ((obj collide-shape))
+  (set! (-> obj root-prim collide-with) (collide-spec))
+  (set! (-> obj root-prim prim-core collide-as) (collide-spec))
+  0
+  (none))
+
+(defun backup-collide-with-as ((obj collide-shape))
+  (set! (-> obj backup-collide-with) (-> obj root-prim collide-with))
+  (set! (-> obj backup-collide-as) (-> obj root-prim prim-core collide-as))
+  0
+  (none))
+
+(defun restore-collide-with-as ((obj collide-shape))
+  (set! (-> obj root-prim collide-with) (-> obj backup-collide-with))
+  (set! (-> obj root-prim prim-core collide-as) (-> obj backup-collide-as))
+  0
+  (none))
+
 (defmethod set-collide-as! ((this collide-shape) (arg0 collide-spec))
   (let ((v1-0 (-> this root-prim)))
     (countdown (a0-1 (-> this total-prims))
