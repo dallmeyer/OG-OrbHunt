@@ -400,7 +400,7 @@
              (not icon-texture1-status)
              (not icon-texture2-status)
              )
-        (format 0 "set-pending-file world-map ~D~%" (the-as int (-> this load-index)))
+        (dbg-format 0 "set-pending-file world-map ~D~%" (the-as int (-> this load-index)))
         (set-pending-file
           (-> this bigmap-image)
           "world-map"

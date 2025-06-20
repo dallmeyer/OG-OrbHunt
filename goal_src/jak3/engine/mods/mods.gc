@@ -1420,6 +1420,18 @@
       )
     )
 
+  ;; rubblea -> stadiumb
+  (let ((plane (process-by-ename "blocking-plane-13"))
+        (r1454 (region-lookup-by-id 1454))
+        (r1796 (region-lookup-by-id 1796)))
+    (when plane
+      (send-event plane 'off))
+    (when r1454
+      (set! (-> r1454 on-exit) '(want-load 'stadiuma 'stadiumb 'rubblea)))
+    (when r1796
+      (set! (-> r1796 on-exit) '(begin (send-event *task-manager* 'missile-spawners 0) (want-display 'stadiumb 'display))))
+    )
+
   ;; precura/b
   ;; open door to precurb (mech section)
   (let ((door (entity-by-name "precura-door-a-2"))
@@ -1805,7 +1817,7 @@
   ;;   )
 
   ;; mini-bigmap stuff
-  (when (and #f ;; disabled for now
+  (when (and ;; #f ;; disabled for now
             (not *progress-process*))
     ;; (format 0 "no progress proc~%")
     (cond

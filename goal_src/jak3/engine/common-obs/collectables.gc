@@ -2143,7 +2143,9 @@
     )
   :code (behavior ()
     (until #f
-      (when (and *target* (< (vector-vector-distance (-> self root trans) (-> *target* control trans)) (meters 9.0))
+      (when (and *target* 
+                 (not (focus-test? *target* board pilot mech gun dark light))
+                 (< (vector-vector-distance (-> self root trans) (-> *target* control trans)) (meters 9.0))
                  (all-orbs-check? (-> self level-index)))
           ;; player has all orbs for this level! show prompt
           (kill-current-talker '() '(daxter voicebox ambient) 'exit)
@@ -2172,10 +2174,15 @@
               )
             ;; check for triangle press and make sure we grab target successfully
             (when (and (cpad-pressed? 0 triangle)
+                       (send-event *target* 'end-mode 'board)
+                       (send-event *target* 'end-mode 'gun)
+                       (send-event *target* 'end-mode 'darkjak)
+                       (send-event *target* 'end-mode 'lightjak)
                        (process-grab? *target* 'fuel-cell))
               ;; reveal fuel-cell, allow for collision, and wait for suck
               (logclear! (-> self draw status) (draw-control-status no-draw-bounds))
               (restore-collide-with-as (-> self root))
+              (play-sound-file "tpl_proto_win.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 100.0)))
               (go-virtual wait)
               )
             )
@@ -2188,7 +2195,7 @@
   )
 
 (defmethod initialize-allocations ((this fuel-cell))
-  (stack-size-set! (-> this main-thread) 256)
+  (stack-size-set! (-> this main-thread) 512)
   (let ((s5-0 (new 'process 'collide-shape-moving this (collide-list-enum hit-by-player))))
     (set! (-> s5-0 dynam) (copy *standard-dynamics* 'process))
     (set! (-> s5-0 reaction) cshape-reaction-default)

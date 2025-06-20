@@ -5005,8 +5005,8 @@
                   :callback-list '()
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #x1b #x2ee #x0 #x0 #x0)
-                    :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                    :borrow-size (new 'static 'array uint16 5 #x1b #x2ee #x20 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 #f #f '(orbs-gungame display) #f #f)
                     )
                   :bottom-height (meters -15)
                   :fog-height (meters 80)
@@ -19399,7 +19399,7 @@
                        :vis-nick 'factoryb
                        :want-count 2
                        :want (new 'static 'inline-array level-buffer-state-small 2
-                         (new 'static 'level-buffer-state-small :name 'factorya :display? 'display)
+                         (new 'static 'level-buffer-state-small :name 'factorya :display? #f)
                          (new 'static 'level-buffer-state-small :name 'factoryb :display? 'display)
                          )
                        :want-sound (new 'static 'array symbol 3 'factory1 'factory2 'factory3)
@@ -19416,7 +19416,7 @@
                        :vis-nick 'factoryb
                        :want-count 2
                        :want (new 'static 'inline-array level-buffer-state-small 2
-                         (new 'static 'level-buffer-state-small :name 'factorya :display? 'display)
+                         (new 'static 'level-buffer-state-small :name 'factorya :display? #f)
                          (new 'static 'level-buffer-state-small :name 'factoryb :display? 'display)
                          )
                        :want-sound (new 'static 'array symbol 3 'factory1 'factory2 'factory3)

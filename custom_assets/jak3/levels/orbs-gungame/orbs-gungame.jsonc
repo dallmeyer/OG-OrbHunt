@@ -68,7 +68,17 @@
     //   }
     // },
     
-    
+    {
+      "trans": [  354.1975, 12.2186, 1254.1358], // 
+      "etype": "fuel-cell",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0, 0.11317040771245956, 0.0, 0.9935755729675293], // quaternion
+      "bsphere": [  354.1975, 12.2186, 1254.1358, 6.928219795227051], // bounding sphere
+      "lump": {
+        "name": "gungame-fuel-cell",
+        "level-idx": ["int32", 19]
+      }
+    }//,
 
     // GHOSTS
     // {
