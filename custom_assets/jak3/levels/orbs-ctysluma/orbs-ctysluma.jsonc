@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["onin-highres-ag"], // "pecker-highres-ag"
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -56,7 +56,7 @@
         "name":"ctysluma-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
       }
-    }//,
+    },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
     //   "etype": "skill",  // actor type
@@ -67,8 +67,41 @@
     //     "name":"ctysluma-skill-02"
     //   }
     // },
+
     
-    
+    {
+      "trans": [ 774.9849853515625, 8.149999618530273, 179.0850067138672], // onin in her tent
+      "etype": "onin-npc",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
+      "bsphere": [ 774.9849853515625, 8.149999618530273, 179.0850067138672, 6.928203105926514], // bounding sphere
+      "lump": {
+        "name": "ctysluma-onin-npc",
+        "task-actor": ["int32", 56]
+      }
+    },
+    // {
+    //   "trans": [ 774.9849853515625, 8.149999618530273, 179.0850067138672], // onin in her tent
+    //   "etype": "pecker-npc",  // actor type
+    //   "game_task": 0, // associated game task (for powercells, etc)
+    //   "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
+    //   "bsphere": [ 774.9849853515625, 8.149999618530273, 179.0850067138672, 6.928203105926514], // bounding sphere
+    //   "lump": {
+    //     "name": "ctysluma-pecker-npc"
+    //     // "task-actor": ["int32", 56]
+    //   }
+    // },
+    {
+      "trans": [  769.9647, 10.4087, 174.0263], // 
+      "etype": "fuel-cell",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
+      "bsphere": [  769.9647, 10.4087, 174.0263, 6.928203105926514], // bounding sphere
+      "lump": {
+        "name": "ctysluma-fuel-cell",
+        "level-idx": ["int32", 41]
+      }
+    }//,
 
     // GHOSTS
     // {

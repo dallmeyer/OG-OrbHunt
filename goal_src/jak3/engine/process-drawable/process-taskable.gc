@@ -112,12 +112,6 @@
                )
           (go-virtual idle)
           )
-      ;; orb hunt special case some actors to always show
-      ;; (case (res-lump-value (-> self entity) 'task-actor game-task-actor :time -1000000000.0)
-      ;;   (((game-task-actor torn-orbhunt))
-      ;;     (go-virtual idle)
-      ;;     )
-      ;;   )
       )
     )
   :code sleep-code

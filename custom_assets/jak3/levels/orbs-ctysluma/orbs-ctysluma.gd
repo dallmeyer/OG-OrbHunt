@@ -4,5 +4,7 @@
 ;; the actual file name still needs to be 8.3
 ("O57.DGO"
  (
+;;   "pecker-highres-ag.go"
+  "onin-highres-ag.go"
   "orbs-ctysluma.go"
   ))
