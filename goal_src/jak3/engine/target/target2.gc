@@ -619,6 +619,7 @@
            (set! (-> self control unknown-word04) (the-as uint 'stance))
            )
           (('fuel-cell)
+            (send-event *target* 'vector-turn-to (vector-! (new-stack-vector0) (-> *math-camera* trans) (-> *target* root trans)))
             (while (let ((v1-15 (file-status *art-control* (-> self spool-anim name) 0)))
                     (not (or (= v1-15 'locked) (= v1-15 'active)))
                     )

@@ -725,6 +725,9 @@
         )
        )
      )
+    (('vector-turn-to)
+      (vector-turn-to (the-as vector (-> arg3 param 0)))
+      )
     (('level-deactivate)
      (cond
        ((and (focus-test? self pilot) (let ((a0-19 (lookup-level-info (the-as symbol (-> arg3 param 0)))))

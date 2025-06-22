@@ -15160,6 +15160,12 @@
                   :tex (game-task-icon gaticon-02)
                   :scene #f
                   )
+              (new 'static 'game-task-event
+                  :actor (game-task-actor ashelin-orbhunt)
+                  :action (game-task-action idle)
+                  :tex (game-task-icon gaticon-02)
+                  :scene #f
+                  )
               )
             :flags (game-task-node-flag close-task save-on-life no-percent act3)
             :parent-node (new 'static 'array game-task-node 4

@@ -4,5 +4,6 @@
 ;; the actual file name still needs to be 8.3
 ("O92.DGO"
  (
+  "ashelin-highres-ag.go"
   "orbs-deserte.go"
   ))
