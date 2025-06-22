@@ -4,5 +4,6 @@
 ;; the actual file name still needs to be 8.3
 ("O82.DGO"
  (
+  "errol-lowres-ag.go"
   "orbs-factoryd.go"
   ))

@@ -15147,7 +15147,7 @@
                   :tex (game-task-icon gaticon-02)
                   :scene #f
                   )
-              ;; not needed since tess still spawns in gungame post-game
+              ;; not needed since vanilla tess still spawns in gungame post-game
               ;; (new 'static 'game-task-event
               ;;     :actor (game-task-actor tess-orbhunt)
               ;;     :action (game-task-action idle)
@@ -15162,6 +15162,24 @@
                   )
               (new 'static 'game-task-event
                   :actor (game-task-actor ashelin-orbhunt)
+                  :action (game-task-action idle)
+                  :tex (game-task-icon gaticon-02)
+                  :scene #f
+                  )
+              (new 'static 'game-task-event
+                  :actor (game-task-actor kleever-orbhunt)
+                  :action (game-task-action idle)
+                  :tex (game-task-icon gaticon-02)
+                  :scene #f
+                  )
+              (new 'static 'game-task-event
+                  :actor (game-task-actor damus-orbhunt)
+                  :action (game-task-action idle)
+                  :tex (game-task-icon gaticon-02)
+                  :scene #f
+                  )
+              (new 'static 'game-task-event
+                  :actor (game-task-actor erol-orbhunt)
                   :action (game-task-action idle)
                   :tex (game-task-icon gaticon-02)
                   :scene #f

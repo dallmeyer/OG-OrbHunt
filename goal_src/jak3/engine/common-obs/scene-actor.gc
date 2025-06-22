@@ -101,6 +101,29 @@
   (none)
   )
 
+(defskelgroup skel-factory-boss errol-lowres errol-lowres-lod0-jg errol-lowres-idle30-ja
+              ((errol-lowres-lod0-mg (meters 20)) (errol-lowres-lod1-mg (meters 999999)))
+              :bounds (static-spherem 0 0 0 4)
+              )
+
+(deftype erol-npc (process-taskable)
+  ()
+  )
+
+(defmethod get-art-element ((this erol-npc))
+  (-> this draw art-group data 3)
+  )
+
+(defmethod init-skeleton! ((this erol-npc))
+  (initialize-skeleton
+    this
+    (the-as skeleton-group (art-group-get-by-name *level* "skel-factory-boss" (the-as (pointer level) #f)))
+    (the-as pair 0)
+    )
+  0
+  (none)
+  )
+
 (defskelgroup skel-veger-highres veger-highres veger-highres-lod0-jg veger-highres-idle-ja
               ((veger-highres-lod0-mg (meters 999999)))
               :bounds (static-spherem 0 0 0 2.5)
@@ -229,7 +252,7 @@
     (((game-task-actor damus-wasdoors))
      (-> this draw art-group data 9)
      )
-    (else
+    (else ;; waspala
       (let ((v1-6 (if (> (-> this skel active-channels) 0)
                       (-> this skel root-channel 0 frame-group)
                       )
@@ -602,7 +625,7 @@
     (((game-task-actor kleever-arena))
      (-> this draw art-group data 9)
      )
-    (else
+    (else ;; garage?
       (let ((v1-6 (if (> (-> this skel active-channels) 0)
                       (-> this skel root-channel 0 frame-group)
                       )

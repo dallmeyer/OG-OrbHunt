@@ -10675,7 +10675,7 @@
                    :callback-list '((36 . wasdoors-deactivate) (35 . wasdoors-activate))
                    :borrow (new 'static 'level-borrow-info
                      :alias #f
-                     :borrow-size (new 'static 'array uint16 5 #x4dd #xa #x0 #x0 #x0)
+                     :borrow-size (new 'static 'array uint16 5 #x3dd #x32a #x0 #x0 #x0)
                      :borrow-info (new 'static 'array object 5 #f '(orbs-wasdoors display) #f #f #f)
                      )
                    :bottom-height (meters -150)
@@ -12829,7 +12829,7 @@
                   :callback-list '((6 . *waspal-water-texture-anim-array*))
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #x52d #xa #x0 #x0 #x0)
+                    :borrow-size (new 'static 'array uint16 5 #x22d #x32a #x0 #x0 #x0)
                     :borrow-info (new 'static 'array object 5 #f '(orbs-waspala display) #f #f #f)
                     )
                   :bottom-height (meters -150)
@@ -19854,7 +19854,7 @@
                      (new 'static 'continue-point
                        :name "factoryd-start"
                        :level 'factoryd
-                       :trans (new 'static 'vector :x 1026883.2 :y 2145133.2 :z -377980.1 :w 1.0)
+                       :trans (new 'static 'vector :x (meters 248.07) :y (meters 523.69) :z (meters -92.06)  :w 1.0)
                        :camera-trans (new 'static 'vector :x 1026728.4 :y 2166224.5 :z -330877.34 :w 1.0)
                        :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x7fd7 0 -1595))
                        :camera-rot (new 'static 'array int16 9 -32763 0 -98 9 #x7f0c -3958 95 -3958 -32524)

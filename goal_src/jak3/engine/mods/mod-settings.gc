@@ -38,7 +38,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define ORB_HUNT_DEBUG? #f) ;; when #t, hold L2 for extra debug prints
-(define startingDebugContinuePoint "hiphog-start")
+(define startingDebugContinuePoint "factoryd-start")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -646,6 +646,14 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 (define *total-orbs* 0)
 (dotimes (lvl-idx LEVEL_ID_LEN)
   (+! *total-orbs* (-> *level-orb-total-counts-fixed* lvl-idx))
+  )
+
+(define *tmp-need-orb-str* (new 'global 'string 512 (the-as string #f)))
+(defun need-orbs-string ((idx uint))
+  (clear *tmp-need-orb-str*)
+  (format *tmp-need-orb-str* "Come back with all ~D orbs in ~S!" (-> *level-orb-total-counts* idx) (-> *level-id-names* idx))
+  (pc-encode-utf8-string *tmp-need-orb-str* *tmp-need-orb-str*)
+  *tmp-need-orb-str*
   )
 
 ;; do NOT change %MODVERSIONPLACEHOLDER% below, otherwise the mod-bundling-tools

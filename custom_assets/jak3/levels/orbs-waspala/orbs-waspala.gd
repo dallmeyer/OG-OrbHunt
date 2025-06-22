@@ -4,5 +4,6 @@
 ;; the actual file name still needs to be 8.3
 ("O61.DGO"
  (
+  "king-highres-ag.go"
   "orbs-waspala.go"
   ))

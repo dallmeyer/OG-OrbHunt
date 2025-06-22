@@ -481,138 +481,138 @@
 
 
 (defmethod eval-on-notice ((this warp-gate))
-  (let ((s5-0 (script-eval (-> this on-notice))))
-    (cond
-      ((= s5-0 'hide)
-       (logior! (-> this draw status) (draw-control-status no-draw))
-       (set! (-> this continue) #f)
-       )
-      (s5-0
-        (logclear! (-> this draw status) (draw-control-status no-draw))
-        (set! (-> this continue) (get-continue-by-name *game-info* (the-as string (car s5-0))))
-        (set! (-> this on-activate) (the-as pair (car (cdr s5-0))))
-        (set! (-> this wait-for) (the-as pair (car (cdr (cdr s5-0)))))
-        (set! (-> this on-close) (the-as pair (car (cdr (cdr (cdr s5-0))))))
-        )
-      (else
-        (case-str (-> this name)
-          (("desertb-warp-gate-1") ;; desertb -> deswalk
-            (set! (-> this continue) (get-continue-by-name *game-info* "deswalk-warp"))
-            )
-          (("lfacrm1-warp-gate-1") ;; lfacrm1 -> factoryb
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "factoryb-warp"))
-            )
-          (("factoryb-warp-gate-1") ;; factoryb -> lfacrm1
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "lfacrm1-warp"))
-            )
-          (("factoryb-warp-gate-2") ;; factoryb -> lfacrm2
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "lfacrm2-warp"))
-            )
-          (("lfacrm2-warp-gate-1") ;; lfacrm2 -> factoryb
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "factoryb-warp-2"))
-            )
-          (("factoryd-warp-gate-1") ;; factoryd -> vinroom
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "vinroom-warp"))
-            )
-          (("warp-gate-21") ;; vinroom -> factoryd
-            (set! (-> this continue) (get-continue-by-name *game-info* "factoryd-warp"))
-            )
-          (("foresta-warp-gate-1") ;; foresta -> precura
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "precura-start"))
-            )
-          (("precurd-warp-gate-1") ;; precurd -> desertb
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "desertb-warp"))
-            )
-          (("desertb-warp-gate-2") ;; desertb ( <- precurd )
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) #f) ;; one way
-            )
-          (("towerb-warp-gate-1") ;; towerb -> ltowerb; hidden warp on final plat
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "ltowerb-warp"))
-            )
-          (("ltowerb-warp-gate-1") ;; ltowerb -> lfacrm1; hellcat as warp gate
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "lfacrm1-warp"))
-            )
-          (("halfpipe-warp-gate-01") ;; halfpipe -> stadium
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "stadium-warp"))
-            )
-          (("halfpipe-air-train-01") ;; halfpipe -> stadium
-            ;; (logclear! (-> this draw status) (draw-control-status no-draw)) ;; show air-train
-            (set! (-> this continue) #f)
-            )
-          (("stadium-warp-gate-01") ;; stadium -> halfpipe
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "halfpipe-warp"))
-            )
-          (("stadium-air-train-01") ;; stadium -> halfpipe
-            ;; (logclear! (-> this draw status) (draw-control-status no-draw)) ;; show air-train
-            (set! (-> this continue) #f)
-            )
-          (("rublcst-warp-gate-1") ;; rublcst -> railb
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "railb-start"))
-            )
-          (("railx-warp-gate-1") ;; railx -> precurd
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "precurd-start"))
-            )
-          (("vinroom-warp-gate-1") ;; vinroom -> powergd
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this on-notice) '(begin (send-event self 'vinroom-powergd-toggle) #f)) ;; lol what a mess
-            (set! (-> this continue) (get-continue-by-name *game-info* "powergd-warp"))
-            )
-          (("powergd-warp-gate-1") ;; powergd -> vinroom 
-            ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "vinroom-game-exit"))
-            )
-          (("templed-warp-gate-1") ;; templed -> comba
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "comba-elevator"))
-            )
-          (("comba-warp-gate-1") ;; comba -> templed
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "templed-elevator"))
-            )
-          (("templex-warp-gate-1") ;; templex -> volcanox
-            (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "volcanox-start"))
-            )
-          (("sewk-warp-gate-1") ;; sewk -> sewf
-            ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "sewf-warp"))
-            )
-          (("sewf-warp-gate-1") ;; sewf -> sewk
-            ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "sewk-warp"))
-            )
-          (("rubbleb-warp-gate-1") ;; rubbleb -> ctyfarma
-            ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "ctyfarma-warp"))
-            )
-          (("ctyfarma-warp-gate-1") ;; ctyfarma -> rubbleb
-            ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "rubbleb-warp"))
-            )
-          (("mhcitya-warp-gate-1") ;; mhcitya -> ctyfarmb
-            ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "ctyfarmb-warp"))
-            )
-          (("ctyfarmb-warp-gate-1") ;; ctyfarmb -> mhcitya
-            ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
-            (set! (-> this continue) (get-continue-by-name *game-info* "mhcitya-warp"))
+  (case-str (-> this name)
+    (("desertb-warp-gate-1") ;; desertb -> deswalk
+      (set! (-> this continue) (get-continue-by-name *game-info* "deswalk-warp"))
+      )
+    (("lfacrm1-warp-gate-1") ;; lfacrm1 -> factoryb
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "factoryb-warp"))
+      )
+    (("factoryb-warp-gate-1") ;; factoryb -> lfacrm1
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "lfacrm1-warp"))
+      )
+    (("factoryb-warp-gate-2") ;; factoryb -> lfacrm2
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "lfacrm2-warp"))
+      )
+    (("lfacrm2-warp-gate-1") ;; lfacrm2 -> factoryb
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "factoryb-warp-2"))
+      )
+    (("factoryd-warp-gate-1") ;; factoryd -> vinroom
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "vinroom-warp"))
+      )
+    (("warp-gate-21") ;; vinroom -> factoryd
+      (set! (-> this continue) (get-continue-by-name *game-info* "factoryd-warp"))
+      )
+    (("foresta-warp-gate-1") ;; foresta -> precura
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "precura-start"))
+      )
+    (("precurd-warp-gate-1") ;; precurd -> desertb
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "desertb-warp"))
+      )
+    (("desertb-warp-gate-2") ;; desertb ( <- precurd )
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) #f) ;; one way
+      )
+    (("towerb-warp-gate-1") ;; towerb -> ltowerb; hidden warp on final plat
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "ltowerb-warp"))
+      )
+    (("ltowerb-warp-gate-1") ;; ltowerb -> lfacrm1; hellcat as warp gate
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "lfacrm1-warp"))
+      )
+    (("halfpipe-warp-gate-01") ;; halfpipe -> stadium
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "stadium-warp"))
+      )
+    (("halfpipe-air-train-01") ;; halfpipe -> stadium
+      ;; (logclear! (-> this draw status) (draw-control-status no-draw)) ;; show air-train
+      (set! (-> this continue) #f)
+      )
+    (("stadium-warp-gate-01") ;; stadium -> halfpipe
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "halfpipe-warp"))
+      )
+    (("stadium-air-train-01") ;; stadium -> halfpipe
+      ;; (logclear! (-> this draw status) (draw-control-status no-draw)) ;; show air-train
+      (set! (-> this continue) #f)
+      )
+    (("rublcst-warp-gate-1") ;; rublcst -> railb
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "railb-start"))
+      )
+    (("railx-warp-gate-1") ;; railx -> precurd
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "precurd-start"))
+      )
+    (("vinroom-warp-gate-1") ;; vinroom -> powergd
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this on-notice) '(begin (send-event self 'vinroom-powergd-toggle) #f)) ;; lol what a mess
+      (set! (-> this continue) (get-continue-by-name *game-info* "powergd-warp"))
+      )
+    (("powergd-warp-gate-1") ;; powergd -> vinroom 
+      ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "vinroom-game-exit"))
+      )
+    (("templed-warp-gate-1") ;; templed -> comba
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "comba-elevator"))
+      )
+    (("comba-warp-gate-1") ;; comba -> templed
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "templed-elevator"))
+      )
+    (("templex-warp-gate-1") ;; templex -> volcanox
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "volcanox-start"))
+      )
+    (("sewk-warp-gate-1") ;; sewk -> sewf
+      ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "sewf-warp"))
+      )
+    (("sewf-warp-gate-1") ;; sewf -> sewk
+      ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "sewk-warp"))
+      )
+    (("rubbleb-warp-gate-1") ;; rubbleb -> ctyfarma
+      ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "ctyfarma-warp"))
+      )
+    (("ctyfarma-warp-gate-1") ;; ctyfarma -> rubbleb
+      ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "rubbleb-warp"))
+      )
+    (("mhcitya-warp-gate-1") ;; mhcitya -> ctyfarmb
+      ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "ctyfarmb-warp"))
+      )
+    (("ctyfarmb-warp-gate-1") ;; ctyfarmb -> mhcitya
+      ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "mhcitya-warp"))
+      )
+    (else
+      (let ((s5-0 (script-eval (-> this on-notice))))
+        (cond
+          ((= s5-0 'hide)
+          (logior! (-> this draw status) (draw-control-status no-draw))
+          (set! (-> this continue) #f)
+          )
+          (s5-0
+            (logclear! (-> this draw status) (draw-control-status no-draw))
+            (set! (-> this continue) (get-continue-by-name *game-info* (the-as string (car s5-0))))
+            (set! (-> this on-activate) (the-as pair (car (cdr s5-0))))
+            (set! (-> this wait-for) (the-as pair (car (cdr (cdr s5-0)))))
+            (set! (-> this on-close) (the-as pair (car (cdr (cdr (cdr s5-0))))))
             )
           (else
-            (set! (-> this continue) #f)
+            (format 0 "unhandled warp-gate on-notice! ~A~%" (-> this name))
             )
           )
         )
