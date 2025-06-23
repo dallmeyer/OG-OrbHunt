@@ -2145,7 +2145,7 @@
   :code (behavior ()
     (until #f
       (when (and *target* 
-                 (not (focus-test? *target* board pilot mech gun dark light))
+                 (not (focus-test? *target* pilot mech))
                  (< (vector-vector-distance (-> self root trans) (-> *target* control trans)) (meters 8.0))
                  )
         (let ((s5-2 (new 'stack 'font-context *font-default-matrix* 32 280 0.0 (font-color default) (font-flags shadow kerning))))

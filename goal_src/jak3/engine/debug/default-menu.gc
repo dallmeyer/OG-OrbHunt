@@ -6911,7 +6911,7 @@
         (function "ctyslumc"    #f ,(lambda () (start 'play (get-continue-by-name *game-info* "ctyslumc-start"))))
         (function "ctyslumb"    #f ,(lambda () (start 'play (get-continue-by-name *game-info* "ctyslumb-start"))))
         (function "onintent"    #f ,(lambda () (start 'play (get-continue-by-name *game-info* "onintent-start"))))
-        (function "powergd"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "powergd-start"))))
+        (function "powergd"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "powergd-warp"))))
         (function "ctyport"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "ctyport-start"))))
         (function "vinroom"     #f ,(lambda () (start 'play (get-continue-by-name *game-info* "vinroom-start"))))
         (function "sewl (1.1)"  #f ,(lambda () (start 'play (get-continue-by-name *game-info* "sewl"))))

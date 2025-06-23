@@ -80,22 +80,22 @@
     
     
     {
-      "trans": [ 270.3602, 537.6456, -128.5513 ], // erol in factoryd
+      "trans": [ 270.3602, 537.9456, -128.5513 ], // erol in factoryd
       "etype": "erol-npc",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [ 0.0000, -0.3719, 0.0000, 0.9282], // quaternion
-      "bsphere": [ 270.3602, 537.6456, -128.5513 , 6.928238391876221], // bounding sphere
+      "bsphere": [ 270.3602, 537.9456, -128.5513 , 6.928238391876221], // bounding sphere
       "lump": {
         "name": "factoryd-erol-npc",
         "task-actor": ["int32", 59]
       }
     },
     {
-      "trans": [ 270.3602, 542.1456, -128.5513 ], // 
+      "trans": [ 270.3602, 542.3456, -128.5513 ], // 
       "etype": "fuel-cell",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
-      "bsphere": [ 270.3602, 542.1456, -128.5513 , 6.928203105926514], // bounding sphere
+      "bsphere": [ 270.3602, 542.3456, -128.5513 , 6.928203105926514], // bounding sphere
       "lump": {
         "name": "factoryd-fuel-cell",
         "level-idx": ["int32", 84]

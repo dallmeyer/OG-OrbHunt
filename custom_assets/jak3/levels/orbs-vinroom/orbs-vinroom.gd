@@ -7,5 +7,6 @@
   "vinroom-scenes.o"
   "arcade-ag.go"
   "warp-gate-ag.go"
+  "vin-effect-ag.go"
   "orbs-vinroom.go"
   ))

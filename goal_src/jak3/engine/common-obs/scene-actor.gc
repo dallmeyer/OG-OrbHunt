@@ -935,22 +935,28 @@
               :origin-joint-index 3
               )
 
+(defskelgroup skel-vin-effect vin-effect vin-effect-lod0-jg vin-effect-idle-ja
+              ((vin-effect-lod0-mg (meters 999999)))
+              :bounds (static-spherem 0 0 0 8)
+              :origin-joint-index 3
+              )
+
 (deftype vin-npc (process-taskable)
   ()
   )
 
 
 (defmethod get-art-element ((this vin-npc))
-  (-> this draw art-group data 5)
+  (-> this draw art-group data 0)
   )
 
 (defmethod init-skeleton! ((this vin-npc))
   (initialize-skeleton
     this
-    (the-as skeleton-group (art-group-get-by-name *level* "skel-sidekick" (the-as (pointer level) #f)))
+    (the-as skeleton-group (art-group-get-by-name *level* "skel-vin-effect" (the-as (pointer level) #f)))
     (the-as pair 0)
     )
-  (logior! (-> this draw status) (draw-control-status no-draw-bounds2))
+  ;; (logior! (-> this draw status) (draw-control-status no-draw-bounds2))
   0
   (none)
   )

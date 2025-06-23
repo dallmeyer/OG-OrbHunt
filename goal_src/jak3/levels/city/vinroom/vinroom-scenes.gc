@@ -7,11 +7,11 @@
 
 ;; DECOMP BEGINS
 
-(defskelgroup skel-vin-effect vin-effect vin-effect-lod0-jg vin-effect-idle-ja
-              ((vin-effect-lod0-mg (meters 999999)))
-              :bounds (static-spherem 0 0 0 8)
-              :origin-joint-index 3
-              )
+;; (defskelgroup skel-vin-effect vin-effect vin-effect-lod0-jg vin-effect-idle-ja
+;;               ((vin-effect-lod0-mg (meters 999999)))
+;;               :bounds (static-spherem 0 0 0 8)
+;;               :origin-joint-index 3
+;;               )
 
 (defskelgroup skel-precursor-movie precursor precursor-lod0-jg precursor-idle-ja
               ((precursor-lod0-mg (meters 999999)))

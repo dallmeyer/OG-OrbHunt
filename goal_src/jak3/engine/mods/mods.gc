@@ -1686,7 +1686,7 @@
         )
     (when door
       (set! (car (res-lump-struct door 'on-notice pair)) 'when)
-      (set! (cdr (res-lump-struct door 'on-notice pair)) '((and (want-display 'ctywide-kg 'display) (want-display 'ctyinda 'display)) '(ctyinda)))
+      (set! (cdr (res-lump-struct door 'on-notice pair)) '((and (not (target-below-meters? 0)) (want-display 'ctywide-kg 'display) (want-display 'ctyinda 'display)) '(ctyinda)))
       )
     )
 
@@ -1846,7 +1846,7 @@
   ;;   )
 
   ;; mini-bigmap stuff
-  (when (and ;; #f ;; disabled for now
+  (when (and #f ;; disabled for now
             (not *progress-process*))
     ;; (format 0 "no progress proc~%")
     (cond
