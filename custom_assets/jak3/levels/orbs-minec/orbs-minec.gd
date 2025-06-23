@@ -4,5 +4,6 @@
 ;; the actual file name still needs to be 8.3
 ("O10.DGO"
  (
+  "pecker-highres-ag.go"
   "orbs-minec.go"
   ))

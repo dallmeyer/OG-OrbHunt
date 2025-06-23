@@ -4,6 +4,7 @@
 ;; the actual file name still needs to be 8.3
 ("O34.DGO"
  (
+  "seem-highres-ag.go"
   "warp-gate-ag.go"
   "orbs-templed.go"
   ))

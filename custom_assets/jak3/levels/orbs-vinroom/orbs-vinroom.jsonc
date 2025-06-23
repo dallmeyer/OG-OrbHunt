@@ -103,22 +103,23 @@
     },
         
     {
-      "trans": [ 1110.4700, 26.3199, 1124.8675], // vin hologhost
+      "trans": [ 1110.3145, 20.2299, 1124.9311], // vin hologhost
       "etype": "vin-npc",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0000, 0.8458, 0.0000, 0.5334], // quaternion
-      "bsphere": [ 1110.4700, 26.3199, 1124.8675, 6.928242206573486 ], // bounding sphere
+      "quat" : [ 0.0000, 0.8341, 0.0000, 0.5515], // quaternion
+      "bsphere": [ 1110.3145, 20.2299, 1124.9311, 6.928242206573486 ], // bounding sphere
       "lump": {
         "name": "vinroom-vin-npc",
-        "task-actor": ["int32", 61]
+        "task-actor": ["int32", 61],
+        "scale": ["float", 3.0]
       }
     },
     {
-      "trans": [  1110.4700, 30.4199, 1124.8675], // 
+      "trans": [  1110.4700, 31.4199, 1124.8675], // 
       "etype": "fuel-cell",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
-      "bsphere": [  1110.4700, 30.4199, 1124.8675, 6.928242206573486 ], // bounding sphere
+      "bsphere": [  1110.4700, 31.4199, 1124.8675, 6.928242206573486 ], // bounding sphere
       "lump": {
         "name": "vinroom-fuel-cell",
         "level-idx": ["int32", 44]

@@ -212,8 +212,16 @@
      (let ((v1-1 (the-as object (-> arg3 param 1))))
        (when (!= (-> (the-as attack-info v1-1) id) (-> this incoming-attack-id))
          ;; fart when you're the orb-dropper
-         (when (name= (-> this name) "mhcitya-yakow-1")
-          (play-sound-file "fart1.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 100.0)))
+         (cond
+          ((name= (-> this name) "mhcitya-yakow-1")
+            (play-sound-file "fart1.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 100.0)))
+            )
+          (else
+            ;; small chance of playing daxter line
+            (when (rand-vu-percent? 0.05)
+              (play-sound-file "could_be_wrong.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 100.0)))
+              )
+            )
           )
 
          (set! (-> this incoming-attack-id) (-> (the-as attack-info v1-1) id))

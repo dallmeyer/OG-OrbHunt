@@ -612,7 +612,7 @@
             (set! (-> this on-close) (the-as pair (car (cdr (cdr (cdr s5-0))))))
             )
           (else
-            (format 0 "unhandled warp-gate on-notice! ~A~%" (-> this name))
+            (dbg-format 0 "unhandled warp-gate on-notice! ~A~%" (-> this name))
             )
           )
         )

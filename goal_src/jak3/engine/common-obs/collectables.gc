@@ -2126,7 +2126,8 @@
               )
 
 (deftype fuel-cell (money)
-  ((level-index uint8))
+  ((level-index uint8)
+   (prompt-distance float))
   (:state-methods
     pending
     )
@@ -2144,76 +2145,85 @@
     )
   :code (behavior ()
     (until #f
-      (when (and *target* 
-                 (not (focus-test? *target* pilot mech))
-                 (< (vector-vector-distance (-> self root trans) (-> *target* control trans)) (meters 8.0))
-                 )
-        (let ((s5-2 (new 'stack 'font-context *font-default-matrix* 32 280 0.0 (font-color default) (font-flags shadow kerning))))
-          (cond
-            ((all-orbs-check? (-> self level-index))
-              ;; player has all orbs for this level! show prompt
-              (kill-current-talker '() '(daxter voicebox ambient) 'exit)
-              (talker-surpress!)
-              (when (can-display-query? self "process-taskable" -99.0)
-                (set-width! s5-2 340)
-                (set-height! s5-2 80)
-                (let ((v1-98 s5-2)
-                      (a0-39 (-> *setting-control* user-default language))
-                      )
-                  (set! (-> v1-98 scale) (if (or (= a0-39 (language-enum korean)) (= a0-39 (language-enum russian)))
-                                            0.9
-                                            0.7
-                                            )
-                        )
+      (let ((alt-actor (entity-actor-lookup (-> self entity) 'alt-actor 0))
+            (run? #t))
+        ;; check if alt-actor is visible to decide if we should be visible/responsive
+        (when (and alt-actor (-> alt-actor extra process)
+                   (logtest? (-> (the process-drawable (-> alt-actor extra process)) draw status) (draw-control-status no-draw-bounds no-draw-bounds2)))
+          (false! run?))
+        ;; maybe show prompt / give cell
+        (when (and run?
+                  *target* 
+                  (not (focus-test? *target* pilot mech))
+                  (< (vector-vector-distance (-> self root trans) (-> *target* control trans)) (-> self prompt-distance))
                   )
-                (set! (-> s5-2 flags) (font-flags shadow kerning middle-vert large))
-                (print-game-text
-                  (lookup-text! *common-text* (text-id press-triangle-for-reward) #f)
-                  s5-2
-                  #f
-                  44
-                  (bucket-id hud-draw-hud-alpha)
+          (let ((s5-2 (new 'stack 'font-context *font-default-matrix* 32 280 0.0 (font-color default) (font-flags shadow kerning))))
+            (cond
+              ((all-orbs-check? (-> self level-index))
+                ;; player has all orbs for this level! show prompt
+                (kill-current-talker '() '(daxter voicebox ambient) 'exit)
+                (talker-surpress!)
+                (when (can-display-query? self "process-taskable" -99.0)
+                  (set-width! s5-2 340)
+                  (set-height! s5-2 80)
+                  (let ((v1-98 s5-2)
+                        (a0-39 (-> *setting-control* user-default language))
+                        )
+                    (set! (-> v1-98 scale) (if (or (= a0-39 (language-enum korean)) (= a0-39 (language-enum russian)))
+                                              0.9
+                                              0.7
+                                              )
+                          )
+                    )
+                  (set! (-> s5-2 flags) (font-flags shadow kerning middle-vert large))
+                  (print-game-text
+                    (lookup-text! *common-text* (text-id press-triangle-for-reward) #f)
+                    s5-2
+                    #f
+                    44
+                    (bucket-id hud-draw-hud-alpha)
+                    )
+                  )
+                ;; check for triangle press and make sure we grab target successfully
+                (when (cpad-pressed? 0 triangle)
+                  ;; end any special modes so we can do powercell anim
+                  (send-event *target* 'end-mode 'board)
+                  (send-event *target* 'end-mode 'gun)
+                  (send-event *target* 'end-mode 'darkjak)
+                  (send-event *target* 'end-mode 'lightjak)
+                  (when (process-grab? *target* 'fuel-cell)
+                    ;; reveal fuel-cell, allow for collision, and wait for suck
+                    (logclear! (-> self draw status) (draw-control-status no-draw-bounds))
+                    (restore-collide-with-as (-> self root))
+                    (play-sound-file "tpl_proto_win.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 100.0)))
+                    (go-virtual wait)
+                    )
                   )
                 )
-              ;; check for triangle press and make sure we grab target successfully
-              (when (cpad-pressed? 0 triangle)
-                ;; end any special modes so we can do powercell anim
-                (send-event *target* 'end-mode 'board)
-                (send-event *target* 'end-mode 'gun)
-                (send-event *target* 'end-mode 'darkjak)
-                (send-event *target* 'end-mode 'lightjak)
-                (when (process-grab? *target* 'fuel-cell)
-                  ;; reveal fuel-cell, allow for collision, and wait for suck
-                  (logclear! (-> self draw status) (draw-control-status no-draw-bounds))
-                  (restore-collide-with-as (-> self root))
-                  (play-sound-file "tpl_proto_win.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 100.0)))
-                  (go-virtual wait)
-                  )
-                )
-              )
-            (else
-              ;; player is missing orbs, give em hint
-              (kill-current-talker '() '(daxter voicebox ambient) 'exit)
-              (talker-surpress!)
-              (when (can-display-query? self "process-taskable" -99.0)
-                (set-width! s5-2 340)
-                (set-height! s5-2 80)
-                (let ((v1-98 s5-2)
-                      (a0-39 (-> *setting-control* user-default language))
-                      )
-                  (set! (-> v1-98 scale) (if (or (= a0-39 (language-enum korean)) (= a0-39 (language-enum russian)))
-                                            0.9
-                                            0.7
-                                            )
+              (else
+                ;; player is missing orbs, give em hint
+                (kill-current-talker '() '(daxter voicebox ambient) 'exit)
+                (talker-surpress!)
+                (when (can-display-query? self "process-taskable" -99.0)
+                  (set-width! s5-2 340)
+                  (set-height! s5-2 80)
+                  (let ((v1-98 s5-2)
+                        (a0-39 (-> *setting-control* user-default language))
                         )
-                  )
-                (set! (-> s5-2 flags) (font-flags shadow kerning middle-vert large))
-                (print-game-text
-                  (need-orbs-string (-> self level-index))
-                  s5-2
-                  #f
-                  44
-                  (bucket-id hud-draw-hud-alpha)
+                    (set! (-> v1-98 scale) (if (or (= a0-39 (language-enum korean)) (= a0-39 (language-enum russian)))
+                                              0.9
+                                              0.7
+                                              )
+                          )
+                    )
+                  (set! (-> s5-2 flags) (font-flags shadow kerning middle-vert large))
+                  (print-game-text
+                    (need-orbs-string (-> self level-index))
+                    s5-2
+                    #f
+                    44
+                    (bucket-id hud-draw-hud-alpha)
+                    )
                   )
                 )
               )
@@ -2269,9 +2279,13 @@
     (the-as skeleton-group (art-group-get-by-name *level* "skel-pre-artifact-d" (the-as (pointer level) #f)))
     (the-as pair 0)
     )
+  (set! (-> this prompt-distance) (meters 8.0))
   (when (-> this entity)
     (nav-mesh-connect-from-ent this)
     (set! (-> this level-index) (res-lump-value (-> this entity) 'level-idx int32 :time -1000000000.0))
+    (when (nonzero? (res-lump-float (-> this entity) 'distance))
+      (set! (-> this prompt-distance) (meters (res-lump-float (-> this entity) 'distance)))
+      )
     )
   (set-vector! (-> this draw color-mult) 0.8 0.8 0.8 1.0)
   (set-vector! (-> this draw color-emissive) 0.2 0.2 0.2 1.0)

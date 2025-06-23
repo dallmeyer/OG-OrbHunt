@@ -97,6 +97,7 @@
     (the-as pair 0)
     )
   (set! (-> this draw light-index) (the-as uint 30))
+  (logior! (-> this draw status) (draw-control-status no-draw-bounds2)) ;; hide until flying pecker lands and dies
   0
   (none)
   )

@@ -7210,7 +7210,7 @@
                 :callback-list '((23 . init-mood-minec))
                 :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #x20 #x0 #x0 #x0 #x0)
+                    :borrow-size (new 'static 'array uint16 5 #x32a #x0 #x0 #x0 #x0)
                     :borrow-info (new 'static 'array object 5 '(orbs-minec display) #f #f #f #f)
                     )
                 :bottom-height (meters 40)
@@ -18376,7 +18376,7 @@
                   :callback-list '((23 . init-mood-templed))
                 :borrow (new 'static 'level-borrow-info
                   :alias #f
-                  :borrow-size (new 'static 'array uint16 5 #x500 #x0 #x0 #x0 #x0)
+                  :borrow-size (new 'static 'array uint16 5 #x6a0 #x0 #x0 #x0 #x0)
                   :borrow-info (new 'static 'array object 5 '(orbs-templed display) #f #f #f #f)
                   )
                   :bottom-height (meters -150)

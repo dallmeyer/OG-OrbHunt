@@ -155,6 +155,9 @@
          v0-0
          )
        )
+      (('show)
+        (logclear! (-> self draw status) (draw-control-status no-draw-bounds no-draw-bounds2))
+        )
       )
     )
   :enter (behavior ()

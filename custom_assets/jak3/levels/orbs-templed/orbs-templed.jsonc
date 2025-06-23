@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": ["warp-gate-ag"],
+  "art_groups": ["warp-gate-ag", "seem-highres-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -197,8 +197,31 @@
       "lump": {
         "name":"templed-skill-14"
       }
+    },
+    {
+      "trans": [ 4293.60986328125, 95.28469848632813, 4445.169921875 ], // vin hologhost
+      "etype": "seem-npc",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.0, 1.0, 0.0, 0.0], // quaternion
+      "bsphere": [ 4293.60986328125, 95.28469848632813, 4445.169921875, 6.928242206573486 ], // bounding sphere
+      "lump": {
+        "name": "templed-seem-npc",
+        "task-actor": ["int32", 63]
+      }
+    },
+    {
+      "trans": [  4293.9829, 102.9230, 4440.4565], // 
+      "etype": "fuel-cell",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
+      "bsphere": [  4293.9829, 102.9230, 4440.4565, 6.928242206573486 ], // bounding sphere
+      "lump": {
+        "name": "templed-fuel-cell",
+        "level-idx": ["int32", 37],
+        "distance": ["float", 10.0]
+      }
     }//,
-    
+
 
     // GHOSTS
     // {
