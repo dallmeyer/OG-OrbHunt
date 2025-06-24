@@ -4,5 +4,6 @@
 ;; the actual file name still needs to be 8.3
 ("O22.DGO"
  (
+  "jinx-highres-ag.go"
   "orbs-ctyinda.go"
   ))

@@ -4,5 +4,6 @@
 ;; the actual file name still needs to be 8.3
 ("O14.DGO"
  (
+  "keira-highres-ag.go"
   "orbs-freehq.go"
   ))

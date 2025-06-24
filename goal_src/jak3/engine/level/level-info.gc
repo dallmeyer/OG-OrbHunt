@@ -2000,7 +2000,7 @@
                    :callback-list '((23 . init-mood-ctyslumb) (6 . *ctyslumb-water-texture-anim-array*))
                    :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #xa #x0 #x0 #x0 #x0)
+                    :borrow-size (new 'static 'array uint16 5 #x32a #x0 #x0 #x0 #x0)
                     :borrow-info (new 'static 'array object 5 '(orbs-ctyslumb display) #f #f #f #f)
                     )
                    :bottom-height (meters -15)
@@ -3156,7 +3156,7 @@
                   :callback-list '()
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #x20 #x0 #x0 #x0 #x0)
+                    :borrow-size (new 'static 'array uint16 5 #x32a #x0 #x0 #x0 #x0)
                     :borrow-info (new 'static 'array object 5 '(orbs-ctyinda display) #f #f #f #f)
                     )
                   :bottom-height (meters -15)
@@ -5243,7 +5243,7 @@
                  :borrow (new 'static 'level-borrow-info
                    :alias #f
                    :borrow-size (new 'static 'array uint16 5 #x3e8 #xe6 #x0 #x0 #x0)
-                   :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                   :borrow-info (new 'static 'array object 5 '(orbs-freehq display) #f #f #f #f)
                    )
                  :bottom-height (meters -150)
                  :fog-height (meters 80)

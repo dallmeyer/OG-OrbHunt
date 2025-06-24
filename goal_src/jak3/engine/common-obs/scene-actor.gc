@@ -823,7 +823,7 @@
 
 (defmethod get-art-element ((this jinx-npc))
   (case (-> this task actor)
-    (((game-task-actor jinx-hiphog))
+    (((game-task-actor jinx-hiphog) (game-task-actor jinx-orbhunt))
      (-> this draw art-group data 3)
      )
     (else

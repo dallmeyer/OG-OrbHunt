@@ -15202,6 +15202,42 @@
                   :tex (game-task-icon gaticon-02)
                   :scene #f
                   )
+              (new 'static 'game-task-event
+                  :actor (game-task-actor samos-orbhunt)
+                  :action (game-task-action idle)
+                  :tex (game-task-icon gaticon-02)
+                  :scene #f
+                  )
+              (new 'static 'game-task-event
+                  :actor (game-task-actor keira-orbhunt)
+                  :action (game-task-action idle)
+                  :tex (game-task-icon gaticon-02)
+                  :scene #f
+                  )
+              (new 'static 'game-task-event
+                  :actor (game-task-actor jinx-orbhunt)
+                  :action (game-task-action idle)
+                  :tex (game-task-icon gaticon-02)
+                  :scene #f
+                  )
+              (new 'static 'game-task-event
+                  :actor (game-task-actor sig-orbhunt)
+                  :action (game-task-action idle)
+                  :tex (game-task-icon gaticon-02)
+                  :scene #f
+                  )
+              (new 'static 'game-task-event
+                  :actor (game-task-actor veger-orbhunt)
+                  :action (game-task-action idle)
+                  :tex (game-task-icon gaticon-02)
+                  :scene #f
+                  )
+              (new 'static 'game-task-event
+                  :actor (game-task-actor yakow-orbhunt)
+                  :action (game-task-action idle)
+                  :tex (game-task-icon gaticon-02)
+                  :scene #f
+                  )
               )
             :flags (game-task-node-flag close-task save-on-life no-percent act3)
             :parent-node (new 'static 'array game-task-node 4

@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["samos-highres-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -109,6 +109,29 @@
       "lump": {
         "name":"ctyslumb-skill-hover-01",
         "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+
+    {
+      "trans": [ 393.6899, 7.9418, -53.9724 ], // samos by white barrier
+      "etype": "samos-npc",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.0000, 0.6918, 0.0000, -0.7220], // quaternion
+      "bsphere": [ 393.6899, 7.9418, -53.9724 , 6.928242206573486 ], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-samos-npc",
+        "task-actor": ["int32", 64]
+      }
+    },
+    {
+      "trans": [ 393.6899, 10.9418, -53.9724 ], // 
+      "etype": "fuel-cell",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
+      "bsphere": [ 393.6899, 10.9418, -53.9724 , 6.928242206573486 ], // bounding sphere
+      "lump": {
+        "name": "ctyslumb-fuel-cell",
+        "level-idx": ["int32", 40]
       }
     }//,
 
