@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["sig-highres-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -46,17 +46,17 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
+    {
+      "trans": [  2257.7849, 23.1451, 2203.8393], // under lip of rock wall just outside cave, near sig
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2257.7849, 23.1451, 2203.8393, 10], // bounding sphere
+      "lump": {
+        "name":"desertg-skill-01",
+        "bob-scale": ["float", 0.25]
+      }
+    },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
     //   "etype": "skill",  // actor type
@@ -68,7 +68,28 @@
     //   }
     // },
     
-    
+    {
+      "trans": [ 2296.5859, 17.8694, 2222.8425], // samos by white barrier
+      "etype": "sig-npc",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.0, 0.0, 0.0, -1.0], // quaternion
+      "bsphere": [ 2296.5859, 17.8694, 2222.8425 , 6.928242206573486 ], // bounding sphere
+      "lump": {
+        "name": "desertg-sig-npc",
+        "task-actor": ["int32", 67]
+      }
+    },
+    {
+      "trans": [ 2296.5859, 22.2694, 2222.8425], // 
+      "etype": "fuel-cell",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
+      "bsphere": [ 2296.5859, 22.2694, 2222.8425, 6.928242206573486 ], // bounding sphere
+      "lump": {
+        "name": "desertg-fuel-cell",
+        "level-idx": ["int32", 93]
+      }
+    }//,
 
     // GHOSTS
     // {

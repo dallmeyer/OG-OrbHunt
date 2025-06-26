@@ -1496,6 +1496,14 @@
       (set! (-> elev-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mined #f)))))
       )
     )
+  ;; let you return from ctygenb -> mined JK decided not to
+  ;; (let ((door (entity-by-name "com-airlock-outer-15")))
+  ;;   (when door 
+  ;;     (set! (cdr (res-lump-struct door 'on-deactivate pair)) '((want-display 'minee #f) (when (and (send-event self 'front) (level-status? 'minee)) (want-sound 'genbtsk1))))
+  ;;     (set! (car (res-lump-struct door 'on-notice pair)) 'begin)
+  ;;     (set! (cdr (res-lump-struct door 'on-notice pair)) '((want-load 'ctygenb 'minee) '(minee)))
+  ;;     )
+  ;;   )
 
   ;; allow lfacrm1 door to open (ctyslumc->ffacrm1, shuttle behind freehq)
   (let ((door (entity-by-name "cty-door-3"))

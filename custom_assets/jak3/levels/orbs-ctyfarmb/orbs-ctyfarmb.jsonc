@@ -340,6 +340,18 @@
         "name": "ctyfarmb-skill-27",
         "bob-scale": ["float", 0.4] // less bob
       }
+    },
+
+    {
+      "trans": [ -25.20,  14.75,  927.03 ], // above yakow
+      "etype": "fuel-cell",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
+      "bsphere": [ -25.20,  14.75,  927.03 , 6.928242206573486 ], // bounding sphere
+      "lump": {
+        "name": "ctyfarmb-fuel-cell",
+        "level-idx": ["int32", 18]
+      }
     }//,
 
     // GHOSTS

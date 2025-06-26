@@ -454,7 +454,7 @@
 
 (defmethod get-art-element ((this sig-npc))
   (case (-> this task actor)
-    (((game-task-actor sig-wasdoors))
+    (((game-task-actor sig-wasdoors) (game-task-actor sig-orbhunt))
      (-> this draw art-group data 4)
      )
     (else

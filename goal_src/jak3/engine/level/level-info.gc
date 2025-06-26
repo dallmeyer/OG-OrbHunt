@@ -7301,7 +7301,11 @@
                     )
                   )
                 :callback-list '((23 . init-mood-mined) (2 . *mined-tfrag-texture-anim-array*))
-                :borrow #f
+                :borrow (new 'static 'level-borrow-info
+                  :alias #f
+                  :borrow-size (new 'static 'array uint16 5 #x32a #x0 #x0 #x0 #x0)
+                  :borrow-info (new 'static 'array object 5 '(orbs-mined display) #f #f #f #f)
+                  )
                 :bottom-height (meters -20)
                 :fog-height (meters 80)
                 :fog-mult 1.0
@@ -15250,7 +15254,11 @@
                       )
                     )
                   :callback-list '((23 . init-mood-desertg))
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #x32a #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-desertg display) #f #f #f #f)
+                    )
                   :bottom-height (meters -100)
                   :fog-height (meters 80)
                   :fog-mult 10.0
