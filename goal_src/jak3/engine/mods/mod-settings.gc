@@ -443,11 +443,11 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 
 (define *level-id-names* (new 'static 'boxed-array :type string :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   "" ;; 0 (none)
-  "BTR 1"	;; 1
-  "BTR 2"	;; 2
-  "BTR 3"	;; 3
-  "BTR 4"	;; 4
-  "BTR End"	;; 5
+  "BTR (North)"	;; 1
+  "BTR (West)"	;; 2
+  "BTR (Center)"	;; 3
+  "BTR (South)"	;; 4
+  "BTR (End)"	;; 5
   "Dark Ship (Escape)"	;; 6
   "Dark Ship (Jak Section)"	;; 7
   "Dark Ship (Mech Mid)"	;; 8
