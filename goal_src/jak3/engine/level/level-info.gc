@@ -4090,7 +4090,11 @@
                       )
                     )
                   :callback-list '((33 . rubblea-login) (23 . init-mood-stadiuma) (6 . *rubblea-water-texture-anim-array*))
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #x12a #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-rubblea display) #f #f #f #f)
+                    )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)
                   :max-rain 1.0

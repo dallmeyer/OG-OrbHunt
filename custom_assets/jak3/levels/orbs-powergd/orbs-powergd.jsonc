@@ -55,29 +55,39 @@
       "lump": {
         "name": "powergd-warp-gate-1"
       }
-    }//,
+    },
 
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [  1120.0261, -198.6893, 1120.0101], // dead center
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1120.0261, -198.6893, 1120.0101, 10], // bounding sphere
+      "lump": {
+        "name":"powergd-skill-01"
+      }
+    },
+    {
+      "trans": [  1135.4073, -199.9361, 1166.2866], // near random triangle with collision and concrete texture
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1135.4073, -199.9361, 1166.2866, 10], // bounding sphere
+      "lump": {
+        "name":"powergd-skill-02",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [  1055.2021, -199.6976, 1058.2708], // behind far corner
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1055.2021, -199.6976, 1058.2708, 10], // bounding sphere
+      "lump": {
+        "name":"powergd-skill-03"
+      }
+    }//,
     
     
 

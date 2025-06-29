@@ -41,6 +41,17 @@
        (check-impact self (the-as rigid-body-impact a1-4) (the-as vehicle arg0))
        )
      )
+    (('attack 'attack-invinc)
+      (case (-> (the-as attack-info (-> arg3 param 1)) mode)
+        (('dark-smack 'eco-dark)
+          (go-virtual fall))
+        (else
+          (format 0 "rub-tower attacked ~A~%" (-> (the-as attack-info (-> arg3 param 1)) mode)))
+        )
+      )
+    (else
+      (format 0 "rub-tower other event ~A~%" arg2)
+      )
     )
   )
 
@@ -154,6 +165,7 @@
 
 (defmethod init-collision! ((this rub-tower))
   (let ((s5-0 (new 'process 'collide-shape this (collide-list-enum usually-hit-by-player))))
+    ;; (set! (-> s5-0 penetrated-by) (penetrate jak-dark-shot jak-dark-nuke dark-smack))
     (let ((s4-0 (new 'process 'collide-shape-prim-group s5-0 (the-as uint 2) 0)))
       (set! (-> s5-0 total-prims) (the-as uint 3))
       (set! (-> s4-0 prim-core collide-as) (collide-spec obstacle camera-blocker))
@@ -209,6 +221,7 @@
   "Set up a newly created process from the entity that created it."
   (init-collision! this)
   (process-drawable-from-entity! this arg0)
+  (logior! (-> this mask) (process-mask crate)) ;; orbhunt - so attacks target it
   (initialize-skeleton
     this
     (the-as skeleton-group (art-group-get-by-name *level* "skel-rub-tower" (the-as (pointer level) #f)))

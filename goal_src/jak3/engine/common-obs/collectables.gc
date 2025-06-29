@@ -294,6 +294,11 @@
        (set! s5-0 (-> *part-group-id-table* 127))
        (set! (-> this collect-effect) (-> *part-group-id-table* 127))
        )
+      ;; not using init-common currently
+      ;; (((pickup-type fuel-cell))
+      ;;  (set! s5-0 (-> *part-group-id-table* 1560))
+      ;;  (set! (-> this collect-effect) (-> *part-group-id-table* 127))
+      ;;  )
       )
     (if s5-0
         (set! (-> this part) (create-launch-control s5-0 this))
@@ -374,8 +379,10 @@
     (if (nonzero? (-> this draw))
         (ja-post)
         )
-    (if (nonzero? s5-0)
+    ;; orb hunt - dont spawn particles for fuel cell in pending
+    (if (and (nonzero? s5-0) (not (name= (-> this state name) 'pending)))
         (spawn s5-0 (-> s4-0 world-sphere))
+        ;; (kill-particles s5-0)
         )
     )
   (if (nonzero? (-> this sound))
@@ -1482,7 +1489,7 @@
   (let ((a0-7 (-> this part))
         (a1-1 (-> this root root-prim prim-core))
         )
-    (if (nonzero? a0-7)
+    (if (and (nonzero? a0-7) (not (name= (-> this state name) 'pending)))
         (spawn a0-7 (-> a1-1 world-sphere))
         )
     )
@@ -2287,6 +2294,7 @@
       (set! (-> this prompt-distance) (meters (res-lump-float (-> this entity) 'distance)))
       )
     )
+  (set! (-> this part) (create-launch-control (-> *part-group-id-table* 1560) this))
   (set-vector! (-> this draw color-mult) 0.8 0.8 0.8 1.0)
   (set-vector! (-> this draw color-emissive) 0.2 0.2 0.2 1.0)
   0
