@@ -25,6 +25,22 @@
       )
     (debug-menu-append-item orb-placer-menu (new-dm-func "Print Selected Orb Position" #f orb-placer-print-selected))
     (debug-menu-append-item orb-placer-menu (new-dm-func "Print All Orb Positions" #f orb-placer-print-all))
+    (let ((orb-save-menu (new 'debug 'debug-menu ctx "Save to File")))
+      (debug-menu-append-item orb-save-menu (new-dm-func "Save to Slot 1" #f orbs-save-to-file-1))
+      (debug-menu-append-item orb-save-menu (new-dm-func "Save to Slot 2" #f orbs-save-to-file-2))
+      (debug-menu-append-item orb-save-menu (new-dm-func "Save to Slot 3" #f orbs-save-to-file-3))
+      (debug-menu-append-item orb-save-menu (new-dm-func "Save to Slot 4" #f orbs-save-to-file-4))
+
+      (debug-menu-append-item orb-placer-menu (new-dm-submenu "Save to File" orb-save-menu))
+      )
+    (let ((orb-load-menu (new 'debug 'debug-menu ctx "Load from File")))
+      (debug-menu-append-item orb-load-menu (new-dm-func "Load from Slot 1" #f orbs-load-1))
+      (debug-menu-append-item orb-load-menu (new-dm-func "Load from Slot 2" #f orbs-load-2))
+      (debug-menu-append-item orb-load-menu (new-dm-func "Load from Slot 3" #f orbs-load-3))
+      (debug-menu-append-item orb-load-menu (new-dm-func "Load from Slot 4" #f orbs-load-4))
+
+      (debug-menu-append-item orb-placer-menu (new-dm-submenu "Load from File" orb-load-menu))
+      )
     
     orb-placer-menu
     )

@@ -44,13 +44,14 @@
       (vector-copy! vec (-> orb base))
 
       ; spawn and update orb-placer data
-      (let ((orb-handle (spawn-skill vec 1.0 #t)))
+      (dbg-format 0 "dupe spawn-skill~%")
+      (let ((orb-handle (spawn-skill vec 1.0 0.0)))
         (when (nonzero? orb-handle)
           (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
           (set! *orb-placer-selected-idx* *orb-placer-count*)
           ;; (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
           (+! *orb-placer-count* 1)
-          (orb-placer-list-maintenace #t)
+          (orb-placer-list-maintenance #t)
           )
         )
       )
@@ -58,7 +59,7 @@
   0
   )
 
-(defun orb-placer-list-maintenace ((update-debug-list? symbol))
+(defun orb-placer-list-maintenance ((update-debug-list? symbol))
   (when update-debug-list?
    (debug-menu-remove-all-items *orb-placer-select-menu*)
    (debug-menu-remove-all-items *orb-placer-dupe-menu*)
@@ -139,18 +140,44 @@
       (vector-z-quaternion! camera-z-vector camera-quat)
       ;; shift orb's position with camera angle, by 3m
       (vector+! vec vec (vector-normalize! camera-z-vector (meters 3.0)))
+      
+      (dbg-format 0 "add spawn-skill~%")
 
       ;; spawn and update orb-placer data
-      (let ((orb-handle (spawn-skill vec 1.0 #t)))
+      (let ((orb-handle (spawn-skill vec 1.0 0.0)))
         (when (nonzero? orb-handle)
           (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
           (set! *orb-placer-selected-idx* *orb-placer-count*)
           (true! *entity-placer-edit-mode?*)
           ;; (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
           (+! *orb-placer-count* 1)
-          (orb-placer-list-maintenace #t)
+          (orb-placer-list-maintenance #t)
           )
         )
+      )
+    )
+  (none)
+  )
+
+(defun orb-placer-set-marking ((orb skill) (amount float))
+  (format 0 "toggle orb from ~D to " (the int (-> orb pickup-amount)))
+  (set! (-> orb pickup-amount) amount)
+  (format 0 "~D ~%" (the int (-> orb pickup-amount)))
+
+  (set! (-> orb fact pickup-amount) (-> orb pickup-amount))
+  ;; update color
+  (cond
+    ((= (-> orb pickup-amount) 2.0)  ;; abah hint
+      (set-vector! (-> orb draw color-mult) 0.0 0.0 0.8 1.0)
+      (set-vector! (-> orb draw color-emissive) 0.1 0.1 1.0 1.0)
+      )
+    ((>= (-> orb pickup-amount) (-> *FACT-bank* super-skill-inc)) ;; hover
+      (set-vector! (-> orb draw color-mult) 0.8 0.8 0.0 1.0)
+      (set-vector! (-> orb draw color-emissive) 0.0 1.0 0.2 1.0)
+      )
+    (else ;; normal
+      (set-vector! (-> orb draw color-mult) 0.8 0.8 0.8 1.0)
+      (set-vector! (-> orb draw color-emissive) 0.2 0.2 0.2 1.0)
       )
     )
   (none)
@@ -160,29 +187,11 @@
   (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
     (let ((orb (the skill (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
       (when orb
-        (format 0 "toggle orb from ~D to " (the int (-> orb pickup-amount)))
-        (set! (-> orb pickup-amount) (the float (+ (mod (the int (-> orb pickup-amount)) 3) 1)))
-        (format 0 "~D ~%" (the int (-> orb pickup-amount)))
-
-        (set! (-> orb fact pickup-amount) (-> orb pickup-amount))
-        ;; update color
-        (cond
-          ((= (-> orb pickup-amount) 2.0)  ;; abah hint
-            (set-vector! (-> orb draw color-mult) 0.0 0.0 0.8 1.0)
-            (set-vector! (-> orb draw color-emissive) 0.1 0.1 1.0 1.0)
-            )
-          ((>= (-> orb pickup-amount) (-> *FACT-bank* super-skill-inc)) ;; hover
-            (set-vector! (-> orb draw color-mult) 0.8 0.8 0.0 1.0)
-            (set-vector! (-> orb draw color-emissive) 0.0 1.0 0.2 1.0)
-            )
-          (else ;; normal
-            (set-vector! (-> orb draw color-mult) 0.8 0.8 0.8 1.0)
-            (set-vector! (-> orb draw color-emissive) 0.2 0.2 0.2 1.0)
-            )
-          )
+        (orb-placer-set-marking orb (the float (+ (mod (the int (-> orb pickup-amount)) 3) 1)))
         )
       )
     )
+  (none)
   )
 
 (defun orb-placer-print-selected ()
@@ -244,6 +253,20 @@
       (vector+! (-> proc root trans) (-> proc root trans) vec)
       (when proc-extra-vec (vector+! proc-extra-vec proc-extra-vec vec))
       (true! moved?)
+      )
+
+    ;; Adjust bob-amount with right stick for orbs
+    (when (type-type? (-> proc type) skill)
+      (cond 
+        ((< (-> *cpad-list* cpads 0 righty) 8) ;; some threshold I chose for right stick up
+          ;; add 32, cap at 1024 max
+          (set! (-> (the skill proc) bob-amount) (fmin 1024.0 (+ (-> (the skill proc) bob-amount) 32.0)))
+          )
+        ((> (-> *cpad-list* cpads 0 righty) 247) ;; some threshold I chose for right stick down
+          ;; subtract 32, cap at 0 min
+          (set! (-> (the skill proc) bob-amount) (fmax 0.0 (- (-> (the skill proc) bob-amount) 32.0)))
+          )
+        )
       )
 
     (cond
@@ -347,7 +370,7 @@
 (define *orb-placer-tmp-str* (new 'global 'string 2048 (the-as string #f)))
 (defun orb-placer-maintenance ()
   (when *debug-segment*
-    (orb-placer-list-maintenace #f)
+    (orb-placer-list-maintenance #f)
 
     (when (and (not (paused?)) *entity-placer-active?*)
       ;; handle edit mode toggle
@@ -469,3 +492,148 @@
     )
   (none)
   )
+
+(defun orb-placer-clear! ()
+  (dotimes (idx *orb-placer-count*)
+    (cond
+      ((and (-> *orb-placer-orbs* idx) (nonzero? (-> *orb-placer-orbs* idx)) (handle->process (-> *orb-placer-orbs* idx)))
+        (deactivate (handle->process (-> *orb-placer-orbs* idx)))
+        (set! (-> *orb-placer-orbs* idx) (the-as handle #f))
+        )
+      )
+    )
+  (set! *orb-placer-count* 0)
+  (set! *orb-placer-selected-idx* -1)
+  (set! *entity-placer-active?* #f)
+  (none)
+  0
+  )
+
+;; file save/load stuff
+
+(defun orbs-handle-input-settings ((file file-stream))
+  ;; Parses an orb line in the file, expecting the format: (orb-idx x y z bob-scale type)
+  (let* ((orb-idx (string->int *pc-temp-string*))
+         (x (file-stream-read-float file))
+         (y (file-stream-read-float file))
+         (z (file-stream-read-float file))
+         (v (new-stack-vector0))
+         (bob-scale (file-stream-read-float file))
+         (type (file-stream-read-float file)) ;; normal / abah / hover
+         )
+    (set! *orb-placer-count* (max *orb-placer-count* (+ orb-idx 1)))
+    (dbg-format 0 "load spawn-skill from file, total count is now ~D~%" *orb-placer-count*)
+    (set-vector-meters! v x y z)
+    (let ((orb-handle (spawn-skill v 1.0 bob-scale))) ;; just pass type/amount=1.0 here and we set the type after its spawned
+      (when (nonzero? orb-handle)
+        (orb-placer-set-marking (the skill (handle->process orb-handle)) type)
+        (set! (-> *orb-placer-orbs* orb-idx) orb-handle)
+        )
+      )
+    )
+  0)
+
+(defun orbs-read-from-file ((filename string))
+  (if (not filename)
+    (return #f))
+
+  (let ((file (new 'stack 'file-stream filename 'read)))
+    (when (not (file-stream-valid? file))
+      (return #f))
+
+    (with-settings-scope (file)
+      (case-str (file-stream-read-word file)
+        (("settings")
+          (file-stream-read-int file) ;; burn thru version field
+          (dosettings (file)
+            (orbs-handle-input-settings file)
+            )
+          )
+        )
+      )
+    (orb-placer-list-maintenance #t)
+
+    (file-stream-close file)
+    )
+
+  (dbg-format 0 "orb-placer file read: ~A~%" filename)
+
+  #t
+  )
+
+(defun orbs-handle-output-settings ((file file-stream))
+  (dotimes (idx *orb-placer-count*)
+    (cond
+      ((and (-> *orb-placer-orbs* idx) (nonzero? (-> *orb-placer-orbs* idx)) (handle->process (-> *orb-placer-orbs* idx)))
+        (let* ((orb (the skill (handle->process (-> *orb-placer-orbs* idx))))
+               (v (-> orb base))
+               (bob-amount (-> orb bob-amount))
+               (bob-scale (if (zero? bob-amount) -1.0 (/ bob-amount 1024.0)))
+               (type (-> orb pickup-amount))
+               )
+          (format file "  (~D ~m ~m ~m ~F ~F)~%" idx (-> v x) (-> v y) (-> v z) bob-scale type)
+          )
+        )
+      (else
+        ;; skipped orb?
+        (format 0 "found missing orb in idx ~D, skipping~%" idx)
+        )
+      )
+    )
+
+  0)
+
+(defun orbs-write-to-file ((filename string))
+  (if (not filename)
+    (return #f))
+
+  (let ((file (new 'stack 'file-stream filename 'write)))
+    (if (not (file-stream-valid? file))
+      (return #f))
+
+    (format file "(settings #x~X~%" PC_KERNEL_VERSION)
+
+    (orbs-handle-output-settings file)
+
+    (format file "  )~%")
+    (file-stream-close file)
+    )
+
+  (format 0 "orb-placer file write: ~A~%" filename)
+
+  #t
+  )
+
+(define *orba-filename* "ORBA-")
+
+(defun orbs-save-to-file ((filenum int))
+  (format (clear *pc-temp-string-1*) "~S/~S~D.gc" *pc-settings-folder* *orba-filename* filenum)
+  (pc-mkdir-file-path *pc-temp-string-1*)
+  (orbs-write-to-file *pc-temp-string-1*)
+  (none))
+;; too lazy to do this better
+(defun orbs-save-to-file-1 () (orbs-save-to-file 1))
+(defun orbs-save-to-file-2 () (orbs-save-to-file 2))
+(defun orbs-save-to-file-3 () (orbs-save-to-file 3))
+(defun orbs-save-to-file-4 () (orbs-save-to-file 4))
+
+(defun orbs-load ((filenum int))
+  (format (clear *pc-temp-string-1*) "~S/~S~D.gc" *pc-settings-folder* *orba-filename* filenum)
+  (cond
+    ((pc-filepath-exists? *pc-temp-string-1*)
+      (format 0 "[PC] Orb Placer Settings found at '~S'...loading!~%" *pc-temp-string-1*)
+      (orb-placer-clear!)
+      (unless (orbs-read-from-file *pc-temp-string-1*)
+        (format 0 "[PC] Orb Placer Settings found at '~S' but could not be loaded!~%" *pc-temp-string-1*)
+        )
+      )
+    (else
+      (format 0 "[PC] Orb Placer Settings not found at '~S'~%" *pc-temp-string-1*)
+      )
+    )
+  0)
+;; too lazy to do this better
+(defun orbs-load-1 () (orbs-load 1))
+(defun orbs-load-2 () (orbs-load 2))
+(defun orbs-load-3 () (orbs-load 3))
+(defun orbs-load-4 () (orbs-load 4))
