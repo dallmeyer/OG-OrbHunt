@@ -55,26 +55,26 @@
       "lump": {
         "name":"rubbleb-warp-gate-1"
       }
+    },
+
+    {
+      "trans": [ -8.6177, 33.0830, 103.7800], // in crevice where building meets wall, concussor up onto roof
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-8.6177, 33.0830, 103.7800, 10], // bounding sphere
+      "lump": {
+        "name":"rubbleb-skill-01"
+      }
     }//,
     // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
+    //   "trans": [  2430.0915, 72.5804, -96.9893], // 
     //   "etype": "skill",  // actor type
     //   "game_task": 0, // associated game task (for powercells, etc)
     //   "quat" : [0, 0, 0, 1], // quaternion
     //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
     //   "lump": {
-    //     "name":"wascitya-skill-2"
+    //     "name":"rubbleb-skill-02"
     //   }
     // },
     

@@ -625,11 +625,14 @@
           (('dark-smack 'eco-dark)
             (go-virtual explode))
           (else
-            (format 0 "rub-rhino-door attacked ~A~%" (-> (the-as attack-info (-> block param 1)) mode)))
+            (dbg-format 0 "rub-rhino-door attacked ~A~%" (-> (the-as attack-info (-> block param 1)) mode))
+            #f
+            )
           )
         )
       (else
-        (format 0 "rub-rhino-door other event ~A~%" message)
+        (dbg-format 0 "rub-rhino-door other event ~A~%" message)
+        #f
         )
       )
     )

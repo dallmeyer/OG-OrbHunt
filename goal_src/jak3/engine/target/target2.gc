@@ -447,7 +447,7 @@
   :code (behavior ((arg0 symbol))
     (set-forward-vel 0.0)
     (let ((gp-0 0))
-      (while (not (logtest? (-> self control status) (collide-status on-surface)))
+      (while (and (< gp-0 (seconds 1.0)) (not (logtest? (-> self control status) (collide-status on-surface))))
         (target-falling-anim-trans)
         (+! gp-0 (- (current-time) (-> self clock old-frame-counter)))
         (suspend)

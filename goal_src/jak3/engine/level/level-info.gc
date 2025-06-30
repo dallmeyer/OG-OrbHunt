@@ -4148,7 +4148,11 @@
                        )
                      )
                    :callback-list '((23 . init-mood-stadiuma) (6 . *rubblea2-water-texture-anim-array*))
-                   :borrow #f
+                   :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #x28 #xa #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 #f '(orbs-rubblea2 display) #f #f #f)
+                    )
                    :bottom-height (meters -150)
                    :fog-height (meters 80)
                    :max-rain 1.0
@@ -5933,7 +5937,7 @@
                 :index 85
                 :task-level #xc
                 :master-level #f
-                :level-flags (level-flags end-mode ocean-near-translucent)
+                :level-flags (level-flags end-mode ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-center)
@@ -6054,7 +6058,7 @@
                 :index 86
                 :task-level #xc
                 :master-level 'comba
-                :level-flags (level-flags ocean-near-translucent)
+                :level-flags (level-flags ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
@@ -6104,7 +6108,7 @@
                 :index 87
                 :task-level #xc
                 :master-level 'comba
-                :level-flags (level-flags display-wait ocean-near-translucent)
+                :level-flags (level-flags display-wait ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
@@ -6157,7 +6161,7 @@
                 :index 88
                 :task-level #xc
                 :master-level 'comba
-                :level-flags (level-flags display-wait ocean-near-translucent)
+                :level-flags (level-flags display-wait ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
@@ -6210,7 +6214,7 @@
                 :index 89
                 :task-level #xc
                 :master-level 'comba
-                :level-flags (level-flags display-wait ocean-near-translucent)
+                :level-flags (level-flags display-wait ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
@@ -6263,7 +6267,7 @@
                 :index 90
                 :task-level #xc
                 :master-level 'comba
-                :level-flags (level-flags display-wait ocean-near-translucent)
+                :level-flags (level-flags display-wait ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
@@ -6296,7 +6300,7 @@
                 :index 91
                 :task-level #xc
                 :master-level 'comba
-                :level-flags (level-flags display-wait ocean-near-translucent)
+                :level-flags (level-flags display-wait ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
@@ -6369,7 +6373,7 @@
                 :index 92
                 :task-level #xc
                 :master-level #f
-                :level-flags (level-flags display-wait ocean-near-translucent)
+                :level-flags (level-flags display-wait ocean-near-translucent turbo-board)
                 :packages '("combx")
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
@@ -6402,7 +6406,7 @@
                 :index 93
                 :task-level #xc
                 :master-level #f
-                :level-flags (level-flags end-mode ocean-near-translucent)
+                :level-flags (level-flags end-mode ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-center)
@@ -6435,7 +6439,7 @@
                 :index 94
                 :task-level #xc
                 :master-level 'raila
-                :level-flags (level-flags display-wait ocean-near-translucent)
+                :level-flags (level-flags display-wait ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
@@ -6471,7 +6475,11 @@
                     )
                   )
                 :callback-list '((23 . init-mood-comb))
-                :borrow #f
+                :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #x20 #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-railb display) #f #f #f #f)
+                    )
                 :bottom-height (meters -10000)
                 :fog-height (meters 80)
                 :fog-mult 1.0
@@ -6488,7 +6496,7 @@
                  :index 95
                  :task-level #xc
                  :master-level 'raila
-                 :level-flags (level-flags display-wait ocean-near-translucent)
+                 :level-flags (level-flags display-wait ocean-near-translucent turbo-board)
                  :packages '()
                  :run-packages '("common")
                  :memory-mode (level-memory-mode small-edge)
@@ -6541,7 +6549,7 @@
                 :index 96
                 :task-level #xc
                 :master-level 'raila
-                :level-flags (level-flags display-wait ocean-near-translucent)
+                :level-flags (level-flags display-wait ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
@@ -6594,7 +6602,7 @@
                 :index 97
                 :task-level #xc
                 :master-level 'raila
-                :level-flags (level-flags display-wait ocean-near-translucent)
+                :level-flags (level-flags display-wait ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
@@ -6647,7 +6655,7 @@
                 :index 98
                 :task-level #xc
                 :master-level 'raila
-                :level-flags (level-flags display-wait ocean-near-translucent)
+                :level-flags (level-flags display-wait ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
@@ -6700,7 +6708,7 @@
                 :index 99
                 :task-level #xc
                 :master-level 'raila
-                :level-flags (level-flags display-wait ocean-near-translucent)
+                :level-flags (level-flags display-wait ocean-near-translucent turbo-board)
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
@@ -21431,6 +21439,20 @@
 
 (set! (-> orbs-powergd priority) 10)
 (set! (-> orbs-vinroom priority) 10)
+
+(logior! (-> orbs-comba  level-flags) (level-flags turbo-board))
+(logior! (-> orbs-combn  level-flags) (level-flags turbo-board))
+(logior! (-> orbs-combb  level-flags) (level-flags turbo-board))
+(logior! (-> orbs-combc  level-flags) (level-flags turbo-board))
+(logior! (-> orbs-combd  level-flags) (level-flags turbo-board))
+(logior! (-> orbs-combe  level-flags) (level-flags turbo-board))
+;; (logior! (-> orbs-railx  level-flags) (level-flags turbo-board))
+(logior! (-> orbs-railb  level-flags) (level-flags turbo-board))
+(logior! (-> orbs-railb2 level-flags) (level-flags turbo-board))
+(logior! (-> orbs-railc  level-flags) (level-flags turbo-board))
+(logior! (-> orbs-raild  level-flags) (level-flags turbo-board))
+(logior! (-> orbs-raile  level-flags) (level-flags turbo-board))
+(logior! (-> orbs-railf  level-flags) (level-flags turbo-board))
 
 ;; (define otit  (orbs-borrow-level #xe5 'otit  'otit-vis  'o1k 'update-mood-default))
 

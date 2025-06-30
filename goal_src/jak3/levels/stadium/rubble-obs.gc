@@ -46,11 +46,14 @@
         (('dark-smack 'eco-dark)
           (go-virtual fall))
         (else
-          (format 0 "rub-tower attacked ~A~%" (-> (the-as attack-info (-> arg3 param 1)) mode)))
+          (dbg-format 0 "rub-tower attacked ~A~%" (-> (the-as attack-info (-> arg3 param 1)) mode))
+          #f
+          )
         )
       )
     (else
-      (format 0 "rub-tower other event ~A~%" arg2)
+      (dbg-format 0 "rub-tower other event ~A~%" arg2)
+      #f
       )
     )
   )

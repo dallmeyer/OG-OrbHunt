@@ -68,6 +68,31 @@
     //   }
     // },
 
+    // ONINTENT orbs
+    
+    {
+      "trans": [  771.5402, 9.7357, 183.2940], // behind left invis wall (uppercut from doorway)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  771.5402, 9.7357, 183.2940, 10], // bounding sphere
+      "lump": {
+        "name":"onintent-skill-01",
+        "lvl-idx-override": ["int32", 41]
+      }
+    },
+    {
+      "trans": [  781.2051, 9.7030, 180.8178], // behind right invis wall (uppercut from doorway)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  781.2051, 9.7030, 180.8178, 10], // bounding sphere
+      "lump": {
+        "name":"onintent-skill-02",
+        "lvl-idx-override": ["int32", 41],
+        "bob-scale": ["float", 0.1562]
+      }
+    },
     
     {
       "trans": [ 774.9849853515625, 8.149999618530273, 179.0850067138672], // onin in her tent

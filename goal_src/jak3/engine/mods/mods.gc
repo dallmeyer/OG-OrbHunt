@@ -498,7 +498,7 @@
                 )
             (dotimes (idx LEVEL_ID_LEN)
               (when (or (-> *level-orb-active* idx)
-                        ;; (and (= idx 45) (-> *level-orb-active* 1)) ;; onintent has orbs in ctymarkb
+                        (and (= idx 41) (-> *level-orb-active* 59)) ;; onintent has orbs in ctysluma
                         )
                 (dbg-format 0 "lvl-idx ~D is active ~%" idx)
                 (let* ((coll (-> *game-info* skill-per-level idx))
@@ -1176,7 +1176,7 @@
       (lambda ((arg0 process-drawable))
         (when (= (-> arg0 type symbol) 'barge)
           (set! (-> *port-barge-pids* *port-barge-temp-idx*) (-> arg0 pid))
-          (dbg-format 0 "found barge pid ~D~%" (-> arg0 pid))
+          ;; (dbg-format 0 "found barge pid ~D~%" (-> arg0 pid))
           (+! *port-barge-temp-idx* 1)
           )
         #t
@@ -1185,7 +1185,7 @@
     ;; sort barge pids for consistent orb assignment - buggy results, yolo it
     (qs-sort *port-barge-pids*)
     ;; map orbs to barges, if we got any
-    (dotimes (i *port-barge-temp-idx*)
+    (dotimes (i (min 16 *port-barge-temp-idx*))
       (let* ((orb (the skill (process-by-ename (-> *port-barge-orb-names* i))))
              (bpid (-> *port-barge-pids* i))
              (barge (the process-drawable (process-by-pid bpid)))
@@ -1193,7 +1193,7 @@
              )
         (cond 
           ((and (nonzero? bpid) orb barge)
-            (dbg-format 0 "moving ~S to barge pid ~D~%" (-> *port-barge-orb-names* i) bpid)
+            ;; (dbg-format 0 "moving ~S to barge pid ~D~%" (-> *port-barge-orb-names* i) bpid)
             (set! (-> orb root trans x) (-> barge root trans x))
             (set! (-> orb root trans z) (-> barge root trans z))
             ;; convert the quaternion to a vector representing rotation around z axis (isnt it the y axis in GOAL tho?)
@@ -1839,7 +1839,7 @@
         ;; mark game won and give cheats
         (task-close! "city-win-introduction")
         )
-      (logior! (-> *game-info* secrets) (game-secrets endless-dark endless-light invulnerable endless-ammo board-fast vehicle-hit-points unlimited-turbos))
+      (logior! (-> *game-info* secrets) (game-secrets endless-dark endless-light invulnerable endless-ammo board-fast vehicle-hit-points unlimited-turbos board-faster))
       )
     )
   
@@ -1848,10 +1848,6 @@
              (not (-> *mod-settings* collision-renderer-toggle?)))
     (disableCollisionRenderer)
     )
-
-  ;; (when (cpad-pressed? 0 triangle)
-  ;;    (go-process *target* target-grab 'fuel-cell)
-  ;;   )
 
   ;; mini-bigmap stuff
   (when (and #f ;; disabled for now

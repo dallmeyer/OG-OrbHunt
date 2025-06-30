@@ -160,9 +160,9 @@
   )
 
 (defun orb-placer-set-marking ((orb skill) (amount float))
-  (format 0 "toggle orb from ~D to " (the int (-> orb pickup-amount)))
+  (dbg-format 0 "toggle orb from ~D to " (the int (-> orb pickup-amount)))
   (set! (-> orb pickup-amount) amount)
-  (format 0 "~D ~%" (the int (-> orb pickup-amount)))
+  (dbg-format 0 "~D ~%" (the int (-> orb pickup-amount)))
 
   (set! (-> orb fact pickup-amount) (-> orb pickup-amount))
   ;; update color

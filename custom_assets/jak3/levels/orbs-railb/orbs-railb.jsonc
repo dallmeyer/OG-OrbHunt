@@ -46,17 +46,16 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
+    {
+      "trans": [  -171.9693, 19.5849, 974.3408], // at top of loop at very start (on foot IJ ceiling)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -171.9693, 19.5849, 974.3408, 10], // bounding sphere
+      "lump": {
+        "name":"railb-skill-01"
+      }
+    }//,
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
     //   "etype": "skill",  // actor type
@@ -64,7 +63,7 @@
     //   "quat" : [0, 0, 0, 1], // quaternion
     //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
     //   "lump": {
-    //     "name":"wascitya-skill-2"
+    //     "name":"railb-skill-02"
     //   }
     // },
     
