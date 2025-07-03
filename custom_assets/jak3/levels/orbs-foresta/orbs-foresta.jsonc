@@ -55,28 +55,38 @@
       "lump": {
         "name":"foresta-warp-gate-1"
       }
+    },
+
+    {
+      "trans": [  -717.8199, 81.8071, 1015.3881], // above astro viewer precursor crap
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -717.8199, 81.8071, 1015.3881, 10], // bounding sphere
+      "lump": {
+        "name":"foresta-skill-01"
+      }
+    },
+    {
+      "trans": [ -711.9548, 62.2917, 993.1277 ], // on midde_ball_a
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -711.9548, 62.2917, 993.1277 , 10], // bounding sphere
+      "lump": {
+        "name":"foresta-skill-02"
+      }
+    },
+    {
+      "trans": [ -711.9548, 62.2917, 993.1277 ], // on smaller_ball_a
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -711.9548, 62.2917, 993.1277 , 10], // bounding sphere
+      "lump": {
+        "name":"foresta-skill-03"
+      }
     }//,
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
     
     
 

@@ -1435,7 +1435,7 @@
   "Should this process be run? Checked by execute-process-tree."
   (or (not (logtest? (-> this mask) (process-mask actor-pause)))
       (or (and (nonzero? (-> this draw))
-               (logtest? (-> this draw status) (draw-control-status on-screen))
+              ;;  (logtest? (-> this draw status) (draw-control-status on-screen))
                (>= (+ (-> *ACTOR-bank* pause-dist) (-> this root pause-adjust-distance))
                    (vector-vector-distance (-> this root trans) (math-camera-pos))
                    )

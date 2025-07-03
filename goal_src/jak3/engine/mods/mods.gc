@@ -40,6 +40,9 @@
     
   (none))
 
+(defun pvm ((v vector))
+  (format 0 "~m ~m ~m ~%" (-> v x) (-> v y) (-> v z)))
+
 ;; prints the position (root trans) of a process-drawable
 (defun pd-pos-m ((procname string))
   (let ((obj (the process-drawable 
@@ -1697,6 +1700,27 @@
     (when hover-urn
       (set-vector! (-> hover-urn draw color-emissive) 1.0 1.0 0.0 1.0)))
   
+  ;; foresta - sync orbs to balls
+  (let ((t (the process-drawable (process-by-type-exact 'for-telescope *active-pool*)))
+        (s2 (the skill (process-by-ename "foresta-skill-02")))
+        (s3 (the skill (process-by-ename "foresta-skill-03"))))
+    (when t
+      (when s2 ;; middle_ball_a
+        (vector-copy! (-> s2 root trans) (-> t node-list data 14 bone position))
+        (+! (-> s2 root trans y) (meters 4.25))
+        (vector-copy! (-> s2 base) (-> s2 root trans))
+        ;; make sure orb not hidden
+        (logclear! (-> s2 draw status) (draw-control-status no-draw-bounds))
+        )
+      (when s3 ;; smaller_ball_a
+        (vector-copy! (-> s3 root trans) (-> t node-list data 16 bone position))
+        (+! (-> s3 root trans y) (meters 2.25))
+        (vector-copy! (-> s3 base) (-> s3 root trans))
+        ;; make sure orb not hidden
+        (logclear! (-> s3 draw status) (draw-control-status no-draw-bounds))
+        )
+      ))
+
   ;; vinroom - some hacks to make door unlock
   (let ((door (entity-by-name "vin-door-ctyinda-6"))
         )
