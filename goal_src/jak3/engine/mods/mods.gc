@@ -872,19 +872,27 @@
     (('crate-1271) (set-vector-meters! (-> arg0 extra trans) -530.23  -137.96  -292.15 )) ;; on unused pipe walkway
     
     ;; ====== SEWH (sewers 2.3) ======
-    ;; (('crate-1275) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1278) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1277) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('crate-1275) (set-vector-meters! (-> arg0 extra trans) -141.5998 -135.6395 191.2752) ;; under halfpipe bridge with turret, shoot thru wall or something
+      (quaternion-set! (-> arg0 quat) 0.0000  -0.7125  0.0000  0.7016))
+    (('crate-1278) (set-vector-meters! (-> arg0 extra trans) 115.4458 -99.9828 159.3372) ;; on top of big circular drain
+      (quaternion-set! (-> arg0 quat) 0.0000  0.7069  0.0000  0.7072))
+    (('crate-1277) (set-vector-meters! (-> arg0 extra trans) 99.3015 -94.5532 225.5558) ;; way up above elec gate, abah from skill-X
+      (quaternion-set! (-> arg0 quat) 0.0000  -0.7098  0.7043  0.0000))
 
     ;; ====== SEWB (sewers 3.1) ======
-    ;; (('crate-1266) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1309) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1268) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('crate-1266) (set-vector-meters! (-> arg0 extra trans) 184.8231 -102.3516 -25.2051) ;; up in drain overhead vanilla orb crates
+      (quaternion-set! (-> arg0 quat) 0.0000  0.9762  -0.0001  0.2167))
+    (('crate-1309) (set-vector-meters! (-> arg0 extra trans) 236.9696 -127.6612 31.7916 ) ;; on pipes near door
+      (quaternion-set! (-> arg0 quat) 0.0000  0.8947  0.0000  0.4465))
+    (('crate-1268) (set-vector-meters! (-> arg0 extra trans) 259.9540 -127.3362 57.0922) ;; on ledge over door to next section
+      (quaternion-set! (-> arg0 quat) 0.0000  0.9801  0.0000  0.1984))
 
     ;; ====== SEWD (sewers 3.3) ======
-    ;; (('crate-1303) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1304) (set-vector-meters! (-> arg0 extra trans) )) ;; 
-    ;; (('crate-1306) (set-vector-meters! (-> arg0 extra trans) )) ;; 
+    (('crate-1303) (set-vector-meters! (-> arg0 extra trans) -88.2003 -117.9119 -2.5337) ;; on top of arch over slide entrance
+      (quaternion-set! (-> arg0 quat) 0.0614  0.7061  -0.0617  0.7026))
+    (('crate-1304) (set-vector-meters! (-> arg0 extra trans) -116.1558 -161.0129 -7.8680) ;; back up into waterslide, jump from lamp
+      (quaternion-set! (-> arg0 quat) 0.3022  -0.6814  -0.0587  0.6639))
+    (('crate-1306) (set-vector-meters! (-> arg0 extra trans) -154.7130 -188.0412 9.6511 )) ;; deep end of pool
 
     ;; ====== CTYSLUMA (slums) ======
     (('skill-176) (set-vector-meters! (-> arg0 extra trans)  737.9973  8.5156  -93.4688)) ;; in corner behind fence at entrance to ctyslumb

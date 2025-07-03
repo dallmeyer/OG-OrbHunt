@@ -67,16 +67,16 @@
         "name":"factoryd-skill-01"
       }
     },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [ 249.9272, 523.9019, -161.7850], // "in" portal
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 249.9272, 523.9019, -161.7850, 10], // bounding sphere
+      "lump": {
+        "name":"factoryd-skill-02"
+      }
+    },
     
     
     {

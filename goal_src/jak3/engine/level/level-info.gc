@@ -7597,7 +7597,11 @@
                    )
                  )
                :callback-list '((35 . sewb-activate) (23 . init-mood-sewb))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-sewb display) #f #f #f #f)
+                     )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -7671,7 +7675,11 @@
                    )
                  )
                :callback-list '((35 . sewc-activate) (23 . init-mood-sewc) (6 . *sewc-water-texture-anim-array*))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-sewc display) #f #f #f #f)
+                     )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -7745,7 +7753,11 @@
                    )
                  )
                :callback-list '((23 . init-mood-sewd) (6 . *sewd-water-texture-anim-array*))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-sewd display) #f #f #f #f)
+                     )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -7857,7 +7869,11 @@
                    )
                  )
                :callback-list '((23 . init-mood-sewc) (6 . *sewe-water-texture-anim-array*))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-sewe display) #f #f #f #f)
+                     )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -8029,7 +8045,11 @@
                    )
                  )
                :callback-list '((35 . sewg-activate) (23 . init-mood-sewg) (6 . *sewg-water-texture-anim-array*))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-sewg display) #f #f #f #f)
+                     )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -8103,7 +8123,11 @@
                    )
                  )
                :callback-list '((35 . sewh-activate) (23 . init-mood-sewh) (6 . *sewh-water-texture-anim-array*))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-sewh display) #f #f #f #f)
+                     )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -8157,7 +8181,11 @@
                    )
                  )
                :callback-list '((23 . init-mood-sewc) (6 . *sewi-water-texture-anim-array*))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-sewi display) #f #f #f #f)
+                     )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -8231,7 +8259,11 @@
                    )
                  )
                :callback-list '((35 . sewj-activate) (6 . *sewj-water-texture-anim-array*))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-sewj display) #f #f #f #f)
+                     )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -8401,7 +8433,11 @@
                    )
                  )
                :callback-list '((35 . sewl-activate) (6 . *sewl-water-texture-anim-array*))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-sewl display) #f #f #f #f)
+                     )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -8493,7 +8529,11 @@
                    )
                  )
                :callback-list '((6 . *sewm-water-texture-anim-array*))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-sewm display) #f #f #f #f)
+                     )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -8565,7 +8605,11 @@
                    )
                  )
                :callback-list '((6 . *sewn-water-texture-anim-array*))
-               :borrow #f
+               :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-sewn display) #f #f #f #f)
+                     )
                :bottom-height (meters -229)
                :fog-height (meters 80)
                :fog-mult 1.0
@@ -14870,7 +14914,11 @@
                       )
                     )
                   :callback-list '()
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-desertc display) #f #f #f #f)
+                     )
                   :bottom-height (meters -20)
                   :fog-height (meters 80)
                   :fog-mult 10.0
@@ -14923,7 +14971,11 @@
                       )
                     )
                   :callback-list '((6 . *desertd-water-texture-anim-array*))
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-desertd display) #f #f #f #f)
+                     )
                   :bottom-height (meters -20)
                   :fog-height (meters 80)
                   :fog-mult 10.0
@@ -15093,7 +15145,11 @@
                       )
                     )
                   :callback-list '()
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-desertf display) #f #f #f #f)
+                     )
                   :bottom-height (meters -20)
                   :fog-height (meters 80)
                   :fog-mult 10.0
@@ -15357,7 +15413,11 @@
                       )
                     )
                   :callback-list '()
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                     :alias #f
+                     :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(orbs-deserth display) #f #f #f #f)
+                     )
                   :bottom-height (meters -20)
                   :fog-height (meters 80)
                   :fog-mult 10.0
