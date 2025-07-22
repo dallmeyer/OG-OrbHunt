@@ -46,27 +46,118 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [   -94.3486, 37.7549, -92.1289], // up in crevice next do doorway from elevator down at start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   -94.3486, 37.7549, -92.1289, 10], // bounding sphere
+      "lump": {
+        "name":"mineb-skill-01"
+      }
+    },
+    {
+      "trans": [  -119.7967, 37.9761, -47.5799], // up on high ledge on right before first cart down
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -119.7967, 37.9761, -47.5799, 10], // bounding sphere
+      "lump": {
+        "name":"mineb-skill-02"
+      }
+    },
+    {
+      "trans": [  -92.3263, 12.2397, -47.9477], // in tight crevice on left side of first cart down
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -92.3263, 12.2397, -47.9477, 10], // bounding sphere
+      "lump": {
+        "name":"mineb-skill-03"
+      }
+    },
+    {
+      "trans": [  -125.0334, 7.1535, -27.7987], // in tight crevice on right side of first cart down
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -125.0334, 7.1535, -27.7987, 10], // bounding sphere
+      "lump": {
+        "name":"mineb-skill-04"
+      }
+    },
+    {
+      "trans": [  -102.3430, 16.7066, -4.6258], // up on blocks at bottom of first cart down
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -102.3430, 16.7066, -4.6258, 10], // bounding sphere
+      "lump": {
+        "name":"mineb-skill-05"
+      }
+    },
+    {
+      "trans": [  -118.5303, 21.4888, -14.5664], // on pipes at bottom of first cart down
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -118.5303, 21.4888, -14.5664, 10], // bounding sphere
+      "lump": {
+        "name":"mineb-skill-06",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -118.8851, 35.7306, -26.7179], // up on high ledge on right side at bottom of first cart down, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -118.8851, 35.7306, -26.7179, 10], // bounding sphere
+      "lump": {
+        "name":"mineb-skill-07"
+      }
+    },
+    {
+      "trans": [  -89.1120, 39.9116, -8.7824], // up in corner above end of first cart down, IJ from top of pipe from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -89.1120, 39.9116, -8.7824, 10], // bounding sphere
+      "lump": {
+        "name":"mineb-skill-08"
+      }
+    },
+    {
+      "trans": [  -81.2494, 23.5297, 17.5811], // on left wall just past first cart down, extendo concussor from blocks or something
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -81.2494, 23.5297, 17.5811, 10], // bounding sphere
+      "lump": {
+        "name":"mineb-skill-09"
+      }
+    },
+    {
+      "trans": [  -83.9657, 31.4173, -0.8444], // up left wall from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -83.9657, 31.4173, -0.8444, 10], // bounding sphere
+      "lump": {
+        "name":"mineb-skill-10",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -90.0775, 46.5194, -0.2167], // way up near ceiling just past end of first cart down, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -90.0775, 46.5194, -0.2167, 10], // bounding sphere
+      "lump": {
+        "name":"mineb-skill-11"
+      }
+    }//,
     
     
 
