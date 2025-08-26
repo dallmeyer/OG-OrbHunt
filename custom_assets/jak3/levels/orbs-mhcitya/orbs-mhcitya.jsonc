@@ -10,7 +10,7 @@
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_assets/jak3/levels/orbs-mhcitya/orbs-mhcitya.glb", // wascitya
+  "gltf_file": "custom_assets/jak3/levels/orbs-mhcitya/orbs-mhcitya.glb", // mhcitya
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -75,12 +75,77 @@
       "quat" : [0, 0, 0, 1], // quaternion
       "bsphere": [ -270.51,  -3.80,  1079.14 , 10], // bounding sphere
       "lump": {
-        "name":"wascitya-skill-01",
+        "name":"mhcitya-skill-01",
         "alt-actor": "mhcitya-yakow-1"
       }
+    },
+    {
+      "trans": [  -258.2946, -4.1297, 1140.6998], // small standpoint between butt plugs over barfpit
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -258.2946, -4.1297, 1140.6998, 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint (to get back out)
+      }
+    },
+    {
+      "trans": [ -114.6752, 20.9294, 891.0734], // at very end before mhcityb, on vine thing leading up onto MH junk
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -114.6752, 20.9294, 891.0734, 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-03"
+      }
+    },
+    {
+      "trans": [  -108.80,  38.29,  894.68 ], // at very end before mhcityb, up from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -108.80,  38.29,  894.68 , 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-04"
+      }
+    },
+    
+    // hover orbs
+  
+    {
+      "trans": [  -234.1732, 76.2755, 1062.4750], // up on tall tower along path
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -234.1732, 76.2755, 1062.4750, 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-hover-01",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [ -58.2887, 71.8577, 1125.5017], // up on tall tower along path
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [-58.2887, 71.8577, 1125.5017, 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-hover-02",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [   -54.0642, 71.8320, 934.0572], // up on tall tower along path
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -54.0642, 71.8320, 934.0572, 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-hover-03",
+        "pickup-amount": ["float", 3.0] // hover
+      }
     }//,
-    
-    
 
     // GHOSTS
     // {
@@ -90,9 +155,9 @@
     //   "quat" : [0, 0, 0, 1], // quaternion
     //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
     //   "lump": {
-    //     "name":"wascitya-skill-ghost-1",
+    //     "name":"mhcitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
-    //     "alt-actor":"wascitya-skill-1"
+    //     "alt-actor":"mhcitya-skill-1"
     //   }
     // },
     // {
@@ -102,8 +167,8 @@
     //   "quat" : [0, 0, 0, 1], // quaternion
     //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
     //   "lump": {
-    //     "name":"wascitya-skill-ghost-2",
-    //     "alt-actor":"wascitya-skill-2"
+    //     "name":"mhcitya-skill-ghost-2",
+    //     "alt-actor":"mhcitya-skill-2"
     //   }
     // }
     
