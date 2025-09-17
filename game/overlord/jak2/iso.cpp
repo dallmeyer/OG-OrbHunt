@@ -681,7 +681,7 @@ u32 ISOThread() {
             QueueVAGStream(pLVar14);
           } else {
             // doesn't work.
-            printf("jak3 skipping vag stream\n");
+            QueueVAGStream(pLVar14);
           }
         }
         pLVar14 = (VagStrListNode*)pLVar14->list.next;
