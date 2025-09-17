@@ -57,16 +57,26 @@
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"ctysluma-skill-02"
-    //   }
-    // },
+    {
+      "trans": [ 868.60,  43.17,  284.97 ], // up on top of MH billboard, trash can proxy from below
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 868.60,  43.17,  284.97 , 10], // bounding sphere
+      "lump": {
+        "name":"ctysluma-skill-02"
+      }
+    },
+    {
+      "trans": [ 881.00,  32.55,  286.05 ], // on rooftop near ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 881.00,  32.55,  286.05  , 10], // bounding sphere
+      "lump": {
+        "name":"ctysluma-skill-03"
+      }
+    },
 
     // ONINTENT orbs
     
