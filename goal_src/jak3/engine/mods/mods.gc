@@ -1092,6 +1092,7 @@
           )
         (else
           (when (not (or (name= (-> alt-actor extra process state name) 'die)
+                         (name= (-> alt-actor extra process state name) 'die-hidden)
                          (name= (-> alt-actor extra process state name) 'joint-exploder-shatter)
                          ))
             ;; alt-actor is not dead/triggered, prevent pickup/hide

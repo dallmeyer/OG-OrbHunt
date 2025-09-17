@@ -110,6 +110,90 @@
         "name":"mhcitya-skill-04"
       }
     },
+    {
+      "trans": [ -456.0815, 26.2222, 966.0939], // behind vines on wall, left side of door to forest
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -456.0815, 26.2222, 966.0939 , 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-05"
+      }
+    },
+    {
+      "trans": [  -450.1575, 21.2062, 889.8651], // behind vines on wall, right side of door to forest
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -450.1575, 21.2062, 889.8651, 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-06"
+      }
+    },
+    {
+      "trans": [  -457.2362, 43.1199, 927.4971], // above door to forest
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -457.2362, 43.1199, 927.4971, 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-07",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -459.4464, 64.3529, 927.5221], // up on wall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -459.4464, 64.3529, 927.5221 , 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-08"
+      }
+    },
+    {
+      "trans": [  -289.1724, 12.0058, 901.0837], // between vines next to opening, not far from forest
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -289.1724, 12.0058, 901.0837, 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-09",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   -281.4193, 30.9711, 898.3424], // up on vines on wall, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -281.4193, 30.9711, 898.3424 , 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-10"
+      }
+    },
+    {
+      "trans": [ -406.7957, 12.4557, 1131.5670], // inside egg on left from start
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -406.7957, 12.4557, 1131.5670 , 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-11",
+        "alt-actor": "mhcity-grunt-egg-c-1"
+      }
+    },
+    {
+      "trans": [ -113.3211, 7.3928, 1165.2299], // inside vein-writhing-large (sus) on right side halfway thru this section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -113.3211, 7.3928, 1165.2299 , 10], // bounding sphere
+      "lump": {
+        "name":"mhcitya-skill-12",
+        "alt-actor": "mhcity-vein-writhing-large-27"
+      }
+    },
     
     // hover orbs
   
