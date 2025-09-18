@@ -1997,7 +1997,10 @@
       (cond
         ((not (skill-alt-actor-check? self #f))
           ;; make orbs invis if they can't be collected yet due to alt-actor
-          (logior! (-> self draw status) (draw-control-status no-draw-bounds)))
+          (logior! (-> self draw status) (draw-control-status no-draw-bounds))
+          ;; set state-time so we can cooldown based on this
+          (set-time! (-> self state-time))
+          )
         ((= (-> self type) skill-ghost)
           (cond
             ((-> *mod-settings* orb-ghosts?)

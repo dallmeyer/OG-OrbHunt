@@ -1098,7 +1098,7 @@
             ;; alt-actor is not dead/triggered, prevent pickup/hide
             (return #f)
             )
-          (when (and for-pickup? (not (g-time-elapsed? (-> (the process-drawable (-> alt-actor extra process)) state-time) (seconds 0.3))))
+          (when (and for-pickup? (not (time-elapsed? (-> skill state-time) (seconds 0.5))))
             ;; visible for a bit before allow pickup
             (return #f)
             )
