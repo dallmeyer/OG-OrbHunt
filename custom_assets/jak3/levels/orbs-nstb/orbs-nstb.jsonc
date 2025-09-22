@@ -46,27 +46,77 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [  1400.3007, -88.5635, 409.6448], // IJ under bridge
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1400.3007, -88.5635, 409.6448, 10], // bounding sphere
+      "lump": {
+        "name":"nstb-skill-01"
+        // "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1242.24,  -73.07,  244.45], // at bottom of mud-fall wall, before gap in ground
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1242.24,  -73.07,  244.45, 10], // bounding sphere
+      "lump": {
+        "name":"nstb-skill-02"
+      }
+    },
+    {
+      "trans": [  1255.1386, 19.0683, 140.3558], // at very top of mud-fall wall (IJs)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1255.1386, 19.0683, 140.3558, 10], // bounding sphere
+      "lump": {
+        "name":"nstb-skill-03"
+      }
+    },
+    {
+      "trans": [  1222.1147, -23.9645, 225.0255], // up on slippery rock, follow from mud-fall wall ^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1222.1147, -23.9645, 225.0255, 10], // bounding sphere
+      "lump": {
+        "name":"nstb-skill-04"
+      }
+    },
+    {
+      "trans": [ 1223.25,  -44.38,  240.79 ], // up on rock near mud-fall, drop down from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 1223.25,  -44.38,  240.79 , 10], // bounding sphere
+      "lump": {
+        "name":"nstb-skill-05"
+      }
+    },
+    {
+      "trans": [  1306.9538, -108.5209, 613.6763], // in mud river, under knocked down bridge (on foot, jetboard blocked)
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1306.9538, -108.5209, 613.6763, 10], // bounding sphere
+      "lump": {
+        "name":"nstb-skill-06"
+      }
+    },
+    {
+      "trans": [  1431.6918, -109.2340, 722.7168], // end of mud river, in wall behind death hole
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1431.6918, -109.2340, 722.7168 , 10], // bounding sphere
+      "lump": {
+        "name":"nstb-skill-07"
+      }
+    }//,
     
     
 
