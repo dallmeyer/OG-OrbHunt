@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["warp-gate-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -46,27 +46,39 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [ -75.03,  5.99,  118.39], // to daxter slide
+      "etype": "warp-gate",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [ 0.0000, 0.9479, 0.0000, -0.3183], // quaternion
+      "bsphere": [ -75.03,  5.99,  118.39, 10], // bounding sphere
+      "lump": {
+        "name": "volcanoa-warp-gate-1",
+        "distance": ["float", 8096.0] // 2m
+      }
+    },
+
+    {
+      "trans": [ 63.97,  11.73,  -169.13 ], // on slight bowl shaped rock down at bottom behind tree
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 63.97,  11.73,  -169.13 , 10], // bounding sphere
+      "lump": {
+        "name":"volcanoa-skill-01"
+        // "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  40.3605, 23.3853, -163.6605], // on tree branch near bottom, uppercut from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  40.3605, 23.3853, -163.6605, 10], // bounding sphere
+      "lump": {
+        "name":"volcanoa-skill-02"
+      }
+    }//,
     
     
 

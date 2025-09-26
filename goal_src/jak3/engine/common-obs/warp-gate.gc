@@ -552,6 +552,10 @@
       (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
       (set! (-> this continue) (get-continue-by-name *game-info* "precurd-start"))
       )
+    (("volcanoa-warp-gate-1") ;; volcanoa -> daxter slide
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "volcano-indax-2"))
+      )
     (("vinroom-warp-gate-1") ;; vinroom -> powergd
       (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
       (script-eval '(begin (send-event self 'vinroom-powergd-toggle) #f)) ;; lol what a mess
@@ -826,6 +830,9 @@
         (suspend-for (seconds 0.5)) ;; let player see door open for a bit
         )
       (("rublcst-warp-gate-1") ;; rublcst -> railb; hidden warpgate in h-sled
+        ;; skip target-warp-out, just go to continue
+        )
+      (("volcanoa-warp-gate-1") ;; volcanoa -> daxter slide
         ;; skip target-warp-out, just go to continue
         )
       (("vinroom-warp-gate-1") ;; vinroom -> powergd; hidden warpgate in arcade

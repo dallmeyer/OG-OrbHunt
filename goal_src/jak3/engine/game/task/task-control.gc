@@ -423,7 +423,7 @@
        )
      (prototypes-game-visible-set!
        '("green-eco-vent-a.mb")
-       (not (task-node-closed? (game-task-node forest-ring-chase-introduction)))
+       #t ;; (not (task-node-closed? (game-task-node forest-ring-chase-introduction)))
        this
        )
      )
@@ -435,7 +435,7 @@
           "mhcity-wall-vine-thin-c-destrand-01.mb"
           "mhcity-wall-vine-thin-s-destrand-01.mb"
           )
-       (not (task-node-closed? (game-task-node city-destroy-darkeco-resolution)))
+       #t ;; (not (task-node-closed? (game-task-node city-destroy-darkeco-resolution)))
        this
        )
      )

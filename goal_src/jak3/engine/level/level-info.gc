@@ -18466,11 +18466,11 @@
                       )
                     )
                   :callback-list '((23 . init-mood-templed))
-                :borrow (new 'static 'level-borrow-info
-                  :alias #f
-                  :borrow-size (new 'static 'array uint16 5 #x6a0 #x0 #x0 #x0 #x0)
-                  :borrow-info (new 'static 'array object 5 '(orbs-templed display) #f #f #f #f)
-                  )
+                  :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #x6a0 #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-templed display) #f #f #f #f)
+                    )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)
                   :fog-mult 1.0
@@ -18704,7 +18704,11 @@
                        )
                      )
                    :callback-list '((7 . *volcanox-warp-texture-anim-array*))
-                   :borrow #f
+                   :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #x6a0 #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-volcanox display) #f #f #f #f)
+                    )
                    :bottom-height (meters -100)
                    :fog-height (meters 80)
                    :fog-mult 1.0
@@ -19063,7 +19067,11 @@
         )
       )
     :callback-list '((5 . *volcanoa-alpha-texture-anim-array*))
-    :borrow #f
+    :borrow (new 'static 'level-borrow-info
+      :alias #f
+      :borrow-size (new 'static 'array uint16 5 #x6a0 #x0 #x0 #x0 #x0)
+      :borrow-info (new 'static 'array object 5 '(orbs-volcanoa display) #f #f #f #f)
+      )
     :bottom-height (meters -100)
     :fog-height (meters 80)
     :fog-mult 1.0
