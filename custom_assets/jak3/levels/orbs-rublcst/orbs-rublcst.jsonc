@@ -158,6 +158,76 @@
       "lump": {
         "name":"rublcst-skill-09"
       }
+    },
+    {
+      "trans": [   119.6505, 16.2858, 439.8428 ], // tucked away behind rubble on right just past final barrier
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  119.6505, 16.2858, 439.8428, 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-10"
+      }
+    },
+    {
+      "trans": [  34.6861, 20.5770, 495.3342  ], // further back from ^, on ground collision beams
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  34.6861, 20.5770, 495.3342 , 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-11"
+      }
+    },
+    {
+      "trans": [  -37.7705, 21.9939, 490.2841  ], // follow ground collision beams from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -37.7705, 21.9939, 490.2841 , 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-12"
+      }
+    },
+    {
+      "trans": [  -9.7095, 37.4723, 428.0481  ], // follow ground collision beams from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -9.7095, 37.4723, 428.0481 , 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-13"
+      }
+    },
+    {
+      "trans": [  -69.0294, 70.7772, 446.1101  ], // follow ground collision beams from ^ up onto rooftop
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -69.0294, 70.7772, 446.1101 , 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-14"
+      }
+    },
+    {
+      "trans": [  147.5821, 18.1219, 418.2242   ], // on grassy corner near final barrier, just behind dumb invis wall
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  147.5821, 18.1219, 418.2242 , 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-15"
+      }
+    },
+    {
+      "trans": [  230.7770, 0.9122, 594.1929  ], // up on ground collision beam, just a bit left over subrails ramp. jump down from block towers is easiest
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  230.7770, 0.9122, 594.1929 , 10], // bounding sphere
+      "lump": {
+        "name":"rublcst-skill-16"
+      }
     }//,
 
     // GHOSTS

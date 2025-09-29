@@ -65,29 +65,80 @@
       "lump": {
         "name":"desertb-warp-gate-2"
       }
-    }//,
+    },
 
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [ 2737.61,  15.72,  -145.63], // out on peninsula near carrier, gotta go halfway onto race course, jetboard launch over tentacle nav mesh
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2737.61,  15.72,  -145.63, 10], // bounding sphere
+      "lump": {
+        "name":"desertb-skill-01"
+        // "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 2785.41,  58.49,  -242.21 ], // further out/up on peninsula from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2785.41,  58.49,  -242.21 , 10], // bounding sphere
+      "lump": {
+        "name":"desertb-skill-02"
+      }
+    },
+    {
+      "trans": [   2725.4157, 63.7750, -192.5580], // further up on peninsula from ^^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2725.4157, 63.7750, -192.5580, 10], // bounding sphere
+      "lump": {
+        "name":"desertb-skill-03",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  2733.8007, 76.7906, -204.3922], // abah from ^, further up peninsula
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2733.8007, 76.7906, -204.3922 , 10], // bounding sphere
+      "lump": {
+        "name":"desertb-skill-04"
+      }
+    },
+    {
+      "trans": [   2769.9260, 100.9607, -246.7121], // follow from ^, even further up peninsula
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  2769.9260, 100.9607, -246.7121, 10], // bounding sphere
+      "lump": {
+        "name":"desertb-skill-05"
+      }
+    },
+    {
+      "trans": [ 2783.03,  133.24,  -296.10 ], // follow from ^, even further up peninsula, to slippery peak. tough jetboard jump
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2783.03,  133.24,  -296.10 , 10], // bounding sphere
+      "lump": {
+        "name":"desertb-skill-06"
+      }
+    },
+    {
+      "trans": [ 2844.60,  33.86,  -331.54 ], // follow from ^, even further out on peninsula
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2844.60,  33.86,  -331.54 , 10], // bounding sphere
+      "lump": {
+        "name":"desertb-skill-07"
+      }
+    }//,
     
     
 

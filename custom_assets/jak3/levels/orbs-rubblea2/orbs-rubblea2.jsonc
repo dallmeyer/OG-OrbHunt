@@ -75,6 +75,36 @@
       "lump": {
         "name":"rubblea2-skill-03"
       }
+    },
+    {
+      "trans": [ -201.13,  34.18,  -124.74  ], // on rubble just past last elec barrier before rubbleb
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -201.13,  34.18,  -124.74 , 10], // bounding sphere
+      "lump": {
+        "name":"rubblea2-skill-04"
+      }
+    },
+    {
+      "trans": [ -186.48,  47.82,  -123.41  ], // tricky jump up from higher from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -186.48,  47.82,  -123.41 , 10], // bounding sphere
+      "lump": {
+        "name":"rubblea2-skill-05"
+      }
+    },
+    {
+      "trans": [ -201.97,  50.20,  -115.01  ], // jump over from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -201.97,  50.20,  -115.01 , 10], // bounding sphere
+      "lump": {
+        "name":"rubblea2-skill-06"
+      }
     }//,
     
     
