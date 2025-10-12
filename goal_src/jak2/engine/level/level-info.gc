@@ -5823,7 +5823,7 @@
                  :login-func #f
                  :activate-func 'lwide-activate
                  :deactivate-func 'lwide-deactivate
-                 :kill-func #f
+                 :kill-func 'lwide-kill ;; og:preserve-this required to suppress rogue entity errors
                  :borrow-level (new 'static 'array symbol 2 #f #f)
                  :borrow-display? (new 'static 'array symbol 2 #f #f)
                  :texture-anim-tfrag #f
@@ -5879,7 +5879,7 @@
                  :login-func #f
                  :activate-func 'lwide-activate
                  :deactivate-func 'lwide-deactivate
-                 :kill-func #f
+                 :kill-func 'lwide-kill ;; og:preserve-this required to suppress rogue entity errors
                  :borrow-level (new 'static 'array symbol 2 #f #f)
                  :borrow-display? (new 'static 'array symbol 2 #f #f)
                  :texture-anim-tfrag #f
@@ -5935,7 +5935,7 @@
                  :login-func #f
                  :activate-func 'lwide-activate
                  :deactivate-func 'lwide-deactivate
-                 :kill-func #f
+                 :kill-func 'lwide-kill ;; og:preserve-this required to suppress rogue entity errors
                  :borrow-level (new 'static 'array symbol 2 #f #f)
                  :borrow-display? (new 'static 'array symbol 2 #f #f)
                  :texture-anim-tfrag #f
