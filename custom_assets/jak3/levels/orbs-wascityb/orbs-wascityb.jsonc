@@ -284,6 +284,28 @@
         "name":"wascityb-hover-skill-11",
         "pickup-amount": ["float", 3.0] 
       }
+    },
+    {
+      "trans": [  1746.1263, 25.0622, -709.9893], // island in water over invis wall, must dodge tentacle too
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1746.1263, 25.0622, -709.9893, 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-12",
+        "pickup-amount": ["float", 3.0] 
+      }
+    },
+    {
+      "trans": [  1669.9162, 27.0004, -748.5343], // island in water over invis wall, must dodge tentacle too
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  1669.9162, 27.0004, -748.5343 , 10], // bounding sphere
+      "lump": {
+        "name":"wascityb-hover-skill-13",
+        "pickup-amount": ["float", 3.0] 
+      }
     }//,
     
     

@@ -5675,7 +5675,7 @@
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
                     :borrow-size (new 'static 'array uint16 5 #xfa #x120 #x0 #x0 #x0)
-                    :borrow-info (new 'static 'array object 5 #f '(orbs-mhcitya display) #f #f #f)
+                    :borrow-info (new 'static 'array object 5 '(lmhcitya display) '(orbs-mhcitya display) #f #f #f)
                     )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)
@@ -5854,7 +5854,7 @@
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
                     :borrow-size (new 'static 'array uint16 5 #xfa #x120 #x0 #x0 #x0)
-                    :borrow-info (new 'static 'array object 5 #f '(orbs-mhcityb display) #f #f #f)
+                    :borrow-info (new 'static 'array object 5 '(lmhcityb display) '(orbs-mhcityb display) #f #f #f)
                     )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)
