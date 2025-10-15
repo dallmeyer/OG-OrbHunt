@@ -1446,17 +1446,21 @@
 
   ;; precura/b
   ;; open door to precurb (mech section)
-  (let ((door (entity-by-name "precura-door-a-2"))
+  (let ((door1 (entity-by-name "precura-door-a-1"))
+        (door2 (entity-by-name "precura-door-a-2"))
+        (r50 (region-lookup-by-id 1350))
         )
-    (when door (set! (cdr (res-lump-struct door 'open-test pair)) '((entity-status? "dp-bipedal-109" subtask-complete no-birth) (entity-status? "dp-bipedal-110" subtask-complete no-birth) (entity-status? "dp-bipedal-111" subtask-complete no-birth) (entity-status? "dp-bipedal-176" subtask-complete no-birth) (entity-status? "dp-bipedal-177" subtask-complete no-birth))))
+    (when door1 (set! (cdr (res-lump-struct door1 'open-test pair)) '(#t)))
+    (when door2 (set! (cdr (res-lump-struct door2 'open-test pair)) '(#t))) ;; (entity-status? "dp-bipedal-109" subtask-complete no-birth) (entity-status? "dp-bipedal-110" subtask-complete no-birth) (entity-status? "dp-bipedal-111" subtask-complete no-birth) (entity-status? "dp-bipedal-176" subtask-complete no-birth) (entity-status? "dp-bipedal-177" subtask-complete no-birth))))
+    (when r50
+      (set! (-> r50 on-enter) '(want-load 'precura 'precurb)))
     )
   ;; prevent precurb deload in final room of mech section
   (let ((r54 (region-lookup-by-id 1354))
         (r58 (region-lookup-by-id 1358))
         (door (entity-by-name "precur-door-b-3")))
     (when door 
-      (set! (cdr (res-lump-struct door 'on-inside pair)) '((want-load 'precura 'precurb)))
-      )
+      (set! (cdr (res-lump-struct door 'on-inside pair)) '((want-load 'precura 'precurb))))
     (when r54 
       (set! (-> r54 on-enter) '(want-load 'precura 'precurb)))
     (when r58
@@ -1466,8 +1470,7 @@
   ;; door to elevator to precurd
   (let ((door (entity-by-name "precur-door-a-1")))
     (when door 
-      (set! (cdr (res-lump-struct door 'open-test pair)) '((or (task-closed? "precursor-destroy-ship-resolution") (and (entity-status? "dp-bipedal-100" subtask-complete no-birth) (entity-status? "dp-bipedal-101" subtask-complete no-birth) (entity-status? "dp-bipedal-102" subtask-complete no-birth) (entity-status? "dp-bipedal-103" subtask-complete no-birth)))))
-      )
+      (set! (cdr (res-lump-struct door 'open-test pair)) '(#t))) ;; (or (task-closed? "precursor-destroy-ship-resolution") (and (entity-status? "dp-bipedal-100" subtask-complete no-birth) (entity-status? "dp-bipedal-101" subtask-complete no-birth) (entity-status? "dp-bipedal-102" subtask-complete no-birth) (entity-status? "dp-bipedal-103" subtask-complete no-birth)))))
     )
 
   ;; deswalk 

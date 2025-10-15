@@ -20116,7 +20116,7 @@
                   :level-flags (level-flags sky ocean-near-translucent)
                   :packages '("precura" "dp-bipedalp" "neo-waspp")
                   :run-packages '("common")
-                  :memory-mode (level-memory-mode small-edge)
+                  :memory-mode (level-memory-mode medium)
                   :music-bank 'precship
                   :extra-sound-bank #f
                   :mood-func 'update-mood-precura
@@ -20227,8 +20227,8 @@
                     )
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #x258 #x0 #x0 #x0 #x0)
-                    :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                    :borrow-size (new 'static 'array uint16 5 #x384 #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-precura display) #f #f #f #f)
                     )
                   :bottom-height (meters -20)
                   :fog-height (meters 80)
@@ -20262,7 +20262,11 @@
                   :bigmap-id (bigmap-id precursor1)
                   :continues '()
                   :callback-list '((23 . init-mood-precurb))
-                  :borrow #f
+                  :borrow (new 'static 'level-borrow-info
+                    :alias #f
+                    :borrow-size (new 'static 'array uint16 5 #xf0 #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-precurb display) #f #f #f #f)
+                    )
                   :bottom-height (meters -20)
                   :fog-height (meters 80)
                   :fog-mult 1.0
@@ -20351,8 +20355,8 @@
                   :callback-list '((23 . init-mood-precurc))
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #x384 #x0 #x0 #x0 #x0)
-                    :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                    :borrow-size (new 'static 'array uint16 5 #x384 #xf0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 #f '(orbs-precurc display) #f #f #f)
                     )
                   :bottom-height (meters -20)
                   :fog-height (meters 80)

@@ -937,6 +937,7 @@ Ptr<Type> intern_type_from_c(int a, int b, const char* name, u64 methods) {
     auto type = alloc_and_init_type(casted_sym, n_methods, 0);  // allow level types
     type->symbol = casted_sym;
     type->num_methods = n_methods;
+    // MsgWarn("dkernel: defined type %s\n", name);
     return type;
   } else {
     // the type exists.

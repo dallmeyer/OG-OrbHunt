@@ -435,7 +435,7 @@
           "mhcity-wall-vine-thin-c-destrand-01.mb"
           "mhcity-wall-vine-thin-s-destrand-01.mb"
           )
-       #t ;; (not (task-node-closed? (game-task-node city-destroy-darkeco-resolution)))
+       #f ;; (not (task-node-closed? (game-task-node city-destroy-darkeco-resolution)))
        this
        )
      )
