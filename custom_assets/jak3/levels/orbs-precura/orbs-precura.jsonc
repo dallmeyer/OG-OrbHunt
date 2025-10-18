@@ -47,37 +47,117 @@
 
   "actors" : [
     {
-      "trans": [  39.6568, 547.4811, -87.0254], // in first jak-side room, around corner behind invis wall
+      "trans": [  -46.1136, 554.7822, -151.8924], // on thing on wall of first room
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  39.6568, 547.4811, -87.0254, 10], // bounding sphere
+      "bsphere": [  -46.1136, 554.7822, -151.8924, 10], // bounding sphere
       "lump": {
-        "name":"precura-skill-01",
+        "name":"precura-skill-01"
+      }
+    },
+    {
+      "trans": [  -52.1220, 561.5046, -141.9591], // on light up on wall of first room, jump from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  -52.1220, 561.5046, -141.9591, 10], // bounding sphere
+      "lump": {
+        "name":"precura-skill-02",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  43.4144, 561.8943, -80.7886], // in first jak-side room, up on light(?) next to door
+      "trans": [  -31.0884, 577.7247, -164.9638], // way up on wall of first room, abah from ^ and extendo around to other side
       "etype": "skill",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  43.4144, 561.8943, -80.7886, 10], // bounding sphere
-      "lump": {
-        "name":"precura-skill-02"
-      }
-    },
-    {
-      "trans": [  66.3674, 567.3579, -80.7525], // in first jak-side room, way up in corner
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  66.3674, 567.3579, -80.7525, 10], // bounding sphere
+      "bsphere": [  -31.0884, 577.7247, -164.9638, 10], // bounding sphere
       "lump": {
         "name":"precura-skill-03"
       }
+    },
+    {
+      "trans": [  51.5525, 568.4065, -164.0498], // on thing on wall of first room
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  51.5525, 568.4065, -164.0498, 10], // bounding sphere
+      "lump": {
+        "name":"precura-skill-04"
+      }
+    },
+    {
+      "trans": [  65.4943, 590.8187, -151.2150], // way up on wall of first room, climb up from ^ bunch of concussors and extendos
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  65.4943, 590.8187, -151.2150, 10], // bounding sphere
+      "lump": {
+        "name":"precura-skill-05"
+      }
+    },
+    {
+      "trans": [ 71.3763, 548.6918, -101.8235], // behind totem thing before jak section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 71.3763, 548.6918, -101.8235, 10], // bounding sphere
+      "lump": {
+        "name":"precura-skill-06"
+      }
+    },
+    {
+      "trans": [ -49.6178, 565.2846, -80.9171], // up on light(?) above door to mech section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -49.6178, 565.2846, -80.9171, 10], // bounding sphere
+      "lump": {
+        "name":"precura-skill-07"
+      }
+    },
+    {
+      "trans": [ -65.8064, 566.7640, -98.6597], // up above totem thing before mech section
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ -65.8064, 566.7640, -98.6597, 10], // bounding sphere
+      "lump": {
+        "name":"precura-skill-08"
+      }
+    },
+    {
+      "trans": [ 7.9921, 573.6067, -156.2079], // jetboard go brr
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 7.9921, 573.6067, -156.2079, 10], // bounding sphere
+      "lump": {
+        "name":"precura-skill-09"
+      }
+    },
+    {
+      "trans": [  37.1536, 549.1796, -115.3424], // in crevice next to center stage area
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  37.1536, 549.1796, -115.3424, 10], // bounding sphere
+      "lump": {
+        "name":"precura-skill-10",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  38.8519, 570.3037, -113.6109], // up in rafters, abah from ^
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  38.8519, 570.3037, -113.6109, 10], // bounding sphere
+      "lump": {
+        "name":"precura-skill-11"
+      }
     }//,
-    
     
 
     // GHOSTS

@@ -1455,14 +1455,18 @@
     (when r50
       (set! (-> r50 on-enter) '(want-load 'precura 'precurb)))
     )
-  ;; prevent precurb deload in final room of mech section
+  
+  ;; prevent precurb deload / prevent cutscene in final room of mech section
   (let ((r54 (region-lookup-by-id 1354))
+        (r57 (region-lookup-by-id 1357))
         (r58 (region-lookup-by-id 1358))
         (door (entity-by-name "precur-door-b-3")))
     (when door 
       (set! (cdr (res-lump-struct door 'on-inside pair)) '((want-load 'precura 'precurb))))
     (when r54 
       (set! (-> r54 on-enter) '(want-load 'precura 'precurb)))
+    (when r57 
+      (set! (-> r57 on-enter) #f))
     (when r58
       (set! (-> r58 on-enter) '(want-load 'precura 'precurb)))
     )

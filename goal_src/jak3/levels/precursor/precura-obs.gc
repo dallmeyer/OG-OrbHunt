@@ -685,6 +685,8 @@
       )
     (logior! (-> self draw status) (draw-control-status no-draw))
     (transform-post)
+    ;; keep this stupid thing dead
+    (process-entity-status! self (entity-perm-status dead) #t)
     (while (-> self child)
       (suspend)
       )
@@ -725,6 +727,8 @@
     (the-as skeleton-group (art-group-get-by-name *level* "skel-precur-generator-a" (the-as (pointer level) #f)))
     (the-as pair 0)
     )
+  ;; keep this stupid thing dead
+  (set! (-> this entity extra perm task) (game-task complete))
   (init-fields this)
   (go (method-of-object this idle))
   )
