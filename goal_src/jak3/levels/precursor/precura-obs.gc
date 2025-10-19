@@ -848,6 +848,8 @@
         :unk 0
         )
       )
+    ;; keep this stupid thing dead
+    (process-entity-status! self (entity-perm-status dead) #t)
     (while (-> self child)
       (suspend)
       )
@@ -889,6 +891,8 @@
     )
   (init-fields this)
   (set! (-> this shock-distance) 40960.0)
+  ;; keep this stupid thing dead
+  (set! (-> this entity extra perm task) (game-task complete))
   (go (method-of-object this idle))
   )
 

@@ -335,6 +335,9 @@ void OpenGLRenderer::init_bucket_renderers_jak3() {
     init_bucket_renderer<Generic2BucketRenderer>("gmerc2-lcom-pris", BucketCategory::GENERIC,
                                                  BucketId::GMERC2_LCOM_PRIS, m_generic2,
                                                  Generic2::Mode::PRIM);
+    // 456
+    init_bucket_renderer<TextureUploadHandler>("tex-lcom-pris2", BucketCategory::TEX,
+                                               BucketId::TEX_LCOM_PRIS2, m_texture_animator);
 
     // 461
     init_bucket_renderer<TextureUploadHandler>("tex-lcom-sky-post", BucketCategory::TEX,
@@ -1415,7 +1418,7 @@ void OpenGLRenderer::dispatch_buckets_jak3(DmaFollower dma,
       glFinish();
     }
 
-    // lg::info("Render: {} end", g_current_renderer);
+    // lg::info("Render: {} end. current_tag_offset: {} VS next_bucket {}", g_current_renderer, dma.current_tag_offset(), m_render_state.next_bucket);
     //  should have ended at the start of the next chain
     ASSERT(dma.current_tag_offset() == m_render_state.next_bucket);
     m_render_state.next_bucket += 16;

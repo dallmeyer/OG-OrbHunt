@@ -1187,9 +1187,9 @@
   (local-vars (v1-10 (pointer process)))
   (let ((s5-0 (new 'stack-no-clear 'vector)))
     (vector-copy! s5-0 (-> this root trans))
-    (format 0 "spawning bomb~%")
+    ;; (format 0 "spawning bomb~%")
     (sound-play "prec-bomb-spawn")
-    (format 0 "spawning bomb-post~%")
+    ;; (format 0 "spawning bomb-post~%")
     (+! (-> s5-0 y) -10240.0)
     (cond
       ((= (-> this hint-mode) (precur-hint-mode teach-bomb))

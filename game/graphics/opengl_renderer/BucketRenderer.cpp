@@ -54,7 +54,7 @@ void EmptyBucketRenderer::render(DmaFollower& dma,
     auto first_tag = dma.current_tag();
     dma.read_and_advance();
     if (first_tag.kind != DmaTag::Kind::CNT || first_tag.qwc != 0) {
-      fmt::print("Bucket renderer {} ({}) was supposed to be empty, but wasn't\n", m_my_id, m_name);
+      fmt::print("Empty bucket renderer {} ({}) was supposed to be empty, but wasn't\n", m_my_id, m_name);
       // ASSERT(false);
     }
   }

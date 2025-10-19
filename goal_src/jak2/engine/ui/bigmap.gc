@@ -482,9 +482,9 @@
           (f0-0 (* (-> arg1 class scale) bigmap-scale))
           (a1-5 (-> arg1 class color))
           (a3-0 (new 'stack-no-clear 'vector4w))
-          (a2-1 (new-stack-vector0))
-          (a0-23 (new-stack-vector0)) ;; icon x0/y0
-          (v1-21 (new-stack-vector0)) ;; icon x1/y1
+          (icon-center (new-stack-vector0))
+          (icon-topleft (new-stack-vector0)) ;; icon x0/y0
+          (icon-botright (new-stack-vector0)) ;; icon x1/y1
           )
       (let ((f1-0 (-> *video-params* relative-x-scale)))
         (-> arg1 class)
@@ -501,20 +501,18 @@
         (if (-> *blit-displays-work* horizontal-flip-flag)
             (set! f1-0 (- f1-0))
             )
-        (set! (-> a2-1 x)    (+ (the float (-> this x0)) (* bigmap-scale 2.0 f1-0 (the float (-> a3-0 x)))))  ;; icon starts at bigmap.x0 + 2*scale*realpos.x
-        (set! (-> a2-1 y) (- (+ (the float (-> this y0)) (* bigmap-scale 2.0      (the float (-> a3-0 y)))) (* bigmap-scale (-> this scroll y))))      ;; ... consider scroll
-        (let ((f1-2 (* 20.0 f1-0 f0-0))
-              (f0-1 (* 20.0 f0-0))
+        (set! (-> icon-center x)    (+ (the float (-> this x0)) (* bigmap-scale 2.0 f1-0 (the float (-> a3-0 x)))))  ;; icon starts at bigmap.x0 + 2*scale*realpos.x
+        (set! (-> icon-center y) (- (+ (the float (-> this y0)) (* bigmap-scale 2.0      (the float (-> a3-0 y)))) (* bigmap-scale (-> this scroll y))))      ;; ... consider scroll
+        (let ((icon-width (* 20.0 f1-0 f0-0))
+              (icon-height (* 20.0 f0-0))
               )
-          ;; map pos top left?
-          (set! (-> a0-23 x) (the float (the int (- (-> a2-1 x) (* 0.5 f1-2)))))
-          (set! (-> a0-23 y) (the float (the int (- (-> a2-1 y) (* 0.5 f0-1)))))
-          ;; map pos bot right?
-          (set! (-> v1-21 x) (+ (-> a0-23 x) f1-2))
-          (set! (-> v1-21 y) (+ (-> a0-23 y) f0-1))
+          (set! (-> icon-topleft x) (the float (the int (- (-> icon-center x) (* 0.5 icon-width)))))
+          (set! (-> icon-topleft y) (the float (the int (- (-> icon-center y) (* 0.5 icon-height)))))
+          (set! (-> icon-botright x) (+ (-> icon-topleft x) icon-width))
+          (set! (-> icon-botright y) (+ (-> icon-topleft y) icon-height))
 
           ;; (format 0 "bigmap ~D,~D to ~D,~D  -" (-> this x0) (-> this y0) (-> this x1) (-> this y1))
-          ;; (format 0 "  icon ~F,~F to ~F,~F ~%" (-> a0-23 x) (-> a0-23 y) (-> v1-21 x) (-> v1-21 y))
+          ;; (format 0 "  icon ~F,~F to ~F,~F ~%" (-> icon-topleft x) (-> icon-topleft y) (-> icon-botright x) (-> icon-botright y))
           )
         )
       ;; og:preserve-this cast
@@ -536,16 +534,16 @@
         (set-vector! (the-as vector4w (&+ t0-15 48)) t1-2 t2-0 0 0) ;; icon texture top left?
         (set-vector!
           (the-as vector4w (&+ t0-15 64)) ;; map pos top left?
-          (the int (* 16.0 (-> a0-23 x)))
-          (the int (* 16.0 (-> a0-23 y)))
+          (the int (* 16.0 (-> icon-topleft x)))
+          (the int (* 16.0 (-> icon-topleft y)))
           #xffffff
           0
           )
         (set-vector! (the-as vector4w (&+ t0-15 80)) a2-8 a3-11 0 0)  ;; icon texture bottom right?
         (set-vector!
           (the-as vector4w (&+ t0-15 96)) ;; map pos bottom right?
-          (the int (* 16.0 (-> v1-21 x)))
-          (the int (* 16.0 (-> v1-21 y)))
+          (the int (* 16.0 (-> icon-botright x)))
+          (the int (* 16.0 (-> icon-botright y)))
           #xffffff
           0
           )
@@ -755,7 +753,7 @@
                                  )
       ;; (when (= (-> this y0) 1840)  ;; wtf was this doing?
         (let ((s2-1 (-> s4-2 base))
-              (s3-1 (lookup-texture-by-id-fast (new 'static 'texture-id :index #x15 :page #xc93)))
+              (s3-1 (lookup-texture-by-id-fast (new 'static 'texture-id :index #x15 :page #xc93))) ;; 21, 3219
               )
           (when s3-1
             (set! (-> (the-as (pointer uint128) s2-1) 0) (-> this adgif-tmpl dma-vif quad))
