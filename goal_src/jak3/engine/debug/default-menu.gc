@@ -7139,7 +7139,8 @@
                             (= *display-actor-marks* 'process)
                             )
               )
-        (flag "Region Marks" *display-region-marks* dm-boolean-toggle-pick-func)   
+        (flag "Region Marks" *display-region-marks* dm-boolean-toggle-pick-func)
+        (flag "Bug Report" *display-bug-report* dm-boolean-toggle-pick-func)
         )
        (menu "Mod Settings"
         (flag "Orb Autosave" #f ,(lambda ((arg0 object) (arg1 debug-menu-msg))
