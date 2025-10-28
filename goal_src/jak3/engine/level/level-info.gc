@@ -17763,8 +17763,8 @@
                     )
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #xa #x0 #x0 #x0 #x0)
-                    :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                    :borrow-size (new 'static 'array uint16 5 #xfa #x0 #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(orbs-templea display) #f #f #f #f)
                     )
                   :bottom-height (meters -150)
                   :fog-height (meters 80)
@@ -20227,8 +20227,8 @@
                     )
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #x384 #x0 #x0 #x0 #x0)
-                    :borrow-info (new 'static 'array object 5 '(orbs-precura display) #f #f #f #f)
+                    :borrow-size (new 'static 'array uint16 5 #x384 #xaf #x0 #x0 #x0)
+                    :borrow-info (new 'static 'array object 5 '(lprenme display) '(orbs-precura display) #f #f #f)
                     )
                   :bottom-height (meters -20)
                   :fog-height (meters 80)

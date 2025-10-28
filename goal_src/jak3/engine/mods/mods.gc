@@ -1627,6 +1627,7 @@
         (r1762 (region-lookup-by-id 1762))
         (r1764 (region-lookup-by-id 1764))
         (r1778 (region-lookup-by-id 1778))
+        (r1614 (region-lookup-by-id 1614))
         (r1615 (region-lookup-by-id 1615))
         (r1938 (region-lookup-by-id 1938))
         )
@@ -1698,6 +1699,9 @@
       (set! (-> r1778 on-enter) '(begin (want-load 'templea 'templeb 'templed) (want-display 'templea 'display)))
       (set! (-> r1778 on-exit) '(begin (want-load 'templea 'templeb 'templec) (want-display 'templea 'special)))
       )
+    ;; get rid of some deathplanes in templec
+    (when r1614
+      (set! (-> r1614 on-enter) #f))
     ;; get rid of some deathplanes in templed
     (when r1615
       (set! (-> r1615 on-enter) #f))

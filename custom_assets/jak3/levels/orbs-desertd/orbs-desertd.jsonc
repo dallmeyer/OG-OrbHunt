@@ -77,6 +77,16 @@
       "lump": {
         "name":"desertd-skill-03"
       }
+    },
+    {
+      "trans": [ 2112.1166, 6.8296, 1611.0053], // crevice in water bottom of waterfall by rainbow
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 2112.1166, 6.8296, 1611.0053, 10], // bounding sphere
+      "lump": {
+        "name":"desertd-skill-04"
+      }
     }//,
     
 
