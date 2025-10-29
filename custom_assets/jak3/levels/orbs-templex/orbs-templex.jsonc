@@ -160,6 +160,66 @@
       "lump": {
         "name":"templex-skill-10"
       }
+    },
+    {
+      "trans": [  4129.7895, 119.9127, 4147.3691], // in courtyard, in corner on left as soon as you enter
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   4129.7895, 119.9127, 4147.3691 , 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-11"
+      }
+    },
+    {
+      "trans": [  4128.2548, 155.1060, 4135.6748], // up on precur statue from ^, have to go over invis wall (urn-b-4 hint) SNOW
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   4128.2548, 155.1060, 4135.6748 , 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-12"
+      }
+    },
+    {
+      "trans": [  4129.2412, 136.6728, 4117.9506], // in courtyard, behind torch on precur statue on left SNOW
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [   4129.2412, 136.6728, 4117.9506 , 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-13"
+      }
+    },
+    {
+      "trans": [  4151.5942, 180.2676, 4176.7622], // in courtyard, on last lil ledge above right precur statue
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [  4151.5942, 180.2676, 4176.7622, 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-14"
+      }
+    },
+    {
+      "trans": [ 4129.0893, 163.7996, 4130.8588 ], // in courtyard, up behind precur statue head on left
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 4129.0893, 163.7996, 4130.8588 , 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-15"
+      }
+    },
+    {
+      "trans": [ 4144.02,  270.2202,  4170.23 ], // in courtyard, way up near very top on SNOW
+      "etype": "skill",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [0, 0, 0, 1], // quaternion
+      "bsphere": [ 4144.02,  270.2202,  4170.23 , 10], // bounding sphere
+      "lump": {
+        "name":"templex-skill-16"
+      }
     }//,
     
     

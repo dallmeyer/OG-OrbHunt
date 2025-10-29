@@ -699,6 +699,11 @@
     (('skill-212) (set-vector-meters! (-> arg0 extra trans) 4363.12  72.31  4008.60 )) ;; up on left wall as you first approach temple from desert (need to go behind invis wall from far left/early on)
     (('skill-213) (set-vector-meters! (-> arg0 extra trans) 4375.0493 83.5116 4014.6745)) ;; in crevice up on left wall, follow from ^
     (('skill-214) (set-vector-meters! (-> arg0 extra trans) 4396.57  73.89  4048.61 )) ;; around back of left wall before it gets OOB-y, follow from ^
+    (('urn-b-4) (set-vector-meters! (-> arg0 extra trans) 4131.32  167.20  4152.79 ) ;; in courtyard, up on fallen "pad" above outer door (hint for getting over invis wall to orb on robot statue)
+      (quaternion-set! (-> arg0 quat)  -0.1289      -0.8769       0.2406      -0.3954))      
+    (('urn-c-7) (set-vector-meters! (-> arg0 extra trans) 4159.5571 119.3019 4176.4057)) ;; in courtyard, in tight corner on right
+    (('urn-a-8) (set-vector-meters! (-> arg0 extra trans) 4188.89  134.46  4178.07 ) ;; in courtyard, up on SNOW where torch is missing on right
+      (quaternion-set! (-> arg0 quat)  0.0322      -0.8997       0.0468       0.4326))      
 
     ;; ====== TEMPLED (monk temple light jak flight) ======
     (('urn-a-15) (set-vector-meters! (-> arg0 extra trans) 4248.67  118.32  4648.52 )) ;; top of pillar climb in SW corner (follow orb trail, templeb-skill-13 ish)
@@ -1621,6 +1626,7 @@
         (bdoor1 (entity-by-name "tpl-door-b-1"))
         (mardoor4 (entity-by-name "tpl-mardoor-4"))
         (mardoor5 (entity-by-name "tpl-mardoor-5"))
+        (r1183 (region-lookup-by-id 1183))
         (r1382 (region-lookup-by-id 1382))
         (r1698 (region-lookup-by-id 1698))
         (r1373 (region-lookup-by-id 1373))
@@ -1699,6 +1705,9 @@
       (set! (-> r1778 on-enter) '(begin (want-load 'templea 'templeb 'templed) (want-display 'templea 'display)))
       (set! (-> r1778 on-exit) '(begin (want-load 'templea 'templeb 'templec) (want-display 'templea 'special)))
       )
+    ;; get rid of some deathplanes in templex
+    (when r1183
+      (set! (-> r1183 on-enter) #f))
     ;; get rid of some deathplanes in templec
     (when r1614
       (set! (-> r1614 on-enter) #f))
