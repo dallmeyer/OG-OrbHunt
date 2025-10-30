@@ -48,60 +48,60 @@
   "actors" : [
     {
       "trans": [-494.98,  28.66, -15.50], // up by trees near skill-8 and -9
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-494.98,  28.66, -15.50, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-494.98,  28.66, -15.50, 10],
       "lump": {
         "name": "mincan-skill-01"
       }
     },
     {
       "trans": [-558.09,  13.45, -191.47], //in water between tree roots/rocks
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-558.09,  13.45, -191.47, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-558.09,  13.45, -191.47, 10],
       "lump": {
         "name": "mincan-skill-02"
       }
     },
     {
       "trans": [  -444.7998, 31.6104, 18.1425], // near entrance, behind bush
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -444.7998, 31.6104, 18.1425, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -444.7998, 31.6104, 18.1425, 10],
       "lump": {
         "name": "mincan-skill-03"
       }
     },
     {
       "trans": [     -473.0891, 40.8525, -1.4905], // up on "ledge" in entrance corridor, jump from standpoint on opposite side
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      -473.0891, 40.8525, -1.4905, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      -473.0891, 40.8525, -1.4905, 10],
       "lump": {
         "name": "mincan-skill-04"
       }
     },
     {
       "trans": [     -471.9739, 28.9093, -11.2592], // behind rocks on right in entrance corridor
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      -471.9739, 28.9093, -11.2592, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      -471.9739, 28.9093, -11.2592, 10],
       "lump": {
         "name": "mincan-skill-05"
       }
     },
     {
       "trans": [   -455.1806, 26.4344, -37.1697], // behind overhanging grass along entrance corridor
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [    -455.1806, 26.4344, -37.1697, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [    -455.1806, 26.4344, -37.1697, 10],
       "lump": {
         "name": "mincan-skill-06",
         "bob-scale": ["float", 0.4]
@@ -109,20 +109,20 @@
     },
     {
       "trans": [     -462.5187, 23.2218, -42.8826], // in corner after drop down, along entrance corridor
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     -462.5187, 23.2218, -42.8826, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     -462.5187, 23.2218, -42.8826, 10],
       "lump": {
         "name": "mincan-skill-07"
       }
     },
     {
       "trans": [     -463.8682, 23.4391, -65.4118], // left wall along entrance corridor, starting a climb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     -463.8682, 23.4391, -65.4118, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     -463.8682, 23.4391, -65.4118, 10],
       "lump": {
         "name": "mincan-skill-08",
         "bob-scale": ["float", 0.7]
@@ -130,50 +130,50 @@
     },
     {
       "trans": [     -463.9574, 31.7685, -61.0385], // left wall along entrance corridor, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     -463.9574, 31.7685, -61.0385, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     -463.9574, 31.7685, -61.0385, 10],
       "lump": {
         "name": "mincan-skill-09"
       }
     },
     {
       "trans": [     -469.1042, 36.7386, -67.9862], // left wall along entrance corridor, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      -469.1042, 36.7386, -67.9862, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      -469.1042, 36.7386, -67.9862, 10],
       "lump": {
         "name": "mincan-skill-10"
       }
     },
     {
       "trans": [ -450.5524, 23.7972, -79.5887], // right wall along entrance corridor, starting a climb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -450.5524, 23.7972, -79.5887, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -450.5524, 23.7972, -79.5887, 10],
       "lump": {
         "name": "mincan-skill-11"
       }
     },
     {
       "trans": [ -450.3267, 29.3829, -83.4022], // right wall along entrance corridor, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -450.3267, 29.3829, -83.4022, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -450.3267, 29.3829, -83.4022, 10],
       "lump": {
         "name": "mincan-skill-12"
       }
     },
     {
       "trans": [ -448.0643, 34.9480, -78.7648], // right wall along entrance corridor, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -448.0643, 34.9480, -78.7648, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -448.0643, 34.9480, -78.7648, 10],
       "lump": {
         "name": "mincan-skill-13",
         "bob-scale": ["float", 0.4]
@@ -181,10 +181,10 @@
     },
     {
       "trans": [ -466.43,  22.45, -80.47], // left wall towards end of entrance corridor, starting a climb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -466.43,  22.45, -80.47, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -466.43,  22.45, -80.47, 10],
       "lump": {
         "name": "mincan-skill-14",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -192,80 +192,80 @@
     },
     {
       "trans": [ -471.13,  39.30, -80.83], // right wall along entrance corridor, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -471.13,  39.30, -80.83, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -471.13,  39.30, -80.83, 10],
       "lump": {
         "name": "mincan-skill-15"
       }
     },
     {
       "trans": [ -475.74,  49.57, -80.88], // top of left wall towards end of entrance corridor, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -475.74,  49.57, -80.88, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -475.74,  49.57, -80.88, 10],
       "lump": {
         "name": "mincan-skill-16"
       }
     },
     {
       "trans": [ -473.97,  53.93, -73.47], // top of left wall towards end of entrance corridor, jump up/left from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -473.97,  53.93, -73.47, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -473.97,  53.93, -73.47, 10],
       "lump": {
         "name": "mincan-skill-17"
       }
     },
     {
       "trans": [ -472.01,  51.90, -88.87], // tiny standpoint top of left wall towards end of entrance corridor, jump up/right from ^^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -472.01,  51.90, -88.87, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -472.01,  51.90, -88.87, 10],
       "lump": {
         "name": "mincan-skill-18"
       }
     },
     {
       "trans": [ -455.09,  58.90, -79.02], // top of right wall towards end of entrance corridor, deep extendo across from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -455.09,  58.90, -79.02, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -455.09,  58.90, -79.02, 10],
       "lump": {
         "name": "mincan-skill-19"
       }
     },
     {
       "trans": [  -448.6625, 31.1547, -104.2557], // ledge to right of statue at end of entrance corridor
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -448.6625, 31.1547, -104.2557, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -448.6625, 31.1547, -104.2557, 10],
       "lump": {
         "name": "mincan-skill-20"
       }
     },
     {
       "trans": [   -446.6310, 30.5254, -123.9917], // behind statue at end of entrance corridor, uppercut from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -446.6310, 30.5254, -123.9917, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -446.6310, 30.5254, -123.9917, 10],
       "lump": {
         "name": "mincan-skill-21"
       }
     },
     {
       "trans": [ -456.44,  26.00, -132.10], // wall next to statue on right at end of entrance corridor
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -456.44,  26.00, -132.10, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -456.44,  26.00, -132.10, 10],
       "lump": {
         "name": "mincan-skill-22",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -273,40 +273,40 @@
     },
     {
       "trans": [ -459.89,  42.21, -141.78], // up on right wall above/behind statue at end of entrance corridor, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -459.89,  42.21, -141.78, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -459.89,  42.21, -141.78, 10],
       "lump": {
         "name": "mincan-skill-23"
       }
     },
     {
       "trans": [ -472.41,  43.58, -147.51], // up on right wall at end of entrance corridor, uppercut from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -472.41,  43.58, -147.51, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -472.41,  43.58, -147.51, 10],
       "lump": {
         "name": "mincan-skill-24"
       }
     },
     {
       "trans": [  -472.1628, 42.9158, -163.4466], // up on right wall just past end of entrance corridor, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -472.1628, 42.9158, -163.4466, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -472.1628, 42.9158, -163.4466, 10],
       "lump": {
         "name": "mincan-skill-25"
       }
     },
     {
       "trans": [ -471.37,  24.07, -113.14], // left wall towards end of entrance corridor
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -471.37,  24.07, -113.14, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -471.37,  24.07, -113.14, 10],
       "lump": {
         "name": "mincan-skill-26",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -314,30 +314,30 @@
     },
     {
       "trans": [ -474.42,  36.88, -112.52], // up on gap in left wall towards end of entrance corridor, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -474.42,  36.88, -112.52, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -474.42,  36.88, -112.52, 10],
       "lump": {
         "name": "mincan-skill-27"
       }
     },
     {
       "trans": [  -493.0891, 21.1651, -129.1457], // in bush on left at end of entrance corridor
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -493.0891, 21.1651, -129.1457, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -493.0891, 21.1651, -129.1457, 10],
       "lump": {
         "name": "mincan-skill-28"
       }
     },
     {
       "trans": [  -502.9971, 18.1, -169.5372], // where one of the artifacts goes in the bottom of claw machine on right
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -502.9971, 18.1, -169.5372, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -502.9971, 18.1, -169.5372, 10],
       "lump": {
         "name": "mincan-skill-29",
         "bob-scale": ["float", -1.0]
@@ -345,10 +345,10 @@
     },
     {
       "trans": [   -495.1359, 30.55, -167.2770], // on top of claw machine on right
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -495.1359, 30.55, -167.2770, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -495.1359, 30.55, -167.2770, 10],
       "lump": {
         "name": "mincan-skill-30",
         "bob-scale": ["float", -1.0]
@@ -356,20 +356,20 @@
     },
     {
       "trans": [  -562.3267, 18.5972, -116.6269], // on right/behind big gears machine
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -562.3267, 18.5972, -116.6269, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -562.3267, 18.5972, -116.6269, 10],
       "lump": {
         "name": "mincan-skill-31"
       }
     },
     {
       "trans": [  -574.9509, 17.5125, -222.1436], // between log and rock in back
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -574.9509, 17.5125, -222.1436, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -574.9509, 17.5125, -222.1436, 10],
       "lump": {
         "name": "mincan-skill-32",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -377,20 +377,20 @@
     },
     {
       "trans": [  -578.9627, 36.6128, -228.1522], // up on cliff in back, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -578.9627, 36.6128, -228.1522, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -578.9627, 36.6128, -228.1522, 10],
       "lump": {
         "name": "mincan-skill-33"
       }
     },
     {
       "trans": [  -549.02,  27.58, -135.28], // slanted rock wall next to right statue by big machine
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -549.02,  27.58, -135.28, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -549.02,  27.58, -135.28, 10],
       "lump": {
         "name": "mincan-skill-34",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -398,20 +398,20 @@
     },
     {
       "trans": [ -548.75,  36.47, -127.57], // top of right statue by big machine, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -548.75,  36.47, -127.57, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -548.75,  36.47, -127.57, 10],
       "lump": {
         "name": "mincan-skill-35"
       }
     },
     {
       "trans": [ -521.24,  26.40, -104.25], // on big machine by left statue
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -521.24,  26.40, -104.25, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -521.24,  26.40, -104.25, 10],
       "lump": {
         "name": "mincan-skill-36",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -419,30 +419,30 @@
     },
     {
       "trans": [ -518.01,  40.03, -118.29], // top of left statue by big machine, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -518.01,  40.03, -118.29, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -518.01,  40.03, -118.29, 10],
       "lump": {
         "name": "mincan-skill-37"
       }
     },
     {
       "trans": [  -577.5133, 25.8707, -194.3372], // in back behind/between square pillar and wall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -577.5133, 25.8707, -194.3372, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -577.5133, 25.8707, -194.3372, 10],
       "lump": {
         "name": "mincan-skill-38"
       }
     },
     {
       "trans": [  -564.5665, 13.7385, -221.3127], // in back inside bottom of log
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -564.5665, 13.7385, -221.3127, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -564.5665, 13.7385, -221.3127, 10],
       "lump": {
         "name": "mincan-skill-39",
         "bob-scale": ["float", 0.4]
@@ -450,40 +450,40 @@
     },
     {
       "trans": [  -519.7846, 13.0159, -204.6654], // underwater, among/below shrubbery
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -519.7846, 13.0159, -204.6654, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -519.7846, 13.0159, -204.6654, 10],
       "lump": {
         "name": "mincan-skill-40"
       }
     },
     {
       "trans": [ -522.64,  27.98, -254.76], // on wall in very back, starting a climb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -522.64,  27.98, -254.76, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -522.64,  27.98, -254.76, 10],
       "lump": {
         "name": "mincan-skill-41"
       }
     },
     {
       "trans": [ -529.40,  32.83, -263.01], // on wall in very back, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -529.40,  32.83, -263.01, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -529.40,  32.83, -263.01, 10],
       "lump": {
         "name": "mincan-skill-42"
       }
     },
     {
       "trans": [ -534.73,  35.12, -265.44], // on wall in very back, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -534.73,  35.12, -265.44, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -534.73,  35.12, -265.44, 10],
       "lump": {
         "name": "mincan-skill-43",
         "pickup-amount": ["float", 2.0] // abah hint        
@@ -491,50 +491,50 @@
     },
     {
       "trans": [ -534.60,  51.47, -271.34], // on wall in very back, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -534.60,  51.47, -271.34, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -534.60,  51.47, -271.34, 10],
       "lump": {
         "name": "mincan-skill-44"
       }
     },
     {
       "trans": [ -549.41,  51.80, -270.47], // on wall in very back, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -549.41,  51.80, -270.47, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -549.41,  51.80, -270.47, 10],
       "lump": {
         "name": "mincan-skill-45"
       }
     },
     {
       "trans": [ -563.34,  48.22, -259.14], // in bushes on wall in very back, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -563.34,  48.22, -259.14, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -563.34,  48.22, -259.14, 10],
       "lump": {
         "name": "mincan-skill-46"
       }
     },
     {
       "trans": [ -571.42,  55.75, -254.94], // on wall in very back, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -571.42,  55.75, -254.94, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -571.42,  55.75, -254.94, 10],
       "lump": {
         "name": "mincan-skill-47"
       }
     },
     {
       "trans": [ -570.77,  65.40, -265.59], // on wall in very back, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -570.77,  65.40, -265.59, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -570.77,  65.40, -265.59, 10],
       "lump": {
         "name": "mincan-skill-48",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -542,100 +542,100 @@
     },
     {
       "trans": [ -558.34,  81.60, -272.41], // on wall in very back, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -558.34,  81.60, -272.41, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -558.34,  81.60, -272.41, 10],
       "lump": {
         "name": "mincan-skill-49"
       }
     },
     {
       "trans": [ -579.92,  61.03, -266.92], // in crack up high in wall in very back, jump from ^^^^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -579.92,  61.03, -266.92, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -579.92,  61.03, -266.92, 10],
       "lump": {
         "name": "mincan-skill-50"
       }
     },
     {
       "trans": [ -571.51,  50.72, -242.25], // up on wall in very back, jump from ^^^^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -571.51,  50.72, -242.25, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -571.51,  50.72, -242.25, 10],
       "lump": {
         "name": "mincan-skill-51"
       }
     },
     {
       "trans": [ -579.32,  52.38, -221.72], // up on wall in very back - from ^ either clip thru ground and ez jump, or can do abah/cancel in corner against wall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -579.32,  52.38, -221.72, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -579.32,  52.38, -221.72, 10],
       "lump": {
         "name": "mincan-skill-52"
       }
     },
     {
       "trans": [ -510.85,  13.81, -236.99], // in water on right in corner pocket between rocks
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -510.85,  13.81, -236.99, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -510.85,  13.81, -236.99, 10],
       "lump": {
         "name": "mincan-skill-53"
       }
     },
     {
       "trans": [     -541.4802, 8.4217, -191.8506], // deep underwater, corner between rocks near pads
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     -541.4802, 8.4217, -191.8506, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     -541.4802, 8.4217, -191.8506, 10],
       "lump": {
         "name": "mincan-skill-54"
       }
     },
     {
       "trans": [  -510.6150, 21.0242, -243.7451], // behind blocky rocks on right side of water
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -510.6150, 21.0242, -243.7451, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -510.6150, 21.0242, -243.7451, 10],
       "lump": {
         "name": "mincan-skill-55"
       }
     },
     {
       "trans": [    -497.9583, 23.8588, -240.7897], // in crevice of rock wall, right side of water
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [    -497.9583, 23.8588, -240.7897, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [    -497.9583, 23.8588, -240.7897, 10],
       "lump": {
         "name": "mincan-skill-56"
       }
     },
     {
       "trans": [   -506.08,  32.79, -249.49], // mid level on rock wall, right side of water
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -506.08,  32.79, -249.49, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -506.08,  32.79, -249.49, 10],
       "lump": {
         "name": "mincan-skill-57"
       }
     },
     {
       "trans": [ -555.03,  45.19, -146.05], // on top of big slippery rock mountain, behind bush - extended w/ late spin from skill-35 (top of statue)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -555.03,  45.19, -146.05, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -555.03,  45.19, -146.05, 10],
       "lump": {
         "name": "mincan-skill-58",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -643,20 +643,20 @@
     },
     {
       "trans": [ -555.02,  50.98, -130.63], // on rock cliff above statue near big machine, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -555.02,  50.98, -130.63, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -555.02,  50.98, -130.63, 10],
       "lump": {
         "name": "mincan-skill-59"
       }
     },
     {
       "trans": [  -521.8859, 16.3231, -253.2064], // behind square rocks in back just above water line
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -521.8859, 16.3231, -253.2064, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -521.8859, 16.3231, -253.2064, 10],
       "lump": {
         "name": "mincan-skill-60"
       }
@@ -665,10 +665,10 @@
     // HOVER ORBS
     {
       "trans": [  -481.76, 128.44, -205.94 ], // way up on rock wall, behind "neck"
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -481.76, 128.44, -205.94, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -481.76, 128.44, -205.94, 10],
       "lump": {
         "name":"mincan-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -676,10 +676,10 @@
     },
     {
       "trans": [ -587.78, 120.04, -225.28 ], // way up on rock wall, on exposed point
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -587.78, 120.04, -225.28, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -587.78, 120.04, -225.28, 10],
       "lump": {
         "name":"mincan-skill-hover-02",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -687,10 +687,10 @@
     },
     {
       "trans": [ -545.59, 119.00, -282.00], // way up on rock wall, on plateau
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -545.59, 119.00, -282.00, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -545.59, 119.00, -282.00, 10],
       "lump": {
         "name":"mincan-skill-hover-03",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -698,10 +698,10 @@
     },
     {
       "trans": [ -505.92,  63.22, -121.29], // way up on rock wall, near end of entrance corridor
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -505.92,  63.22, -121.29, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -505.92,  63.22, -121.29, 10],
       "lump": {
         "name":"mincan-skill-hover-04",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -709,10 +709,10 @@
     },
     {
       "trans": [ -634.37, 189.11, -256.52 ], // way WAY up on rock wall, on exposed point
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -634.37, 189.11, -256.52, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -634.37, 189.11, -256.52, 10],
       "lump": {
         "name":"mincan-skill-hover-05",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -720,10 +720,10 @@
     },
     {
       "trans": [     -544.5816, 103.5674, -224.1470], // top of mirror/glass gem thing
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     -544.5816, 103.5674, -224.1470, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     -544.5816, 103.5674, -224.1470, 10],
       "lump": {
         "name":"mincan-skill-hover-06",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -733,10 +733,10 @@
     // GHOSTS
     {
       "trans": [-494.98,  28.66, -15.50], // up by trees near skill-8 and -9
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-494.98,  28.66, -15.50, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-494.98,  28.66, -15.50, 10],
       "lump": {
         "name":"mincan-skill-ghost-01",
         "alt-actor":"mincan-skill-01"
@@ -744,10 +744,10 @@
     },
     {
       "trans": [-558.09,  13.45, -191.47], //in water between tree roots/rocks
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-558.09,  13.45, -191.47, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-558.09,  13.45, -191.47, 10],
       "lump": {
         "name":"mincan-skill-ghost-02",
         "alt-actor":"mincan-skill-02"
@@ -755,10 +755,10 @@
     },
     {
       "trans": [  -444.7998, 31.6104, 18.1425], // near entrance, behind bush
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -444.7998, 31.6104, 18.1425, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -444.7998, 31.6104, 18.1425, 10],
       "lump": {
         "name":"mincan-skill-ghost-03",
         "alt-actor":"mincan-skill-03"
@@ -766,10 +766,10 @@
     },
     {
       "trans": [     -473.0891, 40.8525, -1.4905], // up on "ledge" in entrance corridor, jump from standpoint on opposite side
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      -473.0891, 40.8525, -1.4905, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      -473.0891, 40.8525, -1.4905, 10],
       "lump": {
         "name":"mincan-skill-ghost-04",
         "alt-actor":"mincan-skill-04"
@@ -777,10 +777,10 @@
     },
     {
       "trans": [     -471.9739, 28.9093, -11.2592], // behind rocks on right in entrance corridor
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      -471.9739, 28.9093, -11.2592, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      -471.9739, 28.9093, -11.2592, 10],
       "lump": {
         "name":"mincan-skill-ghost-05",
         "alt-actor":"mincan-skill-05"
@@ -788,10 +788,10 @@
     },
     {
       "trans": [   -455.1806, 26.4344, -37.1697], // behind overhanging grass along entrance corridor
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [    -455.1806, 26.4344, -37.1697, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [    -455.1806, 26.4344, -37.1697, 10],
       "lump": {
         "name":"mincan-skill-ghost-06",
         "alt-actor":"mincan-skill-06",
@@ -800,10 +800,10 @@
     },
     {
       "trans": [     -462.5187, 23.2218, -42.8826], // in corner after drop down, along entrance corridor
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     -462.5187, 23.2218, -42.8826, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     -462.5187, 23.2218, -42.8826, 10],
       "lump": {
         "name":"mincan-skill-ghost-07",
         "alt-actor":"mincan-skill-07"
@@ -811,10 +811,10 @@
     },
     {
       "trans": [     -463.8682, 23.4391, -65.4118], // left wall along entrance corridor, starting a climb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     -463.8682, 23.4391, -65.4118, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     -463.8682, 23.4391, -65.4118, 10],
       "lump": {
         "name":"mincan-skill-ghost-08",
         "alt-actor":"mincan-skill-08",
@@ -823,10 +823,10 @@
     },
     {
       "trans": [     -463.9574, 31.7685, -61.0385], // left wall along entrance corridor, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     -463.9574, 31.7685, -61.0385, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     -463.9574, 31.7685, -61.0385, 10],
       "lump": {
         "name":"mincan-skill-ghost-09",
         "alt-actor":"mincan-skill-09"
@@ -834,10 +834,10 @@
     },
     {
       "trans": [     -469.1042, 36.7386, -67.9862], // left wall along entrance corridor, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      -469.1042, 36.7386, -67.9862, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      -469.1042, 36.7386, -67.9862, 10],
       "lump": {
         "name":"mincan-skill-ghost-10",
         "alt-actor":"mincan-skill-10"
@@ -845,10 +845,10 @@
     },
     {
       "trans": [ -450.5524, 23.7972, -79.5887], // right wall along entrance corridor, starting a climb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -450.5524, 23.7972, -79.5887, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -450.5524, 23.7972, -79.5887, 10],
       "lump": {
         "name":"mincan-skill-ghost-11",
         "alt-actor":"mincan-skill-11"
@@ -856,10 +856,10 @@
     },
     {
       "trans": [ -450.3267, 29.3829, -83.4022], // right wall along entrance corridor, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -450.3267, 29.3829, -83.4022, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -450.3267, 29.3829, -83.4022, 10],
       "lump": {
         "name":"mincan-skill-ghost-12",
         "alt-actor":"mincan-skill-12"
@@ -867,10 +867,10 @@
     },
     {
       "trans": [ -448.0643, 34.9480, -78.7648], // right wall along entrance corridor, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -448.0643, 34.9480, -78.7648, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -448.0643, 34.9480, -78.7648, 10],
       "lump": {
         "name":"mincan-skill-ghost-13",
         "alt-actor":"mincan-skill-13",
@@ -879,10 +879,10 @@
     },
     {
       "trans": [ -466.43,  22.45, -80.47], // left wall towards end of entrance corridor, starting a climb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -466.43,  22.45, -80.47, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -466.43,  22.45, -80.47, 10],
       "lump": {
         "name":"mincan-skill-ghost-14",
         "alt-actor":"mincan-skill-14",
@@ -891,10 +891,10 @@
     },
     {
       "trans": [ -471.13,  39.30, -80.83], // right wall along entrance corridor, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -471.13,  39.30, -80.83, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -471.13,  39.30, -80.83, 10],
       "lump": {
         "name":"mincan-skill-ghost-15",
         "alt-actor":"mincan-skill-15"
@@ -902,10 +902,10 @@
     },
     {
       "trans": [ -475.74,  49.57, -80.88], // top of left wall towards end of entrance corridor, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -475.74,  49.57, -80.88, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -475.74,  49.57, -80.88, 10],
       "lump": {
         "name":"mincan-skill-ghost-16",
         "alt-actor":"mincan-skill-16"
@@ -913,10 +913,10 @@
     },
     {
       "trans": [ -473.97,  53.93, -73.47], // top of left wall towards end of entrance corridor, jump up/left from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -473.97,  53.93, -73.47, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -473.97,  53.93, -73.47, 10],
       "lump": {
         "name":"mincan-skill-ghost-17",
         "alt-actor":"mincan-skill-17"
@@ -924,10 +924,10 @@
     },
     {
       "trans": [ -472.01,  51.90, -88.87], // tiny standpoint top of left wall towards end of entrance corridor, jump up/right from ^^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -472.01,  51.90, -88.87, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -472.01,  51.90, -88.87, 10],
       "lump": {
         "name":"mincan-skill-ghost-18",
         "alt-actor":"mincan-skill-18"
@@ -935,10 +935,10 @@
     },
     {
       "trans": [ -455.09,  58.90, -79.02], // top of right wall towards end of entrance corridor, deep extendo across from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -455.09,  58.90, -79.02, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -455.09,  58.90, -79.02, 10],
       "lump": {
         "name":"mincan-skill-ghost-19",
         "alt-actor":"mincan-skill-19"
@@ -946,10 +946,10 @@
     },
     {
       "trans": [  -448.6625, 31.1547, -104.2557], // ledge to right of statue at end of entrance corridor
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -448.6625, 31.1547, -104.2557, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -448.6625, 31.1547, -104.2557, 10],
       "lump": {
         "name":"mincan-skill-ghost-20",
         "alt-actor":"mincan-skill-20"
@@ -957,10 +957,10 @@
     },
     {
       "trans": [   -446.6310, 30.5254, -123.9917], // behind statue at end of entrance corridor, uppercut from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -446.6310, 30.5254, -123.9917, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -446.6310, 30.5254, -123.9917, 10],
       "lump": {
         "name":"mincan-skill-ghost-21",
         "alt-actor":"mincan-skill-21"
@@ -968,10 +968,10 @@
     },
     {
       "trans": [ -456.44,  26.00, -132.10], // wall next to statue on right at end of entrance corridor
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -456.44,  26.00, -132.10, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -456.44,  26.00, -132.10, 10],
       "lump": {
         "name":"mincan-skill-ghost-22",
         "alt-actor":"mincan-skill-22",
@@ -980,10 +980,10 @@
     },
     {
       "trans": [ -459.89,  42.21, -141.78], // up on right wall above/behind statue at end of entrance corridor, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -459.89,  42.21, -141.78, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -459.89,  42.21, -141.78, 10],
       "lump": {
         "name":"mincan-skill-ghost-23",
         "alt-actor":"mincan-skill-23"
@@ -991,10 +991,10 @@
     },
     {
       "trans": [ -472.41,  43.58, -147.51], // up on right wall at end of entrance corridor, uppercut from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -472.41,  43.58, -147.51, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -472.41,  43.58, -147.51, 10],
       "lump": {
         "name":"mincan-skill-ghost-24",
         "alt-actor":"mincan-skill-24"
@@ -1002,10 +1002,10 @@
     },
     {
       "trans": [  -472.1628, 42.9158, -163.4466], // up on right wall just past end of entrance corridor, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -472.1628, 42.9158, -163.4466, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -472.1628, 42.9158, -163.4466, 10],
       "lump": {
         "name":"mincan-skill-ghost-25",
         "alt-actor":"mincan-skill-25"
@@ -1013,10 +1013,10 @@
     },
     {
       "trans": [ -471.37,  24.07, -113.14], // left wall towards end of entrance corridor
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -471.37,  24.07, -113.14, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -471.37,  24.07, -113.14, 10],
       "lump": {
         "name":"mincan-skill-ghost-26",
         "alt-actor":"mincan-skill-26",
@@ -1025,10 +1025,10 @@
     },
     {
       "trans": [ -474.42,  36.88, -112.52], // up on gap in left wall towards end of entrance corridor, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -474.42,  36.88, -112.52, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -474.42,  36.88, -112.52, 10],
       "lump": {
         "name":"mincan-skill-ghost-27",
         "alt-actor":"mincan-skill-27"
@@ -1036,10 +1036,10 @@
     },
     {
       "trans": [  -493.0891, 21.1651, -129.1457], // in bush on left at end of entrance corridor
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -493.0891, 21.1651, -129.1457, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -493.0891, 21.1651, -129.1457, 10],
       "lump": {
         "name":"mincan-skill-ghost-28",
         "alt-actor":"mincan-skill-28"
@@ -1047,10 +1047,10 @@
     },
     {
       "trans": [  -502.9971, 18.1, -169.5372], // where one of the artifacts goes in the bottom of claw machine on right
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -502.9971, 18.1, -169.5372, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -502.9971, 18.1, -169.5372, 10],
       "lump": {
         "name":"mincan-skill-ghost-29",
         "alt-actor":"mincan-skill-29",
@@ -1059,10 +1059,10 @@
     },
     {
       "trans": [   -495.1359, 30.55, -167.2770], // on top of claw machine on right
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -495.1359, 30.55, -167.2770, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -495.1359, 30.55, -167.2770, 10],
       "lump": {
         "name":"mincan-skill-ghost-30",
         "alt-actor":"mincan-skill-30",
@@ -1071,10 +1071,10 @@
     },
     {
       "trans": [  -562.3267, 18.5972, -116.6269], // on right/behind big gears machine
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -562.3267, 18.5972, -116.6269, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -562.3267, 18.5972, -116.6269, 10],
       "lump": {
         "name":"mincan-skill-ghost-31",
         "alt-actor":"mincan-skill-31"
@@ -1082,10 +1082,10 @@
     },
     {
       "trans": [  -574.9509, 17.5125, -222.1436], // between log and rock in back
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -574.9509, 17.5125, -222.1436, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -574.9509, 17.5125, -222.1436, 10],
       "lump": {
         "name":"mincan-skill-ghost-32",
         "alt-actor":"mincan-skill-32",
@@ -1094,10 +1094,10 @@
     },
     {
       "trans": [  -578.9627, 36.6128, -228.1522], // up on cliff in back, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -578.9627, 36.6128, -228.1522, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -578.9627, 36.6128, -228.1522, 10],
       "lump": {
         "name":"mincan-skill-ghost-33",
         "alt-actor":"mincan-skill-33"
@@ -1105,10 +1105,10 @@
     },
     {
       "trans": [  -549.02,  27.58, -135.28], // slanted rock wall next to right statue by big machine
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -549.02,  27.58, -135.28, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -549.02,  27.58, -135.28, 10],
       "lump": {
         "name":"mincan-skill-ghost-34",
         "alt-actor":"mincan-skill-34",
@@ -1117,10 +1117,10 @@
     },
     {
       "trans": [ -548.75,  36.47, -127.57], // top of right statue by big machine, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -548.75,  36.47, -127.57, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -548.75,  36.47, -127.57, 10],
       "lump": {
         "name":"mincan-skill-ghost-35",
         "alt-actor":"mincan-skill-35"
@@ -1128,10 +1128,10 @@
     },
     {
       "trans": [ -521.24,  26.40, -104.25], // on big machine by left statue
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -521.24,  26.40, -104.25, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -521.24,  26.40, -104.25, 10],
       "lump": {
         "name":"mincan-skill-ghost-36",
         "alt-actor":"mincan-skill-36",
@@ -1140,10 +1140,10 @@
     },
     {
       "trans": [ -518.01,  40.03, -118.29], // top of left statue by big machine, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -518.01,  40.03, -118.29, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -518.01,  40.03, -118.29, 10],
       "lump": {
         "name":"mincan-skill-ghost-37",
         "alt-actor":"mincan-skill-37"
@@ -1151,10 +1151,10 @@
     },
     {
       "trans": [  -577.5133, 25.8707, -194.3372], // in back behind/between square pillar and wall
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -577.5133, 25.8707, -194.3372, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -577.5133, 25.8707, -194.3372, 10],
       "lump": {
         "name":"mincan-skill-ghost-38",
         "alt-actor":"mincan-skill-38"
@@ -1162,10 +1162,10 @@
     },
     {
       "trans": [  -564.5665, 13.7385, -221.3127], // in back inside bottom of log
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -564.5665, 13.7385, -221.3127, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -564.5665, 13.7385, -221.3127, 10],
       "lump": {
         "name":"mincan-skill-ghost-39",
         "alt-actor":"mincan-skill-39",
@@ -1174,10 +1174,10 @@
     },
     {
       "trans": [  -519.7846, 13.0159, -204.6654], // underwater, among/below shrubbery
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -519.7846, 13.0159, -204.6654, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -519.7846, 13.0159, -204.6654, 10],
       "lump": {
         "name":"mincan-skill-ghost-40",
         "alt-actor":"mincan-skill-40"
@@ -1185,10 +1185,10 @@
     },
     {
       "trans": [ -522.64,  27.98, -254.76], // on wall in very back, starting a climb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -522.64,  27.98, -254.76, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -522.64,  27.98, -254.76, 10],
       "lump": {
         "name":"mincan-skill-ghost-41",
         "alt-actor":"mincan-skill-41"
@@ -1196,10 +1196,10 @@
     },
     {
       "trans": [ -529.40,  32.83, -263.01], // on wall in very back, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -529.40,  32.83, -263.01, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -529.40,  32.83, -263.01, 10],
       "lump": {
         "name":"mincan-skill-ghost-42",
         "alt-actor":"mincan-skill-42"
@@ -1207,10 +1207,10 @@
     },
     {
       "trans": [ -534.73,  35.12, -265.44], // on wall in very back, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -534.73,  35.12, -265.44, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -534.73,  35.12, -265.44, 10],
       "lump": {
         "name":"mincan-skill-ghost-43",
         "alt-actor":"mincan-skill-43",
@@ -1219,10 +1219,10 @@
     },
     {
       "trans": [ -534.60,  51.47, -271.34], // on wall in very back, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -534.60,  51.47, -271.34, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -534.60,  51.47, -271.34, 10],
       "lump": {
         "name":"mincan-skill-ghost-44",
         "alt-actor":"mincan-skill-44"
@@ -1230,10 +1230,10 @@
     },
     {
       "trans": [ -549.41,  51.80, -270.47], // on wall in very back, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -549.41,  51.80, -270.47, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -549.41,  51.80, -270.47, 10],
       "lump": {
         "name":"mincan-skill-ghost-45",
         "alt-actor":"mincan-skill-45"
@@ -1241,10 +1241,10 @@
     },
     {
       "trans": [ -563.34,  48.22, -259.14], // in bushes on wall in very back, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -563.34,  48.22, -259.14, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -563.34,  48.22, -259.14, 10],
       "lump": {
         "name":"mincan-skill-ghost-46",
         "alt-actor":"mincan-skill-46"
@@ -1252,10 +1252,10 @@
     },
     {
       "trans": [ -571.42,  55.75, -254.94], // on wall in very back, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -571.42,  55.75, -254.94, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -571.42,  55.75, -254.94, 10],
       "lump": {
         "name":"mincan-skill-ghost-47",
         "alt-actor":"mincan-skill-47"
@@ -1263,10 +1263,10 @@
     },
     {
       "trans": [ -570.77,  65.40, -265.59], // on wall in very back, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -570.77,  65.40, -265.59, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -570.77,  65.40, -265.59, 10],
       "lump": {
         "name":"mincan-skill-ghost-48",
         "alt-actor":"mincan-skill-48",
@@ -1275,10 +1275,10 @@
     },
     {
       "trans": [ -558.34,  81.60, -272.41], // on wall in very back, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -558.34,  81.60, -272.41, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -558.34,  81.60, -272.41, 10],
       "lump": {
         "name":"mincan-skill-ghost-49",
         "alt-actor":"mincan-skill-49"
@@ -1286,10 +1286,10 @@
     },
     {
       "trans": [ -579.92,  61.03, -266.92], // in crack up high in wall in very back, jump from ^^^^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -579.92,  61.03, -266.92, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -579.92,  61.03, -266.92, 10],
       "lump": {
         "name":"mincan-skill-ghost-50",
         "alt-actor":"mincan-skill-50"
@@ -1297,10 +1297,10 @@
     },
     {
       "trans": [ -571.51,  50.72, -242.25], // up on wall in very back, jump from ^^^^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -571.51,  50.72, -242.25, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -571.51,  50.72, -242.25, 10],
       "lump": {
         "name":"mincan-skill-ghost-51",
         "alt-actor":"mincan-skill-51"
@@ -1308,10 +1308,10 @@
     },
     {
       "trans": [ -579.32,  52.38, -221.72], // up on wall in very back - from ^ either clip thru ground and ez jump, or can do abah/cancel in corner against wall
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -579.32,  52.38, -221.72, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -579.32,  52.38, -221.72, 10],
       "lump": {
         "name":"mincan-skill-ghost-52",
         "alt-actor":"mincan-skill-52"
@@ -1319,10 +1319,10 @@
     },
     {
       "trans": [ -510.85,  13.81, -236.99], // in water on right in corner pocket between rocks
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -510.85,  13.81, -236.99, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -510.85,  13.81, -236.99, 10],
       "lump": {
         "name":"mincan-skill-ghost-53",
         "alt-actor":"mincan-skill-53"
@@ -1330,10 +1330,10 @@
     },
     {
       "trans": [     -541.4802, 8.4217, -191.8506], // deep underwater, corner between rocks near pads
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     -541.4802, 8.4217, -191.8506, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     -541.4802, 8.4217, -191.8506, 10],
       "lump": {
         "name":"mincan-skill-ghost-54",
         "alt-actor":"mincan-skill-54"
@@ -1341,10 +1341,10 @@
     },
     {
       "trans": [  -510.6150, 21.0242, -243.7451], // behind blocky rocks on right side of water
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -510.6150, 21.0242, -243.7451, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -510.6150, 21.0242, -243.7451, 10],
       "lump": {
         "name":"mincan-skill-ghost-55",
         "alt-actor":"mincan-skill-55"
@@ -1352,10 +1352,10 @@
     },
     {
       "trans": [    -497.9583, 23.8588, -240.7897], // in crevice of rock wall, right side of water
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [    -497.9583, 23.8588, -240.7897, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [    -497.9583, 23.8588, -240.7897, 10],
       "lump": {
         "name":"mincan-skill-ghost-56",
         "alt-actor":"mincan-skill-56"
@@ -1363,10 +1363,10 @@
     },
     {
       "trans": [   -506.08,  32.79, -249.49], // mid level on rock wall, right side of water
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -506.08,  32.79, -249.49, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -506.08,  32.79, -249.49, 10],
       "lump": {
         "name":"mincan-skill-ghost-57",
         "alt-actor":"mincan-skill-57"
@@ -1374,10 +1374,10 @@
     },
     {
       "trans": [ -555.03,  45.19, -146.05], // on top of big slippery rock mountain, behind bush - extended w/ late spin from skill-35 (top of statue)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -555.03,  45.19, -146.05, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -555.03,  45.19, -146.05, 10],
       "lump": {
         "name":"mincan-skill-ghost-58",
         "alt-actor":"mincan-skill-58",
@@ -1386,10 +1386,10 @@
     },
     {
       "trans": [ -555.02,  50.98, -130.63], // on rock cliff above statue near big machine, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -555.02,  50.98, -130.63, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -555.02,  50.98, -130.63, 10],
       "lump": {
         "name":"mincan-skill-ghost-59",
         "alt-actor":"mincan-skill-59"
@@ -1397,10 +1397,10 @@
     },
     {
       "trans": [  -521.8859, 16.3231, -253.2064], // behind square rocks in back just above water line
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -521.8859, 16.3231, -253.2064, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -521.8859, 16.3231, -253.2064, 10],
       "lump": {
         "name":"mincan-skill-ghost-60",
         "alt-actor":"mincan-skill-60"
@@ -1410,10 +1410,10 @@
     // HOVER ORBS
     {
       "trans": [  -481.76, 128.44, -205.94 ], // way up on rock wall, behind "neck"
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -481.76, 128.44, -205.94, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -481.76, 128.44, -205.94, 10],
       "lump": {
         "name":"mincan-skill-ghost-hover-01",
         "alt-actor":"mincan-skill-hover-01",
@@ -1422,10 +1422,10 @@
     },
     {
       "trans": [ -587.78, 120.04, -225.28 ], // way up on rock wall, on exposed point
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -587.78, 120.04, -225.28, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -587.78, 120.04, -225.28, 10],
       "lump": {
         "name":"mincan-skill-ghost-hover-02",
         "alt-actor":"mincan-skill-hover-02",
@@ -1434,10 +1434,10 @@
     },
     {
       "trans": [ -545.59, 119.00, -282.00], // way up on rock wall, on plateau
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -545.59, 119.00, -282.00, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -545.59, 119.00, -282.00, 10],
       "lump": {
         "name":"mincan-skill-ghost-hover-03",
         "alt-actor":"mincan-skill-hover-03",
@@ -1446,10 +1446,10 @@
     },
     {
       "trans": [ -505.92,  63.22, -121.29], // way up on rock wall, near end of entrance corridor
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -505.92,  63.22, -121.29, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -505.92,  63.22, -121.29, 10],
       "lump": {
         "name":"mincan-skill-ghost-hover-04",
         "alt-actor":"mincan-skill-hover-04",
@@ -1458,10 +1458,10 @@
     },
     {
       "trans": [ -634.37, 189.11, -256.52 ], // way WAY up on rock wall, on exposed point
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -634.37, 189.11, -256.52, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -634.37, 189.11, -256.52, 10],
       "lump": {
         "name":"mincan-skill-ghost-hover-05",
         "alt-actor":"mincan-skill-hover-05",
@@ -1470,10 +1470,10 @@
     },
     {
       "trans": [     -544.5816, 103.5674, -224.1470], // top of mirror/glass gem thing
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     -544.5816, 103.5674, -224.1470, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     -544.5816, 103.5674, -224.1470, 10],
       "lump": {
         "name":"mincan-skill-ghost-hover-06",
         "alt-actor":"mincan-skill-hover-06",

@@ -48,20 +48,20 @@
   "actors" : [
     {
       "trans": [ -168.70, 15.5189, -452.26], // duh
-      "etype": "rift-ring-ingame",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ -0.0002, 0.9891, 0.0000, 0.1471], // quaternion
-      "bsphere": [ -168.70, 15.5189, -452.26, 10], // bounding sphere
+      "etype": "rift-ring-ingame",
+      "game_task": 0, 
+      "quat" : [ -0.0002, 0.9891, 0.0000, 0.1471],
+      "bsphere": [ -168.70, 15.5189, -452.26, 10],
       "lump": {
         "name":"stadiumd-rift-ring-ingame-01"
       }
     },
     {
       "trans": [ -168.70, 12.5189, -452.26], // hidden behind rift ring
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ -0.0002, 0.9891, 0.0000, 0.1471], // quaternion
-      "bsphere": [ -168.70, 12.5189, -452.26, 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [ -0.0002, 0.9891, 0.0000, 0.1471],
+      "bsphere": [ -168.70, 12.5189, -452.26, 10],
       "lump": {
         "name":"stadiumd-warp-gate-01",
         "distance": ["meters", 5.0]
@@ -71,40 +71,40 @@
     // ORBS
     {
       "trans": [   -215.4640, -20.2805, -322.2596], // on right wall at beginning of section with gutters on left/right
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -215.4640, -20.2805, -322.2596, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -215.4640, -20.2805, -322.2596, 10],
       "lump": {
         "name":"stadiumd-skill-01"
       }
     },
     {
       "trans": [     -453.9079, -24.5355, -424.4596], // in corner of wall at hairpin turn towards end, behind lower pipes
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     -453.9079, -24.5355, -424.4596, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     -453.9079, -24.5355, -424.4596, 10],
       "lump": {
         "name":"stadiumd-skill-02"
       }
     },
     {
       "trans": [    -334.1182, -22.2952, -419.0741], // on right wall in last bit of tunnel section, after dip
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [    -334.1182, -22.2952, -419.0741, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [    -334.1182, -22.2952, -419.0741, 10],
       "lump": {
         "name":"stadiumd-skill-03"
       }
     },
     {
       "trans": [  117.26,  -7.30, -533.91], // bottom of support, on small no-burn ledge, south side
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  117.26,  -7.30, -533.91, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  117.26,  -7.30, -533.91, 10],
       "lump": {
         "name":"stadiumd-skill-04"
       }
@@ -113,10 +113,10 @@
     // HOVER ORBS
     {
       "trans": [   -0.61,   8.52, -613.48  ], // on slant surface on back of structure with trapdoor to race
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -0.61,   8.52, -613.48, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -0.61,   8.52, -613.48, 10],
       "lump": {
         "name":"stadiumd-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -124,10 +124,10 @@
     },
     {
       "trans": [    -195.9732, -5.8644, -516.6757], // up over head exiting tunnel section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -195.9732, -5.8644, -516.6757, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -195.9732, -5.8644, -516.6757, 10],
       "lump": {
         "name":"stadiumd-skill-hover-02",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -137,10 +137,10 @@
     // GHOSTS
     {
       "trans": [   -215.4640, -20.2805, -322.2596], // on right wall at beginning of section with gutters on left/right
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -215.4640, -20.2805, -322.2596, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -215.4640, -20.2805, -322.2596, 10],
       "lump": {
         "name":"stadiumd-skill-ghost-01",
         "alt-actor":"stadiumd-skill-01"
@@ -148,10 +148,10 @@
     },
     {
       "trans": [     -453.9079, -24.5355, -424.4596], // in corner of wall at hairpin turn towards end, behind lower pipes
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     -453.9079, -24.5355, -424.4596, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     -453.9079, -24.5355, -424.4596, 10],
       "lump": {
         "name":"stadiumd-skill-ghost-02",
         "alt-actor":"stadiumd-skill-02"
@@ -159,10 +159,10 @@
     },
     {
       "trans": [    -334.1182, -22.2952, -419.0741], // on right wall in last bit of tunnel section, after dip
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [    -334.1182, -22.2952, -419.0741, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [    -334.1182, -22.2952, -419.0741, 10],
       "lump": {
         "name":"stadiumd-skill-ghost-03",
         "alt-actor":"stadiumd-skill-03"
@@ -170,10 +170,10 @@
     },
     {
       "trans": [  117.26,  -7.30, -533.91], // bottom of support, on small no-burn ledge, south side
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  117.26,  -7.30, -533.91, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  117.26,  -7.30, -533.91, 10],
       "lump": {
         "name":"stadiumd-skill-ghost-04",
         "alt-actor":"stadiumd-skill-04"
@@ -183,10 +183,10 @@
     // HOVER ORBS
     {
       "trans": [   -0.61,   8.52, -613.48  ], // on slant surface on back of structure with trapdoor to race
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -0.61,   8.52, -613.48, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -0.61,   8.52, -613.48, 10],
       "lump": {
         "name":"stadiumd-skill-ghost-hover-01",
         "alt-actor":"stadiumd-skill-hover-01",
@@ -195,10 +195,10 @@
     },
     {
       "trans": [    -195.9732, -5.8644, -516.6757], // up over head exiting tunnel section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -195.9732, -5.8644, -516.6757, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -195.9732, -5.8644, -516.6757, 10],
       "lump": {
         "name":"stadiumd-skill-ghost-hover-02",
         "alt-actor":"stadiumd-skill-hover-02",

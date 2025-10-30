@@ -49,110 +49,110 @@
     // 'palcab (cable bridge to palace)
     {
       "trans": [ 223.5,    385.13,  149.0   ], // #t  left side of rotating hexagon
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [223.5,    385.13,  149.0 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [223.5,    385.13,  149.0 , 10],
       "lump": {
         "name": "palcab-skill-01"
       }
     },
     {
       "trans": [  224.19, 431.10, -134.85], // on pipe under platforms at start
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 224.19, 431.10, -134.85 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 224.19, 431.10, -134.85 , 10],
       "lump": {
         "name": "palcab-skill-02"
       }
     },
     {
       "trans": [  248.83, 453.06, -152.21], // up on roof corner at start (right side facing elevator), infin jump on corner of shaft building
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 248.83, 453.06, -152.21 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 248.83, 453.06, -152.21 , 10],
       "lump": {
         "name": "palcab-skill-03"
       }
     },
     {
       "trans": [  236.36, 461.59, -125.24], // up on roof top at start, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 236.36, 461.59, -125.24 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 236.36, 461.59, -125.24 , 10],
       "lump": {
         "name": "palcab-skill-04"
       }
     },
     {
       "trans": [  233.34, 460.24, -114.17], // up on roof top at start, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 233.34, 460.24, -114.17 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 233.34, 460.24, -114.17 , 10],
       "lump": {
         "name": "palcab-skill-05"
       }
     },
     {
       "trans": [  220.58, 460.28, -115.10], // up on roof top at start, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 220.58, 460.28, -115.10 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 220.58, 460.28, -115.10 , 10],
       "lump": {
         "name": "palcab-skill-06"
       }
     },
     {
       "trans": [       208.8948, 454.5490, -151.6282], // up on roof top at start, inside pipe
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      208.8948, 454.5490, -151.6282 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      208.8948, 454.5490, -151.6282 , 10],
       "lump": {
         "name": "palcab-skill-07"
       }
     },
     {
       "trans": [  213.32, 406.15, -35.94], // on small slippery pipes on right side of first hotplates
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  213.32, 406.15, -35.94 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  213.32, 406.15, -35.94 , 10],
       "lump": {
         "name": "palcab-skill-08"
       }
     },
     {
       "trans": [    210.1691, 394.4302, 344.3318], // edge grab left side between tubes on last hot plate
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [    210.1691, 394.4302, 344.3318 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [    210.1691, 394.4302, 344.3318 , 10],
       "lump": {
         "name": "palcab-skill-09"
       }
     },
     {
       "trans": [  212.71, 381.93, 260.32], // light on main pipe up from lower collapse area
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  212.71, 381.93, 260.32, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  212.71, 381.93, 260.32, 10],
       "lump": {
         "name": "palcab-skill-10"
       }
     },
     {
       "trans": [  208.8688, 390.4, 207.9713], // 2nd turret
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  208.8688, 390.4, 207.9713, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  208.8688, 390.4, 207.9713, 10],
       "lump": {
         "name": "palcab-skill-11",
         "alt-actor": "pal-gun-turret-1"
@@ -160,50 +160,50 @@
     },
     {
       "trans": [  192.54, 389.62, 389.01], // extended on right side final turret section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  192.54, 389.62, 389.01, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  192.54, 389.62, 389.01, 10],
       "lump": {
         "name": "palcab-skill-12"
       }
     },
     {
       "trans": [ 205.24, 390.88, 401.60], // extended on left side final turret section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  205.24, 390.88, 401.60, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  205.24, 390.88, 401.60, 10],
       "lump": {
         "name": "palcab-skill-13"
       }
     },
     {
       "trans": [ 190.88, 393.02, 424.05], // extended on right side final turret section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  190.88, 393.02, 424.05, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  190.88, 393.02, 424.05, 10],
       "lump": {
         "name": "palcab-skill-14"
       }
     },
     {
       "trans": [ 203.71, 394.38, 435.14], // extended on left side final turret section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  203.71, 394.38, 435.14, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  203.71, 394.38, 435.14, 10],
       "lump": {
         "name": "palcab-skill-15"
       }
     },
     {
       "trans": [ 196.86, 401.54, 448.04], // small gap between plats in final turret section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  196.86, 401.54, 448.04, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  196.86, 401.54, 448.04, 10],
       "lump": {
         "name": "palcab-skill-16"
       }
@@ -212,10 +212,10 @@
     // CRATES
     {
       "trans": [ 219.13, 394.0,  66.58], // atop 2nd hot plates
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [   0.0,  1.0,  0.0,  0.0 ], // quaternion
-      "bsphere": [  219.13, 394.0,  66.58, 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [   0.0,  1.0,  0.0,  0.0 ],
+      "bsphere": [  219.13, 394.0,  66.58, 10],
       "lump": {
         "name": "palcab-crate-1",
         "crate-type": "iron",
@@ -230,10 +230,10 @@
     // GHOSTS
     {
       "trans": [ 223.5,    385.13,  149.0   ], // #t  left side of rotating hexagon
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [223.5,    385.13,  149.0 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [223.5,    385.13,  149.0 , 10],
       "lump": {
         "name":"palcab-skill-ghost-01",
         "alt-actor":"palcab-skill-01"
@@ -241,10 +241,10 @@
     },
     {
       "trans": [  224.19, 431.10, -134.85], // on pipe under platforms at start
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 224.19, 431.10, -134.85 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 224.19, 431.10, -134.85 , 10],
       "lump": {
         "name":"palcab-skill-ghost-02",
         "alt-actor":"palcab-skill-02"
@@ -252,10 +252,10 @@
     },
     {
       "trans": [  248.83, 453.06, -152.21], // up on roof corner at start (right side facing elevator), infin jump on corner of shaft building
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 248.83, 453.06, -152.21 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 248.83, 453.06, -152.21 , 10],
       "lump": {
         "name":"palcab-skill-ghost-03",
         "alt-actor":"palcab-skill-03"
@@ -263,10 +263,10 @@
     },
     {
       "trans": [  236.36, 461.59, -125.24], // up on roof top at start, follow from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 236.36, 461.59, -125.24 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 236.36, 461.59, -125.24 , 10],
       "lump": {
         "name":"palcab-skill-ghost-04",
         "alt-actor":"palcab-skill-04"
@@ -274,10 +274,10 @@
     },
     {
       "trans": [  233.34, 460.24, -114.17], // up on roof top at start, follow from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 233.34, 460.24, -114.17 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 233.34, 460.24, -114.17 , 10],
       "lump": {
         "name":"palcab-skill-ghost-05",
         "alt-actor":"palcab-skill-05"
@@ -285,10 +285,10 @@
     },
     {
       "trans": [  220.58, 460.28, -115.10], // up on roof top at start, follow from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 220.58, 460.28, -115.10 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 220.58, 460.28, -115.10 , 10],
       "lump": {
         "name":"palcab-skill-ghost-06",
         "alt-actor":"palcab-skill-06"
@@ -296,10 +296,10 @@
     },
     {
       "trans": [       208.8948, 454.5490, -151.6282], // up on roof top at start, inside pipe
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      208.8948, 454.5490, -151.6282 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      208.8948, 454.5490, -151.6282 , 10],
       "lump": {
         "name":"palcab-skill-ghost-07",
         "alt-actor":"palcab-skill-07"
@@ -307,10 +307,10 @@
     },
     {
       "trans": [  213.32, 406.15, -35.94], // on small slippery pipes on right side of first hotplates
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  213.32, 406.15, -35.94 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  213.32, 406.15, -35.94 , 10],
       "lump": {
         "name":"palcab-skill-ghost-08",
         "alt-actor":"palcab-skill-08"
@@ -318,10 +318,10 @@
     },
     {
       "trans": [    210.1691, 394.4302, 344.3318], // edge grab left side between tubes on last hot plate
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [    210.1691, 394.4302, 344.3318 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [    210.1691, 394.4302, 344.3318 , 10],
       "lump": {
         "name":"palcab-skill-ghost-09",
         "alt-actor":"palcab-skill-09"
@@ -329,10 +329,10 @@
     },
     {
       "trans": [  212.71, 381.93, 260.32], // light on main pipe up from lower collapse area
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  212.71, 381.93, 260.32, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  212.71, 381.93, 260.32, 10],
       "lump": {
         "name":"palcab-skill-ghost-10",
         "alt-actor":"palcab-skill-10"
@@ -340,10 +340,10 @@
     },
     {
       "trans": [  208.8688, 390.4, 207.9713], // 2nd turret
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  208.8688, 390.4, 207.9713, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  208.8688, 390.4, 207.9713, 10],
       "lump": {
         "name":"palcab-skill-ghost-11",
         "alt-actor":"palcab-skill-11"
@@ -352,10 +352,10 @@
     },
     {
       "trans": [  192.54, 389.62, 389.01], // extended on right side final turret section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  192.54, 389.62, 389.01, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  192.54, 389.62, 389.01, 10],
       "lump": {
         "name":"palcab-skill-ghost-12",
         "alt-actor":"palcab-skill-12"
@@ -363,10 +363,10 @@
     },
     {
       "trans": [ 205.24, 390.88, 401.60], // extended on left side final turret section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  205.24, 390.88, 401.60, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  205.24, 390.88, 401.60, 10],
       "lump": {
         "name":"palcab-skill-ghost-13",
         "alt-actor":"palcab-skill-13"
@@ -374,10 +374,10 @@
     },
     {
       "trans": [ 190.88, 393.02, 424.05], // extended on right side final turret section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  190.88, 393.02, 424.05, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  190.88, 393.02, 424.05, 10],
       "lump": {
         "name":"palcab-skill-ghost-14",
         "alt-actor":"palcab-skill-14"
@@ -385,10 +385,10 @@
     },
     {
       "trans": [ 203.71, 394.38, 435.14], // extended on left side final turret section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  203.71, 394.38, 435.14, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  203.71, 394.38, 435.14, 10],
       "lump": {
         "name":"palcab-skill-ghost-15",
         "alt-actor":"palcab-skill-15"
@@ -396,10 +396,10 @@
     },
     {
       "trans": [ 196.86, 401.54, 448.04], // small gap between plats in final turret section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  196.86, 401.54, 448.04, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  196.86, 401.54, 448.04, 10],
       "lump": {
         "name":"palcab-skill-ghost-16",
         "alt-actor":"palcab-skill-16"

@@ -48,60 +48,60 @@
   "actors" : [
     {
       "trans": [  -439.1120, 45.4011, -63.9887], // on top of electric barrier (hint for getting over invis wall for next two orbs)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -439.1120, 45.4011, -63.9887, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -439.1120, 45.4011, -63.9887, 10],
       "lump": {
         "name":"rubblea2-skill-01"
       }
     },
     {
       "trans": [  -407.6864, 34.5306, -75.1777], // follow from ^, on wall before "river" room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -407.6864, 34.5306, -75.1777, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -407.6864, 34.5306, -75.1777, 10],
       "lump": {
         "name":"rubblea2-skill-02"
       }
     },
     {
       "trans": [  -352.9021, 57.9007, -105.7132], // follow from ^, further up wall against citywall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -352.9021, 57.9007, -105.7132, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -352.9021, 57.9007, -105.7132, 10],
       "lump": {
         "name":"rubblea2-skill-03"
       }
     },
     {
       "trans": [ -201.13,  34.18,  -124.74  ], // on rubble just past last elec barrier before rubbleb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -201.13,  34.18,  -124.74 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -201.13,  34.18,  -124.74 , 10],
       "lump": {
         "name":"rubblea2-skill-04"
       }
     },
     {
       "trans": [ -186.48,  47.82,  -123.41  ], // tricky jump up from higher from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -186.48,  47.82,  -123.41 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -186.48,  47.82,  -123.41 , 10],
       "lump": {
         "name":"rubblea2-skill-05"
       }
     },
     {
       "trans": [ -201.97,  50.20,  -115.01  ], // jump over from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -201.97,  50.20,  -115.01 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -201.97,  50.20,  -115.01 , 10],
       "lump": {
         "name":"rubblea2-skill-06"
       }
@@ -112,10 +112,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -124,10 +124,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

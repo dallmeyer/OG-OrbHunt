@@ -48,50 +48,50 @@
   "actors" : [
     {
       "trans": [ 456.60,   23.0,    1299.11 ], // #t up above pipes on right wall of lobb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [456.60,   23.0,    1299.1, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [456.60,   23.0,    1299.1, 10],
       "lump": {
         "name": "gungame-skill-1"
       }
     },
     {
       "trans": [ 419.0,    9.2,     1302.0  ], // #t behind lockers in corner of lobb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [419.0,    9.2,     1302.0, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [419.0,    9.2,     1302.0, 10],
       "lump": {
         "name": "gungame-skill-2"
       }
     },
     {
       "trans": [ 410.50,   21.2,    1267.3  ], // #t up high in beginning of left path (nearby pillar is infin jump
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [410.50,   21.2,    1267.3, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [410.50,   21.2,    1267.3, 10],
       "lump": {
         "name": "gungame-skill-3"
       }
     },
     {
       "trans": [ 464.5,    21.1,   1200.4  ], // #t up behind pipes at last 90 turn (jump from pipes or infin jump pillar
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [464.5,    21.1,   1200.4, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [464.5,    21.1,   1200.4, 10],
       "lump": {
         "name": "gungame-skill-4"
       }
     },
     {
       "trans": [ 441.0,    18.8,    1252.8  ], // top of pipe towards end of pat
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [441.0,    18.8,    1252.8, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [441.0,    18.8,    1252.8, 10],
       "lump": {
         "name": "gungame-skill-5",
         "bob-scale": ["float", -1.0] // no bob
@@ -99,60 +99,60 @@
     },
     {
       "trans": [ 438.0,   18.0,    1219.0899 ], // #t  up in corner of one of the closets where dummies spaw
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [438.0,   18.0,    1219.0899, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [438.0,   18.0,    1219.0899, 10],
       "lump": {
         "name": "gungame-skill-6"
       }
     },
     {
       "trans": [ 441.6495, 21.1013, 1293.8140], // middle of entry room, lamps are infin jump
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [441.6495, 21.1013, 1293.8140, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [441.6495, 21.1013, 1293.8140, 10],
       "lump": {
         "name": "gungame-skill-7"
       }
     },
     {
       "trans": [ 380.9314, 8.8534, 1242.2930], // tight space between walls, south hallway
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [380.9314, 8.8534, 1242.2930, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [380.9314, 8.8534, 1242.2930, 10],
       "lump": {
         "name": "gungame-skill-8"
       }
     },
     {
       "trans": [374.3707, 21.0822, 1202.1622], // lamp in center of west hallway
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [374.3707, 21.0822, 1202.1622, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [374.3707, 21.0822, 1202.1622, 10],
       "lump": {
         "name": "gungame-skill-9"
       }
     },
     {
       "trans": [ 403.9920, 21.8445, 1173.5394], // behind pipes, north hallway on west side
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 403.9920, 21.8445, 1173.5394, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 403.9920, 21.8445, 1173.5394, 10],
       "lump": {
         "name": "gungame-skill-10"
       }
     },
     {
       "trans": [ 479.2696, 21.0756, 1214.3334], // mini awning near ceiling, northeast corner (abah cancel from lower awning)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 479.2696, 21.0756, 1214.3334, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 479.2696, 21.0756, 1214.3334, 10],
       "lump": {
         "name": "gungame-skill-11"
       }
@@ -161,10 +161,10 @@
     // GHOSTS
     {
       "trans": [ 456.60,   23.0,    1299.11 ], // #t up above pipes on right wall of lobb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [456.60,   23.0,    1299.1, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [456.60,   23.0,    1299.1, 10],
       "lump": {
         "name":"gungame-skill-ghost-1",
         "alt-actor":"gungame-skill-1"
@@ -172,10 +172,10 @@
     },
     {
       "trans": [ 419.0,    9.2,     1302.0  ], // #t behind lockers in corner of lobb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [419.0,    9.2,     1302.0, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [419.0,    9.2,     1302.0, 10],
       "lump": {
         "name":"gungame-skill-ghost-2",
         "alt-actor":"gungame-skill-2"
@@ -183,10 +183,10 @@
     },
     {
       "trans": [ 410.50,   21.2,    1267.3  ], // #t up high in beginning of left path (nearby pillar is infin jump
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [410.50,   21.2,    1267.3, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [410.50,   21.2,    1267.3, 10],
       "lump": {
         "name":"gungame-skill-ghost-3",
         "alt-actor":"gungame-skill-3"
@@ -194,10 +194,10 @@
     },
     {
       "trans": [ 464.5,    21.1,   1200.4  ], // #t up behind pipes at last 90 turn (jump from pipes or infin jump pillar
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [464.5,    21.1,   1200.4, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [464.5,    21.1,   1200.4, 10],
       "lump": {
         "name":"gungame-skill-ghost-4",
         "alt-actor":"gungame-skill-4"
@@ -205,10 +205,10 @@
     },
     {
       "trans": [ 441.0,    18.8,    1252.8  ], // top of pipe towards end of pat
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [441.0,    18.8,    1252.8, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [441.0,    18.8,    1252.8, 10],
       "lump": {
         "name":"gungame-skill-ghost-5",
         "alt-actor":"gungame-skill-5",
@@ -217,10 +217,10 @@
     },
     {
       "trans": [ 438.0,   18.0,    1219.0899 ], // #t  up in corner of one of the closets where dummies spaw
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [438.0,   18.0,    1219.0899, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [438.0,   18.0,    1219.0899, 10],
       "lump": {
         "name":"gungame-skill-ghost-6",
         "alt-actor":"gungame-skill-6"
@@ -228,10 +228,10 @@
     },
     {
       "trans": [ 441.6495, 21.1013, 1293.8140], // middle of entry room, lamps are infin jump
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [441.6495, 21.1013, 1293.8140, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [441.6495, 21.1013, 1293.8140, 10],
       "lump": {
         "name":"gungame-skill-ghost-7",
         "alt-actor":"gungame-skill-7"
@@ -239,10 +239,10 @@
     },
     {
       "trans": [ 380.9314, 8.8534, 1242.2930], // tight space between walls, south hallway
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [380.9314, 8.8534, 1242.2930, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [380.9314, 8.8534, 1242.2930, 10],
       "lump": {
         "name":"gungame-skill-ghost-8",
         "alt-actor":"gungame-skill-8"
@@ -250,10 +250,10 @@
     },
     {
       "trans": [374.3707, 21.0822, 1202.1622], // lamp in center of west hallway
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [374.3707, 21.0822, 1202.1622, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [374.3707, 21.0822, 1202.1622, 10],
       "lump": {
         "name":"gungame-skill-ghost-9",
         "alt-actor":"gungame-skill-9"
@@ -261,10 +261,10 @@
     },
     {
       "trans": [ 403.9920, 21.8445, 1173.5394], // behind pipes, north hallway on west side
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 403.9920, 21.8445, 1173.5394, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 403.9920, 21.8445, 1173.5394, 10],
       "lump": {
         "name":"gungame-skill-ghost-10",
         "alt-actor":"gungame-skill-10"
@@ -272,10 +272,10 @@
     },
     {
       "trans": [ 479.2696, 21.0756, 1214.3334], // mini awning near ceiling, northeast corner (abah cancel from lower awning)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 479.2696, 21.0756, 1214.3334, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 479.2696, 21.0756, 1214.3334, 10],
       "lump": {
         "name":"gungame-skill-ghost-11",
         "alt-actor":"gungame-skill-11"

@@ -48,40 +48,40 @@
   "actors" : [
     {
       "trans": [  256.3369, 438.5318, 40.9540 ], // on top of pipe normally for dax section 1
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  256.3369, 438.5318, 40.9540 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  256.3369, 438.5318, 40.9540 , 10],
       "lump": {
         "name":"factoryc-skill-01"
       }
     },
     {
       "trans": [ 246.8089, 443.8191, 29.2461], // up on wall near daxter section 1, abah from somewhere below prob (no hint)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 246.8089, 443.8191, 29.2461, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 246.8089, 443.8191, 29.2461, 10],
       "lump": {
         "name":"factoryc-skill-02"
       }
     },
     {
       "trans": [  237.6888, 443.7457, -9.4690 ], // up on other fence, extended concussor from ^ or maybe yolo from further in
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  237.6888, 443.7457, -9.4690 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  237.6888, 443.7457, -9.4690 , 10],
       "lump": {
         "name":"factoryc-skill-03"
       }
     },
     {
       "trans": [ 284.7176, 438.5527, 20.6536 ], // robot dispenser
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 284.7176, 438.5527, 20.6536, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 284.7176, 438.5527, 20.6536, 10],
       "lump": {
         "name":"factoryc-skill-04",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -89,30 +89,30 @@
     },
     {
       "trans": [  288.5544, 462.1465, 26.7624], // up near light in ceiling, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   288.5544, 462.1465, 26.7624, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   288.5544, 462.1465, 26.7624, 10],
       "lump": {
         "name":"factoryc-skill-05"
       }
     },
     {
       "trans": [  278.4325, 419.0000, -23.4446], // down on small ledge, in gap where you ramp back with faccar
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  278.4325, 419.0000, -23.4446, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  278.4325, 419.0000, -23.4446, 10],
       "lump": {
         "name":"factoryc-skill-06"
       }
     },
     {
       "trans": [  279.9868, 440.2846, -172.8056 ], // daxter section 2 pipe
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  279.9868, 440.2846, -172.8056, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  279.9868, 440.2846, -172.8056, 10],
       "lump": {
         "name":"factoryc-skill-07",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -120,80 +120,80 @@
     },
     {
       "trans": [  271.0295, 453.9122, -175.2046], // up on fence above dax section 2 pipe, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  271.0295, 453.9122, -175.2046, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  271.0295, 453.9122, -175.2046, 10],
       "lump": {
         "name":"factoryc-skill-08"
       }
     },
     {
       "trans": [  280.0260, 452.3353, -190.2418], // other end of pipe for dax section 2, extended from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  280.0260, 452.3353, -190.2418, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  280.0260, 452.3353, -190.2418, 10],
       "lump": {
         "name":"factoryc-skill-09"
       }
     },
     {
       "trans": [  281.6166, 457.5547, -196.5325], // up on top of electric things in daxter hanging section 2
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  281.6166, 457.5547, -196.5325, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  281.6166, 457.5547, -196.5325, 10],
       "lump": {
         "name":"factoryc-skill-10"
       }
     },
     {
       "trans": [  281.6166, 457.5547, -211.4410], // up on top of electric things in daxter hanging section 2
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  281.6166, 457.5547, -211.4410, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  281.6166, 457.5547, -211.4410, 10],
       "lump": {
         "name":"factoryc-skill-11"
       }
     },
     {
       "trans": [  290.7455, 457.5547, -211.4410], // up on top of electric things in daxter hanging section 2
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  290.7455, 457.5547, -211.4410, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  290.7455, 457.5547, -211.4410, 10],
       "lump": {
         "name":"factoryc-skill-12"
       }
     },
     {
       "trans": [  290.7455, 457.5547, -196.5557], // up on top of electric things in daxter hanging section 2
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  290.7455, 457.5547, -196.5557, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  290.7455, 457.5547, -196.5557, 10],
       "lump": {
         "name":"factoryc-skill-13"
       }
     },
     {
       "trans": [   65.7096, 424.9984, -179.9402], // on small ledge in big open corner with 2 moving plats and escalator
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  65.7096, 424.9984, -179.9402, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  65.7096, 424.9984, -179.9402, 10],
       "lump": {
         "name":"factoryc-skill-14"
       }
     },
     {
       "trans": [   39.4344, 451.6003, -127.6152 ], // daxter section 3 light above starting pipe
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  39.4344, 451.6003, -127.6152, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  39.4344, 451.6003, -127.6152, 10],
       "lump": {
         "name":"factoryc-skill-15",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -201,10 +201,10 @@
     },
     {
       "trans": [   38.9129, 459.8749, -129.8307 ], // up on fence above dax section 3 pipe, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  38.9129, 459.8749, -129.8307, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  38.9129, 459.8749, -129.8307, 10],
       "lump": {
         "name":"factoryc-skill-16",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -212,10 +212,10 @@
     },
     {
       "trans": [   24.2453, 470.3955, -130.0340 ], // other end of pipe for dax section 3, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  24.2453, 470.3955, -130.0340, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  24.2453, 470.3955, -130.0340, 10],
       "lump": {
         "name":"factoryc-skill-17"
       }
@@ -227,10 +227,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -239,10 +239,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

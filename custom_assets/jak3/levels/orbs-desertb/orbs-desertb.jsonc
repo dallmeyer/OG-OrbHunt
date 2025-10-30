@@ -48,20 +48,20 @@
   "actors" : [
     {
       "trans": [  2364.5, 46.173, 759.65], // warp gate to deswalk, up on rocks between desert a/d
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0000,      -0.8683,       0.0000,       0.4959], // quaternion
-      "bsphere": [  2364.5, 46.173, 759.65, 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [ 0.0000,      -0.8683,       0.0000,       0.4959],
+      "bsphere": [  2364.5, 46.173, 759.65, 10],
       "lump": {
         "name":"desertb-warp-gate-1"
       }
     },
     {
       "trans": [ 2314.37,  34.20,  255.44 ], // warp gate from precurd, one-way, near garage doors
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0000,  0.6029,  0.0000,  -0.7978], // quaternion
-      "bsphere": [ 2314.37,  34.20,  255.44 , 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [ 0.0000,  0.6029,  0.0000,  -0.7978],
+      "bsphere": [ 2314.37,  34.20,  255.44 , 10],
       "lump": {
         "name":"desertb-warp-gate-2"
       }
@@ -69,10 +69,10 @@
 
     {
       "trans": [ 2737.61,  15.72,  -145.63], // out on peninsula near carrier, gotta go halfway onto race course, jetboard launch over tentacle nav mesh
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 2737.61,  15.72,  -145.63, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 2737.61,  15.72,  -145.63, 10],
       "lump": {
         "name":"desertb-skill-01"
         // "pickup-amount": ["float", 2.0] // abah hint
@@ -80,20 +80,20 @@
     },
     {
       "trans": [ 2785.41,  58.49,  -242.21 ], // further out/up on peninsula from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 2785.41,  58.49,  -242.21 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 2785.41,  58.49,  -242.21 , 10],
       "lump": {
         "name":"desertb-skill-02"
       }
     },
     {
       "trans": [   2725.4157, 63.7750, -192.5580], // further up on peninsula from ^^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  2725.4157, 63.7750, -192.5580, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  2725.4157, 63.7750, -192.5580, 10],
       "lump": {
         "name":"desertb-skill-03",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -101,40 +101,40 @@
     },
     {
       "trans": [  2733.8007, 76.7906, -204.3922], // abah from ^, further up peninsula
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  2733.8007, 76.7906, -204.3922 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  2733.8007, 76.7906, -204.3922 , 10],
       "lump": {
         "name":"desertb-skill-04"
       }
     },
     {
       "trans": [   2769.9260, 100.9607, -246.7121], // follow from ^, even further up peninsula
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  2769.9260, 100.9607, -246.7121, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  2769.9260, 100.9607, -246.7121, 10],
       "lump": {
         "name":"desertb-skill-05"
       }
     },
     {
       "trans": [ 2783.03,  133.24,  -296.10 ], // follow from ^, even further up peninsula, to slippery peak. tough jetboard jump
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 2783.03,  133.24,  -296.10 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 2783.03,  133.24,  -296.10 , 10],
       "lump": {
         "name":"desertb-skill-06"
       }
     },
     {
       "trans": [ 2844.60,  33.86,  -331.54 ], // follow from ^, even further out on peninsula
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 2844.60,  33.86,  -331.54 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 2844.60,  33.86,  -331.54 , 10],
       "lump": {
         "name":"desertb-skill-07"
       }
@@ -145,10 +145,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -157,10 +157,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

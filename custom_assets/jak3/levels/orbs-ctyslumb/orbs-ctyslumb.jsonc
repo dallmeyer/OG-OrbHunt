@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [  548.8572, 16.9844, -259.3113], // support beam for grind rail
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  548.8572, 16.9844, -259.3113, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  548.8572, 16.9844, -259.3113, 10],
       "lump": {
         "name":"ctyslumb-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -59,30 +59,30 @@
     },
     {
       "trans": [  549.7073, 36.4378, -261.6217], // abah from ^ up over sign to next orb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  549.7073, 36.4378, -261.6217, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  549.7073, 36.4378, -261.6217, 10],
       "lump": {
         "name":"ctyslumb-skill-02"
       }
     },
     {
       "trans": [   540.9146, 31.2421, -277.2693], // behind bushes up on windowsill, abah from ^^ to concussor bullshit
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  540.9146, 31.2421, -277.2693, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  540.9146, 31.2421, -277.2693, 10],
       "lump": {
         "name":"ctyslumb-skill-03"
       }
     },
     {
       "trans": [  395.9884,  37.2598,  -11.5370], // more up on ledge behind billboard near ctygenb, concussor up from skill-205
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  395.9884,  37.2598,  -11.5370, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  395.9884,  37.2598,  -11.5370, 10],
       "lump": {
         "name":"ctyslumb-skill-04",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -90,10 +90,10 @@
     },
     {
       "trans": [  464.0697, 53.4630, -3.3176], // up on top of buildings, abah from ^ and sliiiiiide
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   464.0697, 53.4630, -3.3176, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   464.0697, 53.4630, -3.3176, 10],
       "lump": {
         "name":"ctyslumb-skill-05"
       }
@@ -102,10 +102,10 @@
     
     {
       "trans": [  615.1626, 43.7958, -97.1635], // up on high ledge in middle tall buildings, kinda SE
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  615.1626, 43.7958, -97.1635, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  615.1626, 43.7958, -97.1635, 10],
       "lump": {
         "name":"ctyslumb-skill-hover-01",
         "pickup-amount": ["float", 3.0] // hover
@@ -114,10 +114,10 @@
 
     {
       "trans": [ 393.6899, 7.9418, -53.9724 ], // samos by white barrier
-      "etype": "samos-npc",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [  0.0000, 0.6918, 0.0000, -0.7220], // quaternion
-      "bsphere": [ 393.6899, 7.9418, -53.9724 , 6.928242206573486 ], // bounding sphere
+      "etype": "samos-npc",
+      "game_task": 0, 
+      "quat" : [  0.0000, 0.6918, 0.0000, -0.7220],
+      "bsphere": [ 393.6899, 7.9418, -53.9724 , 6.928242206573486 ],
       "lump": {
         "name": "ctyslumb-samos-npc",
         "task-actor": ["int32", 64]
@@ -125,10 +125,10 @@
     },
     {
       "trans": [ 393.6899, 10.9418, -53.9724 ], // 
-      "etype": "fuel-cell",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
-      "bsphere": [ 393.6899, 10.9418, -53.9724 , 6.928242206573486 ], // bounding sphere
+      "etype": "fuel-cell",
+      "game_task": 0, 
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
+      "bsphere": [ 393.6899, 10.9418, -53.9724 , 6.928242206573486 ],
       "lump": {
         "name": "ctyslumb-fuel-cell",
         "level-idx": ["int32", 40]
@@ -138,10 +138,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -150,10 +150,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

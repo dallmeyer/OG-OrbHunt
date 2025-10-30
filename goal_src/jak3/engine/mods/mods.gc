@@ -1484,6 +1484,14 @@
       (set! (cdr (res-lump-struct door 'open-test pair)) '(#t))) ;; (or (task-closed? "precursor-destroy-ship-resolution") (and (entity-status? "dp-bipedal-100" subtask-complete no-birth) (entity-status? "dp-bipedal-101" subtask-complete no-birth) (entity-status? "dp-bipedal-102" subtask-complete no-birth) (entity-status? "dp-bipedal-103" subtask-complete no-birth)))))
     )
 
+  ;; desertf - open marauder stronghold doors when jak in bubble
+  (when (in-bubble-m? 1461.43  24.70  3030.57 50.0)
+    (send-event (process-by-ename "des-draw-bridge-1") 'lower))
+  (when (in-bubble-m? 1555.90  24.21  3002.20 10.0)
+    (send-event (process-by-ename "des-garage-door-1") 'open))
+  (when (in-bubble-m? 1496.96  24.19  2938.46 10.0)
+    (send-event (process-by-ename "des-garage-door-2") 'open))
+
   ;; deswalk 
   (let ((r1525 (region-lookup-by-id 1525)))
     (when r1525

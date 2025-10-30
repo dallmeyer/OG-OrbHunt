@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [  -23.2945, -118.5666, 184.3938], // small ledge near laser on track leading to halfpipe
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -23.2945, -118.5666, 184.3938, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -23.2945, -118.5666, 184.3938, 10],
       "lump": {
         "name":"sewh-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -59,30 +59,30 @@
     },
     {
       "trans": [  -20.1699, -98.5661, 182.3578], // way up on ledge, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -20.1699, -98.5661, 182.3578, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -20.1699, -98.5661, 182.3578, 10],
       "lump": {
         "name":"sewh-skill-02"
       }
     },
     {
       "trans": [  4.9759, -119.5546, 206.4721], // around corner after the last elec gate, missing collision troll
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  4.9759, -119.5546, 206.4721, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  4.9759, -119.5546, 206.4721, 10],
       "lump": {
         "name":"sewh-skill-03"
       }
     },
     {
       "trans": [  99.1514, -109.5979, 222.0334], // elec gate, hint for crate above
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  99.1514, -109.5979, 222.0334, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  99.1514, -109.5979, 222.0334, 10],
       "lump": {
         "name":"sewh-skill-04",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -93,10 +93,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -105,10 +105,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

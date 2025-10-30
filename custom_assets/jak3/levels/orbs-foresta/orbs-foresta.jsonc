@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [  -716.76,  60.89,  1015.61 ], // hidden warp to precura
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [  -0.0001, -0.8291, 0.0001, 0.5590], // quaternion
-      "bsphere": [  -716.76,  60.89,  1015.61 , 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [  -0.0001, -0.8291, 0.0001, 0.5590],
+      "bsphere": [  -716.76,  60.89,  1015.61 , 10],
       "lump": {
         "name":"foresta-warp-gate-1"
       }
@@ -59,39 +59,39 @@
 
     {
       "trans": [  -717.8199, 81.8071, 1015.3881], // above astro viewer precursor crap
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -717.8199, 81.8071, 1015.3881, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -717.8199, 81.8071, 1015.3881, 10],
       "lump": {
         "name":"foresta-skill-01"
       }
     },
     {
       "trans": [ -711.9548, 62.2917, 993.1277 ], // on midde_ball_a
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -711.9548, 62.2917, 993.1277 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -711.9548, 62.2917, 993.1277 , 10],
       "lump": {
         "name":"foresta-skill-02"
       }
     },
     {
       "trans": [ -711.9548, 62.2917, 993.1277 ], // on smaller_ball_a
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -711.9548, 62.2917, 993.1277 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -711.9548, 62.2917, 993.1277 , 10],
       "lump": {
         "name":"foresta-skill-03"
       }
     },{
       "trans": [  -495.9042, 44.0981, 918.4297], // on top of exit door back to mhcity
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -495.9042, 44.0981, 918.4297, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -495.9042, 44.0981, 918.4297, 10],
       "lump": {
         "name":"foresta-skill-04",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -99,39 +99,39 @@
     },
     {
       "trans": [ -497.1578, 60.3181, 910.2331 ], // up on rocks right below IJ above exit door, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -497.1578, 60.3181, 910.2331 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -497.1578, 60.3181, 910.2331 , 10],
       "lump": {
         "name":"foresta-skill-05"
       }
     },
     {
       "trans": [  -495.8556, 79.0327, 946.7406], // IJ up from ^, cross over to right side
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -495.8556, 79.0327, 946.7406 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -495.8556, 79.0327, 946.7406 , 10],
       "lump": {
         "name":"foresta-skill-06"
       }
     },{
       "trans": [  -516.6869, 75.8959, 887.0502], // in elbow of support for wall, follow from ^^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -516.6869, 75.8959, 887.0502, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -516.6869, 75.8959, 887.0502, 10],
       "lump": {
         "name":"foresta-skill-07"
       }
     },
     {
       "trans": [  -500.4753, 75.6327, 883.9509 ], // on rock behind support, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -500.4753, 75.6327, 883.9509 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -500.4753, 75.6327, 883.9509 , 10],
       "lump": {
         "name":"foresta-skill-08"
       }
@@ -141,10 +141,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -153,10 +153,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

@@ -49,20 +49,20 @@
     // 'tombd (entrance)
     {
       "trans": [214.72,  -6.96, 1016.48], // up on left wall, abah
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [214.72,  -6.96, 1016.48, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [214.72,  -6.96, 1016.48, 10],
       "lump": {
         "name":"tombd-skill-01"
       }
     },
     {
       "trans": [173.45, -23.68, 997.35], // up on right wall, abah
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [173.45, -23.68, 997.35, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [173.45, -23.68, 997.35, 10],
       "lump": {
         "name":"tombd-skill-02",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -70,10 +70,10 @@
     },
     {
       "trans": [170.75,  -6.21, 992.56], // up on right wall, abah from^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [170.75,  -6.21, 992.56, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [170.75,  -6.21, 992.56, 10],
       "lump": {
         "name":"tombd-skill-03"
       }
@@ -82,10 +82,10 @@
     // GHOSTS
     {
       "trans": [214.72,  -6.96, 1016.48], // up on left wall, abah
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [214.72,  -6.96, 1016.48, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [214.72,  -6.96, 1016.48, 10],
       "lump": {
         "name":"tombd-skill-ghost-01",
         "alt-actor":"tombd-skill-01"
@@ -93,10 +93,10 @@
     },
     {
       "trans": [173.45, -23.68, 997.35], // up on right wall, abah
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [173.45, -23.68, 997.35, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [173.45, -23.68, 997.35, 10],
       "lump": {
         "name":"tombd-skill-ghost-02",
         "alt-actor":"tombd-skill-02",
@@ -105,10 +105,10 @@
     },
     {
       "trans": [170.75,  -6.21, 992.56], // up on right wall, abah from^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [170.75,  -6.21, 992.56, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [170.75,  -6.21, 992.56, 10],
       "lump": {
         "name":"tombd-skill-ghost-03",
         "alt-actor":"tombd-skill-03"

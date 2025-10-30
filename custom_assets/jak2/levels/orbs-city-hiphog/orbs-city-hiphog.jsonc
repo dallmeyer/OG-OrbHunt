@@ -48,20 +48,20 @@
   "actors" : [
     {
       "trans": [ -84.02,   9.6,     1308.33 ], // #t  wrestling arena (jetboard lulz)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-84.02,   9.6,     1308.3, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-84.02,   9.6,     1308.3, 10],
       "lump": {
         "name": "hiphog-skill-1"
       }
     },
     {
       "trans": [ -105.96,   10.05,   1289.6  ], // mirror or
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-105.96,   10.05,   1289.6, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-105.96,   10.05,   1289.6, 10],
       "lump": {
         "name": "hiphog-skill-2",
         "bob-scale": ["float", -1.0] // no bob
@@ -69,10 +69,10 @@
     },
     {
       "trans": [ -80.4,    9.35,    1324.90 ], // behind whack a mole
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-80.4,    9.35,    1324.9, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-80.4,    9.35,    1324.9, 10],
       "lump": {
         "name": "hiphog-skill-3",
         "bob-scale": ["float", -1.0] // no bob
@@ -80,10 +80,10 @@
     },
     {
       "trans": [ -97.20,  15.0, 1314.0], // above trash can on left side (jetboard from outside)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-97.20,  15.0, 1314.0, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-97.20,  15.0, 1314.0, 10],
       "lump": {
         "name": "hiphog-skill-4"
       }
@@ -92,10 +92,10 @@
     // GHOSTS
     {
       "trans": [ -84.02,   9.6,     1308.33 ], // #t  wrestling arena (jetboard lulz)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-84.02,   9.6,     1308.3, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-84.02,   9.6,     1308.3, 10],
       "lump": {
         "name":"hiphog-skill-ghost-1",
         "alt-actor":"hiphog-skill-1"
@@ -103,10 +103,10 @@
     },
     {
       "trans": [ -105.96,   10.05,   1289.6  ], // mirror or
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-105.96,   10.05,   1289.6, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-105.96,   10.05,   1289.6, 10],
       "lump": {
         "name":"hiphog-skill-ghost-2",
         "alt-actor":"hiphog-skill-2",
@@ -115,10 +115,10 @@
     },
     {
       "trans": [ -80.4,    9.35,    1324.90 ], // behind whack a mole
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-80.4,    9.35,    1324.9, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-80.4,    9.35,    1324.9, 10],
       "lump": {
         "name":"hiphog-skill-ghost-3",
         "alt-actor":"hiphog-skill-3",
@@ -127,10 +127,10 @@
     },
     {
       "trans": [ -97.20,  15.0, 1314.0], // above trash can on left side (jetboard from outside)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-97.20,  15.0, 1314.0, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-97.20,  15.0, 1314.0, 10],
       "lump": {
         "name":"hiphog-skill-ghost-4",
         "alt-actor":"hiphog-skill-4"

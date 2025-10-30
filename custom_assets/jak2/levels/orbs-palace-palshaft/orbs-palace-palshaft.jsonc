@@ -48,70 +48,70 @@
   "actors" : [
     {
       "trans": [  136.50, 418.59, 650.59], // in top room of elevator leaving palroof 
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 136.50, 418.59, 650.59, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 136.50, 418.59, 650.59, 10],
       "lump": {
         "name":"palshaft-skill-01"
       }
     },
     {
       "trans": [ 137.76, 346.45, 649.97], // in middle room of elevator leaving palent/throne
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 137.76, 346.45, 649.97, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 137.76, 346.45, 649.97, 10],
       "lump": {
         "name":"palshaft-skill-02"
       }
     },
     {
       "trans": [ 159.76,  33.21, 667.55], // on lamp in lobby before elevator
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 159.76,  33.21, 667.55, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 159.76,  33.21, 667.55, 10],
       "lump": {
         "name":"palshaft-skill-03"
       }
     },
     {
       "trans": [ 239.11,  25.91, 686.34], // behind flag on right in lobby
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 239.11,  25.91, 686.34, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 239.11,  25.91, 686.34, 10],
       "lump": {
         "name":"palshaft-skill-04"
       }
     },
     {
       "trans": [  192.0408, 33.5670, 705.0563], // on inner door frame from lobby to ctypal
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  192.0408, 33.5670, 705.0563, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  192.0408, 33.5670, 705.0563, 10],
       "lump": {
         "name":"palshaft-skill-05"
       }
     },
     {
       "trans": [ 145.32,  27.5, 686.27], // behind flag on left in lobby
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  145.32,  27.5, 686.27, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  145.32,  27.5, 686.27, 10],
       "lump": {
         "name":"palshaft-skill-06"
       }
     },
     {
       "trans": [  140.4161, 26.4181, 655.0899], // behind pipe near elevator at lobby
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   140.4161, 26.4181, 655.0899, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   140.4161, 26.4181, 655.0899, 10],
       "lump": {
         "name":"palshaft-skill-07"
       }
@@ -120,10 +120,10 @@
     // GHOSTS
     {
       "trans": [  136.50, 418.59, 650.59], // in top room of elevator leaving palroof
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 136.50, 418.59, 650.59, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 136.50, 418.59, 650.59, 10],
       "lump": {
         "name":"palshaft-skill-ghost-01",
         "alt-actor":"palshaft-skill-01"
@@ -131,10 +131,10 @@
     },
     {
       "trans": [ 137.76, 346.45, 649.97], // in middle room of elevator leaving palent/throne
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 137.76, 346.45, 649.97, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 137.76, 346.45, 649.97, 10],
       "lump": {
         "name":"palshaft-skill-ghost-02",
         "alt-actor":"palshaft-skill-02"
@@ -142,10 +142,10 @@
     },
     {
       "trans": [ 159.76,  33.21, 667.55], // on lamp in lobby before elevator
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 159.76,  33.21, 667.55, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 159.76,  33.21, 667.55, 10],
       "lump": {
         "name":"palshaft-skill-ghost-03",
         "alt-actor":"palshaft-skill-03"
@@ -153,10 +153,10 @@
     },
     {
       "trans": [ 239.11,  25.91, 686.34], // behind flag on right in lobby
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 239.11,  25.91, 686.34, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 239.11,  25.91, 686.34, 10],
       "lump": {
         "name":"palshaft-skill-ghost-04",
         "alt-actor":"palshaft-skill-04"
@@ -164,10 +164,10 @@
     },
     {
       "trans": [  192.0408, 33.5670, 705.0563], // on inner door frame from lobby to ctypal
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  192.0408, 33.5670, 705.0563, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  192.0408, 33.5670, 705.0563, 10],
       "lump": {
         "name":"palshaft-skill-ghost-05",
         "alt-actor":"palshaft-skill-05"
@@ -175,10 +175,10 @@
     },
     {
       "trans": [ 145.32,  27.5, 686.27], // behind flag on left in lobby
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  145.32,  27.5, 686.27, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  145.32,  27.5, 686.27, 10],
       "lump": {
         "name":"palshaft-skill-ghost-06",
         "alt-actor":"palshaft-skill-06"
@@ -186,10 +186,10 @@
     },
     {
       "trans": [  140.4161, 26.4181, 655.0899], // behind pipe near elevator at lobby
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   140.4161, 26.4181, 655.0899, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   140.4161, 26.4181, 655.0899, 10],
       "lump": {
         "name":"palshaft-skill-ghost-07",
         "alt-actor":"palshaft-skill-07"

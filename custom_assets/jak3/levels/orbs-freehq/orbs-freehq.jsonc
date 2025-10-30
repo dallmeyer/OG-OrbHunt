@@ -48,20 +48,20 @@
   "actors" : [
     {
       "trans": [  725.0091, 80.9897, -542.3114], // in corner behind computers
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  725.0091, 80.9897, -542.3114, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  725.0091, 80.9897, -542.3114, 10],
       "lump": {
         "name":"freehq-skill-01"
       }
     },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"freehq-skill-2"
     //   }
@@ -69,10 +69,10 @@
 
     {
       "trans": [  724.6013, 82.6424, -573.4409], // in corner behind invis wall (hover over)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  724.6013, 82.6424, -573.4409, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  724.6013, 82.6424, -573.4409, 10],
       "lump": {
         "name":"freehq-skill-hover-01",
         "pickup-amount": ["float", 3.0] // hover
@@ -81,10 +81,10 @@
   
     {
       "trans": [ 699.6630249023438, 80.3718032836914, -548.14697265625], // samos by white barrier
-      "etype": "keira-npc",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [  0.0, 1.0, 0.0, 0.0], // quaternion
-      "bsphere": [ 699.6630249023438, 80.3718032836914, -548.14697265625 , 6.928242206573486 ], // bounding sphere
+      "etype": "keira-npc",
+      "game_task": 0, 
+      "quat" : [  0.0, 1.0, 0.0, 0.0],
+      "bsphere": [ 699.6630249023438, 80.3718032836914, -548.14697265625 , 6.928242206573486 ],
       "lump": {
         "name": "freehq-keira-npc",
         "task-actor": ["int32", 65]
@@ -92,10 +92,10 @@
     },
     {
       "trans": [ 696.93,  82.90,  -554.04 ], // 
-      "etype": "fuel-cell",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
-      "bsphere": [ 696.93,  82.90,  -554.04 , 6.928242206573486 ], // bounding sphere
+      "etype": "fuel-cell",
+      "game_task": 0, 
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
+      "bsphere": [ 696.93,  82.90,  -554.04 , 6.928242206573486 ],
       "lump": {
         "name": "freehq-fuel-cell",
         "level-idx": ["int32", 14]
@@ -105,10 +105,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -117,10 +117,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

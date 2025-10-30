@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [ -490.8584, -128.8874, 71.7643], // warp gate to sewk
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0000, 0.8279, 0.0000, -0.5608], // quaternion
-      "bsphere": [  -490.8584, -128.8874, 71.7643, 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [ 0.0000, 0.8279, 0.0000, -0.5608],
+      "bsphere": [  -490.8584, -128.8874, 71.7643, 10],
       "lump": {
         "name":"sewf-warp-gate-1"
       }
@@ -59,30 +59,30 @@
 
     {
       "trans": [   -521.6514, -127.9911, -24.2447], // ledge grab in corner gap near stinky pipes
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -521.6514, -127.9911, -24.2447, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -521.6514, -127.9911, -24.2447, 10],
       "lump": {
         "name":"sewf-skill-01"
       }
     },
     {
       "trans": [  -525.6568, -115.1519, 39.9169], // left pipe on wall above stinky pipes
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -525.6568, -115.1519, 39.9169, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -525.6568, -115.1519, 39.9169, 10],
       "lump": {
         "name":"sewf-skill-02"
       }
     },
     {
       "trans": [  -519.5316, -110.5725, 39.8915], // lip of pipe, up from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -519.5316, -110.5725, 39.8915, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -519.5316, -110.5725, 39.8915, 10],
       "lump": {
         "name":"sewf-skill-03",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -90,40 +90,40 @@
     },
     {
       "trans": [  -512.8589, -96.5020, 57.7958], // up on bolt on wall, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -512.8589, -96.5020, 57.7958, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -512.8589, -96.5020, 57.7958, 10],
       "lump": {
         "name":"sewf-skill-04"
       }
     },
     {
       "trans": [ -414.08,  -123.90,  9.49 ], // on pipes near airlock to sewe
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -414.08,  -123.90,  9.49 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -414.08,  -123.90,  9.49 , 10],
       "lump": {
         "name":"sewf-skill-05"
       }
     },
     {
       "trans": [  -452.5729, -142.0636, 11.2656], // lip of pipe very close to deathplane, sewe side
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -452.5729, -142.0636, 11.2656, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -452.5729, -142.0636, 11.2656, 10],
       "lump": {
         "name":"sewf-skill-06"
       }
     },
     {
       "trans": [   -493.1290, -142.0789, 20.9209], // lip of pipe very close to deathplane, dead end side
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -493.1290, -142.0789, 20.9209, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -493.1290, -142.0789, 20.9209, 10],
       "lump": {
         "name":"sewf-skill-07"
       }
@@ -133,10 +133,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -145,10 +145,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

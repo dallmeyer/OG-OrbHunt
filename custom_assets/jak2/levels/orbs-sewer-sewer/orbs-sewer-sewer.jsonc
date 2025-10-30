@@ -48,20 +48,20 @@
   "actors" : [
     {
       "trans": [1215.37, -33.67, 455.44], // duh
-      "etype": "rift-ring-ingame",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, -0.3934, 0, 0.9193], // quaternion
-      "bsphere": [1215.37, -33.67, 455.44, 10], // bounding sphere
+      "etype": "rift-ring-ingame",
+      "game_task": 0, 
+      "quat" : [0, -0.3934, 0, 0.9193],
+      "bsphere": [1215.37, -33.67, 455.44, 10],
       "lump": {
         "name":"sewer-rift-ring-ingame-01"
       }
     },
     {
       "trans": [1215.37, -37.67, 455.44], // hidden behind rift ring
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0.5219, 0, 0.8529], // quaternion
-      "bsphere": [1215.37, -37.67, 455.44, 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [0, 0.5219, 0, 0.8529],
+      "bsphere": [1215.37, -37.67, 455.44, 10],
       "lump": {
         "name":"sewer-warp-gate-01",
         "distance": ["meters", 5.0]
@@ -71,10 +71,10 @@
     // ORBS
     {
       "trans": [    1221.0242, -49.4166, 513.5903], // behind pipe near start, abah in between pipes
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1221.0242, -49.4166, 513.5903, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1221.0242, -49.4166, 513.5903, 10],
       "lump": {
         "name":"sewer-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -82,260 +82,260 @@
     },
     {
       "trans": [  1213.70, -35.4, 512.72], // on top of elbow pipe up at first water, abah from ^ or just jump from upper/exit hallway 
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1213.70, -35.4, 512.72, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1213.70, -35.4, 512.72, 10],
       "lump": {
         "name":"sewer-skill-02"
       }
     },
     {
       "trans": [      1205.4307, -35.8071, 528.8681], // behind pipe, on top of arch above 2nd hallway, extended from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1205.4307, -35.8071, 528.8681, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1205.4307, -35.8071, 528.8681, 10],
       "lump": {
         "name":"sewer-skill-03"
       }
     },
     {
       "trans": [   1294.5946, -50.6985, 591.2061], // behind pipe past 2nd triplet of pipe platforms
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1294.5946, -50.6985, 591.2061, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1294.5946, -50.6985, 591.2061, 10],
       "lump": {
         "name":"sewer-skill-04"
       }
     },
     {
       "trans": [      1396.49, -34.60, 459.78], // up in elbow of pipe above 2nd turret
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1396.49, -34.60, 459.78, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1396.49, -34.60, 459.78, 10],
       "lump": {
         "name":"sewer-skill-05"
       }
     },
     {
       "trans": [ 1417.09, -33.59, 462.90], // up on pipe above 2nd turret, towards east wall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1417.09, -33.59, 462.90, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1417.09, -33.59, 462.90, 10],
       "lump": {
         "name":"sewer-skill-06"
       }
     },
     {
       "trans": [ 1353.80, -31.27, 455.88], // on west end of long pipe above 2nd turret, follow from ^^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1353.80, -31.27, 455.88, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1353.80, -31.27, 455.88, 10],
       "lump": {
         "name":"sewer-skill-07"
       }
     },
     {
       "trans": [ 1422.91, -38.09, 481.57], // on U bend pipe near 2nd turret
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1422.91, -38.09, 481.57, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1422.91, -38.09, 481.57, 10],
       "lump": {
         "name":"sewer-skill-08"
       }
     },
     {
       "trans": [  1395.3784, -53.3807, 476.1357], // in water between pipes that connect into 2nd turret platform
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1395.3784, -53.3807, 476.1357, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1395.3784, -53.3807, 476.1357, 10],
       "lump": {
         "name":"sewer-skill-09"
       }
     },
     {
       "trans": [  1426.28, -30.61, 476.22], // on back of pipe near east wall by 2nd turret, extended from other pipes (skill-06)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1426.28, -30.61, 476.22, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1426.28, -30.61, 476.22, 10],
       "lump": {
         "name":"sewer-skill-10"
       }
     },
     {
       "trans": [      1428.3188, -53.7816, 457.2809], // in water behind pipe on east wall in 2nd turret room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1428.3188, -53.7816, 457.2809, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1428.3188, -53.7816, 457.2809, 10],
       "lump": {
         "name":"sewer-skill-11"
       }
     },
     {
       "trans": [  1354.92, -54.11, 429.32], // in water atop pipe in NW corner of 2nd turret room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1354.92, -54.11, 429.32, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1354.92, -54.11, 429.32, 10],
       "lump": {
         "name":"sewer-skill-12"
       }
     },
     {
       "trans": [ 1131.35, -41.35, 434.65], // on far side of pipe on west wall in 4th turret room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1131.35, -41.35, 434.65, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1131.35, -41.35, 434.65, 10],
       "lump": {
         "name":"sewer-skill-13"
       }
     },
     {
       "trans": [  1140.24, -32.99, 433.31], // atop pipe in 4th turret room, DJ spin slide from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1140.24, -32.99, 433.31, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1140.24, -32.99, 433.31, 10],
       "lump": {
         "name":"sewer-skill-14"
       }
     },
     {
       "trans": [ 1140.53, -33.02, 455.03], // atop pipe, other end, in 4th turret room, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1140.53, -33.02, 455.03, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1140.53, -33.02, 455.03, 10],
       "lump": {
         "name":"sewer-skill-15"
       }
     },
     {
       "trans": [ 1137.15, -35.70, 401.40], // atop lamp in 4th turret room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1137.15, -35.70, 401.40, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1137.15, -35.70, 401.40, 10],
       "lump": {
         "name":"sewer-skill-16"
       }
     },
     {
       "trans": [  1167.1260, -53.6651, 401.7607], // behind pipes in water in NE corner of 4th turret room, dive under invis wall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1167.1260, -53.6651, 401.7607, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1167.1260, -53.6651, 401.7607, 10],
       "lump": {
         "name":"sewer-skill-17"
       }
     },
     {
       "trans": [  1167.1479, -53.9147, 452.9927], // in water under/behind 3rd pipe platform in 4th turret room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1167.1479, -53.9147, 452.9927, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1167.1479, -53.9147, 452.9927, 10],
       "lump": {
         "name":"sewer-skill-18"
       }
     },
     {
       "trans": [      1294.3424, -47.5993, 501.0554], // up on vent in corner near falling scaffolding
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1294.3424, -47.5993, 501.0554, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1294.3424, -47.5993, 501.0554, 10],
       "lump": {
         "name":"sewer-skill-19"
       }
     },
     {
       "trans": [  1321.4371, -48.1090, 482.8594], // on support at start of faling scaffolding (let it fall and jump back)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1321.4371, -48.1090, 482.8594, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1321.4371, -48.1090, 482.8594, 10],
       "lump": {
         "name":"sewer-skill-20"
       }
     },
     {
       "trans": [  1308.11, -48.27, 476.68], // on support at end of faling scaffolding (let it fall and jump back)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1308.11, -48.27, 476.68, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1308.11, -48.27, 476.68, 10],
       "lump": {
         "name":"sewer-skill-21"
       }
     },
     {
       "trans": [ 1390.73, -39.22, 704.85], // on pipe on right side of jetboard path, towards end
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1390.73, -39.22, 704.85, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1390.73, -39.22, 704.85, 10],
       "lump": {
         "name":"sewer-skill-22"
       }
     },
     {
       "trans": [  1286.1342, -44.8384, 591.6674], // up near wall on pipe just past 2nd set of 3 pipe plats
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1286.1342, -44.8384, 591.6674, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1286.1342, -44.8384, 591.6674, 10],
       "lump": {
         "name":"sewer-skill-23"
       }
     },
     {
       "trans": [  1206.9101, -54.6435, 601.2299], // underwater between pipe plats in 1st set of 3
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1206.9101, -54.6435, 601.2299, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1206.9101, -54.6435, 601.2299, 10],
       "lump": {
         "name":"sewer-skill-24"
       }
     },
     {
       "trans": [  1139.28, -40.45, 651.00], // up on pipe on right in early jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1139.28, -40.45, 651.00, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1139.28, -40.45, 651.00, 10],
       "lump": {
         "name":"sewer-skill-25"
       }
     },
     {
       "trans": [  1149.75, -52.13, 637.73], // down on pipe on right in early jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1149.75, -52.13, 637.73, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1149.75, -52.13, 637.73, 10],
       "lump": {
         "name":"sewer-skill-26"
       }
     },
     {
       "trans": [ 1309.4372, -49.2562, 541.8405], // in grunt in dark circular hallway room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1309.4372, -49.2562, 541.8405, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1309.4372, -49.2562, 541.8405, 10],
       "lump": {
         "name":"sewer-skill-27",
         "alt-actor": "grunt-193"
@@ -343,10 +343,10 @@
     },
     {
       "trans": [ 1324.7399, -67.4568, 403.0417], // in grunt in dark 'ambush' room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1324.7399, -67.4568, 403.0417, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1324.7399, -67.4568, 403.0417, 10],
       "lump": {
         "name":"sewer-skill-28",
         "alt-actor": "grunt-203"
@@ -354,210 +354,210 @@
     },
     {
       "trans": [ 1161.29, -41.17, 695.19], // on pipe behind pipe on right, earlyish jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1161.29, -41.17, 695.19, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1161.29, -41.17, 695.19, 10],
       "lump": {
         "name":"sewer-skill-29"
       }
     },
     {
       "trans": [ 1163.62, -34.88, 690.22], // on elbow in upper pipe in earlyish jetboard section, up from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1163.62, -34.88, 690.22, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1163.62, -34.88, 690.22, 10],
       "lump": {
         "name":"sewer-skill-30"
       }
     },
     {
       "trans": [ 1173.38, -31.66, 687.40], // on pipe above jetboard section, earlyish, up from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1173.38, -31.66, 687.40, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1173.38, -31.66, 687.40, 10],
       "lump": {
         "name":"sewer-skill-31"
       }
     },
     {
       "trans": [ 1192.83, -33.89, 699.41], // on pipe above jetboard section, earlyish, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1192.83, -33.89, 699.41, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1192.83, -33.89, 699.41, 10],
       "lump": {
         "name":"sewer-skill-32"
       }
     },
     {
       "trans": [ 1214.48, -34.00, 698.08], // on pipe above jetboard section, earlyish, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1214.48, -34.00, 698.08, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1214.48, -34.00, 698.08, 10],
       "lump": {
         "name":"sewer-skill-33"
       }
     },
     {
       "trans": [ 1164.60, -43.38, 661.79], // on pipe on left, early jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1164.60, -43.38, 661.79, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1164.60, -43.38, 661.79, 10],
       "lump": {
         "name":"sewer-skill-34"
       }
     },
     {
       "trans": [ 1216.87, -48.24, 704.67], // on lowish pipe on right, early jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1216.87, -48.24, 704.67, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1216.87, -48.24, 704.67, 10],
       "lump": {
         "name":"sewer-skill-35"
       }
     },
     {
       "trans": [ 1244.74, -53.09, 672.16], // on lower pipe on left, early/mid jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1244.74, -53.09, 672.16, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1244.74, -53.09, 672.16, 10],
       "lump": {
         "name":"sewer-skill-36"
       }
     },
     {
       "trans": [ 1277.28, -58.66, 663.70], // on lower pipe junction under early/mid jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1277.28, -58.66, 663.70, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1277.28, -58.66, 663.70, 10],
       "lump": {
         "name":"sewer-skill-37"
       }
     },
     {
       "trans": [ 1302.00, -47.38, 643.90], // on pipe on right, mid jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1302.00, -47.38, 643.90, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1302.00, -47.38, 643.90, 10],
       "lump": {
         "name":"sewer-skill-38"
       }
     },
     {
       "trans": [ 1291.48, -53.27, 636.72], // on pipe junction below path, mid jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1291.48, -53.27, 636.72, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1291.48, -53.27, 636.72, 10],
       "lump": {
         "name":"sewer-skill-39"
       }
     },
     {
       "trans": [ 1264.57, -41.39, 674.46], // on pipe jup on right behind path, early/mid jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1264.57, -41.39, 674.46, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1264.57, -41.39, 674.46, 10],
       "lump": {
         "name":"sewer-skill-40"
       }
     },
     {
       "trans": [ 1222.22, -47.50, 676.26], // on smaller pipe on left in early/mid jetboard section, close to burn wall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1222.22, -47.50, 676.26, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1222.22, -47.50, 676.26, 10],
       "lump": {
         "name":"sewer-skill-41"
       }
     },
     {
       "trans": [ 1286.07, -39.56, 630.87], // on big pipe on left against wall, mid jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1286.07, -39.56, 630.87, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1286.07, -39.56, 630.87, 10],
       "lump": {
         "name":"sewer-skill-42"
       }
     },
     {
       "trans": [ 1328.79, -37.65, 661.23], // on overhead pipe in mid jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1328.79, -37.65, 661.23, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1328.79, -37.65, 661.23, 10],
       "lump": {
         "name":"sewer-skill-43"
       }
     },
     {
       "trans": [ 1341.42, -40.39, 676.98], // in pipe junction overhead, mid/late jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1341.42, -40.39, 676.98, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1341.42, -40.39, 676.98, 10],
       "lump": {
         "name":"sewer-skill-44"
       }
     },
     {
       "trans": [ 1350.23, -39.36, 689.21], // on pipes overhead, mid/late jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1350.23, -39.36, 689.21, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1350.23, -39.36, 689.21, 10],
       "lump": {
         "name":"sewer-skill-45"
       }
     },
     {
       "trans": [ 1348.55, -33.01, 692.40], // on pipes overhead, mid/late jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1348.55, -33.01, 692.40, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1348.55, -33.01, 692.40, 10],
       "lump": {
         "name":"sewer-skill-46"
       }
     },
     {
       "trans": [ 1426.95, -44.09, 684.56], // on pipes on right side of, lateish jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1426.95, -44.09, 684.56, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1426.95, -44.09, 684.56, 10],
       "lump": {
         "name":"sewer-skill-47"
       }
     },
     {
       "trans": [  1334.2974, -44.4609, 611.3099], // on wall behind pipes at top (1st) valve
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1334.2974, -44.4609, 611.3099, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1334.2974, -44.4609, 611.3099, 10],
       "lump": {
         "name":"sewer-skill-48"
       }
     },
     {
       "trans": [  1343.35, -45.27, 617.25], // on pipe junction near top (1st) valve
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1343.35, -45.27, 617.25, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1343.35, -45.27, 617.25, 10],
       "lump": {
         "name":"sewer-skill-49",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -565,60 +565,60 @@
     },
     {
       "trans": [  1338.17, -36.57, 599.91], // on top of pipes above top (1st) valve, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1338.17, -36.57, 599.91, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1338.17, -36.57, 599.91, 10],
       "lump": {
         "name":"sewer-skill-50"
       }
     },
     {
       "trans": [  1343.38, -53.86, 589.99], // between pipes directly under top (1st) valve, dive under before draining
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1343.38, -53.86, 589.99, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1343.38, -53.86, 589.99, 10],
       "lump": {
         "name":"sewer-skill-51"
       }
     },
     {
       "trans": [      1388.3958, -46.8764, 601.0368], // in gap in east wall of top (1st) valve, behind pipe
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1388.3958, -46.8764, 601.0368, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1388.3958, -46.8764, 601.0368, 10],
       "lump": {
         "name":"sewer-skill-52"
       }
     },
     {
       "trans": [      1374.9904, -41.4666, 585.8250], // in gap in northeast wall of top (1st) valve, behind pipe, boosted from jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1374.9904, -41.4666, 585.8250, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1374.9904, -41.4666, 585.8250, 10],
       "lump": {
         "name":"sewer-skill-53"
       }
     },
     {
       "trans": [ 1335.62, -62.64, 607.38], // on arch below top (1st) valve, even with water level -1
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1335.62, -62.64, 607.38, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1335.62, -62.64, 607.38, 10],
       "lump": {
         "name":"sewer-skill-54"
       }
     },
     {
       "trans": [ 1365.0386, -64.6563, 484.5001], // in mine NE room after 1st valve drain
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1365.0386, -64.6563, 484.5001, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1365.0386, -64.6563, 484.5001, 10],
       "lump": {
         "name":"sewer-skill-55",
         "alt-actor": "sew-mine-b-69"
@@ -626,20 +626,20 @@
     },
     {
       "trans": [     1427.9478, -65.9803, 474.1473], // behind square-ish pipe in NE room east wall, after 1st valve drain
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1427.9478, -65.9803, 474.1473, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1427.9478, -65.9803, 474.1473, 10],
       "lump": {
         "name":"sewer-skill-56"
       }
     },
     {
       "trans": [ 1526.3302, -63.0566, 442.2679], // in flat mine in eastern hallway after 1st valve drain
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1526.3302, -63.0566, 442.2679, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1526.3302, -63.0566, 442.2679, 10],
       "lump": {
         "name":"sewer-skill-57",
         "alt-actor": "sew-mine-a-64"
@@ -647,120 +647,120 @@
     },
     {
       "trans": [ 1257.17, -35.89, 690.52], // pipe on right mid/early jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1257.17, -35.89, 690.52, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1257.17, -35.89, 690.52, 10],
       "lump": {
         "name":"sewer-skill-58"
       }
     },
     {
       "trans": [ 1314.30, -39.38, 654.61], // pipe on right mid jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1314.30, -39.38, 654.61, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1314.30, -39.38, 654.61, 10],
       "lump": {
         "name":"sewer-skill-59"
       }
     },
     {
       "trans": [ 1368.13, -41.44, 676.98], // pipe on left late-ish jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1368.13, -41.44, 676.98, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1368.13, -41.44, 676.98, 10],
       "lump": {
         "name":"sewer-skill-60"
       }
     },
     {
       "trans": [ 1357.20, -50.93, 703.94], // pipe on right late-ish jetboard section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1357.20, -50.93, 703.94, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1357.20, -50.93, 703.94, 10],
       "lump": {
         "name":"sewer-skill-61"
       }
     },
     {
       "trans": [     1405.1844, -40.1349, 626.3839], // pipe on right at end of jetboard section before next room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1405.1844, -40.1349, 626.3839, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1405.1844, -40.1349, 626.3839, 10],
       "lump": {
         "name":"sewer-skill-62"
       }
     },
     {
       "trans": [         1537.3961, -57.6719, 653.9246], // between pipe and wall just before 2nd valve
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [       1537.3961, -57.6719, 653.9246, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [       1537.3961, -57.6719, 653.9246, 10],
       "lump": {
         "name":"sewer-skill-63"
       }
     },
     {
       "trans": [        1465.4049, -61.1486, 375.6432], // between pipe and wall near grinder otw to 2nd valve
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1465.4049, -61.1486, 375.6432, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1465.4049, -61.1486, 375.6432, 10],
       "lump": {
         "name":"sewer-skill-64"
       }
     },
     {
       "trans": [     1497.3214, -58.6825, 564.9889], // above grinder otw to 2nd valve
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1497.3214, -58.6825, 564.9889, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1497.3214, -58.6825, 564.9889, 10],
       "lump": {
         "name":"sewer-skill-65"
       }
     },
     {
       "trans": [   1524.1229, -77.4518, 662.1247], // in corner behind pipe in water below 2nd valve
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1524.1229, -77.4518, 662.1247, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1524.1229, -77.4518, 662.1247, 10],
       "lump": {
         "name":"sewer-skill-66"
       }
     },
     {
       "trans": [   1448.8432, -78.3873, 389.4275], // between wall and pair of vertical grinders, halfway back from 2nd valve
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1448.8432, -78.3873, 389.4275, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1448.8432, -78.3873, 389.4275, 10],
       "lump": {
         "name":"sewer-skill-67"
       }
     },
     {
       "trans": [    1498.8723, -68.5537, 397.1473], // on pipe against wall near grinder/vertical grinder combo, halfway back from 2nd valve
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1498.8723, -68.5537, 397.1473, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1498.8723, -68.5537, 397.1473, 10],
       "lump": {
         "name":"sewer-skill-68"
       }
     },
     {
       "trans": [ 1291.5349, -76.6737, 371.8503], // in mine right next to long bar of horizontal grinders, a bit before 3rd valve
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1291.5349, -76.6737, 371.8503, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1291.5349, -76.6737, 371.8503, 10],
       "lump": {
         "name":"sewer-skill-69",
         "alt-actor": "sew-mine-b-76"
@@ -768,10 +768,10 @@
     },
     {
       "trans": [ 1363.2402, -88.8560, 367.2304], // in 6th flat mine after 3rd valve before exit
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1363.2402, -88.8560, 367.2304, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1363.2402, -88.8560, 367.2304, 10],
       "lump": {
         "name":"sewer-skill-70",
         "alt-actor": "sew-mine-a-58"
@@ -779,90 +779,90 @@
     },
     {
       "trans": [  1291.01, -73.68, 379.41], // behind pipe against wall just before row of grinders on way to last valve
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1291.01, -73.68, 379.41, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1291.01, -73.68, 379.41, 10],
       "lump": {
         "name":"sewer-skill-71"
       }
     },
     {
       "trans": [      1201.9378, -48.1743, 306.1113], // up high in NE corner of NW room, from top platform
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1201.9378, -48.1743, 306.1113, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1201.9378, -48.1743, 306.1113, 10],
       "lump": {
         "name":"sewer-skill-72"
       }
     },
     {
       "trans": [ 1171.52, -65.72, 317.20], // on pipe in middle of NW room, mid level
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1171.52, -65.72, 317.20, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1171.52, -65.72, 317.20, 10],
       "lump": {
         "name":"sewer-skill-73"
       }
     },
     {
       "trans": [     1138.9978, -67.9658, 348.6984], // in corner in NW room, west southish wall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1138.9978, -67.9658, 348.6984, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1138.9978, -67.9658, 348.6984, 10],
       "lump": {
         "name":"sewer-skill-74"
       }
     },
     {
       "trans": [  1164.1381, -68.2608, 302.4107], // in corner in NW room, mid north wall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1164.1381, -68.2608, 302.4107, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1164.1381, -68.2608, 302.4107, 10],
       "lump": {
         "name":"sewer-skill-75"
       }
     },
     {
       "trans": [      1160.3017, -86.1033, 309.4514], // in lower north corner in NW room, in curve of pipe against wall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1160.3017, -86.1033, 309.4514, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1160.3017, -86.1033, 309.4514, 10],
       "lump": {
         "name":"sewer-skill-76"
       }
     },
     {
       "trans": [    1380.9645, -87.6845, 396.9815], // low behind pipes after fully lowering water back to center room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [    1380.9645, -87.6845, 396.9815, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [    1380.9645, -87.6845, 396.9815, 10],
       "lump": {
         "name":"sewer-skill-77"
       }
     },
     {
       "trans": [        1351.9449, -86.5486, 467.2462], // low behind pipe along west wall in middle room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1351.9449, -86.5486, 467.2462, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1351.9449, -86.5486, 467.2462, 10],
       "lump": {
         "name":"sewer-skill-78"
       }
     },
     {
       "trans": [  1398.4814, -88.5560, 550.3741], // in middle mine in last hallway before statue
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1398.4814, -88.5560, 550.3741, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1398.4814, -88.5560, 550.3741, 10],
       "lump": {
         "name":"sewer-skill-79",
         "alt-actor": "sew-mine-a-50"
@@ -870,10 +870,10 @@
     },
     {
       "trans": [  1360.6229, -87.7106, 629.9630], // behind statue
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1360.6229, -87.7106, 629.9630, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1360.6229, -87.7106, 629.9630, 10],
       "lump": {
         "name":"sewer-skill-80",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -881,50 +881,50 @@
     },
     {
       "trans": [   1361.5472, -71.1940, 624.2095], // behind mars head on statue, abah up from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1361.5472, -71.1940, 624.2095, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1361.5472, -71.1940, 624.2095, 10],
       "lump": {
         "name":"sewer-skill-81"
       }
     },
     {
       "trans": [   1296.5532, -69.5006, 592.1237], // extended up onto pipe on right at top of steps past statue
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1296.5532, -69.5006, 592.1237, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1296.5532, -69.5006, 592.1237, 10],
       "lump": {
         "name":"sewer-skill-82"
       }
     },
     {
       "trans": [  1263.7371, -81.3239, 597.4727], // up behind pipe in small space on right after statue before elevator
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1263.7371, -81.3239, 597.4727, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1263.7371, -81.3239, 597.4727, 10],
       "lump": {
         "name":"sewer-skill-83"
       }
     },
     {
       "trans": [ 1238.82, -88.25, 620.04], // in corner just opposite elevator after statue
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1238.82, -88.25, 620.04, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1238.82, -88.25, 620.04, 10],
       "lump": {
         "name":"sewer-skill-84"
       }
     },
     {
       "trans": [      1291.6706, -56.8630, 437.6954], // between pipe/wall after climbing up plats after dark ambush
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1291.6706, -56.8630, 437.6954, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1291.6706, -56.8630, 437.6954, 10],
       "lump": {
         "name":"sewer-skill-85",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -932,50 +932,50 @@
     },
     {
       "trans": [  1291.67, -39.94, 441.36], // up between pipe/wall in dark ambush room, abah up from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1291.67, -39.94, 441.36, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1291.67, -39.94, 441.36, 10],
       "lump": {
         "name":"sewer-skill-86"
       }
     },
     {
       "trans": [      1268.1409, -38.7978, 436.8205], // up behind pipes in hallway after dark ambush
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1268.1409, -38.7978, 436.8205, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1268.1409, -38.7978, 436.8205, 10],
       "lump": {
         "name":"sewer-skill-87"
       }
     },
     {
       "trans": [ 1280.77, -43.43, 363.46], // in bend of pipe connecting to bigger pipe in northern room, boosted from frong area
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1280.77, -43.43, 363.46, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1280.77, -43.43, 363.46, 10],
       "lump": {
         "name":"sewer-skill-88"
       }
     },
     {
       "trans": [ 1327.60, -43.46, 363.67], // other end of pipe, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1327.60, -43.46, 363.67, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1327.60, -43.46, 363.67, 10],
       "lump": {
         "name":"sewer-skill-89"
       }
     },
     {
       "trans": [ 1196.2744, -38.9699, 458.5870], // in amphibian in final hallway with warp gate, before dropping down to start
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1196.2744, -38.9699, 458.5870, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1196.2744, -38.9699, 458.5870, 10],
       "lump": {
         "name":"sewer-skill-90",
         "alt-actor": "amphibian-45"
@@ -985,10 +985,10 @@
     // CRATES
     {
       "trans": [  1358.79, -49.80, 472.12], // on steps down from 2nd turret/water
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [   0.0,  0.9865,  0.0,  0.1636], // quaternion
-      "bsphere": [ 1358.79, -49.80, 472.12, 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [   0.0,  0.9865,  0.0,  0.1636],
+      "bsphere": [ 1358.79, -49.80, 472.12, 10],
       "lump": {
         "name": "sewer-crate-01",
         "crate-type": "iron",
@@ -1002,10 +1002,10 @@
     },
     {
       "trans": [  1149.88, -42.31, 427.16], // on back of circular ledge in 4th turret room, between pipes
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [   0.0,  0.0394,  0.0,  0.9992], // quaternion
-      "bsphere": [ 1149.88, -42.31, 427.16, 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [   0.0,  0.0394,  0.0,  0.9992],
+      "bsphere": [ 1149.88, -42.31, 427.16, 10],
       "lump": {
         "name": "sewer-crate-02",
         "crate-type": "iron",
@@ -1019,10 +1019,10 @@
     },
     {
       "trans": [  1545.27, -78.74, 684.72], // in water below 2nd valve
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [   0.0,  0.8127,  0.0,  -0.5826], // quaternion
-      "bsphere": [ 1545.27, -78.74, 684.72, 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [   0.0,  0.8127,  0.0,  -0.5826],
+      "bsphere": [ 1545.27, -78.74, 684.72, 10],
       "lump": {
         "name": "sewer-crate-03",
         "crate-type": "iron",
@@ -1036,10 +1036,10 @@
     },
     {
       "trans": [ 1393.31, -77.12, 430.61], // on stone platform, level with water after 2nd valve
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [   0.0,  0.2744,  0.0,  -0.9615], // quaternion
-      "bsphere": [ 1393.31, -77.12, 430.61, 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [   0.0,  0.2744,  0.0,  -0.9615],
+      "bsphere": [ 1393.31, -77.12, 430.61, 10],
       "lump": {
         "name": "sewer-crate-04",
         "crate-type": "iron",
@@ -1053,10 +1053,10 @@
     },
     {
       "trans": [ 1291.50, -71.94, 354.56], // on ramp over row of grinders, before last valve
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [    0.1340,      0.3547,     -0.3279,      0.8652], // quaternion
-      "bsphere": [ 1291.50, -71.94, 354.56, 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [    0.1340,      0.3547,     -0.3279,      0.8652],
+      "bsphere": [ 1291.50, -71.94, 354.56, 10],
       "lump": {
         "name": "sewer-crate-05",
         "crate-type": "iron",
@@ -1070,10 +1070,10 @@
     },
     {
       "trans": [ 1155.57, -88.82, 329.07], // below pipes/next to ramp at last valve
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [    0.0,      0.9491,     -0.0,     0.3148 ], // quaternion
-      "bsphere": [ 1155.57, -88.82, 329.07, 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [    0.0,      0.9491,     -0.0,     0.3148 ],
+      "bsphere": [ 1155.57, -88.82, 329.07, 10],
       "lump": {
         "name": "sewer-crate-06",
         "crate-type": "iron",
@@ -1087,10 +1087,10 @@
     },
     {
       "trans": [ 1424.92, -91.17, 497.33], // in water in corner of central room, where MH ambush in sewesc
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [    0.0,      0.6392,     -0.0,     -0.7689 ], // quaternion
-      "bsphere": [ 1424.92, -91.17, 497.33, 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [    0.0,      0.6392,     -0.0,     -0.7689 ],
+      "bsphere": [ 1424.92, -91.17, 497.33, 10],
       "lump": {
         "name": "sewer-crate-07",
         "crate-type": "iron",
@@ -1106,20 +1106,20 @@
     // GHOSTS
     {
       "trans": [1215.37, -33.67, 455.44], // duh
-      "etype": "rift-ring-ingame",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, -0.3934, 0, 0.9193], // quaternion
-      "bsphere": [1215.37, -33.67, 455.44, 10], // bounding sphere
+      "etype": "rift-ring-ingame",
+      "game_task": 0, 
+      "quat" : [0, -0.3934, 0, 0.9193],
+      "bsphere": [1215.37, -33.67, 455.44, 10],
       "lump": {
         "name":"sewer-rift-ring-ingame-01"
       }
     },
     {
       "trans": [1215.37, -37.67, 455.44], // hidden behind rift ring
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0.5219, 0, 0.8529], // quaternion
-      "bsphere": [1215.37, -37.67, 455.44, 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [0, 0.5219, 0, 0.8529],
+      "bsphere": [1215.37, -37.67, 455.44, 10],
       "lump": {
         "name":"sewer-warp-gate-01",
         "distance": ["meters", 5.0]
@@ -1129,10 +1129,10 @@
     // ORBS
     {
       "trans": [    1221.0242, -49.4166, 513.5903], // behind pipe near start, abah in between pipes
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1221.0242, -49.4166, 513.5903, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1221.0242, -49.4166, 513.5903, 10],
       "lump": {
         "name":"sewer-skill-ghost-01",
         "alt-actor":"sewer-skill-01",
@@ -1141,10 +1141,10 @@
     },
     {
       "trans": [  1213.70, -35.4, 512.72], // on top of elbow pipe up at first water, abah from ^ or just jump from upper/exit hallway
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1213.70, -35.4, 512.72, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1213.70, -35.4, 512.72, 10],
       "lump": {
         "name":"sewer-skill-ghost-02",
         "alt-actor":"sewer-skill-02"
@@ -1152,10 +1152,10 @@
     },
     {
       "trans": [      1205.4307, -35.8071, 528.8681], // behind pipe, on top of arch above 2nd hallway, extended from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1205.4307, -35.8071, 528.8681, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1205.4307, -35.8071, 528.8681, 10],
       "lump": {
         "name":"sewer-skill-ghost-03",
         "alt-actor":"sewer-skill-03"
@@ -1163,10 +1163,10 @@
     },
     {
       "trans": [   1294.5946, -50.6985, 591.2061], // behind pipe past 2nd triplet of pipe platforms
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1294.5946, -50.6985, 591.2061, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1294.5946, -50.6985, 591.2061, 10],
       "lump": {
         "name":"sewer-skill-ghost-04",
         "alt-actor":"sewer-skill-04"
@@ -1174,10 +1174,10 @@
     },
     {
       "trans": [      1396.49, -34.60, 459.78], // up in elbow of pipe above 2nd turret
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1396.49, -34.60, 459.78, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1396.49, -34.60, 459.78, 10],
       "lump": {
         "name":"sewer-skill-ghost-05",
         "alt-actor":"sewer-skill-05"
@@ -1185,10 +1185,10 @@
     },
     {
       "trans": [ 1417.09, -33.59, 462.90], // up on pipe above 2nd turret, towards east wall
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1417.09, -33.59, 462.90, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1417.09, -33.59, 462.90, 10],
       "lump": {
         "name":"sewer-skill-ghost-06",
         "alt-actor":"sewer-skill-06"
@@ -1196,10 +1196,10 @@
     },
     {
       "trans": [ 1353.80, -31.27, 455.88], // on west end of long pipe above 2nd turret, follow from ^^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1353.80, -31.27, 455.88, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1353.80, -31.27, 455.88, 10],
       "lump": {
         "name":"sewer-skill-ghost-07",
         "alt-actor":"sewer-skill-07"
@@ -1207,10 +1207,10 @@
     },
     {
       "trans": [ 1422.91, -38.09, 481.57], // on U bend pipe near 2nd turret
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1422.91, -38.09, 481.57, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1422.91, -38.09, 481.57, 10],
       "lump": {
         "name":"sewer-skill-ghost-08",
         "alt-actor":"sewer-skill-08"
@@ -1218,10 +1218,10 @@
     },
     {
       "trans": [  1395.3784, -53.3807, 476.1357], // in water between pipes that connect into 2nd turret platform
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1395.3784, -53.3807, 476.1357, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1395.3784, -53.3807, 476.1357, 10],
       "lump": {
         "name":"sewer-skill-ghost-09",
         "alt-actor":"sewer-skill-09"
@@ -1229,10 +1229,10 @@
     },
     {
       "trans": [  1426.28, -30.61, 476.22], // on back of pipe near east wall by 2nd turret, extended from other pipes (skill-06)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1426.28, -30.61, 476.22, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1426.28, -30.61, 476.22, 10],
       "lump": {
         "name":"sewer-skill-ghost-10",
         "alt-actor":"sewer-skill-10"
@@ -1240,10 +1240,10 @@
     },
     {
       "trans": [      1428.3188, -53.7816, 457.2809], // in water behind pipe on east wall in 2nd turret room
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1428.3188, -53.7816, 457.2809, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1428.3188, -53.7816, 457.2809, 10],
       "lump": {
         "name":"sewer-skill-ghost-11",
         "alt-actor":"sewer-skill-11"
@@ -1251,10 +1251,10 @@
     },
     {
       "trans": [  1354.92, -54.11, 429.32], // in water atop pipe in NW corner of 2nd turret room
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1354.92, -54.11, 429.32, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1354.92, -54.11, 429.32, 10],
       "lump": {
         "name":"sewer-skill-ghost-12",
         "alt-actor":"sewer-skill-12"
@@ -1262,10 +1262,10 @@
     },
     {
       "trans": [ 1131.35, -41.35, 434.65], // on far side of pipe on west wall in 4th turret room
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1131.35, -41.35, 434.65, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1131.35, -41.35, 434.65, 10],
       "lump": {
         "name":"sewer-skill-ghost-13",
         "alt-actor":"sewer-skill-13"
@@ -1273,10 +1273,10 @@
     },
     {
       "trans": [  1140.24, -32.99, 433.31], // atop pipe in 4th turret room, DJ spin slide from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1140.24, -32.99, 433.31, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1140.24, -32.99, 433.31, 10],
       "lump": {
         "name":"sewer-skill-ghost-14",
         "alt-actor":"sewer-skill-14"
@@ -1284,10 +1284,10 @@
     },
     {
       "trans": [ 1140.53, -33.02, 455.03], // atop pipe, other end, in 4th turret room, follow from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1140.53, -33.02, 455.03, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1140.53, -33.02, 455.03, 10],
       "lump": {
         "name":"sewer-skill-ghost-15",
         "alt-actor":"sewer-skill-15"
@@ -1295,10 +1295,10 @@
     },
     {
       "trans": [ 1137.15, -35.70, 401.40], // atop lamp in 4th turret room
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1137.15, -35.70, 401.40, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1137.15, -35.70, 401.40, 10],
       "lump": {
         "name":"sewer-skill-ghost-16",
         "alt-actor":"sewer-skill-16"
@@ -1306,10 +1306,10 @@
     },
     {
       "trans": [  1167.1260, -53.6651, 401.7607], // behind pipes in water in NE corner of 4th turret room, dive under invis wall
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1167.1260, -53.6651, 401.7607, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1167.1260, -53.6651, 401.7607, 10],
       "lump": {
         "name":"sewer-skill-ghost-17",
         "alt-actor":"sewer-skill-17"
@@ -1317,10 +1317,10 @@
     },
     {
       "trans": [  1167.1479, -53.9147, 452.9927], // in water under/behind 3rd pipe platform in 4th turret room
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1167.1479, -53.9147, 452.9927, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1167.1479, -53.9147, 452.9927, 10],
       "lump": {
         "name":"sewer-skill-ghost-18",
         "alt-actor":"sewer-skill-18"
@@ -1328,10 +1328,10 @@
     },
     {
       "trans": [      1294.3424, -47.5993, 501.0554], // up on vent in corner near falling scaffolding
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1294.3424, -47.5993, 501.0554, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1294.3424, -47.5993, 501.0554, 10],
       "lump": {
         "name":"sewer-skill-ghost-19",
         "alt-actor":"sewer-skill-19"
@@ -1339,10 +1339,10 @@
     },
     {
       "trans": [  1321.4371, -48.1090, 482.8594], // on support at start of faling scaffolding (let it fall and jump back)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1321.4371, -48.1090, 482.8594, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1321.4371, -48.1090, 482.8594, 10],
       "lump": {
         "name":"sewer-skill-ghost-20",
         "alt-actor":"sewer-skill-20"
@@ -1350,10 +1350,10 @@
     },
     {
       "trans": [  1308.11, -48.27, 476.68], // on support at end of faling scaffolding (let it fall and jump back)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1308.11, -48.27, 476.68, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1308.11, -48.27, 476.68, 10],
       "lump": {
         "name":"sewer-skill-ghost-21",
         "alt-actor":"sewer-skill-21"
@@ -1361,10 +1361,10 @@
     },
     {
       "trans": [ 1390.73, -39.22, 704.85], // on pipe on right side of jetboard path, towards end
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1390.73, -39.22, 704.85, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1390.73, -39.22, 704.85, 10],
       "lump": {
         "name":"sewer-skill-ghost-22",
         "alt-actor":"sewer-skill-22"
@@ -1372,10 +1372,10 @@
     },
     {
       "trans": [  1286.1342, -44.8384, 591.6674], // up near wall on pipe just past 2nd set of 3 pipe plats
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1286.1342, -44.8384, 591.6674, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1286.1342, -44.8384, 591.6674, 10],
       "lump": {
         "name":"sewer-skill-ghost-23",
         "alt-actor":"sewer-skill-23"
@@ -1383,10 +1383,10 @@
     },
     {
       "trans": [  1206.9101, -54.6435, 601.2299], // underwater between pipe plats in 1st set of 3
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1206.9101, -54.6435, 601.2299, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1206.9101, -54.6435, 601.2299, 10],
       "lump": {
         "name":"sewer-skill-ghost-24",
         "alt-actor":"sewer-skill-24"
@@ -1394,10 +1394,10 @@
     },
     {
       "trans": [  1139.28, -40.45, 651.00], // up on pipe on right in early jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1139.28, -40.45, 651.00, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1139.28, -40.45, 651.00, 10],
       "lump": {
         "name":"sewer-skill-ghost-25",
         "alt-actor":"sewer-skill-25"
@@ -1405,10 +1405,10 @@
     },
     {
       "trans": [  1149.75, -52.13, 637.73], // down on pipe on right in early jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1149.75, -52.13, 637.73, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1149.75, -52.13, 637.73, 10],
       "lump": {
         "name":"sewer-skill-ghost-26",
         "alt-actor":"sewer-skill-26"
@@ -1416,10 +1416,10 @@
     },
     {
       "trans": [ 1309.4372, -49.2562, 541.8405], // in grunt in dark circular hallway room
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1309.4372, -49.2562, 541.8405, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1309.4372, -49.2562, 541.8405, 10],
       "lump": {
         "name":"sewer-skill-ghost-27",
         "alt-actor":"sewer-skill-27"
@@ -1428,10 +1428,10 @@
     },
     {
       "trans": [ 1324.7399, -67.4568, 403.0417], // in grunt in dark 'ambush' room
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1324.7399, -67.4568, 403.0417, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1324.7399, -67.4568, 403.0417, 10],
       "lump": {
         "name":"sewer-skill-ghost-28",
         "alt-actor":"sewer-skill-28"
@@ -1440,10 +1440,10 @@
     },
     {
       "trans": [ 1161.29, -41.17, 695.19], // on pipe behind pipe on right, earlyish jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1161.29, -41.17, 695.19, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1161.29, -41.17, 695.19, 10],
       "lump": {
         "name":"sewer-skill-ghost-29",
         "alt-actor":"sewer-skill-29"
@@ -1451,10 +1451,10 @@
     },
     {
       "trans": [ 1163.62, -34.88, 690.22], // on elbow in upper pipe in earlyish jetboard section, up from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1163.62, -34.88, 690.22, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1163.62, -34.88, 690.22, 10],
       "lump": {
         "name":"sewer-skill-ghost-30",
         "alt-actor":"sewer-skill-30"
@@ -1462,10 +1462,10 @@
     },
     {
       "trans": [ 1173.38, -31.66, 687.40], // on pipe above jetboard section, earlyish, up from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1173.38, -31.66, 687.40, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1173.38, -31.66, 687.40, 10],
       "lump": {
         "name":"sewer-skill-ghost-31",
         "alt-actor":"sewer-skill-31"
@@ -1473,10 +1473,10 @@
     },
     {
       "trans": [ 1192.83, -33.89, 699.41], // on pipe above jetboard section, earlyish, follow from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1192.83, -33.89, 699.41, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1192.83, -33.89, 699.41, 10],
       "lump": {
         "name":"sewer-skill-ghost-32",
         "alt-actor":"sewer-skill-32"
@@ -1484,10 +1484,10 @@
     },
     {
       "trans": [ 1214.48, -34.00, 698.08], // on pipe above jetboard section, earlyish, follow from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1214.48, -34.00, 698.08, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1214.48, -34.00, 698.08, 10],
       "lump": {
         "name":"sewer-skill-ghost-33",
         "alt-actor":"sewer-skill-33"
@@ -1495,10 +1495,10 @@
     },
     {
       "trans": [ 1164.60, -43.38, 661.79], // on pipe on left, early jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1164.60, -43.38, 661.79, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1164.60, -43.38, 661.79, 10],
       "lump": {
         "name":"sewer-skill-ghost-34",
         "alt-actor":"sewer-skill-34"
@@ -1506,10 +1506,10 @@
     },
     {
       "trans": [ 1216.87, -48.24, 704.67], // on lowish pipe on right, early jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1216.87, -48.24, 704.67, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1216.87, -48.24, 704.67, 10],
       "lump": {
         "name":"sewer-skill-ghost-35",
         "alt-actor":"sewer-skill-35"
@@ -1517,10 +1517,10 @@
     },
     {
       "trans": [ 1244.74, -53.09, 672.16], // on lower pipe on left, early/mid jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1244.74, -53.09, 672.16, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1244.74, -53.09, 672.16, 10],
       "lump": {
         "name":"sewer-skill-ghost-36",
         "alt-actor":"sewer-skill-36"
@@ -1528,10 +1528,10 @@
     },
     {
       "trans": [ 1277.28, -58.66, 663.70], // on lower pipe junction under early/mid jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1277.28, -58.66, 663.70, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1277.28, -58.66, 663.70, 10],
       "lump": {
         "name":"sewer-skill-ghost-37",
         "alt-actor":"sewer-skill-37"
@@ -1539,10 +1539,10 @@
     },
     {
       "trans": [ 1302.00, -47.38, 643.90], // on pipe on right, mid jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1302.00, -47.38, 643.90, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1302.00, -47.38, 643.90, 10],
       "lump": {
         "name":"sewer-skill-ghost-38",
         "alt-actor":"sewer-skill-38"
@@ -1550,10 +1550,10 @@
     },
     {
       "trans": [ 1291.48, -53.27, 636.72], // on pipe junction below path, mid jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1291.48, -53.27, 636.72, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1291.48, -53.27, 636.72, 10],
       "lump": {
         "name":"sewer-skill-ghost-39",
         "alt-actor":"sewer-skill-39"
@@ -1561,10 +1561,10 @@
     },
     {
       "trans": [ 1264.57, -41.39, 674.46], // on pipe jup on right behind path, early/mid jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1264.57, -41.39, 674.46, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1264.57, -41.39, 674.46, 10],
       "lump": {
         "name":"sewer-skill-ghost-40",
         "alt-actor":"sewer-skill-40"
@@ -1572,10 +1572,10 @@
     },
     {
       "trans": [ 1222.22, -47.50, 676.26], // on smaller pipe on left in early/mid jetboard section, close to burn wall
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1222.22, -47.50, 676.26, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1222.22, -47.50, 676.26, 10],
       "lump": {
         "name":"sewer-skill-ghost-41",
         "alt-actor":"sewer-skill-41"
@@ -1583,10 +1583,10 @@
     },
     {
       "trans": [ 1286.07, -39.56, 630.87], // on big pipe on left against wall, mid jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1286.07, -39.56, 630.87, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1286.07, -39.56, 630.87, 10],
       "lump": {
         "name":"sewer-skill-ghost-42",
         "alt-actor":"sewer-skill-42"
@@ -1594,10 +1594,10 @@
     },
     {
       "trans": [ 1328.79, -37.65, 661.23], // on overhead pipe in mid jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1328.79, -37.65, 661.23, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1328.79, -37.65, 661.23, 10],
       "lump": {
         "name":"sewer-skill-ghost-43",
         "alt-actor":"sewer-skill-43"
@@ -1605,10 +1605,10 @@
     },
     {
       "trans": [ 1341.42, -40.39, 676.98], // in pipe junction overhead, mid/late jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1341.42, -40.39, 676.98, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1341.42, -40.39, 676.98, 10],
       "lump": {
         "name":"sewer-skill-ghost-44",
         "alt-actor":"sewer-skill-44"
@@ -1616,10 +1616,10 @@
     },
     {
       "trans": [ 1350.23, -39.36, 689.21], // on pipes overhead, mid/late jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1350.23, -39.36, 689.21, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1350.23, -39.36, 689.21, 10],
       "lump": {
         "name":"sewer-skill-ghost-45",
         "alt-actor":"sewer-skill-45"
@@ -1627,10 +1627,10 @@
     },
     {
       "trans": [ 1348.55, -33.01, 692.40], // on pipes overhead, mid/late jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1348.55, -33.01, 692.40, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1348.55, -33.01, 692.40, 10],
       "lump": {
         "name":"sewer-skill-ghost-46",
         "alt-actor":"sewer-skill-46"
@@ -1638,10 +1638,10 @@
     },
     {
       "trans": [ 1426.95, -44.09, 684.56], // on pipes on right side of, lateish jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1426.95, -44.09, 684.56, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1426.95, -44.09, 684.56, 10],
       "lump": {
         "name":"sewer-skill-ghost-47",
         "alt-actor":"sewer-skill-47"
@@ -1649,10 +1649,10 @@
     },
     {
       "trans": [  1334.2974, -44.4609, 611.3099], // on wall behind pipes at top (1st) valve
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1334.2974, -44.4609, 611.3099, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1334.2974, -44.4609, 611.3099, 10],
       "lump": {
         "name":"sewer-skill-ghost-48",
         "alt-actor":"sewer-skill-48"
@@ -1660,10 +1660,10 @@
     },
     {
       "trans": [  1343.35, -45.27, 617.25], // on pipe junction near top (1st) valve
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1343.35, -45.27, 617.25, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1343.35, -45.27, 617.25, 10],
       "lump": {
         "name":"sewer-skill-ghost-49",
         "alt-actor":"sewer-skill-49",
@@ -1672,10 +1672,10 @@
     },
     {
       "trans": [  1338.17, -36.57, 599.91], // on top of pipes above top (1st) valve, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1338.17, -36.57, 599.91, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1338.17, -36.57, 599.91, 10],
       "lump": {
         "name":"sewer-skill-ghost-50",
         "alt-actor":"sewer-skill-50"
@@ -1683,10 +1683,10 @@
     },
     {
       "trans": [  1343.38, -53.86, 589.99], // between pipes directly under top (1st) valve, dive under before draining
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1343.38, -53.86, 589.99, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1343.38, -53.86, 589.99, 10],
       "lump": {
         "name":"sewer-skill-ghost-51",
         "alt-actor":"sewer-skill-51"
@@ -1694,10 +1694,10 @@
     },
     {
       "trans": [      1388.3958, -46.8764, 601.0368], // in gap in east wall of top (1st) valve, behind pipe
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1388.3958, -46.8764, 601.0368, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1388.3958, -46.8764, 601.0368, 10],
       "lump": {
         "name":"sewer-skill-ghost-52",
         "alt-actor":"sewer-skill-52"
@@ -1705,10 +1705,10 @@
     },
     {
       "trans": [      1374.9904, -41.4666, 585.8250], // in gap in northeast wall of top (1st) valve, behind pipe, boosted from jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1374.9904, -41.4666, 585.8250, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1374.9904, -41.4666, 585.8250, 10],
       "lump": {
         "name":"sewer-skill-ghost-53",
         "alt-actor":"sewer-skill-53"
@@ -1716,10 +1716,10 @@
     },
     {
       "trans": [ 1335.62, -62.64, 607.38], // on arch below top (1st) valve, even with water level -1
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1335.62, -62.64, 607.38, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1335.62, -62.64, 607.38, 10],
       "lump": {
         "name":"sewer-skill-ghost-54",
         "alt-actor":"sewer-skill-54"
@@ -1727,10 +1727,10 @@
     },
     {
       "trans": [ 1365.0386, -64.6563, 484.5001], // in mine NE room after 1st valve drain
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1365.0386, -64.6563, 484.5001, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1365.0386, -64.6563, 484.5001, 10],
       "lump": {
         "name":"sewer-skill-ghost-55",
         "alt-actor":"sewer-skill-55"
@@ -1739,10 +1739,10 @@
     },
     {
       "trans": [     1427.9478, -65.9803, 474.1473], // behind square-ish pipe in NE room east wall, after 1st valve drain
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1427.9478, -65.9803, 474.1473, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1427.9478, -65.9803, 474.1473, 10],
       "lump": {
         "name":"sewer-skill-ghost-56",
         "alt-actor":"sewer-skill-56"
@@ -1750,10 +1750,10 @@
     },
     {
       "trans": [ 1526.3302, -63.0566, 442.2679], // in flat mine in eastern hallway after 1st valve drain
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1526.3302, -63.0566, 442.2679, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1526.3302, -63.0566, 442.2679, 10],
       "lump": {
         "name":"sewer-skill-ghost-57",
         "alt-actor":"sewer-skill-57"
@@ -1762,10 +1762,10 @@
     },
     {
       "trans": [ 1257.17, -35.89, 690.52], // pipe on right mid/early jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1257.17, -35.89, 690.52, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1257.17, -35.89, 690.52, 10],
       "lump": {
         "name":"sewer-skill-ghost-58",
         "alt-actor":"sewer-skill-58"
@@ -1773,10 +1773,10 @@
     },
     {
       "trans": [ 1314.30, -39.38, 654.61], // pipe on right mid jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1314.30, -39.38, 654.61, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1314.30, -39.38, 654.61, 10],
       "lump": {
         "name":"sewer-skill-ghost-59",
         "alt-actor":"sewer-skill-59"
@@ -1784,10 +1784,10 @@
     },
     {
       "trans": [ 1368.13, -41.44, 676.98], // pipe on left late-ish jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1368.13, -41.44, 676.98, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1368.13, -41.44, 676.98, 10],
       "lump": {
         "name":"sewer-skill-ghost-60",
         "alt-actor":"sewer-skill-60"
@@ -1795,10 +1795,10 @@
     },
     {
       "trans": [ 1357.20, -50.93, 703.94], // pipe on right late-ish jetboard section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1357.20, -50.93, 703.94, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1357.20, -50.93, 703.94, 10],
       "lump": {
         "name":"sewer-skill-ghost-61",
         "alt-actor":"sewer-skill-61"
@@ -1806,10 +1806,10 @@
     },
     {
       "trans": [     1405.1844, -40.1349, 626.3839], // pipe on right at end of jetboard section before next room
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1405.1844, -40.1349, 626.3839, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1405.1844, -40.1349, 626.3839, 10],
       "lump": {
         "name":"sewer-skill-ghost-62",
         "alt-actor":"sewer-skill-62"
@@ -1817,10 +1817,10 @@
     },
     {
       "trans": [         1537.3961, -57.6719, 653.9246], // between pipe and wall just before 2nd valve
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [       1537.3961, -57.6719, 653.9246, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [       1537.3961, -57.6719, 653.9246, 10],
       "lump": {
         "name":"sewer-skill-ghost-63",
         "alt-actor":"sewer-skill-63"
@@ -1828,10 +1828,10 @@
     },
     {
       "trans": [        1465.4049, -61.1486, 375.6432], // between pipe and wall near grinder otw to 2nd valve
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1465.4049, -61.1486, 375.6432, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1465.4049, -61.1486, 375.6432, 10],
       "lump": {
         "name":"sewer-skill-ghost-64",
         "alt-actor":"sewer-skill-64"
@@ -1839,10 +1839,10 @@
     },
     {
       "trans": [     1497.3214, -58.6825, 564.9889], // above grinder otw to 2nd valve
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1497.3214, -58.6825, 564.9889, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1497.3214, -58.6825, 564.9889, 10],
       "lump": {
         "name":"sewer-skill-ghost-65",
         "alt-actor":"sewer-skill-65"
@@ -1850,10 +1850,10 @@
     },
     {
       "trans": [   1524.1229, -77.4518, 662.1247], // in corner behind pipe in water below 2nd valve
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1524.1229, -77.4518, 662.1247, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1524.1229, -77.4518, 662.1247, 10],
       "lump": {
         "name":"sewer-skill-ghost-66",
         "alt-actor":"sewer-skill-66"
@@ -1861,10 +1861,10 @@
     },
     {
       "trans": [   1448.8432, -78.3873, 389.4275], // between wall and pair of vertical grinders, halfway back from 2nd valve
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1448.8432, -78.3873, 389.4275, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1448.8432, -78.3873, 389.4275, 10],
       "lump": {
         "name":"sewer-skill-ghost-67",
         "alt-actor":"sewer-skill-67"
@@ -1872,10 +1872,10 @@
     },
     {
       "trans": [    1498.8723, -68.5537, 397.1473], // on pipe against wall near grinder/vertical grinder combo, halfway back from 2nd valve
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1498.8723, -68.5537, 397.1473, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1498.8723, -68.5537, 397.1473, 10],
       "lump": {
         "name":"sewer-skill-ghost-68",
         "alt-actor":"sewer-skill-68"
@@ -1883,10 +1883,10 @@
     },
     {
       "trans": [ 1291.5349, -76.6737, 371.8503], // in mine right next to long bar of horizontal grinders, a bit before 3rd valve
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1291.5349, -76.6737, 371.8503, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1291.5349, -76.6737, 371.8503, 10],
       "lump": {
         "name":"sewer-skill-ghost-69",
         "alt-actor":"sewer-skill-69"
@@ -1895,10 +1895,10 @@
     },
     {
       "trans": [ 1363.2402, -88.8560, 367.2304], // in 6th flat mine after 3rd valve before exit
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1363.2402, -88.8560, 367.2304, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1363.2402, -88.8560, 367.2304, 10],
       "lump": {
         "name":"sewer-skill-ghost-70",
         "alt-actor":"sewer-skill-70"
@@ -1907,10 +1907,10 @@
     },
     {
       "trans": [  1291.01, -73.68, 379.41], // behind pipe against wall just before row of grinders on way to last valve
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1291.01, -73.68, 379.41, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1291.01, -73.68, 379.41, 10],
       "lump": {
         "name":"sewer-skill-ghost-71",
         "alt-actor":"sewer-skill-71"
@@ -1918,10 +1918,10 @@
     },
     {
       "trans": [      1201.9378, -48.1743, 306.1113], // up high in NE corner of NW room, from top platform
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1201.9378, -48.1743, 306.1113, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1201.9378, -48.1743, 306.1113, 10],
       "lump": {
         "name":"sewer-skill-ghost-72",
         "alt-actor":"sewer-skill-72"
@@ -1929,10 +1929,10 @@
     },
     {
       "trans": [ 1171.52, -65.72, 317.20], // on pipe in middle of NW room, mid level
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1171.52, -65.72, 317.20, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1171.52, -65.72, 317.20, 10],
       "lump": {
         "name":"sewer-skill-ghost-73",
         "alt-actor":"sewer-skill-73"
@@ -1940,10 +1940,10 @@
     },
     {
       "trans": [     1138.9978, -67.9658, 348.6984], // in corner in NW room, west southish wall
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1138.9978, -67.9658, 348.6984, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1138.9978, -67.9658, 348.6984, 10],
       "lump": {
         "name":"sewer-skill-ghost-74",
         "alt-actor":"sewer-skill-74"
@@ -1951,10 +1951,10 @@
     },
     {
       "trans": [  1164.1381, -68.2608, 302.4107], // in corner in NW room, mid north wall
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1164.1381, -68.2608, 302.4107, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1164.1381, -68.2608, 302.4107, 10],
       "lump": {
         "name":"sewer-skill-ghost-75",
         "alt-actor":"sewer-skill-75"
@@ -1962,10 +1962,10 @@
     },
     {
       "trans": [      1160.3017, -86.1033, 309.4514], // in lower north corner in NW room, in curve of pipe against wall
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1160.3017, -86.1033, 309.4514, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1160.3017, -86.1033, 309.4514, 10],
       "lump": {
         "name":"sewer-skill-ghost-76",
         "alt-actor":"sewer-skill-76"
@@ -1973,10 +1973,10 @@
     },
     {
       "trans": [    1380.9645, -87.6845, 396.9815], // low behind pipes after fully lowering water back to center room
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [    1380.9645, -87.6845, 396.9815, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [    1380.9645, -87.6845, 396.9815, 10],
       "lump": {
         "name":"sewer-skill-ghost-77",
         "alt-actor":"sewer-skill-77"
@@ -1984,10 +1984,10 @@
     },
     {
       "trans": [        1351.9449, -86.5486, 467.2462], // low behind pipe along west wall in middle room
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1351.9449, -86.5486, 467.2462, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1351.9449, -86.5486, 467.2462, 10],
       "lump": {
         "name":"sewer-skill-ghost-78",
         "alt-actor":"sewer-skill-78"
@@ -1995,10 +1995,10 @@
     },
     {
       "trans": [  1398.4814, -88.5560, 550.3741], // in middle mine in last hallway before statue
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1398.4814, -88.5560, 550.3741, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1398.4814, -88.5560, 550.3741, 10],
       "lump": {
         "name":"sewer-skill-ghost-79",
         "alt-actor":"sewer-skill-79"
@@ -2007,10 +2007,10 @@
     },
     {
       "trans": [  1360.6229, -87.7106, 629.9630], // behind statue
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1360.6229, -87.7106, 629.9630, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1360.6229, -87.7106, 629.9630, 10],
       "lump": {
         "name":"sewer-skill-ghost-80",
         "alt-actor":"sewer-skill-80",
@@ -2019,10 +2019,10 @@
     },
     {
       "trans": [   1361.5472, -71.1940, 624.2095], // behind mars head on statue, abah up from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1361.5472, -71.1940, 624.2095, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1361.5472, -71.1940, 624.2095, 10],
       "lump": {
         "name":"sewer-skill-ghost-81",
         "alt-actor":"sewer-skill-81"
@@ -2030,10 +2030,10 @@
     },
     {
       "trans": [   1296.5532, -69.5006, 592.1237], // extended up onto pipe on right at top of steps past statue
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1296.5532, -69.5006, 592.1237, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1296.5532, -69.5006, 592.1237, 10],
       "lump": {
         "name":"sewer-skill-ghost-82",
         "alt-actor":"sewer-skill-82"
@@ -2041,10 +2041,10 @@
     },
     {
       "trans": [  1263.7371, -81.3239, 597.4727], // up behind pipe in small space on right after statue before elevator
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1263.7371, -81.3239, 597.4727, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1263.7371, -81.3239, 597.4727, 10],
       "lump": {
         "name":"sewer-skill-ghost-83",
         "alt-actor":"sewer-skill-83"
@@ -2052,10 +2052,10 @@
     },
     {
       "trans": [ 1238.82, -88.25, 620.04], // in corner just opposite elevator after statue
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1238.82, -88.25, 620.04, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1238.82, -88.25, 620.04, 10],
       "lump": {
         "name":"sewer-skill-ghost-84",
         "alt-actor":"sewer-skill-84"
@@ -2063,10 +2063,10 @@
     },
     {
       "trans": [      1291.6706, -56.8630, 437.6954], // between pipe/wall after climbing up plats after dark ambush
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1291.6706, -56.8630, 437.6954, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1291.6706, -56.8630, 437.6954, 10],
       "lump": {
         "name":"sewer-skill-ghost-85",
         "alt-actor":"sewer-skill-85",
@@ -2075,10 +2075,10 @@
     },
     {
       "trans": [  1291.67, -39.94, 441.36], // up between pipe/wall in dark ambush room, abah up from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1291.67, -39.94, 441.36, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1291.67, -39.94, 441.36, 10],
       "lump": {
         "name":"sewer-skill-ghost-86",
         "alt-actor":"sewer-skill-86"
@@ -2086,10 +2086,10 @@
     },
     {
       "trans": [      1268.1409, -38.7978, 436.8205], // up behind pipes in hallway after dark ambush
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1268.1409, -38.7978, 436.8205, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1268.1409, -38.7978, 436.8205, 10],
       "lump": {
         "name":"sewer-skill-ghost-87",
         "alt-actor":"sewer-skill-87"
@@ -2097,10 +2097,10 @@
     },
     {
       "trans": [ 1280.77, -43.43, 363.46], // in bend of pipe connecting to bigger pipe in northern room, boosted from frong area
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1280.77, -43.43, 363.46, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1280.77, -43.43, 363.46, 10],
       "lump": {
         "name":"sewer-skill-ghost-88",
         "alt-actor":"sewer-skill-88"
@@ -2108,10 +2108,10 @@
     },
     {
       "trans": [ 1327.60, -43.46, 363.67], // other end of pipe, follow from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1327.60, -43.46, 363.67, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1327.60, -43.46, 363.67, 10],
       "lump": {
         "name":"sewer-skill-ghost-89",
         "alt-actor":"sewer-skill-89"
@@ -2119,10 +2119,10 @@
     },
     {
       "trans": [ 1196.2744, -38.9699, 458.5870], // in amphibian in final hallway with warp gate, before dropping down to start
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 1196.2744, -38.9699, 458.5870, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1196.2744, -38.9699, 458.5870, 10],
       "lump": {
         "name":"sewer-skill-ghost-90",
         "alt-actor":"sewer-skill-90"

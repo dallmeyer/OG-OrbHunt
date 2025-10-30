@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [ 334.68,  71.82,  -281.60 ], // slippery ledge above veger
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 334.68,  71.82,  -281.60 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 334.68,  71.82,  -281.60 , 10],
       "lump": {
         "name":"mined-skill-01"
         // "pickup-amount": ["float", 2.0] // abah hint
@@ -59,10 +59,10 @@
     },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"mined-skill-2"
     //   }
@@ -70,10 +70,10 @@
         
     {
       "trans": [329.8399, 57.8516, -278.9043], // samos by white barrier
-      "etype": "veger-npc",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [  0.0, 0.0, 0.0, -1.0], // quaternion
-      "bsphere": [329.8399, 57.8516, -278.9043, 6.928242206573486 ], // bounding sphere
+      "etype": "veger-npc",
+      "game_task": 0, 
+      "quat" : [  0.0, 0.0, 0.0, -1.0],
+      "bsphere": [329.8399, 57.8516, -278.9043, 6.928242206573486 ],
       "lump": {
         "name": "mined-veger-npc",
         "task-actor": ["int32", 68]
@@ -81,10 +81,10 @@
     },
     {
       "trans": [329.8399, 62.3516, -278.9043], // 
-      "etype": "fuel-cell",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
-      "bsphere": [329.8399, 62.3516, -278.9043, 6.928242206573486 ], // bounding sphere
+      "etype": "fuel-cell",
+      "game_task": 0, 
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
+      "bsphere": [329.8399, 62.3516, -278.9043, 6.928242206573486 ],
       "lump": {
         "name": "mined-fuel-cell",
         "level-idx": ["int32", 13]
@@ -94,10 +94,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -106,10 +106,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

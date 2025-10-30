@@ -49,40 +49,40 @@
     // 'ctyindb (between slums/bazaar/ctyinda)
     {
       "trans": [ 1067.76,  8.5,     494.14  ], // #t in corner above sewers entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [1067.76,  8.5,     494.14, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [1067.76,  8.5,     494.14, 10],
       "lump": {
         "name": "ctyindb-skill-01"
       }
     },
     {
       "trans": [ 842.1,    8.6,     465.7   ], // #t between ramp and wall near bazaar
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [842.1,    8.6,     465.7 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [842.1,    8.6,     465.7 , 10],
       "lump": {
         "name": "ctyindb-skill-02"
       }
     },
     {
       "trans": [      1151.1821, 10.8, 714.9151], // #t behind pipes couple turns past sewers towards path to port (near burning bush)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1151.1821, 10.8, 714.9151, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1151.1821, 10.8, 714.9151, 10],
       "lump": {
         "name": "ctyindb-skill-03"
       }
     },
     {
       "trans": [ 896.9,    16.4,    408.6   ], //  atop ctyindb-part-52 (one of the lights within walkway pillars, in corner you never visit)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [896.9,    16.4,    408.6 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [896.9,    16.4,    408.6 , 10],
       "lump": {
         "name": "ctyindb-skill-04",
         "bob-scale": ["float", -1.0] // no bob
@@ -90,40 +90,40 @@
     },
     {
       "trans": [ 1100.6,   13.7,    518.44  ], // #t  between generator/pipes in deload-into-sewers corner by ctyslum
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [1100.6,   13.7,    518.44, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [1100.6,   13.7,    518.44, 10],
       "lump": {
         "name": "ctyindb-skill-05"
       }
     },
     {
       "trans": [1164.63,  27.83, 416.12], // on pipe in corner near ctysluma, boosted from upper walkway
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [1164.63,  27.83, 416.12, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [1164.63,  27.83, 416.12, 10],
       "lump": {
         "name": "ctyindb-skill-06"
       }
     },
     {
       "trans": [1169.93,   8.59, 412.44], // up and over to bottom corner from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [1169.93,   8.59, 412.44, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [1169.93,   8.59, 412.44, 10],
       "lump": {
         "name": "ctyindb-skill-07"
       }
     },
     {
       "trans": [   962.4894, 9.8691, 802.8580], // between metal bases under pipes in south central
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  962.4894, 9.8691, 802.8580, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  962.4894, 9.8691, 802.8580, 10],
       "lump": {
         "name": "ctyindb-skill-08",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -131,30 +131,30 @@
     },
     {
       "trans": [     962.5090, 33.2619, 815.3452], // up high on wall above pipes in south central, abah from ^ (or maybe a dank boosted?)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     962.5090, 33.2619, 815.3452, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     962.5090, 33.2619, 815.3452, 10],
       "lump": {
         "name": "ctyindb-skill-09"
       }
     },
     {
       "trans": [   765.7849, 8.3032, 615.2931], // in NW corner of southern half
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   765.7849, 8.3032, 615.2931, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   765.7849, 8.3032, 615.2931, 10],
       "lump": {
         "name": "ctyindb-skill-10"
       }
     },
     {
       "trans": [    877.9074, 24.9201, 674.9432], // on pipes from upper walkway in SW area
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   877.9074, 24.9201, 674.9432, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   877.9074, 24.9201, 674.9432, 10],
       "lump": {
         "name": "ctyindb-skill-11",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -162,130 +162,130 @@
     },
     {
       "trans": [      874.2691, 42.9876, 683.0865], // standpoint high on wall above walkway in SW area, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      874.2691, 42.9876, 683.0865, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      874.2691, 42.9876, 683.0865, 10],
       "lump": {
         "name": "ctyindb-skill-12"
       }
     },
     {
       "trans": [      772.7384, 25.3123, 735.9368], // in crouch corner on upper walkway, SW area
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      772.7384, 25.3123, 735.9368, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      772.7384, 25.3123, 735.9368, 10],
       "lump": {
         "name": "ctyindb-skill-13"
       }
     },
     {
       "trans": [       891.0256, 26.3609, 401.7737], // crouch under in NW corner on upper walkway
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [       891.0256, 26.3609, 401.7737, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [       891.0256, 26.3609, 401.7737, 10],
       "lump": {
         "name": "ctyindb-skill-14"
       }
     },
     {
       "trans": [   885.8602, 43.0227, 401.6546], // on standpoint up on wall above ^, dark giant shenanigans (or maybe bring a zoomer up here?)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   885.8602, 43.0227, 401.6546, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   885.8602, 43.0227, 401.6546, 10],
       "lump": {
         "name": "ctyindb-skill-15"
       }
     },
     {
       "trans": [   979.1069, 43.0015, 620.4312], // on standpoint up on wall dead center, south side, dark giant crouch jump late dark bomb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   979.1069, 43.0015, 620.4312, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   979.1069, 43.0015, 620.4312, 10],
       "lump": {
         "name": "ctyindb-skill-16"
       }
     },
     {
       "trans": [       997.5250, 48.9732, 626.7124], // way up high on fake ledge center southside, extended from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     997.5250, 48.9732, 626.7124, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     997.5250, 48.9732, 626.7124, 10],
       "lump": {
         "name": "ctyindb-skill-17"
       }
     },
     {
       "trans": [  908.8655, 42.9746, 620.4006], // on standpoint up on wall just west of center, south side, dark giant crouch jump late dark bomb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  908.8655, 42.9746, 620.4006, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  908.8655, 42.9746, 620.4006, 10],
       "lump": {
         "name": "ctyindb-skill-18"
       }
     },
     {
       "trans": [  874.2777, 42.9870, 752.6298], // standpoint up high on wall in SW area, just before crossing into ctyinda, dark giant crouch jump late dark bomb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  874.2777, 42.9870, 752.6298, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  874.2777, 42.9870, 752.6298, 10],
       "lump": {
         "name": "ctyindb-skill-19"
       }
     },
     {
       "trans": [     1067.5291, 9.7752, 619.5013], // down almost on ground behind pipe in corner on east before going from south to north half
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1067.5291, 9.7752, 619.5013, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1067.5291, 9.7752, 619.5013, 10],
       "lump": {
         "name": "ctyindb-skill-20"
       }
     },
     {
       "trans": [     970.4449, 40.3446, 708.1099], // up on pipes crossing overhead in south central hallway
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     970.4449, 40.3446, 708.1099, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     970.4449, 40.3446, 708.1099, 10],
       "lump": {
         "name": "ctyindb-skill-21"
       }
     },
     {
       "trans": [   1052.0980, 9.8887, 683.37], // in crack behind burning bush
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1052.0980, 9.8887, 683.37, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1052.0980, 9.8887, 683.37, 10],
       "lump": {
         "name": "ctyindb-skill-22"
       }
     },
     {
       "trans": [     1150.6689, 30.9203, 630.7357], // behind pipe on east wall coming from south to north half
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1150.6689, 30.9203, 630.7357, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1150.6689, 30.9203, 630.7357, 10],
       "lump": {
         "name": "ctyindb-skill-23"
       }
     },
     {
       "trans": [      1145.1090, 29.2583, 557.3516], // between pipe and column on wall in corner on east side just coming into north half, boosted from walkway
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1145.1090, 29.2583, 557.3516, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1145.1090, 29.2583, 557.3516, 10],
       "lump": {
         "name": "ctyindb-skill-24",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -293,20 +293,20 @@
     },
     {
       "trans": [      1145.8964, 42.9839, 552.6948], // up high on standpoint on wall in corner, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1145.8964, 42.9839, 552.6948, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1145.8964, 42.9839, 552.6948, 10],
       "lump": {
         "name": "ctyindb-skill-25"
       }
     },
     {
       "trans": [      966.0000, 9.5, 587.0000], // inside proganda thing near sewers
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      966.0000, 9.5, 587.0000, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      966.0000, 9.5, 587.0000, 10],
       "lump": {
         "name": "ctyindb-skill-26",
         "alt-actor": "propa-3"
@@ -314,50 +314,50 @@
     },
     {
       "trans": [   903.8528, 42.9979, 594.8306], // another up high on standpoint on center wall, north side, dark giant dark bomb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  903.8528, 42.9979, 594.8306, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  903.8528, 42.9979, 594.8306, 10],
       "lump": {
         "name": "ctyindb-skill-27"
       }
     },
     {
       "trans": [    974.0958, 42.9850, 594.8161], // another up high on standpoint on center wall, north side, dark giant dark bomb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   974.0958, 42.9850, 594.8161, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   974.0958, 42.9850, 594.8161, 10],
       "lump": {
         "name": "ctyindb-skill-28"
       }
     },
     {
       "trans": [       1021.3034, 8.6987, 465.8744], // behind pipes on ground level, along north-most path
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1021.3034, 8.6987, 465.8744, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1021.3034, 8.6987, 465.8744, 10],
       "lump": {
         "name": "ctyindb-skill-29"
       }
     },
     {
       "trans": [     775.1878, 31.1591, 595.6703], // on ledge around corner on SW corner of north half, extended from walkway
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     775.1878, 31.1591, 595.6703, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     775.1878, 31.1591, 595.6703, 10],
       "lump": {
         "name": "ctyindb-skill-30"
       }
     },
     {
       "trans": [     773.2426, 20.6137, 521.5249], // on pipe in corner before ramp by ctymarkb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     773.2426, 20.6137, 521.5249, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     773.2426, 20.6137, 521.5249, 10],
       "lump": {
         "name": "ctyindb-skill-31",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -365,20 +365,20 @@
     },
     {
       "trans": [      770.9913, 44.4777, 521.4694], // way up on top of window in corner, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      770.9913, 44.4777, 521.4694, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      770.9913, 44.4777, 521.4694, 10],
       "lump": {
         "name": "ctyindb-skill-32"
       }
     },
     {
       "trans": [     1161.3287, 10.1808, 518.2760], // on edge of pipe base platform in corner near ctysluma
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1161.3287, 10.1808, 518.2760, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1161.3287, 10.1808, 518.2760, 10],
       "lump": {
         "name": "ctyindb-skill-33",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -386,10 +386,10 @@
     },
     {
       "trans": [   1159.1506, 26.6099, 516.2239], // on pipe in corner near ctysluma, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1159.1506, 26.6099, 516.2239, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1159.1506, 26.6099, 516.2239, 10],
       "lump": {
         "name": "ctyindb-skill-34",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -397,40 +397,40 @@
     },
     {
       "trans": [   1161.8981, 42.9826, 514.4287], // way up on top of window in corner, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1161.8981, 42.9826, 514.4287, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1161.8981, 42.9826, 514.4287, 10],
       "lump": {
         "name": "ctyindb-skill-35"
       }
     },
     {
       "trans": [   965.4751, 42.9832, 396.7166], // another up high on standpoint on north wall, dark giant dark bomb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   965.4751, 42.9832, 396.7166, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   965.4751, 42.9832, 396.7166, 10],
       "lump": {
         "name": "ctyindb-skill-36"
       }
     },
     {
       "trans": [   885.8381, 42.9860, 471.8892], // another up high on standpoint on west-ish wall in north half, dark giant dark bomb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   885.8381, 42.9860, 471.8892, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   885.8381, 42.9860, 471.8892, 10],
       "lump": {
         "name": "ctyindb-skill-37"
       }
     },
     {
       "trans": [   1161.9085, 43.0127, 449.4194], // another up high on standpoint on NE wall, car launch
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1161.9085, 43.0127, 449.4194, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1161.9085, 43.0127, 449.4194, 10],
       "lump": {
         "name": "ctyindb-skill-38"
       }
@@ -439,10 +439,10 @@
     // CRATES
     {
       "trans": [ 775.15, 11.2, 690.6 ], // between ramp and wall in SW area
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ -0.0097,    0.0017,     -0.7070,    -0.7070], // quaternion
-      "bsphere": [  775.15, 11.2, 690.6 , 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [ -0.0097,    0.0017,     -0.7070,    -0.7070],
+      "bsphere": [  775.15, 11.2, 690.6 , 10],
       "lump": {
         "name": "ctyindb-crate-01",
         "crate-type": "iron",
@@ -456,10 +456,10 @@
     },
     {
       "trans": [ 1059.0145, 7.9936, 717.7511], // in corner left of burning bush
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [  0.0000, -0.6439, 0.0000, 0.7650], // quaternion
-      "bsphere": [  1059.0145, 7.9936, 717.7511, 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [  0.0000, -0.6439, 0.0000, 0.7650],
+      "bsphere": [  1059.0145, 7.9936, 717.7511, 10],
       "lump": {
         "name": "ctyindb-crate-02",
         "crate-type": "iron",
@@ -473,10 +473,10 @@
     },
     {
       "trans": [  1156.5351, 9.8981, 712.5103], // in corner near burning bush
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [   0.0000, 0.6735, 0.0000, -0.7391], // quaternion
-      "bsphere": [   1156.5351, 9.8981, 712.5103, 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [   0.0000, 0.6735, 0.0000, -0.7391],
+      "bsphere": [   1156.5351, 9.8981, 712.5103, 10],
       "lump": {
         "name": "ctyindb-crate-03",
         "crate-type": "iron",
@@ -490,10 +490,10 @@
     },
     {
       "trans": [  1085.2165, 7.9936, 604.2592 ], // small cutout in north half just before turning to south half, kinda near sewers
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [  -0.0005, 0.6972, 0.0005, -0.7168], // quaternion
-      "bsphere": [   1085.2165, 7.9936, 604.2592 , 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [  -0.0005, 0.6972, 0.0005, -0.7168],
+      "bsphere": [   1085.2165, 7.9936, 604.2592 , 10],
       "lump": {
         "name": "ctyindb-crate-04",
         "crate-type": "iron",
@@ -509,10 +509,10 @@
     // HOVER ORBS
     {
       "trans": [   842.7365, 42.9824, 621.0164], // standpoint up high on wall in SW area
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  842.7365, 42.9824, 621.0164, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  842.7365, 42.9824, 621.0164, 10],
       "lump": {
         "name":"ctyindb-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -520,10 +520,10 @@
     },
     {
       "trans": [       1057.3979, 42.9825, 717.2123], // standpoint up high on wall left of burning bush
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1057.3979, 42.9825, 717.2123, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1057.3979, 42.9825, 717.2123, 10],
       "lump": {
         "name":"ctyindb-skill-hover-02",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -531,10 +531,10 @@
     },
     {
       "trans": [    1126.9291, 42.9747, 717.2139], // standpoint up high on wall in near burning bush
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1126.9291, 42.9747, 717.2139, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1126.9291, 42.9747, 717.2139, 10],
       "lump": {
         "name":"ctyindb-skill-hover-03",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -542,10 +542,10 @@
     },
     {
       "trans": [  1083.6176, 42.9803, 552.6927], // standpoint up high on wall just past sewers towards path to south half
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1083.6176, 42.9803, 552.6927, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1083.6176, 42.9803, 552.6927, 10],
       "lump": {
         "name":"ctyindb-skill-hover-04",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -555,10 +555,10 @@
     // GHOSTS
     {
       "trans": [ 1067.76,  8.5,     494.14  ], // #t in corner above sewers entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [1067.76,  8.5,     494.14, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [1067.76,  8.5,     494.14, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-01",
         "alt-actor":"ctyindb-skill-01"
@@ -566,10 +566,10 @@
     },
     {
       "trans": [ 842.1,    8.6,     465.7   ], // #t between ramp and wall near bazaar
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [842.1,    8.6,     465.7 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [842.1,    8.6,     465.7 , 10],
       "lump": {
         "name":"ctyindb-skill-ghost-02",
         "alt-actor":"ctyindb-skill-02"
@@ -577,10 +577,10 @@
     },
     {
       "trans": [      1151.1821, 10.8, 714.9151], // #t behind pipes couple turns past sewers towards path to port (near burning bush)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1151.1821, 10.8, 714.9151, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1151.1821, 10.8, 714.9151, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-03",
         "alt-actor":"ctyindb-skill-03"
@@ -588,10 +588,10 @@
     },
     {
       "trans": [ 896.9,    16.4,    408.6   ], //  atop ctyindb-part-52 (one of the lights within walkway pillars, in corner you never visit)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [896.9,    16.4,    408.6 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [896.9,    16.4,    408.6 , 10],
       "lump": {
         "name":"ctyindb-skill-ghost-04",
         "alt-actor":"ctyindb-skill-04",
@@ -600,10 +600,10 @@
     },
     {
       "trans": [ 1100.6,   13.7,    518.44  ], // #t  between generator/pipes in deload-into-sewers corner by ctyslum
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [1100.6,   13.7,    518.44, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [1100.6,   13.7,    518.44, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-05",
         "alt-actor":"ctyindb-skill-05"
@@ -611,10 +611,10 @@
     },
     {
       "trans": [1164.63,  27.83, 416.12], // on pipe in corner near ctysluma, boosted from upper walkway
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [1164.63,  27.83, 416.12, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [1164.63,  27.83, 416.12, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-06",
         "alt-actor":"ctyindb-skill-06"
@@ -622,10 +622,10 @@
     },
     {
       "trans": [1169.93,   8.59, 412.44], // up and over to bottom corner from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [1169.93,   8.59, 412.44, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [1169.93,   8.59, 412.44, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-07",
         "alt-actor":"ctyindb-skill-07"
@@ -633,10 +633,10 @@
     },
     {
       "trans": [   962.4894, 9.8691, 802.8580], // between metal bases under pipes in south central
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  962.4894, 9.8691, 802.8580, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  962.4894, 9.8691, 802.8580, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-08",
         "alt-actor":"ctyindb-skill-08",
@@ -645,10 +645,10 @@
     },
     {
       "trans": [     962.5090, 33.2619, 815.3452], // up high on wall above pipes in south central, abah from ^ (or maybe a dank boosted?)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     962.5090, 33.2619, 815.3452, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     962.5090, 33.2619, 815.3452, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-09",
         "alt-actor":"ctyindb-skill-09"
@@ -656,10 +656,10 @@
     },
     {
       "trans": [   765.7849, 8.3032, 615.2931], // in NW corner of southern half
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   765.7849, 8.3032, 615.2931, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   765.7849, 8.3032, 615.2931, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-10",
         "alt-actor":"ctyindb-skill-10"
@@ -667,10 +667,10 @@
     },
     {
       "trans": [    877.9074, 24.9201, 674.9432], // on pipes from upper walkway in SW area
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   877.9074, 24.9201, 674.9432, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   877.9074, 24.9201, 674.9432, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-11",
         "alt-actor":"ctyindb-skill-11",
@@ -679,10 +679,10 @@
     },
     {
       "trans": [      874.2691, 42.9876, 683.0865], // standpoint high on wall above walkway in SW area, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      874.2691, 42.9876, 683.0865, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      874.2691, 42.9876, 683.0865, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-12",
         "alt-actor":"ctyindb-skill-12"
@@ -690,10 +690,10 @@
     },
     {
       "trans": [      772.7384, 25.3123, 735.9368], // in crouch corner on upper walkway, SW area
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      772.7384, 25.3123, 735.9368, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      772.7384, 25.3123, 735.9368, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-13",
         "alt-actor":"ctyindb-skill-13"
@@ -701,10 +701,10 @@
     },
     {
       "trans": [       891.0256, 26.3609, 401.7737], // crouch under in NW corner on upper walkway
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [       891.0256, 26.3609, 401.7737, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [       891.0256, 26.3609, 401.7737, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-14",
         "alt-actor":"ctyindb-skill-14"
@@ -712,10 +712,10 @@
     },
     {
       "trans": [   885.8602, 43.0227, 401.6546], // on standpoint up on wall above ^, dark giant shenanigans (or maybe bring a zoomer up here?)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   885.8602, 43.0227, 401.6546, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   885.8602, 43.0227, 401.6546, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-15",
         "alt-actor":"ctyindb-skill-15"
@@ -723,10 +723,10 @@
     },
     {
       "trans": [   979.1069, 43.0015, 620.4312], // on standpoint up on wall dead center, south side, dark giant crouch jump late dark bomb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   979.1069, 43.0015, 620.4312, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   979.1069, 43.0015, 620.4312, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-16",
         "alt-actor":"ctyindb-skill-16"
@@ -734,10 +734,10 @@
     },
     {
       "trans": [       997.5250, 48.9732, 626.7124], // way up high on fake ledge center southside, extended from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     997.5250, 48.9732, 626.7124, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     997.5250, 48.9732, 626.7124, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-17",
         "alt-actor":"ctyindb-skill-17"
@@ -745,10 +745,10 @@
     },
     {
       "trans": [  908.8655, 42.9746, 620.4006], // on standpoint up on wall just west of center, south side, dark giant crouch jump late dark bomb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  908.8655, 42.9746, 620.4006, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  908.8655, 42.9746, 620.4006, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-18",
         "alt-actor":"ctyindb-skill-18"
@@ -756,10 +756,10 @@
     },
     {
       "trans": [  874.2777, 42.9870, 752.6298], // standpoint up high on wall in SW area, just before crossing into ctyinda, dark giant crouch jump late dark bomb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  874.2777, 42.9870, 752.6298, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  874.2777, 42.9870, 752.6298, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-19",
         "alt-actor":"ctyindb-skill-19"
@@ -767,10 +767,10 @@
     },
     {
       "trans": [     1067.5291, 9.7752, 619.5013], // down almost on ground behind pipe in corner on east before going from south to north half
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1067.5291, 9.7752, 619.5013, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1067.5291, 9.7752, 619.5013, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-20",
         "alt-actor":"ctyindb-skill-20"
@@ -778,10 +778,10 @@
     },
     {
       "trans": [     970.4449, 40.3446, 708.1099], // up on pipes crossing overhead in south central hallway
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     970.4449, 40.3446, 708.1099, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     970.4449, 40.3446, 708.1099, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-21",
         "alt-actor":"ctyindb-skill-21"
@@ -789,10 +789,10 @@
     },
     {
       "trans": [   1052.0980, 9.8887, 683.37], // in crack behind burning bush
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1052.0980, 9.8887, 683.37, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1052.0980, 9.8887, 683.37, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-22",
         "alt-actor":"ctyindb-skill-22"
@@ -800,10 +800,10 @@
     },
     {
       "trans": [     1150.6689, 30.9203, 630.7357], // behind pipe on east wall coming from south to north half
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1150.6689, 30.9203, 630.7357, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1150.6689, 30.9203, 630.7357, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-23",
         "alt-actor":"ctyindb-skill-23"
@@ -811,10 +811,10 @@
     },
     {
       "trans": [      1145.1090, 29.2583, 557.3516], // between pipe and column on wall in corner on east side just coming into north half, boosted from walkway
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1145.1090, 29.2583, 557.3516, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1145.1090, 29.2583, 557.3516, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-24",
         "alt-actor":"ctyindb-skill-24",
@@ -823,10 +823,10 @@
     },
     {
       "trans": [      1145.8964, 42.9839, 552.6948], // up high on standpoint on wall in corner, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1145.8964, 42.9839, 552.6948, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1145.8964, 42.9839, 552.6948, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-25",
         "alt-actor":"ctyindb-skill-25"
@@ -834,10 +834,10 @@
     },
     {
       "trans": [      966.0000, 9.5, 587.0000], // inside proganda thing near sewers
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      966.0000, 9.5, 587.0000, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      966.0000, 9.5, 587.0000, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-26",
         "alt-actor":"ctyindb-skill-26"
@@ -846,10 +846,10 @@
     },
     {
       "trans": [   903.8528, 42.9979, 594.8306], // another up high on standpoint on center wall, north side, dark giant dark bomb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  903.8528, 42.9979, 594.8306, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  903.8528, 42.9979, 594.8306, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-27",
         "alt-actor":"ctyindb-skill-27"
@@ -857,10 +857,10 @@
     },
     {
       "trans": [    974.0958, 42.9850, 594.8161], // another up high on standpoint on center wall, north side, dark giant dark bomb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   974.0958, 42.9850, 594.8161, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   974.0958, 42.9850, 594.8161, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-28",
         "alt-actor":"ctyindb-skill-28"
@@ -868,10 +868,10 @@
     },
     {
       "trans": [       1021.3034, 8.6987, 465.8744], // behind pipes on ground level, along north-most path
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1021.3034, 8.6987, 465.8744, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1021.3034, 8.6987, 465.8744, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-29",
         "alt-actor":"ctyindb-skill-29"
@@ -879,10 +879,10 @@
     },
     {
       "trans": [     775.1878, 31.1591, 595.6703], // on ledge around corner on SW corner of north half, extended from walkway
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     775.1878, 31.1591, 595.6703, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     775.1878, 31.1591, 595.6703, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-30",
         "alt-actor":"ctyindb-skill-30"
@@ -890,10 +890,10 @@
     },
     {
       "trans": [     773.2426, 20.6137, 521.5249], // on pipe in corner before ramp by ctymarkb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     773.2426, 20.6137, 521.5249, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     773.2426, 20.6137, 521.5249, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-31",
         "alt-actor":"ctyindb-skill-31",
@@ -902,10 +902,10 @@
     },
     {
       "trans": [      770.9913, 44.4777, 521.4694], // way up on top of window in corner, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      770.9913, 44.4777, 521.4694, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      770.9913, 44.4777, 521.4694, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-32",
         "alt-actor":"ctyindb-skill-32"
@@ -913,10 +913,10 @@
     },
     {
       "trans": [     1161.3287, 10.1808, 518.2760], // on edge of pipe base platform in corner near ctysluma
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     1161.3287, 10.1808, 518.2760, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     1161.3287, 10.1808, 518.2760, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-33",
         "alt-actor":"ctyindb-skill-33",
@@ -925,10 +925,10 @@
     },
     {
       "trans": [   1159.1506, 26.6099, 516.2239], // on pipe in corner near ctysluma, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1159.1506, 26.6099, 516.2239, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1159.1506, 26.6099, 516.2239, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-34",
         "alt-actor":"ctyindb-skill-34",
@@ -937,10 +937,10 @@
     },
     {
       "trans": [   1161.8981, 42.9826, 514.4287], // way up on top of window in corner, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1161.8981, 42.9826, 514.4287, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1161.8981, 42.9826, 514.4287, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-35",
         "alt-actor":"ctyindb-skill-35"
@@ -948,10 +948,10 @@
     },
     {
       "trans": [   965.4751, 42.9832, 396.7166], // another up high on standpoint on north wall, dark giant dark bomb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   965.4751, 42.9832, 396.7166, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   965.4751, 42.9832, 396.7166, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-36",
         "alt-actor":"ctyindb-skill-36"
@@ -959,10 +959,10 @@
     },
     {
       "trans": [   885.8381, 42.9860, 471.8892], // another up high on standpoint on west-ish wall in north half, dark giant dark bomb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   885.8381, 42.9860, 471.8892, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   885.8381, 42.9860, 471.8892, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-37",
         "alt-actor":"ctyindb-skill-37"
@@ -970,10 +970,10 @@
     },
     {
       "trans": [   1161.9085, 43.0127, 449.4194], // another up high on standpoint on NE wall, car launch
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1161.9085, 43.0127, 449.4194, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1161.9085, 43.0127, 449.4194, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-38",
         "alt-actor":"ctyindb-skill-38"
@@ -983,10 +983,10 @@
     // HOVER ORBS
     {
       "trans": [   842.7365, 42.9824, 621.0164], // standpoint up high on wall in SW area
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  842.7365, 42.9824, 621.0164, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  842.7365, 42.9824, 621.0164, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-hover-01",
         "alt-actor":"ctyindb-skill-hover-01",
@@ -995,10 +995,10 @@
     },
     {
       "trans": [       1057.3979, 42.9825, 717.2123], // standpoint up high on wall left of burning bush
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [      1057.3979, 42.9825, 717.2123, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [      1057.3979, 42.9825, 717.2123, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-hover-02",
         "alt-actor":"ctyindb-skill-hover-02",
@@ -1007,10 +1007,10 @@
     },
     {
       "trans": [    1126.9291, 42.9747, 717.2139], // standpoint up high on wall in near burning bush
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   1126.9291, 42.9747, 717.2139, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   1126.9291, 42.9747, 717.2139, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-hover-03",
         "alt-actor":"ctyindb-skill-hover-03",
@@ -1019,10 +1019,10 @@
     },
     {
       "trans": [  1083.6176, 42.9803, 552.6927], // standpoint up high on wall just past sewers towards path to south half
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1083.6176, 42.9803, 552.6927, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1083.6176, 42.9803, 552.6927, 10],
       "lump": {
         "name":"ctyindb-skill-ghost-hover-04",
         "alt-actor":"ctyindb-skill-hover-04",

@@ -49,10 +49,10 @@
     // central chamber
     {
       "trans": [ 268.47, -71.60, 1262.78  ], // in crevice of big torch left of entrance to left tomb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [268.47, -71.60, 1262.78, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [268.47, -71.60, 1262.78, 10],
       "lump": {
         "name":"tomba-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -60,60 +60,60 @@
     },
     {
       "trans": [262.22, -51.90, 1260.98], // way up, left side before entrance to left tomb (abah from ^)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [262.22, -51.90, 1260.98, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [262.22, -51.90, 1260.98, 10],
       "lump": {
         "name":"tomba-skill-02"
       }
     },
     {
       "trans": [262.63, -37.25, 1272.37], // further up from ^, infin jump ceiling
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [262.63, -37.25, 1272.37, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [262.63, -37.25, 1272.37, 10],
       "lump": {
         "name":"tomba-skill-03"
       }
     },
     {
       "trans": [ 127.9274, -81.6978, 1139.4431], // in front corner of water, right tomb side
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 127.9274, -81.6978, 1139.4431, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 127.9274, -81.6978, 1139.4431, 10],
       "lump": {
         "name":"tomba-skill-04"
       }
     },
     {
       "trans": [ 220.76, -82.20, 1053.97], // on low ledge before void, center from left tomb exit
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 220.76, -82.20, 1053.97, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 220.76, -82.20, 1053.97, 10],
       "lump": {
         "name":"tomba-skill-05"
       }
     },
     {
       "trans": [  167.1721, -84.2224, 1099.4652], // small crevice under ramps between entrance and lower section
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  167.1721, -84.2224, 1099.4652, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  167.1721, -84.2224, 1099.4652, 10],
       "lump": {
         "name":"tomba-skill-06"
       }
     },
     {
       "trans": [  260.1524, -68.1775, 1144.6496], // elbow of statue at corner of water near exit of left tomb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  260.1524, -68.1775, 1144.6496, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  260.1524, -68.1775, 1144.6496, 10],
       "lump": {
         "name":"tomba-skill-07",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -121,70 +121,70 @@
     },
     {
       "trans": [ 257.71, -51.90, 1140.32], // on ledge up above ^ (abah)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 257.71, -51.90, 1140.32, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 257.71, -51.90, 1140.32, 10],
       "lump": {
         "name":"tomba-skill-08"
       }
     },
     {
       "trans": [ 222.45, -33.29, 1140.35], // way up on corner ledge on left tomb side, torch proxy
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 222.45, -33.29, 1140.35, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 222.45, -33.29, 1140.35, 10],
       "lump": {
         "name":"tomba-skill-09"
       }
     },
     {
       "trans": [ 212.3482, -31.6584, 1044.0378], // between wall and precursor thing on left at top of ramps
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 212.3482, -31.6584, 1044.0378, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 212.3482, -31.6584, 1044.0378, 10],
       "lump": {
         "name":"tomba-skill-10"
       }
     },
     {
       "trans": [ 254.82, -70.08, 1373.33], // between wall and precursor thing on left way near boss room (dark giant up and around)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 254.82, -70.08, 1373.33, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 254.82, -70.08, 1373.33, 10],
       "lump": {
         "name":"tomba-skill-11"
       }
     },
     {
       "trans": [ 133.0110, -74.7171, 1311.7974], // in claw of precursor outside right tomb entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 133.0110, -74.7171, 1311.7974, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 133.0110, -74.7171, 1311.7974, 10],
       "lump": {
         "name":"tomba-skill-12"
       }
     },
     {
       "trans": [ 119.6363, -77.6839, 1295.2602], // behind flaming pot at right tomb entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 119.6363, -77.6839, 1295.2602, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 119.6363, -77.6839, 1295.2602, 10],
       "lump": {
         "name":"tomba-skill-13"
       }
     },
     {
       "trans": [ 167.77, -33.29, 1218.00], // high ledge in center of room, right side (torch proxy ofc)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  167.77, -33.29, 1218.00, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  167.77, -33.29, 1218.00, 10],
       "lump": {
         "name":"tomba-skill-14"
       }
@@ -193,10 +193,10 @@
     // HOVER OBRS
     {
       "trans": [ 127.14,  -9.40, 1101.13], // high ledge above right tomb exit
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [127.14,  -9.40, 1101.13, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [127.14,  -9.40, 1101.13, 10],
       "lump": {
         "name":"tomba-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -204,10 +204,10 @@
     },
     {
       "trans": [ 251.39,  -9.83, 1127.87], // high ledge in corner above left tomb exit
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 251.39,  -9.83, 1127.87, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 251.39,  -9.83, 1127.87, 10],
       "lump": {
         "name":"tomba-skill-hover-02",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -215,10 +215,10 @@
     },
     {
       "trans": [  260.1748, -19.9055, 1059.3652], // high slant ledge in corner above left tomb exit
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  260.1748, -19.9055, 1059.3652, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  260.1748, -19.9055, 1059.3652, 10],
       "lump": {
         "name":"tomba-skill-hover-03",
         "bob-scale": ["float", 0.5],
@@ -227,10 +227,10 @@
     },
     {
       "trans": [  248.09, -29.64, 1371.54], // high slant ledge outside boss
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  248.09, -29.64, 1371.54, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  248.09, -29.64, 1371.54, 10],
       "lump": {
         "name":"tomba-skill-hover-04",
         "bob-scale": ["float", 0.5],
@@ -239,10 +239,10 @@
     },
     {
       "trans": [  192.0532, -15.6342, 1135.0557  ], // right under arch in front of you when entering tomb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  192.0532, -15.6342, 1135.0557  , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  192.0532, -15.6342, 1135.0557  , 10],
       "lump": {
         "name":"tomba-skill-hover-05",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -252,10 +252,10 @@
     // GHOSTS
     {
       "trans": [ 268.47, -71.60, 1262.78  ], // in crevice of big torch left of entrance to left tomb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [268.47, -71.60, 1262.78, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [268.47, -71.60, 1262.78, 10],
       "lump": {
         "name":"tomba-skill-ghost-01",
         "alt-actor":"tomba-skill-01",
@@ -264,10 +264,10 @@
     },
     {
       "trans": [262.22, -51.90, 1260.98], // way up, left side before entrance to left tomb (abah from ^)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [262.22, -51.90, 1260.98, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [262.22, -51.90, 1260.98, 10],
       "lump": {
         "name":"tomba-skill-ghost-02",
         "alt-actor":"tomba-skill-02"
@@ -275,10 +275,10 @@
     },
     {
       "trans": [262.63, -37.25, 1272.37], // further up from ^, infin jump ceiling
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [262.63, -37.25, 1272.37, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [262.63, -37.25, 1272.37, 10],
       "lump": {
         "name":"tomba-skill-ghost-03",
         "alt-actor":"tomba-skill-03"
@@ -286,10 +286,10 @@
     },
     {
       "trans": [ 127.9274, -81.6978, 1139.4431], // in front corner of water, right tomb side
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 127.9274, -81.6978, 1139.4431, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 127.9274, -81.6978, 1139.4431, 10],
       "lump": {
         "name":"tomba-skill-ghost-04",
         "alt-actor":"tomba-skill-04"
@@ -297,10 +297,10 @@
     },
     {
       "trans": [ 220.76, -82.20, 1053.97], // on low ledge before void, center from left tomb exit
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 220.76, -82.20, 1053.97, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 220.76, -82.20, 1053.97, 10],
       "lump": {
         "name":"tomba-skill-ghost-05",
         "alt-actor":"tomba-skill-05"
@@ -308,10 +308,10 @@
     },
     {
       "trans": [  167.1721, -84.2224, 1099.4652], // small crevice under ramps between entrance and lower section
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  167.1721, -84.2224, 1099.4652, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  167.1721, -84.2224, 1099.4652, 10],
       "lump": {
         "name":"tomba-skill-ghost-06",
         "alt-actor":"tomba-skill-06"
@@ -319,10 +319,10 @@
     },
     {
       "trans": [  260.1524, -68.1775, 1144.6496], // elbow of statue at corner of water near exit of left tomb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  260.1524, -68.1775, 1144.6496, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  260.1524, -68.1775, 1144.6496, 10],
       "lump": {
         "name":"tomba-skill-ghost-07",
         "alt-actor":"tomba-skill-07",
@@ -331,10 +331,10 @@
     },
     {
       "trans": [ 257.71, -51.90, 1140.32], // on ledge up above ^ (abah)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 257.71, -51.90, 1140.32, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 257.71, -51.90, 1140.32, 10],
       "lump": {
         "name":"tomba-skill-ghost-08",
         "alt-actor":"tomba-skill-08"
@@ -342,10 +342,10 @@
     },
     {
       "trans": [ 222.45, -33.29, 1140.35], // way up on corner ledge on left tomb side, torch proxy
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 222.45, -33.29, 1140.35, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 222.45, -33.29, 1140.35, 10],
       "lump": {
         "name":"tomba-skill-ghost-09",
         "alt-actor":"tomba-skill-09"
@@ -353,10 +353,10 @@
     },
     {
       "trans": [ 212.3482, -31.6584, 1044.0378], // between wall and precursor thing on left at top of ramps
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 212.3482, -31.6584, 1044.0378, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 212.3482, -31.6584, 1044.0378, 10],
       "lump": {
         "name":"tomba-skill-ghost-10",
         "alt-actor":"tomba-skill-10"
@@ -364,10 +364,10 @@
     },
     {
       "trans": [ 254.82, -70.08, 1373.33], // between wall and precursor thing on left way near boss room (dark giant up and around)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 254.82, -70.08, 1373.33, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 254.82, -70.08, 1373.33, 10],
       "lump": {
         "name":"tomba-skill-ghost-11",
         "alt-actor":"tomba-skill-11"
@@ -375,10 +375,10 @@
     },
     {
       "trans": [ 133.0110, -74.7171, 1311.7974], // in claw of precursor outside right tomb entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 133.0110, -74.7171, 1311.7974, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 133.0110, -74.7171, 1311.7974, 10],
       "lump": {
         "name":"tomba-skill-ghost-12",
         "alt-actor":"tomba-skill-12"
@@ -386,10 +386,10 @@
     },
     {
       "trans": [ 119.6363, -77.6839, 1295.2602], // behind flaming pot at right tomb entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 119.6363, -77.6839, 1295.2602, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 119.6363, -77.6839, 1295.2602, 10],
       "lump": {
         "name":"tomba-skill-ghost-13",
         "alt-actor":"tomba-skill-13"
@@ -397,10 +397,10 @@
     },
     {
       "trans": [ 167.77, -33.29, 1218.00], // high ledge in center of room, right side (torch proxy ofc)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  167.77, -33.29, 1218.00, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  167.77, -33.29, 1218.00, 10],
       "lump": {
         "name":"tomba-skill-ghost-14",
         "alt-actor":"tomba-skill-14"
@@ -410,10 +410,10 @@
     // HOVER OBRS
     {
       "trans": [ 127.14,  -9.40, 1101.13], // high ledge above right tomb exit
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [127.14,  -9.40, 1101.13, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [127.14,  -9.40, 1101.13, 10],
       "lump": {
         "name":"tomba-skill-ghost-hover-01",
         "alt-actor":"tomba-skill-hover-01",
@@ -422,10 +422,10 @@
     },
     {
       "trans": [ 251.39,  -9.83, 1127.87], // high ledge in corner above left tomb exit
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 251.39,  -9.83, 1127.87, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 251.39,  -9.83, 1127.87, 10],
       "lump": {
         "name":"tomba-skill-ghost-hover-02",
         "alt-actor":"tomba-skill-hover-02",
@@ -434,10 +434,10 @@
     },
     {
       "trans": [  260.1748, -19.9055, 1059.3652], // high slant ledge in corner above left tomb exit
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  260.1748, -19.9055, 1059.3652, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  260.1748, -19.9055, 1059.3652, 10],
       "lump": {
         "name":"tomba-skill-ghost-hover-03",
         "alt-actor":"tomba-skill-hover-03",
@@ -447,10 +447,10 @@
     },
     {
       "trans": [  248.09, -29.64, 1371.54], // high slant ledge outside boss
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  248.09, -29.64, 1371.54, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  248.09, -29.64, 1371.54, 10],
       "lump": {
         "name":"tomba-skill-ghost-hover-04",
         "alt-actor":"tomba-skill-hover-04",
@@ -460,10 +460,10 @@
     },
     {
       "trans": [  192.0532, -15.6342, 1135.0557  ], // right under arch in front of you when entering tomb
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  192.0532, -15.6342, 1135.0557  , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  192.0532, -15.6342, 1135.0557  , 10],
       "lump": {
         "name":"tomba-skill-ghost-hover-05",
         "alt-actor":"tomba-skill-hover-05",

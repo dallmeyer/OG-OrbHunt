@@ -48,30 +48,30 @@
   "actors" : [
     {
       "trans": [  -93.8272, 11.9404, 1304.2862], // top of guns in middle of room, punchboard in or find the magic edge to walk up
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -93.8272, 11.9404, 1304.2862, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -93.8272, 11.9404, 1304.2862, 10],
       "lump": {
         "name":"hiphog-skill-01"
       }
     },
     {
       "trans": [ -85.01,  10.97,  1308.74 ], // on holo/table in middle of room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -85.01,  10.97,  1308.74 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -85.01,  10.97,  1308.74 , 10],
       "lump": {
         "name":"hiphog-skill-02"
       }
     },
     {
       "trans": [ -77.59,  14.71,  1297.10  ], // above trash can on right, more punchboard shiz
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -77.59,  14.71,  1297.10 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -77.59,  14.71,  1297.10 , 10],
       "lump": {
         "name":"hiphog-skill-03"
       }
@@ -79,10 +79,10 @@
 
     {
       "trans": [ -104.61,  10.05,  1290.62], // behind bar (beam reflexor and pray or nuke, crawl to get behind bar)
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0000, 0.8812, 0.0000, 0.4725], // quaternion
-      "bsphere": [ -104.61,  10.05,  1290.62, 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [ 0.0000, 0.8812, 0.0000, 0.4725],
+      "bsphere": [ -104.61,  10.05,  1290.62, 10],
       "lump": {
         "name": "hiphog-crate-01",
         "crate-type": "iron",
@@ -97,10 +97,10 @@
 
     {
       "trans": [ -109.43770599365234, 9.858799934387207, 1300.718994140625], // torn in back left booth
-      "etype": "torn-npc",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0, 0.11317040771245956, 0.0, 0.9935755729675293], // quaternion
-      "bsphere": [ -109.43770599365234, 9.858799934387207, 1300.718994140625, 6.928219795227051], // bounding sphere
+      "etype": "torn-npc",
+      "game_task": 0, 
+      "quat" : [ 0.0, 0.11317040771245956, 0.0, 0.9935755729675293],
+      "bsphere": [ -109.43770599365234, 9.858799934387207, 1300.718994140625, 6.928219795227051],
       "lump": {
         "name": "hiphog-torn-npc",
         "task-actor": ["int32", 54]
@@ -108,10 +108,10 @@
     },
     {
       "trans": [ -109.43770599365234, 13.5, 1300.718994140625], // 
-      "etype": "fuel-cell",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0, 0.11317040771245956, 0.0, 0.9935755729675293], // quaternion
-      "bsphere": [ -109.43770599365234, 13.5, 1300.718994140625, 6.928219795227051], // bounding sphere
+      "etype": "fuel-cell",
+      "game_task": 0, 
+      "quat" : [ 0.0, 0.11317040771245956, 0.0, 0.9935755729675293],
+      "bsphere": [ -109.43770599365234, 13.5, 1300.718994140625, 6.928219795227051],
       "lump": {
         "name": "hiphog-fuel-cell",
         "level-idx": ["int32", 38]
@@ -123,10 +123,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -135,10 +135,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

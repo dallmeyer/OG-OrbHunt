@@ -48,20 +48,20 @@
   "actors" : [
     {
       "trans": [ 698.0,    6.5,     -447.75 ], // #t ; corner on right sid
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [698.0,    6.5,     -447.7, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [698.0,    6.5,     -447.7, 10],
       "lump": {
         "name": "oracle-skill-01"
       }
     },
     {
       "trans": [      708.4026, 7.0510, -443.3313], // under/behind oracle snoot
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     708.4026, 7.0510, -443.3313, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     708.4026, 7.0510, -443.3313, 10],
       "lump": {
         "name": "oracle-skill-02"
       }
@@ -70,10 +70,10 @@
     // GHOSTS
     {
       "trans": [ 698.0,    6.5,     -447.75 ], // #t ; corner on right sid
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [698.0,    6.5,     -447.7, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [698.0,    6.5,     -447.7, 10],
       "lump": {
         "name":"oracle-skill-ghost-01",
         "alt-actor":"oracle-skill-01"
@@ -81,10 +81,10 @@
     },
     {
       "trans": [      708.4026, 7.0510, -443.3313], // under/behind oracle snoot
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     708.4026, 7.0510, -443.3313, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     708.4026, 7.0510, -443.3313, 10],
       "lump": {
         "name":"oracle-skill-ghost-02",
         "alt-actor":"oracle-skill-02"

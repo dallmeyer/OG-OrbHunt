@@ -49,80 +49,80 @@
     // 'caspad (landing pad connecting atoll, dig, castle)
     {
       "trans": [ 301.1,    43.2,    -1700.2   ], // #t  up above tree/rock near dig entranc
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [301.1,    43.2,    -1700.2 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [301.1,    43.2,    -1700.2 , 10],
       "lump": {
         "name": "caspad-skill-1"
       }
     },
     {
       "trans": [ 218.02,   34.14,   -1724.96  ], // #t  in crack of rocks between dig/castl
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [218.02,   34.14,   -1724.96, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [218.02,   34.14,   -1724.96, 10],
       "lump": {
         "name": "caspad-skill-2"
       }
     },
     {
       "trans": [ 236.98,   48.8,    -1709.0   ], // #t  up & right from skill-2 (abbah
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [236.98,   48.8,    -1709.0 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [236.98,   48.8,    -1709.0 , 10],
       "lump": {
         "name": "caspad-skill-3"
       }
     },
     {
       "trans": [ 209.75,   45.8,    -1730.5   ], // #t  up & left from skill-2 (abbah
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [209.75,   45.8,    -1730.5 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [209.75,   45.8,    -1730.5 , 10],
       "lump": {
         "name": "caspad-skill-4"
       }
     },
     {
       "trans": [ 190.1,    58.8,    -1713.6   ], // #t  up & left from skill-4 (or maybe abbah?
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [190.1,    58.8,    -1713.6 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [190.1,    58.8,    -1713.6 , 10],
       "lump": {
         "name": "caspad-skill-5"
       }
     },
     {
       "trans": [ 127.4,    66.2,    -1698.9   ], // #t  atop tall rock towards castle entrance (abbah
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [127.4,    66.2,    -1698.9 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [127.4,    66.2,    -1698.9 , 10],
       "lump": {
         "name": "caspad-skill-6"
       }
     },
     {
       "trans": [ 83.42,    75.16,   -1704.72  ], // #t  atop rocks right right outside castle entrance (abbah
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [83.42,    75.16,   -1704.72, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [83.42,    75.16,   -1704.72, 10],
       "lump": {
         "name": "caspad-skill-7"
       }
     },
     {
       "trans": [ 216.53,   37.08,   -1570.87  ], // #t  in crack in rocks between castle and atol
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [216.53,   37.08,   -1570.87, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [216.53,   37.08,   -1570.87, 10],
       "lump": {
         "name": "caspad-skill-8",
         "pickup-amount": ["float", 2.0]  // abah hint
@@ -130,10 +130,10 @@
     },
     {
       "trans": [ 191.35,  56.57, -1567.05 ], // #t  up/right from skill-
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [191.35,  56.57, -1567.05, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [191.35,  56.57, -1567.05, 10],
       "lump": {
         "name": "caspad-skill-9",
         "pickup-amount": ["float", 2.0]  // abah hint
@@ -141,50 +141,50 @@
     },
     {
       "trans": [ 189.67,   72.7,    -1554.08  ], // #t up from skill-9
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [189.67,   72.7,    -1554.08, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [189.67,   72.7,    -1554.08, 10],
       "lump": {
         "name": "caspad-skill-10"
       }
     },
     {
       "trans": [ 202.31,   83.6,    -1546.70  ], // #t low-poly leaves are solid, free orb near skill-1
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [202.31,   83.6,    -1546.70, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [202.31,   83.6,    -1546.70, 10],
       "lump": {
         "name": "caspad-skill-11"
       }
     },
     {
       "trans": [ 79.62,    121.5,   -1519.64  ], // #t low-poly leaves, way in the back towards castl
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [79.62,    121.5,   -1519.64, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [79.62,    121.5,   -1519.64, 10],
       "lump": {
         "name": "caspad-skill-12"
       }
     },
     {
       "trans": [ 257.0,  21.5, -1639.0], // under/between airtrain plat
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [257.0,  21.5, -1639.0, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [257.0,  21.5, -1639.0, 10],
       "lump": {
         "name": "caspad-skill-13"
       }
     },
     {
       "trans": [260.64,  29.89, -1665.80], // on light on airtrain plat
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [260.64,  29.89, -1665.80, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [260.64,  29.89, -1665.80, 10],
       "lump": {
         "name": "caspad-skill-14",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -192,50 +192,50 @@
     },
     {
       "trans": [258.36,  48.32, -1668.19], // top of pole above ^ (abah)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [258.36,  48.32, -1668.19, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [258.36,  48.32, -1668.19, 10],
       "lump": {
         "name": "caspad-skill-15"
       }
     },
     {
       "trans": [488.41,  51.42, -1504.66], // cave entrance from atoll (avoid invis ceiling)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [488.41,  51.42, -1504.66, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [488.41,  51.42, -1504.66, 10],
       "lump": {
         "name": "caspad-skill-16"
       }
     },
     {
       "trans": [451.92,  48.5, -1528.56], // cave near atoll, but on caspad side
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [451.92,  48.5, -1528.56, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [451.92,  48.5, -1528.56, 10],
       "lump": {
         "name": "caspad-skill-17"
       }
     },
     {
       "trans": [487.7,  49.3, -1557.8], // cave near atoll, in back corner
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [487.7,  49.3, -1557.8, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [487.7,  49.3, -1557.8, 10],
       "lump": {
         "name": "caspad-skill-18"
       }
     },
     {
       "trans": [426.53,  38.40, -1568.08], // crevice in left cliff outside/facing cave to atoll
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [426.53,  38.40, -1568.08, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [426.53,  38.40, -1568.08, 10],
       "lump": {
         "name": "caspad-skill-19",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -243,20 +243,20 @@
     },
     {
       "trans": [430.38,  54.01, -1566.57], // on tall rock between cliff and pipe (abah from^)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [430.38,  54.01, -1566.57, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [430.38,  54.01, -1566.57, 10],
       "lump": {
         "name": "caspad-skill-20"
       }
     },
     {
       "trans": [398.46,  46.1, -1532.67], // crevice in right cliff outside/facing cave to atoll (jump from high rock)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [398.46,  46.1, -1532.67, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [398.46,  46.1, -1532.67, 10],
       "lump": {
         "name": "caspad-skill-21",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -264,30 +264,30 @@
     },
     {
       "trans": [391.09,  57.73, -1527.62], // up from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [391.09,  57.73, -1527.62, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [391.09,  57.73, -1527.62, 10],
       "lump": {
         "name": "caspad-skill-22"
       }
     },
     {
       "trans": [432.93,  55.38, -1532.91], // top of tall rock right outside cave to atoll
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [432.93,  55.38, -1532.91, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [432.93,  55.38, -1532.91, 10],
       "lump": {
         "name": "caspad-skill-23"
       }
     },
     {
       "trans": [413.92,  54.93, -1525.66], // crevice on right cliff outside/facing cave to atoll
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [413.92,  54.93, -1525.66, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [413.92,  54.93, -1525.66, 10],
       "lump": {
         "name": "caspad-skill-24",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -295,40 +295,40 @@
     },
     {
       "trans": [421.56,  71.61, -1520.96], // way up from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [421.56,  71.61, -1520.96, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [421.56,  71.61, -1520.96, 10],
       "lump": {
         "name": "caspad-skill-25"
       }
     },
     {
       "trans": [329.72,  22.55, -1550.48], // behind rock against cliff towards atoll side
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [329.72,  22.55, -1550.48, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [329.72,  22.55, -1550.48, 10],
       "lump": {
         "name": "caspad-skill-26"
       }
     },
     {
       "trans": [383.88,  34.71, -1576.52], // behind fern on rock halfway up cliff near atoll cave
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [383.88,  34.71, -1576.52, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [383.88,  34.71, -1576.52, 10],
       "lump": {
         "name": "caspad-skill-27"
       }
     },
     {
       "trans": [379.41,  43.84, -1582.40], // up from ^, crevice on right cliff outside/facing cave to atoll
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [379.41,  43.84, -1582.40, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [379.41,  43.84, -1582.40, 10],
       "lump": {
         "name": "caspad-skill-28",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -336,10 +336,10 @@
     },
     {
       "trans": [366.89,  53.73, -1580.66], // behind fern way up on cliff, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [366.89,  53.73, -1580.66, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [366.89,  53.73, -1580.66, 10],
       "lump": {
         "name": "caspad-skill-29",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -347,10 +347,10 @@
     },
     {
       "trans": [360.22,  61.72, -1597.56], // behind tree way up on cliff, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [360.22,  61.72, -1597.56, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [360.22,  61.72, -1597.56, 10],
       "lump": {
         "name": "caspad-skill-30",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -358,20 +358,20 @@
     },
     {
       "trans": [349.44,  71.19, -1609.76], // up high on cliff, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [349.44,  71.19, -1609.76, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [349.44,  71.19, -1609.76, 10],
       "lump": {
         "name": "caspad-skill-31"
       }
     },
     {
       "trans": [337.16,  39.18, -1653.64], // in crevice on cliff wall, near pad
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [337.16,  39.18, -1653.64, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [337.16,  39.18, -1653.64, 10],
       "lump": {
         "name": "caspad-skill-32",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -379,10 +379,10 @@
     },
     {
       "trans": [337.13,  45.01, -1643.41], // cliff wall, up from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [337.13,  45.01, -1643.41, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [337.13,  45.01, -1643.41, 10],
       "lump": {
         "name": "caspad-skill-33",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -390,10 +390,10 @@
     },
     {
       "trans": [344.34,  59.30, -1645.56], // behind tree way up on cliff, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [344.34,  59.30, -1645.56, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [344.34,  59.30, -1645.56, 10],
       "lump": {
         "name": "caspad-skill-34",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -401,10 +401,10 @@
     },
     {
       "trans": [331.90,  29.35, -1659.79], // crevice on cliff wall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [331.90,  29.35, -1659.79, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [331.90,  29.35, -1659.79, 10],
       "lump": {
         "name": "caspad-skill-35",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -412,30 +412,30 @@
     },
     {
       "trans": [338.37,  68.54, -1632.20], // up high on cliff, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [338.37,  68.54, -1632.20, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [338.37,  68.54, -1632.20, 10],
       "lump": {
         "name": "caspad-skill-36"
       }
     },
     {
       "trans": [334.62,  48.25, -1653.05], // atop tall rock, abah from one of these ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [334.62,  48.25, -1653.05, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [334.62,  48.25, -1653.05, 10],
       "lump": {
         "name": "caspad-skill-37"
       }
     },
     {
       "trans": [337.60,  51.84, -1667.98], // way up on cliff, abah from one of these^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [337.60,  51.84, -1667.98, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [337.60,  51.84, -1667.98, 10],
       "lump": {
         "name": "caspad-skill-38",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -443,30 +443,30 @@
     },
     {
       "trans": [337.04,  63.73, -1669.15], // way up on cliff, abah from one of these^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [337.04,  63.73, -1669.15, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [337.04,  63.73, -1669.15, 10],
       "lump": {
         "name": "caspad-skill-39"
       }
     },
     {
       "trans": [300.69,  52.21, -1709.61], // behind tree way up on cliff above dig entrance, jump from ^^skill-1
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [300.69,  52.21, -1709.61, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [300.69,  52.21, -1709.61, 10],
       "lump": {
         "name": "caspad-skill-40"
       }
     },
     {
       "trans": [306.13,  59.30, -1702.59], // crevice on cliff wall up from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [306.13,  59.30, -1702.59, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [306.13,  59.30, -1702.59, 10],
       "lump": {
         "name": "caspad-skill-41",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -474,90 +474,90 @@
     },
     {
       "trans": [311.87,  71.42, -1692.50], // up high on cliff, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [311.87,  71.42, -1692.50, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [311.87,  71.42, -1692.50, 10],
       "lump": {
         "name": "caspad-skill-42"
       }
     },
     {
       "trans": [326.88, 35.6, -1680.98], // up in corner of cave entrance to dig
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [326.88, 35.6, -1680.98, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [326.88, 35.6, -1680.98, 10],
       "lump": {
         "name": "caspad-skill-43"
       }
     },
     {
       "trans": [322.66,  29.43, -1553.12], // behind rock on path towards cave to atoll
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [322.66,  29.43, -1553.12, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [322.66,  29.43, -1553.12, 10],
       "lump": {
         "name": "caspad-skill-44"
       }
     },
     {
       "trans": [328.13,  41.75, -1548.15], // up on rock from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [328.13,  41.75, -1548.15, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [328.13,  41.75, -1548.15, 10],
       "lump": {
         "name": "caspad-skill-45"
       }
     },
     {
       "trans": [317.74,  49.18, -1542.71], // up on rock from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [317.74,  49.18, -1542.71, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [317.74,  49.18, -1542.71, 10],
       "lump": {
         "name": "caspad-skill-46"
       }
     },
     {
       "trans": [316.25,  64.38, -1512.50], // keep going up from^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [316.25,  64.38, -1512.50, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [316.25,  64.38, -1512.50, 10],
       "lump": {
         "name": "caspad-skill-47"
       }
     },
     {
       "trans": [344.91,  32.66, -1580.45], // rock crevice at end of path to cave to atoll
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [344.91,  32.66, -1580.45, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [344.91,  32.66, -1580.45, 10],
       "lump": {
         "name": "caspad-skill-48"
       }
     },
     {
       "trans": [346.25,  41.0, -1586.98], // up behind tree from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [346.25,  41.0, -1586.98, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [346.25,  41.0, -1586.98, 10],
       "lump": {
         "name": "caspad-skill-49"
       }
     },
     {
       "trans": [325.54,  34.50, -1594.34], // crevice on cliff wall up from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [325.54,  34.50, -1594.34, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [325.54,  34.50, -1594.34, 10],
       "lump": {
         "name": "caspad-skill-50",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -565,220 +565,220 @@
     },
     {
       "trans": [328.57,  52.11, -1605.60], // up high on cliff behind tree, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [328.57,  52.11, -1605.60, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [328.57,  52.11, -1605.60, 10],
       "lump": {
         "name": "caspad-skill-51"
       }
     },
     {
       "trans": [282.55,  43.33, -1577.87], // up high on tall rock in center area
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [282.55,  43.33, -1577.87, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [282.55,  43.33, -1577.87, 10],
       "lump": {
         "name": "caspad-skill-52"
       }
     },
     {
       "trans": [293.61,  53.41, -1560.62], // ledge on cliff up from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [293.61,  53.41, -1560.62, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [293.61,  53.41, -1560.62, 10],
       "lump": {
         "name": "caspad-skill-53"
       }
     },
     {
       "trans": [275.95,  62.27, -1556.06], // up high on cliff from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [275.95,  62.27, -1556.06, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [275.95,  62.27, -1556.06, 10],
       "lump": {
         "name": "caspad-skill-54"
       }
     },
     {
       "trans": [260.21,  47.94, -1556.62], // down a bit behind trees on cliff from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [260.21,  47.94, -1556.62, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [260.21,  47.94, -1556.62, 10],
       "lump": {
         "name": "caspad-skill-55"
       }
     },
     {
       "trans": [255.03,  64.60, -1535.25], // up and back from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [255.03,  64.60, -1535.25, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [255.03,  64.60, -1535.25, 10],
       "lump": {
         "name": "caspad-skill-56"
       }
     },
     {
       "trans": [221.24,  67.28, -1544.07], // keep going up and back from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [221.24,  67.28, -1544.07, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [221.24,  67.28, -1544.07, 10],
       "lump": {
         "name": "caspad-skill-57"
       }
     },
     {
       "trans": [231.26,  48.95, -1559.24], // down a bit from^ behind trees on cliff
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [231.26,  48.95, -1559.24, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [231.26,  48.95, -1559.24, 10],
       "lump": {
         "name": "caspad-skill-58"
       }
     },
     {
       "trans": [206.99,  53.20, -1587.38], // up by trees near skill-8 and -9
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [206.99,  53.20, -1587.38, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [206.99,  53.20, -1587.38, 10],
       "lump": {
         "name": "caspad-skill-59"
       }
     },
     {
       "trans": [191.45,  25.61, -1606.48], // behind rock on ground level, kinda near castle entrance (left side)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [191.45,  25.61, -1606.48, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [191.45,  25.61, -1606.48, 10],
       "lump": {
         "name": "caspad-skill-60"
       }
     },
     {
       "trans": [198.37,  20.98, -1718.94], // behind rock on ground level, kinda near castle entrance (right side)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [198.37,  20.98, -1718.94, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [198.37,  20.98, -1718.94, 10],
       "lump": {
         "name": "caspad-skill-61"
       }
     },
     {
       "trans": [266.04,  28.00, -1708.79], // deep in crack behind rocks, between castle/dig entrances
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [266.04,  28.00, -1708.79, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [266.04,  28.00, -1708.79, 10],
       "lump": {
         "name": "caspad-skill-62"
       }
     },
     {
       "trans": [259.41,  50.90, -1725.98], // up cliff from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [259.41,  50.90, -1725.98, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [259.41,  50.90, -1725.98, 10],
       "lump": {
         "name": "caspad-skill-63"
       }
     },
     {
       "trans": [241.43,  57.96, -1729.68], // up cliff from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [241.43,  57.96, -1729.68, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [241.43,  57.96, -1729.68, 10],
       "lump": {
         "name": "caspad-skill-64"
       }
     },
     {
       "trans": [231.65,  69.86, -1751.76], // up cliff from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [231.65,  69.86, -1751.76, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [231.65,  69.86, -1751.76, 10],
       "lump": {
         "name": "caspad-skill-65"
       }
     },
     {
       "trans": [222.91,  55.30, -1738.29], // up cliff from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [222.91,  55.30, -1738.29, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [222.91,  55.30, -1738.29, 10],
       "lump": {
         "name": "caspad-skill-66"
       }
     },
     {
       "trans": [333.74,  22.59, -1715.7], // outside fence at dig elevator
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [333.74,  22.59, -1715.7, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [333.74,  22.59, -1715.7, 10],
       "lump": {
         "name": "caspad-skill-67"
       }
     },
     {
       "trans": [347.28,  17.2, -1696.75], // in crack on side of metal path to dig elevator
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [347.28,  17.2, -1696.75, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [347.28,  17.2, -1696.75, 10],
       "lump": {
         "name": "caspad-skill-68"
       }
     },
     {
       "trans": [342.15,  30.65, -1694.8], // on lamp in cave with dig elev
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [342.15,  30.65, -1694.8, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [342.15,  30.65, -1694.8, 10],
       "lump": {
         "name": "caspad-skill-69"
       }
     },
     {
       "trans": [342.5,  35.2, -1685.1], // up high on wall in cave with dig elev (jump from ^)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [342.5,  35.2, -1685.1, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [342.5,  35.2, -1685.1, 10],
       "lump": {
         "name": "caspad-skill-70"
       }
     },
     {
       "trans": [161.87,  52.88, -1689.89], // up on tall rock between castle and dig entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [161.87,  52.88, -1689.89, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [161.87,  52.88, -1689.89, 10],
       "lump": {
         "name": "caspad-skill-71"
       }
     },
     {
       "trans": [144.84,  63.03, -1699.66], // up behind fern from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [144.84,  63.03, -1699.66, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [144.84,  63.03, -1699.66, 10],
       "lump": {
         "name": "caspad-skill-72",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -786,20 +786,20 @@
     },
     {
       "trans": [158.49,  72.32, -1709.34], // up between ferns from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [158.49,  72.32, -1709.34, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [158.49,  72.32, -1709.34, 10],
       "lump": {
         "name": "caspad-skill-73"
       }
     },
     {
       "trans": [109.89,  66.98, -1706.67], // up on cliff edge, uppercut from tall rock with skill-??
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [109.89,  66.98, -1706.67, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [109.89,  66.98, -1706.67, 10],
       "lump": {
         "name": "caspad-skill-74",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -807,10 +807,10 @@
     },
     {
       "trans": [ 99.46,  80.17, -1710.17], // up between tree/cliff, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 99.46,  80.17, -1710.17, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 99.46,  80.17, -1710.17, 10],
       "lump": {
         "name": "caspad-skill-75",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -818,40 +818,40 @@
     },
     {
       "trans": [ 95.13, 101.17, -1717.18], // up on tall tall rock near castle entrance, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 95.13, 101.17, -1717.18, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 95.13, 101.17, -1717.18, 10],
       "lump": {
         "name": "caspad-skill-76"
       }
     },
     {
       "trans": [  82.13, 109.31, -1718.19], // up on cliff near castle entrance, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 82.13, 109.31, -1718.19, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 82.13, 109.31, -1718.19, 10],
       "lump": {
         "name": "caspad-skill-77"
       }
     },
     {
       "trans": [  66.91, 108.05, -1713.00], // up on cliff by tree near castle entrance, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  66.91, 108.05, -1713.00, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  66.91, 108.05, -1713.00, 10],
       "lump": {
         "name": "caspad-skill-78"
       }
     },
     {
       "trans": [ 73.14,  70.16, -1700.50], // crevice on cliff near castle entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  73.14,  70.16, -1700.50, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  73.14,  70.16, -1700.50, 10],
       "lump": {
         "name": "caspad-skill-79",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -859,30 +859,30 @@
     },
     {
       "trans": [ 60.83,  78.61, -1698.98], // right corner cliff against entrance to castle, abah from^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 60.83,  78.61, -1698.98, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 60.83,  78.61, -1698.98, 10],
       "lump": {
         "name": "caspad-skill-80"
       }
     },
     {
       "trans": [  90.01,  69.08, -1665.46], // atop tall rock near castle entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  90.01,  69.08, -1665.46, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  90.01,  69.08, -1665.46, 10],
       "lump": {
         "name": "caspad-skill-81"
       }
     },
     {
       "trans": [121.86,  56.18, -1650.28], // crack behind tall rock, left side of castle entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 121.86,  56.18, -1650.28, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 121.86,  56.18, -1650.28, 10],
       "lump": {
         "name": "caspad-skill-82",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -890,40 +890,40 @@
     },
     {
       "trans": [124.33,  66.17, -1655.02], // atop tall rock, left side of castle entrance - abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 124.33,  66.17, -1655.02, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 124.33,  66.17, -1655.02, 10],
       "lump": {
         "name": "caspad-skill-83"
       }
     },
     {
       "trans": [191.45,  22.05, -1672.05], // behind rock dead center of steps to castle entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [191.45,  22.05, -1672.05, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [191.45,  22.05, -1672.05, 10],
       "lump": {
         "name": "caspad-skill-84"
       }
     },
     {
       "trans": [     70.0442, 48.3064, -1671.7956], // in corner of steps to castle (left side)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     70.0442, 48.3064, -1671.7956, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     70.0442, 48.3064, -1671.7956, 10],
       "lump": {
         "name": "caspad-skill-85"
       }
     },
     {
       "trans": [176.30,  36.38, -1600.33], // crevice in cliff left of castle entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [176.30,  36.38, -1600.33, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [176.30,  36.38, -1600.33, 10],
       "lump": {
         "name": "caspad-skill-86",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -931,40 +931,40 @@
     },
     {
       "trans": [181.29,  53.49, -1585.79], // up behind trees on cliff left of castle entrance (abah from ^)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [181.29,  53.49, -1585.79, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [181.29,  53.49, -1585.79, 10],
       "lump": {
         "name": "caspad-skill-87"
       }
     },
     {
       "trans": [256.5,  21.33, -1703.9], // crack behind rock between dig elev and castle entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [256.5,  21.33, -1703.9, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [256.5,  21.33, -1703.9, 10],
       "lump": {
         "name": "caspad-skill-88"
       }
     },
     {
       "trans": [212.7,  28.2, -1601.2], // crack behind trees between castle entrance and atoll path
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [212.7,  28.2, -1601.2, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [212.7,  28.2, -1601.2, 10],
       "lump": {
         "name": "caspad-skill-89"
       }
     },
     {
       "trans": [106.41,  66.01, -1652.44], // crevice on cliff left of castle entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [106.41,  66.01, -1652.44, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [106.41,  66.01, -1652.44, 10],
       "lump": {
         "name": "caspad-skill-90",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -972,10 +972,10 @@
     },
     {
       "trans": [113.26,  78.55, -1644.96], // ledge up high on cliff left of castle entrance, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [113.26,  78.55, -1644.96, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [113.26,  78.55, -1644.96, 10],
       "lump": {
         "name": "caspad-skill-91"
         // "pickup-amount": ["float", 2.0] // abah hint
@@ -983,30 +983,30 @@
     },
     {
       "trans": [  74.90,  69.49, -1667.59], // behind fern up on cliff, left of steps to castle entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 74.90,  69.49, -1667.59, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 74.90,  69.49, -1667.59, 10],
       "lump": {
         "name": "caspad-skill-92"
       }
     },
     {
       "trans": [ 62.46,  68.89, -1666.22], // corner up left of steps to castle entrance (jump from ^)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 62.46,  68.89, -1666.22, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 62.46,  68.89, -1666.22, 10],
       "lump": {
         "name": "caspad-skill-93"
       }
     },
     {
       "trans": [155.94,  34.98, -1619.86], // crevice on cliff left of castle entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [155.94,  34.98, -1619.86, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [155.94,  34.98, -1619.86, 10],
       "lump": {
         "name": "caspad-skill-94",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -1014,60 +1014,60 @@
     },
     {
       "trans": [154.77,  53.67, -1607.64], // behind fern on ledge up high on cliff left of castle entrance, abah from ^d
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [154.77,  53.67, -1607.64, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [154.77,  53.67, -1607.64, 10],
       "lump": {
         "name": "caspad-skill-95"
       }
     },
     {
       "trans": [279.46,  20.59, -1681.05], // on ground near pad, below tree/behind fern
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [279.46,  20.59, -1681.05, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [279.46,  20.59, -1681.05, 10],
       "lump": {
         "name": "caspad-skill-96"
       }
     },
     {
       "trans": [349.70,  38.12, -1547.25], // tall rock near cave to atoll
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [349.70,  38.12, -1547.25, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [349.70,  38.12, -1547.25, 10],
       "lump": {
         "name": "caspad-skill-97"
       }
     },
     {
       "trans": [344.26,  47.18, -1540.56], // up on cliff from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [344.26,  47.18, -1540.56, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [344.26,  47.18, -1540.56, 10],
       "lump": {
         "name": "caspad-skill-98"
       }
     },
     {
       "trans": [259.64, 102.77, -1491.12], // way up on trees you can stand on, towards atoll cave
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [259.64, 102.77, -1491.12, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [259.64, 102.77, -1491.12, 10],
       "lump": {
         "name": "caspad-skill-99"
       }
     },
     {
       "trans": [330.10, -49.39, -1712.47], // bottom of dig elev
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [330.10, -49.39, -1712.47, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [330.10, -49.39, -1712.47, 10],
       "lump": {
         "name": "caspad-skill-100",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -1075,80 +1075,80 @@
     },
     {
       "trans": [323.45, -26.47, -1712.11], // bottom of dig elev, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [323.45, -26.47, -1712.11, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [323.45, -26.47, -1712.11, 10],
       "lump": {
         "name": "caspad-skill-101"
       }
     },
     {
       "trans": [351.44, -32.57, -1693.44], // on pole at bottom of dig elev, bounce/abah off elev
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [351.44, -32.57, -1693.44, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [351.44, -32.57, -1693.44, 10],
       "lump": {
         "name": "caspad-skill-102"
       }
     },
     {
       "trans": [355.55, -51.31, -1677.62], // "oob" crevice bottom of dig elev - uppercut from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [355.55, -51.31, -1677.62, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [355.55, -51.31, -1677.62, 10],
       "lump": {
         "name": "caspad-skill-103"
       }
     },
     {
       "trans": [372.23, -32.57, -1714.33], // on pole at bottom of dig elev 
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [372.23, -32.57, -1714.33, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [372.23, -32.57, -1714.33, 10],
       "lump": {
         "name": "caspad-skill-104"
       }
     },
     {
       "trans": [ 58.03,  68.35, -1676.25], // lamp outside castle entrance, jump from skill-93^^^^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 58.03,  68.35, -1676.25, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 58.03,  68.35, -1676.25, 10],
       "lump": {
         "name": "caspad-skill-105"
       }
     },
     {
       "trans": [ 40.37,  65.97, -1675.58], // lamp outside castle entrance, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 40.37,  65.97, -1675.58, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 40.37,  65.97, -1675.58, 10],
       "lump": {
         "name": "caspad-skill-106"
       }
     },
     {
       "trans": [ 40.72,  65.97, -1687.62], // lamp outside castle entrance, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 40.72,  65.97, -1687.62, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 40.72,  65.97, -1687.62, 10],
       "lump": {
         "name": "caspad-skill-107"
       }
     },
     {
       "trans": [ 58.20,  68.35, -1687.54], // lamp outside castle entrance, jump from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 58.20,  68.35, -1687.54, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 58.20,  68.35, -1687.54, 10],
       "lump": {
         "name": "caspad-skill-108"
       }
@@ -1157,10 +1157,10 @@
     // HOVER ORBS
     {
       "trans": [  96.84, 147.38, -1781.03 ], // up on trees back right of castle entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 96.84, 147.38, -1781.03, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 96.84, 147.38, -1781.03, 10],
       "lump": {
         "name":"caspad-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -1168,10 +1168,10 @@
     },
     {
       "trans": [ 27.92, 168.59, -1739.38 ], // further back from ^, up on trees back right of castle entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 27.92, 168.59, -1739.38, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 27.92, 168.59, -1739.38, 10],
       "lump": {
         "name":"caspad-skill-hover-02",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -1179,10 +1179,10 @@
     },
     {
       "trans": [ 201.72, 112.66, -1820.74 ], // towards dig elev from ^^, up on trees right of castle entrance
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [201.72, 112.66, -1820.74, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [201.72, 112.66, -1820.74, 10],
       "lump": {
         "name":"caspad-skill-hover-03",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -1190,10 +1190,10 @@
     },
     {
       "trans": [ 299.53, 126.07, -1760.46 ], // on trees way back up/left of dig elev
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [299.53, 126.07, -1760.46, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [299.53, 126.07, -1760.46, 10],
       "lump": {
         "name":"caspad-skill-hover-04",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -1201,10 +1201,10 @@
     },
     {
       "trans": [397.79, 127.73, -1677.40 ], // on trees way back up/right of dig elev
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [397.79, 127.73, -1677.40, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [397.79, 127.73, -1677.40, 10],
       "lump": {
         "name":"caspad-skill-hover-05",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -1212,10 +1212,10 @@
     },
     {
       "trans": [ 54.45, 176.27, -1575.54], // on trees way back up/left of castle, wayyy up
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 54.45, 176.27, -1575.54, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 54.45, 176.27, -1575.54, 10],
       "lump": {
         "name":"caspad-skill-hover-06",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -1223,10 +1223,10 @@
     },
     {
       "trans": [447.36,  82.05, -1551.99], // on super tall rock next to pipe, above cave to atoll
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [447.36,  82.05, -1551.99, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [447.36,  82.05, -1551.99, 10],
       "lump": {
         "name":"caspad-skill-hover-07",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -1236,10 +1236,10 @@
     // GHOSTS
     {
       "trans": [ 301.1,    43.2,    -1700.2   ], // #t  up above tree/rock near dig entranc
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [301.1,    43.2,    -1700.2 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [301.1,    43.2,    -1700.2 , 10],
       "lump": {
         "name":"caspad-skill-ghost-1",
         "alt-actor":"caspad-skill-1"
@@ -1247,10 +1247,10 @@
     },
     {
       "trans": [ 218.02,   34.14,   -1724.96  ], // #t  in crack of rocks between dig/castl
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [218.02,   34.14,   -1724.96, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [218.02,   34.14,   -1724.96, 10],
       "lump": {
         "name":"caspad-skill-ghost-2",
         "alt-actor":"caspad-skill-2"
@@ -1258,10 +1258,10 @@
     },
     {
       "trans": [ 236.98,   48.8,    -1709.0   ], // #t  up & right from skill-2 (abbah
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [236.98,   48.8,    -1709.0 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [236.98,   48.8,    -1709.0 , 10],
       "lump": {
         "name":"caspad-skill-ghost-3",
         "alt-actor":"caspad-skill-3"
@@ -1269,10 +1269,10 @@
     },
     {
       "trans": [ 209.75,   45.8,    -1730.5   ], // #t  up & left from skill-2 (abbah
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [209.75,   45.8,    -1730.5 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [209.75,   45.8,    -1730.5 , 10],
       "lump": {
         "name":"caspad-skill-ghost-4",
         "alt-actor":"caspad-skill-4"
@@ -1280,10 +1280,10 @@
     },
     {
       "trans": [ 190.1,    58.8,    -1713.6   ], // #t  up & left from skill-4 (or maybe abbah?
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [190.1,    58.8,    -1713.6 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [190.1,    58.8,    -1713.6 , 10],
       "lump": {
         "name":"caspad-skill-ghost-5",
         "alt-actor":"caspad-skill-5"
@@ -1291,10 +1291,10 @@
     },
     {
       "trans": [ 127.4,    66.2,    -1698.9   ], // #t  atop tall rock towards castle entrance (abbah
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [127.4,    66.2,    -1698.9 , 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [127.4,    66.2,    -1698.9 , 10],
       "lump": {
         "name":"caspad-skill-ghost-6",
         "alt-actor":"caspad-skill-6"
@@ -1302,10 +1302,10 @@
     },
     {
       "trans": [ 83.42,    75.16,   -1704.72  ], // #t  atop rocks right right outside castle entrance (abbah
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [83.42,    75.16,   -1704.72, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [83.42,    75.16,   -1704.72, 10],
       "lump": {
         "name":"caspad-skill-ghost-7",
         "alt-actor":"caspad-skill-7"
@@ -1313,10 +1313,10 @@
     },
     {
       "trans": [ 216.53,   37.08,   -1570.87  ], // #t  in crack in rocks between castle and atol
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [216.53,   37.08,   -1570.87, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [216.53,   37.08,   -1570.87, 10],
       "lump": {
         "name":"caspad-skill-ghost-8",
         "alt-actor":"caspad-skill-8",
@@ -1325,10 +1325,10 @@
     },
     {
       "trans": [ 191.35,  56.57, -1567.05 ], // #t  up/right from skill-
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [191.35,  56.57, -1567.05, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [191.35,  56.57, -1567.05, 10],
       "lump": {
         "name":"caspad-skill-ghost-9",
         "alt-actor":"caspad-skill-9",
@@ -1337,10 +1337,10 @@
     },
     {
       "trans": [ 189.67,   72.7,    -1554.08  ], // #t up from skill-9
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [189.67,   72.7,    -1554.08, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [189.67,   72.7,    -1554.08, 10],
       "lump": {
         "name":"caspad-skill-ghost-10",
         "alt-actor":"caspad-skill-10"
@@ -1348,10 +1348,10 @@
     },
     {
       "trans": [ 202.31,   83.6,    -1546.70  ], // #t low-poly leaves are solid, free orb near skill-1
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [202.31,   83.6,    -1546.70, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [202.31,   83.6,    -1546.70, 10],
       "lump": {
         "name":"caspad-skill-ghost-11",
         "alt-actor":"caspad-skill-11"
@@ -1359,10 +1359,10 @@
     },
     {
       "trans": [ 79.62,    121.5,   -1519.64  ], // #t low-poly leaves, way in the back towards castl
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [79.62,    121.5,   -1519.64, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [79.62,    121.5,   -1519.64, 10],
       "lump": {
         "name":"caspad-skill-ghost-12",
         "alt-actor":"caspad-skill-12"
@@ -1370,10 +1370,10 @@
     },
     {
       "trans": [ 257.0,  21.5, -1639.0], // under/between airtrain plat
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [257.0,  21.5, -1639.0, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [257.0,  21.5, -1639.0, 10],
       "lump": {
         "name":"caspad-skill-ghost-13",
         "alt-actor":"caspad-skill-13"
@@ -1381,10 +1381,10 @@
     },
     {
       "trans": [260.64,  29.89, -1665.80], // on light on airtrain plat
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [260.64,  29.89, -1665.80, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [260.64,  29.89, -1665.80, 10],
       "lump": {
         "name":"caspad-skill-ghost-14",
         "alt-actor":"caspad-skill-14",
@@ -1393,10 +1393,10 @@
     },
     {
       "trans": [258.36,  48.32, -1668.19], // top of pole above ^ (abah)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [258.36,  48.32, -1668.19, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [258.36,  48.32, -1668.19, 10],
       "lump": {
         "name":"caspad-skill-ghost-15",
         "alt-actor":"caspad-skill-15"
@@ -1404,10 +1404,10 @@
     },
     {
       "trans": [488.41,  51.42, -1504.66], // cave entrance from atoll (avoid invis ceiling)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [488.41,  51.42, -1504.66, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [488.41,  51.42, -1504.66, 10],
       "lump": {
         "name":"caspad-skill-ghost-16",
         "alt-actor":"caspad-skill-16"
@@ -1415,10 +1415,10 @@
     },
     {
       "trans": [451.92,  48.5, -1528.56], // cave near atoll, but on caspad side
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [451.92,  48.5, -1528.56, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [451.92,  48.5, -1528.56, 10],
       "lump": {
         "name":"caspad-skill-ghost-17",
         "alt-actor":"caspad-skill-17"
@@ -1426,10 +1426,10 @@
     },
     {
       "trans": [487.7,  49.3, -1557.8], // cave near atoll, in back corner
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [487.7,  49.3, -1557.8, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [487.7,  49.3, -1557.8, 10],
       "lump": {
         "name":"caspad-skill-ghost-18",
         "alt-actor":"caspad-skill-18"
@@ -1437,10 +1437,10 @@
     },
     {
       "trans": [426.53,  38.40, -1568.08], // crevice in left cliff outside/facing cave to atoll
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [426.53,  38.40, -1568.08, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [426.53,  38.40, -1568.08, 10],
       "lump": {
         "name":"caspad-skill-ghost-19",
         "alt-actor":"caspad-skill-19",
@@ -1449,10 +1449,10 @@
     },
     {
       "trans": [430.38,  54.01, -1566.57], // on tall rock between cliff and pipe (abah from^)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [430.38,  54.01, -1566.57, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [430.38,  54.01, -1566.57, 10],
       "lump": {
         "name":"caspad-skill-ghost-20",
         "alt-actor":"caspad-skill-20"
@@ -1460,10 +1460,10 @@
     },
     {
       "trans": [398.46,  46.1, -1532.67], // crevice in right cliff outside/facing cave to atoll (jump from high rock)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [398.46,  46.1, -1532.67, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [398.46,  46.1, -1532.67, 10],
       "lump": {
         "name":"caspad-skill-ghost-21",
         "alt-actor":"caspad-skill-21",
@@ -1472,10 +1472,10 @@
     },
     {
       "trans": [391.09,  57.73, -1527.62], // up from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [391.09,  57.73, -1527.62, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [391.09,  57.73, -1527.62, 10],
       "lump": {
         "name":"caspad-skill-ghost-22",
         "alt-actor":"caspad-skill-22"
@@ -1483,10 +1483,10 @@
     },
     {
       "trans": [432.93,  55.38, -1532.91], // top of tall rock right outside cave to atoll
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [432.93,  55.38, -1532.91, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [432.93,  55.38, -1532.91, 10],
       "lump": {
         "name":"caspad-skill-ghost-23",
         "alt-actor":"caspad-skill-23"
@@ -1494,10 +1494,10 @@
     },
     {
       "trans": [413.92,  54.93, -1525.66], // crevice on right cliff outside/facing cave to atoll
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [413.92,  54.93, -1525.66, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [413.92,  54.93, -1525.66, 10],
       "lump": {
         "name":"caspad-skill-ghost-24",
         "alt-actor":"caspad-skill-24",
@@ -1506,10 +1506,10 @@
     },
     {
       "trans": [421.56,  71.61, -1520.96], // way up from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [421.56,  71.61, -1520.96, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [421.56,  71.61, -1520.96, 10],
       "lump": {
         "name":"caspad-skill-ghost-25",
         "alt-actor":"caspad-skill-25"
@@ -1517,10 +1517,10 @@
     },
     {
       "trans": [329.72,  22.55, -1550.48], // behind rock against cliff towards atoll side
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [329.72,  22.55, -1550.48, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [329.72,  22.55, -1550.48, 10],
       "lump": {
         "name":"caspad-skill-ghost-26",
         "alt-actor":"caspad-skill-26"
@@ -1528,10 +1528,10 @@
     },
     {
       "trans": [383.88,  34.71, -1576.52], // behind fern on rock halfway up cliff near atoll cave
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [383.88,  34.71, -1576.52, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [383.88,  34.71, -1576.52, 10],
       "lump": {
         "name":"caspad-skill-ghost-27",
         "alt-actor":"caspad-skill-27"
@@ -1539,10 +1539,10 @@
     },
     {
       "trans": [379.41,  43.84, -1582.40], // up from ^, crevice on right cliff outside/facing cave to atoll
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [379.41,  43.84, -1582.40, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [379.41,  43.84, -1582.40, 10],
       "lump": {
         "name":"caspad-skill-ghost-28",
         "alt-actor":"caspad-skill-28",
@@ -1551,10 +1551,10 @@
     },
     {
       "trans": [366.89,  53.73, -1580.66], // behind fern way up on cliff, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [366.89,  53.73, -1580.66, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [366.89,  53.73, -1580.66, 10],
       "lump": {
         "name":"caspad-skill-ghost-29",
         "alt-actor":"caspad-skill-29",
@@ -1563,10 +1563,10 @@
     },
     {
       "trans": [360.22,  61.72, -1597.56], // behind tree way up on cliff, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [360.22,  61.72, -1597.56, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [360.22,  61.72, -1597.56, 10],
       "lump": {
         "name":"caspad-skill-ghost-30",
         "alt-actor":"caspad-skill-30",
@@ -1575,10 +1575,10 @@
     },
     {
       "trans": [349.44,  71.19, -1609.76], // up high on cliff, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [349.44,  71.19, -1609.76, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [349.44,  71.19, -1609.76, 10],
       "lump": {
         "name":"caspad-skill-ghost-31",
         "alt-actor":"caspad-skill-31"
@@ -1586,10 +1586,10 @@
     },
     {
       "trans": [337.16,  39.18, -1653.64], // in crevice on cliff wall, near pad
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [337.16,  39.18, -1653.64, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [337.16,  39.18, -1653.64, 10],
       "lump": {
         "name":"caspad-skill-ghost-32",
         "alt-actor":"caspad-skill-32",
@@ -1598,10 +1598,10 @@
     },
     {
       "trans": [337.13,  45.01, -1643.41], // cliff wall, up from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [337.13,  45.01, -1643.41, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [337.13,  45.01, -1643.41, 10],
       "lump": {
         "name":"caspad-skill-ghost-33",
         "alt-actor":"caspad-skill-33",
@@ -1610,10 +1610,10 @@
     },
     {
       "trans": [344.34,  59.30, -1645.56], // behind tree way up on cliff, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [344.34,  59.30, -1645.56, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [344.34,  59.30, -1645.56, 10],
       "lump": {
         "name":"caspad-skill-ghost-34",
         "alt-actor":"caspad-skill-34",
@@ -1622,10 +1622,10 @@
     },
     {
       "trans": [331.90,  29.35, -1659.79], // crevice on cliff wall
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [331.90,  29.35, -1659.79, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [331.90,  29.35, -1659.79, 10],
       "lump": {
         "name":"caspad-skill-ghost-35",
         "alt-actor":"caspad-skill-35",
@@ -1634,10 +1634,10 @@
     },
     {
       "trans": [338.37,  68.54, -1632.20], // up high on cliff, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [338.37,  68.54, -1632.20, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [338.37,  68.54, -1632.20, 10],
       "lump": {
         "name":"caspad-skill-ghost-36",
         "alt-actor":"caspad-skill-36"
@@ -1645,10 +1645,10 @@
     },
     {
       "trans": [334.62,  48.25, -1653.05], // atop tall rock, abah from one of these ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [334.62,  48.25, -1653.05, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [334.62,  48.25, -1653.05, 10],
       "lump": {
         "name":"caspad-skill-ghost-37",
         "alt-actor":"caspad-skill-37"
@@ -1656,10 +1656,10 @@
     },
     {
       "trans": [337.60,  51.84, -1667.98], // way up on cliff, abah from one of these^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [337.60,  51.84, -1667.98, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [337.60,  51.84, -1667.98, 10],
       "lump": {
         "name":"caspad-skill-ghost-38",
         "alt-actor":"caspad-skill-38",
@@ -1668,10 +1668,10 @@
     },
     {
       "trans": [337.04,  63.73, -1669.15], // way up on cliff, abah from one of these^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [337.04,  63.73, -1669.15, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [337.04,  63.73, -1669.15, 10],
       "lump": {
         "name":"caspad-skill-ghost-39",
         "alt-actor":"caspad-skill-39"
@@ -1679,10 +1679,10 @@
     },
     {
       "trans": [300.69,  52.21, -1709.61], // behind tree way up on cliff above dig entrance, jump from ^^skill-1
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [300.69,  52.21, -1709.61, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [300.69,  52.21, -1709.61, 10],
       "lump": {
         "name":"caspad-skill-ghost-40",
         "alt-actor":"caspad-skill-40"
@@ -1690,10 +1690,10 @@
     },
     {
       "trans": [306.13,  59.30, -1702.59], // crevice on cliff wall up from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [306.13,  59.30, -1702.59, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [306.13,  59.30, -1702.59, 10],
       "lump": {
         "name":"caspad-skill-ghost-41",
         "alt-actor":"caspad-skill-41",
@@ -1702,10 +1702,10 @@
     },
     {
       "trans": [311.87,  71.42, -1692.50], // up high on cliff, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [311.87,  71.42, -1692.50, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [311.87,  71.42, -1692.50, 10],
       "lump": {
         "name":"caspad-skill-ghost-42",
         "alt-actor":"caspad-skill-42"
@@ -1713,10 +1713,10 @@
     },
     {
       "trans": [326.88, 35.6, -1680.98], // up in corner of cave entrance to dig
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [326.88, 35.6, -1680.98, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [326.88, 35.6, -1680.98, 10],
       "lump": {
         "name":"caspad-skill-ghost-43",
         "alt-actor":"caspad-skill-43"
@@ -1724,10 +1724,10 @@
     },
     {
       "trans": [322.66,  29.43, -1553.12], // behind rock on path towards cave to atoll
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [322.66,  29.43, -1553.12, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [322.66,  29.43, -1553.12, 10],
       "lump": {
         "name":"caspad-skill-ghost-44",
         "alt-actor":"caspad-skill-44"
@@ -1735,10 +1735,10 @@
     },
     {
       "trans": [328.13,  41.75, -1548.15], // up on rock from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [328.13,  41.75, -1548.15, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [328.13,  41.75, -1548.15, 10],
       "lump": {
         "name":"caspad-skill-ghost-45",
         "alt-actor":"caspad-skill-45"
@@ -1746,10 +1746,10 @@
     },
     {
       "trans": [317.74,  49.18, -1542.71], // up on rock from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [317.74,  49.18, -1542.71, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [317.74,  49.18, -1542.71, 10],
       "lump": {
         "name":"caspad-skill-ghost-46",
         "alt-actor":"caspad-skill-46"
@@ -1757,10 +1757,10 @@
     },
     {
       "trans": [316.25,  64.38, -1512.50], // keep going up from^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [316.25,  64.38, -1512.50, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [316.25,  64.38, -1512.50, 10],
       "lump": {
         "name":"caspad-skill-ghost-47",
         "alt-actor":"caspad-skill-47"
@@ -1768,10 +1768,10 @@
     },
     {
       "trans": [344.91,  32.66, -1580.45], // rock crevice at end of path to cave to atoll
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [344.91,  32.66, -1580.45, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [344.91,  32.66, -1580.45, 10],
       "lump": {
         "name":"caspad-skill-ghost-48",
         "alt-actor":"caspad-skill-48"
@@ -1779,10 +1779,10 @@
     },
     {
       "trans": [346.25,  41.0, -1586.98], // up behind tree from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [346.25,  41.0, -1586.98, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [346.25,  41.0, -1586.98, 10],
       "lump": {
         "name":"caspad-skill-ghost-49",
         "alt-actor":"caspad-skill-49"
@@ -1790,10 +1790,10 @@
     },
     {
       "trans": [325.54,  34.50, -1594.34], // crevice on cliff wall up from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [325.54,  34.50, -1594.34, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [325.54,  34.50, -1594.34, 10],
       "lump": {
         "name":"caspad-skill-ghost-50",
         "alt-actor":"caspad-skill-50",
@@ -1802,10 +1802,10 @@
     },
     {
       "trans": [328.57,  52.11, -1605.60], // up high on cliff behind tree, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [328.57,  52.11, -1605.60, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [328.57,  52.11, -1605.60, 10],
       "lump": {
         "name":"caspad-skill-ghost-51",
         "alt-actor":"caspad-skill-51"
@@ -1813,10 +1813,10 @@
     },
     {
       "trans": [282.55,  43.33, -1577.87], // up high on tall rock in center area
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [282.55,  43.33, -1577.87, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [282.55,  43.33, -1577.87, 10],
       "lump": {
         "name":"caspad-skill-ghost-52",
         "alt-actor":"caspad-skill-52"
@@ -1824,10 +1824,10 @@
     },
     {
       "trans": [293.61,  53.41, -1560.62], // ledge on cliff up from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [293.61,  53.41, -1560.62, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [293.61,  53.41, -1560.62, 10],
       "lump": {
         "name":"caspad-skill-ghost-53",
         "alt-actor":"caspad-skill-53"
@@ -1835,10 +1835,10 @@
     },
     {
       "trans": [275.95,  62.27, -1556.06], // up high on cliff from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [275.95,  62.27, -1556.06, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [275.95,  62.27, -1556.06, 10],
       "lump": {
         "name":"caspad-skill-ghost-54",
         "alt-actor":"caspad-skill-54"
@@ -1846,10 +1846,10 @@
     },
     {
       "trans": [260.21,  47.94, -1556.62], // down a bit behind trees on cliff from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [260.21,  47.94, -1556.62, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [260.21,  47.94, -1556.62, 10],
       "lump": {
         "name":"caspad-skill-ghost-55",
         "alt-actor":"caspad-skill-55"
@@ -1857,10 +1857,10 @@
     },
     {
       "trans": [255.03,  64.60, -1535.25], // up and back from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [255.03,  64.60, -1535.25, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [255.03,  64.60, -1535.25, 10],
       "lump": {
         "name":"caspad-skill-ghost-56",
         "alt-actor":"caspad-skill-56"
@@ -1868,10 +1868,10 @@
     },
     {
       "trans": [221.24,  67.28, -1544.07], // keep going up and back from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [221.24,  67.28, -1544.07, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [221.24,  67.28, -1544.07, 10],
       "lump": {
         "name":"caspad-skill-ghost-57",
         "alt-actor":"caspad-skill-57"
@@ -1879,10 +1879,10 @@
     },
     {
       "trans": [231.26,  48.95, -1559.24], // down a bit from^ behind trees on cliff
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [231.26,  48.95, -1559.24, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [231.26,  48.95, -1559.24, 10],
       "lump": {
         "name":"caspad-skill-ghost-58",
         "alt-actor":"caspad-skill-58"
@@ -1890,10 +1890,10 @@
     },
     {
       "trans": [206.99,  53.20, -1587.38], // up by trees near skill-8 and -9
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [206.99,  53.20, -1587.38, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [206.99,  53.20, -1587.38, 10],
       "lump": {
         "name":"caspad-skill-ghost-59",
         "alt-actor":"caspad-skill-59"
@@ -1901,10 +1901,10 @@
     },
     {
       "trans": [191.45,  25.61, -1606.48], // behind rock on ground level, kinda near castle entrance (left side)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [191.45,  25.61, -1606.48, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [191.45,  25.61, -1606.48, 10],
       "lump": {
         "name":"caspad-skill-ghost-60",
         "alt-actor":"caspad-skill-60"
@@ -1912,10 +1912,10 @@
     },
     {
       "trans": [198.37,  20.98, -1718.94], // behind rock on ground level, kinda near castle entrance (right side)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [198.37,  20.98, -1718.94, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [198.37,  20.98, -1718.94, 10],
       "lump": {
         "name":"caspad-skill-ghost-61",
         "alt-actor":"caspad-skill-61"
@@ -1923,10 +1923,10 @@
     },
     {
       "trans": [266.04,  28.00, -1708.79], // deep in crack behind rocks, between castle/dig entrances
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [266.04,  28.00, -1708.79, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [266.04,  28.00, -1708.79, 10],
       "lump": {
         "name":"caspad-skill-ghost-62",
         "alt-actor":"caspad-skill-62"
@@ -1934,10 +1934,10 @@
     },
     {
       "trans": [259.41,  50.90, -1725.98], // up cliff from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [259.41,  50.90, -1725.98, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [259.41,  50.90, -1725.98, 10],
       "lump": {
         "name":"caspad-skill-ghost-63",
         "alt-actor":"caspad-skill-63"
@@ -1945,10 +1945,10 @@
     },
     {
       "trans": [241.43,  57.96, -1729.68], // up cliff from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [241.43,  57.96, -1729.68, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [241.43,  57.96, -1729.68, 10],
       "lump": {
         "name":"caspad-skill-ghost-64",
         "alt-actor":"caspad-skill-64"
@@ -1956,10 +1956,10 @@
     },
     {
       "trans": [231.65,  69.86, -1751.76], // up cliff from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [231.65,  69.86, -1751.76, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [231.65,  69.86, -1751.76, 10],
       "lump": {
         "name":"caspad-skill-ghost-65",
         "alt-actor":"caspad-skill-65"
@@ -1967,10 +1967,10 @@
     },
     {
       "trans": [222.91,  55.30, -1738.29], // up cliff from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [222.91,  55.30, -1738.29, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [222.91,  55.30, -1738.29, 10],
       "lump": {
         "name":"caspad-skill-ghost-66",
         "alt-actor":"caspad-skill-66"
@@ -1978,10 +1978,10 @@
     },
     {
       "trans": [333.74,  22.59, -1715.7], // outside fence at dig elevator
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [333.74,  22.59, -1715.7, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [333.74,  22.59, -1715.7, 10],
       "lump": {
         "name":"caspad-skill-ghost-67",
         "alt-actor":"caspad-skill-67"
@@ -1989,10 +1989,10 @@
     },
     {
       "trans": [347.28,  17.2, -1696.75], // in crack on side of metal path to dig elevator
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [347.28,  17.2, -1696.75, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [347.28,  17.2, -1696.75, 10],
       "lump": {
         "name":"caspad-skill-ghost-68",
         "alt-actor":"caspad-skill-68"
@@ -2000,10 +2000,10 @@
     },
     {
       "trans": [342.15,  30.65, -1694.8], // on lamp in cave with dig elev
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [342.15,  30.65, -1694.8, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [342.15,  30.65, -1694.8, 10],
       "lump": {
         "name":"caspad-skill-ghost-69",
         "alt-actor":"caspad-skill-69"
@@ -2011,10 +2011,10 @@
     },
     {
       "trans": [342.5,  35.2, -1685.1], // up high on wall in cave with dig elev (jump from ^)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [342.5,  35.2, -1685.1, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [342.5,  35.2, -1685.1, 10],
       "lump": {
         "name":"caspad-skill-ghost-70",
         "alt-actor":"caspad-skill-70"
@@ -2022,10 +2022,10 @@
     },
     {
       "trans": [161.87,  52.88, -1689.89], // up on tall rock between castle and dig entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [161.87,  52.88, -1689.89, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [161.87,  52.88, -1689.89, 10],
       "lump": {
         "name":"caspad-skill-ghost-71",
         "alt-actor":"caspad-skill-71"
@@ -2033,10 +2033,10 @@
     },
     {
       "trans": [144.84,  63.03, -1699.66], // up behind fern from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [144.84,  63.03, -1699.66, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [144.84,  63.03, -1699.66, 10],
       "lump": {
         "name":"caspad-skill-ghost-72",
         "alt-actor":"caspad-skill-72",
@@ -2045,10 +2045,10 @@
     },
     {
       "trans": [158.49,  72.32, -1709.34], // up between ferns from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [158.49,  72.32, -1709.34, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [158.49,  72.32, -1709.34, 10],
       "lump": {
         "name":"caspad-skill-ghost-73",
         "alt-actor":"caspad-skill-73"
@@ -2056,10 +2056,10 @@
     },
     {
       "trans": [109.89,  66.98, -1706.67], // up on cliff edge, uppercut from tall rock with skill-??
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [109.89,  66.98, -1706.67, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [109.89,  66.98, -1706.67, 10],
       "lump": {
         "name":"caspad-skill-ghost-74",
         "alt-actor":"caspad-skill-74",
@@ -2068,10 +2068,10 @@
     },
     {
       "trans": [ 99.46,  80.17, -1710.17], // up between tree/cliff, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 99.46,  80.17, -1710.17, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 99.46,  80.17, -1710.17, 10],
       "lump": {
         "name":"caspad-skill-ghost-75",
         "alt-actor":"caspad-skill-75",
@@ -2080,10 +2080,10 @@
     },
     {
       "trans": [ 95.13, 101.17, -1717.18], // up on tall tall rock near castle entrance, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 95.13, 101.17, -1717.18, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 95.13, 101.17, -1717.18, 10],
       "lump": {
         "name":"caspad-skill-ghost-76",
         "alt-actor":"caspad-skill-76"
@@ -2091,10 +2091,10 @@
     },
     {
       "trans": [  82.13, 109.31, -1718.19], // up on cliff near castle entrance, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 82.13, 109.31, -1718.19, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 82.13, 109.31, -1718.19, 10],
       "lump": {
         "name":"caspad-skill-ghost-77",
         "alt-actor":"caspad-skill-77"
@@ -2102,10 +2102,10 @@
     },
     {
       "trans": [  66.91, 108.05, -1713.00], // up on cliff by tree near castle entrance, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  66.91, 108.05, -1713.00, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  66.91, 108.05, -1713.00, 10],
       "lump": {
         "name":"caspad-skill-ghost-78",
         "alt-actor":"caspad-skill-78"
@@ -2113,10 +2113,10 @@
     },
     {
       "trans": [ 73.14,  70.16, -1700.50], // crevice on cliff near castle entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  73.14,  70.16, -1700.50, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  73.14,  70.16, -1700.50, 10],
       "lump": {
         "name":"caspad-skill-ghost-79",
         "alt-actor":"caspad-skill-79",
@@ -2125,10 +2125,10 @@
     },
     {
       "trans": [ 60.83,  78.61, -1698.98], // right corner cliff against entrance to castle, abah from^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 60.83,  78.61, -1698.98, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 60.83,  78.61, -1698.98, 10],
       "lump": {
         "name":"caspad-skill-ghost-80",
         "alt-actor":"caspad-skill-80"
@@ -2136,10 +2136,10 @@
     },
     {
       "trans": [  90.01,  69.08, -1665.46], // atop tall rock near castle entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  90.01,  69.08, -1665.46, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  90.01,  69.08, -1665.46, 10],
       "lump": {
         "name":"caspad-skill-ghost-81",
         "alt-actor":"caspad-skill-81"
@@ -2147,10 +2147,10 @@
     },
     {
       "trans": [121.86,  56.18, -1650.28], // crack behind tall rock, left side of castle entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 121.86,  56.18, -1650.28, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 121.86,  56.18, -1650.28, 10],
       "lump": {
         "name":"caspad-skill-ghost-82",
         "alt-actor":"caspad-skill-82",
@@ -2159,10 +2159,10 @@
     },
     {
       "trans": [124.33,  66.17, -1655.02], // atop tall rock, left side of castle entrance - abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 124.33,  66.17, -1655.02, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 124.33,  66.17, -1655.02, 10],
       "lump": {
         "name":"caspad-skill-ghost-83",
         "alt-actor":"caspad-skill-83"
@@ -2170,10 +2170,10 @@
     },
     {
       "trans": [191.45,  22.05, -1672.05], // behind rock dead center of steps to castle entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [191.45,  22.05, -1672.05, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [191.45,  22.05, -1672.05, 10],
       "lump": {
         "name":"caspad-skill-ghost-84",
         "alt-actor":"caspad-skill-84"
@@ -2181,10 +2181,10 @@
     },
     {
       "trans": [     70.0442, 48.3064, -1671.7956], // in corner of steps to castle (left side)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [     70.0442, 48.3064, -1671.7956, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [     70.0442, 48.3064, -1671.7956, 10],
       "lump": {
         "name":"caspad-skill-ghost-85",
         "alt-actor":"caspad-skill-85"
@@ -2192,10 +2192,10 @@
     },
     {
       "trans": [176.30,  36.38, -1600.33], // crevice in cliff left of castle entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [176.30,  36.38, -1600.33, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [176.30,  36.38, -1600.33, 10],
       "lump": {
         "name":"caspad-skill-ghost-86",
         "alt-actor":"caspad-skill-86",
@@ -2204,10 +2204,10 @@
     },
     {
       "trans": [181.29,  53.49, -1585.79], // up behind trees on cliff left of castle entrance (abah from ^)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [181.29,  53.49, -1585.79, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [181.29,  53.49, -1585.79, 10],
       "lump": {
         "name":"caspad-skill-ghost-87",
         "alt-actor":"caspad-skill-87"
@@ -2215,10 +2215,10 @@
     },
     {
       "trans": [256.5,  21.33, -1703.9], // crack behind rock between dig elev and castle entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [256.5,  21.33, -1703.9, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [256.5,  21.33, -1703.9, 10],
       "lump": {
         "name":"caspad-skill-ghost-88",
         "alt-actor":"caspad-skill-88"
@@ -2226,10 +2226,10 @@
     },
     {
       "trans": [212.7,  28.2, -1601.2], // crack behind trees between castle entrance and atoll path
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [212.7,  28.2, -1601.2, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [212.7,  28.2, -1601.2, 10],
       "lump": {
         "name":"caspad-skill-ghost-89",
         "alt-actor":"caspad-skill-89"
@@ -2237,10 +2237,10 @@
     },
     {
       "trans": [106.41,  66.01, -1652.44], // crevice on cliff left of castle entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [106.41,  66.01, -1652.44, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [106.41,  66.01, -1652.44, 10],
       "lump": {
         "name":"caspad-skill-ghost-90",
         "alt-actor":"caspad-skill-90",
@@ -2249,10 +2249,10 @@
     },
     {
       "trans": [113.26,  78.55, -1644.96], // ledge up high on cliff left of castle entrance, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [113.26,  78.55, -1644.96, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [113.26,  78.55, -1644.96, 10],
       "lump": {
         "name":"caspad-skill-ghost-91",
         "alt-actor":"caspad-skill-91"
@@ -2261,10 +2261,10 @@
     },
     {
       "trans": [  74.90,  69.49, -1667.59], // behind fern up on cliff, left of steps to castle entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 74.90,  69.49, -1667.59, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 74.90,  69.49, -1667.59, 10],
       "lump": {
         "name":"caspad-skill-ghost-92",
         "alt-actor":"caspad-skill-92"
@@ -2272,10 +2272,10 @@
     },
     {
       "trans": [ 62.46,  68.89, -1666.22], // corner up left of steps to castle entrance (jump from ^)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 62.46,  68.89, -1666.22, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 62.46,  68.89, -1666.22, 10],
       "lump": {
         "name":"caspad-skill-ghost-93",
         "alt-actor":"caspad-skill-93"
@@ -2283,10 +2283,10 @@
     },
     {
       "trans": [155.94,  34.98, -1619.86], // crevice on cliff left of castle entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [155.94,  34.98, -1619.86, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [155.94,  34.98, -1619.86, 10],
       "lump": {
         "name":"caspad-skill-ghost-94",
         "alt-actor":"caspad-skill-94",
@@ -2295,10 +2295,10 @@
     },
     {
       "trans": [154.77,  53.67, -1607.64], // behind fern on ledge up high on cliff left of castle entrance, abah from ^d
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [154.77,  53.67, -1607.64, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [154.77,  53.67, -1607.64, 10],
       "lump": {
         "name":"caspad-skill-ghost-95",
         "alt-actor":"caspad-skill-95"
@@ -2306,10 +2306,10 @@
     },
     {
       "trans": [279.46,  20.59, -1681.05], // on ground near pad, below tree/behind fern
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [279.46,  20.59, -1681.05, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [279.46,  20.59, -1681.05, 10],
       "lump": {
         "name":"caspad-skill-ghost-96",
         "alt-actor":"caspad-skill-96"
@@ -2317,10 +2317,10 @@
     },
     {
       "trans": [349.70,  38.12, -1547.25], // tall rock near cave to atoll
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [349.70,  38.12, -1547.25, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [349.70,  38.12, -1547.25, 10],
       "lump": {
         "name":"caspad-skill-ghost-97",
         "alt-actor":"caspad-skill-97"
@@ -2328,10 +2328,10 @@
     },
     {
       "trans": [344.26,  47.18, -1540.56], // up on cliff from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [344.26,  47.18, -1540.56, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [344.26,  47.18, -1540.56, 10],
       "lump": {
         "name":"caspad-skill-ghost-98",
         "alt-actor":"caspad-skill-98"
@@ -2339,10 +2339,10 @@
     },
     {
       "trans": [259.64, 102.77, -1491.12], // way up on trees you can stand on, towards atoll cave
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [259.64, 102.77, -1491.12, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [259.64, 102.77, -1491.12, 10],
       "lump": {
         "name":"caspad-skill-ghost-99",
         "alt-actor":"caspad-skill-99"
@@ -2350,10 +2350,10 @@
     },
     {
       "trans": [330.10, -49.39, -1712.47], // bottom of dig elev
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [330.10, -49.39, -1712.47, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [330.10, -49.39, -1712.47, 10],
       "lump": {
         "name":"caspad-skill-ghost-100",
         "alt-actor":"caspad-skill-100",
@@ -2362,10 +2362,10 @@
     },
     {
       "trans": [323.45, -26.47, -1712.11], // bottom of dig elev, abah from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [323.45, -26.47, -1712.11, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [323.45, -26.47, -1712.11, 10],
       "lump": {
         "name":"caspad-skill-ghost-101",
         "alt-actor":"caspad-skill-101"
@@ -2373,10 +2373,10 @@
     },
     {
       "trans": [351.44, -32.57, -1693.44], // on pole at bottom of dig elev, bounce/abah off elev
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [351.44, -32.57, -1693.44, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [351.44, -32.57, -1693.44, 10],
       "lump": {
         "name":"caspad-skill-ghost-102",
         "alt-actor":"caspad-skill-102"
@@ -2384,10 +2384,10 @@
     },
     {
       "trans": [355.55, -51.31, -1677.62], // "oob" crevice bottom of dig elev - uppercut from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [355.55, -51.31, -1677.62, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [355.55, -51.31, -1677.62, 10],
       "lump": {
         "name":"caspad-skill-ghost-103",
         "alt-actor":"caspad-skill-103"
@@ -2395,10 +2395,10 @@
     },
     {
       "trans": [372.23, -32.57, -1714.33], // on pole at bottom of dig elev
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [372.23, -32.57, -1714.33, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [372.23, -32.57, -1714.33, 10],
       "lump": {
         "name":"caspad-skill-ghost-104",
         "alt-actor":"caspad-skill-104"
@@ -2406,10 +2406,10 @@
     },
     {
       "trans": [ 58.03,  68.35, -1676.25], // lamp outside castle entrance, jump from skill-93^^^^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 58.03,  68.35, -1676.25, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 58.03,  68.35, -1676.25, 10],
       "lump": {
         "name":"caspad-skill-ghost-105",
         "alt-actor":"caspad-skill-105"
@@ -2417,10 +2417,10 @@
     },
     {
       "trans": [ 40.37,  65.97, -1675.58], // lamp outside castle entrance, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 40.37,  65.97, -1675.58, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 40.37,  65.97, -1675.58, 10],
       "lump": {
         "name":"caspad-skill-ghost-106",
         "alt-actor":"caspad-skill-106"
@@ -2428,10 +2428,10 @@
     },
     {
       "trans": [ 40.72,  65.97, -1687.62], // lamp outside castle entrance, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 40.72,  65.97, -1687.62, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 40.72,  65.97, -1687.62, 10],
       "lump": {
         "name":"caspad-skill-ghost-107",
         "alt-actor":"caspad-skill-107"
@@ -2439,10 +2439,10 @@
     },
     {
       "trans": [ 58.20,  68.35, -1687.54], // lamp outside castle entrance, jump from ^
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 58.20,  68.35, -1687.54, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 58.20,  68.35, -1687.54, 10],
       "lump": {
         "name":"caspad-skill-ghost-108",
         "alt-actor":"caspad-skill-108"
@@ -2452,10 +2452,10 @@
     // HOVER ORBS
     {
       "trans": [  96.84, 147.38, -1781.03 ], // up on trees back right of castle entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 96.84, 147.38, -1781.03, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 96.84, 147.38, -1781.03, 10],
       "lump": {
         "name":"caspad-skill-ghost-hover-01",
         "alt-actor":"caspad-skill-hover-01",
@@ -2464,10 +2464,10 @@
     },
     {
       "trans": [ 27.92, 168.59, -1739.38 ], // further back from ^, up on trees back right of castle entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 27.92, 168.59, -1739.38, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 27.92, 168.59, -1739.38, 10],
       "lump": {
         "name":"caspad-skill-ghost-hover-02",
         "alt-actor":"caspad-skill-hover-02",
@@ -2476,10 +2476,10 @@
     },
     {
       "trans": [ 201.72, 112.66, -1820.74 ], // towards dig elev from ^^, up on trees right of castle entrance
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [201.72, 112.66, -1820.74, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [201.72, 112.66, -1820.74, 10],
       "lump": {
         "name":"caspad-skill-ghost-hover-03",
         "alt-actor":"caspad-skill-hover-03",
@@ -2488,10 +2488,10 @@
     },
     {
       "trans": [ 299.53, 126.07, -1760.46 ], // on trees way back up/left of dig elev
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [299.53, 126.07, -1760.46, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [299.53, 126.07, -1760.46, 10],
       "lump": {
         "name":"caspad-skill-ghost-hover-04",
         "alt-actor":"caspad-skill-hover-04",
@@ -2500,10 +2500,10 @@
     },
     {
       "trans": [397.79, 127.73, -1677.40 ], // on trees way back up/right of dig elev
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [397.79, 127.73, -1677.40, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [397.79, 127.73, -1677.40, 10],
       "lump": {
         "name":"caspad-skill-ghost-hover-05",
         "alt-actor":"caspad-skill-hover-05",
@@ -2512,10 +2512,10 @@
     },
     {
       "trans": [ 54.45, 176.27, -1575.54], // on trees way back up/left of castle, wayyy up
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 54.45, 176.27, -1575.54, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 54.45, 176.27, -1575.54, 10],
       "lump": {
         "name":"caspad-skill-ghost-hover-06",
         "alt-actor":"caspad-skill-hover-06",
@@ -2524,10 +2524,10 @@
     },
     {
       "trans": [447.36,  82.05, -1551.99], // on super tall rock next to pipe, above cave to atoll
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [447.36,  82.05, -1551.99, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [447.36,  82.05, -1551.99, 10],
       "lump": {
         "name":"caspad-skill-ghost-hover-07",
         "alt-actor":"caspad-skill-hover-07",

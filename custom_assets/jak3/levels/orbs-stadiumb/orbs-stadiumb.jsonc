@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [ -166.79,  46.59,  -410.96 ], // on top of tower near exit to BTR
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -166.79,  46.59,  -410.96 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -166.79,  46.59,  -410.96 , 10],
       "lump": {
         "name":"stadiumb-skill-01"
         // "pickup-amount": ["float", 2.0] // abah hint
@@ -59,150 +59,150 @@
     },
     {
       "trans": [ -146.22,  -20.53,  -424.01 ], // down a floor in tower, tucked away inside, not far from exit to BTR
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -146.22,  -20.53,  -424.01 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -146.22,  -20.53,  -424.01 , 10],
       "lump": {
         "name":"stadiumb-skill-02"
       }
     },
     {
       "trans": [  -212.4293, 32.1565, -405.8528], // among stones in rubble near exit to BTR (behind invis wall, yolo from tall tower^^)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -212.4293, 32.1565, -405.8528, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -212.4293, 32.1565, -405.8528, 10],
       "lump": {
         "name":"stadiumb-skill-03"
       }
     },
     {
       "trans": [ -193.74,  10.38,  -462.65 ], // on solid ledge on walkway around stadium, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -193.74,  10.38,  -462.65 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -193.74,  10.38,  -462.65 , 10],
       "lump": {
         "name":"stadiumb-skill-04"
       }
     },
     {
       "trans": [ -250.91,  12.80,  -504.60 ], // on inner lil ledge along walkway around stadium, jump along ^ those ledges
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -250.91,  12.80,  -504.60 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -250.91,  12.80,  -504.60 , 10],
       "lump": {
         "name":"stadiumb-skill-05"
       }
     },
     {
       "trans": [ -250.95,  12.80,  -647.43 ], // on inner lil ledge along walkway around stadium, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -250.95,  12.80,  -647.43 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -250.95,  12.80,  -647.43 , 10],
       "lump": {
         "name":"stadiumb-skill-06"
       }
     },
     {
       "trans": [-188.31,  16.13,  -685.90 ], // on stone at right end of walkway around stadium, following from ^^^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -188.31,  16.13,  -685.90 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -188.31,  16.13,  -685.90 , 10],
       "lump": {
         "name":"stadiumb-skill-07"
       }
     },
     {
       "trans": [ -115.14,  -12.22,  -718.04 ], // down below at right end of walkway around stadium, follow from ^ 
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -115.14,  -12.22,  -718.04  , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -115.14,  -12.22,  -718.04  , 10],
       "lump": {
         "name":"stadiumb-skill-08"
       }
     },
     {
       "trans": [ -135.27,  13.86,  -436.34 ], // on random "island" with big invis wall around (yolo from nearby tower)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -135.27,  13.86,  -436.34  , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -135.27,  13.86,  -436.34  , 10],
       "lump": {
         "name":"stadiumb-skill-09"
       }
     },
     {
       "trans": [  -195.1987, 31.7421, -536.2962 ], // top of tower in middle but towards end (BTR), leading to IJ disc ceiling
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -195.1987, 31.7421, -536.2962, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -195.1987, 31.7421, -536.2962, 10],
       "lump": {
         "name":"stadiumb-skill-10"
       }
     },
     {
       "trans": [  -167.1148, 43.1524, -628.7824 ], // IJ disc ceiling, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -167.1148, 43.1524, -628.7824, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -167.1148, 43.1524, -628.7824, 10],
       "lump": {
         "name":"stadiumb-skill-11"
       }
     },
     {
       "trans": [ -128.5223, 39.0512, -602.6972 ], // beams sticking out of IJ disc ceiling, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -128.5223, 39.0512, -602.6972, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -128.5223, 39.0512, -602.6972, 10],
       "lump": {
         "name":"stadiumb-skill-12"
       }
     },
     {
       "trans": [  -99.9412, 45.7132, -624.7459 ], // around corner of IJ disc ceiling, right up against invis wall (hint for proxy over to next orb)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -99.9412, 45.7132, -624.7459, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -99.9412, 45.7132, -624.7459, 10],
       "lump": {
         "name":"stadiumb-skill-13"
       }
     },
     {
       "trans": [ -108.40,  53.37,  -639.64 ], // on tower behind invis wall near top of disc IJ ceiling, proxy from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -108.40,  53.37,  -639.64 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -108.40,  53.37,  -639.64 , 10],
       "lump": {
         "name":"stadiumb-skill-14"
       }
     },
     {
       "trans": [  -180.5119, 67.0811, -649.8502], // further around disc IJ ceiling, follow from ^ (hint for dropping behind invis wall to next orb)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -180.5119, 67.0811, -649.8502 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -180.5119, 67.0811, -649.8502 , 10],
       "lump": {
         "name":"stadiumb-skill-15"
       }
     },
     {
       "trans": [ -160.32,  0.95,  -643.27 ], // at bottom of tower behind invis wall, drop down from ^ (disc IJ ceiling)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -160.32,  0.95,  -643.27 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -160.32,  0.95,  -643.27 , 10],
       "lump": {
         "name":"stadiumb-skill-16"
       }
@@ -213,10 +213,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -225,10 +225,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

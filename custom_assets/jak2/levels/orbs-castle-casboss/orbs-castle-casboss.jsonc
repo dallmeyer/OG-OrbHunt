@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [-247.22, 354.57, -1641.76], // outer edge
-      "etype": "air-train",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0.6314, 0, 0.7754], // quaternion
-      "bsphere": [-247.22, 354.57, -1641.76, 10], // bounding sphere
+      "etype": "air-train",
+      "game_task": 0, 
+      "quat" : [0, 0.6314, 0, 0.7754],
+      "bsphere": [-247.22, 354.57, -1641.76, 10],
       "lump": {
         "name":"casboss-air-train-01",
         "distance": ["meters", 15.0]
@@ -59,40 +59,40 @@
     },
     {
       "trans": [ -315.32, 349.57, -1641.74  ], // extended up and under/around, left side if facing elevator shaft
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-315.32, 349.57, -1641.74, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-315.32, 349.57, -1641.74, 10],
       "lump": {
         "name":"casboss-skill-01"
       }
     },
     {
       "trans": [-333.11, 355.14, -1664.56 ], // follow from ^ carefully stay behind invis wall, tight jump over fence
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-333.11, 355.14, -1664.56, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-333.11, 355.14, -1664.56, 10],
       "lump": {
         "name":"casboss-skill-02"
       }
     },
     {
       "trans": [-380.19, 361.77, -1658.13 ], // atop pipe, follow from ^ around back of shaft
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-380.19, 361.77, -1658.13, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-380.19, 361.77, -1658.13, 10],
       "lump": {
         "name":"casboss-skill-03"
       }
     },
     {
       "trans": [-352.72, 357.80, -1677.87], // back of elevator shaft, follow from ^^02
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-352.72, 357.80, -1677.87, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-352.72, 357.80, -1677.87, 10],
       "lump": {
         "name":"casboss-skill-04",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -100,70 +100,70 @@
     },
     {
       "trans": [-354.15, 379.0, -1677.43], // back of elevator shaft, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-354.15, 379.0, -1677.43, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-354.15, 379.0, -1677.43, 10],
       "lump": {
         "name":"casboss-skill-05"
       }
     },
     {
       "trans": [ -350.56, 353.3, -1692.65], // right side of shaft where krew gets stuck - follow around back of elevator shaft^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-350.56, 353.3, -1692.65, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-350.56, 353.3, -1692.65, 10],
       "lump": {
         "name":"casboss-skill-06"
       }
     },
     {
       "trans": [ -343.51, 322.19, -1715.30], // "oob" down below from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-343.51, 322.19, -1715.30, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-343.51, 322.19, -1715.30, 10],
       "lump": {
         "name":"casboss-skill-07"
       }
     },
     {
       "trans": [-328.65, 369.03, -1696.91], // on post up above right side of shaft, abah from "oob"
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -328.65, 369.03, -1696.91, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -328.65, 369.03, -1696.91, 10],
       "lump": {
         "name":"casboss-skill-08"
       }
     },
     {
       "trans": [-252.93, 361.61, -1718.25], // up and under on the other side, land back in bounds
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-252.93, 361.61, -1718.25, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-252.93, 361.61, -1718.25, 10],
       "lump": {
         "name":"casboss-skill-09"
       }
     },
     {
       "trans": [-293.43, 368.00, -1687.27], // on latch? of bucket? under bomb, just need a good jetboard bounce off base of beam
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-293.43, 368.00, -1687.27, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-293.43, 368.00, -1687.27, 10],
       "lump": {
         "name":"casboss-skill-10"
       }
     },
     {
       "trans": [-265.1, 366.46, -1678.0], // inside support beam
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-265.1, 366.46, -1678.0, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-265.1, 366.46, -1678.0, 10],
       "lump": {
         "name":"casboss-skill-11"
       }
@@ -171,10 +171,10 @@
     // HOVER ORBS
     {
       "trans": [-284.75, 381.68, -1697.78], // level 1 of bomb scaffolding, on outside
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-284.75, 381.68, -1697.78, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-284.75, 381.68, -1697.78, 10],
       "lump": {
         "name":"casboss-skill-hover-01",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -182,10 +182,10 @@
     },
     {
       "trans": [-284.37, 378.75, -1664.30], // level 1 of bomb scaffolding, on inside
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-284.37, 378.75, -1664.30, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-284.37, 378.75, -1664.30, 10],
       "lump": {
         "name":"casboss-skill-hover-02",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -193,10 +193,10 @@
     },
     {
       "trans": [-297.22, 395.54, -1678.56], // on lamp, level 2 of bomb scaffolding
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-297.22, 395.54, -1678.56, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-297.22, 395.54, -1678.56, 10],
       "lump": {
         "name":"casboss-skill-hover-03",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -204,10 +204,10 @@
     },
     {
       "trans": [-264.81, 394.54, -1678.47], // level 2 of bomb scaffolding, outside
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-264.81, 394.54, -1678.47, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-264.81, 394.54, -1678.47, 10],
       "lump": {
         "name":"casboss-skill-hover-04",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -215,10 +215,10 @@
     },
     {
       "trans": [-339.94, 410.57, -1705.70], // way up above machine next to elevator
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-339.94, 410.57, -1705.70, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-339.94, 410.57, -1705.70, 10],
       "lump": {
         "name":"casboss-skill-hover-05",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -226,10 +226,10 @@
     },
     {
       "trans": [-237.36, 443.5, -1655.12], // way up at end of crane over bomb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-237.36, 443.5, -1655.12, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-237.36, 443.5, -1655.12, 10],
       "lump": {
         "name":"casboss-skill-hover-06",
         "pickup-amount": ["float", 3.0]  // goldge
@@ -239,10 +239,10 @@
     // GHOSTS
     {
       "trans": [ -315.32, 349.57, -1641.74  ], // extended up and under/around, left side if facing elevator shaft
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-315.32, 349.57, -1641.74, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-315.32, 349.57, -1641.74, 10],
       "lump": {
         "name":"casboss-skill-ghost-01",
         "alt-actor":"casboss-skill-01"
@@ -250,10 +250,10 @@
     },
     {
       "trans": [-333.11, 355.14, -1664.56 ], // follow from ^ carefully stay behind invis wall, tight jump over fence
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-333.11, 355.14, -1664.56, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-333.11, 355.14, -1664.56, 10],
       "lump": {
         "name":"casboss-skill-ghost-02",
         "alt-actor":"casboss-skill-02"
@@ -261,10 +261,10 @@
     },
     {
       "trans": [-380.19, 361.77, -1658.13 ], // atop pipe, follow from ^ around back of shaft
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-380.19, 361.77, -1658.13, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-380.19, 361.77, -1658.13, 10],
       "lump": {
         "name":"casboss-skill-ghost-03",
         "alt-actor":"casboss-skill-03"
@@ -272,10 +272,10 @@
     },
     {
       "trans": [-352.72, 357.80, -1677.87], // back of elevator shaft, follow from ^^02
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-352.72, 357.80, -1677.87, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-352.72, 357.80, -1677.87, 10],
       "lump": {
         "name":"casboss-skill-ghost-04",
         "alt-actor":"casboss-skill-04",
@@ -284,10 +284,10 @@
     },
     {
       "trans": [-354.15, 379.0, -1677.43], // back of elevator shaft, abah from ^
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-354.15, 379.0, -1677.43, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-354.15, 379.0, -1677.43, 10],
       "lump": {
         "name":"casboss-skill-ghost-05",
         "alt-actor":"casboss-skill-05"
@@ -295,10 +295,10 @@
     },
     {
       "trans": [ -350.56, 353.3, -1692.65], // right side of shaft where krew gets stuck - follow around back of elevator shaft^
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-350.56, 353.3, -1692.65, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-350.56, 353.3, -1692.65, 10],
       "lump": {
         "name":"casboss-skill-ghost-06",
         "alt-actor":"casboss-skill-06"
@@ -306,10 +306,10 @@
     },
     {
       "trans": [ -343.51, 322.19, -1715.30], // "oob" down below from ^
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-343.51, 322.19, -1715.30, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-343.51, 322.19, -1715.30, 10],
       "lump": {
         "name":"casboss-skill-ghost-07",
         "alt-actor":"casboss-skill-07"
@@ -317,10 +317,10 @@
     },
     {
       "trans": [-328.65, 369.03, -1696.91], // on post up above right side of shaft, abah from "oob"
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -328.65, 369.03, -1696.91, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -328.65, 369.03, -1696.91, 10],
       "lump": {
         "name":"casboss-skill-ghost-08",
         "alt-actor":"casboss-skill-08"
@@ -328,10 +328,10 @@
     },
     {
       "trans": [-252.93, 361.61, -1718.25], // up and under on the other side, land back in bounds
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-252.93, 361.61, -1718.25, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-252.93, 361.61, -1718.25, 10],
       "lump": {
         "name":"casboss-skill-ghost-09",
         "alt-actor":"casboss-skill-09"
@@ -339,10 +339,10 @@
     },
     {
       "trans": [-293.43, 368.00, -1687.27], // on latch? of bucket? under bomb, just need a good jetboard bounce off base of beam
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-293.43, 368.00, -1687.27, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-293.43, 368.00, -1687.27, 10],
       "lump": {
         "name":"casboss-skill-ghost-10",
         "alt-actor":"casboss-skill-10"
@@ -350,10 +350,10 @@
     },
     {
       "trans": [-265.1, 366.46, -1678.0], // inside support beam
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-265.1, 366.46, -1678.0, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-265.1, 366.46, -1678.0, 10],
       "lump": {
         "name":"casboss-skill-ghost-11",
         "alt-actor":"casboss-skill-11"
@@ -362,10 +362,10 @@
     // HOVER ORBS
     {
       "trans": [-284.75, 381.68, -1697.78], // level 1 of bomb scaffolding, on outside
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-284.75, 381.68, -1697.78, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-284.75, 381.68, -1697.78, 10],
       "lump": {
         "name":"casboss-skill-ghost-hover-01",
         "alt-actor":"casboss-skill-hover-01",
@@ -374,10 +374,10 @@
     },
     {
       "trans": [-284.37, 378.75, -1664.30], // level 1 of bomb scaffolding, on inside
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-284.37, 378.75, -1664.30, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-284.37, 378.75, -1664.30, 10],
       "lump": {
         "name":"casboss-skill-ghost-hover-02",
         "alt-actor":"casboss-skill-hover-02",
@@ -386,10 +386,10 @@
     },
     {
       "trans": [-297.22, 395.54, -1678.56], // on lamp, level 2 of bomb scaffolding
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-297.22, 395.54, -1678.56, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-297.22, 395.54, -1678.56, 10],
       "lump": {
         "name":"casboss-skill-ghost-hover-03",
         "alt-actor":"casboss-skill-hover-03",
@@ -398,10 +398,10 @@
     },
     {
       "trans": [-264.81, 394.54, -1678.47], // level 2 of bomb scaffolding, outside
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-264.81, 394.54, -1678.47, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-264.81, 394.54, -1678.47, 10],
       "lump": {
         "name":"casboss-skill-ghost-hover-04",
         "alt-actor":"casboss-skill-hover-04",
@@ -410,10 +410,10 @@
     },
     {
       "trans": [-339.94, 410.57, -1705.70], // way up above machine next to elevator
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-339.94, 410.57, -1705.70, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-339.94, 410.57, -1705.70, 10],
       "lump": {
         "name":"casboss-skill-ghost-hover-05",
         "alt-actor":"casboss-skill-hover-05",
@@ -422,10 +422,10 @@
     },
     {
       "trans": [-237.36, 443.5, -1655.12], // way up at end of crane over bomb
-      "etype": "skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-237.36, 443.5, -1655.12, 10], // bounding sphere
+      "etype": "skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-237.36, 443.5, -1655.12, 10],
       "lump": {
         "name":"casboss-skill-ghost-hover-06",
         "alt-actor":"casboss-skill-hover-06",

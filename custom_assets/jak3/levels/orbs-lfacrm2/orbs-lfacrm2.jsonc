@@ -48,20 +48,20 @@
   "actors" : [
     {
       "trans": [ 245.92,  485.25,  49.13 ], // warp to factoryb
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0000,      0.0,       0.0000,       1.0], // quaternion
-      "bsphere": [  245.92,  485.25,  49.13 , 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [ 0.0000,      0.0,       0.0000,       1.0],
+      "bsphere": [  245.92,  485.25,  49.13 , 10],
       "lump": {
         "name":"lfacrm2-warp-gate-1"
       }
     },    
     {
       "trans": [245.8070, 483.9104, 49.2262 ], // door to factoryb (factory exterior)
-      "etype": "cty-door",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0000,      0.0,       0.0000,       -1.0], // quaternion
-      "bsphere": [ 245.8070, 483.9104, 49.2262  , 10], // bounding sphere
+      "etype": "cty-door",
+      "game_task": 0, 
+      "quat" : [ 0.0000,      0.0,       0.0000,       -1.0],
+      "bsphere": [ 245.8070, 483.9104, 49.2262  , 10],
       "lump": {
         "name":"lfacrm2-cty-door-1",
         "scale": ["float", 1.6]
@@ -69,20 +69,20 @@
     },
     {
       "trans": [  233.6113, 494.8557, 61.1541], // vent on wall, concussor hj up to standpoint, then zoomwalk sideways so you can uppercut off for vvv
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  233.6113, 494.8557, 61.1541, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  233.6113, 494.8557, 61.1541, 10],
       "lump": {
         "name":"lfacrm2-skill-01"
       }
     },
     {
       "trans": [  247.1938, 505.8463, 68.0417], // up in middle of room near ceiling, uppercut concussor yolo from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  247.1938, 505.8463, 68.0417, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  247.1938, 505.8463, 68.0417, 10],
       "lump": {
         "name":"lfacrm2-skill-02"
       }
@@ -92,10 +92,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -104,10 +104,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

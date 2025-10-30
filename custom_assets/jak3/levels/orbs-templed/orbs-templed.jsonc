@@ -48,20 +48,20 @@
   "actors" : [
     {
       "trans": [ 4352.0629, 77.2128, 4508.0585], // hidden warp gate on elevator
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0000, 0.9479, 0.0000, -0.3183], // quaternion
-      "bsphere": [ 4352.0629, 77.2128, 4508.0585, 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [ 0.0000, 0.9479, 0.0000, -0.3183],
+      "bsphere": [ 4352.0629, 77.2128, 4508.0585, 10],
       "lump": {
         "name": "templed-warp-gate-1"
       }
     },
     // {
     //   "trans": [  2429.1813, 56.9144, -110.1102], // 
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"templed-skill-01",
     //     "pickup-amount": ["float", 2.0] // abah hint
@@ -69,20 +69,20 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // 
-    //   "etype": "skill",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"templed-skill-02"
     //   }
     // },
     {
       "trans": [ 4249.8808, 78.4104, 4625.4687], // upper level, first half moon ledge in SW
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 4249.8808, 78.4104, 4625.4687, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4249.8808, 78.4104, 4625.4687, 10],
       "lump": {
         "name":"templed-skill-03",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -90,110 +90,110 @@
     },
     {
       "trans": [ 4249.9672, 97.6758, 4619.6557], // up on west wall, abah from^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 4249.9672, 97.6758, 4619.6557, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4249.9672, 97.6758, 4619.6557, 10],
       "lump": {
         "name":"templed-skill-04"
       }
     },
     {
       "trans": [ 4271.5747, 87.6386, 4623.4907], // pillar climb in SW of room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 4271.5747, 87.6386, 4623.4907, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4271.5747, 87.6386, 4623.4907, 10],
       "lump": {
         "name":"templed-skill-05"
       }
     },
     {
       "trans": [ 4277.9335, 95.1095, 4622.1552], // pillar climb in SW of room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 4277.9335, 95.1095, 4622.1552, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4277.9335, 95.1095, 4622.1552, 10],
       "lump": {
         "name":"templed-skill-06"
       }
     },
     {
       "trans": [ 4273.5483, 107.0800, 4628.2421], // pillar climb in SW of room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 4273.5483, 107.0800, 4628.2421, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4273.5483, 107.0800, 4628.2421, 10],
       "lump": {
         "name":"templed-skill-07"
       }
     },
     {
       "trans": [ 4268.9667, 119.3131, 4628.0512], // pillar climb in SW of room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 4268.9667, 119.3131, 4628.0512, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4268.9667, 119.3131, 4628.0512, 10],
       "lump": {
         "name":"templed-skill-08"
       }
     },
     {
       "trans": [ 4274.0581, 130.7947, 4623.6938], // pillar climb in SW of room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 4274.0581, 130.7947, 4623.6938, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4274.0581, 130.7947, 4623.6938, 10],
       "lump": {
         "name":"templed-skill-09"
       }
     },
     {
       "trans": [ 4251.8476, 140.3498, 4612.6684], // pillar climb in SW of room
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 4251.8476, 140.3498, 4612.6684, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4251.8476, 140.3498, 4612.6684, 10],
       "lump": {
         "name":"templed-skill-10"
       }
     },
     {
       "trans": [ 4248.5913, 142.6031, 4596.0517], // top edge of west wall, follow pillar climb in SW of room^^^^^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 4248.5913, 142.6031, 4596.0517, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4248.5913, 142.6031, 4596.0517, 10],
       "lump": {
         "name":"templed-skill-11"
       }
     },
     {
       "trans": [ 4266.7700, 93.7006, 4658.6992], // hidden on bricks behind pillar on wall in SW, jump over from other pillar with orba
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 4266.7700, 93.7006, 4658.6992, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4266.7700, 93.7006, 4658.6992, 10],
       "lump": {
         "name":"templed-skill-12"
       }
     },
     {
       "trans": [ 4267.9282, 109.0410, 4653.9609], // up from ^, on pillar on wall in SW
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 4267.9282, 109.0410, 4653.9609, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4267.9282, 109.0410, 4653.9609, 10],
       "lump": {
         "name":"templed-skill-13"
       }
     },
     {
       "trans": [ 4290.0419, 117.4126, 4654.7690], // on top of precursor plaque on southern wall, extended or something from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 4290.0419, 117.4126, 4654.7690, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4290.0419, 117.4126, 4654.7690, 10],
       "lump": {
         "name":"templed-skill-14"
       }
@@ -201,10 +201,10 @@
 
     {
       "trans": [ 4293.60986328125, 95.28469848632813, 4445.169921875 ], // seem at end of templed
-      "etype": "seem-npc",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [  0.0, 1.0, 0.0, 0.0], // quaternion
-      "bsphere": [ 4293.60986328125, 95.28469848632813, 4445.169921875, 6.928242206573486 ], // bounding sphere
+      "etype": "seem-npc",
+      "game_task": 0, 
+      "quat" : [  0.0, 1.0, 0.0, 0.0],
+      "bsphere": [ 4293.60986328125, 95.28469848632813, 4445.169921875, 6.928242206573486 ],
       "lump": {
         "name": "templed-seem-npc",
         "task-actor": ["int32", 63]
@@ -212,10 +212,10 @@
     },
     {
       "trans": [  4293.9829, 102.9230, 4440.4565], // 
-      "etype": "fuel-cell",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
-      "bsphere": [  4293.9829, 102.9230, 4440.4565, 6.928242206573486 ], // bounding sphere
+      "etype": "fuel-cell",
+      "game_task": 0, 
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
+      "bsphere": [  4293.9829, 102.9230, 4440.4565, 6.928242206573486 ],
       "lump": {
         "name": "templed-fuel-cell",
         "level-idx": ["int32", 37],
@@ -227,10 +227,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -239,10 +239,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

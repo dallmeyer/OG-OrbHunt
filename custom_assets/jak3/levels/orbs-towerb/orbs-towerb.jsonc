@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [ -102.83,  171.11,  448.28 ], // fake warp gate on final plat to warp to top
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0.6314, 0, 0.7754], // quaternion
-      "bsphere": [ -102.83,  171.11,  448.28  , 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [0, 0.6314, 0, 0.7754],
+      "bsphere": [ -102.83,  171.11,  448.28  , 10],
       "lump": {
         "name":"towerb-warp-gate-1",
         "distance": ["meters", 5.0]
@@ -60,10 +60,10 @@
 
     {
       "trans": [   -162.9776, 165.1886, 379.0115], // up on thin branch along wall, not too far from top (IJ)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -162.9776, 165.1886, 379.0115, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -162.9776, 165.1886, 379.0115, 10],
       "lump": {
         "name":"towerb-skill-01"
         // "pickup-amount": ["float", 2.0] // abah hint
@@ -71,60 +71,60 @@
     },
     {
       "trans": [   -153.3335, 173.3408, 374.4054], // on higher thin branch from ^ (IJ)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -153.3335, 173.3408, 374.4054, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -153.3335, 173.3408, 374.4054, 10],
       "lump": {
         "name":"towerb-skill-02"
       }
     },
     {
       "trans": [  -168.5482, 182.4747, 382.5474], // on higher branch from ^ 
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -168.5482, 182.4747, 382.5474, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -168.5482, 182.4747, 382.5474, 10],
       "lump": {
         "name":"towerb-skill-03"
       }
     },
     {
       "trans": [  -171.6569, 190.4426, 400.4915], // on higher branch from ^ (IJ)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -171.6569, 190.4426, 400.4915, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -171.6569, 190.4426, 400.4915, 10],
       "lump": {
         "name":"towerb-skill-04"
       }
     },
     {
       "trans": [   -157.5882, 195.2052, 380.8668], // on higher branch from ^ (IJ)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -157.5882, 195.2052, 380.8668, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -157.5882, 195.2052, 380.8668, 10],
       "lump": {
         "name":"towerb-skill-05"
       }
     },
     {
       "trans": [ -160.3570, 205.0383, 370.1167], // on higher thin branch from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -160.3570, 205.0383, 370.1167, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -160.3570, 205.0383, 370.1167, 10],
       "lump": {
         "name":"towerb-skill-06"
       }
     },
     {
       "trans": [  -162.1194, 223.1521, 387.0423], // up in pocket against big branch
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -162.1194, 223.1521, 387.0423, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -162.1194, 223.1521, 387.0423, 10],
       "lump": {
         "name":"towerb-skill-07",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -132,30 +132,30 @@
     },
     {
       "trans": [  -177.3438, 242.8159, 385.3148], // up in corner on top of big branch, abah from ^ (or can prob just climb up somewhere too)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -177.3438, 242.8159, 385.3148, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -177.3438, 242.8159, 385.3148, 10],
       "lump": {
         "name":"towerb-skill-08"
       }
     },
     {
       "trans": [ -158.79,  264.16,  449.37 ], // further up big branch, near corner where you can IJ up to next orb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -158.79,  264.16,  449.37 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -158.79,  264.16,  449.37 , 10],
       "lump": {
         "name":"towerb-skill-09"
       }
     },
     {
       "trans": [-172.5450, 322.1744, 449.4157], // top of vertical big branch IJ, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -172.5450, 322.1744, 449.4157, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -172.5450, 322.1744, 449.4157, 10],
       "lump": {
         "name":"towerb-skill-10"
       }
@@ -166,10 +166,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -178,10 +178,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

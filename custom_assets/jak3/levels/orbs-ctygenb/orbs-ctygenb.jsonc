@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [  336.8598, 12.8299, -13.8663], // corner near ctygenc
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   336.8598, 12.8299, -13.8663, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   336.8598, 12.8299, -13.8663, 10],
       "lump": {
         "name":"ctygenb-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -59,20 +59,20 @@
     },
     {
       "trans": [  337.0112, 8.3193, -2.0476], // corner near ctygenc jak 2 dev pic spot - abah or IJ over from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  337.0112, 8.3193, -2.0476, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  337.0112, 8.3193, -2.0476, 10],
       "lump": {
         "name":"ctygenb-skill-02"
       }
     },
     {
       "trans": [  115.2423, 17.0454, -25.6798], // SW corner, door frame
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  115.2423, 17.0454, -25.6798, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  115.2423, 17.0454, -25.6798, 10],
       "lump": {
         "name":"ctygenb-skill-03",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -80,40 +80,40 @@
     },
     {
       "trans": [  105.9439, 27.9244, -26.8265], // SW corner, balcony, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  105.9439, 27.9244, -26.8265, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  105.9439, 27.9244, -26.8265, 10],
       "lump": {
         "name":"ctygenb-skill-04"
       }
     },
     {
       "trans": [   100.4088, 35.9271, -43.6742], // SW corner, balcony, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  100.4088, 35.9271, -43.6742, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  100.4088, 35.9271, -43.6742, 10],
       "lump": {
         "name":"ctygenb-skill-05"
       }
     },
     {
       "trans": [  129.7764, 40.4769, -60.6833], // SW corner, end of pipe overhead, boosted concussor from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  129.7764, 40.4769, -60.6833, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  129.7764, 40.4769, -60.6833, 10],
       "lump": {
         "name":"ctygenb-skill-06"
       }
     },
     {
       "trans": [   373.3343, 29.4519, -242.3463], // corner before stadium entrance, on red light - from nearby rooftop zoomwalk seems easiest lol
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  373.3343, 29.4519, -242.3463, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  373.3343, 29.4519, -242.3463, 10],
       "lump": {
         "name":"ctygenb-skill-07",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -121,20 +121,20 @@
     },
     {
       "trans": [   378.4992, 48.1351, -242.5695], // way up in corner before stadium entrance, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 378.4992, 48.1351, -242.5695, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 378.4992, 48.1351, -242.5695, 10],
       "lump": {
         "name":"ctygenb-skill-08"
       }
     },
     {
       "trans": [   343.6113, 18.7863, -155.0029], // red light mid east bottom half
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  343.6113, 18.7863, -155.0029, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  343.6113, 18.7863, -155.0029, 10],
       "lump": {
         "name":"ctygenb-skill-09",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -142,10 +142,10 @@
     },
     {
       "trans": [ 344.5361, 39.8554, -157.0796], // way up on pipe mid east bottom half, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 344.5361, 39.8554, -157.0796, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 344.5361, 39.8554, -157.0796, 10],
       "lump": {
         "name":"ctygenb-skill-10"
       }
@@ -155,10 +155,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -167,10 +167,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

@@ -48,20 +48,20 @@
   "actors" : [
     {
       "trans": [ -102.3640, 437.3388, 490.6380], // hellcat to lfacrm1
-      "etype": "desoasis-hellcat",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0000, 0.4569, 0.0000, 0.8894 ], // quaternion
-      "bsphere": [ -102.3640, 437.3388, 490.6380, 10], // bounding sphere
+      "etype": "desoasis-hellcat",
+      "game_task": 0, 
+      "quat" : [ 0.0000, 0.4569, 0.0000, 0.8894 ],
+      "bsphere": [ -102.3640, 437.3388, 490.6380, 10],
       "lump": {
         "name":"ltowerb-hellcat-1"
       }
     },
     {
       "trans": [ -101.76,  431.97,  490.24 ], // warp to lfacrm1
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0000,      1.0,       0.0000,       0.0], // quaternion
-      "bsphere": [ -101.76,  431.97,  490.24 , 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [ 0.0000,      1.0,       0.0000,       0.0],
+      "bsphere": [ -101.76,  431.97,  490.24 , 10],
       "lump": {
         "name":"ltowerb-warp-gate-1"
       }
@@ -69,10 +69,10 @@
 
     {
       "trans": [ -145.9824, 447.5057, 462.6603], // on side of "door" left from portal
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -145.9824, 447.5057, 462.6603, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -145.9824, 447.5057, 462.6603, 10],
       "lump": {
         "name":"ltowerb-skill-01"
         // "pickup-amount": ["float", 2.0] // abah hint
@@ -80,30 +80,30 @@
     },
     {
       "trans": [   -106.7109, 454.5085, 412.1259], // proxy hint on top of portal
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -106.7109, 454.5085, 412.1259, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -106.7109, 454.5085, 412.1259, 10],
       "lump": {
         "name":"ltowerb-skill-02"
       }
     },
     {
       "trans": [   -108.4268, 487.7480, 431.3145], // up on high beams, proxy from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -108.4268, 487.7480, 431.3145, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -108.4268, 487.7480, 431.3145, 10],
       "lump": {
         "name":"ltowerb-skill-03"
       }
     },
     {
       "trans": [   -96.1938, 490.8017, 461.1326], // up on high beams, cross from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   -96.1938, 490.8017, 461.1326, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -96.1938, 490.8017, 461.1326, 10],
       "lump": {
         "name":"ltowerb-skill-04"
       }
@@ -114,10 +114,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -126,10 +126,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [  1144.1777, 20.8009, 297.3746], // 2nd floor ledge, abah hint for crate-1134 across street
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1144.1777, 20.8009, 297.3746, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1144.1777, 20.8009, 297.3746, 10],
       "lump": {
         "name":"ctysluma-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -59,20 +59,20 @@
     },
     {
       "trans": [ 868.60,  43.17,  284.97 ], // up on top of MH billboard, trash can proxy from below
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 868.60,  43.17,  284.97 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 868.60,  43.17,  284.97 , 10],
       "lump": {
         "name":"ctysluma-skill-02"
       }
     },
     {
       "trans": [ 881.00,  32.55,  286.05 ], // on rooftop near ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 881.00,  32.55,  286.05  , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 881.00,  32.55,  286.05  , 10],
       "lump": {
         "name":"ctysluma-skill-03"
       }
@@ -82,10 +82,10 @@
     
     {
       "trans": [  771.5402, 9.7357, 183.2940], // behind left invis wall (uppercut from doorway)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  771.5402, 9.7357, 183.2940, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  771.5402, 9.7357, 183.2940, 10],
       "lump": {
         "name":"onintent-skill-01",
         "lvl-idx-override": ["int32", 41]
@@ -93,10 +93,10 @@
     },
     {
       "trans": [  781.2051, 9.7030, 180.8178], // behind right invis wall (uppercut from doorway)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  781.2051, 9.7030, 180.8178, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  781.2051, 9.7030, 180.8178, 10],
       "lump": {
         "name":"onintent-skill-02",
         "lvl-idx-override": ["int32", 41],
@@ -106,10 +106,10 @@
     
     {
       "trans": [ 774.9849853515625, 8.149999618530273, 179.0850067138672], // onin in her tent
-      "etype": "onin-npc",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
-      "bsphere": [ 774.9849853515625, 8.149999618530273, 179.0850067138672, 6.928203105926514], // bounding sphere
+      "etype": "onin-npc",
+      "game_task": 0, 
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
+      "bsphere": [ 774.9849853515625, 8.149999618530273, 179.0850067138672, 6.928203105926514],
       "lump": {
         "name": "ctysluma-onin-npc",
         "task-actor": ["int32", 56]
@@ -117,10 +117,10 @@
     },
     {
       "trans": [  769.9647, 10.9087, 174.0263], // 
-      "etype": "fuel-cell",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684], // quaternion
-      "bsphere": [  769.9647, 10.9087, 174.0263, 6.928203105926514], // bounding sphere
+      "etype": "fuel-cell",
+      "game_task": 0, 
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
+      "bsphere": [  769.9647, 10.9087, 174.0263, 6.928203105926514],
       "lump": {
         "name": "ctysluma-fuel-cell",
         "level-idx": ["int32", 41]
@@ -130,10 +130,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -142,10 +142,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

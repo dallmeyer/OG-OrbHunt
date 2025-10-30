@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [ -336.3517, 24.7200, 184.1002 ], // warp gate to ctyfarma
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0000,      1.0,       0.0000,       0.0], // quaternion
-      "bsphere": [ -336.3517, 24.7200, 184.1002 , 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [ 0.0000,      1.0,       0.0000,       0.0],
+      "bsphere": [ -336.3517, 24.7200, 184.1002 , 10],
       "lump": {
         "name":"rubbleb-warp-gate-1"
       }
@@ -59,40 +59,40 @@
 
     {
       "trans": [ -8.6177, 33.0830, 103.7800], // in crevice where building meets wall, concussor up onto roof
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-8.6177, 33.0830, 103.7800, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-8.6177, 33.0830, 103.7800, 10],
       "lump": {
         "name":"rubbleb-skill-01"
       }
     },
     {
       "trans": [ -96.04,  16.59,  -192.84 ], // up on left ledge behind invis wall, at start of rubbleb
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -96.04,  16.59,  -192.84 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -96.04,  16.59,  -192.84 , 10],
       "lump": {
         "name":"rubbleb-skill-02"
       }
     },
     {
       "trans": [ -117.13,  16.58,  -191.35 ], // up on left ledge behind invis wall, crawl along from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -117.13,  16.58,  -191.35 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -117.13,  16.58,  -191.35 , 10],
       "lump": {
         "name":"rubbleb-skill-03"
       }
     },
     {
       "trans": [  -80.7017, 16.2456, -252.9070], // up on left ledge behind invis wall towards first bridge, follow from ^^ 
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  -80.7017, 16.2456, -252.9070, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -80.7017, 16.2456, -252.9070, 10],
       "lump": {
         "name":"rubbleb-skill-04",
         "bob-scale": ["float", 0.8]
@@ -100,10 +100,10 @@
     },
     {
       "trans": [ 103.01,  20.29,  -322.65 ], // after 1st bridge, on QP-like ledge
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 103.01,  20.29,  -322.65 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 103.01,  20.29,  -322.65 , 10],
       "lump": {
         "name":"rubbleb-skill-05",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -111,60 +111,60 @@
     },
     {
       "trans": [ 109.44,  38.55,  -324.23 ], // abah from ^, up onto mid building ledge. only edges are solid where orb is
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [109.44,  38.55,  -324.23 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [109.44,  38.55,  -324.23 , 10],
       "lump": {
         "name":"rubbleb-skill-06"
       }
     },
     {
       "trans": [  112.46,  52.38,  -344.28 ], // up from ^, and left behind invis wall
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 112.46,  52.38,  -344.28 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 112.46,  52.38,  -344.28 , 10],
       "lump": {
         "name":"rubbleb-skill-07"
       }
     },
     {
       "trans": [   93.2724, 50.6731, -355.3318], // on rebar on wall after 1st bridge, behind invis wall, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  93.2724, 50.6731, -355.3318 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  93.2724, 50.6731, -355.3318 , 10],
       "lump": {
         "name":"rubbleb-skill-08"
       }
     },
     {
       "trans": [   78.3720, 56.2979, -358.1184 ], // on rebar on wall after 1st bridge, behind invis wall, follow from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  78.3720, 56.2979, -358.1184 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  78.3720, 56.2979, -358.1184 , 10],
       "lump": {
         "name":"rubbleb-skill-09"
       }
     },
     {
       "trans": [  95.35,  24.33,  -356.01 ], // follow from ^^^, on ground behind invis wall in corner before 2nd bridge
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 95.35,  24.33,  -356.01 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 95.35,  24.33,  -356.01 , 10],
       "lump": {
         "name":"rubbleb-skill-10"
       }
     },
     {
       "trans": [ 101.45,  33.98,  -232.35 ], // on left wall just after water after 1st bridge
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 101.45,  33.98,  -232.35 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 101.45,  33.98,  -232.35 , 10],
       "lump": {
         "name":"rubbleb-skill-11",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -172,30 +172,30 @@
     },
     {
       "trans": [  114.11,  60.19,  -232.68 ], // abah concussor spam from ^, up on 
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ 114.11,  60.19,  -232.68 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 114.11,  60.19,  -232.68 , 10],
       "lump": {
         "name":"rubbleb-skill-12"
       }
     },
     {
       "trans": [ -1.56,  16.69,  -339.53 ], // behind invis wall, between rebar sticking up
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -1.56,  16.69,  -339.53 , 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -1.56,  16.69,  -339.53 , 10],
       "lump": {
         "name":"rubbleb-skill-13"
       }
     },
     {
       "trans": [ -84.4316, 16.3012, -309.2965], // further around behind invis wall, in broken window, close to first bridge
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [ -84.4316, 16.3012, -309.2965, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -84.4316, 16.3012, -309.2965, 10],
       "lump": {
         "name":"rubbleb-skill-14"
       }
@@ -206,10 +206,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -218,10 +218,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

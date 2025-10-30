@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [ 493.57,  -129.02,  195.46 ], // warp gate to sewf
-      "etype": "warp-gate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0000,  -0.9996,  0.0000,  0.0258], // quaternion
-      "bsphere": [ 493.57,  -129.02,  195.46 , 10], // bounding sphere
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [ 0.0000,  -0.9996,  0.0000,  0.0258],
+      "bsphere": [ 493.57,  -129.02,  195.46 , 10],
       "lump": {
         "name":"sewk-warp-gate-1"
       }
@@ -59,30 +59,30 @@
 
     {
       "trans": [  372.8670, -107.4263, 245.4077], // on lamp above airlock to sewg
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  372.8670, -107.4263, 245.4077, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  372.8670, -107.4263, 245.4077, 10],
       "lump": {
         "name":"sewk-skill-01"
       }
     },
     {
       "trans": [  474.0458, -115.2888, 248.9233], // right pipe on wall above stinky pipes
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   474.0458, -115.2888, 248.9233, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   474.0458, -115.2888, 248.9233, 10],
       "lump": {
         "name":"sewk-skill-02"
       }
     },
     {
       "trans": [  467.6437, -110.6961, 246.9843], // lip of pipe, up from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   467.6437, -110.6961, 246.9843, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   467.6437, -110.6961, 246.9843, 10],
       "lump": {
         "name":"sewk-skill-03",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -90,20 +90,20 @@
     },
     {
       "trans": [   451.8100, -100.1320, 254.0823], // up behind pipe, abah from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [   451.8100, -100.1320, 254.0823, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   451.8100, -100.1320, 254.0823, 10],
       "lump": {
         "name":"sewk-skill-04"
       }
     },
     {
       "trans": [  455.4602, -117.3088, 213.2098], // on top of pipe near elevator
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  455.4602, -117.3088, 213.2098, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  455.4602, -117.3088, 213.2098, 10],
       "lump": {
         "name":"sewk-skill-05"
       }
@@ -113,10 +113,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -125,10 +125,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"

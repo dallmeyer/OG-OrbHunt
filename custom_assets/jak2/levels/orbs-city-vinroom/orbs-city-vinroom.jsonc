@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [ 1120.5,   31.05,   1120.6  ], // in center hologram (jetboard lulz)
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [1120.5,   31.05,   1120.6, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [1120.5,   31.05,   1120.6, 10],
       "lump": {
         "name": "vinroom-skill-1",
         "bob-scale": ["float", -1.0] // no bob
@@ -61,10 +61,10 @@
     // CRATES
     {
       "trans": [ 1119.0156, 25.5000, 1112.7435 ], // to left side (jetboard lulz)
-      "etype": "skill-crate",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [ 0.0001, -0.1239, -0.0001, -0.9922], // quaternion
-      "bsphere": [  1119.0156, 25.5000, 1112.7435 , 10], // bounding sphere
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [ 0.0001, -0.1239, -0.0001, -0.9922],
+      "bsphere": [  1119.0156, 25.5000, 1112.7435 , 10],
       "lump": {
         "name": "vinroom-crate-01",
         "crate-type": "iron",
@@ -80,10 +80,10 @@
     // GHOSTS
     {
       "trans": [ 1120.5,   31.05,   1120.6  ], // in center hologram (jetboard lulz)
-      "etype":"skill-ghost",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [1120.5,   31.05,   1120.6, 10], // bounding sphere
+      "etype":"skill-ghost",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [1120.5,   31.05,   1120.6, 10],
       "lump": {
         "name":"vinroom-skill-ghost-1",
         "alt-actor":"vinroom-skill-1",

@@ -48,10 +48,10 @@
   "actors" : [
     {
       "trans": [  1491.8719, 130.8742, 376.4342], // on top of big rocks in middle
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1491.8719, 130.8742, 376.4342, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1491.8719, 130.8742, 376.4342, 10],
       "lump": {
         "name":"deserta-skill-01"
         // "pickup-amount": ["float", 2.0] // abah hint
@@ -59,50 +59,50 @@
     },
     {
       "trans": [  1250.1019, 85.8152, 261.7496], // on big plateau on big rock in middle, closer to water
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1250.1019, 85.8152, 261.7496, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1250.1019, 85.8152, 261.7496, 10],
       "lump": {
         "name":"deserta-skill-02"
       }
     },
     {
       "trans": [  1398.5217, 45.8524, 169.6265], // deep in rock crevice on northern wall leading to ocean
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1398.5217, 45.8524, 169.6265, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1398.5217, 45.8524, 169.6265, 10],
       "lump": {
         "name":"deserta-skill-03"
       }
     },
     {
       "trans": [  1122.5799, 27.2728, 72.0925], // on rock near end of northern wall leading to ocean, hint for going over to next orb vvv
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1122.5799, 27.2728, 72.0925, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1122.5799, 27.2728, 72.0925, 10],
       "lump": {
         "name":"deserta-skill-04"
       }
     },
     {
       "trans": [  1114.4761, 5.6584, 60.7743], // in water behind rock near end of northern wall leading to ocean, jump over from ^
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  1114.4761, 5.6584, 60.7743, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1114.4761, 5.6584, 60.7743, 10],
       "lump": {
         "name":"deserta-skill-05"
       }
     },
     {
       "trans": [  72.9211, 0.6607, 51.2396], // deep in water on island in ocean, right before tentacle navmesh
-      "etype": "skill",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [  72.9211, 0.6607, 51.2396, 10], // bounding sphere
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  72.9211, 0.6607, 51.2396, 10],
       "lump": {
         "name":"deserta-skill-06"
       }
@@ -113,10 +113,10 @@
     // GHOSTS
     // {
     //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-1",
     //     "pickup-amount": ["float", 2.0], // abah hint
@@ -125,10 +125,10 @@
     // },
     // {
     //   "trans": [  2430.0915, 72.5804, -96.9893], // 
-    //   "etype": "skill-ghost",  // actor type
-    //   "game_task": 0, // associated game task (for powercells, etc)
-    //   "quat" : [0, 0, 0, 1], // quaternion
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10], // bounding sphere
+    //   "etype": "skill-ghost",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"
