@@ -220,6 +220,26 @@
       "lump": {
         "name":"templex-skill-16"
       }
+    },
+    {
+      "trans": [  4208.8002, 170.8165, 4098.3720], // top of arch over spikes before temple entrance door
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  4208.8002, 170.8165, 4098.3720 , 10],
+      "lump": {
+        "name":"templex-skill-17"
+      }
+    },
+    {
+      "trans": [ 4219.14,  142.4101,  4089.59 ], // in hanging torch over spikes before temple entrance door (above door is an IJ you can extendo from)
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4219.14,  142.4101,  4089.59 , 10],
+      "lump": {
+        "name":"templex-skill-18"
+      }
     }//,
     
     
@@ -246,7 +266,8 @@
     //   "lump": {
     //     "name":"wascitya-skill-ghost-2",
     //     "alt-actor":"wascitya-skill-2"
-    //   }
+    //   }.
+
     // }
     
   ]
