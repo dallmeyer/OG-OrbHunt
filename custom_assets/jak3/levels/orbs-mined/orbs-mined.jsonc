@@ -54,22 +54,63 @@
       "bsphere": [ 334.68,  71.82,  -281.60 , 10],
       "lump": {
         "name":"mined-skill-01"
-        // "pickup-amount": ["float", 2.0] // abah hint
       }
     },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"mined-skill-2"
-    //   }
-    // },
+    {
+      "trans": [  305.3629, 62.9409, -282.2550], // abah spot on far side
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  305.3629, 62.9409, -282.2550, 10],
+      "lump": {
+        "name":"mined-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  299.1947, 82.9491, -285.7930], // ledge above stone robot on left, abah from ^
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  299.1947, 82.9491, -285.7930, 10],
+      "lump": {
+        "name":"mined-skill-03",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  293.8522, 91.1676, -273.7493], // ledge next tp left explosive cart, abah from ^
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  293.8522, 91.1676, -273.7493, 10],
+      "lump": {
+        "name":"mined-skill-04"
+      }
+    },
+    {
+      "trans": [  313.6295, 94.3994, -275.3101], // inside middle explosive cart, follow from ^
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  313.6295, 94.3994, -275.3101, 10],
+      "lump": {
+        "name":"mined-skill-05"
+      }
+    },
+    {
+      "trans": [   358.6768, 92.7625, -269.1423], // hallway behind right explosive cart, follow from ^
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  358.6768, 92.7625, -269.1423, 10],
+      "lump": {
+        "name":"mined-skill-06"
+      }
+    },
         
     {
-      "trans": [329.8399, 57.8516, -278.9043], // samos by white barrier
+      "trans": [329.8399, 57.8516, -278.9043], // veger on far side
       "etype": "veger-npc",
       "game_task": 0, 
       "quat" : [  0.0, 0.0, 0.0, -1.0],

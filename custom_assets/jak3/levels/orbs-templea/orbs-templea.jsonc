@@ -47,11 +47,11 @@
 
   "actors" : [
     {
-      "trans": [ 4236.91,  62.33,  4217.89 ], // behind bricks in exposed waterfall in hallway
+      "trans": [  4250.9179, 80.2286, 4212.0996], // behind bricks in exposed waterfall in hallway
       "etype": "skill",
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 4236.91,  62.33,  4217.89 , 10],
+      "bsphere": [  4250.9179, 80.2286, 4212.0996, 10],
       "lump": {
         "name":"templea-skill-01"//,
         // "pickup-amount": ["float", 2.0] // abah hint
@@ -69,11 +69,11 @@
       }
     },
     {
-      "trans": [  4222.5356, 66.9110, 4281.4160], // up near ceiling above torch before circle room
+      "trans": [  4222.5356, 67.8810, 4281.4160], // up near ceiling above torch before circle room
       "etype": "skill",
       "game_task": 0, 
       "quat" : [0.5102,       0.0024,       0.8599,       0.0041], // upside down
-      "bsphere": [  4222.5356, 66.9110, 4281.4160, 10],
+      "bsphere": [  4222.5356, 67.8810, 4281.4160, 10],
       "lump": {
         "name":"templea-skill-03"
       }
