@@ -56,27 +56,28 @@
         "name": "templed-warp-gate-1"
       }
     },
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // 
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
-    //   "lump": {
-    //     "name":"templed-skill-01",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // 
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"templed-skill-02"
-    //   }
-    // },
+
+    {
+      "trans": [   4325.8974, 80.9460, 4637.8417], // between bricks on rubble, SE corner of room
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   4325.8974, 80.9460, 4637.8417, 10],
+      "lump": {
+        "name":"templed-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   4331.9580, 108.0924, 4646.8994], // up on column in SE corner of room, abah from ^ to concussor slide to standpoint near urn, then up more
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   4331.9580, 108.0924, 4646.8994, 10],
+      "lump": {
+        "name":"templed-skill-02"
+      }
+    },
     {
       "trans": [ 4249.8808, 78.4104, 4625.4687], // upper level, first half moon ledge in SW
       "etype": "skill",
@@ -198,6 +199,97 @@
         "name":"templed-skill-14"
       }
     },
+    {
+      "trans": [  4315.1606, 118.9182, 4653.2060], // up on taller pillar from templed-skill-02, SE corner
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  4315.1606, 118.9182, 4653.2060, 10],
+      "lump": {
+        "name":"templed-skill-15"
+      }
+    },
+    {
+      "trans": [  4330.4057, 105.1479, 4596.0595], // on top of arch on wall in E/SE corner of room, follow urns from ^/skill-02
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  4330.4057, 105.1479, 4596.0595, 10],
+      "lump": {
+        "name":"templed-skill-16"
+      }
+    },
+    {
+      "trans": [  4327.3588, 108.0882, 4572.1069], // follow from ^ along east wall, tall pillar
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  4327.3588, 108.0882, 4572.1069, 10],
+      "lump": {
+        "name":"templed-skill-17"
+      }
+    },
+    {
+      "trans": [  4303.1552, 105.1072, 4572.3671], // follow from ^, on edge of middle pillar (block is actually missing collision)
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  4303.1552, 105.1072, 4572.3671, 10],
+      "lump": {
+        "name":"templed-skill-18"
+      }
+    },
+    {
+      "trans": [  4330.3999, 118.7037, 4563.5620], // follow from ^^, in slippery crevice on east wall
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  4330.3999, 118.7037, 4563.5620, 10],
+      "lump": {
+        "name":"templed-skill-19"
+      }
+    },
+    {
+      "trans": [  4309.0556, 119.3281, 4564.0180], // follow from ^, on slippery broken part of pillar in middle
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  4309.0556, 119.3281, 4564.0180, 10],
+      "lump": {
+        "name":"templed-skill-20"
+      }
+    },
+    {
+      "trans": [  4302.5019, 130.8167, 4566.9204], // follow from ^, IJ up and around to top layer, pillar in middle
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  4302.5019, 130.8167, 4566.9204, 10],
+      "lump": {
+        "name":"templed-skill-21"
+      }
+    },
+    {
+      "trans": [  4326.41,  140.01,  4551.99 ], // follow from ^, all the way up. east wall
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4326.41,  140.01,  4551.99 , 10],
+      "lump": {
+        "name":"templed-skill-22"
+      }
+    },
+    {
+      "trans": [  4252.6762, 136.8621, 4452.8466], // cross very top section to NW corner, on some bricks
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  4252.6762, 136.8621, 4452.8466, 10],
+      "lump": {
+        "name":"templed-skill-23"
+      }
+    },
+
 
     {
       "trans": [ 4293.60986328125, 95.28469848632813, 4445.169921875 ], // seem at end of templed

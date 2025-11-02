@@ -67,7 +67,18 @@
         "name":"halfpipe-warp-gate-01",
         "distance": ["meters", 10.0]
       }
+    },    
+    {
+      "trans": [  124.01, -34.0, -50.04 ], // on middle platforms, lined up with YO
+      "etype": "launcher",
+      "game_task": 0, 
+      "quat" : [0, 0.6314, 0, 0.7754],
+      "bsphere": [ 124.01, -34.0, -50.04 , 10],
+      "lump": {
+        "name":"halfpipe-launcher-01"
+      }
     }//,
+
     // {
     //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
     //   "etype": "skill",

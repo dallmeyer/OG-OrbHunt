@@ -14459,7 +14459,11 @@
                      )
                    )
                  :callback-list '((36 . desert-deactivate) (35 . desert-activate) (12 . *hfrag-texture-anim-array*))
-                 :borrow #f
+                 :borrow (new 'static 'level-borrow-info
+                  :alias #f
+                  :borrow-size (new 'static 'array uint16 5 #xaf #x0 #x0 #x0 #x0)
+                  :borrow-info (new 'static 'array object 5 '(orbs-desert display) #f #f #f #f)
+                  )
                  :bottom-height (meters -100)
                  :fog-height (meters 80)
                  :fog-mult 10.0

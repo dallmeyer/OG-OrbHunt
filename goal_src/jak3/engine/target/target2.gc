@@ -1692,8 +1692,9 @@
       (suspend)
       (ja :num! (seek! (ja-aframe 15.0 0) 3.0))
       )
-    (if arg1
-        (send-event *camera* 'change-state arg1 (seconds 0.6))
+    (when arg1
+        (set-setting-by-param *setting-control* 'mode-name 'cam-launcher-longfall 0 0)
+        ;; (send-event *camera* 'change-mode arg1 (seconds 0.6))
         )
     (if (nonzero? arg3)
         (process-spawn-function

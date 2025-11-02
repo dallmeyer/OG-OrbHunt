@@ -2448,7 +2448,7 @@
   "Is drawable arg0 visible? Note that this will return #f if the visibility data is not loaded."
   ;; hack to force visibility of stuff moved (rather than update visibility data)
   (case (-> (the entity-actor actor) etype symbol)
-    (('skill 'crate 'skill-crate 'skill-ghost 'fuel-cell
+    (('skill 'crate 'skill-crate 'skill-ghost 'fuel-cell 'launcher
       'market-crate 'wascity-market-crate 'wascity-market-sack-a 'market-sack-a 'market-basket-a
       'wascity-market-basket-a 'wascity-market-sack-b 'market-sack-b 'market-basket-b 'wascity-market-basket-b
       'urn-a 'urn-b 'urn-c 

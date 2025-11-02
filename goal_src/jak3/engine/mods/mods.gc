@@ -1046,6 +1046,56 @@
     (('wstd-training-dummy-978) (set-vector-meters! (-> arg0 extra trans) 2334.68  41.05  -519.24 ) ;; on side steps u only see if u suck
       (quaternion-set! (-> arg0 quat) 0.0000      -0.7041       0.0000      -0.7100))
 
+    ;; HALFPIPE
+    
+    (('crate-4) (set-vector! (-> arg0 extra trans)  204226.5625  -14090.2402  -186818.5625  1.0) ;; halfpipe right
+      (set-vector! (-> arg0 quat)  -0.4723  0.5263  -0.4731  -0.5254))
+    (('crate-5) (set-vector! (-> arg0 extra trans)  204226.5625  -14090.2402  -148134.1181  1.0) ;; halfpipe right
+      (set-vector! (-> arg0 quat)  -0.4723  0.5263  -0.4731  -0.5254))
+    ;; 204226.5625  -14090.2402  -109449.6736
+    (('crate-6) (set-vector! (-> arg0 extra trans)  204226.5625  -14090.2402  -70765.22917  1.0) ;; halfpipe right
+      (set-vector! (-> arg0 quat)  -0.4723  0.5263  -0.4731  -0.5254))
+    (('crate-7) (set-vector! (-> arg0 extra trans)  204226.5625  -14090.2402  -32080.78472  1.0) ;; halfpipe right
+      (set-vector! (-> arg0 quat)  -0.4723  0.5263  -0.4731  -0.5254))
+    (('crate-8) (set-vector! (-> arg0 extra trans)  204226.5625  -14090.2402   6603.659722  1.0) ;; halfpipe right
+      (set-vector! (-> arg0 quat)  -0.4723  0.5263  -0.4731  -0.5254))
+    (('crate-9) (set-vector! (-> arg0 extra trans)  204226.5625  -14090.2402  45288.10417  1.0) ;; halfpipe right
+      (set-vector! (-> arg0 quat)  -0.4723  0.5263  -0.4731  -0.5254))
+    (('crate-10) (set-vector! (-> arg0 extra trans)  204226.5625  -14090.2402  83972.54861  1.0) ;; halfpipe right
+      (set-vector! (-> arg0 quat)  -0.4723  0.5263  -0.4731  -0.5254))
+    (('crate-11) (set-vector! (-> arg0 extra trans)  204226.5625  -14090.2402  122656.9931  1.0) ;; halfpipe right
+      (set-vector! (-> arg0 quat)  -0.4723  0.5263  -0.4731  -0.5254))
+    (('crate-12) (set-vector! (-> arg0 extra trans)  204226.5625  -14090.2402  161341.4375  1.0) ;; halfpipe right
+      (set-vector! (-> arg0 quat)  -0.4723  0.5263  -0.4731  -0.5254))
+    
+    (('crate-13) (set-vector! (-> arg0 extra trans)   -204226.5625  -14090.2402  -186818.5625 1.0) ;; halfpipe left
+      (set-vector! (-> arg0 quat)  0.4723  0.5263  -0.4731  0.5254))
+    (('crate-14) (set-vector! (-> arg0 extra trans)  -204226.5625  -14090.2402  -148134.1181 1.0) ;; halfpipe left
+      (set-vector! (-> arg0 quat)  0.4723  0.5263  -0.4731  0.5254))
+    (('crate-15) (set-vector! (-> arg0 extra trans)  -204226.5625  -14090.2402  -109449.6736 1.0) ;; halfpipe left
+      (set-vector! (-> arg0 quat)  0.4723  0.5263  -0.4731  0.5254))
+    (('crate-18) (set-vector! (-> arg0 extra trans)  -204226.5625  -14090.2402  -70765.22917 1.0) ;; halfpipe left
+      (set-vector! (-> arg0 quat)  0.4723  0.5263  -0.4731  0.5254))
+    (('crate-16) (set-vector! (-> arg0 extra trans)  -204226.5625  -14090.2402  -32080.78472 1.0) ;; halfpipe left
+      (set-vector! (-> arg0 quat)  0.4723  0.5263  -0.4731  0.5254))
+    (('crate-17) (set-vector! (-> arg0 extra trans)  -204226.5625  -14090.2402   6603.659722 1.0) ;; halfpipe left
+      (set-vector! (-> arg0 quat)  0.4723  0.5263  -0.4731  0.5254))
+    ;; -204226.5625  -14090.2402   45288.10417
+    (('crate-19) (set-vector! (-> arg0 extra trans)  -204226.5625  -14090.2402   83972.54861 1.0) ;; halfpipe left
+      (set-vector! (-> arg0 quat)  0.4723  0.5263  -0.4731  0.5254))
+    (('crate-20) (set-vector! (-> arg0 extra trans)  -204226.5625  -14090.2402   122656.9931 1.0) ;; halfpipe left
+      (set-vector! (-> arg0 quat)  0.4723  0.5263  -0.4731  0.5254))
+    (('crate-21) (set-vector! (-> arg0 extra trans)  -204226.5625  -14090.2402   161341.4375 1.0) ;; halfpipe left
+      (set-vector! (-> arg0 quat)  0.4723  0.5263  -0.4731  0.5254))
+    (('eco-1) ;; green eco, up on last chain of platforms
+      (set-vector-meters! (-> arg0 extra trans)   148.08 -29.40 -42.08  )) 
+    (('eco-2) ;; blue eco, early platform, closer to launcher
+      (set-vector-meters! (-> arg0 extra trans)   88.21  -33.4  -62.0)) 
+    (('eco-3) ;; red eco, early platform
+      (set-vector-meters! (-> arg0 extra trans)   71.82  -33.4  -62.0)) 
+    (('eco-4) ;; yellow eco, early platform
+      (set-vector-meters! (-> arg0 extra trans)   56.00  -33.4  -62.0))    
+
     )
   (none))
 
