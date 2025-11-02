@@ -6889,7 +6889,7 @@
                 :packages '("elecgate")
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
-                :music-bank #f
+                :music-bank 'minexplr
                 :sound-reverb 0.08
                 :extra-sound-bank #f
                 :mood-func 'update-mood-minea
@@ -6997,7 +6997,7 @@
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode large)
-                :music-bank #f
+                :music-bank 'minexplr
                 :sound-reverb 0.08
                 :extra-sound-bank #f
                 :mood-func 'update-mood-mineb
@@ -7125,7 +7125,7 @@
                 :packages '("gruntp")
                 :run-packages '("common")
                 :memory-mode (level-memory-mode large)
-                :music-bank #f
+                :music-bank 'minexplr
                 :sound-reverb 0.08
                 :extra-sound-bank #f
                 :mood-func 'update-mood-minec
@@ -7254,7 +7254,7 @@
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode large)
-                :music-bank #f
+                :music-bank 'minexplr
                 :sound-reverb 0.08
                 :extra-sound-bank #f
                 :mood-func 'update-mood-mined
@@ -7346,7 +7346,7 @@
                 :packages '()
                 :run-packages '("common")
                 :memory-mode (level-memory-mode small-edge)
-                :music-bank #f
+                :music-bank 'minexplr
                 :sound-reverb 0.08
                 :extra-sound-bank #f
                 :mood-func 'update-mood-default-interior
@@ -7365,6 +7365,24 @@
                     :camera-trans (new 'static 'vector :x 1290528.8 :y 274293.97 :z -1215116.1 :w 1.0)
                     :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x7e82 0 -4970))
                     :camera-rot (new 'static 'array int16 9 -32668 0 #x9c0 -301 #x7f0c -3964 -2480 -3977 -32429)
+                    :on-goto #f
+                    :vis-nick 'mined
+                    :vehicle-type #x1b
+                    :want-count 2
+                    :want (new 'static 'inline-array level-buffer-state-small 2
+                      (new 'static 'level-buffer-state-small :name 'minee :display? 'display)
+                      (new 'static 'level-buffer-state-small :name 'mined :display? 'display)
+                      )
+                    :want-sound (new 'static 'array symbol 3 'mine7 'mine8 'mine9)
+                    )
+                  (new 'static 'continue-point
+                    :name "minee-return"
+                    :level 'minee
+                    :flags (continue-flags no-auto)
+                    :trans (new 'static 'vector :x (meters 313.7073) :y (meters 61.8139) :z (meters -310.3993) :w 1.0)
+                    :camera-trans (new 'static 'vector :x (meters 316.3450) :y (meters 66.3203) :z (meters -320.1348) :w 1.0)
+                    :quat (new 'static 'vector4h :data (new 'static 'array int16 4  0 -424 0 32764))
+                    :camera-rot (new 'static 'array int16 9 31635 0 8538 -1217 32432 4510 -8450 -4672 31311)
                     :on-goto #f
                     :vis-nick 'mined
                     :vehicle-type #x1b

@@ -1980,10 +1980,10 @@
 
 ;; WARN: Return type mismatch int vs object.
 (defmethod go-initial-state ((this min-elec-gate))
-  (if (task-node-closed? (game-task-node mine-blow-elevator))
-      ((method-of-type elec-gate go-initial-state) this)
+  ;; (if (task-node-closed? (game-task-node mine-blow-elevator))
+      ;; ((method-of-type elec-gate go-initial-state) this)
       (go (method-of-object this idle))
-      )
+      ;; )
   0
   )
 

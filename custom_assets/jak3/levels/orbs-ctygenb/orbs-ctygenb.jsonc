@@ -37,7 +37,8 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["warp-gate-ag"],
+
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -46,6 +47,17 @@
    "textures": [],
 
   "actors" : [
+    {
+      "trans": [230.13,  14.22,  -173.26 ], // warp to minee
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [ 0.0000, 0.7065, 0.0000, 0.7077],
+      "bsphere": [230.13,  14.22,  -173.26 , 10],
+      "lump": {
+        "name":"ctygenb-warp-gate-1"
+      }
+    },
+    
     {
       "trans": [  336.8598, 12.8299, -13.8663], // corner near ctygenc
       "etype": "skill",

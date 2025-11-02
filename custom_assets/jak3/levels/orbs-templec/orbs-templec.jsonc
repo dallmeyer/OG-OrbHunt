@@ -56,17 +56,28 @@
         "name":"templec-skill-01"//,
         // "pickup-amount": ["float", 2.0] // abah hint
       }
+    },
+      {
+      "trans": [  3903.1574, 76.7650, 4396.7333], // on upper edge near starting side of tidepod room
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  3903.1574, 76.7650, 4396.7333, 10],
+      "lump": {
+        "name":"templec-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  3903.1879, 98.5888, 4396.8911], // abah from ^, up in arch on starting side of tidepod room
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  3903.1879, 98.5888, 4396.8911, 10],
+      "lump": {
+        "name":"templec-skill-03"
+      }
     }//,
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
     
     
 

@@ -712,6 +712,11 @@
     (('urn-c-6) (set-vector-meters! (-> arg0 extra trans) 4167.0932 121.2980 4080.2719)) ;; in courtyard, in "window" next to precur mosquito head
     (('urn-c-14) (set-vector-meters! (-> arg0 extra trans) 4141.5795 226.2335 4101.3945 )) ;; in courtyard, halfway up wall on small ledge
 
+    ;; TEMPLEA
+    (('urn-a-2) (set-vector-meters! (-> arg0 extra trans) 4251.8857 74.0457 4219.2153)) ;; behind/in exposed waterfall
+    (('urn-c-2) (set-vector-meters! (-> arg0 extra trans) 4224.1181 119.1814 4070.2402)) ;; just inside temple
+    (('urn-b-2) (set-vector-meters! (-> arg0 extra trans) 4255.8398 125.7970 4099.2070)) ;; on top of torch near entrance
+
     ;; ====== TEMPLED (monk temple light jak flight) ======
     (('urn-a-15) (set-vector-meters! (-> arg0 extra trans) 4248.67  118.32  4648.52 )) ;; top of pillar climb in SW corner (follow orb trail, templeb-skill-13 ish)
 
@@ -1528,7 +1533,9 @@
     )
   ;; keep minea (c->d, into boss) elevator active; work in reverse
   (let ((elev (entity-by-name "min-boss-elev-1"))
-        (elev-proc (the elevator (process-by-ename "min-boss-elev-1"))))
+        (elev-proc (the elevator (process-by-ename "min-boss-elev-1")))
+        (door (entity-by-name "cav-airlock-door-1"))
+        (bridge (entity-by-name "cav-break-bridge-1")))
     (when elev 
       (set! (cdr (res-lump-struct elev 'on-deactivate pair)) '((want-continue "minea-boss") (want-sound 'mine7 'mine8 'mine9)))
       (set! (cdr (res-lump-struct elev 'on-notice pair)) '((send-event self 'query 'bottom?) #f))
@@ -1536,15 +1543,21 @@
     (when elev-proc 
       (set! (-> elev-proc on-activate) '(when (send-event self 'player-ridden?) (cond ((send-event self 'query 'going-up?) (want-load 'minea 'minec #f) (want-display 'minec 'display)) ((send-event self 'query 'going-down?) (want-load 'minea 'mined #f)))))
       )
+    (when door
+      (set! (car (res-lump-struct door 'on-notice pair)) 'begin)
+      (set! (cdr (res-lump-struct door 'on-notice pair)) '((when (send-event self 'front) (want-load 'minea 'mined) (want-display 'minea 'display)) '(minea)))
+      )
+    (when bridge  
+      (set! (-> bridge extra perm task) (game-task none)))
     )
   ;; let you return from ctygenb -> mined JK decided not to
-  ;; (let ((door (entity-by-name "com-airlock-outer-15")))
-  ;;   (when door 
-  ;;     (set! (cdr (res-lump-struct door 'on-deactivate pair)) '((want-display 'minee #f) (when (and (send-event self 'front) (level-status? 'minee)) (want-sound 'genbtsk1))))
-  ;;     (set! (car (res-lump-struct door 'on-notice pair)) 'begin)
-  ;;     (set! (cdr (res-lump-struct door 'on-notice pair)) '((want-load 'ctygenb 'minee) '(minee)))
-  ;;     )
-  ;;   )
+  (let ((door (entity-by-name "com-airlock-outer-15")))
+    (when door 
+      (set! (cdr (res-lump-struct door 'on-deactivate pair)) '((want-display 'minee #f) (when (and (send-event self 'front) (level-status? 'minee)) (want-sound 'genbtsk1))))
+      (set! (car (res-lump-struct door 'on-notice pair)) 'begin)
+      (set! (cdr (res-lump-struct door 'on-notice pair)) '((want-load 'ctywide-ff 'ctygenb 'minee) '(minee)))
+      )
+    )
 
   ;; allow lfacrm1 door to open (ctyslumc->ffacrm1, shuttle behind freehq)
   (let ((door (entity-by-name "cty-door-3"))

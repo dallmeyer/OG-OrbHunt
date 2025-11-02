@@ -1237,6 +1237,7 @@
 (defstate rise (cav-exit-door)
   :virtual #t
   :enter (behavior ()
+    ;; (script-eval '(want-load minee mined minea))
     (set-time! (-> self state-time))
     (sound-play "mb-door-open")
     )
