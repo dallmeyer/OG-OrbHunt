@@ -1087,6 +1087,7 @@
       (set-vector! (-> arg0 quat)  0.4723  0.5263  -0.4731  0.5254))
     (('crate-21) (set-vector! (-> arg0 extra trans)  -204226.5625  -14090.2402   161341.4375 1.0) ;; halfpipe left
       (set-vector! (-> arg0 quat)  0.4723  0.5263  -0.4731  0.5254))
+
     (('eco-1) ;; green eco, up on last chain of platforms
       (set-vector-meters! (-> arg0 extra trans)   148.08 -29.40 -42.08  )) 
     (('eco-2) ;; blue eco, early platform, closer to launcher
@@ -1094,7 +1095,35 @@
     (('eco-3) ;; red eco, early platform
       (set-vector-meters! (-> arg0 extra trans)   71.82  -33.4  -62.0)) 
     (('eco-4) ;; yellow eco, early platform
-      (set-vector-meters! (-> arg0 extra trans)   56.00  -33.4  -62.0))    
+      (set-vector-meters! (-> arg0 extra trans)   56.00  -33.4  -62.0))
+
+    (('dark-eco-vent-1)
+      (set-vector-meters! (-> arg0 extra trans) 73.9986 -37.8954 -49.9974))
+    (('light-eco-vent-4)
+      (set-vector-meters! (-> arg0 extra trans) 80.0035 -37.9054 -49.9976))
+    (('ecovent-2) ;; red vent
+      (set-vector-meters! (-> arg0 extra trans) 74.3520 -38.2316 -44.1268))
+    (('ecovent-1) ;; yellow vent
+      (set-vector-meters! (-> arg0 extra trans) 80.0035 -38.2316 -44.1268))
+    (('ecovent-3) ;; blue vent
+      (set-vector-meters! (-> arg0 extra trans) 163.6688 23.9911 -49.6220))
+    (('ladder-1) ;; 
+      (set-vector-meters! (-> arg0 extra trans) 163.6597 11.2745 -49.6324))
+    (('ladder-3) ;; 
+      (set-vector-meters! (-> arg0 extra trans) 163.7432 -15.9883 -42.0092))
+    (('precur-warp-effect-1)
+      (set-vector-meters! (-> arg0 extra trans) 172.2319 -10.3819 39.2106)
+      (quaternion-set! (-> arg0 quat) 0.0000       0.7065       0.0000       0.7077))
+    (('urn-a-1)
+      (set-vector-meters! (-> arg0 extra trans) 115.9935 -34.9973 -49.9939))
+    (('urn-b-1)
+      (set-vector-meters! (-> arg0 extra trans) 131.9950 -33.0070 -50.0013))
+    (('urn-c-1)
+      (set-vector-meters! (-> arg0 extra trans) 99.9998 -37.0175 -49.9980))
+    (('dark-maker-idol-1017)
+      (set-vector-meters! (-> arg0 extra trans) -18.2987 -53.2578 67.4365))
+    (('crate-976)
+      (set-vector-meters! (-> arg0 extra trans) 139.4401 -30.6148 49.7607 ))
 
     )
   (none))

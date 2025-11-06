@@ -2158,8 +2158,8 @@
       (let ((alt-actor (entity-actor-lookup (-> self entity) 'alt-actor 0))
             (run? #t))
         ;; check if alt-actor is visible to decide if we should be visible/responsive
-        (when (and alt-actor (-> alt-actor extra process)
-                   (logtest? (-> (the process-drawable (-> alt-actor extra process)) draw status) (draw-control-status no-draw-bounds no-draw-bounds2)))
+        (when (or (not alt-actor) (not (-> alt-actor extra process))
+                  (logtest? (-> (the process-drawable (-> alt-actor extra process)) draw status) (draw-control-status no-draw-bounds no-draw-bounds2)))
           (false! run?))
         ;; maybe show prompt / give cell
         (when (and run?
