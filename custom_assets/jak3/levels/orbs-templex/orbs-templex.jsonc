@@ -240,6 +240,154 @@
       "lump": {
         "name":"templex-skill-18"
       }
+    },
+    {
+      "trans": [  4052.7001, 205.6919, 4341.4072], // before courtyard, jetboard extended ff from highest pillar to concussor spam on rock wall
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   4052.7001, 205.6919, 4341.4072, 10],
+      "lump": {
+        "name":"templex-skill-19",
+        "pickup-amount":["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [   4019.1250, 208.8977, 4325.5458], // abah from ^ around back of tall rock pillar to crevice
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  4019.1250, 208.8977, 4325.5458, 10],
+      "lump": {
+        "name":"templex-skill-20"
+      }
+    },
+    {
+      "trans": [  4017.0720, 201.2888, 4296.1933], // abah or concussor jump from ^ up and over, behind trees way up on rock wall, outside courtyard
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   4017.0720, 201.2888, 4296.1933, 10],
+      "lump": {
+        "name":"templex-skill-21"
+      }
+    },
+    {
+      "trans": [ 4165.1811, 159.4635, 4250.7685], // on rock ledge near fence outside courtyard
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4165.1811, 159.4635, 4250.7685, 10],
+      "lump": {
+        "name":"templex-skill-22",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 4163.1645, 173.9732, 4241.0859], // abah from ^, behind trio of trees on rock wall outside courtyard
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4163.1645, 173.9732, 4241.0859, 10],
+      "lump": {
+        "name":"templex-skill-23"
+      }
+    },
+    {
+      "trans": [ 4135.2939, 149.9937, 4218.4555], // in crevice on rock wall just inside fence outside courtyard
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4135.2939, 149.9937, 4218.4555, 10],
+      "lump": {
+        "name":"templex-skill-24",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 4134.9316, 170.1201, 4214.1333], // crevice on rock wall further up, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4134.9316, 170.1201, 4214.1333, 10],
+      "lump": {
+        "name":"templex-skill-25",
+        "pickup-amount": ["float", 2.0] // abah hint   
+      }
+    },
+    {
+      "trans": [ 4122.9526, 184.6333, 4199.3554], // crevice on rock wall further up, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4122.9526, 184.6333, 4199.3554, 10],
+      "lump": {
+        "name":"templex-skill-26",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 4116.7885, 169.6511, 4194.0703], // top of arch leading into courtyard, jump down from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4116.7885, 169.6511, 4194.0703, 10],
+      "lump": {
+        "name":"templex-skill-27"
+      }
+    },
+    {
+      "trans": [ 4102.9628, 160.5372, 4181.4335], // left side of arch leading into courtyard, follow from ^ or come up from left side rocks
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4102.9628, 160.5372, 4181.4335, 10],
+      "lump": {
+        "name":"templex-skill-28"
+      }
+    },
+    {
+      "trans": [ 4113.5190, 194.2172, 4196.9218], // top of flat rock way up above arch, abah from ^^^ skill-26
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4113.5190, 194.2172, 4196.9218, 10],
+      "lump": {
+        "name":"templex-skill-29",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 4115.8583, 204.8261, 4189.0322], // behind rock up wall, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4115.8583, 204.8261, 4189.0322, 10],
+      "lump": {
+        "name":"templex-skill-30",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 4098.3740, 195.4692, 4172.8178], // over and around on rock wall, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4098.3740, 195.4692, 4172.8178, 10],
+      "lump": {
+        "name":"templex-skill-31",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 4065.4519, 198.3880, 4159.1538], // across rock wall, behind tree, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4065.4519, 198.3880, 4159.1538, 10],
+      "lump": {
+        "name":"templex-skill-32"
+      }
     }//,
     
     

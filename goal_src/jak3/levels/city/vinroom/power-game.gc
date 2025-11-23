@@ -2024,6 +2024,17 @@
                )
              )
             )
+          ;; og:preserve-this clear dpad inputs to give better control over moving across 1 lane vs 2 lanes
+          (#when PC_PORT
+            (logclear!
+              (-> *cpad-list* cpads 0 button0-abs 0)
+              (pad-buttons up right down left)
+              )
+            (logclear!
+              (-> *cpad-list* cpads 0 button0-rel 0)
+              (pad-buttons up right down left)
+              )
+            )
           )
         )
       (let ((s5-4 (power-game-method-33 gp-0 (+ 0.5 (-> self local x)) (+ 0.5 (-> self local z)) -1)))

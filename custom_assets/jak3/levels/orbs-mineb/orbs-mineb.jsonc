@@ -157,7 +157,50 @@
       "lump": {
         "name":"mineb-skill-11"
       }
-    }//,
+    },
+    {
+      "trans": [  -89.0364, 0.2209, 36.9531], // behind first hamster wheel, jetboard from backside
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -89.0364, 0.2209, 36.9531, 10],
+      "lump": {
+        "name":"mineb-skill-12"
+      }
+    },
+    {
+      "trans": [  -77.4047, 23.1909, 38.7830], // up a few blocks from ^
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -77.4047, 23.1909, 38.7830, 10],
+      "lump": {
+        "name":"mineb-skill-13",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  -79.5148, 44.2871, 37.2296], // way up near ceiling, abah from ^ to next ledge, standpoint, then concussor jump or double abah
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [   -79.5148, 44.2871, 37.2296, 10],
+      "lump": {
+        "name":"mineb-skill-14",
+        "bob-scale": ["float", 0.25]
+      }
+    },
+    {
+      "trans": [ -66.3981, 33.8996, 98.8735], // up on pipe, between 2nd and 3rd hamster wheels. L2 extended ff, pretty tight. can probably abah up here too 
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -66.3981, 33.8996, 98.8735, 10],
+      "lump": {
+        "name":"mineb-skill-15"
+      }
+    }
+    //,
     
     
 

@@ -2156,6 +2156,7 @@
   :code (behavior ()
     (until #f
       (let ((alt-actor (entity-actor-lookup (-> self entity) 'alt-actor 0))
+            (vag (res-lump-struct (-> self entity) 'vag string))
             (run? #t))
         ;; check if alt-actor is visible to decide if we should be visible/responsive
         (when (or (not alt-actor) (not (-> alt-actor extra process))
@@ -2164,7 +2165,7 @@
         ;; maybe show prompt / give cell
         (when (and run?
                   *target* 
-                  (not (focus-test? *target* pilot mech))
+                  (not (focus-test? *target* pilot mech board))
                   (< (vector-vector-distance (-> self root trans) (-> *target* control trans)) (-> self prompt-distance))
                   )
           (let ((s5-2 (new 'stack 'font-context *font-default-matrix* 32 280 0.0 (font-color default) (font-flags shadow kerning))))
@@ -2197,15 +2198,27 @@
                 ;; check for triangle press and make sure we grab target successfully
                 (when (cpad-pressed? 0 triangle)
                   ;; end any special modes so we can do powercell anim
+                  (send-event *target* 'end-mode 'pilot)
                   (send-event *target* 'end-mode 'board)
                   (send-event *target* 'end-mode 'gun)
                   (send-event *target* 'end-mode 'darkjak)
                   (send-event *target* 'end-mode 'lightjak)
                   (when (process-grab? *target* 'fuel-cell)
+                    (when vag
+                      ;; play vag sound, if any
+                      (let* ((v-id (add-process *gui-control* self (gui-channel alert) (gui-action play) (-> *vag-list* (get-vag-index-from-name vag)) -10.0 0))
+                             (status (gui-status active)))
+                        (suspend-for (seconds 1))
+                        (while (or (= status (gui-status ready)) (= status (gui-status active)))
+                          (suspend)
+                          (set! status (get-status *gui-control* v-id))
+                          )
+                        )
+                      )
                     ;; reveal fuel-cell, allow for collision, and wait for suck
                     (logclear! (-> self draw status) (draw-control-status no-draw-bounds))
                     (restore-collide-with-as (-> self root))
-                    (play-sound-file "tpl_proto_win.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 100.0)))
+                    (play-sound-file "tpl_proto_win.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 50.0)))
                     (go-virtual wait)
                     )
                   )
@@ -2248,7 +2261,7 @@
   )
 
 (defmethod initialize-allocations ((this fuel-cell))
-  (stack-size-set! (-> this main-thread) 512)
+  (stack-size-set! (-> this main-thread) 1024)
   (let ((s5-0 (new 'process 'collide-shape-moving this (collide-list-enum hit-by-player))))
     (set! (-> s5-0 dynam) (copy *standard-dynamics* 'process))
     (set! (-> s5-0 reaction) cshape-reaction-default)

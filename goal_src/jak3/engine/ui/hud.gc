@@ -781,6 +781,10 @@
         (set! v1-0 (or s5-0 v1-0))
         (when v1-0
           (dotimes (s4-0 8)
+            (when (= (-> this type symbol) 'hud-health)
+              ;; skip any tallying for health
+              (set! (-> this values s4-0 current) (-> this values s4-0 target))
+              )
             (cond
               ((and (or (and (logtest? (-> this values s4-0 flags) 1) (< (-> this values s4-0 current) (-> this values s4-0 target)))
                         (and (logtest? (-> this values s4-0 flags) 2) (< (-> this values s4-0 target) (-> this values s4-0 current)))

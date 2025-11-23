@@ -4094,7 +4094,7 @@
   )
 
 (defun menu-secrets-notify-powerup-collect ()
-  (when (>= (-> *game-info* skill-total) 600.0)
+  (when (>= (-> *game-info* skill-total) 6000.0) ;; TODO 600 green scarf adjust total
     (spawn-secret-notify-message 138)
     (return 0)
     )
