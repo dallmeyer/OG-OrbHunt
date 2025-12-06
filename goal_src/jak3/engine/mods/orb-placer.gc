@@ -345,6 +345,12 @@
           (vector-copy! (-> (the entity-actor (-> proc entity)) extra trans) proc-extra-vec)
           (vector-copy! (-> (the entity-actor (-> proc entity)) extra trans) (-> proc root trans)))
         (quaternion-copy! (-> (the entity-actor (-> proc entity)) quat) (-> proc root quat))
+
+        ;; w-parking-spot extra shit
+        (when (= (-> proc type symbol) 'w-parking-spot)
+          (vector-copy! (res-lump-struct (-> proc entity) 'spawn-trans vector) (-> (the entity-actor (-> proc entity)) extra trans))
+          (quaternion-copy! (res-lump-struct (-> proc entity) 'spawn-quat quaternion) (-> (the entity-actor (-> proc entity)) quat))
+          )
         
         (when (and moved? 
                   (or (not *last-deactivate-time*)

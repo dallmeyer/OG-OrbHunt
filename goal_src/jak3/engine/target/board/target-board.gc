@@ -50,11 +50,11 @@
              (set-time! (-> self board on-flat-time))
              )
          (cond
-           ((and (logtest? (game-secrets board-faster) (-> self game secrets))
+           ((and (logtest? (game-secrets board-fast) (-> self game secrets))
                  (-> self current-level)
-                 (logtest? (level-flags desert turbo-board) (-> self current-level info level-flags))
+                 (logtest? (level-flags turbo-board) (-> self current-level info level-flags))
                  )
-            ;; check this before board-max-speed to dodge cap
+            ;; check this before board-max-speed to dodge cap, subrails only
             (set! (-> arg0 transv-max)
                   (* 2.5 (-> arg0 transv-max))
                   )
@@ -193,10 +193,11 @@
       (case arg3
         ((1)
          (cond
-          ((and (logtest? (game-secrets board-faster) (-> self game secrets))
+          ((and (logtest? (game-secrets board-fast) (-> self game secrets))
                       (-> self current-level)
-                      (logtest? (level-flags desert turbo-board) (-> self current-level info level-flags))
+                      (logtest? (level-flags turbo-board) (-> self current-level info level-flags))
                       )
+            ;; subrails even faster
             (set! (-> arg0 transv-max)
                   (* 2.5 (-> arg0 transv-max))
                   )

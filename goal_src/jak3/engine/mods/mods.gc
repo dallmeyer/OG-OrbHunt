@@ -695,6 +695,12 @@
     (('skill-232) (set-vector-meters! (-> arg0 extra trans)  1658.8945  -116.9093  994.7319)) ;; first room, under entrance ramp near funny oob
     (('skill-228) (set-vector-meters! (-> arg0 extra trans) 1602.0628 -115.3197 866.8390)) ;; in crevice / almost black hole between wall and ramp
 
+    ;; ====== DESERTG (ruins) ======
+    (('des-cactus-obstacle-77) (set-vector-meters! (-> arg0 extra trans) 2965.6030 43.3592 2921.0488) ;; mid rooftop, abah from skill-02
+      (quaternion-set! (-> arg0 quat) 0.1011  -0.6155  -0.0315  0.7809))
+    (('des-cactus-obstacle-80) (set-vector-meters! (-> arg0 extra trans) 2939.7453 59.8781 2913.6057 ) ;; higher level roof, abah from ^
+      (quaternion-set! (-> arg0 quat) 0.0000  0.5428  0.0000  0.8398))
+
     ;; ====== TEMPLEX (monk temple exterior) ======
     (('skill-212) (set-vector-meters! (-> arg0 extra trans) 4363.12  72.31  4008.60 )) ;; up on left wall as you first approach temple from desert (need to go behind invis wall from far left/early on)
     (('skill-213) (set-vector-meters! (-> arg0 extra trans) 4375.0493 83.5116 4014.6745)) ;; in crevice up on left wall, follow from ^
@@ -711,6 +717,10 @@
       (quaternion-set! (-> arg0 quat) 0.1470      -0.9352      -0.2252      -0.2302))
     (('urn-c-6) (set-vector-meters! (-> arg0 extra trans) 4167.0932 121.2980 4080.2719)) ;; in courtyard, in "window" next to precur mosquito head
     (('urn-c-14) (set-vector-meters! (-> arg0 extra trans) 4141.5795 226.2335 4101.3945 )) ;; in courtyard, halfway up wall on small ledge
+    (('w-parking-spot-18) (set-vector-meters! (-> arg0 extra trans) 4192.2407 145.4383 4340.9873 ) ;; sugar free reference
+      (set-vector-meters! (res-lump-struct arg0 'spawn-trans vector) 4192.2407 145.4383 4340.9873 )
+      (quaternion-set! (res-lump-struct arg0 'spawn-quat quaternion) -0.0300  -0.4903  0.0000  0.8709)
+      (quaternion-set! (-> arg0 quat) -0.0300  -0.4903  0.0000  0.8709))
 
     ;; TEMPLEA
     (('urn-a-2) (set-vector-meters! (-> arg0 extra trans) 4251.8857 74.0457 4219.2153)) ;; behind/in exposed waterfall

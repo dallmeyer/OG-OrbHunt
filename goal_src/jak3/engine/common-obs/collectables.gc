@@ -2143,6 +2143,7 @@
     )
   )
 
+(define-extern get-vag-thing (function string string))
 (define-extern all-orbs-check? (function uint symbol))
 (define-extern need-orbs-string (function uint string))
 (defstate pending (fuel-cell)
@@ -2206,7 +2207,7 @@
                   (when (process-grab? *target* 'fuel-cell)
                     (when vag
                       ;; play vag sound, if any
-                      (let* ((v-id (add-process *gui-control* self (gui-channel alert) (gui-action play) (-> *vag-list* (get-vag-index-from-name vag)) -10.0 0))
+                      (let* ((v-id (add-process *gui-control* self (gui-channel alert) (gui-action play) (get-vag-thing vag) -10.0 0))
                              (status (gui-status active)))
                         (suspend-for (seconds 1))
                         (while (or (= status (gui-status ready)) (= status (gui-status active)))

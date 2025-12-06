@@ -57,19 +57,30 @@
         "bob-scale": ["float", 0.25]
       }
     },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [ 2961.6870, 22.4323, 2931.2519], // "patio" on deserth side
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2961.6870, 22.4323, 2931.2519, 10],
+      "lump": {
+        "name":"desertg-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 2919.4831, 36.5909, 2928.8276], // behind big invis wall on rooftop near deserth, follow ^ and cactus rooftops to get over
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2919.4831, 36.5909, 2928.8276, 10],
+      "lump": {
+        "name":"desertg-skill-02"
+      }
+    },
     
     {
-      "trans": [ 2296.5859, 17.8694, 2222.8425], // samos by white barrier
+      "trans": [ 2296.5859, 17.8694, 2222.8425], // sig by nest cave
       "etype": "sig-npc",
       "game_task": 0, 
       "quat" : [  0.0, 0.0, 0.0, -1.0],
