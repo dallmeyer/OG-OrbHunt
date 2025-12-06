@@ -1171,7 +1171,7 @@
   (when (or (not *last-no-hover-zone-time*)
             (g-time-elapsed? *last-no-hover-zone-time* (seconds 5)))
     ;; "no hover zone" dialogue if its been 5s since last one
-    (play-sound-file "nohoverzone.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 100.0)))
+    (play-sound-file "nohoverzone.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 200.0)))
     ;; remember last time we played this dialogue
     (set-g-time! *last-no-hover-zone-time*)
     )
@@ -2012,6 +2012,7 @@
         (task-close! "city-win-introduction")
         )
       (logior! (-> *game-info* secrets) (game-secrets endless-dark endless-light invulnerable endless-ammo board-fast vehicle-hit-points unlimited-turbos board-faster))
+      (logior! (-> *pc-settings* cheats) (pc-cheats city-peace desert-peace))
       )
     )
   
