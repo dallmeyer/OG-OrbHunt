@@ -7,3 +7,6 @@ Play via the [JakMods mod list](https://jakmods.dev)!
 
 ## [Orb Hunt II](README_JAK2.md)
 [<img src="https://raw.githubusercontent.com/dallmeyer/OG-OrbHunt/main/ModImage2.png" height="400">](README_JAK2.md)
+
+## Orb Hunt 3
+Coming... eventually

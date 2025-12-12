@@ -564,11 +564,11 @@
   (none))
 
 ;; prints the position (root trans) of a process-drawable
-(defmacro pd-pos-m (procname)
-  `(let* ((obj (the process-drawable (process-by-ename ,procname)))
-         (vec (-> obj root trans)))
-    (format 0 "~m ~m ~m~%" (-> vec x) (-> vec y) (-> vec z) 4096.0)
-    (none)))
+;; (defmacro pd-pos-m (procname)
+;;   `(let* ((obj (the process-drawable (process-by-ename ,procname)))
+;;          (vec (-> obj root trans)))
+;;     (format 0 "~m ~m ~m~%" (-> vec x) (-> vec y) (-> vec z) 4096.0)
+;;     (none)))
 
 (defun rand-vu-test ((seed float))
   (format 0 "(rand-vu-int-range 0 99)")
