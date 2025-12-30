@@ -564,39 +564,40 @@
           (t9-0)
           )
       )
-    (when (-> self first-notice?)
-      (let ((gp-0 (-> self entity extra perm)))
-        (logior! (-> gp-0 status) (entity-perm-status bit-5))
-        (cond
-          ((zero? (-> gp-0 user-object 0))
-           (if (res-lump-struct (-> self entity) 'camera-name structure)
-               (process-spawn
-                 external-camera-controller
-                 (-> self entity)
-                 750
-                 #f
-                 :name "external-camera-controller"
-                 :to *entity-pool*
-                 )
-               )
-           )
-          (else
-            (if (res-lump-struct (-> self entity) 'camera-name structure)
-                (process-spawn
-                  external-camera-controller
-                  (-> self entity)
-                  450
-                  #f
-                  :name "external-camera-controller"
-                  :to *entity-pool*
-                  )
-                )
-            (set! (-> self first-notice?) #f)
-            )
-          )
-        (set! (-> gp-0 user-object 0) (+ (the-as int (-> gp-0 user-object 0)) 1))
-        )
-      )
+    ;; orb hunt - disable camera / target-grab
+    ;; (when (-> self first-notice?)
+    ;;   (let ((gp-0 (-> self entity extra perm)))
+    ;;     (logior! (-> gp-0 status) (entity-perm-status bit-5))
+    ;;     (cond
+    ;;       ((zero? (-> gp-0 user-object 0))
+    ;;        (if (res-lump-struct (-> self entity) 'camera-name structure)
+    ;;            (process-spawn
+    ;;              external-camera-controller
+    ;;              (-> self entity)
+    ;;              750
+    ;;              #f
+    ;;              :name "external-camera-controller"
+    ;;              :to *entity-pool*
+    ;;              )
+    ;;            )
+    ;;        )
+    ;;       (else
+    ;;         (if (res-lump-struct (-> self entity) 'camera-name structure)
+    ;;             (process-spawn
+    ;;               external-camera-controller
+    ;;               (-> self entity)
+    ;;               450
+    ;;               #f
+    ;;               :name "external-camera-controller"
+    ;;               :to *entity-pool*
+    ;;               )
+    ;;             )
+    ;;         (set! (-> self first-notice?) #f)
+    ;;         )
+    ;;       )
+    ;;     (set! (-> gp-0 user-object 0) (+ (the-as int (-> gp-0 user-object 0)) 1))
+    ;;     )
+    ;;   )
     )
   :exit (behavior ()
     (let ((t9-0 (-> (method-of-type nav-enemy notice) exit)))

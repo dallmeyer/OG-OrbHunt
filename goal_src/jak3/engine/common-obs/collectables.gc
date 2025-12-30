@@ -1489,7 +1489,7 @@
   (let ((a0-7 (-> this part))
         (a1-1 (-> this root root-prim prim-core))
         )
-    (if (and (nonzero? a0-7) (not (name= (-> this state name) 'pending)))
+    (if (and (nonzero? a0-7) (not (name= (-> this state name) 'pending)) (-> *mod-settings* skill-starburst?))
         (spawn a0-7 (-> a1-1 world-sphere))
         )
     )
@@ -2110,7 +2110,7 @@
         (set! map-class (minimap-class orba-blue))
         (set-vector! (-> this draw color-mult) 0.0 0.0 0.8 1.0)
         (set-vector! (-> this draw color-emissive) 0.1 0.1 1.0 1.0)
-        (set! (-> this part) (create-launch-control group-skill-glow-red this)) ;; TODO - purple glow?
+        (set! (-> this part) (create-launch-control group-skill-glow-purp this))
         )
       ((>= (-> this pickup-amount) (-> *FACT-bank* super-skill-inc))
         (set! map-class (minimap-class orba-gold))

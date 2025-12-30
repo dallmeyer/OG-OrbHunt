@@ -1023,6 +1023,31 @@
     )
   )
 
+(defpartgroup group-skill-glow-purp
+  :id 2000
+  :flags (sp1)
+  :bounds (static-bspherem 0 0 0 1)
+  :parts ((sp-item 6000 :fade-after (meters 150) :flags (sp6 sp7)))
+  )
+
+(defpart 6000
+  :init-specs ((:texture (glow-soft level-default-sprite))
+    (:num 1.0)
+    (:scale-x (meters 2.2))
+    (:rot-x (degrees 2.25))
+    (:scale-y :copy scale-x)
+    (:r 64.0)
+    (:g 64.0)
+    (:b 255.0)
+    (:a 16.0)
+    (:omega (degrees 13511.25))
+    (:timer (seconds 0.017))
+    (:flags (sp-cpuinfo-flag-2 sp-cpuinfo-flag-3 glow))
+    (:userdata 2867.2)
+    (:rotate-y (degrees 0))
+    )
+  )
+
 (defpartgroup group-skill-glow-red
   :id 132
   :flags (sp1)

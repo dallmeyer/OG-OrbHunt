@@ -96,7 +96,172 @@
       "lump": {
         "name":"deserth-skill-05"
       }
-    }//,
+    },
+    {
+      "trans": [ 4203.2739, 11.8084, 3795.8125], // small ledge on side near ocean, right before line in sand towards temple
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4203.2739, 11.8084, 3795.8125, 10],
+      "lump": {
+        "name":"deserth-skill-06"
+      }
+    },
+    {
+      "trans": [ 4062.6096, 40.6033, 3890.6635], // mountain wall just before line in sand towards temple
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4062.6096, 40.6033, 3890.6635, 10],
+      "lump": {
+        "name":"deserth-skill-07",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ 4060.6530, 51.2223, 3896.4157], // mountain wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4060.6530, 51.2223, 3896.4157, 10],
+      "lump": {
+        "name":"deserth-skill-08"
+      }
+    },
+    {
+      "trans": [ 4034.9548, 46.0286, 3894.2561], // mountain wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4034.9548, 46.0286, 3894.2561, 10],
+      "lump": {
+        "name":"deserth-skill-09"
+      }
+    },
+    {
+      "trans": [ 4019.7819, 49.6016, 3920.0031], // mountain wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4019.7819, 49.6016, 3920.0031, 10],
+      "lump": {
+        "name":"deserth-skill-10"
+      }
+    },
+    {
+      "trans": [ 3975.4782, 28.1415, 3948.6313], // mountain wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3975.4782, 28.1415, 3948.6313, 10],
+      "lump": {
+        "name":"deserth-skill-11",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3957.6821, 43.1137, 3970.2299], // mountain wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3957.6821, 43.1137, 3970.2299, 10],
+      "lump": {
+        "name":"deserth-skill-12"
+      }
+    },
+    {
+      "trans": [ 3936.7314, 30.2608, 3965.9284], // mountain wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3936.7314, 30.2608, 3965.9284, 10],
+      "lump": {
+        "name":"deserth-skill-13"
+      }
+    },{
+      "trans": [ 3972.6901, 26.5882, 3869.3562], // in crack behind rocks on last island on path leading to temple
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3972.6901, 26.5882, 3869.3562, 10],
+      "lump": {
+        "name":"deserth-skill-14"
+      }
+    },
+    {
+      "trans": [ 3342.8491, 55.8859, 4047.0468], // coconut, smaller tree on island towards temple
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3342.8491, 55.8859, 4047.0468, 10],
+      "lump": {
+        "name":"deserth-skill-15"
+      }
+    },
+    {
+      "trans": [ 3549.7395, 63.4088, 3968.1125], // on rock below big tree on island towards temple
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3549.7395, 63.4088, 3968.1125, 10],
+      "lump": {
+        "name":"deserth-skill-16",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3562.8012, 79.3195, 3957.6350], // coconut, big tree. abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3562.8012, 79.3195, 3957.6350, 10],
+      "lump": {
+        "name":"deserth-skill-17"
+      }
+    },
+    {
+      "trans": [ 3039.7871, 23.2867, 3925.1757], // evil crevice behind pair of trees on MF doom island
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3039.7871, 23.2867, 3925.1757, 10],
+      "lump": {
+        "name":"deserth-skill-18"
+      }
+    },
+    {
+      "trans": [ 3049.7353, 44.9170, 3932.9489], // up on rocks behind pair of trees on MF doom island
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3049.7353, 44.9170, 3932.9489, 10],
+      "lump": {
+        "name":"deserth-skill-19",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3062.1640, 66.8344, 3927.7246], // up higher on rocks, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3062.1640, 66.8344, 3927.7246 , 10],
+      "lump": {
+        "name":"deserth-skill-20",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3050.8774, 81.9408, 3919.5703], // up on tree, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3050.8774, 81.9408, 3919.5703, 10],
+      "lump": {
+        "name":"deserth-skill-21"
+      }
+    }
+    //,
     
     
 

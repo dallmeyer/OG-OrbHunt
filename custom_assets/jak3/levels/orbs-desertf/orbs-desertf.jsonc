@@ -96,6 +96,26 @@
       "lump": {
         "name":"desertf-skill-05"
       }
+    },
+    {
+      "trans": [ 1375.32,  10.76,  3446.74 ], // gap under/side of bridge on ocean side
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1375.32,  10.76,  3446.74 , 10],
+      "lump": {
+        "name":"desertf-skill-06"
+      }
+    },
+    {
+      "trans": [ 1620.4210, 4.8811, 2604.5820], // underwater, gap in side of bridge mountain side
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 1620.4210, 4.8811, 2604.5820, 10],
+      "lump": {
+        "name":"XXX-skill-YYY"
+      }
     }//,
     
     
