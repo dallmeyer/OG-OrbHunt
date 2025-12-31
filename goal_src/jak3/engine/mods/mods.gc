@@ -633,7 +633,7 @@
   (case (-> obj name) :comp name=
 
     ;; ====== DESERT ======
-    (('des-burning-bush-6) (set-vector-meters! (-> arg0 extra trans) 1799.87,  9.50,  2288.08) ;; random bit of ground above sea level, near stronghold/cave
+    (('des-burning-bush-6) (set-vector-meters! (-> arg0 extra trans) 1799.87  9.50  2288.08) ;; random bit of ground above sea level, near stronghold/cave
       (quaternion-set! (-> arg0 quat) -0.0053  -0.0496  0.0030  0.9987)
       ;; get-to-6 / desert-bbush-desc-2
       )
