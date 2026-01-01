@@ -840,7 +840,7 @@
   (set! (-> obj skill-starburst?) #f)
   (set! (-> obj orb-ghosts?) #t)
   (set! (-> obj closest-orb?) #f)
-  (set! (-> obj mini-map?) #f)
+  (set! (-> obj mini-map?) #t)
   (set! (-> obj orb-map-icons?) #f)
   (set! (-> obj pseudo-savestates?) #f)
   (set! (-> obj easy-abah?) #f)
