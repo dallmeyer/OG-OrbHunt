@@ -2043,7 +2043,7 @@
                      )
                 ))
         (dbg-format 0 "disabling drawing ~D~%" (get-current-time))
-        (disable-drawing *bigmap*)
+        (disable-drawing *mini-bigmap*)
         (set! *mini-bigmap-toggle-time* (get-current-time))
         (false! *show-mini-bigmap*)
         )
@@ -2052,38 +2052,23 @@
             )
         (dbg-format 0 "trying to draw mini bigmap~%")
         (let ((x1 2304));;  (+ 2048 (* (-> *pc-settings* aspect-ratio-scale) (- 2304 2048)))))
-          (enable-drawing *bigmap*)
-          (let ((map-texture-status (file-status (-> *bigmap* bigmap-image) "world-map" (the-as int (-> *bigmap* load-index))))
-                (icon-texture1-status (file-status (-> *bigmap* tpage) "progress-minimap" 0))
-                (icon-texture2-status (file-status (-> *bigmap* tpage2) "progress-minimap" 1))
-                )
-            (dbg-format 0 "post enable-draw mini bigmap at x1 ~D~%" x1)
-            (cond
-              ((and (not (-> *bigmap* loading-flag)) (= (-> *bigmap* bigmap-image status) 'active) (= (-> *bigmap* tpage status) 'active) (= (-> *bigmap* tpage2 status) 'active))
-                ;; loaded, draw it
-                ;; (draw! *bigmap* 1792 1840 2304 2256)  ;; original "full" screen
-                ;; (draw! *bigmap* 1800 1840 2304 2256)  ;; slight shrink full screen
-                ;; (draw! *bigmap* 1984 1996 2112 2100) ;; middle
-                ;; (draw! *bigmap* 1792 1840 1920 1944) ;; top left ish
-                ;; (draw! *bigmap* 2176 1840 2304 1944) ;; top right ish
-                ;; (draw! *bigmap* 1792 2152 1920 2256) ;; bottom left ish
-                ;; mini-bigmap
-                ;; (dbg-format 0 "actually doing draw!~%")
-                (draw! *bigmap* ;; bottom right
-                  (- x1 (* (-> *pc-settings* aspect-ratio-scale) 128))
-                  (- 2216 (* (-> *pc-settings* aspect-ratio-scale) (- 2216 2112)))
-                  x1  ;; + 128
-                  2216  ;; + 104
-                  )
-                )
-              (else
-                (dbg-format 0 "not doing draw because of these bitches ~A ~A ~A ~A~%"
-                  (not (-> *bigmap* loading-flag))
-                  (= (-> *bigmap* bigmap-image status) 'active)
-                  (= (-> *bigmap* tpage status) 'active)
-                  (= (-> *bigmap* tpage2 status) 'active)
-                  )
-                )
+          (enable-drawing *mini-bigmap*)
+          (dbg-format 0 "post enable-draw mini bigmap at x1 ~D~%" x1)
+          (when (= (-> *mini-bigmap* bigmap-images (the int (-> *mini-bigmap* load-index)) status) 'active)
+            ;; loaded, draw it
+            ;; (draw! *bigmap* 1792 1840 2304 2256)  ;; original "full" screen
+            ;; (draw! *bigmap* 1800 1840 2304 2256)  ;; slight shrink full screen
+            ;; (draw! *bigmap* 1984 1996 2112 2100) ;; middle
+            ;; (draw! *bigmap* 1792 1840 1920 1944) ;; top left ish
+            ;; (draw! *bigmap* 2176 1840 2304 1944) ;; top right ish
+            ;; (draw! *bigmap* 1792 2152 1920 2256) ;; bottom left ish
+            ;; mini-bigmap
+            ;; (dbg-format 0 "actually doing draw!~%")
+            (draw! *mini-bigmap* ;; bottom right
+              (- x1 (* (-> *pc-settings* aspect-ratio-scale) 128))
+              (- 2216 (* (-> *pc-settings* aspect-ratio-scale) (- 2216 2112)))
+              x1  ;; + 128
+              2216  ;; + 104
               )
             )
           )
