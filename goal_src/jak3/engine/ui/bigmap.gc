@@ -347,8 +347,8 @@
           (let ((icon-width (* 20.0 rel-x-scale f30-0))
                 (icon-height (* 20.0 f30-0))
                 )
-            (set! (-> icon-topleft x) (the float (the int (- (-> icon-center x) (/ icon-width 2)))))
-            (set! (-> icon-topleft y) (the float (the int (- (-> icon-center y) (/ icon-height 2)))))
+            (set! (-> icon-topleft x) (- (-> icon-center x) (/ icon-width 2)))
+            (set! (-> icon-topleft y) (- (-> icon-center y) (/ icon-height 2)))
             (set! (-> icon-botright x) (+ (-> icon-topleft x) icon-width))
             (set! (-> icon-botright y) (+ (-> icon-topleft y) icon-height))
 
@@ -918,6 +918,10 @@
         )
     (dbg-format 0 "inside enable-drawing~%")
     (cond
+      ;; ((= (-> this type) mini-bigmap)
+      ;;   (set! (-> this scroll x) 0.0) ;; (+ -256.0 (* (- (-> s4-0 x) (-> s5-0 x)) (-> s5-0 w))))
+      ;;   (set! (-> this scroll y) 0.0) ;; (+ -208.0 (* (- (-> s4-0 z) (-> s5-0 y)) (-> s5-0 w))))
+      ;;   )
       ((= (-> this load-index) (bigmap-id sewer-hum-kg))
        (let ((a0-10 (level-get *level* 'sewa)))
          (if a0-10
