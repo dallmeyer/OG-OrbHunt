@@ -87,6 +87,27 @@
       "lump": {
         "name":"templea-skill-04"
       }
+    },
+    {
+      "trans": [ 4113.9697, 43.6101, 4341.4614], // watcher room void circle crack
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4113.9697, 43.6101, 4341.4614, 10],
+      "lump": {
+        "name":"templea-skill-05",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  4124.4975, 69.3022, 4337.5498], // up in center of watcher room, abah from ^ (or just jetboard triangle cancel launch)
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 4124.4975, 69.3022, 4337.5498, 10],
+      "lump": {
+        "name":"templea-skill-06"
+      }
     }//,
 
     
