@@ -733,6 +733,8 @@
     (('urn-a-2) (set-vector-meters! (-> arg0 extra trans) 4251.8857 74.0457 4219.2153)) ;; behind/in exposed waterfall
     (('urn-c-2) (set-vector-meters! (-> arg0 extra trans) 4224.1181 119.1814 4070.2402)) ;; just inside temple
     (('urn-b-2) (set-vector-meters! (-> arg0 extra trans) 4255.8398 125.7970 4099.2070)) ;; on top of torch near entrance
+    (('urn-c-10) (set-vector-meters! (-> arg0 extra trans) 4149.7958 44.4215 4368.1318)) ;; on wall in watchers room without ornaments
+    (('urn-c-9) (set-vector-meters! (-> arg0 extra trans) 4149.7958 47.8416 4368.1318)) ;; on wall in watchers room without ornaments
 
     ;; ====== TEMPLED (monk temple light jak flight) ======
     (('urn-a-15) (set-vector-meters! (-> arg0 extra trans) 4248.67  118.32  4648.52 )) ;; top of pillar climb in SW corner (follow orb trail, templeb-skill-13 ish)

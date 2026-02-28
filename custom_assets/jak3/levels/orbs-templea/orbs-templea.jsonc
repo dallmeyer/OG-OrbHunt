@@ -108,6 +108,27 @@
       "lump": {
         "name":"templea-skill-06"
       }
+    },
+    {
+      "trans": [ 4149.5747, 65.5586, 4367.8232], // above stacked pots in watcher room
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4149.5747, 65.5586, 4367.8232, 10],
+      "lump": {
+        "name":"templea-skill-07"
+      }
+    },
+    {
+      "trans": [ 4096.3774, 52.9269, 4312.0859], // torbch in watcher room
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4096.3774, 52.9269, 4312.0859, 10],
+      "lump": {
+        "name":"templea-skill-08",
+        "bob-scale": ["float", 0.25]
+      }
     }//,
 
     
