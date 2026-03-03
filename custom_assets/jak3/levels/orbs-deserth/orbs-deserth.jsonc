@@ -260,6 +260,78 @@
       "lump": {
         "name":"deserth-skill-21"
       }
+    },
+    {
+      "trans": [ 3181.8315, 62.0327, 3393.8688], // crack on far right of right side sentinels
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3181.8315, 62.0327, 3393.8688, 10],
+      "lump": {
+        "name":"deserth-skill-22",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3174.4245, 77.8788, 3389.3784], // on top of far right of right side sentinels, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3174.4245, 77.8788, 3389.3784, 10],
+      "lump": {
+        "name":"deserth-skill-23"
+      }
+    },
+    {
+      "trans": [ 3104.1477, 58.8154, 3382.7683], // crack on right/mid of right side sentinels
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3104.1477, 58.8154, 3382.7683, 10],
+      "lump": {
+        "name":"deserth-skill-24",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3107.8974, 77.7929, 3378.5351], // on top of right/mid of right side sentinels, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3107.8974, 77.7929, 3378.5351, 10],
+      "lump": {
+        "name":"deserth-skill-25"
+      }
+    },
+    {
+      "trans": [ 3098.6442, 28.0146, 3394.7185], // behind base of tree between right side sentinels
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3098.6442, 28.0146, 3394.7185, 10],
+      "lump": {
+        "name":"deserth-skill-26"
+      }
+    },
+    {
+      "trans": [ 2940.9792, 10.0785, 3513.2050], // gap between rocks near ocean line, by torch closest to right side sentinels
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2940.9792, 10.0785, 3513.2050, 10],
+      "lump": {
+        "name":"deserth-skill-27"
+      }
+    },
+    {
+      "trans": [ 2681.1423, 3.5948, 3822.6694], // underwater a bit, where tentacle won't grab you, by first torch coming from oasis->temple
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2681.1423, 3.5948, 3822.6694, 10],
+      "lump": {
+        "name":"deserth-skill-28"
+      }
     }
     //,
     
