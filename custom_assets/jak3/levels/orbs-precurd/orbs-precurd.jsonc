@@ -212,6 +212,36 @@
         "name":"precurd-skill-15"
       }
     },
+    {
+      "trans": [ 166.8959, 199.2430, 240.5120], // lol under invisible floor near starting elevator. spin -> ledge grab
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 166.8959, 199.2430, 240.5120 , 10],
+      "lump": {
+        "name":"precurd-skill-16"
+      }
+    },
+    {
+      "trans": [ 172.6945, 201.6097, 233.1705], // slippery ledge around corner from ^
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 172.6945, 201.6097, 233.1705 , 10],
+      "lump": {
+        "name":"precurd-skill-17"
+      }
+    },
+    {
+      "trans": [ -155.5013, 197.5243, 253.0466], // small slippery ledge on fake elevator side
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -155.5013, 197.5243, 253.0466, 10],
+      "lump": {
+        "name":"precurd-skill-18"
+      }
+    },
 
 
     {
