@@ -708,16 +708,20 @@
     (('des-cactus-obstacle-80) (set-vector-meters! (-> arg0 extra trans) 2939.7453 59.8781 2913.6057 ) ;; higher level roof, abah from ^
       (quaternion-set! (-> arg0 quat) 0.0000  0.5428  0.0000  0.8398))
 
+    ;; ====== VOLCANOX (volcano entrance) ======
+    (('dark-maker-idol-1026) (set-vector-meters! (-> arg0 extra trans) -124.2687 27.8041 -417.7722) ;; up on wall in first room, lots of ways up here
+      (quaternion-set! (-> arg0 quat)  0.2594  0.7843  -0.3276  0.4583))
+
     ;; ====== TEMPLEX (monk temple exterior) ======
     (('skill-212) (set-vector-meters! (-> arg0 extra trans) 4363.12  72.31  4008.60 )) ;; up on left wall as you first approach temple from desert (need to go behind invis wall from far left/early on)
     (('skill-213) (set-vector-meters! (-> arg0 extra trans) 4375.0493 83.5116 4014.6745)) ;; in crevice up on left wall, follow from ^
     (('skill-214) (set-vector-meters! (-> arg0 extra trans) 4396.57  73.89  4048.61 )) ;; around back of left wall before it gets OOB-y, follow from ^
     (('urn-b-4) (set-vector-meters! (-> arg0 extra trans) 4131.32  167.20  4152.79 ) ;; in courtyard, up on fallen "pad" above outer door (hint for getting over invis wall to orb on robot statue)
-      (quaternion-set! (-> arg0 quat)  -0.1289      -0.8769       0.2406      -0.3954))      
+      (quaternion-set! (-> arg0 quat)  -0.1289      -0.8769       0.2406      -0.3954))
     (('urn-c-7) (set-vector-meters! (-> arg0 extra trans) 4106.65  167.26  4273.75 ) ;; outside courtyard, up on vehicle blocking wall
       (quaternion-set! (-> arg0 quat) 0.0611      -0.8906       0.0769       0.4438))
     (('urn-a-8) (set-vector-meters! (-> arg0 extra trans) 4188.89  134.46  4178.07 ) ;; in courtyard, up on SNOW where torch is missing on right
-      (quaternion-set! (-> arg0 quat)  0.0322      -0.8997       0.0468       0.4326))      
+      (quaternion-set! (-> arg0 quat)  0.0322      -0.8997       0.0468       0.4326))
     (('urn-a-9) (set-vector-meters! (-> arg0 extra trans) 4151.8759 125.7131 4097.0878)) ;; in courtyard, on torch
     (('urn-b-10) (set-vector-meters! (-> arg0 extra trans) 4171.1611 182.0120 4085.0329)) ;; in courtyard, up on ledge to side of hallway stairs
     (('urn-b-3) (set-vector-meters! (-> arg0 extra trans) 4197.9511 270.5099 4180.2700 ) ;; in courtyard, near the very top in broken section

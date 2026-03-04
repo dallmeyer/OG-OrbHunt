@@ -47,9 +47,9 @@
 
   "actors" : [
     {
-      "trans": [  -98.8240, 25.0396, -453.9938], // ledge up above dark precursor statue, under volcano hole
+      "trans": [  -98.8240, 25.0396, -453.9938], // ledge up above vanilla dark precursor statue, under volcano hole
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,   
       "quat" : [0, 0, 0, 1],
       "bsphere": [  -98.8240, 25.0396, -453.9938, 10],
       "lump": {
@@ -65,6 +65,46 @@
       "bsphere": [ -98.6411, 44.9123, -466.8801, 10],
       "lump": {
         "name":"volcanox-skill-02"
+      }
+    },
+    {
+      "trans": [ -68.8859, 10.4835, -436.7312], // in corner along wall, right of vanilla dark precursor statue, behind rock
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -68.8859, 10.4835, -436.7312, 10],
+      "lump": {
+        "name":"volcanox-skill-03"
+      }
+    },
+    {
+      "trans": [ -99.3399, 33.3312, -402.6849], // up in crevice on left wall as you approach broken glider
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -99.3399, 33.3312, -402.6849, 10],
+      "lump": {
+        "name":"volcanox-skill-04"
+      }
+    },
+    {
+      "trans": [ -126.9686, 30.9408, -403.6281], // up in crevice on right wall as you approach broken glider
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -126.9686, 30.9408, -403.6281, 10],
+      "lump": {
+        "name":"volcanox-skill-05"
+      }
+    },
+    {
+      "trans": [ -130.7878, 0.2987, -437.3604], // crevice on left wall approaching warp gate (behind eye gate)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -130.7878, 0.2987, -437.3604, 10],
+      "lump": {
+        "name":"volcanox-skill-06"
       }
     }//,
     
