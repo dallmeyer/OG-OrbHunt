@@ -1761,6 +1761,7 @@
         (mardoor5 (entity-by-name "tpl-mardoor-5"))
         (r1183 (region-lookup-by-id 1183))
         (r1382 (region-lookup-by-id 1382))
+        (r1657 (region-lookup-by-id 1657))
         (r1698 (region-lookup-by-id 1698))
         (r1373 (region-lookup-by-id 1373))
         (r1762 (region-lookup-by-id 1762))
@@ -1827,6 +1828,10 @@
     ;; default to loading templec from entrance, wait to load templed in hallway^ right before it gets displayed
     (when r1373
       (set! (-> r1373 on-enter) '(want-load 'templea 'templeb 'templec))
+      )
+    ;; make sure templeb gets displayed, i.e. if coming from jetboard tests 
+    (when r1657
+       (set! (-> r1657 on-exit) '(want-display 'templeb 'display))
       )
     ;; templec/d swap hack on upper level of rotator room
     (when r1762
