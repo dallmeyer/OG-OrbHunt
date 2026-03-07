@@ -108,6 +108,150 @@
         "name":"mined-skill-06"
       }
     },
+    {
+      "trans": [ 339.0310, 92.5195, -271.9102], // next to right cart
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 339.0310, 92.5195, -271.9102, 10],
+      "lump": {
+        "name":"mined-skill-07",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 341.4848, 109.4704, -271.9791], // abah from ^, up on right cart door frame
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 341.4848, 109.4704, -271.9791, 10],
+      "lump": {
+        "name":"mined-skill-08"
+      }
+    },
+    {
+      "trans": [ 347.7365, 107.1812, -248.8492], // rock wall right of right cart, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 347.7365, 107.1812, -248.8492, 10],
+      "lump": {
+        "name":"mined-skill-09"
+      }
+    },
+    {
+      "trans": [ 350.6720, 109.0946, -234.1703], // rock wall right of right cart, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 350.6720, 109.0946, -234.1703, 10],
+      "lump": {
+        "name":"mined-skill-10"
+      }
+    },
+    {
+      "trans": [ 349.4618, 105.5395, -222.7645], // rock wall right of right cart, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 349.4618, 105.5395, -222.7645, 10],
+      "lump": {
+        "name":"mined-skill-11"
+      }
+    },
+    {
+      "trans": [ 281.6069, 105.6668, -262.4520], // above left cable on left cart
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 281.6069, 105.6668, -262.4520, 10],
+      "lump": {
+        "name":"mined-skill-12"
+      }
+    },
+    {
+      "trans": [ 279.6740, 109.1581, -246.2193], // rock wall left of left cart, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 279.6740, 109.1581, -246.2193, 10],
+      "lump": {
+        "name":"mined-skill-13"
+      }
+    },
+    {
+      "trans": [ 277.7933, 90.0389, -234.5926], // rock wall left of left cart, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 277.7933, 90.0389, -234.5926, 10],
+      "lump": {
+        "name":"mined-skill-14"
+      }
+    },
+    {
+      "trans": [ 275.4177, 78.1537, -213.3597], // left rock wall, extended FF from arena
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 275.4177, 78.1537, -213.3597, 10],
+      "lump": {
+        "name":"mined-skill-15"
+      }
+    },
+    {
+      "trans": [ 281.2584, 84.9876, -205.1774], // left rock wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 281.2584, 84.9876, -205.1774, 10],
+      "lump": {
+        "name":"mined-skill-16",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 286.3558, 103.9780, -201.7519], // left rock wall, awful standpoint, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 286.3558, 103.9780, -201.7519, 10],
+      "lump": {
+        "name":"mined-skill-17"
+      }
+    },
+    {
+      "trans": [ 299.8715, 95.7686, -197.7617], // back/left wall, extended from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 299.8715, 95.7686, -197.7617, 10],
+      "lump": {
+        "name":"mined-skill-18",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 304.2541, 111.8132, -198.7223], // way up back/left wall, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 304.2541, 111.8132, -198.7223, 10],
+      "lump": {
+        "name":"mined-skill-19"
+      }
+    },
+    {
+      "trans": [ 284.8003, 73.4119, -267.6720], // underneath left cart support
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 284.8003, 73.4119, -267.6720, 10],
+      "lump": {
+        "name":"mined-skill-20"
+      }
+    },
+
         
     {
       "trans": [329.8399, 57.8516, -278.9043], // veger on far side
