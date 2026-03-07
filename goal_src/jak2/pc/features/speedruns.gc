@@ -196,9 +196,6 @@
     ;; (if (cpad-hold? 0 r2)  ;; fully reset game if r2 held too
     ;;   (initialize! *game-info* 'game (the-as game-save #f) "default")
     ;;   )
-    (when (not (string= (-> *game-info* current-continue name) "tmp"))
-      (set! *last-real-continue-point* (-> *game-info* current-continue))
-      )
     (set! (-> *game-info* current-continue) *tmp-continue-point*)
     (cheats-sound-play #f)
     (initialize! *game-info* 'dead (the-as game-save #f) (the-as string #f))
@@ -264,6 +261,9 @@
         (case (-> *target* state)
           ;; only store temp checkpoint if in one of these states
           ((target-look-around target-stance target-duck-stance target-wade-stance target-gun-stance)
+            (when (not (string= (-> *game-info* current-continue name) "tmp"))
+              (set! *last-real-continue-point* (-> *game-info* current-continue))
+              )
             ;; assume current continue is good enough for the current location
             (continue-point-copy! *tmp-continue-point* (-> *game-info* current-continue))
             (vector-copy! (-> *tmp-continue-point* trans) (-> *target* root trans))

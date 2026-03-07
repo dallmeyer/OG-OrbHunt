@@ -547,6 +547,11 @@
   ;; Draw info to the screen
   (draw-closest-orb)
   (when (-> *pc-settings* pseudo-savestates?)
+    ;; if we're stuck continue-ing at a speedrun checkpoint, it might have bad vis so force it
+    (when (and *target* (= (-> *target* state name) 'target-continue)
+              (logtest? (-> *game-info* current-continue flags) (continue-flags speedrun)))
+      (load-state-want-force-vis (-> *game-info* current-continue level) #t)
+      )
     ;; call post-init function
     (when (and *practice-spawn-post-init*
                *target*
@@ -623,6 +628,7 @@
        'continue-point
        :name "tmp"
        :level #f
+       :flags (continue-flags speedrun)
        :trans
        (new 'static 'vector :w 1.0)
        :quat
@@ -653,8 +659,6 @@
     ;; (if (cpad-hold? 0 r2)  ;; fully reset game if r2 held too
     ;;   (initialize! *game-info* 'game (the-as game-save #f) "default")
     ;;   )
-    (when (not (string= (-> *game-info* current-continue name) "tmp"))
-      (set! *last-real-continue-point* (-> *game-info* current-continue)))
     (set! (-> *game-info* current-continue) *tmp-continue-point*)
     (sound-play "select-menu")
     (initialize! *game-info* 'dead (the-as game-save #f) (the-as string #f))
@@ -691,6 +695,9 @@
   (case (-> *target* state)
     ;; only store temp checkpoint if in one of these states
     ((target-stance target-duck-stance target-look-around target-wade-stance target-flut-stance target-racing)
+     ;; store cur checkpoint to restore after respawn
+     (when (not (string= (-> *game-info* current-continue name) "tmp"))
+      (set! *last-real-continue-point* (-> *game-info* current-continue)))
      ;; assume current continue is good enough for the current location
      (continue-point-copy! *tmp-continue-point* (-> *game-info* current-continue))
      (vector-copy! (-> *tmp-continue-point* trans) (-> *target* root trans))

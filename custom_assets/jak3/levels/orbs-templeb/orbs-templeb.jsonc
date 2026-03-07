@@ -145,9 +145,30 @@
       "lump": {
         "name":"templeb-skill-10"
       }
+    },
+    {
+      "trans": [ 4142.0048, 59.7691, 4471.9462], // top of pole between swingpoles (prob want invuln secret for this)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4142.0048, 59.7691, 4471.9462, 10],
+      "lump": {
+        "name":"templeb-skill-11"
+      }
+    },
+
+    // HOVER ORBS
+    {
+      "trans": [ 4158.0297, 77.7414, 4759.8764], // torbch behind huge invis wall, south side of center precursors
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4158.0297, 77.7414, 4759.8764, 10],
+      "lump": {
+        "name":"templeb-skill-hover-01",
+        "pickup-amount": ["float", 3.0] // hover
+      }
     }
-    //,
-    
 
     // GHOSTS
     // {

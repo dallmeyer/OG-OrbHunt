@@ -709,7 +709,7 @@
       (quaternion-set! (-> arg0 quat) 0.0000  0.5428  0.0000  0.8398))
 
     ;; ====== VOLCANOX (volcano entrance) ======
-    (('dark-maker-idol-1026) (set-vector-meters! (-> arg0 extra trans) -124.2687 27.8041 -417.7722) ;; up on wall in first room, lots of ways up here
+    (('dark-maker-idol-1026) (set-vector-meters! (-> arg0 extra trans) -124.3420 27.4540 -417.8297) ;; up on wall in first room, lots of ways up here
       (quaternion-set! (-> arg0 quat)  0.2594  0.7843  -0.3276  0.4583))
 
     ;; ====== TEMPLEX (monk temple exterior) ======
@@ -742,6 +742,9 @@
 
     ;; ====== TEMPLED (monk temple light jak flight) ======
     (('urn-a-15) (set-vector-meters! (-> arg0 extra trans) 4248.67  118.32  4648.52 )) ;; top of pillar climb in SW corner (follow orb trail, templeb-skill-13 ish)
+    (('light-eco-vent-34) (set-vector-meters! (-> arg0 extra trans) 4304.6909 85.0681 4484.4106)) ;; block tower close to seem
+    (('dark-eco-vent-12) (set-vector-meters! (-> arg0 extra trans) 4273.3706 81.1297 4567.7934)) ;; block tower mid towards seem
+    (('light-eco-vent-19) (set-vector-meters! (-> arg0 extra trans) 4304.9277 72.1381 4624.2265)) ;; block tower far from seem
 
     ;; ====== TEMPLEB (monk temple poles/rotators/precursor triangle room) ======
     (('skill-212) (set-vector-meters! (-> arg0 extra trans)  4121.2294  64.0372  4728.5834)) ;; middle finger of oracle, hint for orb urn on torch
@@ -1769,6 +1772,7 @@
         (r1778 (region-lookup-by-id 1778))
         (r1614 (region-lookup-by-id 1614))
         (r1615 (region-lookup-by-id 1615))
+        (r1937 (region-lookup-by-id 1937))
         (r1938 (region-lookup-by-id 1938))
         )
     ;; open door templeb > templec
@@ -1852,6 +1856,8 @@
     ;; get rid of some deathplanes in templed
     (when r1615
       (set! (-> r1615 on-enter) #f))
+    (when r1937
+      (set! (-> r1937 on-enter) #f)) ;; why does this shit exist above seem?
     (when r1938
       (set! (-> r1938 on-enter) #f))
     )
@@ -2239,9 +2245,6 @@
     ;; (if (cpad-hold? 0 r2)  ;; fully reset game if r2 held too
     ;;   (initialize! *game-info* 'game (the-as game-save #f) "default")
     ;;   )
-    (when (not (string= (-> *game-info* current-continue name) "tmp"))
-      (set! *last-real-continue-point* (-> *game-info* current-continue))
-      )
     (set! (-> *game-info* current-continue) *tmp-continue-point*)
     (cheats-sound-play #f)
     (format 0 "init! gameinfo~%")
@@ -2307,6 +2310,9 @@
         (case (-> *target* state)
           ;; only store temp checkpoint if in one of these states
           ((target-look-around target-stance target-duck-stance target-wade-stance target-gun-stance target-pilot-stance target-flut-stance target-indax-stance)
+            (when (not (string= (-> *game-info* current-continue name) "tmp"))
+              (set! *last-real-continue-point* (-> *game-info* current-continue))
+              )
             ;; assume current continue is good enough for the current location
             (continue-point-copy! *tmp-continue-point* (-> *game-info* current-continue))
             (vector-copy! (-> *tmp-continue-point* trans) (-> *target* root trans))
