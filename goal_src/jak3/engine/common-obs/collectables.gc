@@ -2170,7 +2170,7 @@
         (when (and run?
                   *target* 
                   (not (focus-test? *target* pilot mech board))
-                  (< (vector-vector-distance (-> self root trans) (-> *target* control trans)) (-> self prompt-distance))
+                  (< (vector-vector-distance (-> self base) (-> *target* control trans)) (-> self prompt-distance))
                   )
           (let ((s5-2 (new 'stack 'font-context *font-default-matrix* 32 280 0.0 (font-color default) (font-flags shadow kerning))))
             (cond

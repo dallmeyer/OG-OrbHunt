@@ -199,7 +199,7 @@
     (when (and (nonzero? orb-handle) (handle->process orb-handle))
       (let ((orb (the skill (handle->process orb-handle))))
         ;; (format 0 " ~2m, ~2m, ~2m ~%" (-> orb base x) (-> orb base y) (-> orb base z))
-        (format 0 "{~%  \"trans\": [ ~2m, ~2m, ~2m], // ~%  \"etype\": \"skill\",~%  \"game_task\": 0,~%" (-> orb base x) (-> orb base y) (-> orb base z))
+        (format 0 "{~%  \"trans\": [ ~2m, ~2m, ~2m], // orba~3,'0D ~%  \"etype\": \"skill\",~%  \"game_task\": 0,~%" (-> orb base x) (-> orb base y) (-> orb base z) i)
         (format 0 "  \"quat\": [0, 0, 0, 1],~%  \"bsphere\": [ ~2m, ~2m, ~2m, 10],~%" (-> orb base x) (-> orb base y) (-> orb base z))
         (case (-> orb fact pickup-amount)
           ((2.0)
