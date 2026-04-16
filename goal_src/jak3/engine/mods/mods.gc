@@ -747,9 +747,10 @@
     (('light-eco-vent-19) (set-vector-meters! (-> arg0 extra trans) 4304.9277 72.1381 4624.2265)) ;; block tower far from seem
 
     ;; ====== TEMPLEB (monk temple poles/rotators/precursor triangle room) ======
-    (('skill-212) (set-vector-meters! (-> arg0 extra trans)  4121.2294  64.0372  4728.5834)) ;; middle finger of oracle, hint for orb urn on torch
-    (('skill-213) (set-vector-meters! (-> arg0 extra trans)   4210.1816  75.7331  4704.5761)) ;; up on door frame in triangle room leading to templed, hint for orb urn on torch
-    (('skill-214) (set-vector-meters! (-> arg0 extra trans) 4159.7138 67.7620 4815.9785)) ;; up on torch in treasure room
+    ;; TODO - these orbs are in templex, not b, need to move to custom level orbs I guess?
+    ;; (('skill-212) (set-vector-meters! (-> arg0 extra trans)  4121.2294  64.0372  4728.5834)) ;; middle finger of oracle, hint for orb urn on torch
+    ;; (('skill-213) (set-vector-meters! (-> arg0 extra trans)   4210.1816  75.7331  4704.5761)) ;; up on door frame in triangle room leading to templed, hint for orb urn on torch
+    ;; (('skill-214) (set-vector-meters! (-> arg0 extra trans) 4159.7138 67.7620 4815.9785)) ;; up on torch in treasure room
     (('urn-b-26) (set-vector-meters! (-> arg0 extra trans) 4135.6640 74.3720 4720.2871)) ;; up on torch between central oracles, concussor high jump from skill-212 (or abah)
     (('urn-b-25) (set-vector-meters! (-> arg0 extra trans) 4181.1923 74.3720 4720.8168)) ;; up on torch between central oracles, concussor extended from skill-213 ^ (or maybe abah or something)
     (('urn-a-34) (set-vector-meters! (-> arg0 extra trans) 4144.6430 38.5877 4759.5078) ;; below oracle hand, on stable but also slippery ground?
