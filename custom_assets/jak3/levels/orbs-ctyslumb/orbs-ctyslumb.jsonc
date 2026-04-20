@@ -98,19 +98,202 @@
         "name":"ctyslumb-skill-05"
       }
     },
-    
-    
     {
-      "trans": [  615.1626, 43.7958, -97.1635], // up on high ledge in middle tall buildings, kinda SE
+      "trans": [ 567.2470, 28.3205, -201.9453], // up behind FF guard sign in middle of level, zoomer launch to concussor
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 567.2470, 28.3205, -201.9453, 10],
+      "lump": {
+        "name":"ctyslumb-skill-06"
+      }
+    },
+    {
+      "trans": [ 583.9307, 37.4115, -201.8180], // up a level from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 583.9307, 37.4115, -201.8180, 10],
+      "lump": {
+        "name":"ctyslumb-skill-07",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 564.0508, 52.1599, -194.6345], // further up on rooftop, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 564.0508, 52.1599, -194.6345, 10],
+      "lump": {
+        "name":"ctyslumb-skill-08"
+      }
+    },
+    {
+      "trans": [ 613.8526, 52.4575, -166.9483], // around rooftop to left from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 613.8526, 52.4575, -166.9483, 10],
+      "lump": {
+        "name":"ctyslumb-skill-09"
+      }
+    },
+    {
+      "trans": [  615.1626, 43.7958, -97.1635], // up on high ledge in middle tall buildings, kinda SE, follow from ^
       "etype": "skill",
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [  615.1626, 43.7958, -97.1635, 10],
       "lump": {
-        "name":"ctyslumb-skill-hover-01",
-        "pickup-amount": ["float", 3.0] // hover
+        "name":"ctyslumb-skill-10"
       }
     },
+    {
+      "trans": [ 555.4297, 43.8601, -61.6336], // rooftop -1, up around on right from ^^^ or you can slide around from white barrier side
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 555.4297, 43.8601, -61.6336, 10],
+      "lump": {
+        "name":"ctyslumb-skill-11"
+      }
+    },
+    {
+      "trans": [ 728.7114, 14.6952, -67.8931], // on pipe near ctysluma
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 728.7114, 14.6952, -67.8931, 10],
+      "lump": {
+        "name":"ctyslumb-skill-12",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 731.5977, 36.7880, -65.7111], // up atop sign near ctysluma, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 731.5977, 36.7880, -65.7111, 10],
+      "lump": {
+        "name":"ctyslumb-skill-13"
+      }
+    },
+    {
+      "trans": [ 666.0471, 80.00, -237.4304], // floating in middle of air above proxy spot :D jetboard
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 666.0471, 80.00, -237.4304, 10],
+      "lump": {
+        "name":"ctyslumb-skill-14"
+      }
+    },
+    {
+      "trans": [ 758.8826, 20.9102, -214.4959], // on pipe on eastern wall/corner
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 758.8826, 20.9102, -214.4959, 10],
+      "lump": {
+        "name":"ctyslumb-skill-15"
+      }
+    },
+    {
+      "trans": [ 730.0534, 9.8886, -401.0729], // behind overhang/sign in NE corner
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 730.0534, 9.8886, -401.0729, 10],
+      "lump": {
+        "name":"ctyslumb-skill-16"
+      }
+    },
+    {
+      "trans": [ 390.5670, 1.2167, -373.8990], // tucked away in corner between walkway/wall/water in NW
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 390.5670, 1.2167, -373.8990, 10],
+      "lump": {
+        "name":"ctyslumb-skill-17"
+      }
+    },
+    {
+      "trans": [ 596.7053, 7.3794, -387.1659], // on lightpole along central northern wall, bring zoomer over, first person in and out for easier abah lineup
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 596.7053, 7.3794, -387.1659, 10],
+      "lump": {
+        "name":"ctyslumb-skill-18",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 602.6367, 28.4029, -391.2508], // up on high ledge on central northern wall, abah->concussor from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 602.6367, 28.4029, -391.2508, 10],
+      "lump": {
+        "name":"ctyslumb-skill-19"
+      }
+    },
+    {
+      "trans": [ 592.6199, 37.3578, -391.1350], // up on higher ledge from ^, central northern wall
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 592.6199, 37.3578, -391.1350, 10],
+      "lump": {
+        "name":"ctyslumb-skill-20",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 567.9226, 52.3457, -398.4243], // rooftop central northern wall, abah from ^ and slide over
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 567.9226, 52.3457, -398.4243, 10],
+      "lump": {
+        "name":"ctyslumb-skill-21"
+      }
+    },
+    {
+      "trans": [ 555.3049, 55.9882, -383.1008], // on top of pipe central northern wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 555.3049, 55.9882, -383.1008, 10],
+      "lump": {
+        "name":"ctyslumb-skill-22"
+      }
+    },
+    {
+      "trans": [ 755.7696, 55.9868, -393.7449], // on top of pipe NE corner, slide across from ^^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 755.7696, 55.9868, -393.7449, 10],
+      "lump": {
+        "name":"ctyslumb-skill-23"
+      }
+    },
+    {
+      "trans": [ 758.7501, 56.0035, -214.8005], // on top of pipe eastern wall, slide across from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 758.7501, 56.0035, -214.8005, 10],
+      "lump": {
+        "name":"ctyslumb-skill-24"
+      }
+    },
+    
+
 
     {
       "trans": [ 393.6899, 7.9418, -53.9724 ], // samos by white barrier
