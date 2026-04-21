@@ -332,6 +332,48 @@
       "lump": {
         "name":"deserth-skill-28"
       }
+    },
+    {
+      "trans": [ 3718.3981, 49.5514, 3863.0932], // rock climb on 2nd to last island before templex 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3718.3981, 49.5514, 3863.0932, 10],
+      "lump": {
+        "name":"deserth-skill-29"
+      }
+    },
+    {
+      "trans": [ 3352.4516, 45.3285, 3963.3525], // rock climb on 4th to last island before templex 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3352.4516, 45.3285, 3963.3525, 10],
+      "lump": {
+        "name":"deserth-skill-30",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3345.7517, 65.3691, 3956.6186], // rock climb on 4th to last island before templex, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3345.7517, 65.3691, 3956.6186, 10],
+      "lump": {
+        "name":"deserth-skill-31",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3340.8852, 79.4993, 3964.8132], // rock climb on 4th to last island before templex, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3340.8852, 79.4993, 3964.8132, 10],
+      "lump": {
+        "name":"deserth-skill-32"
+      }
     }
     //,
     
