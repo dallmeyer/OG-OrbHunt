@@ -882,7 +882,6 @@
   (none))
 
 (defun spawn-projectile-blue ((arg0 target))
-  (local-vars (sv-48 entity-actor))
   (with-pp
     (when arg0
       (let ((s3-0 (rand-vu-int-range 3 (+ (-> arg0 node-list length) -1)))
@@ -898,19 +897,16 @@
               (t9-5 (the-as projectile-blue s4-1) pp 'projectile-blue (the-as pointer #x70004000)))
             (let ((s2-0 run-function-in-process)
                   (s1-0 s4-1)
-                  (s0-0 projectile-init-by-other))
-              (set! sv-48 (-> pp entity))
-              (let ((a3-1 (vector<-cspace! (new 'stack-no-clear 'vector) (-> arg0 node-list data s3-0)))
-                    (t1-0 8)
-                    (t2-0 (process->handle pp)))
-                ((the-as (function process function object object object object object object) s2-0)
-                 s1-0
-                 s0-0
-                 sv-48
-                 a3-1
-                 gp-0
-                 t1-0
-                 t2-0)))
+                  (s0-0 projectile-init-by-other)
+                  (sv-48 (-> pp entity)))
+              ((the-as (function process function object object object object object object) s2-0)
+               s1-0
+               s0-0
+               sv-48
+               (vector<-cspace! (new 'stack-no-clear 'vector) (-> arg0 node-list data s3-0))
+               gp-0
+               8
+               (process->handle pp)))
             (-> s4-1 ppointer)))))
     0
     (none)))

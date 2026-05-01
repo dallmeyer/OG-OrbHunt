@@ -299,7 +299,8 @@
             (icon-topleft (new-stack-vector0)) ;; icon x0/y0
             (icon-botright (new-stack-vector0)) ;; icon x1/y1
             )
-        (let ((rel-x-scale (-> *video-params* relative-x-scale))
+        ;; og-preserve-this remove stretch on non-PS2 aspects
+        (let ((rel-x-scale (if (-> *pc-settings* use-vis?) (-> *video-params* relative-x-scale) 1.0))
               (rel-x-scale-recip (-> *video-params* relative-x-scale-reciprical))
               )
           (-> arg1 class)
@@ -772,8 +773,9 @@
       (let ((f30-0 (analog-input (the-as int (-> s5-0 leftx)) 128.0 32.0 110.0 4.0))
             (f0-0 (analog-input (the-as int (-> s5-0 lefty)) 128.0 32.0 110.0 4.0))
             )
-        (+! (-> this scroll x) f30-0)
-        (+! (-> this scroll y) f0-0)
+        ;; og:preserve-this high fps map scroll
+        (+! (-> this scroll x) (* f30-0 DISPLAY_FPS_RATIO))
+        (+! (-> this scroll y) (* f0-0 DISPLAY_FPS_RATIO))
         )
       )
     )
