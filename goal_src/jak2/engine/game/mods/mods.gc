@@ -1692,7 +1692,6 @@
 (define-extern *credits-rolling?* symbol)
 (define-extern start-credits-yolo (function none))
 (defun mod-run-each-frame ()
-  (format 0 "target ~A ~%" *target*)
   (task-close! "nest-get-to-gun-introduction") ;; NG+ or something
   (task-close! "city-oracle-level3-training") ;; close oracle stuff
   (logior! (-> *game-info* features) (game-feature board darkjak darkjak-bomb0 darkjak-bomb1 darkjak-invinc darkjak-giant)) ;; give board and dark jak stuff
