@@ -120,6 +120,187 @@
       "lump": {
         "name":"factoryb-skill-03"
       }
+    },
+    {
+      "trans": [ 188.0114, 358.4666, 283.7725], // on little thing next to pipe
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 188.0114, 358.4666, 283.7725, 10],
+      "lump": {
+        "name":"factoryb-skill-04",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 187.8275, 372.1441, 290.2658], // on pipe, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 187.8275, 372.1441, 290.2658, 10],
+      "lump": {
+        "name":"factoryb-skill-05",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 189.5741, 391.9312, 296.5134], // on pipe, abah from ^o
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 189.5741, 391.9312, 296.5134, 10],
+      "lump": {
+        "name":"factoryb-skill-06"
+      }
+    },
+    {
+      "trans": [ 409.1518, 341.0495, 305.0527], // pipe climb towards "netting"
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 409.1518, 341.0495, 305.0527, 10],
+      "lump": {
+        "name":"factoryb-skill-07"
+      }
+    },
+    {
+      "trans": [ 427.8795, 345.7503, 301.0349], // pipe climb towards "netting"
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 427.8795, 345.7503, 301.0349, 10],
+      "lump": {
+        "name":"factoryb-skill-08"
+      }
+    },
+    {
+      "trans": [ 398.9792, 352.0890, 304.8318], // pipe climb towards "netting"
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 398.9792, 352.0890, 304.8318, 10],
+      "lump": {
+        "name":"factoryb-skill-09"
+      }
+    },
+    {
+      "trans": [ 404.4197, 358.5709, 299.9859], // pipe climb towards "netting"
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 404.4197, 358.5709, 299.9859, 10],
+      "lump": {
+        "name":"factoryb-skill-10",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 395.0596, 375.9482, 301.2639], // pipe climb towards "netting", abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 395.0596, 375.9482, 301.2639, 10],
+      "lump": {
+        "name":"factoryb-skill-11",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 411.2000, 396.4063, 313.4512], // pipe climb towards "netting", abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 411.2000, 396.4063, 313.4512, 10],
+      "lump": {
+        "name":"factoryb-skill-12",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 404.3649, 422.4868, 310.0812], // pipe climb towards "netting", abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 404.3649, 422.4868, 310.0812, 10],
+      "lump": {
+        "name":"factoryb-skill-13"
+      }
+    },
+    {
+      "trans": [ 390.9460, 423.1149, 311.6278], // pipe climb towards "netting", on metal frame above, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 390.9460, 423.1149, 311.6278, 10],
+      "lump": {
+        "name":"factoryb-skill-14"
+      }
+    },
+    {
+      "trans": [ 422.5665, 433.5360, 312.3540], // pipe climb towards "netting", on metal frame V above, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 422.5665, 433.5360, 312.3540, 10],
+      "lump": {
+        "name":"factoryb-skill-15"
+      }
+    },
+    {
+      "trans": [ 406.5615, 412.5056, 291.5561], // pipe climb towards "netting", on lamp near top
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 406.5615, 412.5056, 291.5561, 10],
+      "lump": {
+        "name":"factoryb-skill-16"
+      }
+    },
+
+    // HOVER
+    {
+      "trans": [ 299.8281, 493.9741, 325.5416], // center of pattern on edge of highest roof
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 299.8281, 493.9741, 325.5416, 10],
+      "lump": {
+        "name":"factoryb-skill-hover-01",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [ 299.8048, 470.4941, 166.8487], // just down a bit from ^, on tall cylinder
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 299.8048, 470.4941, 166.8487, 10],
+      "lump": {
+        "name":"factoryb-skill-hover-02",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [ 247.7128, 438.8254, 256.5929], // on pipe near cylinder near ceiling
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 247.7128, 438.8254, 256.5929, 10],
+      "lump": {
+        "name":"factoryb-skill-hover-03",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [ 197.6215, 421.2240, 262.7589], // on cylinder up high
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 197.6215, 421.2240, 262.7589, 10],
+      "lump": {
+        "name":"factoryb-skill-hover-04",
+        "pickup-amount": ["float", 3.0] // hover
+      }
     }//,
     
     

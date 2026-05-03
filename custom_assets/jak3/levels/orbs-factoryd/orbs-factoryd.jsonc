@@ -77,7 +77,56 @@
         "name":"factoryd-skill-02"
       }
     },
-    
+    {
+      "trans": [ 220.0810, 538.9023, -121.9361], // corner edge standpoint on mid level
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 220.0810, 538.9023, -121.9361, 10],
+      "lump": {
+        "name":"factoryd-skill-03"
+      }
+    },
+    {
+      "trans": [ 213.2786, 552.9267, -130.1142], // back wall IJ, concussor from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 213.2786, 552.9267, -130.1142, 10],
+      "lump": {
+        "name":"factoryd-skill-04"
+      }
+    },
+    {
+      "trans": [ 218.9454, 561.2934, -119.3132], // corner edge standpoint on highest level, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 218.9454, 561.2934, -119.3132, 10],
+      "lump": {
+        "name":"factoryd-skill-05"
+      }
+    },
+    {
+      "trans": [ 254.3720, 546.2871, -68.2684], // mid level along wall near vent above entrance
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 254.3720, 546.2871, -68.2684, 10],
+      "lump": {
+        "name":"factoryd-skill-06"
+      }
+    },
+    {
+      "trans": [ 281.0884, 561.3026, -96.6691], // corner edge standpoint highest level, boosted across from ^^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 281.0884, 561.3026, -96.6691, 10],
+      "lump": {
+        "name":"factoryd-skill-07"
+      }
+    },
     
     {
       "trans": [ 270.3602, 537.9456, -128.5513 ], // erol in factoryd

@@ -443,22 +443,22 @@
     (('factoryb)
      (prototypes-game-visible-set!
        '("facb-gun-tower-base-01.mb")
-       (not (task-node-closed? (game-task-node factory-sky-battle-tower1)))
+       #t ;; (not (task-node-closed? (game-task-node factory-sky-battle-tower1)))
        this
        )
      (prototypes-game-visible-set!
        '("facb-gun-tower-base-02.mb")
-       (not (task-node-closed? (game-task-node factory-sky-battle-tower2)))
+       #t ;; (not (task-node-closed? (game-task-node factory-sky-battle-tower2)))
        this
        )
      (prototypes-game-visible-set!
        '("facb-gun-tower-base-03.mb")
-       (not (task-node-closed? (game-task-node factory-sky-battle-tower3)))
+       #t ;; (not (task-node-closed? (game-task-node factory-sky-battle-tower3)))
        this
        )
      (prototypes-game-visible-set!
        '("facb-gun-tower-base-04.mb")
-       (not (task-node-closed? (game-task-node factory-sky-battle-tower4)))
+       #t ;; (not (task-node-closed? (game-task-node factory-sky-battle-tower4)))
        this
        )
      )

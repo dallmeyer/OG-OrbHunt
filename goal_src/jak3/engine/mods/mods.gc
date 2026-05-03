@@ -707,6 +707,10 @@
       (quaternion-set! (-> arg0 quat) 0.1011  -0.6155  -0.0315  0.7809))
     (('des-cactus-obstacle-80) (set-vector-meters! (-> arg0 extra trans) 2939.7453 59.8781 2913.6057 ) ;; higher level roof, abah from ^
       (quaternion-set! (-> arg0 quat) 0.0000  0.5428  0.0000  0.8398))
+    (('des-cactus-obstacle-75) (set-vector-meters! (-> arg0 extra trans) 2898.6896 60.5042 2875.7370) ;; roor over from ^
+      (quaternion-set! (-> arg0 quat) 0.0000  0.0000  0.0000  1.0000))
+    (('des-cactus-obstacle-67) (set-vector-meters! (-> arg0 extra trans) 2917.5629 61.8190 2826.0173) ;; roor over from ^
+      (quaternion-set! (-> arg0 quat) 0.0000  0.0000  0.0000  1.0000))
 
     ;; ====== VOLCANOX (volcano entrance) ======
     (('dark-maker-idol-1026) (set-vector-meters! (-> arg0 extra trans) -124.3420 27.4540 -417.8297) ;; up on wall in first room, lots of ways up here
