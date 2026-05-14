@@ -289,9 +289,79 @@
       "lump": {
         "name":"rubbleb-skill-23"
       }
+    },
+    {
+      "trans": [ -286.6894, 48.4800, 43.6796], // in NW corner of big open section with water, extended FF up here
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -286.6894, 48.4800, 43.6796, 10],
+      "lump": {
+        "name":"rubbleb-skill-24"
+      }
+    },
+    {
+      "trans": [ -283.0747, 53.8501, 84.5618], // on top of lamp in NW corner of big open section, extended from ^ onto roof and onto lamp 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -283.0747, 53.8501, 84.5618, 10],
+      "lump": {
+        "name":"rubbleb-skill-25"
+      }
+    },
+    {
+      "trans": [ -279.6991, 35.9563, 91.7196], // on mid level of building over water in big open section, north wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -279.6991, 35.9563, 91.7196, 10],
+      "lump": {
+        "name":"rubbleb-skill-26"
+      }
+    },
+    {
+      "trans": [ -223.6106, 36.3081, 95.7930], // on mid level of building over water in big open section, north wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -223.6106, 36.3081, 95.7930, 10],
+      "lump": {
+        "name":"rubbleb-skill-27",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -235.2275, 59.1492, 98.5710], // on rooftop of building over water in big open section, north wall, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -235.2275, 59.1492, 98.5710, 10],
+      "lump": {
+        "name":"rubbleb-skill-28"
+      }
+    },
+    {
+      "trans": [ -272.7110, 57.5074, 95.7107], // on rooftop of building over water in big open section, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -272.7110, 57.5074, 95.7107, 10],
+      "lump": {
+        "name":"rubbleb-skill-29",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -279.1819, 67.6000, 43.7034], // on rooftop of building in NW corner of big open section, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -279.1819, 67.6000, 43.7034, 10],
+      "lump": {
+        "name":"rubbleb-skill-30"
+      }
     }//,
-    
-    
 
     // GHOSTS
     // {

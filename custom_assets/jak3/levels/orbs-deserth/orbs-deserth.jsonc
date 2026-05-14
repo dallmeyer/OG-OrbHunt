@@ -374,6 +374,67 @@
       "lump": {
         "name":"deserth-skill-32"
       }
+    },
+    {
+      "trans": [ 2269.0927, 44.6214, 3627.9860], // in crevice at base of tree against rocks
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2269.0927, 44.6214, 3627.9860, 10],
+      "lump": {
+        "name":"deserth-skill-33"
+      }
+    },
+    {
+      "trans": [ 2138.5798, 124.6472, 3619.0383], // up on slippery rocks near stronghold/sea, prob need dark jak at the top
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2138.5798, 124.6472, 3619.0383, 10],
+      "lump": {
+        "name":"deserth-skill-34"
+      }
+    },
+    {
+      "trans": [ 2048.3327, 106.1803, 3716.2309], // up on mountain on corner near stronghold/sea
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2048.3327, 106.1803, 3716.2309, 10],
+      "lump": {
+        "name":"deserth-skill-35",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 2059.2829, 123.3785, 3711.2443], // up on mountain, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2059.2829, 123.3785, 3711.2443, 10],
+      "lump": {
+        "name":"deserth-skill-36"
+      }
+    },
+    {
+      "trans": [ 2067.3071, 126.3533, 3705.5292], // in crack up on mountain, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2067.3071, 126.3533, 3705.5292, 10],
+      "lump": {
+        "name":"deserth-skill-37"
+      }
+    },
+    {
+      "trans": [ 2063.5278, 120.1296, 3690.8359], // further in crack up on mountain, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2063.5278, 120.1296, 3690.8359, 10],
+      "lump": {
+        "name":"deserth-skill-38"
+      }
     }
     //,
     
