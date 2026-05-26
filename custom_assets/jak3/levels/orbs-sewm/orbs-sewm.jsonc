@@ -46,27 +46,46 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [  168.0182, -135.0716, -293.2614], // slippery ledge out from building w tall windmill
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  168.0182, -135.0716, -293.2614, 10],
+      "lump": {
+        "name":"sewm-skill-01"
+      }
+    },
+    {
+      "trans": [ 165.4551, -136.2346, -250.6547], // corner of room with jetboard launcher to vanilla orbs, go over small invis wall
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 165.4551, -136.2346, -250.6547, 10],
+      "lump": {
+        "name":"sewm-skill-02"
+      }
+    },
+    {
+      "trans": [ 364.6199, -127.2673, -302.1334], // in claw thing on right at very start of forced jetboard tube
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 364.6199, -127.2673, -302.1334, 10],
+      "lump": {
+        "name":"sewm-skill-03"
+      }
+    },
+    {
+      "trans": [ 100.0873, -127.9002, -302.4685], // in corner near end toilet flush, before sewn
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 100.0873, -127.9002, -302.4685, 10],
+      "lump": {
+        "name":"sewm-skill-04"
+      }
+    }//,
     
     
 

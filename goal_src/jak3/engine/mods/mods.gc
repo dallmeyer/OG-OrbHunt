@@ -905,11 +905,26 @@
       (logior! (-> arg0 extra perm status) (entity-perm-status dead)) ;; relocated to mhcitya
       )
     
+
+    ;; ====== SEWL (sewers 1.1) ======
+    (('crate-1249) (set-vector-meters! (-> arg0 extra trans) 435.5313 -137.9920 -224.8183) ;; in corner behind halfpipe
+      (quaternion-set! (-> arg0 quat) 0.0000  0.8644  0.0000  0.5027))
+    (('crate-1250) (set-vector-meters! (-> arg0 extra trans) 451.4246 -137.9920 -229.9092) ;; under walkway steps
+      (quaternion-set! (-> arg0 quat) 0.0000  0.0000  0.0000  1.0000))
+
     ;; ====== SEWM (sewers 1.2) ======
     (('crate-1236) (set-vector-meters! (-> arg0 extra trans) 187.7550 -161.3462 -268.1669) ;; on beam behind invis wall at first waterfall (into void)
       (quaternion-set! (-> arg0 quat) 0.1662  0.9841  0.0613  -0.0071))
     (('crate-1237) (set-vector-meters! (-> arg0 extra trans) 303.4149 -121.4953 -281.6883) ;; 
       (quaternion-set! (-> arg0 quat) 0.0000  0.6966  0.0000  0.7174))
+    (('crate-1235) (set-vector-meters! (-> arg0 extra trans) 92.3550 -136.8666 -240.7576) ;; ammo/eco, in vanilla orb room
+      (quaternion-set! (-> arg0 quat) 0.0000  0.6886  0.0000  0.7250))
+    (('sew-fan-4) (set-vector-meters! (-> arg0 extra trans) 124.9756 -136.6828 -237.9628) ;; blocking vanilla orb room
+      (quaternion-set! (-> arg0 quat) 0.0000  0.7172  0.0000  0.6968))
+    (('sew-fan-5) (set-vector-meters! (-> arg0 extra trans) 134.8988 -145.1979 -238.6669) ;; blocking vanilla orb room
+      (quaternion-set! (-> arg0 quat) 0.0000  0.7008  0.0000  0.7133))
+    (('sew-fan-6) (set-vector-meters! (-> arg0 extra trans) 105.3948 -136.6486 -239.0018) ;; blocking vanilla orb room
+      (quaternion-set! (-> arg0 quat) 0.0000  0.6884  0.0000  0.7253))
 
     ;; ====== SEWO (sewers 1.4) ======
     (('crate-1273) (set-vector-meters! (-> arg0 extra trans) -484.62  -128.62  -358.97 )) ;; on pipes on unused walkway, funny oob haha you dieded

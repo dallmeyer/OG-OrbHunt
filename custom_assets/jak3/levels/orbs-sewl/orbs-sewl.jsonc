@@ -47,23 +47,13 @@
 
   "actors" : [
     {
-      "trans": [  450.0819, -118.1712, -311.6354], // in big open pipe, in water
-      "etype": "skill",
-      "game_task": 0, 
-      "quat" : [0, 0, 0, 1],
-      "bsphere": [  450.0819, -118.1712, -311.6354, 10],
-      "lump": {
-        "name":"sewl-skill-01"
-      }
-    },
-    {
       "trans": [  546.7879, -114.3852, -266.0503], // pipe against wall 
       "etype": "skill",
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [  546.7879, -114.3852, -266.0503, 10],
       "lump": {
-        "name":"sewl-skill-02"
+        "name":"sewl-skill-01"
       }
     },
     {
@@ -73,11 +63,132 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [  542.2599, -109.8351, -262.7460, 10],
       "lump": {
+        "name":"sewl-skill-02"
+      }
+    },
+    {
+      "trans": [ 479.6517, -130.4048, -257.1627], // on invis pipe in middle of room
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 479.6517, -130.4048, -257.1627, 10],
+      "lump": {
         "name":"sewl-skill-03"
       }
+    },
+    {
+      "trans": [  450.0819, -118.1712, -311.6354], // in big open pipe, in water, need a super good extended FF cancel into dismount
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  450.0819, -118.1712, -311.6354, 10],
+      "lump": {
+        "name":"sewl-skill-04"
+      }
+    },
+    {
+      "trans": [  451.4067, -92.1946, -309.9861], // top of big open pipe, IJ from ^
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 451.4067, -92.1946, -309.9861, 10],
+      "lump": {
+        "name":"sewl-skill-05"
+      }
+    },
+    {
+      "trans": [  519.7190, -107.1442, -314.4421], // atop elevator frame
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  519.7190, -107.1442, -314.4421, 10],
+      "lump": {
+        "name":"sewl-skill-06",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  519.0423, -86.4484, -316.4452], // up on wall above elevator, abah from ^
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 519.0423, -86.4484, -316.4452, 10],
+      "lump": {
+        "name":"sewl-skill-07"
+      }
+    },
+    {
+      "trans": [ 432.2034, -110.0692, -260.3256], // lamp on right side of halfpipe 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 432.2034, -110.0692, -260.3256, 10],
+      "lump": {
+        "name":"sewl-skill-08"
+      }
+    },
+    {
+      "trans": [ 435.3493, -118.2764, -228.3925], // ledge on left side of halfpipe 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 435.3493, -118.2764, -228.3925, 10],
+      "lump": {
+        "name":"sewl-skill-09",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 440.1193, -101.6323, -222.5845], // up on beam on wall left side of halfpipe, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 440.1193, -101.6323, -222.5845, 10],
+      "lump": {
+        "name":"sewl-skill-10"
+      }
+    },
+    {
+      "trans": [ 460.4498, -137.3768, -229.9334], // under walkway steps, concussor boosted from wall side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 460.4498, -137.3768, -229.9334, 10],
+      "lump": {
+        "name":"sewl-skill-11"
+      }
+    },
+    {
+      "trans": [514.6091, -121.7733, -320.8834], // in corner next to elevator
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 514.6091, -121.7733, -320.8834, 10],
+      "lump": {
+        "name":"sewl-skill-12"
+      }
+    },
+    {
+      "trans": [ 400.4458, -112.1940, -218.9731], // top of lamp above door exit after halfpipe
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 400.4458, -112.1940, -218.9731, 10],
+      "lump": {
+        "name":"sewl-skill-13",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 408.5495, -98.2338, -220.6676], // up in corner above door exit after halfpipe, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 408.5495, -98.2338, -220.6676, 10],
+      "lump": {
+        "name":"sewl-skill-14"
+      }
     }//,
-
-    
     
 
     // GHOSTS
