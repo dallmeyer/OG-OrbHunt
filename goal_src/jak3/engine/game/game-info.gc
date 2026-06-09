@@ -916,6 +916,41 @@
   (none)
   )
 
+(defun draw-skill-author-text ((e entity))
+  (let ((a (res-lump-struct e 'author string)))
+    (when a
+      (process-spawn-function process
+        (lambda :behavior process
+          ((a string))
+          (let ((t (current-time)))
+            (until (time-elapsed? t (seconds 10))
+              (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf)) (bucket-id debug-no-zbuf1))
+                ;; reset bucket settings prior to drawing - font won't do this for us, and
+                ;; draw-raw-image can sometimes mess them up. (intro sequence)
+                (dma-buffer-add-gs-set-flusha buf (alpha-1 (new 'static 'gs-alpha :b #x1 :d #x1)) (tex1-1 (new 'static 'gs-tex1 :mmag #x1 :mmin #x1)))
+                (let ((font-ctx (new 'stack 'font-context *font-default-matrix* 256 203 0.0 (font-color default) (font-flags kerning large middle))))
+                  (set! (-> font-ctx scale) 0.325)
+                  ;; (set! (-> font-ctx color) (font-color transparent))
+                  (clear *temp-string*)
+                  (clear *pc-encoded-temp-string*)
+                  (format *temp-string* "Collected one of ~S's orbs!~%" a)
+                  
+                  (pc-encode-utf8-string *temp-string* *pc-encoded-temp-string*)
+                  (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
+                  )
+                )
+              (suspend)
+              )
+            )
+          (none)
+          )
+        a
+        :to *target*
+        )
+      )
+    )
+  )
+
 (defmethod pickup-collectable! ((this fact-info-target) (pickup pickup-type) (amount float) (pickup-handle handle))
   (case pickup
     (((pickup-type health))
@@ -1151,6 +1186,9 @@
        (set! (-> this skill-pickup-time) (-> *display* game-clock frame-counter))
        )
      (ready-hud 'hud-skill -1)
+     (let* ((p (handle->process pickup-handle))
+            (e (if p (-> p entity))))
+      (when e (draw-skill-author-text e)))
      (give (-> this process game) 'skill amount pickup-handle)
      )
     (((pickup-type karma))

@@ -47,26 +47,154 @@
 
   "actors" : [
     // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
+    //   "trans": [ -99.5121, -177.7608, -291.5945], // under waterfall  
     //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
+    //   "game_task": 0,
+    //   "quat": [0, 0, 0, 1],
+    //   "bsphere": [ -99.5121, -177.7608, -291.5945, 10],
     //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
+    //     "name":"sewn-skill-YYY",
+    //     "author": "blahpy"
     //   }
     // },
     // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
+    //   "trans": [ -125.7779, -174.9591, -360.9212], // under waterfall  
     //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
+    //   "game_task": 0,
+    //   "quat": [0, 0, 0, 1],
+    //   "bsphere": [ -125.7779, -174.9591, -360.9212, 10],
     //   "lump": {
-    //     "name":"wascitya-skill-2"
+    //     "name":"sewn-skill-YYY",
+    //     "author": "blahpy"
     //   }
     // },
+    // {
+    //   "trans": [ -100.3644, -174.9591, -361.4221], // under waterfall  
+    //   "etype": "skill",
+    //   "game_task": 0,
+    //   "quat": [0, 0, 0, 1],
+    //   "bsphere": [ -100.3644, -174.9591, -361.4221, 10],
+    //   "lump": {
+    //     "name":"sewn-skill-YYY",
+    //     "author": "blahpy"
+    //   }
+    // },
+    {
+      "trans": [ -166.5887, -173.8658, -243.5641], // in corner on left after grindrail that lowers 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -166.5887, -173.8658, -243.5641, 10],
+      "lump": {
+        "name":"sewn-skill-01",
+        "author": "blahpy"
+      }
+    },
+    {
+      "trans": [ -225.7689, -120.8427, -340.3771], // up on corner of arch at start of highest section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -225.7689, -120.8427, -340.3771, 10],
+      "lump": {
+        "name":"sewn-skill-02",
+        "author": "blahpy"
+      }
+    },
+    {
+      "trans": [ -256.8773, -161.6654, -329.0837], // in corner ground level of big room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -256.8773, -161.6654, -329.0837, 10],
+      "lump": {
+        "name":"sewn-skill-03",
+        "author": "blahpy"
+      }
+    },
+    {
+      "trans": [ -150.6597, -126.4999, -298.0838], // top of arch in whirlpool room with fans 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -150.6597, -126.4999, -298.0838, 10],
+      "lump": {
+        "name":"sewn-skill-04",
+        "author": "blahpy"
+      }
+    },
+    {
+      "trans": [ -151.7015, -126.5226, -324.4059], //  top of other arch in whirlpool room with fans 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -151.7015, -126.5226, -324.4059, 10],
+      "lump": {
+        "name":"sewn-skill-05",
+        "author": "blahpy"
+      }
+    },
+    {
+      "trans": [ -225.4528, -161.7322, -255.7293], // in corner near whirlpool by useless grindrail 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -225.4528, -161.7322, -255.7293, 10],
+      "lump": {
+        "name":"sewn-skill-06",
+        "author": "blahpy"
+      }
+    },
+    {
+      "trans": [ -114.9572, -152.6760, -299.9615], // up on corner above/out from rail that lowers
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -114.9572, -152.6760, -299.9615, 10],
+      "lump": {
+        "name":"sewn-skill-07"
+      }
+    },
+    {
+      "trans": [ 33.3342, -147.6251, -293.4623], // on side ledge of snaking slide
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 33.3342, -147.6251, -293.4623, 10],
+      "lump": {
+        "name":"sewn-skill-08"
+      }
+    },
+    {
+      "trans": [ -73.0795, -180.2200, -332.9335], // right underside of snaking silde, overhanging water vol 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -73.0795, -180.2200, -332.9335, 10],
+      "lump": {
+        "name":"sewn-skill-09"
+      }
+    },
+    {
+      "trans": [ -84.7477, -153.6342, -357.5455], // up high in corner of room at end of slide, (either triple sideflip from fans or triangle cancel launch ->) L2 left/up trick cancel to L1 R1 extended ff over invis wall  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -84.7477, -153.6342, -357.5455, 10],
+      "lump": {
+        "name":"sewn-skill-10"
+      }
+    },
+    {
+      "trans": [ -85.6116, -177.8356, -366.4783], // behind invis wall in corner of room at end of slide, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -85.6116, -177.8356, -366.4783, 10],
+      "lump": {
+        "name":"sewn-skill-11"
+      }
+    }//,
     
     
 

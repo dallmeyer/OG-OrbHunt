@@ -926,6 +926,12 @@
     (('sew-fan-6) (set-vector-meters! (-> arg0 extra trans) 105.3948 -136.6486 -239.0018) ;; blocking vanilla orb room
       (quaternion-set! (-> arg0 quat) 0.0000  0.6884  0.0000  0.7253))
 
+    ;; ====== SEWN (sewers 1.3) ======
+    (('crate-1238) (set-vector-meters! (-> arg0 extra trans) 16.8670 -157.7911 -332.5602) ;; side ledge on snaking slide
+      (quaternion-set! (-> arg0 quat)  0.0000  0.8946  0.0000  0.4468))
+    (('crate-1239) (set-vector-meters! (-> arg0 extra trans) 71.6141 -135.5906 -318.8776) ;; side ledge on snaking slide
+      (quaternion-set! (-> arg0 quat)  0.0000  0.9969  0.0000  0.0775))
+
     ;; ====== SEWO (sewers 1.4) ======
     (('crate-1273) (set-vector-meters! (-> arg0 extra trans) -484.62  -128.62  -358.97 )) ;; on pipes on unused walkway, funny oob haha you dieded
     (('crate-1270) (set-vector-meters! (-> arg0 extra trans) -416.0042 -124.8511 -269.3194) ;; above doorway back to sewers 1
