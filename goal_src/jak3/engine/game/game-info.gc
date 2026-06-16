@@ -916,8 +916,26 @@
   (none)
   )
 
+(defenum orba-author
+  :type uint32
+  (barg 0)
+  (blahpy 1)
+  (theguy 2)
+
+  (max)
+  )
+
+(define *author-names* (new 'static 'boxed-array :type string :length (orba-author max)
+  "barg"
+  "blahpy"
+  "TheGuy"
+  ))
+
 (defun draw-skill-author-text ((e entity))
   (let ((a (res-lump-struct e 'author string)))
+  ;; TODO - maybe switch to enum?
+  ;; (let* ((a_id (res-lump-value e 'author int :default (the-as uint128 -1) :time -1000000000.0))
+  ;;        (a (if (and (nonzero? a_id) (< a_id (orba-author max))) (-> *author-names* a_id) (the-as string #f))))
     (when a
       (process-spawn-function process
         (lambda :behavior process
