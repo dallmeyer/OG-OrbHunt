@@ -159,6 +159,99 @@
       "lump": {
         "name":"towerb-skill-10"
       }
+    },
+    {
+      "trans": [ -168.3488, 42.4500, 516.2102], // proxy hint near tentacle after light eco vent 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -168.3488, 42.4500, 516.2102, 10],
+      "lump": {
+        "name":"towerb-skill-11"
+      }
+    },
+    {
+      "trans": [ -176.0397, 64.2292, 520.8505], // up on wall in corner, proxy from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -176.0397, 64.2292, 520.8505, 10],
+      "lump": {
+        "name":"towerb-skill-12",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -165.8889, 83.4667, 527.8570], // on small standpoint in center of purple light, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -165.8889, 83.4667, 527.8570, 10],
+      "lump": {
+        "name":"towerb-skill-13"
+      }
+    },
+    {
+      "trans": [ -138.7888, 92.9038, 547.6843], // up on "branch" near purple light ^, abah from ^^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -138.7888, 92.9038, 547.6843, 10],
+      "lump": {
+        "name":"towerb-skill-14"
+      }
+    },
+    {
+      "trans": [ -113.3554, 41.9816, 500.7544], // behind trunk void side first section in tower 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -113.3554, 41.9816, 500.7544, 10],
+      "lump": {
+        "name":"towerb-skill-15"
+      }
+    },
+    {
+      "trans": [ -99.3281, 40.6523, 543.7727], // behind shrooms/eggs before walkway leaving first section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -99.3281, 40.6523, 543.7727, 10],
+      "lump": {
+        "name":"towerb-skill-16"
+      }
+    },
+    {
+      "trans": [ -99.7739, 54.5718, 537.6174], // on top of lamp before walkway from first section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -99.7739, 54.5718, 537.6174, 10],
+      "lump": {
+        "name":"towerb-skill-17",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -105.6399, 62.6452, 553.9928], // between branch and wall above first section, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -105.6399, 62.6452, 553.9928, 10],
+      "lump": {
+        "name":"towerb-skill-18"
+      }
+    },
+    {
+      "trans": [ -11.5899, 74.1956, 476.0166], // prize for killing all enemies from spawners on second section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -11.5899, 74.1956, 476.0166, 10],
+      "lump": {
+        "name":"towerb-skill-19",
+        "alt-actor": "tow-spawner-8"
+      }
     }//,
     
     

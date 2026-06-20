@@ -106,8 +106,84 @@
       "lump": {
         "name":"deserta-skill-06"
       }
+    },
+    {
+      "trans": [ 74.5770, 46.8478, 856.9710], // start of climb around invis wall ocean side between deserta/desertc 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 74.5770, 46.8478, 856.9710, 10],
+      "lump": {
+        "name":"deserta-skill-07",
+        "author": "blahpy"
+      }
+    },
+    {
+      "trans": [ 49.7216, 37.0210, 894.5222], // follow from ^ path along invis wall ocean side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 49.7216, 37.0210, 894.5222, 10],
+      "lump": {
+        "name":"deserta-skill-08",
+        "author": "blahpy"
+      }
+    },
+    {
+      "trans": [ 54.3759, 16.0205, 946.9612], // down low on sand between rock pillars, further along from ^ (safe spot from tentacle) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 54.3759, 16.0205, 946.9612, 10],
+      "lump": {
+        "name":"deserta-skill-09",
+        "author": "blahpy"
+      }
+    },
+    // {
+    //   "trans": [ 166.5079, 63.1188, 813.3165], // TODO: make this a side mission 
+    //   "etype": "skill",
+    //   "game_task": 0,
+    //   "quat": [0, 0, 0, 1],
+    //   "bsphere": [ 166.5079, 63.1188, 813.3165, 10],
+    //   "lump": {
+    //     "name":"deserta-skill-10",
+    //     "author": "blahpy"
+    //   }
+    // },
+    {
+      "trans": [ 119.8585, 76.1632, 818.1397], // behind invis wall on stone, follow from ^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 119.8585, 76.1632, 818.1397, 10],
+      "lump": {
+        "name":"deserta-skill-10",
+        "author": "blahpy"
+      }
+    },
+    {
+      "trans": [ 86.6913, 40.5130, 860.4833], // down in crevice of stone pillar behind invis wall, follow from ^^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 86.6913, 40.5130, 860.4833, 10],
+      "lump": {
+        "name":"deserta-skill-16",
+        "author": "blahpy"
+      }
+    },
+    {
+      "trans": [ 218.8594, 76.3857, 1123.6574], // up on sandy mountain between real and fake rock walls, follow from ^^^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 218.8594, 76.3857, 1123.6574, 10],
+      "lump": {
+        "name":"deserta-skill-17",
+        "author": "blahpy"
+      }
     }//,
-    
     
 
     // GHOSTS

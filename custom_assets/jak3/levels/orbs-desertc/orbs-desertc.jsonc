@@ -56,17 +56,37 @@
         "name":"desertc-skill-01"
         // "pickup-amount": ["float", 2.0] // abah hint
       }
+    },
+    {
+      "trans": [ 227.9222, 84.9619, 1146.3753], // in triangle hole between rocks, in NW corner looking into "oob" part of deserta
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 227.9222, 84.9619, 1146.3753, 10],
+      "lump": {
+        "name":"desertc-skill-02"
+      }
+    },
+    {
+      "trans": [ 92.7869, 3.1129, 1152.6704], // underwater ocean side at invis wall towards deserta 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 92.7869, 3.1129, 1152.6704, 10],
+      "lump": {
+        "name":"desertc-skill-03"
+      }
+    },
+    {
+      "trans": [ 599.3321, 95.4867, 1598.4553], // in keyhole in rocks southside overlooking river
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 599.3321, 95.4867, 1598.4553, 10],
+      "lump": {
+        "name":"desertc-skill-04"
+      }
     }//,
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
     
     
 

@@ -69,9 +69,9 @@ bool run_build_level(const std::string& input_file,
   // cameras
   // nodes
   // regions
+  file.region_array.entities = &file.actors;
+  file.region_array.actor_groups = &file.actor_groups;
   if (level_json.contains("region_trees") && !level_json.at("region_trees").empty()) {
-    file.region_array.entities = &file.actors;
-    file.region_array.actor_groups = &file.actor_groups;
     fill_region_trees(file.region_trees, file.regions, file.region_array,
                       level_json.at("region_trees"), level_json.value("base_region_id", 0));
   }

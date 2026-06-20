@@ -1238,6 +1238,10 @@
             (return #f)
             )          
           )
+        (('tow-spawner)
+          (when (not (logtest? (-> alt-actor extra perm status) (entity-perm-status subtask-complete)))
+            (return #f))
+          )
         (else
           (when (not (or (name= (-> alt-actor extra process state name) 'die)
                          (name= (-> alt-actor extra process state name) 'die-hidden)

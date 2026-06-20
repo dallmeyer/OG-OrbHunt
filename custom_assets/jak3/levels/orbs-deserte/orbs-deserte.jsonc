@@ -57,16 +57,57 @@
         // "pickup-amount": ["float", 2.0] // abah hint
       }
     },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"deserte-skill-02"
-    //   }
-    // },
+    {
+      "trans": [ 192.4979, 37.1695, 2824.9582], // top of smaller tree/plant on western shore 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 192.4979, 37.1695, 2824.9582, 10],
+      "lump": {
+        "name":"deserte-skill-02"
+      }
+    },
+    {
+      "trans": [ 832.8792, 54.6469, 2706.9689], // on top/behind rocks along wall just right of oasis pond 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 832.8792, 54.6469, 2706.9689, 10],
+      "lump": {
+        "name":"deserte-skill-03"
+      }
+    },
+    {
+      "trans": [ 824.0031, 32.4792, 2654.0412], // in pocket of rocks along wall just right of oasis pond
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 824.0031, 32.4792, 2654.0412, 10],
+      "lump": {
+        "name":"deserte-skill-04",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 823.6053, 51.8499, 2643.1704], // on top of rock pillar along wall right side of oasis pond, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 823.6053, 51.8499, 2643.1704, 10],
+      "lump": {
+        "name":"deserte-skill-05"
+      }
+    },
+    {
+      "trans": [ 811.5823, 19.0814, 2525.3256], // behind rocks along wall of oasis pond 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 811.5823, 19.0814, 2525.3256, 10],
+      "lump": {
+        "name":"deserte-skill-06"
+      }
+    },
 
     {
       "trans": [ 620.0590209960938, 18.11319923400879, 2534.6298828125], // ashelin at oasis
