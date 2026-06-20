@@ -325,7 +325,8 @@
       (if (and (time-elapsed? (-> self pickup-time) (seconds 0.1))
                (not (logtest? (-> self fact options) (actor-option no-reaction)))
                )
-          (send-event proc 'powerup)
+          ;; og:preserve-this this was called without any event args
+          (send-event proc 'powerup (pickup-type eco-pill-light) (-> *FACT-bank* eco-full-inc))
           )
       (set-time! (-> self pickup-time))
       #f
@@ -528,7 +529,8 @@
       (if (and (time-elapsed? (-> self pickup-time) (seconds 0.1))
                (not (logtest? (-> self fact options) (actor-option no-reaction)))
                )
-          (send-event proc 'powerup)
+          ;; og:preserve-this this was called without any event args
+          (send-event proc 'powerup (pickup-type eco-pill-dark) (-> *FACT-bank* eco-full-inc))
           )
       (set-time! (-> self pickup-time))
       #f

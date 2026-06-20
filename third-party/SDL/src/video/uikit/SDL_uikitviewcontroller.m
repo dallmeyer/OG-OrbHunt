@@ -75,7 +75,6 @@ static void SDLCALL SDL_HideHomeIndicatorHintChanged(void *userdata, const char 
 
 #ifdef SDL_IPHONE_KEYBOARD
     SDLUITextField *textField;
-    BOOL hidingKeyboard;
     BOOL rotatingOrientation;
     NSString *committedText;
     NSString *obligateForBackspace;
@@ -92,7 +91,6 @@ static void SDLCALL SDL_HideHomeIndicatorHintChanged(void *userdata, const char 
 
 #ifdef SDL_IPHONE_KEYBOARD
         [self initKeyboard];
-        hidingKeyboard = NO;
         rotatingOrientation = NO;
 #endif
 
@@ -290,6 +288,10 @@ static void SDLCALL SDL_HideHomeIndicatorHintChanged(void *userdata, const char 
                    name:UIKeyboardWillShowNotification
                  object:nil];
     [center addObserver:self
+               selector:@selector(keyboardDidShow:)
+                   name:UIKeyboardDidShowNotification
+                 object:nil];
+    [center addObserver:self
                selector:@selector(keyboardWillHide:)
                    name:UIKeyboardWillHideNotification
                  object:nil];
@@ -372,6 +374,9 @@ static void SDLCALL SDL_HideHomeIndicatorHintChanged(void *userdata, const char 
 #ifndef SDL_PLATFORM_TVOS
     [center removeObserver:self
                       name:UIKeyboardWillShowNotification
+                    object:nil];
+    [center removeObserver:self
+                      name:UIKeyboardDidShowNotification
                     object:nil];
     [center removeObserver:self
                       name:UIKeyboardWillHideNotification
@@ -543,37 +548,21 @@ static void SDLCALL SDL_HideHomeIndicatorHintChanged(void *userdata, const char 
 
     [self setKeyboardHeight:(int)kbrect.size.height];
 #endif
+}
 
-    /* A keyboard hide transition has been interrupted with a show (keyboardWillHide has been called but keyboardDidHide didn't).
-     * since text input was stopped by the hide, we have to start it again. */
-    if (hidingKeyboard) {
-        SDL_StartTextInput(window);
-        hidingKeyboard = NO;
-    }
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    SDL_SendScreenKeyboardShown();
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification
 {
-    hidingKeyboard = YES;
     [self setKeyboardHeight:0];
-
-    /* When the user dismisses the software keyboard by the "hide" button in the bottom right corner,
-     * we want to reflect that on SDL_TextInputActive by calling SDL_StopTextInput...on certain conditions */
-    if (SDL_TextInputActive(window)
-        /* keyboardWillHide gets called when a hardware keyboard is attached,
-         * keep text input state active if hiding while there is a hardware keyboard.
-         * if the hardware keyboard gets detached, the software keyboard will appear anyway. */
-        && !SDL_HasKeyboard()
-        /* When the device changes orientation, a sequence of hide and show transitions are triggered.
-         * keep text input state active in this case. */
-        && !rotatingOrientation) {
-        SDL_StopTextInput(window);
-    }
 }
 
 - (void)keyboardDidHide:(NSNotification *)notification
 {
-    hidingKeyboard = NO;
+    SDL_SendScreenKeyboardHidden();
 }
 
 - (void)textFieldTextDidChange:(NSNotification *)notification
@@ -600,7 +589,7 @@ static void SDLCALL SDL_HideHomeIndicatorHintChanged(void *userdata, const char 
                 break;
             }
         }
-        if (matchLength < committedText.length) {
+        if (matchLength < committedText.length && !SDL_HasKeyboard()) {
             size_t deleteLength = SDL_utf8strlen([[committedText substringFromIndex:matchLength] UTF8String]);
             while (deleteLength > 0) {
                 // Send distinct down and up events for each backspace action
