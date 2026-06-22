@@ -1522,6 +1522,28 @@
       (the int (* 32767.0 (-> gp-1 inv-camera-rot fvec y)))
       (the int (* 32767.0 (-> gp-1 inv-camera-rot fvec z)))
       )
+    )  
+  (let ((gp-1 *math-camera*))
+    (format
+      #t
+      "                       (camera :x (meters ~m) :y (meters ~m) :z (meters ~m) ~f ~f ~f "
+      (-> gp-1 trans x)
+      (-> gp-1 trans y)
+      (-> gp-1 trans z)
+      (-> gp-1 inv-camera-rot rvec x)
+      (-> gp-1 inv-camera-rot rvec y)
+      (-> gp-1 inv-camera-rot rvec z)
+      )
+    (format
+      #t
+      "~f ~f ~f ~f ~f ~f)~%"
+      (-> gp-1 inv-camera-rot uvec x)
+      (-> gp-1 inv-camera-rot uvec y)
+      (-> gp-1 inv-camera-rot uvec z)
+      (-> gp-1 inv-camera-rot fvec x)
+      (-> gp-1 inv-camera-rot fvec y)
+      (-> gp-1 inv-camera-rot fvec z)
+      )
     )
   (let ((gp-2 format)
         (s5-1 #t)

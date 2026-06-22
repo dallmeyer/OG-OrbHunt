@@ -3227,13 +3227,13 @@
                       :want-sound (new 'static 'array symbol 3 'ctyindh #f #f)
                       )
                     (new 'static 'continue-point
-                      :name "ctyindb-bbush-2"
+                      :name "ctyindb-bbush-2" ;; city-bbush-get-to-36 / burning-bush-39 / burning-bush-indb-2
                       :level 'ctyindb
                       :flags (continue-flags no-auto)
-                      :trans (new 'static 'vector :x 3914337.5 :y 32741.785 :z 1884099.4 :w 1.0)
-                      :camera-trans (new 'static 'vector :x 3908069.5 :y 53720.68 :z 1833682.1 :w 1.0)
-                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 22 -23706 -22 #x5857))
-                      :camera-rot (new 'static 'array int16 9 #x7ffb 0 -45 3 #x7eff #xfec 45 -4076 #x7eff)
+                      :trans (new 'static 'vector :x (meters 971.3115) :y (meters 54.2364) :z (meters 560.1477) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 982.9697) :y (meters 59.2097) :z (meters 558.2052)  :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 -2 25379 -4 20726))
+                      :camera-rot (new 'static 'array int16 9 5190 0 32353 -4887 32390 784 -31981 -4950 5131)
                       :on-goto #f
                       :vis-nick 'ctyindb
                       :vehicle-type #x1b
@@ -3247,13 +3247,13 @@
                       :want-sound (new 'static 'array symbol 3 'ctyindh #f #f)
                       )
                     (new 'static 'continue-point
-                      :name "ctyindb-bbush-3"
+                      :name "ctyindb-bbush-3" ;; burning-bush-40 / burning-bush-indb-3 / city-bbush-get-to-37
                       :level 'ctyindb
                       :flags (continue-flags no-auto)
-                      :trans (new 'static 'vector :x 4404271.0 :y 33320.55 :z 2426769.5 :w 1.0)
-                      :camera-trans (new 'static 'vector :x 4390000.0 :y 54174.926 :z 2378528.0 :w 1.0)
-                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x16be 0 -32242))
-                      :camera-rot (new 'static 'array int16 9 #x7b04 0 -9040 #x432 #x7f13 #xea1 #x2312 -3895 #x7a25)
+                      :trans (new 'static 'vector :x (meters 1083.0693) :y (meters 27.5550) :z (meters 608.2944) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 1085.7805) :y (meters 32.7032) :z (meters 620.4906) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -3074 0 -32622))
+                      :camera-rot (new 'static 'array int16 9 -30260 0 12569 -1818 32422 -4377 -12437 -4740 -29941)
                       :on-goto #f
                       :vis-nick 'ctyindb
                       :vehicle-type #x1b

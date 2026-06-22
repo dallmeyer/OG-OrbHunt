@@ -650,6 +650,7 @@
       (quaternion-set! (-> arg0 quat) 0.1823  0.7556  -0.1409  0.6130))
     (('burning-bush-40) (set-vector-meters! (-> arg0 extra trans) 1082.8267 24.5556 607.5993) ;; on grindrail where vanilla orb challenge is
       (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 -1.0))
+    (('parking-spot-116) (set-vector-meters! (-> arg0 extra trans) 1065.8126 8.2436 498.4766)) ;; in corner near jetboard upper grind rail area
 
     ;; ====== CTYINDA (industrial south) ======
     (('skill-180) (set-vector-meters! (-> arg0 extra trans) 810.42  8.6  1067.37 )) ;; between ramp and wall near port
@@ -2070,6 +2071,7 @@
         )
       (logior! (-> *game-info* secrets) (game-secrets endless-dark endless-light invulnerable endless-ammo board-fast vehicle-hit-points unlimited-turbos board-faster))
       (logior! (-> *pc-settings* cheats) (pc-cheats city-peace desert-peace))
+      (+! (-> *game-info* gem) 100)
       )
     )
   
