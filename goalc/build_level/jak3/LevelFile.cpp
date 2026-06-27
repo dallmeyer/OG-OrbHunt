@@ -121,7 +121,9 @@ std::vector<u8> LevelFile::save_object_file() {
   //(region-array           region-array                     :offset-assert 192)
   gen.link_word_to_byte(192 / 4, region_array.slot);
   //(collide-hash           collide-hash                     :offset-assert 196)
-  gen.link_word_to_byte(196 / 4, add_to_object_file(collide_hash, gen));
+  gen.link_word_to_byte(196 / 4, collide_hash.index_array.empty()
+                                     ? gen.add_word(0)
+                                     : add_to_object_file(collide_hash, gen));
   //(wind-array             uint32                           :offset        200)
   //(wind-array-length      int32                            :offset        204)
   //(city-level-info        city-level-info                  :offset        208)

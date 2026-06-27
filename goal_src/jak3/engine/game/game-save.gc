@@ -2662,6 +2662,7 @@
   :post auto-save-post
   )
 
+(define-extern runs-on-game-saved (function int none))
 (defstate save (auto-save)
   :virtual #t
   :code (behavior ()
@@ -2721,6 +2722,7 @@
       )
     #f
     (label cfg-18)
+    (runs-on-game-saved (-> self which))
     (go-virtual done)
     )
   :post auto-save-post

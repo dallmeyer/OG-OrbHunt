@@ -33,15 +33,26 @@
         (new 'static 'rgba :g #xff :b #xff :a #x80)
         )
       )
+  ;; (format #t "fill-from-bg~%")
   (dotimes (s3-0 (-> *level* length))
     (let ((v1-7 (-> *level* level s3-0)))
-      (if (= (-> v1-7 status) 'active)
+      (cond
+        ((and (= (-> v1-7 status) 'active) (nonzero? (-> v1-7 bsp collide-hash)))
+          ;; (format #t "~%collide hash for ~A~%~%" (-> v1-7 name))
+          (inspect (-> v1-7 bsp collide-hash))
           (arg0 (-> v1-7 bsp collide-hash) 0 *collide-list* arg2)
+          ;; (format #t "finished method-11 for ~A ~%~%" (-> v1-7 name))
           )
+        (else
+          ;; (format #t "level ~A not active, skipping~%" (-> v1-7 name))
+          )
+        )
       )
     )
-  (if (> (-> *collide-list* num-items) 0)
+  (when (> (-> *collide-list* num-items) 0)
+      ;; (format #t "before collide cache arg1 function call~%")
       (arg1 *collide-cache* *collide-list* arg2)
+      ;; (format #t "after collide cache arg1 function call~%")
       )
   0
   (none)
@@ -183,6 +194,7 @@
       )
     0
     (when (logtest? (-> arg0 collide-with) (collide-spec backgnd))
+      ;; (format #t "fill-using-bounding-box~%")
       (fill-from-bg
         this
         (the-as
@@ -477,6 +489,7 @@
                                         )
           )
     (when (logtest? (-> arg0 collide-with) (collide-spec backgnd))
+      ;; (format 0 "fill-using-line-sphere~%")
       (fill-from-bg
         this
         (the-as
@@ -752,6 +765,7 @@
 (defmethod-mips2c "(method 11 collide-shape-prim-group)" 11 collide-shape-prim-group)
 
 (defmethod fill-and-probe-using-line-sphere ((this collide-cache) (arg0 collide-query))
+  ;; (format #t "fill-and-probe-using-line-sphere~%")
   (fill-using-line-sphere this arg0)
   (probe-using-line-sphere this arg0)
   )
@@ -962,6 +976,7 @@
     (the-as (inline-array sphere) (-> arg0 best-dist))
     (the-as int (-> arg0 best-other-prim))
     )
+  ;; (format #t "fill-using-spheres fill-using-bounding-box~%")
   (fill-using-bounding-box this arg0)
   (none)
   )

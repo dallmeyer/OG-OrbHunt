@@ -574,6 +574,7 @@
       )
     (set! (-> s1-0 bbox min y) (+ -40960.0 (-> s2-0 y)))
     (set! (-> s1-0 bbox max y) (+ 20480.0 (-> s2-0 y)))
+    ;; (format 0 "find-ground-point fill-using-bounding-box~%")
     (fill-using-bounding-box *collide-cache* s1-0)
     (vector+! (-> s1-0 start-pos) s2-0 (new 'static 'vector :y 20480.0 :w 1.0))
     (let ((v1-16 s1-0))
@@ -1424,6 +1425,7 @@
   (vector-normalize-copy! (-> arg4 start-pos) arg0 arg1)
   (vector+! (-> arg4 start-pos) (-> arg4 start-pos) (-> this trans))
   (vector-normalize-copy! (-> arg4 move-dist) arg0 (- arg2 arg1))
+  ;; (format 0 "fill-and-try-snap-to-surface fill-using-line-sphere~%")
   (fill-using-line-sphere *collide-cache* arg4)
   (try-snap-to-surface this arg0 arg1 arg2 arg3)
   )
@@ -1859,6 +1861,7 @@
 (defmethod fill-cache-for-shape ((this collide-shape) (arg0 float) (arg1 collide-query))
   (cond
     ((build-bounding-box-for-shape this (-> arg1 bbox) arg0 (-> arg1 collide-with))
+    ;;  (format #t "fill-cache-for-shape fill-using-bounding-box~%")
      (fill-using-bounding-box *collide-cache* arg1)
      (if (and *display-collide-cache* (or (= (-> this process type) target) (= (-> this process) *debug-actor*)))
          (debug-draw *collide-cache*)

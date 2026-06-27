@@ -400,19 +400,9 @@
   (spiderman)
   )
 
-;; Per-save data should be stored here. The overall mod-settings-jak2 has an array of 4 of these
-(deftype mod-save-file (basic)
-  (
-    ;; add/replace per-save fields here
-    (orb-counts         uint8  LEVEL_ID_LEN)
-    )
-  )
-
 ;; ;; Overall settings file for the mod, contains an array of 4 mod-save-files for per-save data
 (deftype mod-settings-jak3 (basic)
   (
-    (save-data    mod-save-file 4 :inline)
-
     (orb-autosave?                symbol)
     (skill-starburst?             symbol)
     (orb-ghosts?                  symbol)

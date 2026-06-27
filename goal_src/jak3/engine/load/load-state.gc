@@ -279,14 +279,18 @@
   )
 
 (defun side-mish-active? ()
-  (dotimes (s5-0 LEVEL_MAX)
-    (when (and *level* (-> *level* level s5-0) (side-mish-level? (-> *level* level s5-0 name)))
-      (return #t)
-      )
-    )
+  (let ((tm (process-by-type task-manager *active-pool*)))
+    (and tm (!= (-> tm type symbol) 'task-manager-desert-interceptors-attack)))
+  
+  ;; jak 2 code
+  ;; (dotimes (s5-0 LEVEL_MAX)
+  ;;   (when (and *level* (-> *level* level s5-0) (side-mish-level? (-> *level* level s5-0 name)))
+  ;;     (return #t)
+  ;;     )
+  ;;   )
 
-  ;; made it here -> no side mission levels
-  #f
+  ;; ;; made it here -> no side mission levels
+  ;; #f
   )
 
 ;; WARN: Return type mismatch int vs object.
@@ -306,6 +310,7 @@
          )
         ((and (logtest? (-> s1-0 level-flags) (level-flags orb-hunt)) (side-mish-active?))
          ;; side mish active, skip orb-hunt (borrow) levels
+         (dbg-format 0 "side mission active, skipping level ~A~%" (-> s1-0 name))
          )
         ((and (-> s1-0 borrow) (-> s1-0 borrow alias))
          (let* ((s0-1 (borrow-city-expansion (the-as pair (-> s1-0 borrow alias))))

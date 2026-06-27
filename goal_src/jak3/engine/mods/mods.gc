@@ -413,18 +413,18 @@
         ;; side mish orbs for any other loaded levels
         (dotimes (lvl-idx LEVEL_ID_LEN)
           (when (-> *level-orb-active* lvl-idx)
-            ;; (case lvl-idx
-            ;;   ((23) ;; "Gardens (North)" ;;  farma
-            ;;     (+! (-> *level-orb-total-counts* lvl-idx) 3)
-            ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-8))
-            ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
-            ;;       )
+            (case lvl-idx
+              ((23) ;; ctyindb (industrial north)
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-36-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3)
+                  )
 
-            ;;     (+! (-> *level-orb-total-counts* lvl-idx) 3)
-            ;;     (when (task-complete? *game-info* (game-task city-burning-bush-collection-3))
-            ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
-            ;;       )
-            ;;     )
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-37-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3)
+                  )
+                )
             ;;   ((24) ;; "Gardens (South)" ;;  farmb
             ;;     (+! (-> *level-orb-total-counts* lvl-idx) 3)
             ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-5))
@@ -469,7 +469,7 @@
             ;;         )
             ;;       )
             ;;     )
-            ;;   )
+              )
             )
           )
         
@@ -647,9 +647,9 @@
     (('crate-1136) (set-vector-meters! (-> arg0 extra trans) 1048.2800 20.8600 400.9299) ;; on top of weird broken fence thing near slums, just jump from zoomer up here
       (quaternion-set! (-> arg0 quat) 0.0000  0.7038  0.0000  0.7103))
     (('burning-bush-39) (set-vector-meters! (-> arg0 extra trans) 969.1300 51.8899 560.2600) ;; at top of broken pipe jetboard grind before turning right
-      (quaternion-set! (-> arg0 quat) 0.1823  0.7556  -0.1409  0.6130))
+      (quaternion-set! (-> arg0 quat) 0.1823  0.7556  -0.1409  0.6130)) ;; bbush-indb-2 / burning-bush-39 / burning-bush-indb-2 / city-bbush-get-to-36
     (('burning-bush-40) (set-vector-meters! (-> arg0 extra trans) 1082.8267 24.5556 607.5993) ;; on grindrail where vanilla orb challenge is
-      (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 -1.0))
+      (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 -1.0)) ;; burning-bush-40 / burning-bush-indb-3 / city-bbush-get-to-37 / bbush-indb-3
     (('parking-spot-116) (set-vector-meters! (-> arg0 extra trans) 1065.8126 8.2436 498.4766)) ;; in corner near jetboard upper grind rail area
 
     ;; ====== CTYINDA (industrial south) ======

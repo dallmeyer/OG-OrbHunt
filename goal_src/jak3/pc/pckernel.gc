@@ -847,31 +847,10 @@
 ;;;; mod-settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun reset-mod-save-file ((obj mod-settings-jak3) (save-idx int))
-  (dbg-format 0 "resetting mod save file #~D~%" save-idx)
-  (dotimes (lvl-idx LEVEL_ID_LEN)
-    (set! (-> obj save-data save-idx orb-counts lvl-idx) 0)
-    )
-  (none)
-  )
-
-(defun copy-mod-save-file ((obj mod-settings-jak3) (src-save-idx int) (dest-save-idx int))
-  (dbg-format 0 "copying mod save file #~D to #~D~%" src-save-idx dest-save-idx)
-  (dotimes (lvl-idx LEVEL_ID_LEN)
-    (set! (-> obj save-data dest-save-idx orb-counts lvl-idx) (-> obj save-data src-save-idx orb-counts lvl-idx))
-    )
-  (none)
-  )
-
 (defmethod reset mod-settings-jak3 ((obj mod-settings-jak3) (call-handlers symbol))
   "Set the default settings for mod settings"
 
   (format 0 "resetting mod settings~%")
-
-  ;; reset per-save fields here
-  (dotimes (save-idx 4)
-    (reset-mod-save-file obj save-idx)
-    )
 
   (set! (-> obj orb-autosave?) #t)
   (set! (-> obj skill-starburst?) #f)
@@ -942,14 +921,6 @@
   "handle the text parsing input for the 'settings' group"
 
   (case-str *pc-temp-string*
-    ;; handle per-save fields here
-    (("orb-counts")
-      (dotimes (save-idx 4)
-        (dotimes (lvl-idx LEVEL_ID_LEN)
-          (set! (-> obj save-data save-idx orb-counts lvl-idx) (file-stream-read-int file))
-          )
-        )
-      )
 
     (("orb-autosave?") (set! (-> obj orb-autosave?) (file-stream-read-symbol file)))
     (("skill-starburst?") (set! (-> obj skill-starburst?) (file-stream-read-symbol file)))
@@ -971,16 +942,6 @@
 
 (defmethod handle-output-settings mod-settings-jak3 ((obj mod-settings-jak3) (file file-stream))
   "handle the text writing output for the 'settings' group"
-
-  ;; handle per-save fields here
-  (format file "  (orb-counts")
-  (dotimes (save-idx 4)
-    (format file "~%    ")
-    (dotimes (lvl-idx LEVEL_ID_LEN)
-      (format file " ~D" (-> obj save-data save-idx orb-counts lvl-idx))
-      )
-    )
-  (format file ")~%")
 
   (format file "  (orb-autosave? ~A)~%" (-> obj orb-autosave?))
   (format file "  (skill-starburst? ~A)~%" (-> obj skill-starburst?))

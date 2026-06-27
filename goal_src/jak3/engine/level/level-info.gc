@@ -3289,9 +3289,11 @@
                   :callback-list '()
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #xa #x0 #x0 #x0 #x0)
+                    :borrow-size (new 'static 'array uint16 5 #x8 #x0 #x0 #x0 #x0)
+                    ;; :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
                     :borrow-info (new 'static 'array object 5 '(orbs-ctyindb display) #f #f #f #f)
-                    )                  :bottom-height (meters -15)
+                    )
+                  :bottom-height (meters -15)
                   :fog-height (meters 80)
                   :max-rain 1.0
                   :fog-mult 1.0
@@ -21423,6 +21425,7 @@
     :dbname ,name
     :taskname 'default
     :master-level #f
+    :level-flags (level-flags orb-hunt)
     :packages '()
     ;; :run-packages '("common")
     :memory-mode (level-memory-mode ,level-size)

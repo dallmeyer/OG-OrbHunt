@@ -14,6 +14,7 @@
   (vector-length-max! (-> arg0 move-dist) (-> this max-check-distance))
   (set! (-> arg0 radius) arg3)
   (set! (-> arg0 collide-with) (the-as collide-spec (logand (the-as collide-spec arg2) (-> this collide-with))))
+  ;; (format 0 "los fill-using-line-sphere~%")
   (fill-using-line-sphere *collide-cache* arg0)
   (let ((f30-0 (probe-using-line-sphere *collide-cache* arg0))
         (f28-0 (vector-length arg1))

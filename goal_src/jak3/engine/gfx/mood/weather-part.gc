@@ -558,6 +558,7 @@
             )
       (set! (-> v1-2 action-mask) (collide-action solid))
       )
+    ;; (format 0 "weather fill-using-line-sphere~%")
     (fill-using-line-sphere *collide-cache* s4-0)
     (cond
       ((>= (probe-using-line-sphere *collide-cache* s4-0) 0.0)
