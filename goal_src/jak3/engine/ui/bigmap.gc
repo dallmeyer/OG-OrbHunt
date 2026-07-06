@@ -494,6 +494,9 @@
   (the-as symbol (and (-> *bigmap* progress-minimap) (-> *bigmap* progress-minimap2)))
   )
 
+;; modbase - offset for offset for levels without a bigmap image
+(define *off-off* (new 'static 'vector :x 344064.0000 :y 278528.0000 :w 0.00075))
+
 (defmethod draw! ((this bigmap) (arg0 int) (arg1 int) (arg2 int) (arg3 int))
   (local-vars
     (sv-96 (inline-array vector4w))
@@ -552,10 +555,10 @@
       (bigmap-method-20 this s2-0)      
       ;; use target-pos as relative offset if no preset map
       (when (= (-> this load-index) (bigmap-id none))
-        (set! (-> this offset x) (- (-> (target-pos 0) x) 1290240.0000))
-        (set! (-> this offset y) (- (-> (target-pos 0) z) 1052672.0000))
-        (set! (-> this offset z) (- (-> (target-pos 0) y) 1052672.0000))
-        (set! (-> this offset w) 0.0002)
+        (set! (-> this offset x) (- (-> (target-pos 0) x) (-> *off-off* x)))
+        (set! (-> this offset y) (- (-> (target-pos 0) z) (-> *off-off* y)))
+        (set! (-> this offset z) (- (-> (target-pos 0) y) (-> *off-off* z)))
+        (set! (-> this offset w) (-> *off-off* w))
         )
       ;; (when (!= (-> this load-index) (bigmap-id none))
         ;; (when (= (-> this y0) 1840)
@@ -1075,7 +1078,6 @@
   0
   )
 
-(define *map-offset* (new 'static 'vector :w 0.0002))
 (defmethod bigmap-method-20 ((this mini-bigmap) (arg0 dma-buffer))
   (local-vars (sv-16 uint))
   (let* ((s4-0 (the-as (pointer uint32) (-> this bigmap-images (-> this load-index) art-group)))
@@ -1158,10 +1160,10 @@
     (bigmap-method-20 this s2-0)
     ;; use target-pos as relative offset if no preset map
     (when (= (-> this load-index) (bigmap-id none))
-      (set! (-> this offset x) (- (-> (target-pos 0) x) 1290240.0000))
-      (set! (-> this offset y) (- (-> (target-pos 0) z) 1052672.0000))
-      (set! (-> this offset z) (- (-> (target-pos 0) y) 1052672.0000))
-      (set! (-> this offset w) 0.0002)
+      (set! (-> this offset x) (- (-> (target-pos 0) x) (-> *off-off* x)))
+      (set! (-> this offset y) (- (-> (target-pos 0) z) (-> *off-off* y)))
+      (set! (-> this offset z) (- (-> (target-pos 0) y) (-> *off-off* z)))
+      (set! (-> this offset w) (-> *off-off* w))
       )
 
     ;; (when (!= (-> this load-index) (bigmap-id none))
