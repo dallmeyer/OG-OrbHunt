@@ -1709,11 +1709,12 @@
               :origin-joint-index 3
               )
 
-(defskelgroup skel-kid-highres kid-highres kid-highres-lod0-jg kid-highres-kid-walk-ja
-              ((kid-highres-lod0-mg (meters 999999)))
-              :bounds (static-spherem 0 0 0 10)
-              :origin-joint-index 3
-              )
+;; moved to scene-actor for orbhunt
+;; (defskelgroup skel-kid-highres kid-highres kid-highres-lod0-jg kid-highres-kid-walk-ja
+;;               ((kid-highres-lod0-mg (meters 999999)))
+;;               :bounds (static-spherem 0 0 0 10)
+;;               :origin-joint-index 3
+;;               )
 
 (defskelgroup skel-kor-highres kor-highres kor-highres-lod0-jg kor-highres-idle-ja
               ((kor-highres-lod0-mg (meters 999999)))

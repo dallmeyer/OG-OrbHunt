@@ -15,7 +15,7 @@
 
 #include "fmt/format.h"
 
-static constexpr bool link_debug_printfs = true;
+static constexpr bool link_debug_printfs = false;
 
 /*!
  * Make progress on linking.

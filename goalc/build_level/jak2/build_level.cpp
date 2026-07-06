@@ -3,13 +3,13 @@
 #include "common/util/gltf_util.h"
 
 #include "decompiler/extractor/extractor_util.h"
+#include "decompiler/level_extractor/extract_collide_frags.h"
 #include "decompiler/level_extractor/extract_merc.h"
 #include "goalc/build_level/collide/jak2/collide.h"
 #include "goalc/build_level/common/Tfrag.h"
 #include "goalc/build_level/jak2/Entity.h"
 #include "goalc/build_level/jak2/FileInfo.h"
 #include "goalc/build_level/jak2/LevelFile.h"
-#include <decompiler/level_extractor/extract_collide_frags.h>
 
 namespace jak2 {
 bool run_build_level(const std::string& input_file,
@@ -53,7 +53,6 @@ bool run_build_level(const std::string& input_file,
   auto dts = decompiler::DecompilerTypeSystem(GameVersion::Jak2);
   dts.parse_enum_defs({"decompiler", "config", "jak2", "all-types.gc"});
   std::vector<EntityActor> actors;
-  // offset to avoid conflict with vanilla actors
   add_actors_from_json(level_json.at("actors"), actors, level_json.value("base_id", 1234), dts);
   std::sort(actors.begin(), actors.end(), [](auto& a, auto& b) { return a.aid < b.aid; });
   auto duplicates = std::adjacent_find(actors.begin(), actors.end(),

@@ -7,11 +7,12 @@
 
 ;; DECOMP BEGINS
 
-(defskelgroup skel-kid kid kid-lod0-jg kid-idle-ja
-              ((kid-lod0-mg (meters 999999)))
-              :bounds (static-spherem 0 0 0 10)
-              :origin-joint-index 3
-              )
+;; moved to scene actor
+;; (defskelgroup skel-kid kid kid-lod0-jg kid-idle-ja
+;;               ((kid-lod0-mg (meters 999999)))
+;;               :bounds (static-spherem 0 0 0 10)
+;;               :origin-joint-index 3
+;;               )
 
 (defskelgroup skel-rhino-wheel-fma rhino-wheel-fma rhino-wheel-fma-lod0-jg rhino-wheel-fma-idle-ja
               ((rhino-wheel-fma-lod0-mg (meters 999999)))

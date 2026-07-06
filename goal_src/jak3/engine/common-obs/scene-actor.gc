@@ -474,6 +474,45 @@
   (none)
   )
 
+;; taken from title-obs
+(defskelgroup skel-kid-highres kid-highres kid-highres-lod0-jg kid-highres-kid-walk-ja
+              ((kid-highres-lod0-mg (meters 999999)))
+              :bounds (static-spherem 0 0 0 10)
+              :origin-joint-index 3
+              )
+
+;; taken from rublcst-scenes
+(defskelgroup skel-kid kid kid-lod0-jg kid-idle-ja
+              ((kid-lod0-mg (meters 999999)))
+              :bounds (static-spherem 0 0 0 10)
+              :origin-joint-index 3
+              )
+
+(deftype kid-npc (process-taskable)
+  ()
+  )
+
+
+(defmethod get-art-element ((this kid-npc))
+  ;; (case (-> this task actor)
+  ;;   (((game-task-actor kid-orbhunt))
+    ;;  (-> this draw art-group data 3) ;; for skel-kid
+     (-> this draw art-group data 2) ;; for skel-kid-highres
+    ;;  )
+    ;; )
+  )
+
+(defmethod init-skeleton! ((this kid-npc))
+  (initialize-skeleton
+    this
+    (the-as skeleton-group (art-group-get-by-name *level* "skel-kid-highres" (the-as (pointer level) #f)))
+    (the-as pair 0)
+    )
+  (set! (-> this draw light-index) (the-as uint 30))
+  0
+  (none)
+  )
+
 (defskelgroup skel-kleever-highres kleever-highres kleever-highres-lod0-jg kleever-highres-idle-ja
               ((kleever-highres-lod0-mg (meters 999999)))
               :bounds (static-spherem 0 0 0 3)

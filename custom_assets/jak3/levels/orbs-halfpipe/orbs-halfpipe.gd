@@ -6,5 +6,6 @@
  (
   "air-train-ag.go"
   "warp-gate-ag.go"
+  "kid-highres-ag.go"
   "orbs-halfpipe.go"
   ))

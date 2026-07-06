@@ -678,8 +678,6 @@ u32 ISOThread() {
       do {
         if (pLVar14->id != 0) {
           if (g_game_version != GameVersion::Jak3) {
-            QueueVAGStream(pLVar14);
-          } else {
             // doesn't work.
             QueueVAGStream(pLVar14);
           }

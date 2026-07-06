@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": ["air-train-ag", "warp-gate-ag"],
+  "art_groups": ["air-train-ag", "warp-gate-ag", "kid-highres-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -69,13 +69,24 @@
       }
     },    
     {
-      "trans": [  124.01, -34.0, -50.04 ], // on middle platforms, lined up with YO
+      "trans": [ 140.03,  -32.00,  -50.16  ], // on middle platforms
       "etype": "launcher",
       "game_task": 0, 
       "quat" : [0, 0.6314, 0, 0.7754],
-      "bsphere": [ 124.01, -34.0, -50.04 , 10],
+      "bsphere": [ 140.03,  -32.00,  -50.16  , 10],
       "lump": {
         "name":"halfpipe-launcher-01"
+      }
+    },
+    {
+      "trans": [ -20.0000, -38.000, -56.0000], // kid near vanilla fuel-cell
+      "etype": "kid-npc",  // actor type
+      "game_task": 0, // associated game task (for powercells, etc)
+      "quat" : [  0.0, 0.0, 0.0, -1.0], // quaternion
+      "bsphere": [ -20.0000, -38.000, -56.0000, 6.928242206573486 ], // bounding sphere
+      "lump": {
+        "name": "halfpipe-kid-npc",
+        "task-actor": ["int32", 70]
       }
     },
 
@@ -100,11 +111,11 @@
       }
     },
     {
-      "trans": [       172.2170, -10.8629, 39.2295 ], // off right big launch ramp, extended frontflip
+      "trans": [       172.2170, -2.3629, 39.2295 ], // off right big launch ramp, extended frontflip
       "etype": "skill",
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
-      "bsphere": [      172.2170, -10.8629, 39.2295, 10],
+      "bsphere": [      172.2170, -2.3629, 39.2295, 10],
       "lump": {
         "name":"halfpipe-skill-03"
       }
@@ -317,6 +328,16 @@
       "bsphere": [  -3.38, -42.62, 118.35, 10],
       "lump": {
         "name":"halfpipe-skill-24"
+      }
+    },
+    {
+      "trans": [   -7.8410, -0.3404, -50.0469], // way up above swingpoles - proxy on corner (similar strat as trash can proxy: crouch idle, square+hold forward, then X)
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -7.8410, -0.3404, -50.0469, 10],
+      "lump": {
+        "name":"halfpipe-skill-25"
       }
     },
 

@@ -168,7 +168,6 @@
     :meta "game/assets/jak1/subtitle/subtitle_meta_bs-BA.json"
     :meta-base "game/assets/jak1/subtitle/subtitle_meta_en-US.json")
   )
-  
 
 
 

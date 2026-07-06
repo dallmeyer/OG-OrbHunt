@@ -67,7 +67,7 @@ These path-controls are typically allocated on a process heap."
     )
   )
 
-
+(define-extern set-vector-meters! (function vector float float float vector))
 ;; ERROR: Stack slot load at 32 mismatch: defined as size 4, got size 16
 ;; ERROR: Stack slot load at 32 mismatch: defined as size 4, got size 16
 ;; WARN: Return type mismatch object vs path-control.
@@ -135,6 +135,13 @@ These path-controls are typically allocated on a process heap."
                 )
               )
             )
+          )
+        )
+      ;; orb hunt - path overrides
+      (case (-> proc name) :comp name=
+        (('sew-floating-plat-1)
+          (set-vector-meters! (-> (the-as path-control s2-0) curve cverts 0) 274.6139 -108.9415 -12.8453)
+          (set-vector-meters! (-> (the-as path-control s2-0) curve cverts 1) 263.9836 -77.1501 -29.1391)
           )
         )
       (the-as path-control s2-0)

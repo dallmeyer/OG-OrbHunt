@@ -111,7 +111,27 @@
         "author": "TheGuy"
       }
     },
-    
+    {
+      "trans": [ 2426.0673, 64.9158, -133.6934], // on spike at top of building with spinning windmill 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2426.0673, 64.9158, -133.6934, 10],
+      "lump": {
+        "name":"wascitya-skill-07",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 2424.5375, 83.5734, -143.7800], // up high by spinning windmill, abah concussor from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2424.5375, 83.5734, -143.7800, 10],
+      "lump": {
+        "name":"wascitya-skill-08"
+      }
+    },
     
 
     // GHOSTS

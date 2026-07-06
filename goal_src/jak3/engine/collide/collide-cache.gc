@@ -39,7 +39,7 @@
       (cond
         ((and (= (-> v1-7 status) 'active) (nonzero? (-> v1-7 bsp collide-hash)))
           ;; (format #t "~%collide hash for ~A~%~%" (-> v1-7 name))
-          (inspect (-> v1-7 bsp collide-hash))
+          ;; (inspect (-> v1-7 bsp collide-hash))
           (arg0 (-> v1-7 bsp collide-hash) 0 *collide-list* arg2)
           ;; (format #t "finished method-11 for ~A ~%~%" (-> v1-7 name))
           )

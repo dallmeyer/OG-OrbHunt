@@ -959,6 +959,14 @@
       (quaternion-set! (-> arg0 quat) 0.0000  0.8947  0.0000  0.4465))
     (('crate-1268) (set-vector-meters! (-> arg0 extra trans) 259.9540 -127.3362 57.0922) ;; on ledge over door to next section
       (quaternion-set! (-> arg0 quat) 0.0000  0.9801  0.0000  0.1984))
+    (('sew-floating-plat-1) (set-vector-meters! (-> arg0 extra trans) 274.6139 -108.9415 -12.8453)) ;; up high around center, activate and take up to orb atop pipe
+    (('sew-floor-switch-1) (set-vector-meters! (-> arg0 extra trans) 253.8149 -121.9871 -39.7528)) ;; in corner behind pipes on walkway to vanilla orb room
+    
+    ;; SEWC (3.2)
+    (('sew-laser-guard-4) (set-vector-meters! (-> arg0 extra trans) 258.3878 -142.0678 88.4227 )
+      (quaternion-set! (-> arg0 quat) 0.0000  0.9632  0.0000  -0.2687))
+    (('sew-laser-guard-5) (set-vector-meters! (-> arg0 extra trans) 221.1450 -143.3495 84.0595)
+      (quaternion-set! (-> arg0 quat) 0.0000  0.7208  0.0000  0.6930))
 
     ;; ====== SEWD (sewers 3.3) ======
     (('crate-1303) (set-vector-meters! (-> arg0 extra trans) -88.2003 -117.9119 -2.5337) ;; on top of arch over slide entrance
@@ -1143,12 +1151,16 @@
 
     (('eco-1) ;; green eco, up on last chain of platforms
       (set-vector-meters! (-> arg0 extra trans)   148.08 -29.40 -42.08  )) 
-    (('eco-2) ;; blue eco, early platform, closer to launcher
+    (('eco-4) ;; yellow eco, early platform
       (set-vector-meters! (-> arg0 extra trans)   88.21  -33.4  -62.0)) 
     (('eco-3) ;; red eco, early platform
       (set-vector-meters! (-> arg0 extra trans)   71.82  -33.4  -62.0)) 
-    (('eco-4) ;; yellow eco, early platform
-      (set-vector-meters! (-> arg0 extra trans)   56.00  -33.4  -62.0))
+    (('eco-2) ;; blue eco, by swingpoles (forces ladder -> vent for launchpad)
+      (set-vector-meters! (-> arg0 extra trans)   2.1126 -30.5011 -57.1273))
+    (('crate-1) 
+      (set-vector-meters! (-> arg0 extra trans)  56.00  -34.0  -62.0))
+    (('fuel-cell-1) 
+      (set-vector-meters! (-> arg0 extra trans)  -20.0000 -34.5601 -56.0000))
 
     (('dark-eco-vent-1)
       (set-vector-meters! (-> arg0 extra trans) 73.9986 -37.8954 -49.9974))
@@ -1165,7 +1177,7 @@
     (('ladder-3) ;; 
       (set-vector-meters! (-> arg0 extra trans) 163.7432 -15.9883 -42.0092))
     (('precur-warp-effect-1)
-      (set-vector-meters! (-> arg0 extra trans) 172.2319 -10.3819 39.2106)
+      (set-vector-meters! (-> arg0 extra trans) 172.2319 -1.8819 39.2106)
       (quaternion-set! (-> arg0 quat) 0.0000       0.7065       0.0000       0.7077))
     (('urn-a-1)
       (set-vector-meters! (-> arg0 extra trans) 115.9935 -34.9973 -49.9939))
@@ -1398,6 +1410,17 @@
 (defun all-orbs-check? ((idx uint))
   (= (-> *level-orb-collected-counts* idx) (-> *level-orb-total-counts* idx))
   )
+
+;; its an elevator so only supports path w start/end positions, abandoned this
+;; (define *sfp-path* (new 'static 'inline-array vector 7
+;;   (static-vector-meters 299.0046 -136.8068 -4.6782)
+;;   (static-vector-meters 329.2018 -77.1501 -5.6025)
+;;   (static-vector-meters 294.7157 -77.1501 40.9803)
+;;   (static-vector-meters 245.7943 -77.1501 5.1893)
+;;   (static-vector-meters 263.9836 -77.1501 -29.1391)
+;;   (static-vector-meters 328.7232 -121.1511 -36.7061)
+;;   (static-vector-meters 341.6452 -130.8514 -18.8891)
+;;   ))
 
 (define *zoom-sensitivity-scale* 1.0)
 (define *show-mini-bigmap* #f)
