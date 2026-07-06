@@ -55,17 +55,28 @@
       "lump": {
         "name":"sewd-skill-01"
       }
+    },
+    {
+      "trans": [ -165.3713, -154.5414, 16.2586], // on brown pipe near ladder 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -165.3713, -154.5414, 16.2586, 10],
+      "lump": {
+        "name":"sewd-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -161.0343, -141.2687, 13.0535], // up on high ledge near ladder, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -161.0343, -141.2687, 13.0535, 10],
+      "lump": {
+        "name":"sewd-skill-03"
+      }
     }//,
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"sewd-skill-02"
-    //   }
-    // },
     
     
 

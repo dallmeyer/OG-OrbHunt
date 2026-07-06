@@ -245,7 +245,7 @@
         (moved? #f))
     ;; update extra vectors for certain types
     (cond
-      ((type-type? (-> proc type) skill)
+      ((or (type-type? (-> proc type) skill) (type-type? (-> proc type) money))
         (set! proc-extra-vec (-> (the money proc) base))
         )
       ((type-type? (-> proc type) crate)

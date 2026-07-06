@@ -46,28 +46,136 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [ 165.0544, -134.6385, 18.2494], // behind pipe at end of hallway with lasers
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 165.0544, -134.6385, 18.2494, 10],
+      "lump": {
+        "name":"sewc-skill-01"
+      }
+    },
+    {
+      "trans": [ 129.3405, -116.1964, 36.6240], // up on pipe running down middle of first room over water, super extended ff, then concussor to neutralize momentum 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 129.3405, -116.1964, 36.6240, 10],
+      "lump": {
+        "name":"sewc-skill-02"
+      }
+    },
+    {
+      "trans": [ 119.8317, -117.4071, -10.5830], // on seam of pipe over stairs in first room, follow from ^ (or concussor jump onto lip of adjacent pipe and scoot around)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 119.8317, -117.4071, -10.5830, 10],
+      "lump": {
+        "name":"sewc-skill-03"
+      }
+    },
+    {
+      "trans": [ 103.4404, -141.4369, -44.9264], // behind 2 pipes and invis wall in corner, extended -> concussor from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 103.4404, -141.4369, -44.9264, 10],
+      "lump": {
+        "name":"sewc-skill-04"
+      }
+    },
+    {
+      "trans": [ 145.9297, -132.7796, 42.3290], // on mid seam ledge of mid pipe on wall over void 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 145.9297, -132.7796, 42.3290, 10],
+      "lump": {
+        "name":"sewc-skill-05"
+      }
+    },
+    {
+      "trans": [ 146.3253, -143.9353, 32.2893], // on lower seam ledge of first pipe on wall over void 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 146.3253, -143.9353, 32.2893, 10],
+      "lump": {
+        "name":"sewc-skill-06"
+      }
+    },
+    {
+      "trans": [ 152.0787, -126.0509, 8.4390], // on lip of door frame coming out of first hallway 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 152.0787, -126.0509, 8.4390, 10],
+      "lump": {
+        "name":"sewc-skill-07"
+      }
+    },
+    {
+      "trans": [ 87.7730, -118.0026, 33.2933], // up on wall above pipes along path between first and second rooms 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 87.7730, -118.0026, 33.2933, 10],
+      "lump": {
+        "name":"sewc-skill-08",
+        "bob-amount": ["float", 0.5]
+      }
+    },
+    {
+      "trans": [ 57.8323, -120.9775, 34.5157], // up above corner pipes at end of path between first and second rooms, above where vanilla lasers are
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 57.8323, -120.9775, 34.5157, 10],
+      "lump": {
+        "name":"sewc-skill-09",
+        "bob-amount": ["float", 0.5]
+      }
+    },
+    {
+      "trans": [ 12.5470, -112.8483, -6.0574], // up left in corner above 2nd pipe with water coming out, concussor jump
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 12.5470, -112.8483, -6.0574, 10],
+      "lump": {
+        "name":"sewc-skill-10"
+      }
+    },
+    {
+      "trans": [ 0.8539, -139.3019, 16.2502], // down low between pipes over void, deep ass extended
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 0.8539, -139.3019, 16.2502, 10],
+      "lump": {
+        "name":"sewc-skill-11"
+      }
+    },
     
+    // CRATES
+    {
+      "trans": [ 23.2982, -135.4979, -4.0721], // water ledge below pipe (who knew this was here???)
+      "etype": "skill-crate",
+      "game_task": 0, 
+      "quat" : [ 0.0, 0.0, 0.0, 1.0],
+      "bsphere": [ 23.2982, -135.4979, -4.0721, 10],
+      "lump": {
+        "name": "sewc-crate-1",
+        "crate-type": "iron",
+        "eco-info": [
+          "int32",
+          24, // (pickup-type skill)
+          1 // amount
+        ]
+      }
+    }//,
     
 
     // GHOSTS

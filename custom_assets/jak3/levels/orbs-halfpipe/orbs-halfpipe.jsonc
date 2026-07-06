@@ -75,7 +75,8 @@
       "quat" : [0, 0.6314, 0, 0.7754],
       "bsphere": [ 140.03,  -32.00,  -50.16  , 10],
       "lump": {
-        "name":"halfpipe-launcher-01"
+        "name":"halfpipe-launcher-01",
+        "spring-height": ["float", 225280.0000]
       }
     },
     {
@@ -338,6 +339,16 @@
       "bsphere": [  -7.8410, -0.3404, -50.0469, 10],
       "lump": {
         "name":"halfpipe-skill-25"
+      }
+    },
+    {
+      "trans": [ 140.12,  23.12,  -50.24 ], // way up above launcher
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 140.12,  23.12,  -50.24 , 10],
+      "lump": {
+        "name":"halfpipe-skill-26"
       }
     },
 

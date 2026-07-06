@@ -2552,7 +2552,14 @@
   :event (behavior ((proc process) (argc int) (message symbol) (block event-message-block))
     (when (or (= message 'touch) (= message 'attack))
       (set-time! (-> self state-time))
-      (send-event proc 'launch (-> self spring-height) (-> self camera) (-> self dest) (-> self seek-time))
+      (cond
+        ((= proc *target*)
+          (when (and (not (logtest? (focus-status teleporting edge-grab) (-> *target* focus-status)))
+                     (!= (-> *target* state name) 'target-edge-grab-jump))
+            (send-event proc 'launch (-> self spring-height) (-> self camera) (-> self dest) (-> self seek-time))))
+        (else
+          (send-event proc 'launch (-> self spring-height) (-> self camera) (-> self dest) (-> self seek-time)))
+        )
       )
     (cond
       ((= message 'instant-death)
@@ -2591,7 +2598,8 @@
                   (and (>= (+ 2867.2 (-> (the-as collide-shape (-> self root)) root-prim prim-core world-sphere w))
                            (vector-vector-distance (-> self root trans) (-> *target* control trans))
                            )
-                       (not (logtest? (focus-status teleporting) (-> *target* focus-status)))
+                       (not (logtest? (focus-status teleporting edge-grab) (-> *target* focus-status)))
+                       (!= (-> *target* state name) 'target-edge-grab-jump)
                        )
                   )
              (not (time-elapsed? (-> self state-time) (seconds 0.5)))
