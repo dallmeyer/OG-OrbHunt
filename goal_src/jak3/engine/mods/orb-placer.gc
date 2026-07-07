@@ -246,11 +246,9 @@
     ;; update extra vectors for certain types
     (cond
       ((or (type-type? (-> proc type) skill) (type-type? (-> proc type) money))
-        (set! proc-extra-vec (-> (the money proc) base))
-        )
+        (set! proc-extra-vec (-> (the money proc) base)))
       ((type-type? (-> proc type) crate)
-        (set! proc-extra-vec (-> (the crate proc) base))
-        )
+        (set! proc-extra-vec (-> (the crate proc) base)))
       )
 
     ;; X/Z based on camera

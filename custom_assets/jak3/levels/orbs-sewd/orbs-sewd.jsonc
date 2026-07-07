@@ -76,8 +76,39 @@
       "lump": {
         "name":"sewd-skill-03"
       }
+    },
+    {
+      "trans": [   -147.0224, -146.7552, 41.2502], // way up between pipes (no collision) in big first room, extended ff from top of ladder area
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [  -147.0224, -146.7552, 41.2502, 10],
+      "lump": {
+        "name":"sewd-skill-04"
+      }
+    },
+    {
+      "trans": [ -226.1277, -166.0028, 68.3608], // inside frog in other vanilla orb area
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -226.1277, -166.0028, 68.3608, 10],
+      "lump": {
+        "name":"sewd-skill-05",
+        "alt-actor": "sewer-frog-5"
+      }
+    },
+    {
+      "trans": [ -150.8623, -157.0, -26.9247], // inside frog at top of ladder
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [  -150.8623, -157.0, -26.9247, 10],
+      "lump": {
+        "name":"sewd-skill-06",
+        "alt-actor": "sewer-frog-6"
+      }
     }//,
-    
     
 
     // GHOSTS

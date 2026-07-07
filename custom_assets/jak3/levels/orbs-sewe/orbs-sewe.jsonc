@@ -46,29 +46,88 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
-    
-    
+    {
+      "trans": [ -255.7750, -175.6342, -20.1535], // left corner underwater where you dive under fence
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -255.7750, -175.6342, -20.1535, 10],
+      "lump": {
+        "name":"sewe-skill-01"
+      }
+    },
+    {
+      "trans": [ -262.5164, -167.7772, 10.9353], // behind twin pipes on first level of waterfalls 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -262.5164, -167.7772, 10.9353, 10],
+      "lump": {
+        "name":"sewe-skill-02"
+      }
+    },
+    {
+      "trans": [ -362.2338, -128.1501, -45.7437], // up above lamp in corner at top of waterfalls 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -362.2338, -128.1501, -45.7437, 10],
+      "lump": {
+        "name":"sewe-skill-03"
+      }
+    },
+    {
+      "trans": [ -330.3847, -124.0729, -38.4754], // up on pipe above top waterfall (similar climb as ^) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -330.3847, -124.0729, -38.4754, 10],
+      "lump": {
+        "name":"sewe-skill-04"
+      }
+    },
+    {
+      "trans": [ -361.8018, -133.2104, 54.6027], // hidden behind end switch
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -361.8018, -133.2104, 54.6027, 10],
+      "lump": {
+        "name":"sewe-skill-05",
+        "alt-actor": "sew-power-switch-1"
+      }
+    },
+    {
+      "trans": [ -375.6963, -143.8712, -18.1323], // behind waterfall at top
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -375.6963, -143.8712, -18.1323, 10],
+      "lump": {
+        "name":"sewe-skill-06"
+      }
+    },
+    {
+      "trans": [ -304.2990, -135.2237, 17.6977], // above pipe on left side room in waterfall room
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -304.2990, -135.2237, 17.6977, 10],
+      "lump": {
+        "name":"sewe-skill-07"
+      }
+    },
+    {
+      "trans": [ -260.4763, -137.5866, -33.1335], // way up on ledge (no collision) above gate you dive under (jetboard triangle cancel launch)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -260.4763, -137.5866, -33.1335, 10],
+      "lump": {
+        "name":"sewe-skill-08"
+      }
+    }//,
+
 
     // GHOSTS
     // {

@@ -972,7 +972,7 @@
       (quaternion-set! (-> arg0 quat) -0.9940  -0.0047  -0.1083  -0.0005))
     (('sew-laser-guard-8) (set-vector-meters! (-> arg0 extra trans) 23.2471 -126.3140 -8.1761))
     (('sew-laser-guard-2) (set-vector-meters! (-> arg0 extra trans) 127.7804 -144.2643 -40.1751))
-    (('sew-laser-guard-9) (set-vector-meters! (-> arg0 extra trans) -28.9444 -131.7569 31.2791))
+    (('sew-laser-guard-9) (set-vector-meters! (-> arg0 extra trans) -28.9444 -131.9969 31.2791))
 
     ;; ====== SEWD (sewers 3.3) ======
     (('crate-1303) (set-vector-meters! (-> arg0 extra trans) -88.2003 -117.9119 -2.5337) ;; on top of arch over slide entrance
@@ -988,6 +988,22 @@
       (quaternion-set! (-> arg0 quat) 0.0000  0.7090  0.0000  0.7051))
     (('crate-1308) (set-vector-meters! (-> arg0 extra trans) -226.5832 -164.1903 24.3525) ;; inside pipe opening near vanilla orb crate location
       (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
+    (('sewer-frog-6) (set-vector-meters! (-> arg0 extra trans) -150.8623 -157.8169 -26.9247)) ;; top of ladder, hiding orb
+    (('sewer-frog-5) (set-vector-meters! (-> arg0 extra trans) -226.1277 -166.0028 68.3608)) ;; other vanilla orb area, hiding orb
+
+    ;; SEWE 3.4
+    (('kg-grunt-33) (set-vector-meters! (-> arg0 extra trans) -330.7720 -142.0000 -48.5055))
+    (('kg-grunt-34) (set-vector-meters! (-> arg0 extra trans) -331.7807 -142.0000 -55.8938))
+    (('kg-grunt-35) (set-vector-meters! (-> arg0 extra trans) -335.3058 -142.0000 -51.3055))
+    (('crate-1130) (set-vector-meters! (-> arg0 extra trans) -304.1921 -153.8078 40.2217))
+    (('crate-1131) (set-vector-meters! (-> arg0 extra trans) -304.2040 -152.5456 40.2339))
+
+    ;; SEWG 2.2
+    (('sew-vent-11) (set-vector-meters! (-> arg0 extra trans) 329.4689 -119.9199 254.1881)
+      (quaternion-set! (-> arg0 quat) 0.0000  0.0000  0.0000  1.0000))
+    (('sew-vent-9) (set-vector-meters! (-> arg0 extra trans) 329.3590 -110.5599 254.2815)
+      (quaternion-set! (-> arg0 quat) 0.0000  0.0000  1.0  0.0))
+    (('sew-jump-pad-14) (set-vector-meters! (-> arg0 extra trans) 121.9049 -97.0444 139.5236))
 
     ;; ====== CTYSLUMA (slums) ======
     (('skill-176) (set-vector-meters! (-> arg0 extra trans)  737.9973  8.5156  -93.4688)) ;; in corner behind fence at entrance to ctyslumb
@@ -1272,7 +1288,7 @@
             (return #f)
             )          
           )
-        (('tow-spawner)
+        (('tow-spawner 'sew-power-switch)
           (when (not (logtest? (-> alt-actor extra perm status) (entity-perm-status subtask-complete)))
             (return #f))
           )
@@ -2081,6 +2097,9 @@
 
   (skill-follow-y-offset "wascityb-skill-10" "tizard-7" (meters 0.7))
   (skill-follow-y-offset "wascityb-skill-11" "dogat-9" (meters 0.7))
+  
+  (skill-follow-y-offset "sewd-skill-05" "sewer-frog-5" (meters 0.7))
+  (skill-follow-y-offset "sewd-skill-06" "sewer-frog-6" (meters 0.7))
 
   ;; dev stuff
   (when (and (cpad-pressed? 0 select) (not (cpad-hold? 0 l3)) (not (paused?)) (not (movie?)))

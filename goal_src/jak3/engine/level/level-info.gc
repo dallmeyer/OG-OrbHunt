@@ -7665,10 +7665,14 @@
                    :name "sewc-start"
                    :level 'sewc
                    :flags (continue-flags no-auto)
-                   :trans (new 'static 'vector :x 1027314.06 :y -580524.06 :z 329200.03 :w 1.0)
-                   :camera-trans (new 'static 'vector :x 1065068.1 :y -560975.06 :z 303120.78 :w 1.0)
-                   :quat (new 'static 'vector4h :data (new 'static 'array int16 4 -16 -18057 0 #x6ac9))
-                   :camera-rot (new 'static 'array int16 9 #x4afe 0 #x67b7 -3296 #x7eff #x94e -26344 -4069 #x4a6a)
+                  ;;  :trans (new 'static 'vector :x 1027314.06 :y -580524.06 :z 329200.03 :w 1.0)
+                  ;;  :camera-trans (new 'static 'vector :x 1065068.1 :y -560975.06 :z 303120.78 :w 1.0)
+                  ;;  :quat (new 'static 'vector4h :data (new 'static 'array int16 4 -16 -18057 0 #x6ac9))
+                  ;;  :camera-rot (new 'static 'array int16 9 #x4afe 0 #x67b7 -3296 #x7eff #x94e -26344 -4069 #x4a6a)
+                   :trans (new 'static 'vector :x (meters 250.9948) :y (meters -141.8848) :z (meters 91.2830) :w 1.0)
+                   :camera-trans (new 'static 'vector :x (meters 261.5166) :y (meters -137.1278) :z (meters 87.9853) :w 1.0)
+                   :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 30735 0 -11359))
+                   :camera-rot (new 'static 'array int16 9 7554 0 31884 -4105 32494 972 -31618 -4218 7491)
                    :on-goto #f
                    :vis-nick 'sewc
                    :vehicle-type #x1b
