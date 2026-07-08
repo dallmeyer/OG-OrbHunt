@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 266.8684, -112.8005, 232.4259], // on small slippery ledge just before hallway to sewh 
+      "trans": [ 266.8684, -112.8005, 232.4259], // on small slippery ledge just before hallway to second half 
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -74,6 +74,56 @@
       "bsphere": [ 115.2003, -83.6244, 142.8761, 10],
       "lump": {
         "name":"sewg-skill-03"
+      }
+    },
+    {
+      "trans": [ 296.5051, -108.3379, 244.7541], // on small slippery lip of pipe way out over void 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 296.5051, -108.3379, 244.7541, 10],
+      "lump": {
+        "name":"sewg-skill-04"
+      }
+    },
+    {
+      "trans": [ 315.6002, -119.9173, 210.5411], // on left end side at end of path before first vent pipes 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 315.6002, -119.9173, 210.5411, 10],
+      "lump": {
+        "name":"sewg-skill-05"
+      }
+    },
+    {
+      "trans": [ 266.4828, -97.5956, 206.9453], // up on top of door frame before hallway to second half 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 266.4828, -97.5956, 206.9453, 10],
+      "lump": {
+        "name":"sewg-skill-06"
+      }
+    },
+    {
+      "trans": [ 246.2665, -121.2206, 140.4241], // on small slippery bit of support crossbar for platform on rails, at start
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 246.2665, -121.2206, 140.4241, 10],
+      "lump": {
+        "name":"sewg-skill-07"
+      }
+    },
+    {
+      "trans": [ 173.2164, -119.0611, 139.5177], // on small slippery bit of support crossbar for platform on rails, at end
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 173.2164, -119.0611, 139.5177, 10],
+      "lump": {
+        "name":"sewg-skill-08"
       }
     }//,
     

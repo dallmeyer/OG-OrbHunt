@@ -1003,7 +1003,17 @@
       (quaternion-set! (-> arg0 quat) 0.0000  0.0000  0.0000  1.0000))
     (('sew-vent-9) (set-vector-meters! (-> arg0 extra trans) 329.3590 -110.5599 254.2815)
       (quaternion-set! (-> arg0 quat) 0.0000  0.0000  1.0  0.0))
+    (('sew-vent-10) (set-vector-meters! (-> arg0 extra trans) 291.4656 -101.8397 198.8345)
+      (quaternion-set! (-> arg0 quat) 1.0000  0.0000  0.0  0.0))
+    (('sew-vent-12) (set-vector-meters! (-> arg0 extra trans) 291.4207 -101.8396 182.1622)
+      (quaternion-set! (-> arg0 quat) 1.0000  0.0000  0.0  0.0))
+    (('sew-vent-13) (set-vector-meters! (-> arg0 extra trans) 288.4351 -93.7595 237.5576)
+      (quaternion-set! (-> arg0 quat) 1.0000  0.0000  0.0  0.0))
     (('sew-jump-pad-14) (set-vector-meters! (-> arg0 extra trans) 121.9049 -97.0444 139.5236))
+    (('crate-1082) (set-vector-meters! (-> arg0 extra trans) 344.1681 -119.8917 191.4442))
+    (('crate-1081) (set-vector-meters! (-> arg0 extra trans) 315.4342 -116.3218 137.1132)
+      (quaternion-set! (-> arg0 quat) 0.0000  0.0000  0.0  1.0))
+    
 
     ;; ====== CTYSLUMA (slums) ======
     (('skill-176) (set-vector-meters! (-> arg0 extra trans)  737.9973  8.5156  -93.4688)) ;; in corner behind fence at entrance to ctyslumb
