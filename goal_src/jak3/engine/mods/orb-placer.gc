@@ -261,6 +261,8 @@
       (vector-matrix*! vec vec (matrix-local->world #t #f))
       (vector-flatten! vec vec (-> *camera* local-down))
       (vector-float*! vec vec (* (-> pad stick0-speed) 512.0))
+      (if (cpad-hold? 0 l3)
+        (vector-float*! vec vec 2.0))
 
       ;; actually move orb
       (vector+! (-> proc root trans) (-> proc root trans) vec)

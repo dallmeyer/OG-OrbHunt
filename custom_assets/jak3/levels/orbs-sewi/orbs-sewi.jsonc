@@ -46,27 +46,69 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    {
+      "trans": [ -106.8146, -123.5487, 255.0069], // on grate on big pipe on left 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -106.8146, -123.5487, 255.0069, 10],
+      "lump": {
+        "name":"sewi-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -106.1429, -101.5588, 261.8626], // up on left of twin skinny pipes on left, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -106.1429, -101.5588, 261.8626, 10],
+      "lump": {
+        "name":"sewi-skill-02"
+      }
+    },
+    {
+      "trans": [ -101.2597, -130.9825, 265.2619], // in water behind twin pipes on left and invis wall, follow over from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -101.2597, -130.9825, 265.2619, 10],
+      "lump": {
+        "name":"sewi-skill-03"
+      }
+    },
+    {
+      "trans": [ -201.9093, -130.6536, 260.3934], // in water in corner in 2nd section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-201.9093, -130.6536, 260.3934, 10],
+      "lump": {
+        "name":"sewi-skill-04"
+      }
+    },
+    {
+      "trans": [ -116.5387, -117.1375, 280.7558], // on lamp dead ahead when entering level 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -116.5387, -117.1375, 280.7558, 10],
+      "lump": {
+        "name":"sewi-skill-05",
+        "pickup-amount": ["float", 2.0] // abah hint
+        
+      }
+    },
+    {
+      "trans": [ -124.9354, -136.0145, 282.6442], // under water behind twin pipes dead ahead entering level, abah over invis wall from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -124.9354, -136.0145, 282.6442, 10],
+      "lump": {
+        "name":"sewi-skill-06"
+      }
+    }//,
     
     
 
