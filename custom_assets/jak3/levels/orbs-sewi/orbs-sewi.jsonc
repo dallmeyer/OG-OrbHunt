@@ -108,6 +108,180 @@
       "lump": {
         "name":"sewi-skill-06"
       }
+    },
+    {
+      "trans": [ -150.9430, -115.9474, 276.1744], // in missing square in fence (still has collision) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -150.9430, -115.9474, 276.1744, 10],
+      "lump": {
+        "name":"sewi-skill-07"
+      }
+    },
+    {
+      "trans": [ -196.7472, -109.9249, 238.7127], // on top of lifted gates in second section, jetboard triangle cancel launch works well
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -196.7472, -109.9249, 238.7127, 10],
+      "lump": {
+        "name":"sewi-skill-08",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -198.6062, -86.9344, 238.7543], // way up above fence between 2nd and 3rd sections, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -198.6062, -86.9344, 238.7543, 10],
+      "lump": {
+        "name":"sewi-skill-09"
+      }
+    },
+    {
+      "trans": [ -314.2152, -112.1226, 237.6933], // on top of third panel on left, concussor from right exit ledge works
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -314.2152, -112.1226, 237.6933, 10],
+      "lump": {
+        "name":"sewi-skill-10"
+      }
+    },
+    {
+      "trans": [ -341.4037, -104.7182, 227.1453], // up in corner above exit, extended/concussor from ^ into IJ ceiling
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -341.4037, -104.7182, 227.1453, 10],
+      "lump": {
+        "name":"sewi-skill-11"
+      }
+    },
+    {
+      "trans": [ -268.1147, -121.2020, 239.6564], // on middle of first panel on left 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -268.1147, -121.2020, 239.6564, 10],
+      "lump": {
+        "name":"sewi-skill-12"
+      }
+    },
+    {
+      "trans": [ -269.3430, -121.4012, 147.6067], // on middle of first panel on right
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -269.3430, -121.4012, 147.6067, 10],
+      "lump": {
+        "name":"sewi-skill-13",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -288.1585, -111.5450, 142.2002], // top of middle panel on right, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -288.1585, -111.5450, 142.2002, 10],
+      "lump": {
+        "name":"sewi-skill-14"
+      }
+    },
+    {
+      "trans": [ -341.3047, -121.3809, 189.1501], // middle of panel on far side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -341.3047, -121.3809, 189.1501, 10],
+      "lump": {
+        "name":"sewi-skill-15",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -337.4757, -111.6097, 172.3179], // top of right panel on far side, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -337.4757, -111.6097, 172.3179, 10],
+      "lump": {
+        "name":"sewi-skill-16"
+      }
+    },
+    {
+      "trans": [ -291.7079, -108.8037, 206.1525], // top of gate on inner fence with button 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -291.7079, -108.8037, 206.1525, 10],
+      "lump": {
+        "name":"sewi-skill-17"
+      }
+    },
+    {
+      "trans": [ -234.3107, -105.2737, 191.2566], // on top of arch before entering square room with nested fences 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -234.3107, -105.2737, 191.2566, 10],
+      "lump": {
+        "name":"sewi-skill-18",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -232.6447, -87.0137, 190.5226], // up near ceiling above arch before..., abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -232.6447, -87.0137, 190.5226, 10],
+      "lump": {
+        "name":"sewi-skill-19"
+      }
+    },
+    {
+      "trans": [ -319.7521, -122.3577, 249.9900], // in crevice on left, in hallway before airlock to sewj 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -319.7521, -122.3577, 249.9900, 10],
+      "lump": {
+        "name":"sewi-skill-20"
+      }
+    },
+    {
+      "trans": [ -198.8141, -137.7026, 233.1394], // small gap between fence to square room and walkway, underwater 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -198.8141, -137.7026, 233.1394, 10],
+      "lump": {
+        "name":"sewi-skill-21"
+      }
+    },
+    {
+      "trans": [ -171.8463, -133.9816, 280.7831], // inside pipe opening, second section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -171.8463, -133.9816, 280.7831, 10],
+      "lump": {
+        "name":"sewi-skill-22"
+      }
+    },
+    {
+      "trans": [ -314.7443, -136.0643, 175.4636], // under moving platform in inner fence (sew-rove-plat-9) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -314.7443, -136.0643, 175.4636, 10],
+      "lump": {
+        "name":"sewi-skill-23"
+      }
     }//,
     
     

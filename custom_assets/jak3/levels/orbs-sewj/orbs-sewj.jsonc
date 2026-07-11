@@ -46,28 +46,87 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-1",
-    //     "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
-    
+    {
+      "trans": [ -446.2927, -115.4193, 268.8761], // inside open pipe closest to walkway, there's just a big hole in invis wall top right 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -446.2927, -115.4193, 268.8761, 10],
+      "lump": {
+        "name":"sewj-skill-01"
+      }
+    },
+    {
+      "trans": [ -448.5197, -100.7610, 266.5400], // on top of open pipe closest to walkway, go to ^ then jump around side (circle->X) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -448.5197, -100.7610, 266.5400, 10],
+      "lump": {
+        "name":"sewj-skill-02"
+      }
+    },
+    {
+      "trans": [ -434.3623, -117.6611, 154.8340], // bottom of left open pipe over void 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -434.3623, -117.6611, 154.8340, 10],
+      "lump": {
+        "name":"sewj-skill-03"
+      }
+    },
+    {
+      "trans": [ -366.7740, -92.1958, 171.3400], // top of right open pipe over void 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -366.7740, -92.1958, 171.3400, 10],
+      "lump": {
+        "name":"sewj-skill-04"
+      }
+    },
+    {
+      "trans": [ -410.2172, -113.9216, 267.8350], // on bend in pipe where it hits wall, between metal columns 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -410.2172, -113.9216, 267.8350, 10],
+      "lump": {
+        "name":"sewj-skill-05"
+      }
+    },
+    {
+      "trans": [ -476.0228, -110.8559, 212.6505], // top of door frame right before exit 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -476.0228, -110.8559, 212.6505, 10],
+      "lump": {
+        "name":"sewj-skill-06"
+      }
+    },
+    {
+      "trans": [ -473.1528, -101.1856, 218.0120], // on top of metal beams, concussor or abah or something from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -473.1528, -101.1856, 218.0120, 10],
+      "lump": {
+        "name":"sewj-skill-07"
+      }
+    },
+    {
+      "trans": [ -420.2763, -129.9704, 199.4770], // on invisible pipe in middle :tf: 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -420.2763, -129.9704, 199.4770, 10],
+      "lump": {
+        "name":"sewj-skill-08"
+      }
+    }//,
+
     
 
     // GHOSTS
