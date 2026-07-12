@@ -125,6 +125,27 @@
       "lump": {
         "name":"sewj-skill-08"
       }
+    },
+    {
+      "trans": [ -370.9499, -106.9553, 249.0127], // atop frame of airlock coming from sewi 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -370.9499, -106.9553, 249.0127, 10],
+      "lump": {
+        "name":"sewj-skill-09",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -384.6157, -88.8549, 248.5341], // between copper pipes (no collision), abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -384.6157, -88.8549, 248.5341, 10],
+      "lump": {
+        "name":"sewj-skill-10"
+      }
     }//,
 
     
