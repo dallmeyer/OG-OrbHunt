@@ -247,6 +247,7 @@ std::vector<ReplaceInfo> replace_info_jak3 = {
      "<PAD_ANALOG_UP_DOWN>"},
 
     // icons
+    {"~Y~38L<~Z~Y~1L>~Z~Y~23L[~Z~+26H", "<ICON_MISSION_GOLD>"},
     {"~Y~6L<~Z~Y~1L>~Z~Y~23L[~Z~+26H", "<ICON_MISSION_COMPLETE>"},
     {"~Y~3L<~Z~Y~1L>~Z~Y~23L[~Z~+26H", "<ICON_MISSION_TODO>"},
 

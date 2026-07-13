@@ -2202,7 +2202,7 @@
 (let ((gp-0 *game-info*))
   (set! (-> gp-0 task-counter) (the-as uint 1))
   (when (zero? (-> gp-0 perm-list))
-    (set! (-> gp-0 perm-list) (new 'global 'entity-perm-array 4096))
+    (set! (-> gp-0 perm-list) (new 'global 'entity-perm-array 8192)) ;; doubled for orb hunt
     (set! (-> gp-0 perm-list length) 0)
     0
     )

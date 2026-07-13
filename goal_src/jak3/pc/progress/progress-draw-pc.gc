@@ -649,6 +649,9 @@
 (define-extern *level-orb-total-counts-fixed* (array uint8))
 (define-extern *level-orb-total-counts* (array uint8))
 (define-extern *level-id-names* (array string))
+(define-extern *level-cell-tasks* (array game-task))
+(define-extern *total-orbs* int)
+(define-extern draw-header-orba (function progress font-context float text-id int))
 (defmethod draw-option ((this menu-orb-counts-option) (arg0 progress) (arg1 font-context) (arg2 int) (arg3 symbol))
   (let ((which (-> *game-info* auto-save-which)))
     (local-vars
@@ -729,43 +732,52 @@
 
             ;; print lines
             (while (and (< (-> arg1 origin y) (-> s3-0 w)) (< task-info-idx (-> arg0 total-num-tasks)))
-              (let* ((collected-count (-> *game-info* skill-per-level (+ task-info-idx 1)))
-                     (total-count (umax (-> *level-orb-total-counts* (+ task-info-idx 1)) (-> *level-orb-total-counts-fixed* (+ task-info-idx 1))))
-                     (line-text (if (nonzero? collected-count) (-> *level-id-names* (+ task-info-idx 1)) "???"))
-                     )
-                ;; (set! sv-272 (-> s2-2 task-info-idx))
-                ;; (if (and (logtest? (-> sv-272 flags) (game-task-node-flag closed)) (task-complete? *game-info* (-> sv-272 task)))
-                ;;     (set! sv-288 (-> *game-info* play-list (-> sv-272 task) text-name))
-                ;;     (set! sv-288 (-> sv-272 description))
-                ;;     )
-                (set! (-> arg1 origin x) (+ 10.0 (adjust-x-if-needed (-> s3-0 x))))
+              (let ((collected-count 0)
+                    (total-count 0))
+                ;; figure out counts
                 (cond
-                  ;; ((or (= sv-288 (text-id progress-missions-todo)) (= sv-288 (text-id progress-missions-completed)))
-                  ;;   (let ((a0-41 arg1))
-                  ;;     (set! (-> a0-41 color) (font-color font-color-34))
-                  ;;     )
-                  ;;   )
-                  (else
-                    (string-format "~S" (lookup-text! *common-text*
-                                          ;; (if (logtest? (-> sv-272 flags) (game-task-node-flag closed))
-                                          (if (and (nonzero? total-count) (= collected-count total-count))
-                                              (text-id progress-missions-complete-icon)
-                                              (text-id progress-missions-todo-icon)
-                                              )
-                                          #f))
-                    (print-game-text *temp-string* arg1 #f 44 (bucket-id hud-draw-hud-alpha))
-                    (set-color! arg1 (font-color font-color-32))
-                    (set! (-> arg1 origin x) (+ (adjust-x-if-needed (-> s3-0 x)) f30-1))
+                  ((zero? task-info-idx)  ;; cell counts
+                    ;; count cells
+                    (dotimes (idx LEVEL_ID_LEN)
+                      (when (!= (-> *level-cell-tasks* idx) (game-task none))
+                        (+! total-count 1)
+                        (when (logtest? (-> *game-info* task-perm-list data (-> *level-cell-tasks* idx) status) (entity-perm-status complete))
+                          (+! collected-count 1))
+                        )
+                      )
+                    )
+                  (else ;; orbs per level
+                    (set! collected-count (+ 0 (-> *game-info* skill-per-level task-info-idx)))
+                    (set! total-count (umax (-> *level-orb-total-counts* task-info-idx) (-> *level-orb-total-counts-fixed* task-info-idx)))
                     )
                   )
-                (let ((f26-0 (-> arg1 origin y)))
-                  ;; (string-format "~S" (lookup-text! *common-text* sv-288 #f))
-                  (pc-encode-utf8-string (string-format "~S" line-text) *pc-encoded-temp-string*)
-                  (format (clear *temp-string*) "~S ~D / ~D" *pc-encoded-temp-string* collected-count total-count)
-                  ;; (set! (-> arg1 origin y) (+ f26-0 (print-game-text *temp-string* arg1 #f 44 (bucket-id hud-draw-hud-alpha))))
-                  (set! (-> arg1 origin y) (+ f26-0 (print-game-text *temp-string* arg1 #f 44 (bucket-id hud-draw-hud-alpha))))
+                ;; print
+                (let ((line-text 
+                        (cond
+                          ((and (zero? collected-count) (nonzero? total-count)) "???")
+                          ((zero? task-info-idx) "Power Cells")
+                          (else (-> *level-id-names* task-info-idx)))))
+                  (set! (-> arg1 origin x) (+ 10.0 (adjust-x-if-needed (-> s3-0 x))))
+                  (string-format "~S" (lookup-text! *common-text*
+                                        ;; (if (logtest? (-> sv-272 flags) (game-task-node-flag closed))
+                                        (if (>= collected-count total-count)
+                                            (if (zero? task-info-idx) (text-id progress-missions-gold-icon) (text-id progress-missions-complete-icon))
+                                            (text-id progress-missions-todo-icon)
+                                            )
+                                        #f))
+                  (print-game-text *temp-string* arg1 #f 44 (bucket-id hud-draw-hud-alpha)) ;; print icon
+                  (set-color! arg1 (font-color font-color-32))
+                  (set! (-> arg1 origin x) (+ (adjust-x-if-needed (-> s3-0 x)) f30-1))
+                  ;; print string
+                  (let ((f26-0 (-> arg1 origin y)))
+                    ;; (string-format "~S" (lookup-text! *common-text* sv-288 #f))
+                    (pc-encode-utf8-string (string-format "~S" line-text) *pc-encoded-temp-string*)
+                    (format (clear *temp-string*) "~S ~D / ~D" *pc-encoded-temp-string* collected-count total-count)
+                    ;; (set! (-> arg1 origin y) (+ f26-0 (print-game-text *temp-string* arg1 #f 44 (bucket-id hud-draw-hud-alpha))))
+                    (set! (-> arg1 origin y) (+ f26-0 (print-game-text *temp-string* arg1 #f 44 (bucket-id hud-draw-hud-alpha))))
+                    )
+                  (1+! task-info-idx)
                   )
-                (1+! task-info-idx)
                 )
               )
             
@@ -780,7 +792,7 @@
         )
       )
     (progress-method-34 arg0)
-    (draw-header arg0 arg1 font-alpha (text-id progress-orb-counts))
+    (draw-header-orba arg0 arg1 font-alpha (text-id progress-orb-counts))
     (draw-bg-box-alpha-2 arg0 (-> *progress-work* footer) (* 64.0 font-alpha))
     (draw-bg-box-outline arg0 (-> *progress-work* footer) (* 128.0 font-alpha))
     (progress-method-47 arg0 arg1
@@ -1242,6 +1254,33 @@
       )
     )
   (none)
+  )
+
+(define *tmp-orb-count-str* (new 'global 'string 2048 (the-as string #f)))
+
+(defun draw-header-orba ((this progress) (arg0 font-context) (arg1 float) (arg2 text-id))
+  (progress-method-33 this (-> *progress-work* header))
+  (let ((s3-0 (get-scissor-stack-top this)))
+    (draw-bg-box-alpha-2 this (-> *progress-work* header) (* 64.0 arg1))
+    (draw-bg-box-outline this (-> *progress-work* header) (* 128.0 arg1))
+    (set-flags! arg0 (font-flags kerning middle large))
+    (set-color! arg0 (font-color font-color-32))
+    (set! (-> arg0 origin x) (+ 10.0 (-> s3-0 x)))
+    (set! (-> arg0 origin y) (-> s3-0 y))
+    (format (clear *tmp-orb-count-str*) "~S ~D/~D" (lookup-text! *common-text* arg2 #f) (the int (-> *game-info* skill-total)) *total-orbs*)
+    (progress-method-45
+      this
+      arg0
+      (+ (- -20.0 (-> s3-0 x)) (-> s3-0 z))
+      45.0
+      *tmp-orb-count-str*
+      (if (not (-> *pc-settings* use-vis?)) 0.75 0.95)
+      0.1
+      32
+      )
+    )
+  (progress-method-34 this)
+  0
   )
 
 (defmethod draw-header ((this progress) (arg0 font-context) (arg1 float) (arg2 text-id))
@@ -1743,6 +1782,17 @@
        (set! (-> fnt origin y) (the float (if (= (get-aspect-ratio) 'aspect4x3) 210 200)))
        (set-scale! fnt 0.6)
        )
+      ((= (-> this name) (text-id progress-orb-counts))
+        ;; title
+        (print-game-text (lookup-text! *common-text* (-> this name) #f) fnt #f 44 (bucket-id hud-draw-hud-alpha))
+        ;; count
+        (set! (-> fnt origin y) (the float (if (= (get-aspect-ratio) 'aspect4x3)
+                                                210
+                                                200
+                                                )))
+        (set-scale! fnt 0.6)
+        (print-game-text (string-format "(~D/~D)" (the int (-> *game-info* skill-total)) *total-orbs*) fnt #f 44 (bucket-id hud-draw-hud-alpha))
+        )
       (else
         (print-game-text (lookup-text! *common-text* (-> this name) #f) fnt #f 44 (bucket-id hud-draw-hud-alpha))
         )

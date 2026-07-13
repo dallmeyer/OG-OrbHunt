@@ -315,7 +315,7 @@
         (clear *pc-encoded-temp-string*)
         (when (and (hud-skill-shown?)
                    (-> *mod-settings* closest-orb?)
-                   *last-l3-time* 
+                   *last-l3-time*
                    (not (g-time-elapsed? *last-l3-time* (seconds 3.2)))
                    )
           ;; show closest orb text while hud is up + L3 pressed recently
@@ -959,8 +959,8 @@
     (('crate-1271) (set-vector-meters! (-> arg0 extra trans) -530.23  -137.96  -292.15 )) ;; on unused pipe walkway
     
     ;; ====== SEWH (sewers 2.3) ======
-    (('crate-1275) (set-vector-meters! (-> arg0 extra trans) -141.5998 -135.6395 191.2752) ;; under halfpipe bridge with turret, shoot thru wall or something
-      (quaternion-set! (-> arg0 quat) 0.0000  -0.7125  0.0000  0.7016))
+    (('crate-1275) (set-vector-meters! (-> arg0 extra trans) -136.1669 -97.1585 151.1810) ;; in vanilla room but on ceiling and behind troll-y gate
+      (quaternion-set! (-> arg0 quat)  -0.7071  0.0  0.7071  0.0))
     (('crate-1278) (set-vector-meters! (-> arg0 extra trans) 63.8550 -119.0731 209.0149) ;; behind some invis walls between pipe and column
       (quaternion-set! (-> arg0 quat) 0.0000 0.0 0.0 0.0000))
     (('crate-1277) (set-vector-meters! (-> arg0 extra trans) 99.3015 -94.5532 225.5558) ;; way up above elec gate, abah from skill-X
@@ -974,7 +974,8 @@
     (('crate-1276) (set-vector-meters! (-> arg0 extra trans) -192.7136 -128.9164 76.5970))
     (('crate-1310) (set-vector-meters! (-> arg0 extra trans) -191.7136 -128.9164 76.5970))
     (('crate-1311) (set-vector-meters! (-> arg0 extra trans) -190.7136 -128.9164 76.5970))
-    (('crate-1312) (set-vector-meters! (-> arg0 extra trans) -189.7535 -128.9164 76.5970))
+    (('crate-1312) (set-vector-meters! (-> arg0 extra trans) -141.5998 -135.6395 191.2752)
+      (quaternion-set! (-> arg0 quat) 0.0000  -0.7125  0.0000  0.7016))
     (('crate-1313) (set-vector-meters! (-> arg0 extra trans) -57.4063 -122.0839 206.5027)
       (quaternion-set! (-> arg0 quat) 0.0 0.7071 0.0 0.7071))
     (('crate-1314) (set-vector-meters! (-> arg0 extra trans) -57.4011 -122.0238 172.9043)

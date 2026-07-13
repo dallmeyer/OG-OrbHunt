@@ -38,7 +38,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define ORB_HUNT_DEBUG? #f) ;; when #t, hold L2 for extra debug prints
-(define startingDebugContinuePoint "sewi-start")
+(define startingDebugContinuePoint "wascitya-start")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -540,85 +540,184 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Wasteland (West)"	;; 95
   ))
 
+(define *level-cell-tasks* (new 'static 'boxed-array :type game-task :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
+  (game-task none) ;; "" ;; 0 (none)
+  (game-task none) ;; "BTR (North)"	;; 1
+  (game-task none) ;; "BTR (West)"	;; 2
+  (game-task none) ;; "BTR (Center)"	;; 3
+  (game-task none) ;; "BTR (South)"	;; 4
+  (game-task none) ;; "BTR (End)"	;; 5
+  (game-task none) ;; "Dark Ship (Escape)"	;; 6
+  (game-task none) ;; "Dark Ship (Jak Section)"	;; 7
+  (game-task none) ;; "Dark Ship (Mech Section)"	;; 8
+  (game-task none) ;; "Dark Ship (Start)"	;; 9
+  (game-task pecker-orbhunt) ;; "Eco Mine (Bomb Train)"	;; 10
+  (game-task none) ;; "Eco Mine (Cave)"	;; 11
+  (game-task none) ;; "Eco Mine (Elevators)"	;; 12
+  (game-task veger-orbhunt) ;; "Eco Mine (Robot Fight)"	;; 13
+  (game-task keira-orbhunt) ;; "Freedom HQ"	;; 14
+  (game-task none) ;; "Freedom HQ (Hanger)"	;; 15
+  (game-task kleever-orbhunt) ;; "Garage"	;; 16
+  (game-task none) ;; "Gardens (North)" ;; 17
+  (game-task yakow-orbhunt) ;; "Gardens (South)" ;; 18
+  (game-task tess-orbhunt) ;; "Gun Course"	;; 19
+  (game-task kid-orbhunt) ;; "Halfpipe"	;; 20
+  (game-task none) ;; "Haven Forest (North)"	;; 21
+  (game-task none) ;; "Haven Forest (South)"	;; 22
+  (game-task none) ;; "Industrial Zone (North)"	;; 23
+  (game-task jinx-orbhunt) ;; "Industrial Zone (South)"	;; 24
+  (game-task none) ;; "Main Town Ruins"	;; 25
+  (game-task none) ;; "Metal Head City (North)"	;; 26
+  (game-task none) ;; "Metal Head City (South)"	;; 27
+  (game-task none) ;; "Metal Head Tower"	;; 28
+  (game-task none) ;; "Metal Head Tower (Entrance)"	;; 29
+  (game-task none) ;; "Metal Head Tower (Top)"	;; 30
+  (game-task none) ;; "Metal Head Nest (East)"	;; 31
+  (game-task none) ;; "Metal Head Nest (West)"	;; 32
+  (game-task none) ;; "Monk Temple (Center)"	;; 33
+  (game-task none) ;; "Monk Temple (Entrance)"	;; 34
+  (game-task none) ;; "Monk Temple (Exterior)"	;; 35
+  (game-task none) ;; "Monk Temple (Jetboard Test)"	;; 36
+  (game-task seem-orbhunt) ;; "Monk Temple (Rescue Seem)"	;; 37
+  (game-task torn-orbhunt) ;; "Naughty Ottsel"	;; 38
+  (game-task none) ;; "New Haven (North)"	;; 39
+  (game-task samos-orbhunt) ;; "New Haven (South)"	;; 40
+  (game-task onin-orbhunt) ;; "Onin's Tent"	;; 41
+  (game-task none) ;; "Eco Grid (Pac Man)"	;; 42
+  (game-task none) ;; "Port"	;; 43
+  (game-task vin-orbhunt) ;; "Power Station"	;; 44
+  (game-task none) ;; "Sewers 1.1"	;; 45
+  (game-task none) ;; "Sewers 1.2"	;; 46
+  (game-task none) ;; "Sewers 1.3"	;; 47
+  (game-task none) ;; "Sewers 1.4"	;; 48
+  (game-task none) ;; "Sewers 2.1"	;; 49
+  (game-task none) ;; "Sewers 2.2"	;; 50
+  (game-task none) ;; "Sewers 2.3"	;; 51
+  (game-task none) ;; "Sewers 2.4"	;; 52
+  (game-task none) ;; "Sewers 2.5"	;; 53
+  (game-task none) ;; "Sewers 3.1"	;; 54
+  (game-task none) ;; "Sewers 3.2"	;; 55
+  (game-task none) ;; "Sewers 3.3"	;; 56
+  (game-task none) ;; "Sewers 3.4"	;; 57
+  (game-task none) ;; "Sewers 3.5"	;; 58
+  (game-task none) ;; "Slums"	;; 59
+  (game-task none) ;; "Spargus (East)"	;; 60
+  (game-task none) ;; "Spargus (West)"	;; 61
+  (game-task none) ;; "Spargus Arena"	;; 62
+  (game-task damus-orbhunt) ;; "Spargus Palace"	;; 63
+  (game-task none) ;; "Stadium Ruins East"	;; 64
+  (game-task none) ;; "Stadium Ruins West"	;; 65
+  (game-task none) ;; "Subrails 1 Entrance"	;; 66
+  (game-task none) ;; "Subrails 1 Exit"	;; 67
+  (game-task none) ;; "Subrails 1.1"	;; 68
+  (game-task none) ;; "Subrails 1.2"	;; 69
+  (game-task none) ;; "Subrails 1.3"	;; 70
+  (game-task none) ;; "Subrails 1.4"	;; 71
+  (game-task none) ;; "Subrails 2 End (Precursors)"	;; 72
+  (game-task none) ;; "Subrails 2.1"	;; 73
+  (game-task none) ;; "Subrails 2.2"	;; 74
+  (game-task none) ;; "Subrails 2.3"	;; 75
+  (game-task none) ;; "Subrails 2.4"	;; 76
+  (game-task none) ;; "Subrails 2.5"	;; 77
+  (game-task none) ;; "Subrails 2.6"	;; 78
+  (game-task none) ;; "Terraformer (Final Boss)"	;; 79
+  (game-task none) ;; "Training Course"	;; 80
+  (game-task none) ;; "Volcano"	;; 81
+  (game-task none) ;; "Volcano (Entrance/Exit)"	;; 82
+  (game-task none) ;; "War Factory (Entrance)"	;; 83
+  (game-task erol-orbhunt) ;; "War Factory (Erol Fight)"	;; 84
+  (game-task none) ;; "War Factory (Exterior)"	;; 85
+  (game-task none) ;; "War Factory (Interior)"	;; 86
+  (game-task none) ;; "Wasteland (Caves)"	;; 87
+  (game-task none) ;; "Wasteland (East)"	;; 88
+  (game-task none) ;; "Wasteland (Northeast)"	;; 89
+  (game-task none) ;; "Wasteland (Northwest)"	;; 90
+  (game-task none) ;; "Wasteland (Stronghold)"	;; 91
+  (game-task none) ;; "Wasteland (Southeast)"	;; 92
+  (game-task sig-orbhunt) ;; "Wasteland (Ruins)"	;; 93
+  (game-task ashelin-orbhunt) ;; "Wasteland (Oasis)"	;; 94
+  (game-task none) ;; "Wasteland (West)"	;; 95
+  ))
+
 (define *level-orb-active* (new 'static 'boxed-array :type symbol :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
 (define *level-orb-collected-counts* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
 (define *level-orb-total-counts* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
 
 (define *level-orb-total-counts-fixed* (new 'static 'boxed-array :type uint8 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   0 ;; "" ;; 0 (none)
-  0 ;; "BTR 1"	;; 1
-  0 ;; "BTR 2"	;; 2
-  0 ;; "BTR 3"	;; 3
-  0 ;; "BTR 4"	;; 4
-  3 ;; "BTR End"	;; 5
-  16 ;; "Dark Ship (Escape)"	;; 6
-  0 ;; "Dark Ship (Jak Section)"	;; 7
-  0 ;; "Dark Ship (Mech Mid)"	;; 8
-  0 ;; "Dark Ship (Start/Mech End)"	;; 9
-  0 ;; "Eco Mine (Bomb Train)"	;; 10
-  0 ;; "Eco Mine (Cave)"	;; 11
-  0 ;; "Eco Mine (Elevators?)"	;; 12
-  0 ;; "Eco Mine (Robot Fight)"	;; 13
-  0 ;; "Freedom HQ"	;; 14
-  0 ;; "Freedom HQ (Hanger)"	;; 15
-  0 ;; "Garage"	;; 16
-  0 ;; "Gardens (North)" ;; 17
-  0 ;; "Gardens (South)" ;; 18
-  0 ;; "Gun Course"	;; 19
-  0 ;; "Halfpipe"	;; 20
-  0 ;; "Haven Forest (North)"	;; 21
-  0 ;; "Haven Forest (South)"	;; 22
-  0 ;; "Industrial Zone (North)"	;; 23
-  0 ;; "Industrial Zone (South)"	;; 24
-  0 ;; "Main Town Ruins"	;; 25
-  0 ;; "Metal Head City (North)"	;; 26
-  0 ;; "Metal Head City (South)"	;; 27
-  0 ;; "Metal Head Tower"	;; 28
-  0 ;; "Metal Head Tower (Entrance)"	;; 29
-  0 ;; "Metal Head Tower (Top)"	;; 30
-  0 ;; "Metalhead Nest (North)"	;; 31
-  0 ;; "Metalhead Nest (South)"	;; 32
-  0 ;; "Monk Temple (Center)"	;; 33
-  0 ;; "Monk Temple (Entrance)"	;; 34
-  0 ;; "Monk Temple (Exterior)"	;; 35
-  0 ;; "Monk Temple (Jetboard Test)"	;; 36
-  0 ;; "Monk Temple (Light Jak Flight)"	;; 37
-  0 ;; "Naughty Ottsel"	;; 38
-  0 ;; "New Haven (North)"	;; 39
-  0 ;; "New Haven (South)"	;; 40
-  0 ;; "Onin's Tent"	;; 41
-  0 ;; "Pac Man"	;; 42
-  0 ;; "Port"	;; 43
-  0 ;; "Power Station"	;; 44
-  0 ;; "Sewers 1.1"	;; 45
-  0 ;; "Sewers 1.2"	;; 46
-  0 ;; "Sewers 1.3"	;; 47
-  0 ;; "Sewers 1.4"	;; 48
-  0 ;; "Sewers 2.1"	;; 49
-  0 ;; "Sewers 2.2"	;; 50
-  0 ;; "Sewers 2.3"	;; 51
-  0 ;; "Sewers 2.4"	;; 52
-  0 ;; "Sewers 2.5"	;; 53
-  0 ;; "Sewers 3.1"	;; 54
-  0 ;; "Sewers 3.2"	;; 55
-  0 ;; "Sewers 3.3"	;; 56
-  0 ;; "Sewers 3.4"	;; 57
-  0 ;; "Sewers 3.5"	;; 58
-  0 ;; "Slums"	;; 59
-  32 ;; "Spargus (East)"	;; 60
-  23 ;; "Spargus (West)"	;; 61
+  28 ;; "BTR 1"	;; 1
+  18 ;; "BTR 2"	;; 2
+  30 ;; "BTR 3"	;; 3
+  17 ;; "BTR 4"	;; 4
+  16 ;; "BTR End"	;; 5
+  20 ;; "Dark Ship (Escape)"	;; 6
+  14 ;; "Dark Ship (Jak Section)"	;; 7
+  11 ;; "Dark Ship (Mech Mid)"	;; 8
+  11 ;; "Dark Ship (Start/Mech End)"	;; 9
+  115 ;; "Eco Mine (Bomb Train)"	;; 10
+  15 ;; "Eco Mine (Cave)"	;; 11
+  20 ;; "Eco Mine (Elevators?)"	;; 12
+  20 ;; "Eco Mine (Robot Fight)"	;; 13
+  2 ;; "Freedom HQ"	;; 14
+  6 ;; "Freedom HQ (Hanger)"	;; 15
+  6 ;; "Garage"	;; 16
+  23 ;; "Gardens (North)" ;; 17
+  24 ;; "Gardens (South)" ;; 18
+  18 ;; "Gun Course"	;; 19
+  28 ;; "Halfpipe"	;; 20
+  8 ;; "Haven Forest (North)"	;; 21
+  3 ;; "Haven Forest (South)"	;; 22
+  37 ;; "Industrial Zone (North)"	;; 23
+  57 ;; "Industrial Zone (South)"	;; 24
+  30 ;; "Main Town Ruins"	;; 25
+  3 ;; "Metal Head City (North)"	;; 26
+  15 ;; "Metal Head City (South)"	;; 27
+  19 ;; "Metal Head Tower"	;; 28
+  3 ;; "Metal Head Tower (Entrance)"	;; 29
+  4 ;; "Metal Head Tower (Top)"	;; 30
+  19 ;; "Metalhead Nest (North)"	;; 31
+  2 ;; "Metalhead Nest (South)"	;; 32
+  26 ;; "Monk Temple (Center)"	;; 33
+  8 ;; "Monk Temple (Entrance)"	;; 34
+  45 ;; "Monk Temple (Exterior)"	;; 35
+  12 ;; "Monk Temple (Jetboard Test)"	;; 36
+  31 ;; "Monk Temple (Light Jak Flight)"	;; 37
+  4 ;; "Naughty Ottsel"	;; 38
+  16 ;; "New Haven (North)"	;; 39
+  47 ;; "New Haven (South)"	;; 40
+  2 ;; "Onin's Tent"	;; 41
+  12 ;; "Pac Man"	;; 42
+  61 ;; "Port"	;; 43
+  2 ;; "Power Station"	;; 44
+  14 ;; "Sewers 1.1"	;; 45
+  9 ;; "Sewers 1.2"	;; 46
+  5 ;; "Sewers 1.3"	;; 47
+  4 ;; "Sewers 1.4"	;; 48
+  5 ;; "Sewers 2.1"	;; 49
+  9 ;; "Sewers 2.2"	;; 50
+  7 ;; "Sewers 2.3"	;; 51
+  23 ;; "Sewers 2.4"	;; 52
+  8 ;; "Sewers 2.5"	;; 53
+  5 ;; "Sewers 3.1"	;; 54
+  12 ;; "Sewers 3.2"	;; 55
+  9 ;; "Sewers 3.3"	;; 56
+  8 ;; "Sewers 3.4"	;; 57
+  7 ;; "Sewers 3.5"	;; 58
+  7 ;; "Slums"	;; 59
+  34 ;; "Spargus (East)"	;; 60
+  45 ;; "Spargus (West)"	;; 61
   15 ;; "Spargus Arena"	;; 62
-  0 ;; "Spargus Palace"	;; 63
-  0 ;; "Stadium Ruins East"	;; 64
-  0 ;; "Stadium Ruins West"	;; 65
-  0 ;; "Subrails 1 Entrance"	;; 66
+  9 ;; "Spargus Palace"	;; 63
+  24 ;; "Stadium Ruins East"	;; 64
+  38 ;; "Stadium Ruins West"	;; 65
+  2 ;; "Subrails 1 Entrance"	;; 66
   0 ;; "Subrails 1 Exit"	;; 67
   0 ;; "Subrails 1.1"	;; 68
   0 ;; "Subrails 1.2"	;; 69
   0 ;; "Subrails 1.3"	;; 70
   0 ;; "Subrails 1.4"	;; 71
-  0 ;; "Subrails 2 Exit (Precursor reveal)"	;; 72
-  0 ;; "Subrails 2.1"	;; 73
+  2 ;; "Subrails 2 Exit (Precursor reveal)"	;; 72
+  1 ;; "Subrails 2.1"	;; 73
   0 ;; "Subrails 2.2"	;; 74
   0 ;; "Subrails 2.3"	;; 75
   0 ;; "Subrails 2.4"	;; 76
@@ -626,21 +725,21 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   0 ;; "Subrails 2.6"	;; 78
   9 ;; "Terraformer (Final Boss)"	;; 79
   5 ;; "Training Course"	;; 80
-  0 ;; "Volcano"	;; 81
-  0 ;; "Volcano (Entrance/Exit)"	;; 82
-  0 ;; "War Factory (Entrance)"	;; 83
-  0 ;; "War Factory (Erol Fight)"	;; 84
-  0 ;; "War Factory (Exterior)"	;; 85
-  0 ;; "War Factory (Interior)"	;; 86
-  0 ;; "Wasteland (Caves)"	;; 87
-  0 ;; "Wasteland (East)"	;; 88
-  0 ;; "Wasteland (Northeast)"	;; 89
-  0 ;; "Wasteland (Northwest)"	;; 90
-  0 ;; "Wasteland (South)"	;; 91
-  0 ;; "Wasteland (Southeast but further south)"	;; 92
-  0 ;; "Wasteland (Southeast)"	;; 93
-  0 ;; "Wasteland (Southwest)"	;; 94
-  0 ;; "Wasteland (West)"	;; 95
+  11 ;; "Volcano"	;; 81
+  6 ;; "Volcano (Entrance/Exit)"	;; 82
+  2 ;; "War Factory (Entrance)"	;; 83
+  7 ;; "War Factory (Erol Fight)"	;; 84
+  20 ;; "War Factory (Exterior)"	;; 85
+  25 ;; "War Factory (Interior)"	;; 86
+  1 ;; "Wasteland (Caves)"	;; 87
+  7 ;; "Wasteland (East)"	;; 88
+  8 ;; "Wasteland (Northeast)"	;; 89
+  6 ;; "Wasteland (Northwest)"	;; 90
+  8 ;; "Wasteland (South)"	;; 91
+  38 ;; "Wasteland (Southeast but further south)"	;; 92
+  11 ;; "Wasteland (Southeast)"	;; 93
+  6 ;; "Wasteland (Southwest)"	;; 94
+  4 ;; "Wasteland (West)"	;; 95
   ))
 
 (define *total-orbs* 0)

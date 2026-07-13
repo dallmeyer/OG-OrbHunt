@@ -2149,6 +2149,7 @@
 (define-extern get-vag-thing (function string string))
 (define-extern all-orbs-check? (function uint symbol))
 (define-extern need-orbs-string (function uint string))
+(define-extern *level-cell-tasks* (array game-task))
 (defstate pending (fuel-cell)
   :virtual #t
   :event collectable-standard-event-handler
@@ -2228,6 +2229,10 @@
                     (logclear! (-> self draw status) (draw-control-status no-draw-bounds))
                     (restore-collide-with-as (-> self root))
                     (play-sound-file "tpl_proto_win.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 50.0)))
+                    (let ((cell-task (-> *level-cell-tasks* (-> self level-index))))
+                      (when (!= cell-task (game-task none))
+                        ;; (format 0 "marking task ~D (~D) complete!~%" cell-task (-> self level-index))
+                        (logior! (-> *game-info* task-perm-list data cell-task status) (entity-perm-status complete))))
                     (go-virtual wait)
                     )
                   )
@@ -2339,6 +2344,7 @@
   (process-drawable-from-entity! this (-> this entity))
   (initialize-options this 0 512.0 (the-as fact-info #f))
   (update-transforms (-> this root))
+  (set! (-> this entity extra perm task) (game-task complete)) ;; dont spawn again once collected
   (go (method-of-object this pending))
   )
 

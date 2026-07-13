@@ -415,9 +415,9 @@
           )
       (cond
         ((or (= (-> *blit-displays-work* count-down) 1) ;; vanilla progress blit stuff, or if texture status is #f for either
-             (not map-texture-status)
-             (not icon-texture1-status)
-             (not icon-texture2-status)
+             (and (= this *mini-bigmap*) (not map-texture-status))
+             (and (= this *mini-bigmap*) (not icon-texture1-status))
+             (and (= this *mini-bigmap*) (not icon-texture2-status))
              )
           (when (not map-texture-status)
             (dbg-format 0 "set-pending-file for map ~D~%" (the-as int (-> this load-index)))
@@ -436,7 +436,7 @@
             (dbg-format 0 "set-pending-file for icons 1 ~D~%" (the-as int (-> this load-index)))
             (set-pending-file (-> this tpage2) "progress-minimap" 1 (process->handle *dproc*) 0.0))
           (set! (-> this loading-flag) #t)
-        )
+          )
         (else
           (dbg-format 0 "else case - updating textures and linking~%")
           (update (-> this bigmap-image))

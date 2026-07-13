@@ -912,7 +912,8 @@
   )
 
 (defun fully-in? ((this hud))
-  (the-as symbol (and (-> this next-state) (= (-> this next-state name) 'hud-in)))
+  (the-as symbol (or (= (-> this state name) 'hud-in)
+                     (and (-> this next-state) (= (-> this next-state name) 'hud-in))))
   )
 
 ;; WARN: Return type mismatch (pointer process) vs (pointer manipy).

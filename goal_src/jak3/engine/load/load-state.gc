@@ -280,8 +280,16 @@
 
 (defun side-mish-active? ()
   (let ((tm (process-by-type task-manager *active-pool*)))
-    (and tm (!= (-> tm type symbol) 'task-manager-desert-interceptors-attack)))
-  
+    (when tm
+      (case (-> tm type symbol) :comp name=
+        (('task-manager-desert-interceptors-attack 'gungame-task-manager 'task-manager-wascity-gungame)
+          (return #f)
+          )
+        )
+      (return #t)
+      )
+    )
+
   ;; jak 2 code
   ;; (dotimes (s5-0 LEVEL_MAX)
   ;;   (when (and *level* (-> *level* level s5-0) (side-mish-level? (-> *level* level s5-0 name)))
@@ -289,8 +297,8 @@
   ;;     )
   ;;   )
 
-  ;; ;; made it here -> no side mission levels
-  ;; #f
+  ;; made it here -> no side mission
+  #f
   )
 
 ;; WARN: Return type mismatch int vs object.
