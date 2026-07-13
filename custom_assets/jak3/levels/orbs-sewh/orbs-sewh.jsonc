@@ -87,6 +87,47 @@
         "name":"sewh-skill-04",
         "pickup-amount": ["float", 2.0] // abah hint
       }
+    },
+    {
+      "trans": [ -208.1498, -116.4898, 88.1483], // left corner at end of halfpipe 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -208.1498, -116.4898, 88.1483, 10],
+      "lump": {
+        "name":"sewh-skill-05",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -208.5717, -98.4894, 87.9739], // up in ceiling in left corner at end of halfpipe, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -208.5717, -98.4894, 87.9739, 10],
+      "lump": {
+        "name":"sewh-skill-06"
+      }
+    },
+    {
+      "trans": [ -170.8029, -116.4749, 87.8372], // right corner at end of halfpipe
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -170.8029, -116.4749, 87.8372, 10],
+      "lump": {
+        "name":"sewh-skill-07"
+      }
+    },
+    {
+      "trans": [ -3.4357, -124.4276, 191.3114], // under sew-move-plat-2
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -3.4357, -124.4276, 191.3114, 10],
+      "lump": {
+        "name":"sewh-skill-08"
+      }
     }//,
     
 

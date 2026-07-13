@@ -969,6 +969,22 @@
       (quaternion-set! (-> arg0 quat) 0.0 1.0 0.0 0.0))
     (('sew-grate-plat-1) (set-vector-meters! (-> arg0 extra trans) -155.9689 -107.9975 149.6894)
       (quaternion-set! (-> arg0 quat) 0.0 0.0 0.7071 -0.7071))
+    (('crate-1279) (set-vector-meters! (-> arg0 extra trans) -132.0800 -135.4584 191.3208)
+      (quaternion-set! (-> arg0 quat)  0.0000  0.7071  0.0000  0.7071))
+    (('crate-1276) (set-vector-meters! (-> arg0 extra trans) -192.7136 -128.9164 76.5970))
+    (('crate-1310) (set-vector-meters! (-> arg0 extra trans) -191.7136 -128.9164 76.5970))
+    (('crate-1311) (set-vector-meters! (-> arg0 extra trans) -190.7136 -128.9164 76.5970))
+    (('crate-1312) (set-vector-meters! (-> arg0 extra trans) -189.7535 -128.9164 76.5970))
+    (('crate-1313) (set-vector-meters! (-> arg0 extra trans) -57.4063 -122.0839 206.5027)
+      (quaternion-set! (-> arg0 quat) 0.0 0.7071 0.0 0.7071))
+    (('crate-1314) (set-vector-meters! (-> arg0 extra trans) -57.4011 -122.0238 172.9043)
+      (quaternion-set! (-> arg0 quat) 0.0 0.7071 0.0 0.7071))
+    (('crate-1315) (set-vector-meters! (-> arg0 extra trans) -84.1916 -135.5043 191.1978)
+      (quaternion-set! (-> arg0 quat) 0.0 0.7071 0.0 0.7071))
+    (('crate-1090) (set-vector-meters! (-> arg0 extra trans) -84.0826 -119.6127 172.3569)
+      (quaternion-set! (-> arg0 quat) 0.0000  0.4222  0.0000  0.9064))
+    (('crate-1091) (set-vector-meters! (-> arg0 extra trans) -83.9852 -119.5916 210.0021)
+      (quaternion-set! (-> arg0 quat) 0.0000  0.9074  0.0000  0.4202))
 
     ;; SEWI 2.4
     (('crate-1095) (set-vector-meters! (-> arg0 extra trans) -235.3962 -122.4135 241.0034)
@@ -2170,7 +2186,9 @@
   (skill-follow-y-offset "sewd-skill-05" "sewer-frog-5" (meters 0.7))
   (skill-follow-y-offset "sewd-skill-06" "sewer-frog-6" (meters 0.7))
 
+  (skill-follow-y-offset "sewh-skill-08" "sew-move-plat-2" (meters -4.6))
   (skill-follow-offset "sewi-skill-23" "sew-rove-plat-9" (static-vector-meters 0.0 -7.0 5.3))
+  (skill-follow-y-offset "sewi-skill-25" "flyingsaw-3" (meters -0.9))
 
   ;; dev stuff
   (when (and *debug-segment* (cpad-pressed? 0 select) (not (cpad-hold? 0 l3)) (not (paused?)) (not (movie?)))
