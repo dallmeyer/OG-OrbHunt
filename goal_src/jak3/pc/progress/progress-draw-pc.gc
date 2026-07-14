@@ -693,7 +693,7 @@
       ;;       )
       ;;     )
       ;;   )
-      (set! (-> arg0 total-num-tasks) (- LEVEL_ID_LEN 1))
+      (set! (-> arg0 total-num-tasks) (+ LEVEL_ID_LEN 1))
       ;; (sort-task-node-result (-> arg0 total-num-tasks))
       (set-flags! arg1 (font-flags kerning large))
       (set-scale! arg1 0.5)
@@ -746,9 +746,14 @@
                         )
                       )
                     )
+                  ((= 1 task-info-idx)  ;; secret tape (buzzer) counts
+                    ;; count cells
+                    (set! total-count (- LEVEL_ID_LEN 1)) ;; TODO double check this (onintent?)
+                    (set! collected-count (the int (-> *game-info* buzzer-total)))
+                    )
                   (else ;; orbs per level
-                    (set! collected-count (+ 0 (-> *game-info* skill-per-level task-info-idx)))
-                    (set! total-count (umax (-> *level-orb-total-counts* task-info-idx) (-> *level-orb-total-counts-fixed* task-info-idx)))
+                    (set! collected-count (+ 0 (-> *game-info* skill-per-level (- task-info-idx 1))))
+                    (set! total-count (umax (-> *level-orb-total-counts* (- task-info-idx 1)) (-> *level-orb-total-counts-fixed* (- task-info-idx 1))))
                     )
                   )
                 ;; print
@@ -756,12 +761,13 @@
                         (cond
                           ((and (zero? collected-count) (nonzero? total-count)) "???")
                           ((zero? task-info-idx) "Power Cells")
-                          (else (-> *level-id-names* task-info-idx)))))
+                          ((= 1 task-info-idx) "Secret Tapes")
+                          (else (-> *level-id-names* (- task-info-idx 1))))))
                   (set! (-> arg1 origin x) (+ 10.0 (adjust-x-if-needed (-> s3-0 x))))
                   (string-format "~S" (lookup-text! *common-text*
                                         ;; (if (logtest? (-> sv-272 flags) (game-task-node-flag closed))
                                         (if (>= collected-count total-count)
-                                            (if (zero? task-info-idx) (text-id progress-missions-gold-icon) (text-id progress-missions-complete-icon))
+                                            (if (<= task-info-idx 1) (text-id progress-missions-gold-icon) (text-id progress-missions-complete-icon))
                                             (text-id progress-missions-todo-icon)
                                             )
                                         #f))

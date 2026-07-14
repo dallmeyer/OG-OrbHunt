@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 1739.0838, 82.7462, -123.0872], // go over wall from roof in middle south
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  1739.0838, 82.7462, -123.0872, 10],
+      "lump": {
+        "name":"wascityb-tape-01"
+      }
+    },
+
+    {
       "trans": [   1704.7836, 101.6447, -180.4451], // lil ledge up from peninsula rooftop where vanilla has orbs
       "etype": "skill",
       "game_task": 0, 
@@ -151,28 +162,13 @@
       }
     },
     {
-      "trans": [ 1765.8718, 32.9198, -295.3297], // inside dogat near fruit stands
-      "etype": "skill",
-      "game_task": 0, 
-      "quat" : [0, 0, 0, 1],
-      "bsphere": [ 1765.8718, 32.9198, -295.3297, 10],
-      "lump": {
-        "name":"wascityb-skill-11",
-        "alt-actor": "dogat-9"
-      }
-    },
-
-    //  
-    
-    {
       "trans": [1878.06,  34.31,  -533.06 ], // eastern edge of beach over invis wall
       "etype": "skill",
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
       "bsphere": [1878.06,  34.31,  -533.06 , 10],
       "lump": {
-        "name":"wascityb-hover-skill-01",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-11"
       }
     },
     {
@@ -182,8 +178,7 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 1890.7644, 13.0880, -535.4968, 10],
       "lump": {
-        "name":"wascityb-hover-skill-02",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-12"
       }
     },
     {
@@ -193,8 +188,7 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [1932.6053, -1.42, -548.5115, 10],
       "lump": {
-        "name":"wascityb-hover-skill-03",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-13"
       }
     },
     {
@@ -204,8 +198,7 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 1416.07,  27.93,  -540.70 , 10],
       "lump": {
-        "name":"wascityb-hover-skill-04",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-14"
       }
     },
     {
@@ -215,8 +208,7 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 1382.67,  21.77,  -545.84 , 10],
       "lump": {
-        "name":"wascityb-hover-skill-05",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-15"
       }
     },
     {
@@ -226,8 +218,7 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 1830.15,  98.25,  -166.82 , 10],
       "lump": {
-        "name":"wascityb-hover-skill-06",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-16"
       }
     },
     {
@@ -237,8 +228,7 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 1824.96,  98.25,  -195.69 , 10],
       "lump": {
-        "name":"wascityb-hover-skill-07",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-17"
       }
     },
     {
@@ -248,8 +238,7 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 1825.48,  88.19,  -218.14 , 10],
       "lump": {
-        "name":"wascityb-hover-skill-08",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-18"
       }
     },
     {
@@ -259,8 +248,7 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 1832.60,  86.07,  -261.66 , 10],
       "lump": {
-        "name":"wascityb-hover-skill-09",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-19"
       }
     },
     {
@@ -270,8 +258,7 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 1848.86,  58.18,  -367.11 , 10],
       "lump": {
-        "name":"wascityb-hover-skill-10",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-20"
       }
     },
     {
@@ -281,8 +268,7 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 1834.21,  58.56,  -434.11  , 10],
       "lump": {
-        "name":"wascityb-hover-skill-11",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-21"
       }
     },
     {
@@ -292,8 +278,7 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [  1746.1263, 25.0622, -709.9893, 10],
       "lump": {
-        "name":"wascityb-hover-skill-12",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-22"
       }
     },
     {
@@ -303,8 +288,18 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [  1669.9162, 27.0004, -748.5343 , 10],
       "lump": {
-        "name":"wascityb-hover-skill-13",
-        "pickup-amount": ["float", 3.0] 
+        "name":"wascityb-skill-23"
+      }
+    },    
+    {
+      "trans": [ 1765.8718, 32.9198, -295.3297], // inside dogat near fruit stands
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1765.8718, 32.9198, -295.3297, 10],
+      "lump": {
+        "name":"wascityb-skill-24",
+        "alt-actor": "dogat-9"
       }
     }//,
     

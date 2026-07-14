@@ -880,9 +880,9 @@
             (set! (-> v1-11 touch-angle) 0.0)
             )
           )
-        (if arg2
-            (format 0 "WARNING: enemy::move-to-ground: failed to locate ground for ~S!~%" (-> this name))
-            )
+        ;; (if arg2
+        ;;     (format 0 "WARNING: enemy::move-to-ground: failed to locate ground for ~S!~%" (-> this name))
+        ;;     )
         #f
         )
       )

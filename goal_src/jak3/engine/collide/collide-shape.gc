@@ -1789,9 +1789,9 @@
           (set! (-> this coverage) 0.0)
           (set! (-> this touch-angle) 0.0)
           )
-        (if arg2
-            (format 0 "WARNING: move-to-ground: failed to locate ground for ~S!~%" (-> this process name))
-            )
+        ;; (if arg2
+        ;;     (format 0 "WARNING: move-to-ground: failed to locate ground for ~S!~%" (-> this process name))
+        ;;     )
         )
       )
     )

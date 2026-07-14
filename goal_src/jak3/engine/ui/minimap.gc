@@ -2276,7 +2276,7 @@
       ((and *target* (or (focus-test? *target* board pilot) (= (-> this min-inv-scale) (-> this max-inv-scale))))
        (let ((f0-40 0.000008138021)
              (f1-10 122880.0)
-             (v1-105 (-> *target* control transv))
+             (v1-105 (new-stack-vector0)) ;; (-> *target* control transv))
              )
          (set! (-> this target-inv-scale)
                (fmax

@@ -711,6 +711,8 @@
 
 (build-actor "arcade" :gen-mesh #t)
 
+(build-actor "secret-tape" :gen-mesh #f)
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; ANIMATIONS
 ;;;;;;;;;;;;;;;;;;;;;

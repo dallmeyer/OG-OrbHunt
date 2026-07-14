@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [  -117.3022, 42.1865, 1370.9014], // dev pic
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  -117.3022, 42.1865, 1370.9014, 10],
+      "lump": {
+        "name":"ctyport-tape-01"
+      }
+    },
+
+    {
       "trans": [  -164.5250, 4.4958, 1456.8996], // under walkway over pipes on mhcity side. jump up from water under poop pipe
       "etype": "skill",
       "game_task": 0, 

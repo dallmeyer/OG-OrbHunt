@@ -2133,6 +2133,159 @@
   (none)
   )
 
+(def-actor secret-tape
+  :bounds (0 0 0 5))
+
+(deftype tape (money)
+  ())
+
+(defun spawn-hud-tape ()
+  (with-pp
+    (let ((s4-0
+            (process-spawn
+              manipy
+              :init manipy-init
+              (new 'static 'vector :w 1.0)
+              #f
+              *secret-tape-sg*
+              #f
+              0
+              :name "manipy"
+              :to PP
+              :stack-size #x20000
+              )
+            )
+          )
+      (the-as
+        (pointer manipy)
+        (when (and s4-0 (nonzero? (-> (the-as process-drawable (-> s4-0 0)) draw)))
+          (set! (-> (the-as manipy (-> s4-0 0)) draw dma-add-func)
+                (the-as (function process-drawable draw-control symbol object none) dma-add-process-drawable-hud)
+                )
+          ;; (set-vector! (-> s4-0 0 root scale)
+          ;;             (* (-> this icons i scale-x) (-> *video-parms* relative-x-scale))
+          ;;             (* (-> this icons i scale-y) (-> *video-parms* relative-y-scale))
+          ;;             (* (-> this icons i scale-x) (-> *video-parms* relative-x-scale))
+          ;;             1.0)
+          (set-vector! (-> s4-0 0 root scale) 0.0090 -0.0179 0.0090 1.0)
+          (set! (-> s4-0 0 root trans x) -15.0)
+          (set! (-> s4-0 0 root trans y) 200.0)
+          (set! (-> s4-0 0 root trans z) 1024.0)
+          (logior! (-> s4-0 0 mask) (process-mask freeze pause))
+          (logclear! (-> s4-0 0 mask) (process-mask menu progress))
+          ;; (send-event (ppointer->process s4-0) 'draw #f)
+          ;; (set! (-> arg0 icons arg1 icon) (the-as (pointer manipy) s4-0))
+          s4-0
+          )
+        )
+      )
+    )
+  )
+
+(defstate pickup (tape)
+  :virtual #t
+  :code (behavior ((arg0 symbol) (arg1 handle))
+    (play-sound-file "thps.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 50.0)))
+    ;; hide, dont collide
+    (logior! (-> self draw status) (draw-control-status no-draw-bounds))
+    (clear-collide-with-as (-> self root))
+    (process-entity-status! self (entity-perm-status dead) #t)
+    ;; spawn function to show "hud"
+    (process-spawn-function process (lambda ()
+      (let ((t (get-current-time)))
+        ;; show msg for 3s
+        ;; (spawn-hud-tape) ;; let this die when we die ;; TODO - merc hud? idk
+        (while (not (g-time-elapsed? t (seconds 3)))
+          (let ((s5-2 (new 'stack 'font-context *font-default-matrix* 32 280 0.0 (font-color default) (font-flags shadow kerning))))
+            (set-width! s5-2 340)
+            (set-height! s5-2 80)
+            (let ((v1-98 s5-2)
+                  (a0-39 (-> *setting-control* user-default language))
+                  )
+              (set! (-> v1-98 scale) (if (or (= a0-39 (language-enum korean)) (= a0-39 (language-enum russian)))
+                                        0.9
+                                        0.7
+                                        )))
+            (set! (-> s5-2 flags) (font-flags shadow kerning middle-vert large))
+            (pc-encode-utf8-string "Collected a secret tape!" *pc-encoded-temp-string*)
+            (print-game-text
+              *pc-encoded-temp-string*
+              s5-2
+              #f
+              44
+              (bucket-id hud-draw-hud-alpha)
+              )
+            )
+          (suspend)
+          )
+        )
+      ))
+    )
+  )
+
+(defmethod initialize-allocations ((this tape))
+  (stack-size-set! (-> this main-thread) 128)
+  (let ((s5-0 (new 'process 'collide-shape-moving this (collide-list-enum hit-by-player))))
+    (set! (-> s5-0 dynam) (copy *standard-dynamics* 'process))
+    (set! (-> s5-0 reaction) cshape-reaction-default)
+    (set! (-> s5-0 no-reaction)
+          (the-as (function collide-shape-moving collide-query vector vector object) nothing)
+          )
+    (let ((v1-8 (new 'process 'collide-shape-prim-sphere s5-0 (the-as uint 0))))
+      (set! (-> v1-8 prim-core collide-as) (collide-spec collectable notice-blue-eco-powerup))
+      (set! (-> v1-8 prim-core collide-with) (collide-spec jak player-list tobot jak-vehicle))
+      (set-vector! (-> v1-8 local-sphere) 0.0 2048.0 0.0 4915.2)
+      (set! (-> s5-0 total-prims) (the-as uint 1))
+      (set! (-> s5-0 root-prim) v1-8)
+      )
+    (set! (-> s5-0 nav-radius) (* 0.75 (-> s5-0 root-prim local-sphere w)))
+    (let ((v1-11 (-> s5-0 root-prim)))
+      (set! (-> s5-0 backup-collide-as) (-> v1-11 prim-core collide-as))
+      (set! (-> s5-0 backup-collide-with) (-> v1-11 prim-core collide-with))
+      )
+    (set! (-> this root) s5-0)
+    )
+  (logior! (-> this mask) (process-mask actor-pause))
+  (set! (-> this actor-pause) #t)
+  (set! (-> this notify) (the-as handle #f))
+  (set! (-> this fact) (new 'process 'fact-info this (pickup-type buzzer) 1.0))
+  (let ((a0-11 (-> this entity)))
+    (if (when a0-11
+          (let ((a0-12 (-> a0-11 extra perm task)))
+            (if a0-12
+                (= a0-12 (game-task none))
+                )
+            )
+          )
+        (set! (-> this entity extra perm task) (game-task complete))
+        )
+    )
+  (initialize-skeleton
+    this
+    *secret-tape-sg*
+    '()
+    )
+  (if (-> this entity)
+      (nav-mesh-connect-from-ent this)
+      )
+  ;; (set-vector! (-> this draw color-mult) 0.8 0.8 0.8 1.0)
+  ;; (set-vector! (-> this draw color-emissive) 0.2 0.2 0.2 1.0)
+  0
+  (none)
+  )
+
+(defmethod init-from-entity! ((this tape) (arg0 entity-actor))
+  "Set up a newly created process from the entity that created it."
+  (initialize-allocations this)
+  (process-drawable-from-entity! this (-> this entity))
+  (initialize-options this 0 512.0 (the-as fact-info #f))
+  (update-transforms (-> this root))
+  (set! (-> this entity extra perm task) (game-task complete)) ;; dont spawn again once collected
+  (go (method-of-object this wait))
+  )
+
+
+
 (defskelgroup skel-pre-artifact-d pre-artifact-d pre-artifact-d-lod0-jg pre-artifact-d-idle-ja
               ((pre-artifact-d-lod0-mg (meters 999999)))
               :bounds (static-spherem 0 0 0 4)

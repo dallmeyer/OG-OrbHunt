@@ -216,7 +216,7 @@
                ;; copy textures
                (let ((tpage-id (second (string-split (symbol->string (first (string-split file-name "."))) "-"))))
                 (set! textures (cons tpage-id textures))))
-              ((or (string-ends-with? file-name ".go")
+              ((or (and (string-ends-with? file-name ".go") (not (eq? file-name "secret-tape-ag.go")))
                    (eq? file-name bsp-file-name)
                    )
                ;; copy art files

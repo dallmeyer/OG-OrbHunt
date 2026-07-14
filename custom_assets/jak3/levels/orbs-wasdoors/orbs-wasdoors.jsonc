@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 2205.54,  36.25,  227.64  ], // old any% strat with leaper
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 2205.54,  36.25,  227.64  , 10],
+      "lump": {
+        "name":"wasdoors-tape-01"
+      }
+    },
+
+    {
       "trans": [ 2264.96,  55.60,  140.83 ], // above door back to city
       "etype": "skill",
       "game_task": 0, 

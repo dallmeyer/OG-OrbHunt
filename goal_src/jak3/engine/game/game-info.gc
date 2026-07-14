@@ -799,9 +799,11 @@
        (-> this fuel)
        )
       (('buzzer)
-       (logand (the int arg1) #xffff)
-       (sar (the int arg1) 16)
-       0.0
+      ;; old leftover logic
+      ;;  (logand (the int arg1) #xffff)
+      ;;  (sar (the int arg1) 16)
+      ;; orb hunt
+       (+! (-> this buzzer-total) arg1)
        )
       (('ammo-yellow 'ammo-red 'ammo-blue 'ammo-dark)
        0.0

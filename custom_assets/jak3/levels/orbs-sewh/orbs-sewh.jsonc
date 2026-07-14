@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -362.60,  -53.93,  162.79], // on OOB halfpipe, you can hover out of room with turret
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -362.60,  -53.93,  162.79, 10],
+      "lump": {
+        "name":"sewh-tape-01"
+      }
+    },
+
+    {
       "trans": [  -23.2945, -118.5666, 184.3938], // small ledge near laser on track leading to halfpipe
       "etype": "skill",
       "game_task": 0, 
