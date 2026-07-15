@@ -1601,6 +1601,15 @@
                                  :scale 1.0
                                  :color (new 'static 'rgba :r #x7f :g #x7f :b #x7f :a #x80)
                                  )
+                               (new 'static 'minimap-class-node
+                                 :default-position (new 'static 'vector :x -592445.44 :y 20111.36 :z -1443553.2 :w 1.0)
+                                 :flags (minimap-flag bigmap)
+                                 :name "tape"
+                                 :class (minimap-class tape)
+                                 :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x2 #x5))
+                                 :scale 1.0
+                                 :color (new 'static 'rgba :r #x0 :g #x7f :b #x7f :a #x80)
+                                 )
                                )
         )
 
@@ -3590,11 +3599,11 @@
           ;; orb hunt - only draw orba connections if the setting is on
           (when 
             (case (-> (the-as connection-minimap a2-5) class class)
-              (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold))
+              (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold) (minimap-class tape))
                 (dbg-format 0 "minimap trying to draw orbs~%")
                 (let ((proc (handle->process (-> (the-as connection-minimap a2-5) handle))))
-                  (or (-> *mod-settings* orb-map-icons?)
-                      (and (= (-> proc type) skill)
+                  (or (and (!= (-> proc type) tape) (-> *mod-settings* orb-map-icons?))
+                      (and (or (= (-> proc type) skill) (= (-> proc type) tape))
                             ;; check overloaded bit-15 from crate orbs
                             (logtest? (-> proc entity extra perm status) (entity-perm-status bit-15))
                             )

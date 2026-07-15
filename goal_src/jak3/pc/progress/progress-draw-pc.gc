@@ -748,7 +748,7 @@
                     )
                   ((= 1 task-info-idx)  ;; secret tape (buzzer) counts
                     ;; count cells
-                    (set! total-count (- LEVEL_ID_LEN 1)) ;; TODO double check this (onintent?)
+                    (set! total-count (- LEVEL_ID_LEN 1)) ;; TODO double check this (-none, onintent?)
                     (set! collected-count (the int (-> *game-info* buzzer-total)))
                     )
                   (else ;; orbs per level

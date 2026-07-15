@@ -2137,7 +2137,9 @@
   :bounds (0 0 0 5))
 
 (deftype tape (money)
-  ())
+  ((minimap connection-minimap)  ;; added orbhunt
+   )
+  )
 
 (defun spawn-hud-tape ()
   (with-pp
@@ -2189,6 +2191,7 @@
     ;; hide, dont collide
     (logior! (-> self draw status) (draw-control-status no-draw-bounds))
     (clear-collide-with-as (-> self root))
+    (process-entity-status! self (entity-perm-status bit-15) #f)
     (process-entity-status! self (entity-perm-status dead) #t)
     ;; spawn function to show "hud"
     (process-spawn-function process (lambda ()
@@ -2270,6 +2273,7 @@
       )
   ;; (set-vector! (-> this draw color-mult) 0.8 0.8 0.8 1.0)
   ;; (set-vector! (-> this draw color-emissive) 0.2 0.2 0.2 1.0)
+  (set! (-> this minimap) (add-icon! *minimap* this (the uint (minimap-class tape)) (the-as int #f) (the-as vector #t) 0))
   0
   (none)
   )

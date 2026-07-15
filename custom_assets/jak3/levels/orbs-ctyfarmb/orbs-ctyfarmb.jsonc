@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ -156.3380, 9.1969, 910.4232], // oob on inner part of NE exit 
+      "etype": "tape ",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -156.3380, 9.1969, 910.4232, 10],
+      "lump": {
+        "name":"ctyfarmb-tape-01"
+      }
+    },
+    {
       "trans": [ -283.2207, 9.5143, 1176.3676], // warp gate to mhcitya
       "etype": "warp-gate",
       "game_task": 0, 

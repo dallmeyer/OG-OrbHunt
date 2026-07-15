@@ -1941,7 +1941,8 @@
                                                  524
                                                  0
                                                  )
-                                             #x8203
+                                            ;;  #x8203
+                                             #x203 ;; removed bit-15 to persist minimap tagging on checkpoint respawn
                                              )
                     )
          (logclear! (-> this status) (logior (if (logtest? (-> this status) (entity-perm-status bit-4))

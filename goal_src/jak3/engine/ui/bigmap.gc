@@ -589,10 +589,10 @@
                     ;; orb hunt - only draw orba connections if the setting is on
                     (when
                       (case (-> a2-11 class class)
-                        (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold))
+                        (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold) (minimap-class tape))
                           (let ((proc (handle->process (-> a2-11 handle))))
-                            (or (-> *mod-settings* orb-map-icons?)
-                                (and (= (-> proc type) skill)
+                            (or (and (!= (-> proc type) tape) (-> *mod-settings* orb-map-icons?))
+                                (and (or (= (-> proc type) skill) (= (-> proc type) tape))
                                   ;; check overloaded bit-15 from crate orbs
                                   (logtest? (-> proc entity extra perm status) (entity-perm-status bit-15))
                                   )
@@ -1194,10 +1194,10 @@
                   ;; orb hunt - only draw orba connections if the setting is on
                   (when
                     (case (-> a2-11 class class)
-                      (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold))
+                      (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold) (minimap-class tape))
                         (let ((proc (handle->process (-> a2-11 handle))))
-                          (or (-> *mod-settings* orb-map-icons?)
-                              (and (= (-> proc type) skill)
+                          (or (and (!= (-> proc type) tape) (-> *mod-settings* orb-map-icons?))
+                              (and (or (= (-> proc type) skill) (= (-> proc type) tape))
                                 ;; check overloaded bit-15 from crate orbs
                                 (logtest? (-> proc entity extra perm status) (entity-perm-status bit-15))
                                 )

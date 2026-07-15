@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 2324.3581, 26.7058, -416.7525], // under/inside final platform 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2324.3581, 26.7058, -416.7525, 10],
+      "lump": {
+        "name":"wasstadb-tape-01"
+      }
+    },
+
+    {
       "trans": [  2378.6196, 48.6402, -445.3172], // on small standpt on side of course near ground pound spot
       "etype": "skill",
       "game_task": 0, 
@@ -97,6 +108,16 @@
       "lump": {
         "name":"wasstadb-skill-05",
         "bob-scale": ["float", -1.0]
+      }
+    },
+    {
+      "trans": [ 2358.6955, 49.4779, -447.5401], // after groundpound panel, jump back up inside structure 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2358.6955, 49.4779, -447.5401, 10],
+      "lump": {
+        "name":"wasstadb-skill-06"
       }
     }//,
     

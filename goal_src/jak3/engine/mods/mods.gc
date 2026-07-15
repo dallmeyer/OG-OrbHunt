@@ -1133,6 +1133,7 @@
     (('des-burning-bush-21)
       (set-vector-meters! (-> arg0 extra trans) 2411.80  40.28  -281.46 ) ;; 
       )
+    (('wascity-cactus-5) (set-vector-meters! (-> arg0 extra trans) 2125.6257 25.8089 -216.6475))
 
     ;; ====== WASCITYB (spargus west) ======
     (('skill-139) (set-vector-meters! (-> arg0 extra trans) 2017.3160 55.1388 -374.2029)) ;; in torch along wall on right side leading to throne room
@@ -1640,9 +1641,10 @@
                   (let ((entity-link (-> entities data idx)))
                     (when (and (-> entity-link entity) (nonzero? (-> entity-link entity))
                               (-> entity-link process)
-                              (= (-> (the entity-actor (-> entity-link entity)) etype symbol) 'skill)
+                              (or (= (-> (the entity-actor (-> entity-link entity)) etype symbol) 'skill)
+                                  (= (-> (the entity-actor (-> entity-link entity)) etype symbol) 'tape))
                               )
-                      (let ((s (the skill (-> entity-link process))))
+                      (let ((s (the process-drawable (-> entity-link process))))
                         ;; we have a live orb, figure out how far away it is relative to camera
                         (vector-copy! skill-pos-offset (-> s root trans))
                         (+! (-> skill-pos-offset y) (meters 0.6)) ;; from base of orb to middle
@@ -1783,6 +1785,12 @@
   (let ((door (entity-by-name "precur-door-a-1")))
     (when door 
       (set! (cdr (res-lump-struct door 'open-test pair)) '(#t))) ;; (or (task-closed? "precursor-destroy-ship-resolution") (and (entity-status? "dp-bipedal-100" subtask-complete no-birth) (entity-status? "dp-bipedal-101" subtask-complete no-birth) (entity-status? "dp-bipedal-102" subtask-complete no-birth) (entity-status? "dp-bipedal-103" subtask-complete no-birth)))))
+    )
+
+  ;; waspala
+  (let ((r1429 (region-lookup-by-id 1429)))
+    (when r1429
+      (set! (-> r1429 on-inside) '())) ;; retain minimap (prevents crash idk)
     )
 
   ;; desertf - open marauder stronghold doors when jak in bubble
@@ -2420,8 +2428,6 @@
     )
   (none)
   )
-
-
 
 (defun speedrun-practice-temp-checkpoint ()
   (when (-> *tmp-continue-point* level)

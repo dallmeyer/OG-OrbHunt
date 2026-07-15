@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 2471.8820, 37.7296, -569.3492], // oob end of bleachers on right next to hidden audience member 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2471.8820, 37.7296, -569.3492, 10],
+      "lump": {
+        "name":"wasstada-tape-01"
+      }
+    },
+
+    {
       "trans": [ 2463.23,  88.56,  -478.81 ], // bleachers counterclockwise far end, top level
       "etype": "skill",
       "game_task": 0, 

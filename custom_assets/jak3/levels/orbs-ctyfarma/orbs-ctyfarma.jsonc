@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ -442.4674, 52.3219, 208.7371], // inside airlock to mountain/forest
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -442.4674, 52.3219, 208.7371, 10],
+      "lump": {
+        "name":"ctyfarma-tape-01"
+      }
+    },
+    {
       "trans": [ -362.9835, 33.9877, 157.9458], // warp gate to rubbleb
       "etype": "warp-gate",
       "game_task": 0, 

@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 2153.62,  197.72,  406.53 ], // way oob on mountains in desert background, long ass hover out the top of throne room
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2153.62,  197.72,  406.53 , 10],
+      "lump": {
+        "name":"waspala-tape-01"
+      }
+    },
+
+    {
       "trans": [  1979.0856, 253.1992, -427.3380], // IJ pillar, hint for next orb
       "etype": "skill",
       "game_task": 0, 
