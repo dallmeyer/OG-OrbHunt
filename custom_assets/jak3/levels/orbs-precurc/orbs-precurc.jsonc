@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 187.9894, 501.5480, 310.1145], // oob near last elevator (top)
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 187.9894, 501.5480, 310.1145, 10],
+      "lump": {
+        "name":"precurc-tape-01"
+      }
+    },
+    
+    {
       "trans": [  39.6568, 547.4811, -87.0254], // in first jak-side room, around corner behind invis wall
       "etype": "skill",
       "game_task": 0, 

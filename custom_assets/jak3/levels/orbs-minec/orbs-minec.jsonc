@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 258.8222, -40.5454, 56.9997], // bottom of intro elevator
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 258.8222, -40.5454, 56.9997, 10],
+      "lump": {
+        "name":"minec-tape-01"
+      }
+    },
+    
+    {
       "trans": [   148.6576, 97.9888, 15.4459], // slippery metal behind lamp near jetboard proxy
       "etype": "skill",
       "game_task": 0, 

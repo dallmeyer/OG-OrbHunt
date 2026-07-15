@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 40.8100, 548.8240, -180.4511], // oob near windows
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 40.8100, 548.8240, -180.4511, 10],
+      "lump": {
+        "name":"precura-tape-01"
+      }
+    },
+    
+    {
       "trans": [  -46.1136, 554.7822, -151.8924], // on thing on wall of first room
       "etype": "skill",
       "game_task": 0, 

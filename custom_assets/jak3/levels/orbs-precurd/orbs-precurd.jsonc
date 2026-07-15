@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [8.6700, 201.00, 575.8497 ], // behind far side fake door
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [ 0.0000, 0.7065, 0.0000, 0.7077],
+      "bsphere": [ 8.6700, 201.00, 575.8497 , 10],
+      "lump": {
+        "name":"precurd-tape-01"
+      }
+    },  
+    {
       "trans": [8.6700, 201.00, 575.8497 ], // warp to factoryb
       "etype": "warp-gate",
       "game_task": 0, 

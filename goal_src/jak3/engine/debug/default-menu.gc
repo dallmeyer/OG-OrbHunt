@@ -6759,7 +6759,7 @@
         (function "combb"       #f ,(lambda () (start 'play (get-continue-by-name *game-info* "combb-start"))))
         (function "combc"       #f ,(lambda () (start 'play (get-continue-by-name *game-info* "combc-start"))))
         (function "combd"       #f ,(lambda () (start 'play (get-continue-by-name *game-info* "combd-start"))))
-        (function "combe"       #f ,(lambda () (start 'play (get-continue-by-name *game-info* "combe-start"))))
+        (function "combe"       #f ,(lambda () (start 'play (get-continue-by-name *game-info* "combe"))))
         (function "railx"       #f ,(lambda () (start 'play (get-continue-by-name *game-info* "railx-warp"))))
         (function "railb"       #f ,(lambda () (start 'play (get-continue-by-name *game-info* "railb-start"))))
         (function "railb2"      #f ,(lambda () (start 'play (get-continue-by-name *game-info* "railb2-start"))))

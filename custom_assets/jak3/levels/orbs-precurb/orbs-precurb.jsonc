@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -228.8843, 527.7069, 69.5069], // oob in center of circle room
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -228.8843, 527.7069, 69.5069, 10],
+      "lump": {
+        "name":"precurb-tape-01"
+      }
+    },
+    
+    {
       "trans": [  -13.4090, 548.7030, -10.4130], // light next to first generator
       "etype": "skill",
       "game_task": 0, 
