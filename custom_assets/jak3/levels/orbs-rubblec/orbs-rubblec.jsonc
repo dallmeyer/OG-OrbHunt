@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 340.45,  9.06,  270.47 ], // oob thru building side hole on left before final barrier
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 340.45,  9.06,  270.47 , 10],
+      "lump": {
+        "name":"rubblec-tape-01"
+      }
+    },
+
+    {
       "trans": [  279.4039, 6.5397, 326.6859], // hint for infinite jump wall near final barrier
       "etype": "skill",
       "game_task": 0, 

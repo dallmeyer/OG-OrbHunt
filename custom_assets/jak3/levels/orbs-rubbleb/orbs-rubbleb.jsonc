@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ -125.91,  19.45,  8.07 ], // oob in building at hairpin turn
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -125.91,  19.45,  8.07 , 10],
+      "lump": {
+        "name":"rubbleb-tape-01"
+      }
+    },
+    {
       "trans": [ -336.3517, 24.7200, 184.1002 ], // warp gate to ctyfarma
       "etype": "warp-gate",
       "game_task": 0, 

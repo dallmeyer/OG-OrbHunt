@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -309.66,  0.0,  -156.70 ], // corner of water under/oob level
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -309.66,  0.0,  -156.70 , 10],
+      "lump": {
+        "name":"rubblea-tape-01"
+      }
+    },
+    
+    {
       "trans": [  -96.77,  39.47,  -352.02 ], // corner of debris near entrance from stadiuma, hint for invis wall for dividing wall
       "etype": "skill",
       "game_task": 0, 

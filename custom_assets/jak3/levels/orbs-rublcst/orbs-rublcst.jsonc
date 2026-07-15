@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ 119.12,  1.06,  462.98 ], // on ground under level, like if you fall thru floor after btr barrier
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 119.12,  1.06,  462.98 , 10],
+      "lump": {
+        "name":"rublcst-tape-01"
+      }
+    },
+    {
       "trans": [ 175.9254, 8.9642, 493.0804], // h-sled to railb
       "etype": "pre-sled-dummy",
       "game_task": 0, 

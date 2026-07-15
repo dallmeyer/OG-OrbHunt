@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -428.99,  13.36,  -159.37 ], // under pile of rubble before first barrier skip, just crawl under
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -428.99,  13.36,  -159.37 , 10],
+      "lump": {
+        "name":"rubblea2-tape-01"
+      }
+    },
+
+    {
       "trans": [  -439.1120, 45.4011, -63.9887], // on top of electric barrier (hint for getting over invis wall for next two orbs)
       "etype": "skill",
       "game_task": 0, 
