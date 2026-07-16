@@ -380,7 +380,8 @@
         (ja-post)
         )
     ;; orb hunt - dont spawn particles for fuel cell in pending
-    (if (and (nonzero? s5-0) (not (name= (-> this state name) 'pending)))
+    (if (and (nonzero? s5-0)
+             (not (name= (-> this state name) 'pending)))
         (spawn s5-0 (-> s4-0 world-sphere))
         ;; (kill-particles s5-0)
         )
@@ -691,10 +692,6 @@
       (set! *hover-collected-grace-time* (get-current-time))
       )
     (cond
-      ;; ghost orb hint, no pickup
-      ((and (= (-> self type symbol) 'skill-ghost))
-        ;; don't do pickup
-        )
       ;; some orbs require 'alt-actor to be dead before pickup is allowed (veggies hack)
       ((and (= (-> self type symbol) 'skill)
             (not (skill-alt-actor-check? self #t))
@@ -1489,7 +1486,9 @@
   (let ((a0-7 (-> this part))
         (a1-1 (-> this root root-prim prim-core))
         )
-    (if (and (nonzero? a0-7) (not (name= (-> this state name) 'pending)) (-> *mod-settings* skill-starburst?))
+    (if (and (nonzero? a0-7) (not (name= (-> this state name) 'pending)) (-> *mod-settings* skill-starburst?)
+             (not (logtest? (-> this entity extra perm status) (entity-perm-status complete))) ;; no glow for ghosts
+             )
         (spawn a0-7 (-> a1-1 world-sphere))
         )
     )
@@ -1956,8 +1955,6 @@
    )
   )
 
-(deftype skill-ghost (skill) ()) ;; same as skill but can't be picked up and is transparent
-
 (defstate pickup (skill)
   :virtual #t
   :code (behavior ((arg0 symbol) (arg1 handle))
@@ -1978,8 +1975,21 @@
           )
         ))
 
-    (process-entity-status! self (entity-perm-status bit-15) #f)
-    (process-entity-status! self (entity-perm-status dead) #t)
+    (cond
+      ((= (-> (ppointer->process (-> self parent)) type symbol) 'process-tree)
+        ;; open orb - dont mark dead, just make it uncollectable
+        (process-entity-status! self (entity-perm-status bit-15) #f)
+        ;; (process-entity-status! self (entity-perm-status dead) #t)
+        (process-entity-status! self (entity-perm-status complete) #t)
+        (go-virtual wait)
+        )
+      (else
+        ;; crate/cache/plantboss/gnawer
+        (process-entity-status! self (entity-perm-status bit-15) #f)
+        (process-entity-status! self (entity-perm-status dead) #t)
+        )
+      )
+
     )
   :exit (behavior ()
     ;; refresh orb-placer list in debug mode
@@ -1994,6 +2004,27 @@
   :code (behavior ()
     (until #f
       ;; check orb/ghost visibility
+      ;; og:noorb - transparent/uncollectable orbs for collected open orbs
+      (when (and (= (-> (ppointer->process (-> self parent)) type symbol) 'process-tree) 
+                 (logtest? (-> self entity extra perm status) (entity-perm-status complete)))
+        (when (and (nonzero? (-> self part))
+                 (= (-> self type) skill) ;; no onin-brain particles crash
+                 )
+          (kill-particles (-> self part))
+          )
+        (logclear! (-> self flags) (collectable-flag pickup)) ;; (collectable-flags can-collect))
+        (logior! (-> self draw status) (draw-control-status force-fade))
+        (cond
+          ((-> *mod-settings* orb-ghosts?)
+            (set! (-> self draw force-fade) (the-as uint 12))
+            (logclear! (-> self draw status) (draw-control-status no-draw)))
+          (else
+            (set! (-> self draw force-fade) (the-as uint 0))
+            (logior! (-> self draw status) (draw-control-status no-draw)))
+          )
+        )
+        
+      ;; jak 2 code
       (cond
         ((not (skill-alt-actor-check? self #f))
           ;; make orbs invis if they can't be collected yet due to alt-actor
@@ -2001,17 +2032,6 @@
           ;; set state-time so we can cooldown based on this
           (set-time! (-> self state-time))
           )
-        ((= (-> self type) skill-ghost)
-          (cond
-            ((-> *mod-settings* orb-ghosts?)
-              ;; translucent ghost orb
-              (logclear! (-> self draw status) (draw-control-status no-draw-bounds))
-              (logior! (-> self draw status) (draw-control-status force-fade))
-              (set! (-> self draw force-fade) (the-as uint 12)))
-            (else
-              ;; hidden ghost orb
-              (logior! (-> self draw status) (draw-control-status no-draw-bounds))
-              (logclear! (-> self draw status) (draw-control-status force-fade)))))
         (else
           ;; passed alt-actor check, not a ghost, show orba
           (logclear! (-> self draw status) (draw-control-status no-draw-bounds))))
@@ -2031,6 +2051,7 @@
       (with-pc
         (cond
           ((and (-> *mod-settings* skill-starburst?) 
+                (not (logtest? (-> self entity extra perm status) (entity-perm-status complete))) ;; no glow for ghosts
                 (= (-> self type) skill) ;; no onin-brain particles crash
                 )
             (spawn (-> self part) (-> self root trans)))

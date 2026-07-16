@@ -120,7 +120,6 @@
      (set! (-> this music) arg1)
      )
     (('extra-bank)
-     (format 0 "extra-bank add ~A~%" arg1)
      (when (< (-> this extra-bank-count) (the-as uint 3))
        (set! (-> this extra-bank (-> this extra-bank-count)) (the-as pair arg1))
        (+! (-> this extra-bank-count) 1)

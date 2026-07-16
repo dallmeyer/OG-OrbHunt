@@ -591,10 +591,13 @@
                       (case (-> a2-11 class class)
                         (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold) (minimap-class tape))
                           (let ((proc (handle->process (-> a2-11 handle))))
-                            (or (and (!= (-> proc type) tape) (-> *mod-settings* orb-map-icons?))
+                            (or (and (!= (-> proc type) tape)
+                                     (-> *mod-settings* orb-map-icons?) 
+                                     (not (logtest? (-> proc entity extra perm status) (entity-perm-status complete))))
                                 (and (or (= (-> proc type) skill) (= (-> proc type) tape))
-                                  ;; check overloaded bit-15 from crate orbs
-                                  (logtest? (-> proc entity extra perm status) (entity-perm-status bit-15))
+                                     ;; check overloaded bit-15 from crate orbs
+                                     (logtest? (-> proc entity extra perm status) (entity-perm-status bit-15))
+                                     (not (logtest? (-> proc entity extra perm status) (entity-perm-status complete)))
                                   )
                                 )
                             )
@@ -1196,10 +1199,13 @@
                     (case (-> a2-11 class class)
                       (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold) (minimap-class tape))
                         (let ((proc (handle->process (-> a2-11 handle))))
-                          (or (and (!= (-> proc type) tape) (-> *mod-settings* orb-map-icons?))
+                          (or (and (!= (-> proc type) tape) 
+                                   (-> *mod-settings* orb-map-icons?)
+                                   (not (logtest? (-> proc entity extra perm status) (entity-perm-status complete))))
                               (and (or (= (-> proc type) skill) (= (-> proc type) tape))
-                                ;; check overloaded bit-15 from crate orbs
-                                (logtest? (-> proc entity extra perm status) (entity-perm-status bit-15))
+                                   ;; check overloaded bit-15 from crate orbs
+                                   (logtest? (-> proc entity extra perm status) (entity-perm-status bit-15))
+                                   (not (logtest? (-> proc entity extra perm status) (entity-perm-status complete)))
                                 )
                               )
                           )

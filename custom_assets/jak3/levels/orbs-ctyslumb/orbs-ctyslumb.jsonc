@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 423.9182, 3.1830, -204.8644], // oob kinda near ctygen 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 423.9182, 3.1830, -204.8644, 10],
+      "lump": {
+        "name":"ctyslumb-tape-01"
+      }
+    },
+
+    {
       "trans": [  548.8572, 16.9844, -259.3113], // support beam for grind rail
       "etype": "skill",
       "game_task": 0, 
@@ -318,31 +329,6 @@
         "alt-actor": "ctyslumb-samos-npc"
       }
     }//,
-
-    // GHOSTS
-    // {
-    //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-1",
-    //     "pickup-amount": ["float", 2.0], // abah hint
-    //     "alt-actor":"wascitya-skill-1"
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-2",
-    //     "alt-actor":"wascitya-skill-2"
-    //   }
-    // }
     
   ]
 }

@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -250.6479, 13.3534, 600.8015], // oob near sewers 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -250.6479, 13.3534, 600.8015, 10],
+      "lump": {
+        "name":"mhcityb-tape-01"
+      }
+    },
+
+    {
       "trans": [    -257.7600, 12.2174, 822.7756 ], // in pocket of vines just around corner from tower
       "etype": "skill",
       "game_task": 0, 
@@ -77,33 +88,6 @@
         "name":"mhcityb-skill-03"
       }
     }//,
-    
-    
-
-    // GHOSTS
-    // {
-    //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-1",
-    //     "pickup-amount": ["float", 2.0], // abah hint
-    //     "alt-actor":"wascitya-skill-1"
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-2",
-    //     "alt-actor":"wascitya-skill-2"
-    //   }
-    // }
     
   ]
 }

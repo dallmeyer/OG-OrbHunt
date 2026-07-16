@@ -154,7 +154,7 @@ void link_control::jak3_begin(Ptr<uint8_t> object_file,
       jak1_jak2_begin(object_file, name, size, heap, flags);
       return;
     }
-    ASSERT(version == 5);
+    ASSERT_MSG(version == 5, fmt::format("UNHANDLED LINK FILE {} VERSION {} !", name, version));
     m_heap_top = heap->top;
     // this->unk_init1 = 1; TODO
     m_busy = true;

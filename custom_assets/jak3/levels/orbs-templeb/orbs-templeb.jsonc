@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 4076.3881, 80.1531, 4416.3320], // oob near rotator room exit to jetboard tests 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4076.3881, 80.1531, 4416.3320, 10],
+      "lump": {
+        "name":"templeb-tape-01"
+      }
+    },
+
+    {
       "trans": [ 4157.8002, 59.8996, 4613.1987], // torch in northern bit of triangle room. before hallway to rotator room
       "etype": "skill",
       "game_task": 0, 
@@ -204,31 +215,6 @@
         "pickup-amount": ["float", 3.0] // hover
       }
     }
-
-    // GHOSTS
-    // {
-    //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-1",
-    //     "pickup-amount": ["float", 2.0], // abah hint
-    //     "alt-actor":"wascitya-skill-1"
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-2",
-    //     "alt-actor":"wascitya-skill-2"
-    //   }
-    // }
     
   ]
 }

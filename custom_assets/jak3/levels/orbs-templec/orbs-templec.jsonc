@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 3902.2324, 36.8756, 4608.9282], // do old token skip oob thru the bricks, jump down into water, swim around clockwise and dive under rock 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3902.2324, 36.8756, 4608.9282, 10],
+      "lump": {
+        "name":"templec-tape-01"
+      }
+    },
+
+    {
       "trans": [ 3921.9111, 35.7830, 4739.4184], // dive in water tucked into corner by tidepod section exit
       "etype": "skill",
       "game_task": 0, 
@@ -169,33 +180,6 @@
         "name":"templec-skill-12"
       }
     }//,
-    
-    
-
-    // GHOSTS
-    // {
-    //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-1",
-    //     "pickup-amount": ["float", 2.0], // abah hint
-    //     "alt-actor":"wascitya-skill-1"
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-2",
-    //     "alt-actor":"wascitya-skill-2"
-    //   }
-    // }
     
   ]
 }

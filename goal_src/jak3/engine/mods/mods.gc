@@ -230,7 +230,7 @@
                                      (= (-> (the crate proc) fact pickup-type) (pickup-type skill))
                                      )
                                 )
-                            (not (type-type? (-> proc type) skill-ghost))
+                            (not (logtest? (-> s0-0 extra status) (entity-perm-status complete))) ;; collected (but alive for ghost)
                             (not (logtest? (-> s0-0 extra status) (entity-perm-status subtask-complete))) ;; crate respawn check
                             )
                     (let ((dist (vector-vector-distance 
@@ -1640,6 +1640,7 @@
                 (dotimes (idx (-> entities length))
                   (let ((entity-link (-> entities data idx)))
                     (when (and (-> entity-link entity) (nonzero? (-> entity-link entity))
+                              (not (logtest? (-> entity-link perm status) (entity-perm-status complete))) ;; ignore ghost orbs
                               (-> entity-link process)
                               (or (= (-> (the entity-actor (-> entity-link entity)) etype symbol) 'skill)
                                   (= (-> (the entity-actor (-> entity-link entity)) etype symbol) 'tape))
@@ -2190,7 +2191,6 @@
 ;;   (clear-entity-kill-mask "skill-125") ;; spawn skill-125!!
   
   ;; make orb follow grunt/mine
-  ;; (skill-follow-min-y "sewer-skill-ghost-28" "grunt-203" (meters -66.5))
   (skill-follow-y-offset "wascitya-skill-04" "dogat-18" (meters 0.7))
   (skill-follow-y-offset "wascitya-skill-05" "tizard-5" (meters 0.7))
 

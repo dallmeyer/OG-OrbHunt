@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 4304.6904, 98.4121, 4669.6401], // orba004 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4304.6904, 98.4121, 4669.6401, 10],
+      "lump": {
+        "name":"templed-tape-01"
+      }
+    },
+
+    {
       "trans": [ 4352.0629, 77.2128, 4508.0585], // hidden warp gate on elevator
       "etype": "warp-gate",
       "game_task": 0, 
@@ -385,32 +396,6 @@
         "alt-actor": "templed-seem-npc"
       }
     }//,
-
-
-    // GHOSTS
-    // {
-    //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-1",
-    //     "pickup-amount": ["float", 2.0], // abah hint
-    //     "alt-actor":"wascitya-skill-1"
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-2",
-    //     "alt-actor":"wascitya-skill-2"
-    //   }
-    // }
     
   ]
 }

@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 493.3891, 1.7623, -556.8468], // oob inside building opposite freehq 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 493.3891, 1.7623, -556.8468, 10],
+      "lump": {
+        "name":"ctyslumc-tape-01"
+      }
+    },
+
+    {
       "trans": [   586.9774, 9.2204, -738.9550], // on support for grindrail in back section (the one not where hanger is)
       "etype": "skill",
       "game_task": 0, 
@@ -112,32 +123,6 @@
         "pickup-amount": ["float", 3.0] // hover
       }
     }//,
-    
-
-    // GHOSTS
-    // {
-    //   "trans": [   2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
-    //   "etype": "skill-ghost",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-1",
-    //     "pickup-amount": ["float", 2.0], // abah hint
-    //     "alt-actor":"wascitya-skill-1"
-    //   }
-    // },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill-ghost",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-ghost-2",
-    //     "alt-actor":"wascitya-skill-2"
-    //   }
-    // }
     
   ]
 }
