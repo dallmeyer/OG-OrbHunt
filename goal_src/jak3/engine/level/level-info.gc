@@ -5020,7 +5020,7 @@
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
                     :borrow-size (new 'static 'array uint16 5 #x1b #x2ee #x20 #x0 #x0)
-                    :borrow-info (new 'static 'array object 5 #f #f '(orbs-gungame display) #f #f)
+                    :borrow-info (new 'static 'array object 5 #f '(lgunnorm special) '(orbs-gungame display) #f #f)
                     )
                   :bottom-height (meters -15)
                   :fog-height (meters 80)
@@ -5256,7 +5256,7 @@
                  :callback-list '()
                  :borrow (new 'static 'level-borrow-info
                    :alias #f
-                   :borrow-size (new 'static 'array uint16 5 #x3e8 #xe6 #x0 #x0 #x0)
+                   :borrow-size (new 'static 'array uint16 5 #x3ff #xe6 #x0 #x0 #x0)
                    :borrow-info (new 'static 'array object 5 '(orbs-freehq display) #f #f #f #f)
                    )
                  :bottom-height (meters -150)

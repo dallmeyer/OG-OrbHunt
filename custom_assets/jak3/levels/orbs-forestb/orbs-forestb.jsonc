@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -526.51,  21.62,  1223.16 ], // oob in water volume in SE
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -526.51,  21.62,  1223.16 , 10],
+      "lump": {
+        "name":"forestb-tape-01"
+      }
+    },
+
+    {
       "trans": [ -833.0523, 48.8423, 1259.5634], // up on rocks climbing cliffside
       "etype": "skill",
       "game_task": 0, 

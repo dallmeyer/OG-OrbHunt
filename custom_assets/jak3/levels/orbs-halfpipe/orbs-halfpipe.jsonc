@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ -26.8579, -47.1735, -47.7885], // under halfpipe
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0.6314, 0, 0.7754],
+      "bsphere": [ -26.8579, -47.1735, -47.7885, 10],
+      "lump": {
+        "name":"halfpipe-tape-01"
+      }
+    },
+    {
       "trans": [  2.5, -50.15, 113.29], // 
       "etype": "air-train",
       "game_task": 0, 

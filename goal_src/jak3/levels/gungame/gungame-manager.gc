@@ -995,7 +995,7 @@
         (vector-copy! s5-0 (-> this actor-group 2 data s3-0 actor trans))
         (set! (-> s5-0 w) 1.0)
         (gungame-manager-method-28 this s5-0)
-        (format 0 "Name is ~s~%" (-> this actor-group 2 data s3-0 actor))
+        ;; (format 0 "Name is ~s~%" (-> this actor-group 2 data s3-0 actor))
         (set! (-> s4-0 pickup-type) (the-as pickup-type (-> *gun-course-info* (-> this course-type) ammo-type)))
         (set! (-> s4-0 pickup-spawn-amount) 30.0)
         (set! (-> this course-crates s3-0)
@@ -1345,6 +1345,7 @@
 
 (defmethod init ((this gungame-mgr-1) (arg0 handle) (arg1 int))
   (call-parent-method this arg0 arg1)
+  (set-setting! 'borrow '((gungame 1 lgunnorm special)) 0.0 0)
   (set! (-> this training?)
         (not (task-node-closed? (the-as game-task-node (-> *gun-course-info* arg1 training-task))))
         )
@@ -1357,6 +1358,7 @@
 
 (defmethod init ((this gungame-mgr-2) (arg0 handle) (arg1 int))
   (call-parent-method this arg0 arg1)
+  (set-setting! 'borrow '((gungame 1 lgunnorm special)) 0.0 0)
   (set! (-> this training?)
         (not (task-node-closed? (the-as game-task-node (-> *gun-course-info* arg1 training-task))))
         )

@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [  645.48,  93.42,  -555.66 ], // oob on top of elevator
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  645.48,  93.42,  -555.66 , 10],
+      "lump": {
+        "name":"freehq-tape-01"
+      }
+    },
+
+    {
       "trans": [  725.0091, 80.9897, -542.3114], // in corner behind computers
       "etype": "skill",
       "game_task": 0, 

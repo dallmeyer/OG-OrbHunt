@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 310.3432, 148.7291, -112.7869], // on top of pipe oob above elevator to boss, can drop down through city wall from standpoint up there
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 310.3432, 148.7291, -112.7869, 10],
+      "lump": {
+        "name":"minea-tape-01"
+      }
+    },
+
+    {
       "trans": [ 346.8703, 102.3812, -128.3062], // upper elevator before robot, right door
       "etype": "skill",
       "game_task": 0, 

@@ -46,6 +46,16 @@
 
   "actors" : [
     {
+      "trans": [ 677.9180, 2.1027, -526.9862], // in water oob outside
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0.0000, 0.8419, 0.0000, 0.5395],
+      "bsphere": [ 677.9180, 2.1027, -526.9862, 10],
+      "lump": {
+        "name":"lfacrm1-tape-1"
+      }
+    },
+    {
       "trans": [ 681.2431, 4.6399, -507.4433], // hellcat to factoryb
       "etype": "desoasis-hellcat",
       "game_task": 0, 

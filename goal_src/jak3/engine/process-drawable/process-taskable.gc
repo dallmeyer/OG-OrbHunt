@@ -119,6 +119,8 @@
                )
           (go-virtual idle)
           )
+      (if (= (-> self type symbol) 'tess-npc)
+        (go-virtual idle))
       )
     )
   :code sleep-code
@@ -177,7 +179,8 @@
          (when (or (not (logtest? (-> self draw status) (draw-control-status on-screen)))
                  (logtest? (-> gp-1 flags) (game-task-flags gatflag-01))
                  )
-             (go-virtual hide)
+             (when (!= (-> self type symbol) 'tess-npc)
+              (go-virtual hide))
              )
          )
         ((or (not *target*) *scene-player*)

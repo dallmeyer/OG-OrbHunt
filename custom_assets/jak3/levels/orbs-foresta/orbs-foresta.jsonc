@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ -757.61,  17.00,  1060.70 ], // crouch through floor at edge of water, then dive down oob
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [  -0.0001, -0.8291, 0.0001, 0.5590],
+      "bsphere": [ -757.61,  17.00,  1060.70 , 10],
+      "lump": {
+        "name":"foresta-tape-1"
+      }
+    },
+    {
       "trans": [  -716.76,  60.89,  1015.61 ], // hidden warp to precura
       "etype": "warp-gate",
       "game_task": 0, 
