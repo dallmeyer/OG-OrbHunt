@@ -3213,6 +3213,21 @@
                        )
                )
          )
+        (((pickup-type buzzer))
+         (set! sv-40 (process-spawn
+                       tape
+                       :init money-init-by-other
+                       arg0
+                       sv-32
+                       sv-56
+                       (-> self entity)
+                       0
+                       :name name
+                       :from *pickup-dead-pool*
+                       :to arg4
+                       )
+               )
+         )
         (else
           (format 0 "ERROR: unknown type of eco ~d~%" s2-0)
           )

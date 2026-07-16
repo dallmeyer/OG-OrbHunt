@@ -48,6 +48,17 @@
 
   "actors" : [
     {
+      "trans": [ 413.04,  9.53,  -327.92 ], // oob old any% ruins entrance
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 413.04,  9.53,  -327.92 , 10],
+      "lump": {
+        "name":"ctygenb-tape-01"
+      }
+    },
+
+    {
       "trans": [230.13,  14.22,  -173.26 ], // warp to minee
       "etype": "warp-gate",
       "game_task": 0, 

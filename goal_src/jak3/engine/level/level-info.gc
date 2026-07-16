@@ -3289,8 +3289,7 @@
                   :callback-list '()
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #xff #x0 #x0 #x0 #x0)
-                    ;; :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                    :borrow-size (new 'static 'array uint16 5 #x200 #x0 #x0 #x0 #x0)
                     :borrow-info (new 'static 'array object 5 '(orbs-ctyindb display) #f #f #f #f)
                     )
                   :bottom-height (meters -15)
@@ -5746,7 +5745,7 @@
                       :want (new 'static 'inline-array level-buffer-state-small 4
                         (new 'static 'level-buffer-state-small :name 'mhcityb :display? 'display)
                         (new 'static 'level-buffer-state-small :name 'ctywide-mh :display? 'display)
-                        (new 'static 'level-buffer-state-small :name 'mhcitya :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'towera :display? 'display)
                         (new 'static 'level-buffer-state-small)
                         )
                       :want-sound (new 'static 'array symbol 3 'mhcity1h 'mhcity2h #f)

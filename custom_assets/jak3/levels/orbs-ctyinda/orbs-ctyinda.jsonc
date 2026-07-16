@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 1019.49,  9.99,  1021.78 ], // sewers oob minor troll
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 1019.49,  9.99,  1021.78 , 10],
+      "lump": {
+        "name":"ctyinda-tape-01"
+      }
+    },
+    
+    {
       "trans": [  756.6954, 9.8674, 1059.2314], // in back corner almost vanilla, in "room" before port hallway
       "etype": "skill",
       "game_task": 0, 

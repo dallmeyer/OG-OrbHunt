@@ -628,7 +628,7 @@
     (let ((s4-1 (-> *setting-control* user-current borrow-hold s5-2)))
       (when (nonzero? s4-1)
         (let ((a1-2 (car s4-1)))
-          (while (not (null? s4-1))
+          (while (and (not (null? s4-1)) (type? (cdr s4-1) pair)) ;; orbhunt - idk why but sometimes this gets corrupted, make sure its valid
             (let ((v1-23 a1-2))
               (dotimes (a0-7 (-> this borrow-holds length))
                 (when (= (-> this borrow-holds data a0-7 name) v1-23)
@@ -723,7 +723,7 @@
       (let* ((s2-0 (-> *setting-control* user-current city-sound s3-2))
              (a0-6 (car s2-0))
              )
-        (while (not (null? s2-0))
+        (while (and (not (null? s2-0)) (type? (cdr s2-0) pair)) ;; orbhunt - idk why but sometimes this gets corrupted, make sure its valid
           (set! s4-0 (add-city-sound-bank-if-possible (the-as symbol a0-6) gp-0 s4-0))
           (set! s2-0 (cdr s2-0))
           (set! a0-6 (car s2-0))

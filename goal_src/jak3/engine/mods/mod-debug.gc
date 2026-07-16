@@ -12,6 +12,16 @@
   (let ((orb-placer-menu (new 'debug 'debug-menu ctx "Orb Placer")))
     (debug-menu-append-item orb-placer-menu (new-dm-bool "Entity Placer Edit Mode?" *entity-placer-active?* dm-boolean-toggle-pick-func))
     (debug-menu-append-item orb-placer-menu (new-dm-func "Add Orb" #f orb-placer-add))
+
+    (let ((orb-type-menu (new 'debug 'debug-menu ctx "Select Entity Type")))
+      (debug-menu-append-item orb-type-menu (new 'debug 'debug-menu-item-flag "Skill (orb)" 'skill orbs-set-entity-type))
+      (debug-menu-append-item orb-type-menu (new 'debug 'debug-menu-item-flag "Tape" 'tape orbs-set-entity-type))
+
+      (debug-menu-append-item orb-placer-menu (new-dm-submenu "Select Entity Type" orb-type-menu))
+      )
+    
+    *orb-placer-entity-type*
+   
     (debug-menu-append-item orb-placer-menu (new-dm-func "Toggle Orb Marking" #f orb-placer-toggle-marking))
     (let ((select-orb-menu (new 'debug 'debug-menu ctx "Select Orb")))
       (set! *orb-placer-select-menu* select-orb-menu)

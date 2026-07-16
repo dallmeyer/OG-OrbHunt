@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [809.7517, 70.3175, 595.3514], // center of cylinder oob towards ctyinda
+      "etype": "tape",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 809.7517, 70.3175, 595.3514, 10],
+      "lump": {
+        "name":"ctyindb-tape-01"
+      }
+    },
+
+    {
       "trans": [  948.2604, 26.6788, 513.7640], // on pipe next to upper walkway, near jetboard grind rail stuff
       "etype": "skill",
       "game_task": 0, 

@@ -3338,7 +3338,7 @@
               (set! s2-3 (+ s2-3 1))
               )
             )
-          (when (>= s3-2 0)
+          (when (and (>= s3-2 0) (nonzero? (symbol->string (-> s5-2 name)))) ;; orbhunt - idk this gets corrupted sometimes, make sure its valid
             (format 0 "Load soundbank ~A in slot ~D~%" (-> s5-2 name) s3-2)
             (sound-bank-load (string->sound-name (symbol->string (-> s5-2 name))) (the-as int (-> s5-2 mode)) 0)
             (mem-copy! (the-as pointer (-> *level* sound-bank s3-2)) (the-as pointer s5-2) 8)

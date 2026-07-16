@@ -22,7 +22,7 @@
   (= *orb-placer-selected-idx* idx)
   )
 
-(defun orb-placer-highlight ((orb skill) (highlight? symbol))
+(defun orb-placer-highlight ((orb process-drawable) (highlight? symbol))
   ;; this is disabled
   (cond 
     (highlight?
@@ -39,24 +39,43 @@
 
 (defun dm-orb-placer-dupe-func ((idx int))
   (let ((vec (new 'stack-no-clear 'vector))
-        (orb (the skill (handle->process (-> *orb-placer-orbs* idx)))))
+        (orb (the process-drawable (handle->process (-> *orb-placer-orbs* idx))))
+        (orb-handle (the handle #f)))
     (when orb
-      (vector-copy! vec (-> orb base))
+      (cond
+        ((type? orb skill)
+          (vector-copy! vec (-> (the skill orb) base))
+          (set! orb-handle (spawn-skill vec 1.0 0.0))
+          )
+        ((type? orb tape)
+          (vector-copy! vec (-> (the tape orb) base))
+          (set! orb-handle (spawn-tape vec 1.0 0.0))
+          )
+        (else
+          (format 0 "ORBPLACER ERROR - unsupported type to dupe ~A ~A ~%" (-> orb type))
+          )
+        )
 
       ; spawn and update orb-placer data
       (dbg-format 0 "dupe spawn-skill~%")
-      (let ((orb-handle (spawn-skill vec 1.0 0.0)))
-        (when (nonzero? orb-handle)
-          (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
-          (set! *orb-placer-selected-idx* *orb-placer-count*)
-          ;; (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
-          (+! *orb-placer-count* 1)
-          (orb-placer-list-maintenance #t)
-          )
+      (when (nonzero? orb-handle)
+        (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
+        (set! *orb-placer-selected-idx* *orb-placer-count*)
+        ;; (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
+        (+! *orb-placer-count* 1)
+        (orb-placer-list-maintenance #t)
         )
       )
     )
   0
+  )
+
+(defun get-op-trans ((proc process-drawable))
+  (cond
+    ((type? proc skill) (-> (the skill proc) base))
+    ((type? proc tape) (-> (the tape proc) base))
+    (else (-> proc root trans))
+    )
   )
 
 (defun orb-placer-list-maintenance ((update-debug-list? symbol))
@@ -69,7 +88,7 @@
     (let ((orb-handle (-> *orb-placer-orbs* i))
           (is-selected? (and *entity-placer-active?* (= i *orb-placer-selected-idx*))))
       (when (and (nonzero? orb-handle) (handle->process orb-handle))
-        (let ((orb-proc (the skill (handle->process orb-handle))))
+        (let ((orb-proc (the process-drawable (handle->process orb-handle))))
           (when (and orb-proc (!= (-> orb-proc next-state name) 'dead-state))
             ;; ensure correct highlighting
             ;; (orb-placer-highlight 
@@ -82,7 +101,7 @@
               #t
               (bucket-id debug-no-zbuf1)
               (-> *orb-placer-temp-strs* i)
-              (-> orb-proc base)
+              (get-op-trans orb-proc)
               (if is-selected?
                 (if *entity-placer-edit-mode?* (font-color green) (font-color red))
                 (font-color white))
@@ -121,7 +140,8 @@
   (when (< *orb-placer-count* ORB_PLACER_MAX)
     (let ((vec (new 'stack-no-clear 'vector))
           (camera-quat (new-stack-quaternion0))
-          (camera-z-vector (new-stack-vector0)))
+          (camera-z-vector (new-stack-vector0))
+          (orb-handle (the handle #f)))
       ;; figure out spawn position
       (cond
         (*target*
@@ -144,20 +164,30 @@
       (dbg-format 0 "add spawn-skill~%")
 
       ;; spawn and update orb-placer data
-      (let ((orb-handle (spawn-skill vec 1.0 0.0)))
-        (when (nonzero? orb-handle)
-          (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
-          (set! *orb-placer-selected-idx* *orb-placer-count*)
-          (true! *entity-placer-edit-mode?*)
-          ;; (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
-          (+! *orb-placer-count* 1)
-          (orb-placer-list-maintenance #t)
-          )
+      (case *orb-placer-entity-type*
+        (('skill) (set! orb-handle (spawn-skill vec 1.0 0.0)))
+        (('tape) (set! orb-handle (spawn-tape vec 1.0 0.0)))
+        )
+
+      (when (nonzero? orb-handle)
+        (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
+        (set! *orb-placer-selected-idx* *orb-placer-count*)
+        (true! *entity-placer-edit-mode?*)
+        ;; (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
+        (+! *orb-placer-count* 1)
+        (orb-placer-list-maintenance #t)
         )
       )
     )
   (none)
   )
+
+(defun orbs-set-entity-type ((arg0 symbol) (arg1 debug-menu-msg))
+  (if (and (= arg1 (debug-menu-msg press)) arg0)
+    (set! *orb-placer-entity-type* arg0))
+  (= arg0 *orb-placer-entity-type*)
+  )
+
 
 (defun orb-placer-set-marking ((orb skill) (amount float))
   (dbg-format 0 "toggle orb from ~D to " (the int (-> orb pickup-amount)))
@@ -185,9 +215,9 @@
 
 (defun orb-placer-toggle-marking ()
   (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
-    (let ((orb (the skill (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
-      (when orb
-        (orb-placer-set-marking orb (the float (+ (mod (the int (-> orb pickup-amount)) 3) 1)))
+    (let ((orb (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*))))
+      (when (and orb (type? orb skill))
+        (orb-placer-set-marking (the skill orb) (the float (+ (mod (the int (-> (the skill orb) pickup-amount)) 3) 1)))
         )
       )
     )
@@ -197,21 +227,29 @@
 (defun orb-placer-print-idx ((i int))
   (let ((orb-handle (-> *orb-placer-orbs* i)))
     (when (and (nonzero? orb-handle) (handle->process orb-handle))
-      (let ((orb (the skill (handle->process orb-handle))))
+      (let* ((orb (the process-drawable (handle->process orb-handle)))
+             (t (get-op-trans orb)))
         ;; (format 0 " ~2m, ~2m, ~2m ~%" (-> orb base x) (-> orb base y) (-> orb base z))
-        (format 0 "    {~%      \"trans\": [ ~2m, ~2m, ~2m], // orba~3,'0D ~%      \"etype\": \"skill\",~%      \"game_task\": 0,~%" (-> orb base x) (-> orb base y) (-> orb base z) i)
-        (format 0 "      \"quat\": [0, 0, 0, 1],~%      \"bsphere\": [ ~2m, ~2m, ~2m, 10],~%" (-> orb base x) (-> orb base y) (-> orb base z))
-        (case (-> orb fact pickup-amount)
-          ((2.0)
-            (format 0 "      \"lump\": {~%        \"name\":\"XXX-skill-YYY\"")
-            (format 0 ",~%        \"pickup-amount\": [\"float\", 2.0] // abah hint")
-            )
-          ((3.0)
-            (format 0 "      \"lump\": {~%        \"name\":\"XXX-skill-hover-YYY\"")
-            (format 0 ",~%        \"pickup-amount\": [\"float\", 3.0] // hover")
+        (format 0 "    {~%      \"trans\": [ ~2m, ~2m, ~2m], // orba~3,'0D ~%      \"etype\": \"~S\",~%      \"game_task\": 0,~%" (-> t x) (-> t y) (-> t z) i (-> orb type symbol))
+        (format 0 "      \"quat\": [0, 0, 0, 1],~%      \"bsphere\": [ ~2m, ~2m, ~2m, 10],~%" (-> t x) (-> t y) (-> t z))
+        (cond
+          ((type? orb skill)
+            (case (-> orb fact pickup-amount)
+              ((2.0)
+                (format 0 "      \"lump\": {~%        \"name\":\"XXX-skill-YYY\"")
+                (format 0 ",~%        \"pickup-amount\": [\"float\", 2.0] // abah hint")
+                )
+              ((3.0)
+                (format 0 "      \"lump\": {~%        \"name\":\"XXX-skill-hover-YYY\"")
+                (format 0 ",~%        \"pickup-amount\": [\"float\", 3.0] // hover")
+                )
+              (else
+                (format 0 "      \"lump\": {~%        \"name\":\"XXX-skill-YYY\"")
+                )
+              )
             )
           (else
-            (format 0 "      \"lump\": {~%        \"name\":\"XXX-skill-YYY\"")
+            (format 0 "      \"lump\": {~%        \"name\":\"XXX-~S-YYY\"" (-> orb type symbol))
             )
           )
         (format 0 "~%      }~%    },~%")
@@ -245,7 +283,7 @@
         (moved? #f))
     ;; update extra vectors for certain types
     (cond
-      ((or (type-type? (-> proc type) skill) (type-type? (-> proc type) money))
+      ((or (type-type? (-> proc type) skill) (type-type? (-> proc type) money) (type-type? (-> proc type) tape))
         (set! proc-extra-vec (-> (the money proc) base)))
       ((type-type? (-> proc type) crate)
         (set! proc-extra-vec (-> (the crate proc) base)))
@@ -356,7 +394,7 @@
                   (or (not *last-deactivate-time*)
                       (g-time-elapsed? *last-deactivate-time* (seconds 0.2))))
           (case (-> proc type symbol)
-            (('skill)
+            (('skill 'tape)
               ;; deactivate not needed
               )
             (else
@@ -368,7 +406,7 @@
                    *last-deactivate-time*
                    (g-time-elapsed? *last-deactivate-time* (seconds 0.2)))
           (case (-> proc type symbol)
-            (('skill)
+            (('skill 'tape)
               ;; deactivate not needed
               )
             (else
@@ -457,7 +495,7 @@
                         (remove-setting-by-arg0 *setting-control* 'mode-name))
                       ;; orb cleanup
                       (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
-                        (let ((orb (the skill (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
+                        (let ((orb (the process-drawable (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
                           (when orb
                             (logclear! (-> orb draw status) (draw-control-status force-fade))
                             (set! (-> orb draw force-fade) (the-as uint 128))
@@ -483,7 +521,7 @@
                           )
                         ;; if we have an orb selected and the handle is nonzero...
                         ((and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
-                          (let ((orb (the skill (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
+                          (let ((orb (the process-drawable (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
                             (when orb
                               ;; respond to controller input
                               (debug-check-process-drawable-move orb)
@@ -586,13 +624,20 @@
   (dotimes (idx *orb-placer-count*)
     (cond
       ((and (-> *orb-placer-orbs* idx) (nonzero? (-> *orb-placer-orbs* idx)) (handle->process (-> *orb-placer-orbs* idx)))
-        (let* ((orb (the skill (handle->process (-> *orb-placer-orbs* idx))))
-               (v (-> orb base))
-               (bob-amount (-> orb bob-amount))
-               (bob-scale (if (zero? bob-amount) -1.0 (/ bob-amount 1024.0)))
-               (type (-> orb pickup-amount))
-               )
-          (format file "  (~D ~m ~m ~m ~F ~F)~%" idx (-> v x) (-> v y) (-> v z) bob-scale type)
+        (cond
+          ((type? (handle->process (-> *orb-placer-orbs* idx)) skill)
+            (let* ((orb (the skill (handle->process (-> *orb-placer-orbs* idx))))
+                  (v (-> orb base))
+                  (bob-amount (-> orb bob-amount))
+                  (bob-scale (if (zero? bob-amount) -1.0 (/ bob-amount 1024.0)))
+                  (type (-> orb pickup-amount))
+                  )
+              (format file "  (~D ~m ~m ~m ~F ~F)~%" idx (-> v x) (-> v y) (-> v z) bob-scale type)
+              )
+            )
+          (else
+            (format 0 "skipping output for non-skill type ~A~%" (-> (handle->process (-> *orb-placer-orbs* idx)) type symbol))
+            )
           )
         )
       (else

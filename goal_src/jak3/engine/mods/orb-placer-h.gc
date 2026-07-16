@@ -4,6 +4,8 @@
 (define *entity-placer-active?* #f)
 ;; when orb-placer process is alive, controls whether we're in "edit" mode
 (define *entity-placer-edit-mode?* #f)
+;; which type to spawn
+(define *orb-placer-entity-type* 'skill)
 
 ;; number of orbs orb-placer has placed
 (define *orb-placer-count* 0)
