@@ -1024,13 +1024,13 @@
   )
 
 (defpartgroup group-skill-glow-purp
-  :id 2000
+  :id 1600
   :flags (sp1)
   :bounds (static-bspherem 0 0 0 1)
-  :parts ((sp-item 6000 :fade-after (meters 150) :flags (sp6 sp7)))
+  :parts ((sp-item 5200 :fade-after (meters 150) :flags (sp6 sp7)))
   )
 
-(defpart 6000
+(defpart 5200
   :init-specs ((:texture (glow-soft level-default-sprite))
     (:num 1.0)
     (:scale-x (meters 2.2))

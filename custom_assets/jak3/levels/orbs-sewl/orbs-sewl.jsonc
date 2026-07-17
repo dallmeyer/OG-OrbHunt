@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 428.7938, -85.4258, -337.8180], // on back of big pipe oob (hover over) 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 428.7938, -85.4258, -337.8180, 10],
+      "lump": {
+        "name":"sewl-tape-01"
+      }
+    },
+
+    {
       "trans": [  546.7879, -114.3852, -266.0503], // pipe against wall 
       "etype": "skill",
       "game_task": 0, 

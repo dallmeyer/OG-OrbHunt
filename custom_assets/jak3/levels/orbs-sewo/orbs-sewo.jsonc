@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -501.2683, -136.9862, -369.2174], // oob bit of walkway
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -501.2683, -136.9862, -369.2174, 10],
+      "lump": {
+        "name":"sewo-tape-01"
+      }
+    },
+
+    {
       "trans": [  -466.7996, -127.3362, -241.2692], // on pipe near wall with missing collision
       "etype": "skill",
       "game_task": 0, 

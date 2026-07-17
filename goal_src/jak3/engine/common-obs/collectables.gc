@@ -383,7 +383,6 @@
     (if (and (nonzero? s5-0)
              (not (name= (-> this state name) 'pending)))
         (spawn s5-0 (-> s4-0 world-sphere))
-        ;; (kill-particles s5-0)
         )
     )
   (if (nonzero? (-> this sound))

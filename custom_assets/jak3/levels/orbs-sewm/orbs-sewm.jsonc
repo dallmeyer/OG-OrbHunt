@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 263.1611, -160.9043, -238.3322], // oob in room with water ramp 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 263.1611, -160.9043, -238.3322, 10],
+      "lump": {
+        "name":"sewm-tape-01"
+      }
+    },
+
+    {
       "trans": [  168.0182, -135.0716, -293.2614], // slippery ledge out from building w tall windmill
       "etype": "skill",
       "game_task": 0, 

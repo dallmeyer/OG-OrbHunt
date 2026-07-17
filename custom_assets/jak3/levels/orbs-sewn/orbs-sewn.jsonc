@@ -46,6 +46,17 @@
    "textures": [],
 
   "actors" : [
+    {
+      "trans": [ -100.8913, -185.0050, -284.1837], // oob under water, hover over east side, after long winding water path
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -100.8913, -185.0050, -284.1837, 10],
+      "lump": {
+        "name":"sewn-tape-01"
+      }
+    },
+    
     // {
     //   "trans": [ -99.5121, -177.7608, -291.5945], // under waterfall  
     //   "etype": "skill",
