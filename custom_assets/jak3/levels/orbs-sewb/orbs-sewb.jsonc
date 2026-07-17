@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 286.7774, -109.0989, -0.7289], // in middle, up inside pipe (no collision just hover up) 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 286.7774, -109.0989, -0.7289, 10],
+      "lump": {
+        "name":"sewb-tape-01"
+      }
+    },
+
+    {
       "trans": [ 315.6992, -128.2622, 53.5209], // on lip of pipe near poision gas platforms 
       "etype": "skill",
       "game_task": 0,

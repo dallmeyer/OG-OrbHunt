@@ -2152,7 +2152,7 @@
                     )
                   )
             )
-        (seek! (-> *ACTOR-bank* pause-dist) f0-5 (* 81920.0 (seconds-per-frame)))
+        ;; (seek! (-> *ACTOR-bank* pause-dist) f0-5 (* 81920.0 (seconds-per-frame)))
         )
       (seekl! (-> *ACTOR-bank* birth-max) (the int (lerp-scale 25.0 2.0 (the float s5-1) 2000.0 7000.0)) 10)
       )

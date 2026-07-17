@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 502.5013, -128.0999, 198.7973], // oob behind warp gate
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 502.5013, -128.0999, 198.7973, 10],
+      "lump": {
+        "name":"sewk-tape-01"
+      }
+    },
+
+    {
       "trans": [ 493.57,  -129.02,  195.46 ], // warp gate to sewf
       "etype": "warp-gate",
       "game_task": 0, 

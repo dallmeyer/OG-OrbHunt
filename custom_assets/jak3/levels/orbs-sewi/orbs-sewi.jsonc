@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -210.4884, -127.8943, 181.9444], // oob from before gate to last room 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -210.4884, -127.8943, 181.9444, 10],
+      "lump": {
+        "name":"sewi-tape-01"
+      }
+    },
+
+    {
       "trans": [ -106.8146, -123.5487, 255.0069], // on grate on big pipe on left 
       "etype": "skill",
       "game_task": 0,

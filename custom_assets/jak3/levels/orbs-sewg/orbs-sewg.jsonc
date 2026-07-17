@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 314.1687, -118.8537, 243.7864], // oob in middle of map, kinda near start 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 314.1687, -118.8537, 243.7864, 10],
+      "lump": {
+        "name":"sewg-tape-01"
+      }
+    },
+
+    {
       "trans": [ 266.8684, -112.8005, 232.4259], // on small slippery ledge just before hallway to second half 
       "etype": "skill",
       "game_task": 0,

@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ 82.9934, 13.0778, -458.1343], // theusual_ hover wall bounce oob
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 82.9934, 13.0778, -458.1343, 10],
+      "lump": {
+        "name":"stadium-tape-01"
+      }
+    },
+    {
       "trans": [250.9007, 20.6472, -626.4159 ], // 
       "etype": "air-train",
       "game_task": 0, 

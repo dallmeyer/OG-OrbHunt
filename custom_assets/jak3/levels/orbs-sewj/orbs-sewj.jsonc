@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -442.5762, -85.2889, 137.1435], // on top of huge pipe oob 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -442.5762, -85.2889, 137.1435, 10],
+      "lump": {
+        "name":"sewj-tape-01"
+      }
+    },
+
+    {
       "trans": [ -446.2927, -115.4193, 268.8761], // inside open pipe closest to walkway, there's just a big hole in invis wall top right 
       "etype": "skill",
       "game_task": 0,

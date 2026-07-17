@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -108.9141, -150.5402, -39.9595], // on waterslide from cutscene 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -108.9141, -150.5402, -39.9595, 10],
+      "lump": {
+        "name":"sewd-tape-01"
+      }
+    },
+
+    {
       "trans": [  -115.2174, -164.9553, 10.5605], // slippery ledge out from building w tall windmill
       "etype": "skill",
       "game_task": 0, 

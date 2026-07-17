@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -243.0107, -15.4506, -635.5822], // oob down near deathplane on western edge
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -243.0107, -15.4506, -635.5822, 10],
+      "lump": {
+        "name":"stadiumb-tape-01"
+      }
+    },
+
+    {
       "trans": [ -166.79,  46.59,  -410.96 ], // on top of tower near exit to BTR
       "etype": "skill",
       "game_task": 0, 
@@ -476,6 +487,16 @@
       "bsphere": [ 37.5294, 28.3921, -608.0053, 10],
       "lump": {
         "name":"stadiumb-skill-43"
+      }
+    },
+    {
+      "trans": [ -109.9118, 36.7972, -728.6890], // on top of fallen end of bleachers, can extended ff from top of towers nearby
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -109.9118, 36.7972, -728.6890, 10],
+      "lump": {
+        "name":"stadiumb-skill-44"
       }
     },
     

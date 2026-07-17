@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -347.86,  -150.99,  -52.07 ], // between oob enclosures where robot is trapped, dive under water
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -347.86,  -150.99,  -52.07 , 10],
+      "lump": {
+        "name":"sewe-tape-01"
+      }
+    },
+
+    {
       "trans": [ -255.7750, -175.6342, -20.1535], // left corner underwater where you dive under fence
       "etype": "skill",
       "game_task": 0, 

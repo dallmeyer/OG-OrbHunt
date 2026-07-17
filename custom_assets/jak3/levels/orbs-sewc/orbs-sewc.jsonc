@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 127.3616, -143.5452, -56.5972], // inside pipe/grate with laser in front
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 127.3616, -143.5452, -56.5972, 10],
+      "lump": {
+        "name":"sewc-tape-01"
+      }
+    },
+
+    {
       "trans": [ 165.0544, -134.6385, 18.2494], // behind pipe at end of hallway with lasers
       "etype": "skill",
       "game_task": 0, 

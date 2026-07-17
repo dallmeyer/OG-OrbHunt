@@ -207,4 +207,4 @@ that gets accessed by the accompanying process."
   )
 
 
-(define *ACTOR-bank* (new 'static 'actor-bank :pause-dist 204800.0 :birth-dist 901120.0 :birth-max 10))
+(define *ACTOR-bank* (new 'static 'actor-bank :pause-dist 4096000.0 :birth-dist 4096000.0 :birth-max 10))
