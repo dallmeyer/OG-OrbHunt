@@ -2,9 +2,9 @@
 ;; We use the convention of having a longer DGO name for levels without precomputed visibility.
 
 ;; the actual file name still needs to be 8.3
-("O41.DGO"
+("O97.DGO"
  (
   "air-train-ag.go"
   "warp-gate-ag.go"
-  "orbs-ctyport.go"
+  "orbs-intpalrf.go"
   ))

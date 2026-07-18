@@ -38,7 +38,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define ORB_HUNT_DEBUG? #f) ;; when #t, hold L2 for extra debug prints
-(define startingDebugContinuePoint "halfpipe")
+(define startingDebugContinuePoint "intpalrf-warp")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -180,7 +180,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   22 ;; forestb
   0 ;; wasintro
   0 ;; introcst
-  0 ;; intpalrf
+  96 ;; intpalrf
   0 ;; inttitle
   0 ;; wasall
   0 ;; waswide
@@ -439,6 +439,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   58	;; orbs-sewf
   17  ;; orbs-ctyfarma
   18  ;; orbs-ctyfarmb
+  96  ;; orbs-intpalrf
   ))
 
 (define *level-id-names* (new 'static 'boxed-array :type string :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
@@ -538,6 +539,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Wasteland (Ruins)"	;; 93
   "Wasteland (Oasis)"	;; 94
   "Wasteland (West)"	;; 95
+  "Palace (Rooftop)" ;; 96
   ))
 
 (define *level-cell-tasks* (new 'static 'boxed-array :type game-task :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
@@ -637,6 +639,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   (game-task sig-orbhunt) ;; "Wasteland (Ruins)"	;; 93
   (game-task ashelin-orbhunt) ;; "Wasteland (Oasis)"	;; 94
   (game-task none) ;; "Wasteland (West)"	;; 95
+  (game-task none) ;; "Palace (Rooftop)" ;; 96
   ))
 
 (define *level-orb-active* (new 'static 'boxed-array :type symbol :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN))
@@ -740,6 +743,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   11 ;; "Wasteland (Southeast)"	;; 93
   6 ;; "Wasteland (Southwest)"	;; 94
   4 ;; "Wasteland (West)"	;; 95
+  0 ;; "Palace (Rooftop)"	;; 96
   ))
 
 (define *total-orbs* 0)

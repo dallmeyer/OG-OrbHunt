@@ -1673,7 +1673,7 @@
   (quaternion-identity! (-> self root quat))
   (vector-copy! (-> self root transv) arg1)
   (initialize-options self 4500 0.0 (the-as fact-info #f))
-  (logior! (-> self flags) (collectable-flag no-eco-blue))
+  (logior! (-> self flags) (collectable-flag no-eco-blue pickup))
   (update-transforms (-> self root))
   (set! (-> self event-hook) (-> (method-of-object self wait) event))
   (go-to-initial-state self)
@@ -2004,7 +2004,7 @@
     (until #f
       ;; check orb/ghost visibility
       ;; og:noorb - transparent/uncollectable orbs for collected open orbs
-      (when (and (= (-> (ppointer->process (-> self parent)) type symbol) 'process-tree) 
+      (when (and (= (-> (ppointer->process (-> self parent)) type symbol) 'process-tree)
                  (logtest? (-> self entity extra perm status) (entity-perm-status complete)))
         (when (and (nonzero? (-> self part))
                  (= (-> self type) skill) ;; no onin-brain particles crash

@@ -611,6 +611,25 @@
       ;; (logior! (-> this draw status) (draw-control-status no-draw)) ;; show real warp gate
       (set! (-> this continue) (get-continue-by-name *game-info* "mhcitya-warp"))
       )
+
+
+    (("ctyport-warp-gate-01") ;; ctyport -> intpalrf
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "intpalrf-warp"))
+      )
+    (("ctyport-air-train-01") ;; ctyport -> intpalrf
+      ;; (logclear! (-> this draw status) (draw-control-status no-draw)) ;; show air-train
+      (set! (-> this continue) #f)
+      )
+    (("intpalrf-warp-gate-01") ;; intpalrf -> ctyport
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "ctyport-warp-2"))
+      )
+    (("intpalrf-air-train-01") ;; intpalrf -> ctyport
+      ;; (logclear! (-> this draw status) (draw-control-status no-draw)) ;; show air-train
+      (set! (-> this continue) #f)
+      )
+
     (else
       (let ((s5-0 (script-eval (-> this on-notice))))
         (cond
@@ -858,6 +877,12 @@
         ;; skip target-warp-out, just go to continue
         )
       (("templex-warp-gate-1") ;; templex -> volcanox
+        ;; skip target-warp-out, just go to continue
+        )
+      (("ctyport-warp-gate-01") ;; ctyport -> intpalrf
+        ;; skip target-warp-out, just go to continue
+        )
+      (("intpalrf-warp-gate-01") ;; intpalrf -> ctyport
         ;; skip target-warp-out, just go to continue
         )
       (else

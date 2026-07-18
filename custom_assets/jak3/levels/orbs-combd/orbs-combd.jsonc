@@ -46,6 +46,50 @@
    "textures": [],
 
   "actors" : [
+    {
+      "trans": [ 1791.7100, -135.0070, -180.2496], // standpoint on blue ring thing, lower right 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 1791.7100, -135.0070, -180.2496, 10],
+      "lump": {
+        "name":"combd-skill-01"
+      }
+    },
+
+    // hover orbs
+    {
+      "trans": [ 1824.7713, 5.7557, -224.8044], // standpoint on blue ring thing, top left 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 1824.7713, 5.7557, -224.8044, 10],
+      "lump": {
+        "name":"combd-skill-hover-01",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [ 1770.1184, -63.3924, -265.0937], // standpoint on blue ring thing, left
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 1770.1184, -63.3924, -265.0937, 10],
+      "lump": {
+        "name":"combd-skill-hover-02"
+      }
+    },
+    {
+      "trans": [ 1817.4036, -33.5289, -169.8395], // standpoint on blue ring thing, mid right
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 1817.4036, -33.5289, -169.8395, 10],
+      "lump": {
+        "name":"combd-skill-hover-03"
+      }
+    }//,
+
     // {
     //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
     //   "etype": "skill",

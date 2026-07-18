@@ -2745,11 +2745,29 @@
                         )
                       :want-sound (new 'static 'array symbol 3 'ctyporth #f #f)
                       )
+                    (new 'static 'continue-point
+                      :name "ctyport-warp-2"
+                      :level 'ctyport
+                      :flags (continue-flags no-auto)
+                      :trans (new 'static 'vector :x (meters 166.5346) :y (meters 4.2603) :z (meters 1237.4639) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 177.8616) :y (meters 9.2479) :z (meters 1233.8469) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 -24 -16021 43 -28582))
+                      :camera-rot (new 'static 'array int16 9 12973 0 30089 -4159 32452 1793 -29800 -4529 12848)
+                      :on-goto #f
+                      :vis-nick 'ctyport
+                      :vehicle-type #x1b
+                      :want-count 2
+                      :want (new 'static 'inline-array level-buffer-state-small 2
+                        (new 'static 'level-buffer-state-small :name 'ctywide-ff :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'ctyport :display? 'display)
+                        )
+                      :want-sound (new 'static 'array symbol 3 'ctyporth #f #f)
+                      )
                     )
                   :callback-list '()
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
-                    :borrow-size (new 'static 'array uint16 5 #xa #x0 #x0 #x0 #x0)
+                    :borrow-size (new 'static 'array uint16 5 #xff #x0 #x0 #x0 #x0)
                     :borrow-info (new 'static 'array object 5 '(orbs-ctyport display) #f #f #f #f)
                     )
                   :bottom-height (meters -15)
@@ -6094,6 +6112,24 @@
                       )
                     :want-sound (new 'static 'array symbol 3 'cmbtask1 'cmbtask2 'cmbtask3)
                     )
+                  (new 'static 'continue-point
+                    :name "combb-oh"
+                    :level 'combb
+                    :flags (continue-flags no-auto)
+                    :trans (new 'static 'vector :x (meters 287.2837) :y (meters -22.9493) :z (meters 10.8800) :w 1.0)
+                    :camera-trans (new 'static 'vector :x (meters 274.7860) :y (meters -17.7945) :z (meters 11.1200) :w 1.0)
+                    :quat (new 'static 'vector4h :data (new 'static 'array int16 4 31 25929 38 20033))
+                    :camera-rot (new 'static 'array int16 9 -602 0 -32761 3985 32523 -73 32518 -3985 -597)
+                    :on-goto #f
+                    :vis-nick 'combb
+                    :vehicle-type #x1b
+                    :want-count 2
+                    :want (new 'static 'inline-array level-buffer-state-small 2
+                      (new 'static 'level-buffer-state-small :name 'comba :display? 'display)
+                      (new 'static 'level-buffer-state-small :name 'combb :display? 'display)
+                      )
+                    :want-sound (new 'static 'array symbol 3 'cmbtask1 'cmbtask2 'cmbtask3)
+                    )
                   )
                 :callback-list '((23 . init-mood-comb))
                 :borrow #f
@@ -6188,6 +6224,26 @@
                     :camera-trans (new 'static 'vector :x 7221269.5 :y -300788.94 :z -845772.0 :w 1.0)
                     :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x8eb 0 #x7fad))
                     :camera-rot (new 'static 'array int16 9 -209 0 -32763 -4449 #x7ece 26 #x7eca #x1161 -206)
+                    :on-goto #f
+                    :vis-nick 'combd
+                    :vehicle-type #x1b
+                    :want-count 3
+                    :want (new 'static 'inline-array level-buffer-state-small 4
+                      (new 'static 'level-buffer-state-small :name 'comba :display? 'display)
+                      (new 'static 'level-buffer-state-small :name 'combd :display? 'display)
+                      (new 'static 'level-buffer-state-small :name 'combc :display? 'display)
+                      (new 'static 'level-buffer-state-small)
+                      )
+                    :want-sound (new 'static 'array symbol 3 'cmbtask1 'cmbtask2 'cmbtask3)
+                    )
+                  (new 'static 'continue-point
+                    :name "combd-oh"
+                    :level 'combd
+                    :flags (continue-flags no-auto)
+                    :trans (new 'static 'vector :x (meters 1705.3204) :y (meters -76.2388) :z (meters -202.8952) :w 1.0)
+                    :camera-trans (new 'static 'vector :x (meters 1692.9532) :y (meters -71.1264) :z (meters -203.4670) :w 1.0)
+                    :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 24523 0 21731))
+                    :camera-rot (new 'static 'array int16 9 1545 0 -32730 3952 32527 186 32490 -3957 1533)
                     :on-goto #f
                     :vis-nick 'combd
                     :vehicle-type #x1b
@@ -9262,6 +9318,26 @@
                        :want-sound (new 'static 'array symbol 3 'intro1 'intro2 'desert1)
                        )
                      (new 'static 'continue-point
+                       :name "intpalrf-warp"
+                       :level 'intpalrf
+                       :flags (continue-flags no-auto)
+                       :trans (new 'static 'vector :x (meters 126.9633) :y (meters 407.9987) :z (meters 510.1240) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 138.2270) :y (meters 413.0761) :z (meters 514.8032) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 22565 0 23758))
+                       :camera-rot (new 'static 'array int16 9 -13917 0 29664 -4451 32396 -2088 -29328 -4916 -13760)
+                       :on-goto #f
+                       :vis-nick 'wasintro
+                       :vehicle-type #x1b
+                       :want-count 3
+                       :want (new 'static 'inline-array level-buffer-state-small 4
+                         (new 'static 'level-buffer-state-small :name 'introcst :display? 'special)
+                         (new 'static 'level-buffer-state-small :name 'wasintro :display? 'special)
+                         (new 'static 'level-buffer-state-small :name 'intpfall :display? 'display)
+                         (new 'static 'level-buffer-state-small)
+                         )
+                       :want-sound (new 'static 'array symbol 3 'intro1 'intro2 'desert1)
+                       )
+                     (new 'static 'continue-point
                        :name "wasintro-rescue"
                        :level 'wasintro
                        :flags (continue-flags scene-wait no-auto)
@@ -9283,8 +9359,8 @@
                    :callback-list '((12 . *hfrag-texture-anim-array*))
                    :borrow (new 'static 'level-borrow-info
                      :alias #f
-                     :borrow-size (new 'static 'array uint16 5 #x785 #x0 #x0 #x0 #x0)
-                     :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                     :borrow-size (new 'static 'array uint16 5 #x785 #xff #x0 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(intpalrf display) '(orbs-intpalrf display) #f #f #f)
                      )
                    :bottom-height (meters -150)
                    :fog-height (meters 80)
@@ -21552,6 +21628,7 @@
 (define orbs-sewf (orbs-borrow-level 387 'orbs-sewf 'orbs-sewf-vis 'o94 'update-mood-default))
 (define orbs-ctyfarma (orbs-borrow-level 388 'orbs-ctyfarma 'orbs-ctyfarma-vis 'o95 'update-mood-default))
 (define orbs-ctyfarmb (orbs-borrow-level 389 'orbs-ctyfarmb 'orbs-ctyfarmb-vis 'o96 'update-mood-default))
+(define orbs-intpalrf (orbs-borrow-level 390 'orbs-intpalrf 'orbs-intpalrf-vis 'o97 'update-mood-default))
 
 (set! (-> orbs-powergd priority) 10)
 (set! (-> orbs-vinroom priority) 10)
@@ -21575,6 +21652,7 @@
 (#when PC_PORT
   ;; (cons! *level-load-list* 'test-zone)
 
+  (cons! *level-load-list* 'orbs-intpalrf)
   (cons! *level-load-list* 'orbs-ctyfarmb)
   (cons! *level-load-list* 'orbs-ctyfarma)
   (cons! *level-load-list* 'orbs-sewf)

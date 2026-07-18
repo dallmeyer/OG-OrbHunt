@@ -989,7 +989,7 @@
 (defstate idle (comb-turbo)
   :virtual #t
   :event (behavior ((proc process) (argc int) (message symbol) (block event-message-block))
-    (format #t "comb-turbo: got event ~s from ~s~%" message proc)
+    (dbg-format #t "comb-turbo: got event ~s from ~s~%" message proc)
     (when (= message 'touched)
       (when (and (as-type proc vehicle) (not (-> self player-got)))
         (set! (-> self player-got) #t)

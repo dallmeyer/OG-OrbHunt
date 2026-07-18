@@ -692,6 +692,9 @@
 (build-custom-level "orbs-ctyfarmb")
 (custom-level-cgo "O96.DGO" "orbs-ctyfarmb/orbs-ctyfarmb.gd")
 
+(build-custom-level "orbs-intpalrf")
+(custom-level-cgo "O97.DGO" "orbs-intpalrf/orbs-intpalrf.gd")
+
 ;; generate the art group for a custom actor.
 ;; requires a .glb model file in custom_assets/jak3/models/custom_levels
 ;; options:

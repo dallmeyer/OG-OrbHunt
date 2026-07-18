@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ -60.2615, 5.2248, -57.9878], // oob corner, hover up from elevator or single hole in ceiling on opposite side 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -60.2615, 5.2248, -57.9878, 10],
+      "lump": {
+        "name":"comba-tape-01"
+      }
+    },
+    {
       "trans": [7.6240, 1.9173, 114.7593 ], // elevator back to templed
       "etype": "warp-gate",
       "game_task": 0, 

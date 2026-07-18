@@ -1,0 +1,280 @@
+{
+  // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
+  // the name of this file, and the folder this file is in must have the same name.
+  "long_name": "orbs-intpalrf",
+  // The file name, should be upper case and 8 characters or less.
+  "iso_name": "O97",
+  // The nickname, should be exactly 3 characters
+  "nickname": "o97", // 3 char name, all lowercase
+  // Background mesh file.
+  // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
+  // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
+  // only have 1.
+  "gltf_file": "custom_assets/jak3/levels/orbs-intpalrf/orbs-intpalrf.glb", // wascitya
+
+  // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
+  "automatic_wall_detection": true,
+  "automatic_wall_angle": 45.0,
+
+  // if your mesh has triangles with incorrect orientation, set this to make all collision mesh triangles double sided
+  // this makes collision 2x slower and bigger, so only use if really needed
+  "double_sided_collide": false,
+
+  // available res-lump tag data types:
+  // int32, float, meters, vector, vector4m (meters)
+  //
+  // examples:
+  //
+  // adds a float tag 'spring-height' with value of 200 meters (1 meter = 4096.0 units):
+  // "spring-height": ["meters", 200.0]
+  //
+  // adds a vector tag 'movie-pos':
+  // "movie-pos": ["vector", [4096000.0, -176128.0, 1353973.76, 1.0]]
+
+   // The base actor id for your custom level. If you have multiple levels, this should be unique!
+   "base_id": 197000,
+
+  // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
+  // Removed so that the release builds don't have to double-decompile the game
+  //"art_groups": ["prsn-torture-ag"],
+  "art_groups": ["air-train-ag", "warp-gate-ag"],
+
+   // Any textures you want to include in your custom level.
+   // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
+   // To get a list of all the textures, you can extract all of the game's textures
+   // by setting "save_texture_pngs" to true in the decompiler config.
+   "textures": [],
+
+  "actors" : [
+    // {
+    //   "trans": [  -117.3022, 42.1865, 1370.9014], // dev pic
+    //   "etype": "tape",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  -117.3022, 42.1865, 1370.9014, 10],
+    //   "lump": {
+    //     "name":"intpalrf-tape-01"
+    //   }
+    // },
+    {
+      "trans": [119.5500, 409.3380, 514.8099  ], // 
+      "etype": "air-train",
+      "game_task": 0, 
+      "quat" : [0, 0.6314, 0, 0.7754],
+      "bsphere": [119.5500, 409.3380, 514.8099  , 10],
+      "lump": {
+        "name":"intpalrf-air-train-01",
+        "distance": ["meters", 15.0]
+      }
+    },
+    {
+      "trans": [119.5500, 409.3380, 514.8099  ], // 
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [0, 0.6314, 0, 0.7754],
+      "bsphere": [119.5500, 409.3380, 514.8099  , 10],
+      "lump": {
+        "name":"intpalrf-warp-gate-01",
+        "distance": ["meters", 10.0]
+      }
+    },
+
+    {
+      "trans": [ 154.9162, 416.3580, 537.1399], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 154.9162, 416.3580, 537.1399, 10],
+      "lump": {
+        "name":"intpalrf-skill-01",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 160.5001, 426.0343, 538.4947], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 160.5001, 426.0343, 538.4947, 10],
+      "lump": {
+        "name":"intpalrf-skill-02",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 159.3141, 444.3914, 548.2531], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 159.3141, 444.3914, 548.2531, 10],
+      "lump": {
+        "name":"intpalrf-skill-03"
+      }
+    },
+    {
+      "trans": [ 165.3647, 450.4535, 566.9895], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 165.3647, 450.4535, 566.9895, 10],
+      "lump": {
+        "name":"intpalrf-skill-04"
+      }
+    },
+    {
+      "trans": [ 169.4298, 463.3547, 566.2781], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 169.4298, 463.3547, 566.2781, 10],
+      "lump": {
+        "name":"intpalrf-skill-05"
+      }
+    },
+    {
+      "trans": [ 139.7921, 448.8493, 541.2302], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 139.7921, 448.8493, 541.2302, 10],
+      "lump": {
+        "name":"intpalrf-skill-06"
+      }
+    },
+    {
+      "trans": [ 145.8922, 459.4296, 557.8309], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 145.8922, 459.4296, 557.8309, 10],
+      "lump": {
+        "name":"intpalrf-skill-07"
+      }
+    },
+    {
+      "trans": [ 128.4678, 459.8937, 560.5485], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 128.4678, 459.8937, 560.5485, 10],
+      "lump": {
+        "name":"intpalrf-skill-08"
+      }
+    },
+    {
+      "trans": [ 145.0483, 437.5135, 545.4950], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 145.0483, 437.5135, 545.4950, 10],
+      "lump": {
+        "name":"intpalrf-skill-09"
+      }
+    },
+    {
+      "trans": [ 192.0695, 444.9824, 560.1259], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 192.0695, 444.9824, 560.1259, 10],
+      "lump": {
+        "name":"intpalrf-skill-10"
+      }
+    },
+    {
+      "trans": [ 186.9561, 469.0311, 558.4827], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 186.9561, 469.0311, 558.4827, 10],
+      "lump": {
+        "name":"intpalrf-skill-11"
+      }
+    },
+    {
+      "trans": [ 199.0278, 468.6048, 519.1823], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 199.0278, 468.6048, 519.1823, 10],
+      "lump": {
+        "name":"intpalrf-skill-12"
+      }
+    },
+    {
+      "trans": [ 234.6408, 456.1007, 530.6983], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 234.6408, 456.1007, 530.6983, 10],
+      "lump": {
+        "name":"intpalrf-skill-13"
+      }
+    },
+    {
+      "trans": [ 256.6980, 466.1418, 533.4478], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 256.6980, 466.1418, 533.4478, 10],
+      "lump": {
+        "name":"intpalrf-skill-14"
+      }
+    },
+    {
+      "trans": [ 253.8333, 481.9034, 532.4959], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 253.8333, 481.9034, 532.4959, 10],
+      "lump": {
+        "name":"intpalrf-skill-15"
+      }
+    },
+    {
+      "trans": [ 255.6025, 481.4930, 539.9450], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 255.6025, 481.4930, 539.9450, 10],
+      "lump": {
+        "name":"intpalrf-skill-16"
+      }
+    },
+    {
+      "trans": [ 189.0001, 409.1014, 505.1313], // in corner where roof ends, like if you were continuing to 2nd section of baron fight 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 189.0001, 409.1014, 505.1313, 10],
+      "lump": {
+        "name":"intpalrf-skill-17"
+      }
+    }
+    //,
+
+    // {
+    //   "trans": [  -164.5250, 4.4958, 1456.8996], // under walkway over pipes on mhcity side. jump up from water under poop pipe
+    //   "etype": "skill",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  -164.5250, 4.4958, 1456.8996, 10],
+    //   "lump": {
+    //     "name":"intpalrf-skill-01",
+    //     "bob-scale": ["float", 0.25]
+    //     // "pickup-amount": ["float", 2.0] // abah hint
+    //   }
+    // }//,
+    // {
+    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
+    //   "etype": "skill",
+    //   "game_task": 0, 
+    //   "quat" : [0, 0, 0, 1],
+    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
+    //   "lump": {
+    //     "name":"wascitya-skill-2"
+    //   }
+    // },
+    
+  ]
+}

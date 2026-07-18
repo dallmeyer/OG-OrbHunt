@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["air-train-ag", "warp-gate-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -56,6 +56,28 @@
         "name":"ctyport-tape-01"
       }
     },
+    {
+      "trans": [ 163.1403, 5.9163, 1237.1716 ], // 
+      "etype": "air-train",
+      "game_task": 0, 
+      "quat" : [0, 0.6314, 0, 0.7754],
+      "bsphere": [ 163.1403, 5.9163, 1237.1716 , 10],
+      "lump": {
+        "name":"ctyport-air-train-01",
+        "distance": ["meters", 15.0]
+      }
+    },
+    {
+      "trans": [ 163.1403, 5.9163, 1237.1716 ], // 
+      "etype": "warp-gate",
+      "game_task": 0, 
+      "quat" : [0, 0.6314, 0, 0.7754],
+      "bsphere": [ 163.1403, 5.9163, 1237.1716 , 10],
+      "lump": {
+        "name":"ctyport-warp-gate-01",
+        "distance": ["meters", 10.0]
+      }
+    },    
 
     {
       "trans": [  -164.5250, 4.4958, 1456.8996], // under walkway over pipes on mhcity side. jump up from water under poop pipe

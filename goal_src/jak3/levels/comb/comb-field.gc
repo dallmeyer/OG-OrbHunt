@@ -215,7 +215,7 @@
     (get-point-in-path! arg0 s4-0 1.0 'exact)
     (* 0.5 (vector-vector-distance s3-0 s4-0))
     (let ((s2-1 (new 'process 'collide-shape this (collide-list-enum usually-hit-by-player))))
-      (set! (-> s2-1 penetrated-by) (penetrate vehicle))
+      (set! (-> s2-1 penetrated-by) (penetrate touch vehicle)) ;; orbhunt - let jak through (added touch)
       (let ((v1-8 (new 'process 'collide-shape-prim-mesh s2-1 (the-as uint 0) (the-as uint 0))))
         (set! (-> v1-8 prim-core collide-as) (collide-spec obstacle blocking-plane camera-blocker))
         (set! (-> v1-8 prim-core collide-with) (collide-spec jak player-list))

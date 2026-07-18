@@ -46,6 +46,28 @@
    "textures": [],
 
   "actors" : [
+    {
+      "trans": [ 3542.7331, -35.2144, 67.4820], // oob corner, hover through hole in ceiling collision
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3542.7331, -35.2144, 67.4820, 10],
+      "lump": {
+        "name":"combn-tape-01"
+      }
+    },
+    
+    {
+      "trans": [ 3553.6030, -35.5838, 75.2327], // hidden in bottom of blue inner part of wall, left side
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3553.6030, -35.5838, 75.2327, 10],
+      "lump": {
+        "name":"combn-skill-01"
+      }
+    }
+
     // {
     //   "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
     //   "etype": "skill",
