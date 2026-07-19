@@ -1704,7 +1704,8 @@
   ;; loading hacks
   (cond
     ((in-bubble-m? 169.71  474.42  -40.11 12.0)  ;; halfway down elevator factoryd > factoryc, should be no-op when going up since not loaded
-      (script-eval '(want-display 'factoryc 'display))
+      (when (= (level-status? *level* 'factoryc #f) 'loaded)
+        (script-eval '(want-display 'factoryc 'display)))
       )
     ((in-bubble-m?  14.2037  -3460.4550  -979.4643 100.0) ;; end of subrails 2 jump to railx
       (script-eval '(continue "railx-warp"))
@@ -1722,7 +1723,24 @@
       (script-eval '(want-load 'templea 'templeb 'templec))
       )
     ((in-bubble-m? 4157.98  47.86  4530.81 20.0) ;; hallway from precursor room to rotator room
-      (script-eval '(want-display 'templed 'display))
+      (when (= (level-status? *level* 'templed #f) 'loaded)
+        (script-eval '(want-display 'templed 'display)))
+      )
+    ((in-bubble-m? 7.12  2.41  75.18 80.0) ;; in comba near elevator, to display combx if going backwards
+      (when (= (level-status? *level* 'combx #f) 'loaded)
+        (script-eval '(want-display 'combx 'display)))
+      )
+    ((in-bubble-m? 991.57  -148.11  186.44 80.0) ;; beginning of combc, to display combb if going backwards
+      (when (= (level-status? *level* 'combb #f) 'loaded)
+        (script-eval '(want-display 'combb 'display)))
+      )
+    ((in-bubble-m? 1723.04  -53.30  -199.80 100.0) ;; beginning of combd, to display combc if going backwards
+      (when (= (level-status? *level* 'combc #f) 'loaded)
+        (script-eval '(want-display 'combc 'display)))
+      )
+    ((in-bubble-m? 2346.72  -3.81  149.84 80.0) ;; beginning of combe, to display combd if going backwards
+      (when (= (level-status? *level* 'combd #f) 'loaded)
+        (script-eval '(want-display 'combd 'display)))
       )
     )
 
@@ -1936,6 +1954,24 @@
       )
     )
 
+  ;; combb/c/d/e (subrails 1)
+  (let ((r1326 (region-lookup-by-id 1326))
+        (r1328 (region-lookup-by-id 1328))
+        (r1552 (region-lookup-by-id 1552))
+        (r1334 (region-lookup-by-id 1334))
+        (r1336 (region-lookup-by-id 1336)))
+    (when r1326
+      (set! (-> r1326 on-exit) '(want-load 'comba 'combb 'combx))) ;; load combx back in (combc out) needs in bubble hack to display
+    (when r1328 
+      (set! (-> r1328 on-exit) '(want-load 'comba 'combb 'combc))) ;; load combb back in (combd out) needs in bubble hack to display
+    (when r1552
+      (set! (-> r1552 on-exit) '(want-load 'comba 'combc 'combd))) ;; load combc back in (combe out) needs in bubble hack to display
+    (when r1334
+      (set! (-> r1334 on-exit) '(want-load 'comba 'combd 'combe))) ;; load combd back in (combn out) needs in bubble hack to display
+    (when r1336
+      (set! (-> r1336 on-enter) '())) ;; dont bother loading in minea, keeps combe loaded
+    )
+  
   ;; railx (subrails 2) - kill doors to final room so you can warp out
   (when (process-by-ename "rail-oracle-door-2")
     (script-eval '(kill "rail-oracle-door-2"))

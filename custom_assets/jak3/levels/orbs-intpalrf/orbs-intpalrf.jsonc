@@ -46,21 +46,22 @@
    "textures": [],
 
   "actors" : [
-    // {
-    //   "trans": [  -117.3022, 42.1865, 1370.9014], // dev pic
-    //   "etype": "tape",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  -117.3022, 42.1865, 1370.9014, 10],
-    //   "lump": {
-    //     "name":"intpalrf-tape-01"
-    //   }
-    // },
+    {
+      "trans": [ 75.3154, 57.8590, 714.2145], // palace at ground level, in corner 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 75.3154, 57.8590, 714.2145, 10],
+      "lump": {
+        "name":"XXX-tape-YYY"
+      }
+    },
+
     {
       "trans": [119.5500, 409.3380, 514.8099  ], // 
       "etype": "air-train",
       "game_task": 0, 
-      "quat" : [0, 0.6314, 0, 0.7754],
+      "quat" : [0.0000, 0.8609, 0.0000, 0.5086],
       "bsphere": [119.5500, 409.3380, 514.8099  , 10],
       "lump": {
         "name":"intpalrf-air-train-01",
@@ -222,11 +223,11 @@
       }
     },
     {
-      "trans": [ 253.8333, 481.9034, 532.4959], // climb 
+      "trans": [ 248.6192, 481.9034, 537.7763], // climb 
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
-      "bsphere": [ 253.8333, 481.9034, 532.4959, 10],
+      "bsphere": [ 248.6192, 481.9034, 537.7763, 10],
       "lump": {
         "name":"intpalrf-skill-15"
       }
@@ -242,39 +243,111 @@
       }
     },
     {
+      "trans": [ 267.4656, 444.6620, 523.2819], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 267.4656, 444.6620, 523.2819, 10],
+      "lump": {
+        "name":"intpalrf-skill-17"
+      }
+    },
+    {
+      "trans": [ 256.0321, 440.1531, 531.7768], // climb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 256.0321, 440.1531, 531.7768, 10],
+      "lump": {
+        "name":"intpalrf-skill-18"
+      }
+    },    
+    {
+      "trans": [ 268.5747, 418.7457, 522.3914], // climb (drop down) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 268.5747, 418.7457, 522.3914, 10],
+      "lump": {
+        "name":"intpalrf-skill-19"
+      }
+    },
+    {
       "trans": [ 189.0001, 409.1014, 505.1313], // in corner where roof ends, like if you were continuing to 2nd section of baron fight 
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
       "bsphere": [ 189.0001, 409.1014, 505.1313, 10],
       "lump": {
-        "name":"intpalrf-skill-17"
+        "name":"intpalrf-skill-20"
+      }
+    },
+    {
+      "trans": [ 126.0065, 428.8616, 553.0667], // on top of doorway over missing rooftop behind airtrain, drop down from above
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 126.0065, 428.8616, 553.0667, 10],
+      "lump": {
+        "name":"intpalrf-skill-21"
+      }
+    },
+    {
+      "trans": [ 160.3425, 408.5005, 482.1289], // on tiny ledge outside fence/wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 160.3425, 408.5005, 482.1289, 10],
+      "lump": {
+        "name":"intpalrf-skill-22"
+      }
+    },
+
+    // hover orbs
+    {
+      "trans": [ 202.7295, 501.0392, 571.1366], // way up top 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 202.7295, 501.0392, 571.1366, 10],
+      "lump": {
+        "name":"intpalrf-skill-hover-01",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [ 178.9346, 497.2899, 568.7037], // way up top 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 178.9346, 497.2899, 568.7037, 10],
+      "lump": {
+        "name":"intpalrf-skill-hover-02",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [ 157.6591, 497.2899, 582.0892], // way up top 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 157.6591, 497.2899, 582.0892, 10],
+      "lump": {
+        "name":"intpalrf-skill-hover-03",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [ 157.2427, 497.2899, 595.6444], // way up top 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 157.2427, 497.2899, 595.6444, 10],
+      "lump": {
+        "name":"intpalrf-skill-hover-04",
+        "pickup-amount": ["float", 3.0] // hover
       }
     }
-    //,
-
-    // {
-    //   "trans": [  -164.5250, 4.4958, 1456.8996], // under walkway over pipes on mhcity side. jump up from water under poop pipe
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  -164.5250, 4.4958, 1456.8996, 10],
-    //   "lump": {
-    //     "name":"intpalrf-skill-01",
-    //     "bob-scale": ["float", 0.25]
-    //     // "pickup-amount": ["float", 2.0] // abah hint
-    //   }
-    // }//,
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
     
   ]
 }

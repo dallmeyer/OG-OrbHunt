@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 2407.3171, 33.2004, 571.1264], // inside, hover over deathplane (now deload plane) then go back under
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2407.3171, 33.2004, 571.1264, 10],
+      "lump": {
+        "name":"deswalk-tape-01"
+      }
+    },
+
+    {
       "trans": [2411.1528, 108.9567, 575.1330], // inside tentacle closest to erol
       "etype": "skill",
       "game_task": 0, 
@@ -58,11 +69,11 @@
       }
     },
     {
-      "trans": [ 2470.91,  96.48,  549.01 ], // just right of final snake-stump, next to urchin
+      "trans": [ 2469.7207, 96.5300, 549.8059 ], // just right of final snake-stump, next to urchin
       "etype": "skill",
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2470.91,  96.48,  549.01 , 10],
+      "bsphere": [ 2469.7207, 96.5300, 549.8059 , 10],
       "lump": {
         "name":"deswalk-skill-02"
       }
