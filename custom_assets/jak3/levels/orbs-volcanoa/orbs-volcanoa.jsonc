@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ -159.0780, 1.2118, -244.3091], // behind big lavafall, get invuln and go around into lava "cave"
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -159.0780, 1.2118, -244.3091, 10],
+      "lump": {
+        "name":"volcanoa-tape-01"
+      }
+    },
+    {
       "trans": [ -75.03,  5.99,  118.39], // to daxter slide
       "etype": "warp-gate",
       "game_task": 0, 

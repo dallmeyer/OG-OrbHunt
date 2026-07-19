@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 145.5682, 419.7258, -161.0949], // inside oob "room" (hover over wall) 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 145.5682, 419.7258, -161.0949, 10],
+      "lump": {
+        "name":"factoryc-tape-01"
+      }
+    },
+
+    {
       "trans": [  256.3369, 438.5318, 40.9540 ], // on top of pipe normally for dax section 1
       "etype": "skill",
       "game_task": 0, 

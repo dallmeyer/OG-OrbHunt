@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ 177.2623, 335.1975, 405.8163], // inside corner ball, clockwise 1 from hellcat 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 177.2623, 335.1975, 405.8163, 10],
+      "lump": {
+        "name":"factoryb-tape-01"
+      }
+    },
+    {
       "trans": [ 376.34,  412.5711,  408.22 ], // hellcat to lfacrm1
       "etype": "desoasis-hellcat",
       "game_task": 0, 

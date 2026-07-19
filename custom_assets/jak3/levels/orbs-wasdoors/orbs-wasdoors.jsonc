@@ -117,6 +117,17 @@
         "name":"wasdoors-skill-06"
       }
     },
+    {
+      "trans": [ 2320.43,  39.36,  179.42 ], // on back of slam dozer (abah hint for desert things I suppose)
+      "etype": "skill",
+      "game_task": 0, 
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 2320.43,  39.36,  179.42 , 10],
+      "lump": {
+        "name":"wasdoors-skill-07",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
 
     {
       "trans": [ 2271.97998046875, 30.568599700927734, 167.6909942626953 ], // onin in her tent

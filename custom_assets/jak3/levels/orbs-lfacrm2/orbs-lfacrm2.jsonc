@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ 247.2009, 484.4620, 87.7264], // where else could it be 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 247.2009, 484.4620, 87.7264, 10],
+      "lump": {
+        "name":"lfacrm2-tape-01"
+      }
+    },
+    {
       "trans": [ 245.92,  485.25,  49.13 ], // warp to factoryb
       "etype": "warp-gate",
       "game_task": 0, 

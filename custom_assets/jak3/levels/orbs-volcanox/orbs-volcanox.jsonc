@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ -132.6341, 1.5220, -459.3450], // hover back up thru entrance chimney, then concussor spin to land oob near warp gate
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -132.6341, 1.5220, -459.3450, 10],
+      "lump": {
+        "name":"volcanox-tape-01"
+      }
+    },
+
+    {
       "trans": [  -98.8240, 25.0396, -453.9938], // ledge up above vanilla dark precursor statue, under volcano hole
       "etype": "skill",
       "game_task": 0,   

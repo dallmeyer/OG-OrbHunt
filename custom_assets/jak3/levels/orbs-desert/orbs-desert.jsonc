@@ -64,6 +64,17 @@
 
   "actors" : [
     {
+      "trans": [ 2049.2819, 25.2082, 1846.8833], // near east side cave entrance, hover oob 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2049.2819, 25.2082, 1846.8833, 10],
+      "lump": {
+        "name":"desert-tape-01"
+      }
+    },
+
+    {
       "trans": [  1958.2836, 45.6546, 1987.6072], // slippery ledge out from building w tall windmill
       "etype": "skill",
       "game_task": 0, 

@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ 276.5724, 532.9877, -134.6134], // inside pipe under erol 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 276.5724, 532.9877, -134.6134, 10],
+      "lump": {
+        "name":"factoryd-tape-01"
+      }
+    },
+    {
       "trans": [ 249.97,  524.59,  -155.17  ], // warp to vinroom
       "etype": "warp-gate",
       "game_task": 0, 
