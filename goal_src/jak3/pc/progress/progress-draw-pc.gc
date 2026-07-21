@@ -648,6 +648,7 @@
 
 (define-extern *level-orb-total-counts-fixed* (array uint8))
 (define-extern *level-orb-total-counts* (array uint8))
+(define-extern *level-sort-remap* (array uint8))
 (define-extern *level-id-names* (array string))
 (define-extern *level-cell-tasks* (array game-task))
 (define-extern *total-orbs* int)
@@ -733,7 +734,8 @@
             ;; print lines
             (while (and (< (-> arg1 origin y) (-> s3-0 w)) (< task-info-idx (-> arg0 total-num-tasks)))
               (let ((collected-count 0)
-                    (total-count 0))
+                    (total-count 0)
+                    (remap-idx (if (< task-info-idx 2) -1 (-> *level-sort-remap* (- task-info-idx 1)))))
                 ;; figure out counts
                 (cond
                   ((zero? task-info-idx)  ;; cell counts
@@ -752,8 +754,8 @@
                     (set! collected-count (the int (-> *game-info* buzzer-total)))
                     )
                   (else ;; orbs per level
-                    (set! collected-count (+ 0 (-> *game-info* skill-per-level (- task-info-idx 1))))
-                    (set! total-count (umax (-> *level-orb-total-counts* (- task-info-idx 1)) (-> *level-orb-total-counts-fixed* (- task-info-idx 1))))
+                    (set! collected-count (+ 0 (-> *game-info* skill-per-level remap-idx)))
+                    (set! total-count (umax (-> *level-orb-total-counts* remap-idx) (-> *level-orb-total-counts-fixed* remap-idx)))
                     )
                   )
                 ;; print
@@ -762,7 +764,7 @@
                           ((and (zero? collected-count) (nonzero? total-count)) "???")
                           ((zero? task-info-idx) "Power Cells")
                           ((= 1 task-info-idx) "Secret Tapes")
-                          (else (-> *level-id-names* (- task-info-idx 1))))))
+                          (else (-> *level-id-names* remap-idx)))))
                   (set! (-> arg1 origin x) (+ 10.0 (adjust-x-if-needed (-> s3-0 x))))
                   (string-format "~S" (lookup-text! *common-text*
                                         ;; (if (logtest? (-> sv-272 flags) (game-task-node-flag closed))

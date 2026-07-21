@@ -442,6 +442,106 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   96  ;; orbs-intpalrf
   ))
 
+(define *level-sort-remap* (new 'static 'boxed-array :type uint8 :length 400 :allocated-length 400
+  0 ;; "" ;; 0
+  1 ;; "BTR (North)"	;; 1
+  2 ;; "BTR (West)"	;; 2
+  3 ;; "BTR (Center)"	;; 3
+  4 ;; "BTR (South)"	;; 4
+  5 ;; "BTR (End)"	;; 5
+  6 ;; "Dark Ship (Escape)"	;; 6
+  7 ;; "Dark Ship (Jak Section)"	;; 7
+  8 ;; "Dark Ship (Mech Section)"	;; 8
+  9 ;; "Dark Ship (Start)"	;; 9
+  42 ;; "Eco Grid"	;; 42
+  10 ;; "Eco Mine (Bomb Train)"	;; 10
+  11 ;; "Eco Mine (Cave)"	;; 11
+  12 ;; "Eco Mine (Elevators)"	;; 12
+  13 ;; "Eco Mine (Robot Fight)"	;; 13
+  14 ;; "Freedom HQ"	;; 14
+  15 ;; "Freedom HQ (Hanger)"	;; 15
+  17 ;; "Gardens (North)" ;; 17
+  18 ;; "Gardens (South)" ;; 18
+  19 ;; "Gun Course"	;; 19
+  20 ;; "Halfpipe"	;; 20
+  21 ;; "Haven Forest (North)"	;; 21
+  22 ;; "Haven Forest (South)"	;; 22
+  23 ;; "Industrial Zone (North)"	;; 23
+  24 ;; "Industrial Zone (South)"	;; 24
+  25 ;; "Main Town Ruins"	;; 25
+  26 ;; "Metal Head City (North)"	;; 26
+  27 ;; "Metal Head City (South)"	;; 27
+  29 ;; "Metal Head Tower (Entrance)"	;; 29
+  28 ;; "Metal Head Tower"	;; 28
+  30 ;; "Metal Head Tower (Top)"	;; 30
+  31 ;; "Metal Head Nest (East)"	;; 31
+  32 ;; "Metal Head Nest (West)"	;; 32
+  35 ;; "Monk Temple (Exterior)"	;; 35
+  34 ;; "Monk Temple (Entrance)"	;; 34
+  33 ;; "Monk Temple (Center)"	;; 33
+  36 ;; "Monk Temple (Jetboard Test)"	;; 36
+  37 ;; "Monk Temple (Rescue Seem)"	;; 37
+  38 ;; "Naughty Ottsel"	;; 38
+  39 ;; "New Haven (North)"	;; 39
+  40 ;; "New Haven (South)"	;; 40
+  41 ;; "Onin's Tent"	;; 41
+  72 ;; "Precursor Core"	;; 72
+  96 ;; "Palace (Rooftop)" ;; 96
+  43 ;; "Port"	;; 43
+  44 ;; "Power Station"	;; 44
+  45 ;; "Sewers 1.1 (Main Town)"	;; 45
+  46 ;; "Sewers 1.2"	;; 46
+  47 ;; "Sewers 1.3"	;; 47
+  48 ;; "Sewers 1.4 (Port)"	;; 48
+  49 ;; "Sewers 2.1 (Industrial Zone)"	;; 49
+  50 ;; "Sewers 2.2"	;; 50
+  51 ;; "Sewers 2.3"	;; 51
+  52 ;; "Sewers 2.4"	;; 52
+  53 ;; "Sewers 2.5 (Metal Head City)"	;; 53
+  54 ;; "Sewers 3.1 (New Haven)"	;; 54
+  55 ;; "Sewers 3.2"	;; 55
+  56 ;; "Sewers 3.3"	;; 56
+  57 ;; "Sewers 3.4"	;; 57
+  58 ;; "Sewers 3.5 (Industrial Zone)"	;; 58
+  59 ;; "Slums"	;; 59
+  62 ;; "Spargus (Arena)"	;; 62
+  60 ;; "Spargus (East)"	;; 60
+  61 ;; "Spargus (West)"	;; 61
+  63 ;; "Spargus (Palace)"	;; 63
+  16 ;; "Spargus (Garage)"	;; 16
+  64 ;; "Stadium Ruins (East)"	;; 64
+  65 ;; "Stadium Ruins (West)"	;; 65
+  66 ;; "Subrails 1.1"	;; 66
+  68 ;; "Subrails 1.2"	;; 68
+  69 ;; "Subrails 1.3"	;; 69
+  70 ;; "Subrails 1.4"	;; 70
+  71 ;; "Subrails 1.5"	;; 71
+  67 ;; "Subrails 1.6"	;; 67
+  73 ;; "Subrails 2.1"	;; 73
+  74 ;; "Subrails 2.2"	;; 74
+  75 ;; "Subrails 2.3"	;; 75
+  76 ;; "Subrails 2.4"	;; 76
+  77 ;; "Subrails 2.5"	;; 77
+  78 ;; "Subrails 2.6"	;; 78
+  79 ;; "Terraformer (Final Boss)"	;; 79
+  80 ;; "Training Course"	;; 80
+  82 ;; "Volcano (Entrance/Exit)"	;; 82
+  81 ;; "Volcano"	;; 81
+  85 ;; "War Factory (Exterior)"	;; 85
+  83 ;; "War Factory (Entrance)"	;; 83
+  86 ;; "War Factory (Interior)"	;; 86
+  84 ;; "War Factory (Erol Fight)"	;; 84
+  87 ;; "Wasteland (Caves)"	;; 87
+  88 ;; "Wasteland (East)"	;; 88
+  89 ;; "Wasteland (Northeast)"	;; 89
+  90 ;; "Wasteland (Northwest)"	;; 90
+  94 ;; "Wasteland (Oasis)"	;; 94
+  93 ;; "Wasteland (Ruins)"	;; 93
+  92 ;; "Wasteland (Southeast)"	;; 92
+  91 ;; "Wasteland (Stronghold)"	;; 91
+  95 ;; "Wasteland (West)"	;; 95
+  ))
+
 (define *level-id-names* (new 'static 'boxed-array :type string :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   "" ;; 0 (none)
   "BTR (North)"	;; 1
@@ -459,7 +559,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Eco Mine (Robot Fight)"	;; 13
   "Freedom HQ"	;; 14
   "Freedom HQ (Hanger)"	;; 15
-  "Garage"	;; 16
+  "Spargus (Garage)"	;; 16
   "Gardens (North)" ;; 17
   "Gardens (South)" ;; 18
   "Gun Course"	;; 19
@@ -505,16 +605,16 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "Slums"	;; 59
   "Spargus (East)"	;; 60
   "Spargus (West)"	;; 61
-  "Spargus Arena"	;; 62
-  "Spargus Palace"	;; 63
-  "Stadium Ruins East"	;; 64
-  "Stadium Ruins West"	;; 65
-  "Subrails 1 Entrance"	;; 66
-  "Subrails 1 Exit"	;; 67
-  "Subrails 1.1"	;; 68
-  "Subrails 1.2"	;; 69
-  "Subrails 1.3"	;; 70
-  "Subrails 1.4"	;; 71
+  "Spargus (Arena)"	;; 62
+  "Spargus (Palace)"	;; 63
+  "Stadium Ruins (East)"	;; 64
+  "Stadium Ruins (West)"	;; 65
+  "Subrails 1.1"	;; 66
+  "Subrails 1.6"	;; 67
+  "Subrails 1.2"	;; 68
+  "Subrails 1.3"	;; 69
+  "Subrails 1.4"	;; 70
+  "Subrails 1.5"	;; 71
   "Precursor Core"	;; 72
   "Subrails 2.1"	;; 73
   "Subrails 2.2"	;; 74
