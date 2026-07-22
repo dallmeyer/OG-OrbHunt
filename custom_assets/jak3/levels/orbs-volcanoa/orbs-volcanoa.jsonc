@@ -458,6 +458,306 @@
       "lump": {
         "name":"volcanoa-skill-38"
       }
+    },
+    {
+      "trans": [ 38.2462, 29.5649, -320.2862], // rock wall climb near first breakable ledges
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 38.2462, 29.5649, -320.2862, 10],
+      "lump": {
+        "name":"volcanoa-skill-39",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 42.3909, 46.3519, -318.0312], // rock wall climb near first breakable ledges, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 42.3909, 46.3519, -318.0312, 10],
+      "lump": {
+        "name":"volcanoa-skill-40",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 48.9374, 51.7290, -313.4521], // rock wall climb near first breakable ledges, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 48.9374, 51.7290, -313.4521, 10],
+      "lump": {
+        "name":"volcanoa-skill-41"
+      }
+    },
+    {
+      "trans": [ 61.3905, 60.2575, -308.0194], // rock wall climb near first breakable ledges, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 61.3905, 60.2575, -308.0194, 10],
+      "lump": {
+        "name":"volcanoa-skill-42"
+      }
+    },
+    {
+      "trans": [ 68.9565, 68.2038, -283.4019], // rock wall climb near first breakable ledges, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 68.9565, 68.2038, -283.4019, 10],
+      "lump": {
+        "name":"volcanoa-skill-43"
+      }
+    },
+    {
+      "trans": [ 69.1086, 79.3846, -308.6079], // rock wall climb near first breakable ledges, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 69.1086, 79.3846, -308.6079, 10],
+      "lump": {
+        "name":"volcanoa-skill-44",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 54.4073, 107.6329, -321.6067], // rock wall climb near first breakable ledges, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 54.4073, 107.6329, -321.6067, 10],
+      "lump": {
+        "name":"volcanoa-skill-45"
+      }
+    },
+    {
+      "trans": [ 38.7436, 107.3919, -355.3776], // rock wall climb near first breakable ledges, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 38.7436, 107.3919, -355.3776, 10],
+      "lump": {
+        "name":"volcanoa-skill-46"
+      }
+    },
+    {
+      "trans": [ 33.7637, 42.3933, -326.1920], // alt rock wall climb near first breakable ledges, follow from ^^^^^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 33.7637, 42.3933, -326.1920, 10],
+      "lump": {
+        "name":"volcanoa-skill-47",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 26.4164, 55.1136, -330.2798], // alt rock wall climb near first breakable ledges, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 26.4164, 55.1136, -330.2798, 10],
+      "lump": {
+        "name":"volcanoa-skill-48"
+      }
+    },
+    {
+      "trans": [ 15.8059, 12.6541, -323.9150], // in crevice on wall over lava by first breakable ledges 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 15.8059, 12.6541, -323.9150, 10],
+      "lump": {
+        "name":"volcanoa-skill-49"
+      }
+    },
+    {
+      "trans": [ -18.4883, 6.4410, -254.5965], // behind tree roots against step near first lamp 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -18.4883, 6.4410, -254.5965, 10],
+      "lump": {
+        "name":"volcanoa-skill-50"
+      }
+    },
+    {
+      "trans": [ -69.3658, 19.4365, -186.7795], // in triangle shaped hole in rock wall near first lamp 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -69.3658, 19.4365, -186.7795, 10],
+      "lump": {
+        "name":"volcanoa-skill-51"
+      }
+    },
+    {
+      "trans": [ 60.7426, 12.2149, -248.1689], // inside "solid" plant chamber just after first breakable ledges 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 60.7426, 12.2149, -248.1689, 10],
+      "lump": {
+        "name":"volcanoa-skill-52"
+      }
+    },
+    {
+      "trans": [ 42.3214, 24.7860, -233.7459], // behind rocks against inner column with arch overhead, after first breakable ledges 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 42.3214, 24.7860, -233.7459, 10],
+      "lump": {
+        "name":"volcanoa-skill-53"
+      }
+    },
+    {
+      "trans": [ 67.4411, 23.8693, -220.1112], // rock wall climb after first breakable ledges 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 67.4411, 23.8693, -220.1112, 10],
+      "lump": {
+        "name":"volcanoa-skill-54",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 71.4086, 41.9323, -226.7324], // rock wall climb after first breakable ledges, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 71.4086, 41.9323, -226.7324, 10],
+      "lump": {
+        "name":"volcanoa-skill-55",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 77.4813, 63.9924, -232.4073], // rock wall climb after first breakable ledges, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 77.4813, 63.9924, -232.4073, 10],
+      "lump": {
+        "name":"volcanoa-skill-56"
+      }
+    },
+    {
+      "trans": [ 47.4075, 63.1397, -232.3024], // on top or arch, rock wall climb after first breakable ledges, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 47.4075, 63.1397, -232.3024, 10],
+      "lump": {
+        "name":"volcanoa-skill-57"
+      }
+    },
+    {
+      "trans": [ 82.5040, 52.8161, -208.7006], // rock wall climb to the right from after first breakable wall
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 82.5040, 52.8161, -208.7006, 10],
+      "lump": {
+        "name":"volcanoa-skill-58",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 80.2432, 71.5006, -200.8949], // rock wall climb to the right from after first breakable wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 80.2432, 71.5006, -200.8949, 10],
+      "lump": {
+        "name":"volcanoa-skill-59"
+      }
+    },
+    {
+      "trans": [ 84.2281, 55.0311, -183.1481], // rock wall climb to the right from after first breakable wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 84.2281, 55.0311, -183.1481, 10],
+      "lump": {
+        "name":"volcanoa-skill-60",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 76.7226, 68.8282, -182.7522], // rock wall climb to the right from after first breakable wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 76.7226, 68.8282, -182.7522, 10],
+      "lump": {
+        "name":"volcanoa-skill-61"
+      }
+    },
+    {
+      "trans": [ 85.4218, 61.0532, -158.0578], // rock wall climb to the right from after first breakable wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 85.4218, 61.0532, -158.0578, 10],
+      "lump": {
+        "name":"volcanoa-skill-62"
+      }
+    },
+    {
+      "trans": [ 85.2799, 66.8257, -130.3494], // rock wall climb to the right from after first breakable wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 85.2799, 66.8257, -130.3494, 10],
+      "lump": {
+        "name":"volcanoa-skill-63"
+      }
+    },
+    {
+      "trans": [ 82.2268, 56.0196, -118.3831], // rock wall climb to the right from after first breakable wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 82.2268, 56.0196, -118.3831, 10],
+      "lump": {
+        "name":"volcanoa-skill-64",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 87.9899, 75.1033, -93.1806], // rock wall climb to the right from after first breakable wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 87.9899, 75.1033, -93.1806, 10],
+      "lump": {
+        "name":"volcanoa-skill-65",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 81.2370, 91.0275, -85.5037], // rock wall climb to the right from after first breakable wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 81.2370, 91.0275, -85.5037, 10],
+      "lump": {
+        "name":"volcanoa-skill-66"
+      }
+    },
+    {
+      "trans": [ 46.8040, 96.8013, -81.1856], // rock wall climb to the right from after first breakable wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 46.8040, 96.8013, -81.1856, 10],
+      "lump": {
+        "name":"volcanoa-skill-67"
+      }
     }//,
     
   ]
