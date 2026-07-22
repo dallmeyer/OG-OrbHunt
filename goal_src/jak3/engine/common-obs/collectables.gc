@@ -2005,6 +2005,7 @@
       ;; check orb/ghost visibility
       ;; og:noorb - transparent/uncollectable orbs for collected open orbs
       (when (and (= (-> (ppointer->process (-> self parent)) type symbol) 'process-tree)
+                 (-> self entity)
                  (logtest? (-> self entity extra perm status) (entity-perm-status complete)))
         (when (and (nonzero? (-> self part))
                  (= (-> self type) skill) ;; no onin-brain particles crash
@@ -2093,7 +2094,7 @@
   (set! (-> this notify) (the-as handle #f))
   (set! (-> this fact) (new 'process 'fact-info this (pickup-type skill) 1.0))
   (let ((a0-11 (-> this entity)))
-    (if (when (and a0-11 (= (-> this type symbol) 'skill)) ;; orb hunt dont set task for ghosts, no perm will be saved
+    (if (when (and a0-11 (= (-> this type symbol) 'skill)) 
           (let ((a0-12 (-> a0-11 extra perm task)))
             (if a0-12
                 (= a0-12 (game-task none))

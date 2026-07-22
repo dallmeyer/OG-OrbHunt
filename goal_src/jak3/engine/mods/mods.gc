@@ -1539,7 +1539,8 @@
   )
 
 (defun all-orbs-check? ((idx uint))
-  (= (-> *level-orb-collected-counts* idx) (-> *level-orb-total-counts* idx))
+  (= (-> *game-info* skill-per-level idx) (-> *level-orb-total-counts* idx))
+  ;; (= (-> *level-orb-collected-counts* idx) (-> *level-orb-total-counts* idx))
   )
 
 ;; its an elevator so only supports path w start/end positions, abandoned this

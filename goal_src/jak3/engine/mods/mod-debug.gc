@@ -11,30 +11,35 @@
 (defun-debug debug-menu-make-orb-placer-menu ((ctx debug-menu-context))
   (let ((orb-placer-menu (new 'debug 'debug-menu ctx "Orb Placer")))
     (debug-menu-append-item orb-placer-menu (new-dm-bool "Entity Placer Edit Mode?" *entity-placer-active?* dm-boolean-toggle-pick-func))
-    (debug-menu-append-item orb-placer-menu (new-dm-func "Add Orb" #f orb-placer-add))
+    (debug-menu-append-item orb-placer-menu (new-dm-func "Add Actor" #f orb-placer-add))
 
-    (let ((orb-type-menu (new 'debug 'debug-menu ctx "Select Entity Type")))
+    (let ((orb-type-menu (new 'debug 'debug-menu ctx "Select Actor Type")))
       (debug-menu-append-item orb-type-menu (new 'debug 'debug-menu-item-flag "Skill (orb)" 'skill orbs-set-entity-type))
       (debug-menu-append-item orb-type-menu (new 'debug 'debug-menu-item-flag "Tape" 'tape orbs-set-entity-type))
 
-      (debug-menu-append-item orb-placer-menu (new-dm-submenu "Select Entity Type" orb-type-menu))
+      (debug-menu-append-item orb-placer-menu (new-dm-submenu "Select Actor Type" orb-type-menu))
       )
     
     *orb-placer-entity-type*
    
     (debug-menu-append-item orb-placer-menu (new-dm-func "Toggle Orb Marking" #f orb-placer-toggle-marking))
-    (let ((select-orb-menu (new 'debug 'debug-menu ctx "Select Orb")))
+    (let ((select-orb-menu (new 'debug 'debug-menu ctx "Select Actor")))
       (set! *orb-placer-select-menu* select-orb-menu)
       ;; populated on orb add
-      (debug-menu-append-item orb-placer-menu (new-dm-submenu "Select Orb" select-orb-menu))
+      (debug-menu-append-item orb-placer-menu (new-dm-submenu "Select Actor" select-orb-menu))
       )
-    (let ((dupe-orb-menu (new 'debug 'debug-menu ctx "Duplicate Orb")))
+    (let ((dupe-orb-menu (new 'debug 'debug-menu ctx "Duplicate Actor")))
       (set! *orb-placer-dupe-menu* dupe-orb-menu)
       ;; populated on orb add
-      (debug-menu-append-item orb-placer-menu (new-dm-submenu "Duplicate Orb" dupe-orb-menu))
+      (debug-menu-append-item orb-placer-menu (new-dm-submenu "Duplicate Actor" dupe-orb-menu))
       )
-    (debug-menu-append-item orb-placer-menu (new-dm-func "Print Selected Orb Position" #f orb-placer-print-selected))
-    (debug-menu-append-item orb-placer-menu (new-dm-func "Print All Orb Positions" #f orb-placer-print-all))
+    (let ((delete-orb-menu (new 'debug 'debug-menu ctx "Delete Actor")))
+      (set! *orb-placer-delete-menu* delete-orb-menu)
+      ;; populated on orb add
+      (debug-menu-append-item orb-placer-menu (new-dm-submenu "Delete Actor" delete-orb-menu))
+      )
+    (debug-menu-append-item orb-placer-menu (new-dm-func "Print Selected Actor Position" #f orb-placer-print-selected))
+    (debug-menu-append-item orb-placer-menu (new-dm-func "Print All Actor Positions" #f orb-placer-print-all))
     (let ((orb-save-menu (new 'debug 'debug-menu ctx "Save to File")))
       (debug-menu-append-item orb-save-menu (new-dm-func "Save to Slot 1" #f orbs-save-to-file-1))
       (debug-menu-append-item orb-save-menu (new-dm-func "Save to Slot 2" #f orbs-save-to-file-2))
@@ -51,6 +56,7 @@
 
       (debug-menu-append-item orb-placer-menu (new-dm-submenu "Load from File" orb-load-menu))
       )
+    (debug-menu-append-item orb-placer-menu (new-dm-func "Clear All" #f orb-placer-clear!))
     
     (new-dm-submenu "Orb Placer" orb-placer-menu)
     )

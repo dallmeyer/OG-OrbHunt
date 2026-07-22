@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 871.3792, 32.0190, 2488.6606], // just out of oasis pool oob 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 871.3792, 32.0190, 2488.6606, 10],
+      "lump": {
+        "name":"deserte-tape-01"
+      }
+    },
+
+    {
       "trans": [  198.4892, 99.6640, 2929.7810], // top of rocks near trees and water, tricky abah or concussor bs can work too
       "etype": "skill",
       "game_task": 0, 

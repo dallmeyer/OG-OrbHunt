@@ -37,6 +37,18 @@
   (none)
   )
 
+(defun orb-placer-blink-cleanup ()
+  (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
+    (let ((orb (the process-drawable (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
+      (when orb
+        (logclear! (-> orb draw status) (draw-control-status force-fade))
+        (set! (-> orb draw force-fade) (the-as uint 128))
+        )
+      )
+    )
+  (none)
+  )
+
 (defun dm-orb-placer-dupe-func ((idx int))
   (let ((vec (new 'stack-no-clear 'vector))
         (orb (the process-drawable (handle->process (-> *orb-placer-orbs* idx))))
@@ -59,6 +71,7 @@
       ; spawn and update orb-placer data
       (dbg-format 0 "dupe spawn-skill~%")
       (when (nonzero? orb-handle)
+        (orb-placer-blink-cleanup)
         (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
         (set! *orb-placer-selected-idx* *orb-placer-count*)
         ;; (orb-placer-highlight (the skill (handle->process orb-handle)) #t)
@@ -78,10 +91,37 @@
     )
   )
 
+(defun clear-orb ((idx int))
+  (dbg-format 0 "clearing orb index ~D~%" idx)
+  (when (and (-> *orb-placer-orbs* idx) (nonzero? (-> *orb-placer-orbs* idx)) (handle->process (-> *orb-placer-orbs* idx)))
+    (process-disconnect (handle->process (-> *orb-placer-orbs* idx))) ;; disconnect from maps
+    (deactivate (handle->process (-> *orb-placer-orbs* idx)))
+    (set! (-> *orb-placer-orbs* idx) (the-as handle #f))
+    (set! *orb-placer-selected-idx* -1)
+    (when *debug-segment*
+      (orb-placer-list-maintenance #t)
+      (when (nonzero? (length (-> *orb-placer-delete-menu* items)))
+        (set! (-> *orb-placer-delete-menu* selected-item) (the debug-menu-item (car (-> *orb-placer-delete-menu* items)))))
+      )
+    )
+  0
+  )
+
+(defun orb-placer-clear! ()
+  (dotimes (idx *orb-placer-count*)
+    (clear-orb idx))
+  (set! *orb-placer-count* 0)
+  (set! *orb-placer-selected-idx* -1)
+  (set! *entity-placer-active?* #f)
+  (none)
+  0
+  )
+
 (defun orb-placer-list-maintenance ((update-debug-list? symbol))
   (when update-debug-list?
    (debug-menu-remove-all-items *orb-placer-select-menu*)
    (debug-menu-remove-all-items *orb-placer-dupe-menu*)
+   (debug-menu-remove-all-items *orb-placer-delete-menu*)
    )
 
   (dotimes (i *orb-placer-count*)
@@ -115,12 +155,15 @@
               ;; append to debug menu list
               (let ((orb-menu-item (new-dm-flag (-> *orb-placer-temp-strs* i) i dm-orb-placer-select-func))
                     (orb-dupe-menu-item (new-dm-func (-> *orb-placer-temp-strs* i) i dm-orb-placer-dupe-func))
+                    (orb-delete-menu-item (new-dm-func (-> *orb-placer-temp-strs* i) i clear-orb))
                     )
                 (debug-menu-append-item *orb-placer-select-menu* orb-menu-item)
                 (debug-menu-append-item *orb-placer-dupe-menu* orb-dupe-menu-item)
+                (debug-menu-append-item *orb-placer-delete-menu* orb-delete-menu-item)
                 (when is-selected?
                   (set! (-> *orb-placer-select-menu* selected-item) orb-menu-item)
                   (set! (-> *orb-placer-dupe-menu* selected-item) orb-dupe-menu-item)
+                  (set! (-> *orb-placer-delete-menu* selected-item) orb-delete-menu-item)
                   )
                 )
               )
@@ -170,6 +213,7 @@
         )
 
       (when (nonzero? orb-handle)
+        (orb-placer-blink-cleanup)
         (set! (-> *orb-placer-orbs* *orb-placer-count*) orb-handle)
         (set! *orb-placer-selected-idx* *orb-placer-count*)
         (true! *entity-placer-edit-mode?*)
@@ -306,6 +350,12 @@
       (vector+! (-> proc root trans) (-> proc root trans) vec)
       (when proc-extra-vec (vector+! proc-extra-vec proc-extra-vec vec))
       (true! moved?)
+      (when (= (-> proc type symbol) 'skill) ;; reset completed orbs perhaps
+        (logclear! (-> proc draw status) (draw-control-status no-draw))
+        (logior! (-> proc mask) (process-mask actor-pause))
+        (set! (-> (the collide-shape (-> proc root)) root-prim prim-core collide-as) (collide-spec collectable notice-blue-eco-powerup))
+        (set! (-> (the collide-shape (-> proc root)) root-prim prim-core collide-with) (collide-spec jak player-list tobot jak-vehicle))
+        )
       )
 
     ;; Adjust bob-amount with right stick for orbs
@@ -493,15 +543,7 @@
                       ;; unlock freecam if no target
                       (when (and (not *target*) (get-setting *setting-control* 'mode-name))
                         (remove-setting-by-arg0 *setting-control* 'mode-name))
-                      ;; orb cleanup
-                      (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
-                        (let ((orb (the process-drawable (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
-                          (when orb
-                            (logclear! (-> orb draw status) (draw-control-status force-fade))
-                            (set! (-> orb draw force-fade) (the-as uint 128))
-                            )
-                          )
-                        )
+                      (orb-placer-blink-cleanup)
                       )
                     (else ;; active
                       ;; make sure target is grabbed
@@ -550,22 +592,6 @@
       )
     )
   (none)
-  )
-
-(defun orb-placer-clear! ()
-  (dotimes (idx *orb-placer-count*)
-    (cond
-      ((and (-> *orb-placer-orbs* idx) (nonzero? (-> *orb-placer-orbs* idx)) (handle->process (-> *orb-placer-orbs* idx)))
-        (deactivate (handle->process (-> *orb-placer-orbs* idx)))
-        (set! (-> *orb-placer-orbs* idx) (the-as handle #f))
-        )
-      )
-    )
-  (set! *orb-placer-count* 0)
-  (set! *orb-placer-selected-idx* -1)
-  (set! *entity-placer-active?* #f)
-  (none)
-  0
   )
 
 ;; file save/load stuff

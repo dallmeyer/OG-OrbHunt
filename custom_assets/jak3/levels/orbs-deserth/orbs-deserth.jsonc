@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 3148.0566, 37.3260, 3357.9956], // inside/behind rightmost staircase/temple 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3148.0566, 37.3260, 3357.9956, 10],
+      "lump": {
+        "name":"deserth-tape-01"
+      }
+    },
+
+    {
       "trans": [  2610.1918, 82.3485, 3212.7746], // up on top of stone sentinels on right (facing temple)
       "etype": "skill",
       "game_task": 0, 

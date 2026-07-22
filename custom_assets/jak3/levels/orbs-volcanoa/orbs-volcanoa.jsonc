@@ -178,6 +178,286 @@
       "lump": {
         "name":"volcanoa-skill-11"
       }
+    },
+    {
+      "trans": [ -79.4215, 36.4568, -304.8600], // on top of rock spike near start with dedicated "no jump" region lolz 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -79.4215, 36.4568, -304.8600, 10],
+      "lump": {
+        "name":"volcanoa-skill-12"
+      }
+    },
+    {
+      "trans": [ -55.0851, 31.2397, -379.0091], // climb over entrance steps
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -55.0851, 31.2397, -379.0091, 10],
+      "lump": {
+        "name":"volcanoa-skill-13"
+      }
+    },
+    {
+      "trans": [ -47.9485, 34.1220, -398.8217], // climb over entrance steps, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -47.9485, 34.1220, -398.8217, 10],
+      "lump": {
+        "name":"volcanoa-skill-14"
+      }
+    },
+    {
+      "trans": [ -54.2121, 29.8521, -408.9985], // climb over entrance steps, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -54.2121, 29.8521, -408.9985, 10],
+      "lump": {
+        "name":"volcanoa-skill-15"
+      }
+    },
+    {
+      "trans": [ -16.5440, 44.0589, -389.8239], // climb over entrance steps, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -16.5440, 44.0589, -389.8239, 10],
+      "lump": {
+        "name":"volcanoa-skill-16"
+      }
+    },
+    {
+      "trans": [ -0.1020, 44.6069, -370.1073], // climb over entrance steps, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -0.1020, 44.6069, -370.1073, 10],
+      "lump": {
+        "name":"volcanoa-skill-17"
+      }
+    },
+    {
+      "trans": [ 2.2729, 53.1090, -370.9281], // climb over entrance steps, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2.2729, 53.1090, -370.9281, 10],
+      "lump": {
+        "name":"volcanoa-skill-18",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 0.7887, 72.7049, -381.1152], // climb over entrance steps, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 0.7887, 72.7049, -381.1152, 10],
+      "lump": {
+        "name":"volcanoa-skill-19"
+      }
+    },
+    {
+      "trans": [ -15.0468, 67.0027, -399.4560], // climb over entrance steps, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -15.0468, 67.0027, -399.4560, 10],
+      "lump": {
+        "name":"volcanoa-skill-20",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -12.6204, 87.2808, -405.8891], // climb over entrance steps, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -12.6204, 87.2808, -405.8891, 10],
+      "lump": {
+        "name":"volcanoa-skill-21"
+      }
+    },
+    {
+      "trans": [ -11.3271, 96.5101, -395.3181], // climb over entrance steps, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -11.3271, 96.5101, -395.3181, 10],
+      "lump": {
+        "name":"volcanoa-skill-22",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -9.8831, 122.6016, -427.6455], // climb over entrance steps, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -9.8831, 122.6016, -427.6455, 10],
+      "lump": {
+        "name":"volcanoa-skill-23"
+      }
+    },
+    {
+      "trans": [ -60.0687, 239.8503, -423.4613], // climb over entrance steps, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -60.0687, 239.8503, -423.4613, 10],
+      "lump": {
+        "name":"volcanoa-skill-24"
+      }
+    },
+    {
+      "trans": [ -23.2893, 40.8658, -316.0935], // another climb, starting from early on vanilla path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -23.2893, 40.8658, -316.0935, 10],
+      "lump": {
+        "name":"volcanoa-skill-25",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -20.5046, 60.5105, -319.6975], // another climb early on, follow from^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -20.5046, 60.5105, -319.6975, 10],
+      "lump": {
+        "name":"volcanoa-skill-26",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -12.6640, 67.5837, -325.2459], // another climb early on, follow from^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -12.6640, 67.5837, -325.2459, 10],
+      "lump": {
+        "name":"volcanoa-skill-27",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -16.9237, 92.1214, -339.4372], // another climb early on, follow from^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -16.9237, 92.1214, -339.4372, 10],
+      "lump": {
+        "name":"volcanoa-skill-28",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 8.2756, 111.2219, -360.6293], // another climb early on, follow from^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 8.2756, 111.2219, -360.6293, 10],
+      "lump": {
+        "name":"volcanoa-skill-29"
+      }
+    },
+    {
+      "trans": [ -115.5812, 41.5432, -324.2536], // tree climb near exit path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -115.5812, 41.5432, -324.2536, 10],
+      "lump": {
+        "name":"volcanoa-skill-30",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -106.8509, 54.1538, -311.5699], // tree climb near exit path, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -106.8509, 54.1538, -311.5699, 10],
+      "lump": {
+        "name":"volcanoa-skill-31"
+      }
+    },
+    {
+      "trans": [ -103.0029, 56.2639, -305.3658], // tree climb near exit path, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -103.0029, 56.2639, -305.3658, 10],
+      "lump": {
+        "name":"volcanoa-skill-32"
+      }
+    },
+    {
+      "trans": [ -38.8143, 20.3318, -302.1754], // behind shrubbery overhanging from starting area, extended under tree 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -38.8143, 20.3318, -302.1754, 10],
+      "lump": {
+        "name":"volcanoa-skill-33"
+      }
+    },
+    {
+      "trans": [ -64.0178, 5.0508, -309.6550], // in crevice between wall and stalag near lava, drop down near starting area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -64.0178, 5.0508, -309.6550, 10],
+      "lump": {
+        "name":"volcanoa-skill-34",
+        "pickup-amount": ["float", 2.0] // abah hint (just to get back up)
+      }
+    },
+    {
+      "trans": [ -25.4724, 5.3226, -278.4335], // on slippery but cool rock in middle of lava, not far from starting area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -25.4724, 5.3226, -278.4335, 10],
+      "lump": {
+        "name":"volcanoa-skill-35"
+      }
+    },
+    {
+      "trans": [ 24.5323, 17.1379, -226.3875], // behind plants up against wall, not too far into path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 24.5323, 17.1379, -226.3875, 10],
+      "lump": {
+        "name":"volcanoa-skill-36"
+      }
+    },
+    {
+      "trans": [ 12.7102, 22.0663, -246.4988], // up on stalags over lava, can extended/concussor from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 12.7102, 22.0663, -246.4988, 10],
+      "lump": {
+        "name":"volcanoa-skill-37",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 11.9514, 47.8203, -248.5523], // up on tall stalag over lava, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 11.9514, 47.8203, -248.5523, 10],
+      "lump": {
+        "name":"volcanoa-skill-38"
+      }
     }//,
     
   ]

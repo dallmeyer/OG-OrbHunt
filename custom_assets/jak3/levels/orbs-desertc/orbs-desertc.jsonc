@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 389.1070, 96.4990, 945.5033], // inside middle of not-volcano 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 389.1070, 96.4990, 945.5033, 10],
+      "lump": {
+        "name":"desertc-tape-01"
+      }
+    },
+
+    {
       "trans": [ 927.8785, 87.4516, 1685.5893], // on ledge under broken bridge/ramp, near vanilla roll challenge
       "etype": "skill",
       "game_task": 0, 

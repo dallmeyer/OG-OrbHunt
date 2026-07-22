@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 2291.0019, 56.5282, 2548.2407], // inside volcano-shaped mountain next to MH cave, in the oob part
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2291.0019, 56.5282, 2548.2407, 10],
+      "lump": {
+        "name":"desertg-tape-01"
+      }
+    },
+
+    {
       "trans": [  2257.7849, 23.1451, 2203.8393], // under lip of rock wall just outside cave, near sig
       "etype": "skill",
       "game_task": 0, 

@@ -1025,3 +1025,4 @@
 ;; global for this so we can repopulate it as needed
 (define *orb-placer-select-menu* (the-as debug-menu #f))
 (define *orb-placer-dupe-menu* (the-as debug-menu #f))
+(define *orb-placer-delete-menu* (the-as debug-menu #f))

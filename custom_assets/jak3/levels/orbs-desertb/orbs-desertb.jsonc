@@ -47,6 +47,16 @@
 
   "actors" : [
     {
+      "trans": [ 2664.5639, 10.4473, -40.6336], // in water inside rock wall between desert and spargus, hover over then dive under
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2664.5639, 10.4473, -40.6336, 10],
+      "lump": {
+        "name":"desertb-tape-01"
+      }
+    },
+    {
       "trans": [  2364.5, 46.173, 759.65], // warp gate to deswalk, up on rocks between desert a/d
       "etype": "warp-gate",
       "game_task": 0, 

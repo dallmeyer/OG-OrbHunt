@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 1781.1860, 8.9943, 3299.1726], // in water inside/under middle bridge, desert side 
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 1781.1860, 8.9943, 3299.1726, 10],
+      "lump": {
+        "name":"desertf-tape-01"
+      }
+    },
+
+    {
       "trans": [  1575.0048, 35.1262, 2973.4003], // in lower torch inside stronghold
       "etype": "skill",
       "game_task": 0, 

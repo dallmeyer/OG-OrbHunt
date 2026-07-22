@@ -47,6 +47,17 @@
 
   "actors" : [
     {
+      "trans": [ 1810.2320, 20.7654, 76.7998], // inside mountains spargus side. inside oob rock near sunny spot
+      "etype": "tape",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 1810.2320, 20.7654, 76.7998, 10],
+      "lump": {
+        "name":"deserta-tape-01"
+      }
+    },
+
+    {
       "trans": [  1491.8719, 130.8742, 376.4342], // on top of big rocks in middle
       "etype": "skill",
       "game_task": 0, 
