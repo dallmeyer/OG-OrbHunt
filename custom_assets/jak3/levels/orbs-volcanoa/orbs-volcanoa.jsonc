@@ -758,6 +758,298 @@
       "lump": {
         "name":"volcanoa-skill-67"
       }
+    },
+    {
+      "trans": [ -102.8150, 57.2415, -322.5662], // on ledge above tree before exit cave, abah from trunk  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -102.8150, 57.2415, -322.5662, 10],
+      "lump": {
+        "name":"volcanoa-skill-68",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -104.2314, 76.5401, -336.7461], // rock wall climb above tree before exit cave, abah from^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -104.2314, 76.5401, -336.7461, 10],
+      "lump": {
+        "name":"volcanoa-skill-69",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -122.4334, 99.0739, -333.0665], // rock wall climb above tree before exit cave, abah from^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -122.4334, 99.0739, -333.0665, 10],
+      "lump": {
+        "name":"volcanoa-skill-70"
+      }
+    },
+    {
+      "trans": [ -118.0271, 130.8238, -342.0077], // IJ rock wall climb above tree before exit cave, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -118.0271, 130.8238, -342.0077, 10],
+      "lump": {
+        "name":"volcanoa-skill-71"
+      }
+    },
+    {
+      "trans": [ -84.9690, 214.8493, -344.4161], // top of rock wall, all ground collision, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -84.9690, 214.8493, -344.4161, 10],
+      "lump": {
+        "name":"volcanoa-skill-72"
+      }
+    },
+    {
+      "trans": [ -108.9842, 240.6789, -354.4981], // top of rock wall, all ground collision, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -108.9842, 240.6789, -354.4981, 10],
+      "lump": {
+        "name":"volcanoa-skill-73"
+      }
+    },
+    {
+      "trans": [ -157.1665, 263.1401, -319.0378], // top of rock wall, all ground collision, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -157.1665, 263.1401, -319.0378, 10],
+      "lump": {
+        "name":"volcanoa-skill-74"
+      }
+    },
+    {
+      "trans": [ -80.9508, 136.7601, -397.5662], // middle of IJ wall over steps from entrance 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -80.9508, 136.7601, -397.5662, 10],
+      "lump": {
+        "name":"volcanoa-skill-75"
+      }
+    },
+    {
+      "trans": [ -3.1026, 192.6380, -388.5950], // top of IJ wall over steps from entrance 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -3.1026, 192.6380, -388.5950, 10],
+      "lump": {
+        "name":"volcanoa-skill-76"
+      }
+    },
+    {
+      "trans": [ -172.6137, 103.3481, -165.4288], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -172.6137, 103.3481, -165.4288, 10],
+      "lump": {
+        "name":"volcanoa-skill-77"
+      }
+    },
+    {
+      "trans": [ -177.6099, 113.6554, -152.6609], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -177.6099, 113.6554, -152.6609, 10],
+      "lump": {
+        "name":"volcanoa-skill-78"
+      }
+    },
+    {
+      "trans": [ -173.5202, 121.7081, -161.0228], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -173.5202, 121.7081, -161.0228, 10],
+      "lump": {
+        "name":"volcanoa-skill-79"
+      }
+    },
+    {
+      "trans": [ -181.7444, 116.2910, -137.4519], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -181.7444, 116.2910, -137.4519, 10],
+      "lump": {
+        "name":"volcanoa-skill-80"
+      }
+    },
+    {
+      "trans": [ -180.1797, 141.6753, -147.6054], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -180.1797, 141.6753, -147.6054, 10],
+      "lump": {
+        "name":"volcanoa-skill-81"
+      }
+    },
+    {
+      "trans": [ -180.7196, 148.6449, -158.2441], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -180.7196, 148.6449, -158.2441, 10],
+      "lump": {
+        "name":"volcanoa-skill-82"
+      }
+    },
+    {
+      "trans": [ -174.5237, 151.6238, -179.9305], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -174.5237, 151.6238, -179.9305, 10],
+      "lump": {
+        "name":"volcanoa-skill-83"
+      }
+    },
+    {
+      "trans": [ -186.7871, 148.5235, -175.1286], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -186.7871, 148.5235, -175.1286, 10],
+      "lump": {
+        "name":"volcanoa-skill-84"
+      }
+    },
+    {
+      "trans": [ -207.5610, 142.6458, -157.0919], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -207.5610, 142.6458, -157.0919, 10],
+      "lump": {
+        "name":"volcanoa-skill-85"
+      }
+    },
+    {
+      "trans": [ -200.0765, 126.8992, -189.5161], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -200.0765, 126.8992, -189.5161, 10],
+      "lump": {
+        "name":"volcanoa-skill-86"
+      }
+    },
+    {
+      "trans": [ -222.8654, 111.7637, -159.9192], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -222.8654, 111.7637, -159.9192, 10],
+      "lump": {
+        "name":"volcanoa-skill-87"
+      }
+    },
+    {
+      "trans": [ -243.1782, 114.2184, -171.1281], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -243.1782, 114.2184, -171.1281, 10],
+      "lump": {
+        "name":"volcanoa-skill-88"
+      }
+    },
+    {
+      "trans": [ -253.4747, 143.6949, -174.4101], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -253.4747, 143.6949, -174.4101, 10],
+      "lump": {
+        "name":"volcanoa-skill-89"
+      }
+    },
+    {
+      "trans": [ -223.5787, 132.0773, -211.3259], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -223.5787, 132.0773, -211.3259, 10],
+      "lump": {
+        "name":"volcanoa-skill-90"
+      }
+    },
+    {
+      "trans": [ -240.6269, 138.1390, -168.2889], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -240.6269, 138.1390, -168.2889, 10],
+      "lump": {
+        "name":"volcanoa-skill-91"
+      }
+    },
+    {
+      "trans": [ -233.1309, 139.7851, -133.6580], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -233.1309, 139.7851, -133.6580, 10],
+      "lump": {
+        "name":"volcanoa-skill-92"
+      }
+    },
+    {
+      "trans": [ -245.3344, 105.1610, -136.4743], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -245.3344, 105.1610, -136.4743, 10],
+      "lump": {
+        "name":"volcanoa-skill-93"
+      }
+    },
+    {
+      "trans": [ -243.5406, 166.2539, -195.3197], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -243.5406, 166.2539, -195.3197, 10],
+      "lump": {
+        "name":"volcanoa-skill-94"
+      }
+    },
+    {
+      "trans": [ -215.4744, 145.6477, -107.1127], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -215.4744, 145.6477, -107.1127, 10],
+      "lump": {
+        "name":"volcanoa-skill-95"
+      }
+    },
+    {
+      "trans": [ -252.5208, 162.9389, -120.4178], // on dark maker satellite stuff (like in speedrun route)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -252.5208, 162.9389, -120.4178, 10],
+      "lump": {
+        "name":"volcanoa-skill-96"
+      }
     }//,
     
   ]
