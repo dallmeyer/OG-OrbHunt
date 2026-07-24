@@ -1624,7 +1624,440 @@
       "quat": [0, 0, 0, 1],
       "bsphere": [ -44.2226, 40.9829, -231.7595, 10],
       "lump": {
-        "name":"volcanoa-skill-153"
+        "name":"volcanoa-skill-153",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -64.2423, 48.0544, -230.4383], // left around tree on rock wall by first lamp, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -64.2423, 48.0544, -230.4383, 10],
+      "lump": {
+        "name":"volcanoa-skill-154",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -62.7045, 72.8828, -225.3896], // up on branch of tree on rock wall by first lamp, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -62.7045, 72.8828, -225.3896, 10],
+      "lump": {
+        "name":"volcanoa-skill-155"
+      }
+    },
+    {
+      "trans": [ -68.8937, 79.2614, -238.0606], // up on branch of tree on rock wall by first lamp, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -68.8937, 79.2614, -238.0606, 10],
+      "lump": {
+        "name":"volcanoa-skill-156"
+      }
+    },
+    {
+      "trans": [ -73.1191, 80.5353, -255.3895], // up on branch of tree on rock wall by first lamp, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -73.1191, 80.5353, -255.3895, 10],
+      "lump": {
+        "name":"volcanoa-skill-157"
+      }
+    },
+    {
+      "trans": [ -48.6118, 81.2194, -260.8201], // up on branch of tree on rock wall by first lamp, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -48.6118, 81.2194, -260.8201, 10],
+      "lump": {
+        "name":"volcanoa-skill-158"
+      }
+    },
+    {
+      "trans": [ -47.3456, 73.8093, -250.3455], // up on branch of tree on rock wall by first lamp, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -47.3456, 73.8093, -250.3455, 10],
+      "lump": {
+        "name":"volcanoa-skill-159"
+      }
+    },
+    {
+      "trans": [ -73.1620, 45.1317, -204.7612], // roots of smaller tree on rock wall in middle, follow from ^^^^^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -73.1620, 45.1317, -204.7612, 10],
+      "lump": {
+        "name":"volcanoa-skill-160"
+      }
+    },
+    {
+      "trans": [ -80.7557, 43.8681, -188.9963], // crevice near smaller tree on rock wall in middle, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -80.7557, 43.8681, -188.9963, 10],
+      "lump": {
+        "name":"volcanoa-skill-161"
+      }
+    },
+    {
+      "trans": [ -85.0574, 38.6806, -221.4342], // rock wall ledge behind pillar, middle area, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -85.0574, 38.6806, -221.4342, 10],
+      "lump": {
+        "name":"volcanoa-skill-162"
+      }
+    },
+    {
+      "trans": [-39.7436, 2.2078, -197.5093], // inside spiky-frog-19 (big bottom section)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -39.7436, 2.2078, -197.5093, 10],
+      "lump": {
+        "name":"volcanoa-skill-163"
+      }
+    },
+    {
+      "trans": [ -87.0975, 10.2895, -225.2333], // behind rock pillar on left between 2nd and 3rd lava-ball-spout 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -87.0975, 10.2895, -225.2333, 10],
+      "lump": {
+        "name":"volcanoa-skill-164"
+      }
+    },
+    {
+      "trans": [ -101.1782, 7.7075, -273.7273], // among stalags over lava, near 2nd lava-ball-spout 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -101.1782, 7.7075, -273.7273, 10],
+      "lump": {
+        "name":"volcanoa-skill-165"
+      }
+    },
+    {
+      "trans": [ -82.9757, 2.3381, -283.4029], // among stalags over lava, near 2nd lava-ball-spout 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -82.9757, 2.3381, -283.4029, 10],
+      "lump": {
+        "name":"volcanoa-skill-166"
+      }
+    },
+    {
+      "trans": [ -121.7907, 6.1196, -233.4600], // among stalags over lava, near 2nd lava-ball-spout 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -121.7907, 6.1196, -233.4600, 10],
+      "lump": {
+        "name":"volcanoa-skill-167"
+      }
+    },
+    {
+      "trans": [ -124.2308, 5.8490, -260.1448], // among stalags over lava, near 2nd lava-ball-spout 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -124.2308, 5.8490, -260.1448, 10],
+      "lump": {
+        "name":"volcanoa-skill-168"
+      }
+    },
+    {
+      "trans": [ -205.5507, 71.2897, -259.9703], // small gap along wall on path after satellite 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -205.5507, 71.2897, -259.9703, 10],
+      "lump": {
+        "name":"volcanoa-skill-169"
+      }
+    },
+    {
+      "trans": [ -133.1805, 59.6876, -191.8414], // crater in rock at bottom of lavafall after satellite 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -133.1805, 59.6876, -191.8414, 10],
+      "lump": {
+        "name":"volcanoa-skill-170"
+      }
+    },
+    {
+      "trans": [ -183.9182, 65.5223, -234.3560], // under fallen tree on side of path after satellite 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -183.9182, 65.5223, -234.3560, 10],
+      "lump": {
+        "name":"volcanoa-skill-171",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ -142.9359, 9.6923, -283.9494], // among stalags down by lava from path just before exit cave 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -142.9359, 9.6923, -283.9494, 10],
+      "lump": {
+        "name":"volcanoa-skill-172"
+      }
+    },
+    {
+      "trans": [ -145.5947, 60.6568, -229.2101], // among stalags at top of lavafall along path to exit cave 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -145.5947, 60.6568, -229.2101, 10],
+      "lump": {
+        "name":"volcanoa-skill-173"
+      }
+    },
+    {
+      "trans": [ -143.4391, 90.5032, -267.6850], // corner on top of rock arch over lava along path to exit cave 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -143.4391, 90.5032, -267.6850, 10],
+      "lump": {
+        "name":"volcanoa-skill-174"
+      }
+    },
+    {
+      "trans": [ -122.6874, 75.5875, -133.3411], // in corner of rock wall down a bit, opposite lava river by satellite 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -122.6874, 75.5875, -133.3411, 10],
+      "lump": {
+        "name":"volcanoa-skill-175"
+      }
+    },
+    {
+      "trans": [ 38.8863, 11.8503, -16.8268], // on rock wall near 2nd lamp / end of flut section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 38.8863, 11.8503, -16.8268, 10],
+      "lump": {
+        "name":"volcanoa-skill-176"
+      }
+    },
+    {
+      "trans": [ 7.0294, 1.1850, -50.3173], // on edge of ground collision / lava by plat before 2nd lamp / end of flut section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 7.0294, 1.1850, -50.3173, 10],
+      "lump": {
+        "name":"volcanoa-skill-177"
+      }
+    },
+    {
+      "trans": [ 5.3194, 30.0316, -41.0242], // on ground collision rock on inner wall before 2nd lamp / end of flut section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 5.3194, 30.0316, -41.0242, 10],
+      "lump": {
+        "name":"volcanoa-skill-178"
+      }
+    },
+    {
+      "trans": [ 31.2412, 10.2076, -29.6437], // inner rock wall before 2nd lamp / end of flut section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 31.2412, 10.2076, -29.6437, 10],
+      "lump": {
+        "name":"volcanoa-skill-179"
+      }
+    },
+    {
+      "trans": [ 20.7715, 21.5046, -27.8302], // inner rock wall before 2nd lamp / end of flut section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 20.7715, 21.5046, -27.8302, 10],
+      "lump": {
+        "name":"volcanoa-skill-180"
+      }
+    },
+    {
+      "trans": [ 11.4733, 18.4596, -37.6527], // inner rock wall before 2nd lamp / end of flut section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 11.4733, 18.4596, -37.6527, 10],
+      "lump": {
+        "name":"volcanoa-skill-181"
+      }
+    },
+    {
+      "trans": [ -3.2775, 42.5121, -34.2622], // further up inner rock wall before 2nd lamp / end of flut section, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -3.2775, 42.5121, -34.2622, 10],
+      "lump": {
+        "name":"volcanoa-skill-182"
+      }
+    },
+    {
+      "trans": [ -8.3489, 106.9752, -30.3238], // way up inner rock wall before 2nd lamp / end of flut section, IJ corner up from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -8.3489, 106.9752, -30.3238, 10],
+      "lump": {
+        "name":"volcanoa-skill-183"
+      }
+    },
+    {
+      "trans": [ -20.5369, 174.3831, -32.0432], // way up inner rock wall by 2nd lamp / end of flut section, IJ up from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -20.5369, 174.3831, -32.0432, 10],
+      "lump": {
+        "name":"volcanoa-skill-184"
+      }
+    },
+    {
+      "trans": [ -66.0715, 112.8043, -32.7882], // way up inner rock wall by 2nd lamp / end of flut section, down a bit from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -66.0715, 112.8043, -32.7882, 10],
+      "lump": {
+        "name":"volcanoa-skill-185"
+      }
+    },
+    {
+      "trans": [ 30.1434, 233.4292, 19.5366], // way up inner rock wall by 2nd lamp / end of flut section, IJ up from ^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 30.1434, 233.4292, 19.5366, 10],
+      "lump": {
+        "name":"volcanoa-skill-186"
+      }
+    },
+    {
+      "trans": [ 5.6842, 201.2818, 70.4994], // IJ up on inner rock wall above daxter hanging section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 5.6842, 201.2818, 70.4994, 10],
+      "lump": {
+        "name":"volcanoa-skill-187"
+      }
+    },
+    {
+      "trans": [ 46.3569, 211.6336, 98.4784], // IJ up on inner rock wall above daxter hanging section, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 46.3569, 211.6336, 98.4784, 10],
+      "lump": {
+        "name":"volcanoa-skill-188"
+      }
+    },
+    {
+      "trans": [ 23.0871, 158.8474, 151.1607], // around corner IJ on inner rock wall from ^, before daxter pipe section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 23.0871, 158.8474, 151.1607, 10],
+      "lump": {
+        "name":"volcanoa-skill-189"
+      }
+    },
+    {
+      "trans": [ -36.0072, 129.2576, 128.1683], // IJ on inner rock wall from ^, before daxter pipe section, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -36.0072, 129.2576, 128.1683, 10],
+      "lump": {
+        "name":"volcanoa-skill-190"
+      }
+    },
+    {
+      "trans": [ -36.7871, 134.6431, 95.6067], // IJ on inner rock wall from ^, before daxter pipe section, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -36.7871, 134.6431, 95.6067, 10],
+      "lump": {
+        "name":"volcanoa-skill-191"
+      }
+    },
+    {
+      "trans": [ -43.2614, 204.0323, 95.0247], // way up IJ on inner rock wall from ^, before daxter pipe section, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -43.2614, 204.0323, 95.0247, 10],
+      "lump": {
+        "name":"volcanoa-skill-192"
+      }
+    },
+    {
+      "trans": [ -22.1386, 256.5451, 64.8534], // way up IJ on inner rock wall from ^, before daxter pipe section, follow from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -22.1386, 256.5451, 64.8534, 10],
+      "lump": {
+        "name":"volcanoa-skill-193"
+      }
+    },
+    {
+      "trans": [ -0.8957, 305.3620, 31.2699], // way up IJ on inner rock wall from ^, before daxter pipe section, follow from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -0.8957, 305.3620, 31.2699, 10],
+      "lump": {
+        "name":"volcanoa-skill-194"
+      }
+    },
+    {
+      "trans": [ 14.5955, 329.4940, 71.8517], // way up IJ on inner rock wall from ^, before daxter pipe section, follow from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 14.5955, 329.4940, 71.8517, 10],
+      "lump": {
+        "name":"volcanoa-skill-195"
+      }
+    },
+    {
+      "trans": [ -51.5546, 166.1689, 15.4457], // IJ on inner rock wall from ^, before daxter pipe section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -51.5546, 166.1689, 15.4457, 10],
+      "lump": {
+        "name":"volcanoa-skill-196"
       }
     }//,
     
