@@ -602,6 +602,17 @@
       (set-forward-vel 32768.0)
       (go target-indax-jump 12288.0 12288.0 *forward-jump-mods*)
       )
+    (when (name= (-> *game-info* current-continue name) 'volcano-indax-2)
+      (set! (-> self manipy)
+            (the-as
+              (pointer manipy)
+              (external-target-spawn 
+                (static-vector-meters -72.0471 5.9971 108.8111)
+                (new 'static 'quaternion :y -1.0)
+                self #f (manipy-options mo0))
+              )
+            )
+      )
     (target-indax-init)
     (if (= arg1 'hang)
         (go target-indax-hang-stance)

@@ -2295,7 +2295,8 @@
                    )
                  (set! (-> gp-0 flags) (font-flags shadow kerning large))
                  (print-game-text
-                   (lookup-text! *common-text* (text-id text-0083) #f)
+                   (lookup-text! *common-text* (text-id press-to-return) #f)
+                  ;;  (lookup-text! *common-text* (text-id text-0083) #f)
                    gp-0
                    #f
                    44

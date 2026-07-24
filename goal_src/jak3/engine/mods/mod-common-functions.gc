@@ -197,6 +197,24 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
     )
   )
 
+(defmacro eqrx (name deg)
+  `(let ((eqr-ent (the entity-actor (entity-by-name ,name))))
+    (when eqr-ent
+      (quaternion-rotate-x! (-> eqr-ent quat) (-> eqr-ent quat) ,deg)))
+  )
+
+(defmacro eqry (name deg)
+  `(let ((eqr-ent (the entity-actor (entity-by-name ,name))))
+    (when eqr-ent
+      (quaternion-rotate-y! (-> eqr-ent quat) (-> eqr-ent quat) ,deg)))
+  )
+
+(defmacro eqrz (name deg)
+  `(let ((eqr-ent (the entity-actor (entity-by-name ,name))))
+    (when eqr-ent
+      (quaternion-rotate-z! (-> eqr-ent quat) (-> eqr-ent quat) ,deg)))
+  )
+
 ;; prints all the nodes in a path in meters
 (defmacro path-print-meters (path)
   `(dotimes (idx (-> ,path num-cverts))

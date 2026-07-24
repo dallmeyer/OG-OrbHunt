@@ -731,6 +731,12 @@
     (('dark-maker-idol-1026) (set-vector-meters! (-> arg0 extra trans) -124.3420 27.4540 -417.8297) ;; up on wall in first room, lots of ways up here
       (quaternion-set! (-> arg0 quat)  0.2594  0.7843  -0.3276  0.4583))
 
+    ;; VOLCANOA
+    (('crate-1076) (set-vector-meters! (-> arg0 extra trans) -188.8295 96.0346 -104.5416)
+      (quaternion-set! (-> arg0 quat)  0.6547  -0.2659  0.2654  0.6558))
+    (('crate-1079) (set-vector-meters! (-> arg0 extra trans) -206.3135 95.9546 -88.4263)
+      (quaternion-set! (-> arg0 quat)  0.2978  0.6417  -0.6406  0.2983))
+
     ;; ====== TEMPLEX (monk temple exterior) ======
     (('skill-212) (set-vector-meters! (-> arg0 extra trans) 4363.12  72.31  4008.60 )) ;; up on left wall as you first approach temple from desert (need to go behind invis wall from far left/early on)
     (('skill-213) (set-vector-meters! (-> arg0 extra trans) 4375.0493 83.5116 4014.6745)) ;; in crevice up on left wall, follow from ^
