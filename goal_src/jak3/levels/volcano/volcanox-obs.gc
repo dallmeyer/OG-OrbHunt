@@ -587,7 +587,7 @@
         (vector+float*! (-> gp-0 0) (-> self root trans) s5-0 -28672.0)
         (vector+float*! (-> gp-0 1) (-> self root trans) s5-0 28672.0)
         )
-      (blocking-plane-spawn (the-as curve-control #f) gp-0 122880.0)
+      (blocking-plane-spawn (the-as curve-control #f) gp-0 (meters 15)) ;; 122880.0)
       )
     (let ((gp-1 (-> self child)))
       (while gp-1

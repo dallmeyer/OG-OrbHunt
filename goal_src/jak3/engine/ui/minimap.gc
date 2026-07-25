@@ -1615,7 +1615,7 @@
 
 (let ((gp-0 *minimap*))
       ;; og:preserve-this
-  (set! (-> gp-0 engine) (new 'global 'engine-minimap '*minimap* (#if PC_PORT 256 64) connection-minimap))
+  (set! (-> gp-0 engine) (new 'global 'engine-minimap '*minimap* (#if PC_PORT 1024 64) connection-minimap))
   (countdown (v1-9 6)
     (set! (-> gp-0 trail v1-9 used-by) #f)
     )

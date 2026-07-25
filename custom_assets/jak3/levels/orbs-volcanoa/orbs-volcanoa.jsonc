@@ -1726,7 +1726,8 @@
       "quat": [0, 0, 0, 1],
       "bsphere": [ -39.7436, 2.2078, -197.5093, 10],
       "lump": {
-        "name":"volcanoa-skill-163"
+        "name":"volcanoa-skill-163",
+        "alt-actor": "spiky-frog-19"
       }
     },
     {
@@ -2188,6 +2189,177 @@
       "bsphere": [ -34.0377, 44.8822, 67.8392, 10],
       "lump": {
         "name":"volcanoa-skill-209"
+      }
+    },
+    {
+      "trans": [ 53.9278, 1.3322, -86.7599], // behind rock pillar along outer wall before daxter hang section, before ladder 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 53.9278, 1.3322, -86.7599, 10],
+      "lump": {
+        "name":"volcanoa-skill-210"
+      }
+    },
+    {
+      "trans": [ 82.6194, 13.9938, -66.7837], // behind rock pillar along outer wall before daxter hang section, before ladder 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 82.6194, 13.9938, -66.7837, 10],
+      "lump": {
+        "name":"volcanoa-skill-211"
+      }
+    },
+    {
+      "trans": [ 70.5909, 35.1506, -87.0348], // on outer rock wall before ladder before daxter hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 70.5909, 35.1506, -87.0348, 10],
+      "lump": {
+        "name":"volcanoa-skill-212"
+      }
+    },
+    {
+      "trans": [ 88.1227, 2.2878, -42.8500], // behind rock pillar along outer wall before daxter hang section, before ladder
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 88.1227, 2.2878, -42.8500, 10],
+      "lump": {
+        "name":"volcanoa-skill-213"
+      }
+    },
+    {
+      "trans": [ 89.1934, 13.8480, -18.8826], // behind rock pillar along outer wall before daxter hang section, after ladde
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 89.1934, 13.8480, -18.8826, 10],
+      "lump": {
+        "name":"volcanoa-skill-214"
+      }
+    },
+    {
+      "trans": [ 94.7429, 41.2752, 1.0835], // up on outer rock wall before daxter hang section, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 94.7429, 41.2752, 1.0835, 10],
+      "lump": {
+        "name":"volcanoa-skill-215",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 101.6433, 57.8263, -1.5813], // up on outer rock wall before daxter hang section, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 101.6433, 57.8263, -1.5813, 10],
+      "lump": {
+        "name":"volcanoa-skill-216"
+      }
+    },
+    {
+      "trans": [ 100.0862, 58.8512, 18.7347], // up on outer rock wall before daxter hang section, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 100.0862, 58.8512, 18.7347, 10],
+      "lump": {
+        "name":"volcanoa-skill-217"
+      }
+    },
+    {
+      "trans": [ 83.9132, 49.2582, 38.5855], // up on outer rock wall before daxter hang section, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 83.9132, 49.2582, 38.5855, 10],
+      "lump": {
+        "name":"volcanoa-skill-218"
+      }
+    },
+    {
+      "trans": [ 38.4077, 15.7444, 11.0592], // behind rock pillars at start of daxter hang section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 38.4077, 15.7444, 11.0592, 10],
+      "lump": {
+        "name":"volcanoa-skill-219"
+      }
+    },
+    {
+      "trans": [ 29.9400, 26.9765, 16.4442], // on top of dead tree at start of daxter hang section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 29.9400, 26.9765, 16.4442, 10],
+      "lump": {
+        "name":"volcanoa-skill-220"
+      }
+    },
+    {
+      "trans": [ 27.2368, 17.3281, 4.7673], // in corner between wall and wooden pillar at start of daxter hang section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 27.2368, 17.3281, 4.7673, 10],
+      "lump": {
+        "name":"volcanoa-skill-221"
+      }
+    },
+    {
+      "trans": [ -16.4298, 32.6963, 14.9134], // standpoint on pillar/wall along daxter hang section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -16.4298, 32.6963, 14.9134, 10],
+      "lump": {
+        "name":"volcanoa-skill-222"
+      }
+    },
+    {
+      "trans": [ -3.8105, 40.0753, 4.4345], // on top of wooden pillar in middle of daxter hang section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -3.8105, 40.0753, 4.4345, 10],
+      "lump": {
+        "name":"volcanoa-skill-223"
+      }
+    },
+    {
+      "trans": [ 47.0888, 23.9687, 103.4617], // on middle solid wooden beam at end of daxter hang section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 47.0888, 23.9687, 103.4617, 10],
+      "lump": {
+        "name":"volcanoa-skill-224"
+      }
+    },
+    {
+      "trans": [ 68.6846, 41.3855, -258.5168], // rock wall above shrub with orb in middle of flut section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 68.6846, 41.3855, -258.5168, 10],
+      "lump": {
+        "name":"volcanoa-skill-225"
+      }
+    },
+    {
+      "trans": [ 26.6931, -3.7633, 154.8122], // hanging off edge of lavafall into void, need invuln I think 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 26.6931, -3.7633, 154.8122, 10],
+      "lump": {
+        "name":"volcanoa-skill-226"
       }
     }//,
     

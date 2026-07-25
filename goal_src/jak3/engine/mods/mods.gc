@@ -736,6 +736,12 @@
       (quaternion-set! (-> arg0 quat)  0.6547  -0.2659  0.2654  0.6558))
     (('crate-1079) (set-vector-meters! (-> arg0 extra trans) -206.3135 95.9546 -88.4263)
       (quaternion-set! (-> arg0 quat)  0.2978  0.6417  -0.6406  0.2983))
+    (('crate-1098) (set-vector-meters! (-> arg0 extra trans) -21.5009 55.2971 84.0578)
+      (quaternion-set! (-> arg0 quat)  -0.2640  -0.6252  0.6482  -0.3449))
+    (('crate-1100) (set-vector-meters! (-> arg0 extra trans) 31.7100 60.6549 96.2209)
+      (quaternion-set! (-> arg0 quat)  0.1761  0.6604  -0.7092  0.1727))
+    (('crate-1101) (set-vector-meters! (-> arg0 extra trans) -5.8478 44.0468 98.1613)
+      (quaternion-set! (-> arg0 quat)  -0.1760  -0.6870  0.6727  -0.2108))
 
     ;; ====== TEMPLEX (monk temple exterior) ======
     (('skill-212) (set-vector-meters! (-> arg0 extra trans) 4363.12  72.31  4008.60 )) ;; up on left wall as you first approach temple from desert (need to go behind invis wall from far left/early on)
@@ -1438,7 +1444,7 @@
   (let ((orb (the skill (process-by-ename orb-name)))
         (pd (the process-drawable (process-by-ename pd-name)))
         (v (new-stack-vector0)))
-    (set! (-> v y) (meters y-offset))
+    (set! (-> v y) y-offset)
     (skill-follow-pd-offset orb pd v)
     )
   (none)
@@ -2247,7 +2253,8 @@
   (skill-follow-y-offset "sewd-skill-05" "sewer-frog-5" (meters 0.7))
   (skill-follow-y-offset "sewd-skill-06" "sewer-frog-6" (meters 0.7))
 
-  (skill-follow-y-offset "volcanoa-skill-154" "spiky-frog-19" (meters 0.7))
+  (skill-follow-y-offset "volcanox-skill-08" "flitter-275" (meters 0.7))
+  (skill-follow-y-offset "volcanoa-skill-163" "spiky-frog-19" (meters 0.7))
 
   (skill-follow-y-offset "sewh-skill-08" "sew-move-plat-2" (meters -4.6))
   (skill-follow-offset "sewi-skill-23" "sew-rove-plat-9" (static-vector-meters 0.0 -7.0 5.3))
