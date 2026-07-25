@@ -732,6 +732,14 @@
       (quaternion-set! (-> arg0 quat)  0.2594  0.7843  -0.3276  0.4583))
 
     ;; VOLCANOA
+    (('crate-1068) (set-vector-meters! (-> arg0 extra trans) -169.9121 80.1499 -209.3278)
+      (quaternion-set! (-> arg0 quat)  0.0027  0.8872  -0.1899  0.4203))
+    (('crate-1069) (set-vector-meters! (-> arg0 extra trans) -172.0089 59.1114 -265.0935)
+      (quaternion-set! (-> arg0 quat)  -0.0000  0.5343  0.0000  0.8452))
+    (('crate-1070) (set-vector-meters! (-> arg0 extra trans) -182.7608 66.9281 -242.5117)
+      (quaternion-set! (-> arg0 quat)  -0.1062  0.5516  0.0289  0.8267))
+    (('crate-1071) (set-vector-meters! (-> arg0 extra trans) -18.0446 1.8673 -180.281)
+      (quaternion-set! (-> arg0 quat)  -0.0293  0.3414  0.1532  0.9268))
     (('crate-1076) (set-vector-meters! (-> arg0 extra trans) -188.8295 96.0346 -104.5416)
       (quaternion-set! (-> arg0 quat)  0.6547  -0.2659  0.2654  0.6558))
     (('crate-1079) (set-vector-meters! (-> arg0 extra trans) -206.3135 95.9546 -88.4263)

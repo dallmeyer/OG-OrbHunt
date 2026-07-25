@@ -217,7 +217,8 @@
       "quat": [0, 0, 0, 1],
       "bsphere": [ -100.5188, 0.2343, -408.5037, 10],
       "lump": {
-        "name":"volcanox-skill-16"
+        "name":"volcanox-skill-16",
+        "bob-scale": ["float", -1.0] // no bob
       }
     },
     {
