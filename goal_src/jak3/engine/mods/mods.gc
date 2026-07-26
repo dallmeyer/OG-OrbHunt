@@ -750,6 +750,8 @@
       (quaternion-set! (-> arg0 quat)  0.1761  0.6604  -0.7092  0.1727))
     (('crate-1101) (set-vector-meters! (-> arg0 extra trans) -5.8478 44.0468 98.1613)
       (quaternion-set! (-> arg0 quat)  -0.1760  -0.6870  0.6727  -0.2108))
+    (('crate-1125) (set-vector-meters! (-> arg0 extra trans) -57.7013 0.7573 -202.7123)
+      (quaternion-set! (-> arg0 quat)  0.0000  0.9685  0.0000  -0.2488))
 
     ;; ====== TEMPLEX (monk temple exterior) ======
     (('skill-212) (set-vector-meters! (-> arg0 extra trans) 4363.12  72.31  4008.60 )) ;; up on left wall as you first approach temple from desert (need to go behind invis wall from far left/early on)
