@@ -740,6 +740,8 @@
       (quaternion-set! (-> arg0 quat)  -0.1062  0.5516  0.0289  0.8267))
     (('crate-1071) (set-vector-meters! (-> arg0 extra trans) -18.0446 1.8673 -180.281)
       (quaternion-set! (-> arg0 quat)  -0.0293  0.3414  0.1532  0.9268))
+    (('crate-1072) (set-vector-meters! (-> arg0 extra trans) -70.2426 16.8414 -64.3627)
+      (quaternion-set! (-> arg0 quat)  -0.0842  0.9714  -0.1630  -0.1501))
     (('crate-1076) (set-vector-meters! (-> arg0 extra trans) -188.8295 96.0346 -104.5416)
       (quaternion-set! (-> arg0 quat)  0.6547  -0.2659  0.2654  0.6558))
     (('crate-1079) (set-vector-meters! (-> arg0 extra trans) -206.3135 95.9546 -88.4263)
