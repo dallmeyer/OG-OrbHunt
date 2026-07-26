@@ -2403,13 +2403,86 @@
       }
     },
     {
-      "trans": [ -77.1099, 8.0364, -137.7710], // in triangle crevice on rock wall from 2nd of triple plat over lava 
+      "trans": [ -77.1099, 8.0364, -137.7710], // in triangle crevice on rock wall from 3rd of trio plat over lava 
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
       "bsphere": [ -77.1099, 8.0364, -137.7710, 10],
       "lump": {
         "name":"volcanoa-skill-231"
+      }
+    },
+    {
+      "trans": [ -26.9265, 34.2159, -259.7230], // top of tree by first lamp in middle of flut section, can IJ up 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -26.9265, 34.2159, -259.7230, 10],
+      "lump": {
+        "name":"volcanoa-skill-232"
+      }
+    },
+    {
+      "trans": [ -54.1684, 50.0086, -133.6798], // on top of inner rock wall / tree roots above circle lava pool, flut section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -54.1684, 50.0086, -133.6798, 10],
+      "lump": {
+        "name":"volcanoa-skill-233"
+      }
+    },
+    {
+      "trans": [ -61.8314, 18.3246, -149.6377], // between tree trunk and inner rock wall by gap looking at trio of plats over lava 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -61.8314, 18.3246, -149.6377, 10],
+      "lump": {
+        "name":"volcanoa-skill-234",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -72.4822, 31.7694, -137.3480], // up on ledge of inner rock wall by trio of plats of lava, abah/concussor from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -72.4822, 31.7694, -137.3480, 10],
+      "lump": {
+        "name":"volcanoa-skill-235"
+      }
+    },
+    {
+      "trans": [ 74.1530, 9.0682, 38.0247], // on outer rock wall by daxter hang section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 74.1530, 9.0682, 38.0247, 10],
+      "lump": {
+        "name":"volcanoa-skill-236",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 75.6296, 26.6189, 39.7712], // on outer rock wall by daxter hang section, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 75.6296, 26.6189, 39.7712, 10],
+      "lump": {
+        "name":"volcanoa-skill-237",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 12.0209, 101.6187, -10.4087], // on inner wall before daxter hang section, follow from IJ wall earlier orbs 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 12.0209, 101.6187, -10.4087, 10],
+      "lump": {
+        "name":"volcanoa-skill-238"
       }
     }//,
     
