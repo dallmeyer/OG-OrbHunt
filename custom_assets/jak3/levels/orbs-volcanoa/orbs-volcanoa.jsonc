@@ -2604,6 +2604,406 @@
       "lump": {
         "name":"volcanoa-skill-250"
       }
+    },
+    {
+      "trans": [ 74.0207, 18.4943, 80.4086], // inside falling rock after daxter hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 74.0207, 18.4943, 80.4086, 10],
+      "lump": {
+        "name":"volcanoa-skill-251",
+        "alt-actor": "vol-collapsing-rock-1"
+      }
+    },
+    {
+      "trans": [ 88.1986, 27.2542, 78.4290], // under overhanging shrubbery by falling rock bridge after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 88.1986, 27.2542, 78.4290, 10],
+      "lump": {
+        "name":"volcanoa-skill-252"
+      }
+    },
+    {
+      "trans": [ 95.7408, 45.8345, 77.0848], // behind pillar on outer rock wall after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 95.7408, 45.8345, 77.0848, 10],
+      "lump": {
+        "name":"volcanoa-skill-253",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 90.1185, 64.8884, 71.1398], // on outer rock wall after dax hang section, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 90.1185, 64.8884, 71.1398, 10],
+      "lump": {
+        "name":"volcanoa-skill-254"
+      }
+    },
+    {
+      "trans": [ 81.1623, 15.0234, 92.0307], // drop down off edge of path right after falling rock bridge after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 81.1623, 15.0234, 92.0307, 10],
+      "lump": {
+        "name":"volcanoa-skill-255"
+      }
+    },
+    {
+      "trans": [ 130.7183, 53.8891, 86.7840], // crevice on outer rock wall after dax hang section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 130.7183, 53.8891, 86.7840, 10],
+      "lump": {
+        "name":"volcanoa-skill-256"
+      }
+    },
+    {
+      "trans": [ 117.6678, 16.8151, 122.4807], // behind rock pillars on path after dax hang section, lava side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 117.6678, 16.8151, 122.4807, 10],
+      "lump": {
+        "name":"volcanoa-skill-257"
+      }
+    },
+    {
+      "trans": [ 136.4920, 52.8275, 102.2977], // up on outer rock wall after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 136.4920, 52.8275, 102.2977, 10],
+      "lump": {
+        "name":"volcanoa-skill-258",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 153.5593, 65.5505, 147.9050], // up on outer rock wall after dax hang section (IJ wall starts here but you can't grab it, I think) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 153.5593, 65.5505, 147.9050, 10],
+      "lump": {
+        "name":"volcanoa-skill-259"
+      }
+    },
+    {
+      "trans": [ 141.5642, 46.5200, 147.9693], // on outer rock wall after dax hang section, drop from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 141.5642, 46.5200, 147.9693, 10],
+      "lump": {
+        "name":"volcanoa-skill-260"
+      }
+    },
+    {
+      "trans": [ 148.8878, 14.4271, 177.7559], // behind big protruding rock on outer rock wall, after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 148.8878, 14.4271, 177.7559, 10],
+      "lump": {
+        "name":"volcanoa-skill-261"
+      }
+    },
+    {
+      "trans": [ 137.3003, 53.0005, 177.7020], // way up on outer rock wall after dax hang section, between protruding rock, follow from ^^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 137.3003, 53.0005, 177.7020, 10],
+      "lump": {
+        "name":"volcanoa-skill-262"
+      }
+    },
+    {
+      "trans": [ 103.3251, 27.4844, 111.2711], // behind pillar lava side on path after daxter hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 103.3251, 27.4844, 111.2711, 10],
+      "lump": {
+        "name":"volcanoa-skill-263",
+        "bob-scale":["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ 101.3509, 4.1166, 169.4080], // behind stalags on path, lava side, after daxter hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 101.3509, 4.1166, 169.4080, 10],
+      "lump": {
+        "name":"volcanoa-skill-264"
+      }
+    },
+    {
+      "trans": [ 54.4355, 22.9973, 239.1273], // behind shrubs at big tree after daxter hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 54.4355, 22.9973, 239.1273, 10],
+      "lump": {
+        "name":"volcanoa-skill-265"
+      }
+    },
+    {
+      "trans": [ 44.0904, 53.4115, 196.0568], // vines on big tree after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 44.0904, 53.4115, 196.0568, 10],
+      "lump": {
+        "name":"volcanoa-skill-266"
+      }
+    },
+    {
+      "trans": [ 31.6463, 56.7033, 203.2243], // vines on big tree after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 31.6463, 56.7033, 203.2243, 10],
+      "lump": {
+        "name":"volcanoa-skill-267"
+      }
+    },
+    {
+      "trans": [ 21.6845, 57.8815, 207.2901], // vines on big tree after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 21.6845, 57.8815, 207.2901, 10],
+      "lump": {
+        "name":"volcanoa-skill-268"
+      }
+    },
+    {
+      "trans": [ 15.6446, 56.2347, 195.7793], // vines on big tree after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 15.6446, 56.2347, 195.7793, 10],
+      "lump": {
+        "name":"volcanoa-skill-269"
+      }
+    },
+    {
+      "trans": [ 19.8664, 53.5317, 188.9853], // vines on big tree after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 19.8664, 53.5317, 188.9853, 10],
+      "lump": {
+        "name":"volcanoa-skill-270"
+      }
+    },
+    {
+      "trans": [ 29.1737, 33.8679, 189.7844], // in roots of big tree after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 29.1737, 33.8679, 189.7844, 10],
+      "lump": {
+        "name":"volcanoa-skill-271"
+      }
+    },
+    {
+      "trans": [ 90.0641, 39.2567, 226.6638], // pillar on outer rock wall near big tree after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 90.0641, 39.2567, 226.6638, 10],
+      "lump": {
+        "name":"volcanoa-skill-272",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 96.7067, 58.8885, 238.1364], // up on outer rock wall near big tree after dax hang section, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 96.7067, 58.8885, 238.1364, 10],
+      "lump": {
+        "name":"volcanoa-skill-273",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 86.3029, 72.2863, 250.9682], // up on outer rock wall near big tree after dax hang section, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 86.3029, 72.2863, 250.9682, 10],
+      "lump": {
+        "name":"volcanoa-skill-274",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 68.2542, 88.8002, 250.9608], // up on outer rock wall near big tree after dax hang section, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 68.2542, 88.8002, 250.9608, 10],
+      "lump": {
+        "name":"volcanoa-skill-275"
+      }
+    },
+    {
+      "trans": [ 58.1630, 69.3619, 253.7789], // up on outer rock wall near big tree after dax hang section, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 58.1630, 69.3619, 253.7789, 10],
+      "lump": {
+        "name":"volcanoa-skill-276"
+      }
+    },
+    {
+      "trans": [ 26.9726, 31.4269, 232.8828], // vine along outer rock wall near big tree after dax hang section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 26.9726, 31.4269, 232.8828, 10],
+      "lump": {
+        "name":"volcanoa-skill-277",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 23.6977, 46.6616, 237.4801], // up on vine along outer rock wall near big tree after dax hang section, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 23.6977, 46.6616, 237.4801, 10],
+      "lump": {
+        "name":"volcanoa-skill-278",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 37.0050, 68.5924, 252.4730], // up on outer rock wall near big tree after dax hang section, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 37.0050, 68.5924, 252.4730, 10],
+      "lump": {
+        "name":"volcanoa-skill-279"
+      }
+    },
+    {
+      "trans": [ -2.2099, 29.4836, 198.1883], // inside crumbling ground by tree after dax hang section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -2.2099, 29.4836, 198.1883, 10],
+      "lump": {
+        "name":"volcanoa-skill-280",
+        "alt-actor": "vol-break-ground-17"
+      }
+    },
+    {
+      "trans": [ -130.4767, 27.7466, 101.8109], // on wooden post in daxter trampoline section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -130.4767, 27.7466, 101.8109, 10],
+      "lump": {
+        "name":"volcanoa-skill-281"
+      }
+    },
+    {
+      "trans": [ -15.2890, 20.1058, 188.3708], // down in crevice on path a bit before dax slide section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -15.2890, 20.1058, 188.3708, 10],
+      "lump": {
+        "name":"volcanoa-skill-282"
+      }
+    },
+    {
+      "trans": [ -69.0729, 6.7442, 129.0841], // behind plant at entrance to dax slide 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -69.0729, 6.7442, 129.0841, 10],
+      "lump": {
+        "name":"volcanoa-skill-283"
+      }
+    },
+    {
+      "trans": [ -75.9401, 26.0209, 122.5501], // on top of wooden frame leading to dax slide 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -75.9401, 26.0209, 122.5501, 10],
+      "lump": {
+        "name":"volcanoa-skill-284"
+      }
+    },
+    {
+      "trans": [ -126.6963, -1.3510, 101.0034], // in corner near last trampolines in dax section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -126.6963, -1.3510, 101.0034, 10],
+      "lump": {
+        "name":"volcanoa-skill-285"
+      }
+    },
+    {
+      "trans": [ -137.9419, 1.7964, 104.7035], // behind rocks near last trampolines in dax section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -137.9419, 1.7964, 104.7035, 10],
+      "lump": {
+        "name":"volcanoa-skill-286"
+      }
+    },
+    {
+      "trans": [ -147.2118, -21.2421, 148.5791], // lol ND along dax trampoline section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -147.2118, -21.2421, 148.5791, 10],
+      "lump": {
+        "name":"volcanoa-skill-287"
+      }
+    },
+    {
+      "trans": [ -131.4117, -21.2886, 154.6049], // proxy hint on pole in dax trampoline section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -131.4117, -21.2886, 154.6049, 10],
+      "lump": {
+        "name":"volcanoa-skill-288"
+      }
+    },
+    {
+      "trans": [ -113.9764, 44.7098, 165.3780], // way up on top of rock ceiling over dax slide, proxy from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -113.9764, 44.7098, 165.3780, 10],
+      "lump": {
+        "name":"volcanoa-skill-289"
+      }
     }//,
     
   ]
