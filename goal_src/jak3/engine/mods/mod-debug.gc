@@ -56,7 +56,11 @@
 
       (debug-menu-append-item orb-placer-menu (new-dm-submenu "Load from File" orb-load-menu))
       )
-    (debug-menu-append-item orb-placer-menu (new-dm-func "Clear All" #f orb-placer-clear!))
+    (let ((orb-clear-menu (new 'debug 'debug-menu ctx "Clear All")))
+      (debug-menu-append-item orb-clear-menu (new-dm-func "Are you sure?" #f orb-placer-clear!))
+
+      (debug-menu-append-item orb-placer-menu (new-dm-submenu "Clear All" orb-clear-menu))
+      )
     
     (new-dm-submenu "Orb Placer" orb-placer-menu)
     )

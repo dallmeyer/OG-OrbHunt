@@ -622,7 +622,7 @@
                 (rel-x-scale (-> *video-params* relative-x-scale))
                 (bigmap-scale (/ (the float (- (-> this y1) (-> this y0))) 416.0)) ;; ydelta/416
                 )
-            (vector-z-quaternion! target-rot (-> *target* control quat))
+            (when *target* (vector-z-quaternion! target-rot (-> *target* control quat)))
             (vector-xz-normalize! target-rot -1.0)
             (set! (-> target-rot y) 0.0)
             (set! (-> target-rot w) 0.0)

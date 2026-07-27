@@ -646,8 +646,8 @@
 (defun umax ((a uint) (b uint))
   (max (the int a) (the int b)))
 
-(define-extern *level-orb-total-counts-fixed* (array uint8))
-(define-extern *level-orb-total-counts* (array uint8))
+(define-extern *level-orb-total-counts-fixed* (array uint16))
+(define-extern *level-orb-total-counts* (array uint16))
 (define-extern *level-sort-remap* (array uint8))
 (define-extern *level-id-names* (array string))
 (define-extern *level-cell-tasks* (array game-task))

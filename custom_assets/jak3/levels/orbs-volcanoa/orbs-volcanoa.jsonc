@@ -3134,6 +3134,157 @@
       "lump": {
         "name":"volcanoa-skill-302"
       }
+    },
+    {
+      "trans": [ -88.3726, 28.5958, 63.5717], // behind rock pillar against outer wall on path to trio of geyserrock 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -88.3726, 28.5958, 63.5717, 10],
+      "lump": {
+        "name":"volcanoa-skill-303"
+      }
+    },
+    {
+      "trans": [ -93.5523, 41.6219, 66.6141], // up from ^, on outer rock wall on path before trio of geyserrock
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -93.5523, 41.6219, 66.6141, 10],
+      "lump": {
+        "name":"volcanoa-skill-304",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -103.7706, 55.8766, 54.5721], // abah from ^, on outer rock wall on path before trio of geyserrock 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -103.7706, 55.8766, 54.5721, 10],
+      "lump": {
+        "name":"volcanoa-skill-305"
+      }
+    },
+    {
+      "trans": [ -110.1357, 63.2735, 77.5849], // up from ^ on outer rock wall by end of dax trampoline section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -110.1357, 63.2735, 77.5849, 10],
+      "lump": {
+        "name":"volcanoa-skill-306"
+      }
+    },
+    {
+      "trans": [ -129.8461, 63.0297, 79.0372], // follow from ^, on outer rock wall by end of dax trampoline section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -129.8461, 63.0297, 79.0372, 10],
+      "lump": {
+        "name":"volcanoa-skill-307"
+      }
+    },
+    {
+      "trans": [ -149.7951, 70.3449, 78.7188], // follow from ^, on outer rock wall by end of dax trampoline section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -149.7951, 70.3449, 78.7188, 10],
+      "lump": {
+        "name":"volcanoa-skill-308"
+      }
+    },
+    {
+      "trans": [ -156.4156, 55.0209, 90.1229], // follow from ^, on outer rock wall by end of dax trampoline section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -156.4156, 55.0209, 90.1229, 10],
+      "lump": {
+        "name":"volcanoa-skill-309"
+      }
+    },
+    {
+      "trans": [ -104.2056, 45.2614, 129.8548], // on stone beam overhead start of dax slide, follow from top of rock ceiling 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -104.2056, 45.2614, 129.8548, 10],
+      "lump": {
+        "name":"volcanoa-skill-310"
+      }
+    },
+    {
+      "trans": [ -113.1724, 14.3957, 136.4111], // down in crevice of rock wall next to start of dax slide, drop down from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -113.1724, 14.3957, 136.4111, 10],
+      "lump": {
+        "name":"volcanoa-skill-311"
+      }
+    },
+    {
+      "trans": [ -63.2352, 36.0271, 190.3554], // on rock roof above dax slide, follow from other orbs on roof 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -63.2352, 36.0271, 190.3554, 10],
+      "lump": {
+        "name":"volcanoa-skill-312"
+      }
+    },
+    {
+      "trans": [ -51.6526, 35.3676, 213.6995], // on rock roof above dax slide, follow from ^ (tough extended+concussor) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -51.6526, 35.3676, 213.6995, 10],
+      "lump": {
+        "name":"volcanoa-skill-313"
+      }
+    },
+    {
+      "trans": [ -38.3795, 12.1749, 277.7875], // on stone beam overhead in dax slide, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -38.3795, 12.1749, 277.7875, 10],
+      "lump": {
+        "name":"volcanoa-skill-314"
+      }
+    },
+    {
+      "trans": [ -40.1269, 0.3739, 236.9577], // on rocks in middle of complex of dax slide, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -40.1269, 0.3739, 236.9577, 10],
+      "lump": {
+        "name":"volcanoa-skill-315"
+      }
+    },
+    {
+      "trans": [ -55.9581, 54.9173, 131.8149], // on top of rock wall above entrance to dax slide, follow from other rock roof orbs 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -55.9581, 54.9173, 131.8149, 10],
+      "lump": {
+        "name":"volcanoa-skill-316"
+      }
+    },
+    {
+      "trans": [ -41.7794, 64.6695, 112.0793], // on inner rock wall by start of IJ, above entrance to dax slide, extended over from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -41.7794, 64.6695, 112.0793, 10],
+      "lump": {
+        "name":"volcanoa-skill-317"
+      }
     }//,
     
   ]

@@ -37,7 +37,9 @@
   (dotimes (s3-0 (-> *level* length))
     (let ((v1-7 (-> *level* level s3-0)))
       (cond
-        ((and (= (-> v1-7 status) 'active) (nonzero? (-> v1-7 bsp collide-hash)))
+        ((and (= (-> v1-7 status) 'active)
+              (not (logtest? (-> v1-7 info level-flags) (level-flags orb-hunt))) ;; lqc2 / collide hash mips2c code hates my custom levels :(
+              (nonzero? (-> v1-7 bsp collide-hash)))
           ;; (format #t "~%collide hash for ~A~%~%" (-> v1-7 name))
           ;; (inspect (-> v1-7 bsp collide-hash))
           (arg0 (-> v1-7 bsp collide-hash) 0 *collide-list* arg2)
