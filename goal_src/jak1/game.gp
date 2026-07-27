@@ -1677,6 +1677,8 @@
 (build-custom-level "energbay")
 (custom-level-cgo "ENB.DGO" "energbay/energbay.gd")
 
+(build-actor "on-off-block" :gen-mesh #t)
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Game Engine Code
 ;;;;;;;;;;;;;;;;;;;;;
@@ -2171,6 +2173,9 @@
  "mods/mod-custom-code.gc"
  "mods/mod-debug.gc"
 )
+
+(goal-src "levels/test-zone/test-zone-obs.gc" "process-drawable")
+(goal-src "levels/common/on-off-block.gc" "process-drawable" "basebutton")
 
 ;; TFL note: Custom part and obs file for the levels
 

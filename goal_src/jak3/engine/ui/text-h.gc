@@ -1613,11 +1613,32 @@
   (trick-board-lightjak-freeze #x136b)
   (trick-board-lightjak-shield #x136c)
 
+  ;; mod text
+  (pad-triangle #x2000)
+  (pad-circle #x2001)
+  (pad-x #x2002)
+  (pad-square #x2003)
+
+  ;; destination names text
+  (ctyport-name #x10000)
+  (desert-name #x10001)
+  (volcano-name #x10002)
+  (temple-name-entry #x10003)
+  (temple-name-oracle #x10004)
+  (temple-name-ruins #x10005)
+  (vinroom-name #x10006)
+
+  ;; menu stuff text
+  (select-destination #x100000)
+  (no-menu-data #x100001)
+  (next-page #x100002)
+  (previous-page #x100003)
+  
   ;; orb hunt additions
-  (press-triangle-for-reward #x2000)
-  (progress-orb-counts       #x2001)
-  (progress-missions-gold-icon #x2002)
-  (press-to-return #x2003)
+  (press-triangle-for-reward #x3000)
+  (progress-orb-counts       #x3001)
+  (progress-missions-gold-icon #x3002)
+  (press-to-return #x3003)
 
   )
 ;; ---text-id
