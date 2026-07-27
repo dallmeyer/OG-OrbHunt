@@ -1078,6 +1078,9 @@
                   (and (>= 81920.0 (vector-vector-distance (-> self root trans) (-> *target* control trans)))
                        (not (logtest? (focus-status teleporting) (-> *target* focus-status)))
                        )
+                  ;; added orbhunt - only slide in volcano when indax
+                  (or (not (name= (-> self name) 'slide-control-3))
+                      (logtest? (focus-status indax) (-> *target* focus-status)))
                   )
              (< 0.0
                 (vector-dot
