@@ -3386,6 +3386,181 @@
       "lump": {
         "name":"volcanoa-skill-327"
       }
+    },
+    {
+      "trans": [ 99.8265, 17.9209, 185.3574], // inside flying metal head by first geyserrock
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 99.8265, 17.9209, 185.3574, 10],
+      "lump": {
+        "name":"volcanoa-skill-328",
+        "alt-actor": "flamer-lava-2"
+      }
+    },
+    {
+      "trans": [ -115.4635, 296.8378, 136.8416], // up on outer wall IJ, yolo around counterclockwise from other ones 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -115.4635, 296.8378, 136.8416, 10],
+      "lump": {
+        "name":"volcanoa-skill-329"
+      }
+    },
+    {
+      "trans": [ -68.7199, 270.2391, 231.7211], // up on outer wall IJ, counterclockwise from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -68.7199, 270.2391, 231.7211, 10],
+      "lump": {
+        "name":"volcanoa-skill-330"
+      }
+    },
+    {
+      "trans": [ 148.6453, 130.9650, 197.3600], // on outer wall where it meets IJ wall, yolo from top of inner wall IJ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 148.6453, 130.9650, 197.3600, 10],
+      "lump": {
+        "name":"volcanoa-skill-331"
+      }
+    },
+    {
+      "trans": [ 106.1468, 272.1737, 186.9980], // up on outer wall IJ, up from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 106.1468, 272.1737, 186.9980, 10],
+      "lump": {
+        "name":"volcanoa-skill-332"
+      }
+    },
+    {
+      "trans": [ 101.6268, 246.9385, 105.6821], // up on outer wall IJ, counterclockwise from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 101.6268, 246.9385, 105.6821, 10],
+      "lump": {
+        "name":"volcanoa-skill-333"
+      }
+    },
+    {
+      "trans": [ 127.5709, 238.8991, -2.0111], // up on outer wall IJ, yolo from inner wall IJ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 127.5709, 238.8991, -2.0111, 10],
+      "lump": {
+        "name":"volcanoa-skill-334"
+      }
+    },
+    {
+      "trans": [ 74.9267, 191.0837, -92.0188], // where outer wall meets IJ, yolo from inner wall IJ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 74.9267, 191.0837, -92.0188, 10],
+      "lump": {
+        "name":"volcanoa-skill-335"
+      }
+    },
+    {
+      "trans": [ 59.6702, 242.6817, -144.5338], // up on outer wall IJ, up from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 59.6702, 242.6817, -144.5338, 10],
+      "lump": {
+        "name":"volcanoa-skill-336"
+      }
+    },
+    {
+      "trans": [ -96.9141, 34.1694, -7.7711], // behind rock pillar on inner wall next to trio of geyserrock
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -96.9141, 34.1694, -7.7711, 10],
+      "lump": {
+        "name":"volcanoa-skill-337",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -88.3931, 54.1029, -7.1525], // up on inner wall next to trio of geyserrock, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -88.3931, 54.1029, -7.1525, 10],
+      "lump": {
+        "name":"volcanoa-skill-338",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -85.5964, 64.4861, -18.0600], // up on inner wall next to trio of geyserrock, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -85.5964, 64.4861, -18.0600, 10],
+      "lump": {
+        "name":"volcanoa-skill-339"
+      }
+    },
+    {
+      "trans": [ -78.3429, 75.4282, -10.3879], // IJ starting point on inner wall next to trio of geyserrock, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -78.3429, 75.4282, -10.3879, 10],
+      "lump": {
+        "name":"volcanoa-skill-340"
+      }
+    },
+    {
+      "trans": [ -69.5700, 25.7541, 45.3786], // inner rock wall over gap over lava on path before trio of geyserrock 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -69.5700, 25.7541, 45.3786, 10],
+      "lump": {
+        "name":"volcanoa-skill-341",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -64.5353, 48.6999, 40.1813], // up on inner rock wall on path before trio of geyserrock, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -64.5353, 48.6999, 40.1813, 10],
+      "lump": {
+        "name":"volcanoa-skill-342"
+      }
+    },
+    {
+      "trans": [ -57.8989, 53.3836, 49.6595], // IJ starting point on inner wall on path before trio of geyserrock, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -57.8989, 53.3836, 49.6595, 10],
+      "lump": {
+        "name":"volcanoa-skill-343"
+      }
+    },
+    {
+      "trans": [ -57.8989, 53.3836, 49.6595], // inside mantis at trio of geyserrock 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -57.8989, 53.3836, 49.6595, 10],
+      "lump": {
+        "name":"volcanoa-skill-344",
+        "alt-actor": "mantis-117"
+      }
     }//,
     
   ]
