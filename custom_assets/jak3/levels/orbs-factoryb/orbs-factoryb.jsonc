@@ -907,6 +907,88 @@
         "name":"factoryb-skill-80"
       }
     },
+    {
+      "trans": [ 453.5269, 332.1916, 153.3674], // on ledge above doorway facing east on NE turret sphere 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 453.5269, 332.1916, 153.3674, 10],
+      "lump": {
+        "name":"factoryb-skill-81"
+      }
+    },
+    {
+      "trans": [ 428.1457, 387.8344, 171.0242], // inside gun turret on NE corner
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 428.1457, 387.8344, 171.0242, 10],
+      "lump": {
+        "name":"factoryb-skill-82",
+        "alt-actor": "fac-gun-tower-turret-1"
+      }
+    },
+    {
+      "trans": [ 322.1080, 355.3810, 204.2861], // lamp on center (NE) building, yolo from target in NE corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 322.1080, 355.3810, 204.2861, 10],
+      "lump": {
+        "name":"factoryb-skill-83"
+      }
+    },
+    {
+      "trans": [ 284.2142, 378.1027, 210.8923], // lamp on center (NE) building, yolo from target on west side mid level
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 284.2142, 378.1027, 210.8923, 10],
+      "lump": {
+        "name":"factoryb-skill-84"
+      }
+    },
+    {
+      "trans": [ 315.5180, 378.1493, 173.5056], // lamp on center (NE) building, yolo from target in NE corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 315.5180, 378.1493, 173.5056, 10],
+      "lump": {
+        "name":"factoryb-skill-85"
+      }
+    },
+    {
+      "trans": [ 229.9108, 413.3927, 310.4883], // target above doorway center building west side facing south 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 229.9108, 413.3927, 310.4883, 10],
+      "lump": {
+        "name":"factoryb-skill-86"
+      }
+    },
+    {
+      "trans": [ 306.9075, 334.7177, 261.4955], // inside target in middle
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 306.9075, 334.7177, 261.4955, 10],
+      "lump": {
+        "name":"factoryb-skill-87",
+        "alt-actor": "fac-target-21"
+      }
+    },
+    {
+      "trans": [ 182.4062, 389.3159, 394.4723], // inside top gun turret on SW turret sphere 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 182.4062, 389.3159, 394.4723, 10],
+      "lump": {
+        "name":"factoryb-skill-88"
+      }
+    },
 
     // HOVER
     {
@@ -950,6 +1032,17 @@
       "bsphere": [ 197.6215, 421.2240, 262.7589, 10],
       "lump": {
         "name":"factoryb-skill-hover-04",
+        "pickup-amount": ["float", 3.0] // hover
+      }
+    },
+    {
+      "trans": [ 316.5690, 422.5898, 272.5519], // up on target light in middle near ceiling 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 316.5690, 422.5898, 272.5519, 10],
+      "lump": {
+        "name":"factoryb-skill-hover-05",
         "pickup-amount": ["float", 3.0] // hover
       }
     }//,

@@ -350,7 +350,7 @@
                                      :bullseye-joint 9
                                      :notice-distance (meters 50)
                                      :notice-distance-delta (meters 10)
-                                     :proximity-notice-distance (meters 150)
+                                     :proximity-notice-distance (meters 50) ;; 150)
                                      :default-hit-points 1.0
                                      :gnd-collide-with (collide-spec backgnd)
                                      :overlaps-others-collide-with-filter (collide-spec jak bot player-list)
@@ -522,6 +522,8 @@
   (none)
   )
 
+;; (declare-type fturret-shot projectile)
+;; (declare-type warf-projectile projectile)
 ;; WARN: Return type mismatch symbol vs none.
 (defmethod fire-shot ((this fac-gunturret) (arg0 symbol))
   (let ((s0-0
@@ -607,10 +609,11 @@
       (until (time-elapsed? (-> self last-hit-time) (seconds 2))
         (suspend)
         )
-      (when (task-node-closed? (game-task-node factory-sky-battle-wave2))
-        (cleanup-for-death self)
-        (go-virtual die-fast)
-        )
+      ;; orb hunt - no die from task
+      ;; (when (task-node-closed? (game-task-node factory-sky-battle-wave2))
+      ;;   (cleanup-for-death self)
+      ;;   (go-virtual die-fast)
+      ;;   )
       (check-los self)
       (when (-> self los-clear)
         (new 'stack-no-clear 'vector)
@@ -976,7 +979,7 @@
   (set-time! (-> this snd-cmd-time))
   (quaternion->matrix (-> this init-mat) (-> this root quat))
   (set! (-> this activate-distance) (res-lump-float (-> this entity) 'distance))
-  (set! (-> this activate-distance) 163840.0)
+  (set! (-> this activate-distance) (meters 20)) ;; 163840.0)
   0
   (none)
   )

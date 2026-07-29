@@ -2026,7 +2026,8 @@
         
       ;; jak 2 code
       (cond
-        ((not (skill-alt-actor-check? self #f))
+        ((and (not (skill-alt-actor-check? self #f))
+              (not (logtest? (-> self entity extra perm status) (entity-perm-status complete)))) ;; not in ghost mode
           ;; make orbs invis if they can't be collected yet due to alt-actor
           (logior! (-> self draw status) (draw-control-status no-draw-bounds))
           ;; set state-time so we can cooldown based on this

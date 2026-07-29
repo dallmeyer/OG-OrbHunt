@@ -19266,7 +19266,7 @@
                    :callback-list '()
                    :borrow (new 'static 'level-borrow-info
                      :alias #f
-                     :borrow-size (new 'static 'array uint16 5 #x285 #x8fc #x0 #x0 #x0)
+                     :borrow-size (new 'static 'array uint16 5 #x2f #x6ff #x0 #x0 #x0)
                      :borrow-info (new 'static 'array object 5 '(orbs-lfacrm2 display) '(lfacrm2 display) #f #f #f)
                      )
                    :bottom-height (meters -150)
@@ -19590,7 +19590,7 @@
                        :vehicle-type #x8
                        :want-count 2
                        :want (new 'static 'inline-array level-buffer-state-small 2
-                         (new 'static 'level-buffer-state-small :name 'factorya :display? 'display)
+                         (new 'static 'level-buffer-state-small :name 'factorya :display? #f)
                          (new 'static 'level-buffer-state-small :name 'factoryb :display? 'display)
                          )
                        :want-sound (new 'static 'array symbol 3 'factory1 'factory2 'factory3)
@@ -19633,10 +19633,10 @@
                    :callback-list '((35 . factoryb-activate) (6 . *factoryb-water-texture-anim-array*))
                    :borrow (new 'static 'level-borrow-info
                      :alias #f
-                     :borrow-size (new 'static 'array uint16 5 #xc4e #x100 #x0 #x0 #x0)
-                     :borrow-info (new 'static 'array object 5 '(lfaccity display) '(orbs-factoryb display) #f #f #f)
+                     :borrow-size (new 'static 'array uint16 5 #xc4e #x100 #x285 #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(lfaccity display) '(orbs-factoryb display) '(lfactory display) #f #f)
                      )
-                   :bottom-height (meters -150)
+                   :bottom-height 866392.9375 ;; (meters -150)
                    :fog-height (meters 80)
                    :fog-mult 1.0
                    :mood-range (new 'static 'mood-range :max-cloud 1.0 :min-fog 0.5 :max-fog 1.0)
@@ -20009,7 +20009,7 @@
       )
     :borrow (new 'static 'level-borrow-info
       :alias #f
-      :borrow-size (new 'static 'array uint16 5 #xc4e #x100 #x0 #x0 #x0)
+      :borrow-size (new 'static 'array uint16 5 #xc4e #xff #x0 #x0 #x0)
       :borrow-info (new 'static 'array object 5 '(lfaccity display) '(orbs-factoryc display)  #f #f #f)
       )
     :bottom-height (meters -150)

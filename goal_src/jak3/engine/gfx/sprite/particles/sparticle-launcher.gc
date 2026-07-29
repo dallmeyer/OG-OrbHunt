@@ -1264,7 +1264,7 @@
               (label cfg-100)
               (b! #t cfg-102 :delay (nop!))
               (label cfg-101)
-              (format 0 "spawn called for non-sparticle-launcher~%")
+              (dbg-format 0 "spawn called for non-sparticle-launcher~%")
               )
             )
           (label cfg-102)
