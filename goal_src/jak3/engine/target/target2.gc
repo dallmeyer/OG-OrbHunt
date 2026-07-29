@@ -1919,6 +1919,19 @@
     )
   :trans (behavior ()
     (set-time! (-> self control time-of-last-debug-float))
+    ;; orbhunt - faster move with l3 held
+    (cond
+      ((and (cpad-hold? (-> self control cpad number) l3) (not *pause-lock*))
+        ;; faster
+        (set! (-> self control mod-surface target-speed) 163840.0)
+        (set! (-> self control mod-surface target-speed) 163840.0)
+        )
+      (else
+        ;; original
+        (set! (-> self control mod-surface target-speed) 81920.0)
+        (set! (-> self control mod-surface target-speed) 81920.0)
+        )
+      )
     (cond
       ;; og:preserve-this no debug hover when paused.
       ((and (cpad-hold? (-> self control cpad number) r2) (not *pause-lock*))
