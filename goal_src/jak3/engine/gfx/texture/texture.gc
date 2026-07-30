@@ -1978,6 +1978,7 @@
       (when (not (-> s5-0 page))
         (let ((s4-0 (-> *texture-pool* allocate-func)))
           (set! (-> *texture-pool* allocate-func) alloc-func)
+          ;; (format 0 "doing loado from texture-page-login~%")
           (let* ((s3-0 (make-file-name (file-kind tpage) (the-as string (* (-> id page) 8)) 0 #f))
                  (s2-0 (the-as texture-page (loado s3-0 heap)))
                  )

@@ -138,7 +138,7 @@ These path-controls are typically allocated on a process heap."
           )
         )
       ;; orb hunt - path overrides
-      (when proc
+      (when (and proc (nonzero? (the-as path-control s2-0)))
         (case (-> proc name) :comp name=
           (('sew-floating-plat-1)
             (set-vector-meters! (-> (the-as path-control s2-0) curve cverts 0) 274.6139 -108.9415 -12.8453)

@@ -2450,8 +2450,8 @@
 
 (defmethod is-object-visible? ((this level) (arg0 int) (actor entity))
   "Is drawable arg0 visible? Note that this will return #f if the visibility data is not loaded."
-  ;; hack to force visibility of stuff moved (rather than update visibility data)
   (case (-> (the entity-actor actor) etype symbol)
+    ;; hack to force visibility of stuff moved (rather than update visibility data)
     (('skill 'crate 'skill-crate 'skill-ghost 'fuel-cell 'launcher 'money 'eco
       'market-crate 'wascity-market-crate 'wascity-market-sack-a 'market-sack-a 'market-basket-a
       'wascity-market-basket-a 'wascity-market-sack-b 'market-sack-b 'market-basket-b 'wascity-market-basket-b 'wascity-cactus
@@ -2464,7 +2464,11 @@
       'yakow-dummy 'farm-marrow 'farm-beetree 'farm-cabbage 'farm-small-cabbage 'farm-chilirots
       'torn-npc 'onin-npc 'ashelin-npc 'kleever-npc 'damus-npc 'erol-npc 'vin-npc 'pecker-npc 'seem-npc 'samos-npc 'keira-npc 
       'veger-npc 'jinx-npc 'sig-npc 'kid-npc)
-     (return #t)))
+     (return #t))
+    (('gun-tower-base)
+     ;; never spawn these
+     (return #f))
+    )
 
   ;; check the vis bits!
   (let* (;; lwu v1, 388(a0)
