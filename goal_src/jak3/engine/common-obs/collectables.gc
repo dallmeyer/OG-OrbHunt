@@ -1982,12 +1982,12 @@
           ;; TODO
           )
         (else
-          (format 0 "else increment by 1~%")
           (increment-skill-per-level (-> self entity) 1)
           )
         ))
     (cond
-      ((and (-> self entity) (= (ppointer->process (-> self parent)) *entity-pool*))
+      ((or (and (-> self entity) (= (ppointer->process (-> self parent)) *entity-pool*)) ;; orb with entity, go to ghost wait
+           (name= (-> self name) 'orba)) ;; let collected orb-placer orbs remain for further editing
         ;; open orb - dont mark dead, just make it uncollectable
         (process-entity-status! self (entity-perm-status bit-15) #f)
         ;; (process-entity-status! self (entity-perm-status dead) #t)

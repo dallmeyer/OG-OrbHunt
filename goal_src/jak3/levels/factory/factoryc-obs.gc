@@ -714,6 +714,15 @@
 
 (defbehavior fac-robopod-base-handler fac-robopod ((arg0 process) (arg1 int) (arg2 symbol) (arg3 event-message-block))
   (case arg2
+    (('attack)
+     (let ((v1-8 (the-as attack-info (-> arg3 param 1))))
+      (when (or (= (-> v1-8 mode) 'dark-smack)
+                (= (-> v1-8 mode) 'bomb))
+        (go-virtual die)
+        #t
+        )
+      )
+     )
     (('impact-impulse)
      (let ((v1-1 (the-as object (-> arg3 param 0))))
        (when (< 40960.0 (-> (the-as rigid-body-impact v1-1) impulse))
