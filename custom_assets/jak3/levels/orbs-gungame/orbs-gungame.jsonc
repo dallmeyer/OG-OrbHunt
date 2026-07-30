@@ -56,16 +56,27 @@
         "name":"wascitya-tape-1"
       }
     },
-    // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
-    // },
+    
+    {
+      "trans": [ 390.1036, 23.1345, 1251.3376], // up in corner of lobby, behind beam on ceiling 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 390.1036, 23.1345, 1251.3376, 10],
+      "lump": {
+        "name":"gungame-skill-01"
+      }
+    },
+    {
+      "trans": [ 365.5348, 21.2056, 1272.1596], // on top of lamp in lobby 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 365.5348, 21.2056, 1272.1596, 10],
+      "lump": {
+        "name":"gungame-skill-02"
+      }
+    },
     
     {
       "trans": [  354.1975, 12.2186, 1254.1358], // 

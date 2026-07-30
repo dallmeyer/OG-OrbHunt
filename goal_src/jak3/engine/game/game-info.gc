@@ -8,7 +8,7 @@
 
 (define *orb-count-updated?* #f)
 (define-extern increment-skill-per-level-side-mish (function game-task int none))
-(define-extern increment-skill-per-level (function entity-actor none))
+(define-extern increment-skill-per-level (function entity-actor int none))
 
 (define-extern stop (function symbol int))
 (define-extern start (function symbol continue-point target))

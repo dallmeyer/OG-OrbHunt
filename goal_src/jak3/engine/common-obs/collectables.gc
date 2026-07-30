@@ -1962,20 +1962,32 @@
              )
       (kill-particles (-> self part))
       )
-    
     ;; increment skill-per-level
     (let ((par (ppointer->process (-> self parent))))
+      (format 0 "parent check ~A~%" (-> par type symbol))
       (case (-> par type symbol) 
         (('skill-crate 'market-crate 'wascity-market-crate 'crate 'wascity-market-sack-a 'market-sack-a 'market-basket-a 'wascity-market-basket-a 'wascity-market-sack-b 'market-sack-b 'market-basket-b 'wascity-market-basket-b 'urn-a 'urn-b 'urn-c)
-          (increment-skill-per-level (-> (the process-drawable par) entity))
+          (format 0 "parent increment by ~D~%" (the int (-> self pickup-amount)))
+          (increment-skill-per-level (-> (the process-drawable par) entity) (the int (-> self pickup-amount)))
+          )
+        (('gungame-mgr-1 'gungame-mgr-2 'gungame-mgr-3 'gungame-mgr-4 'gungame-mgr-rnc)
+          (format 0 "gungame increment by ~D~%" (the int (-> self pickup-amount)))
+          (+! (-> *game-info* skill-per-level 19) (the int (-> self pickup-amount)))
+          (true! *orb-count-updated?*)
+          )
+        (('task-manager-ctywide-bbush-get-to)
+          ;; TODO
+          )
+        (('task-manager-desert-bbush-get-to)
+          ;; TODO
           )
         (else
-          (increment-skill-per-level (-> self entity))
+          (format 0 "else increment by 1~%")
+          (increment-skill-per-level (-> self entity) 1)
           )
         ))
-
     (cond
-      ((= (-> (ppointer->process (-> self parent)) type symbol) 'process-tree)
+      ((and (-> self entity) (= (ppointer->process (-> self parent)) *entity-pool*))
         ;; open orb - dont mark dead, just make it uncollectable
         (process-entity-status! self (entity-perm-status bit-15) #f)
         ;; (process-entity-status! self (entity-perm-status dead) #t)
@@ -1986,6 +1998,7 @@
         ;; crate/cache/plantboss/gnawer
         (process-entity-status! self (entity-perm-status bit-15) #f)
         (process-entity-status! self (entity-perm-status dead) #t)
+        (go-virtual die)
         )
       )
 

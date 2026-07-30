@@ -760,7 +760,7 @@
             (pickup-type skill)
             (* (the float (-> self egg-amount)) (-> *FACT-bank* super-skill-inc))
             #t
-            *entity-pool*
+            self
             gp-0
             )
           )
