@@ -461,6 +461,119 @@
         "name":"factoryc-skill-40",
         "alt-actor": "fac-robopod-2"
       }
+    },
+    {
+      "trans": [ 22.1475, 444.8993, -14.1615], // inside roboguard on path on west (mid/south) side
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 22.1475, 444.8993, -14.1615, 10],
+      "lump": {
+        "name":"factoryc-skill-41",
+        "alt-actor": "roboguard-26"
+      }
+    },
+    {
+      "trans": [ 172.2248, 457.4342, -169.6070], // above pipes by island robopod on north path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 172.2248, 457.4342, -169.6070, 10],
+      "lump": {
+        "name":"factoryc-skill-42"
+      }
+    },
+    {
+      "trans": [ 70.3238, 418.8334, -169.2610], // down on grate standpoint near deathplane in NW path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 70.3238, 418.8334, -169.2610, 10],
+      "lump": {
+        "name":"factoryc-skill-43"
+      }
+    },
+    {
+      "trans": [ 23.4625, 453.8965, -208.8522], // way up by light in ceiling in NW by moving plats 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 23.4625, 453.8965, -208.8522, 10],
+      "lump": {
+        "name":"factoryc-skill-44"
+      }
+    },
+    {
+      "trans": [ 16.0748, 450.4665, -66.3805], // secret ledge below lever on west mid path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 16.0748, 450.4665, -66.3805, 10],
+      "lump": {
+        "name":"factoryc-skill-45"
+      }
+    },
+    {
+      "trans": [ 4.7583, 464.7958, -65.8010], // lamp in corner on west mid path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4.7583, 464.7958, -65.8010, 10],
+      "lump": {
+        "name":"factoryc-skill-46",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 2.0267, 475.7173, -76.5305], // standpoint on electric thing above dax hang section on west (north/mid) path, abah from^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2.0267, 475.7173, -76.5305, 10],
+      "lump": {
+        "name":"factoryc-skill-47"
+      }
+    },
+    {
+      "trans": [ 2.8249, 460.6734, -117.4933], // small ledge over void by dax hang section on west (north/mid) path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2.8249, 460.6734, -117.4933, 10],
+      "lump": {
+        "name":"factoryc-skill-48",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 2.5648, 475.7102, -106.7539], // standpoint on electric thing above dax hang section on west (north/mid) path, abah from^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 2.5648, 475.7102, -106.7539, 10],
+      "lump": {
+        "name":"factoryc-skill-49"
+      }
+    },
+    {
+      "trans": [ 68.2190, 440.1374, -100.4077], // down in crevice standpoint on left by dax hang section west path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 68.2190, 440.1374, -100.4077, 10],
+      "lump": {
+        "name":"factoryc-skill-50"
+      }
+    },
+    {
+      "trans": [ 27.0971, 458.9213, -52.9433], // in slot where rotating fan would go on west path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 27.0971, 458.9213, -52.9433, 10],
+      "lump": {
+        "name":"factoryc-skill-51"
+      }
     }//,
     
   ]

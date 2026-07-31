@@ -761,7 +761,9 @@
                 ;; print
                 (let ((line-text 
                         (cond
-                          ((and (zero? collected-count) (nonzero? total-count)) "???")
+                          ((and (zero? collected-count) ;; (nonzero? total-count)
+                                (if *debug-segment* (not (cpad-hold? 0 l3)) #t)) ;; in debug, hold L3 to see names
+                            "???")
                           ((zero? task-info-idx) "Power Cells")
                           ((= 1 task-info-idx) "Secret Tapes")
                           (else (-> *level-id-names* remap-idx)))))
