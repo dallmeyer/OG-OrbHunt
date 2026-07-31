@@ -1355,6 +1355,13 @@
     (('crate-976)
       (set-vector-meters! (-> arg0 extra trans) 139.4401 -30.6148 49.7607 ))
 
+    ;; FACTORYC / LFACCAR
+    (('faccar-1)
+      (set-vector-meters! (-> arg0 extra trans) 120.11  430.02  -19.50)
+      (set-vector-meters! (res-lump-struct arg0 'spawn-trans vector) 120.11  430.02  -19.50)
+      (quaternion-set! (res-lump-struct arg0 'spawn-quat quaternion) 0.0 0.0 0.0 1.0)
+      )
+
     )
   (none))
 
@@ -2312,6 +2319,8 @@
   (skill-follow-y-offset "volcanoa-skill-344" "mantis-117" (meters 0.7))
 
   (skill-follow-y-offset "factoryc-skill-41" "roboguard-26" (meters 0.7))
+  (skill-follow-y-offset "factoryc-skill-63" "spydroid-orig-36" (meters 0.7))
+  (skill-follow-y-offset "factoryc-skill-64" "kg-grunt-31" (meters 0.7))
 
   (skill-follow-y-offset "sewh-skill-08" "sew-move-plat-2" (meters -4.6))
   (skill-follow-offset "sewi-skill-23" "sew-rove-plat-9" (static-vector-meters 0.0 -7.0 5.3))

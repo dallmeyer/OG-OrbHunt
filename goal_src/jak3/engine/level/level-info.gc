@@ -19266,8 +19266,8 @@
                    :callback-list '()
                    :borrow (new 'static 'level-borrow-info
                      :alias #f
-                     :borrow-size (new 'static 'array uint16 5 #x2f #x6ff #x0 #x0 #x0)
-                     :borrow-info (new 'static 'array object 5 '(orbs-lfacrm2 display) '(lfacrm2 display) #f #f #f)
+                     :borrow-size (new 'static 'array uint16 5 #x285 #x6ff #x2f #x0 #x0)
+                     :borrow-info (new 'static 'array object 5 '(lfaccar display) '(lfacrm2 display) '(orbs-lfacrm2 display) #f #f)
                      )
                    :bottom-height (meters -150)
                    :fog-height (meters 80)

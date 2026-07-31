@@ -208,6 +208,15 @@
            )
          )
        )
+      (('attack)
+        (let ((v1-8 (the-as attack-info (-> block param 1))))
+          (when (or (= (-> v1-8 mode) 'dark-smack)
+                    (= (-> v1-8 mode) 'bomb))
+           (go-virtual die)
+           #t
+           )
+         )
+       )
       )
     )
   :code sleep-code
@@ -379,9 +388,10 @@
     (joint-control-channel-group! a0-14 (the-as art-joint-anim (-> this draw art-group data 3)) num-func-identity)
     )
   (transform-post)
-  (if (not (task-node-closed? (game-task-node factory-assault-broke-ultimate-fence)))
+  ;; orbhunt - always spawn fences
+  ;; (if (not (task-node-closed? (game-task-node factory-assault-broke-ultimate-fence)))
       (go (method-of-object this idle))
-      )
+      ;; )
   )
 
 (deftype fac-break-fence-b (fac-break-fence)
@@ -527,9 +537,10 @@
     (joint-control-channel-group! a0-14 (the-as art-joint-anim (-> this draw art-group data 3)) num-func-identity)
     )
   (transform-post)
-  (if (not (task-node-closed? (game-task-node factory-assault-broke-ultimate-fence)))
+  ;; orbhunt - always spawn fences
+  ;; (if (not (task-node-closed? (game-task-node factory-assault-broke-ultimate-fence)))
       (go (method-of-object this idle))
-      )
+      ;; )
   )
 
 (deftype fac-break-fence-c (fac-break-fence)
@@ -602,9 +613,10 @@
     (joint-control-channel-group! a0-14 (the-as art-joint-anim (-> this draw art-group data 3)) num-func-identity)
     )
   (transform-post)
-  (if (not (task-node-closed? (game-task-node factory-assault-broke-ultimate-fence)))
+  ;; orbhunt - always spawn fences
+  ;; (if (not (task-node-closed? (game-task-node factory-assault-broke-ultimate-fence)))
       (go (method-of-object this idle))
-      )
+      ;; )
   )
 
 (defstate idle (fac-break-fence-c)

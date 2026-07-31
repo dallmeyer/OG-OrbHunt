@@ -546,7 +546,7 @@
       }
     },
     {
-      "trans": [ 2.5648, 475.7102, -106.7539], // standpoint on electric thing above dax hang section on west (north/mid) path, abah from^ 
+      "trans": [ 2.5648, 475.7102, -106.7539], // standpoint on electric thing above dax hang section on west (north/mid) path, abah from^
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -556,7 +556,7 @@
       }
     },
     {
-      "trans": [ 68.2190, 440.1374, -100.4077], // down in crevice standpoint on left by dax hang section west path 
+      "trans": [ 68.2190, 440.1374, -100.4077], // down in crevice standpoint on left by dax hang section west path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -566,13 +566,146 @@
       }
     },
     {
-      "trans": [ 27.0971, 458.9213, -52.9433], // in slot where rotating fan would go on west path 
+      "trans": [ 27.0971, 458.9213, -52.9433], // in slot where rotating fan would go on west path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
       "bsphere": [ 27.0971, 458.9213, -52.9433, 10],
       "lump": {
         "name":"factoryc-skill-51"
+      }
+    },
+    {
+      "trans": [ 242.2385, 422.4088, 43.7001], // between dax pipe and wall in first dax section, south (east) path
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 242.2385, 422.4088, 43.7001, 10],
+      "lump": {
+        "name":"factoryc-skill-52"
+      }
+    },
+    {
+      "trans": [ 254.5840, 423.7025, 42.9105], // between dax pipe and wall over void in first dax section, south (east) path
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 254.5840, 423.7025, 42.9105, 10],
+      "lump": {
+        "name":"factoryc-skill-53"
+      }
+    },
+    {
+      "trans": [ 273.5839, 435.9178, 42.9055], // around corner wall near first dax section, southeast path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 273.5839, 435.9178, 42.9055, 10],
+      "lump": {
+        "name":"factoryc-skill-54"
+      }
+    },
+    {
+      "trans": [ 67.8413, 459.1208, -15.2305], // up near ceiling by 3rd breakable grate, west path
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 67.8413, 459.1208, -15.2305, 10],
+      "lump": {
+        "name":"factoryc-skill-55"
+      }
+    },
+    {
+      "trans": [ -4.9731, 455.4920, 8.8580], // between window and wall on west (south) path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -4.9731, 455.4920, 8.8580, 10],
+      "lump": {
+        "name":"factoryc-skill-56"
+      }
+    },
+    {
+      "trans": [ 3.9204, 425.4913, 15.9295], // down near deathplane, window side of conveyor on west (south) path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 3.9204, 425.4913, 15.9295, 10],
+      "lump": {
+        "name":"factoryc-skill-57"
+      }
+    },
+    {
+      "trans": [ 28.1675, 446.0651, 14.9382], // inner corner of wall near conveyor on west (south) path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 28.1675, 446.0651, 14.9382, 10],
+      "lump": {
+        "name":"factoryc-skill-58"
+      }
+    },
+    {
+      "trans": [ -1.2641, 424.2991, 111.9093], // under SW corner of path, extended around 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -1.2641, 424.2991, 111.9093, 10],
+      "lump": {
+        "name":"factoryc-skill-59"
+      }
+    },
+    {
+      "trans": [ 140.4063, 435.9501, 151.3396], // corner over void in south (central) path, jetboard yolo 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 140.4063, 435.9501, 151.3396, 10],
+      "lump": {
+        "name":"factoryc-skill-60",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 144.7824, 455.8406, 153.5316], // up in corner over void in south (central) path, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 144.7824, 455.8406, 153.5316, 10],
+      "lump": {
+        "name":"factoryc-skill-61"
+      }
+    },
+    {
+      "trans": [ 147.0418, 444.5444, 118.7885], // small ledge on central wall along southern path
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 147.0418, 444.5444, 118.7885, 10],
+      "lump": {
+        "name":"factoryc-skill-62"
+      }
+    },
+    {
+      "trans": [ 159.8329, 434.1199, -0.2370], // inside spydroid near exit elevator
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 159.8329, 434.1199, -0.2370, 10],
+      "lump": {
+        "name":"factoryc-skill-63",
+        "alt-actor": "spydroid-orig-36"
+      }
+    },
+    {
+      "trans": [ 319.6340, 424.1222, -68.5599], // inside grunt shortly after first dax section
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 319.6340, 424.1222, -68.5599, 10],
+      "lump": {
+        "name":"factoryc-skill-64",
+        "alt-actor": "kg-grunt-31"
       }
     }//,
     

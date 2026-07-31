@@ -428,8 +428,8 @@ void CDvdDriver::read_from_file(const jak3::Block* block) {
   }
 
   if (selected_entry->offset_in_file != desired_offset) {
-    lg::debug("CDvdDriver jumping in file {}: {} -> {}", fd->name.data,
-              selected_entry->offset_in_file, desired_offset);
+    // lg::debug("CDvdDriver jumping in file {}: {} -> {}", fd->name.data,
+    //           selected_entry->offset_in_file, desired_offset);
     if (fseek(selected_entry->fp, desired_offset, SEEK_SET)) {
       ASSERT_NOT_REACHED_MSG("Failed to fseek");
     }

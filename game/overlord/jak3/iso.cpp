@@ -452,8 +452,8 @@ void IsoQueueVagStream(ISO_VAGCommand* user_cmd) {
       return;
     }
 
-    ovrld_log(LogCategory::VAG_SETUP, "IsoQueueVagStream allocating for {} {}", user_cmd->name,
-              user_cmd->id);
+    // ovrld_log(LogCategory::VAG_SETUP, "IsoQueueVagStream allocating for {} {}", user_cmd->name,
+    //           user_cmd->id);
     // clear active flags
     set_active_a(internal_cmd, 0);
     set_active_b(internal_cmd, 0);
@@ -1122,7 +1122,7 @@ u32 ISOThread() {
       auto* vag_info = g_NewStreamsList.next;
       for (int i = 0; i < 4; i++) {
         if (vag_info->id) {
-          ovrld_log(LogCategory::ISO_QUEUE, "ISO thread: queueing VAG {}", vag_info->name);
+          // ovrld_log(LogCategory::ISO_QUEUE, "ISO thread: queueing VAG {}", vag_info->name);
           QueueVAGStream(vag_info);
         }
         vag_info = vag_info->next;
