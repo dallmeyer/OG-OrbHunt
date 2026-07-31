@@ -370,6 +370,187 @@
         "name":"templed-skill-30"
       }
     },
+    {
+      "trans": [ 4273.4536, 64.0973, 4567.4028], // left side, 2nd pillar from back
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4273.4536, 64.0973, 4567.4028, 10],
+      "lump": {
+        "name":"templed-skill-31"
+      }
+    },
+    {
+      "trans": [ 4304.3666, 54.8145, 4569.0795], // right side, 2nd pillar from back 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4304.3666, 54.8145, 4569.0795, 10],
+      "lump": {
+        "name":"templed-skill-32"
+      }
+    },
+    {
+      "trans": [ 4307.3647, 65.0080, 4537.2246], // right side, 3rd pillar from back 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4307.3647, 65.0080, 4537.2246, 10],
+      "lump": {
+        "name":"templed-skill-33"
+      }
+    },
+    {
+      "trans": [ 4251.6459, 56.0779, 4557.6933], // broken pillar near ground, left side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4251.6459, 56.0779, 4557.6933, 10],
+      "lump": {
+        "name":"templed-skill-34"
+      }
+    },
+    {
+      "trans": [ 4271.9873, 71.9106, 4626.5307], // left side, 1st pillar from back 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4271.9873, 71.9106, 4626.5307, 10],
+      "lump": {
+        "name":"templed-skill-35"
+      }
+    },
+    {
+      "trans": [ 4307.9453, 65.0167, 4620.5498], // right side, 1st pillar from back 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4307.9453, 65.0167, 4620.5498, 10],
+      "lump": {
+        "name":"templed-skill-36"
+      }
+    },
+    {
+      "trans": [ 4270.3696, 85.5444, 4480.6123], // left side, 4th pillar from back 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4270.3696, 85.5444, 4480.6123, 10],
+      "lump": {
+        "name":"templed-skill-37"
+      }
+    },
+    {
+      "trans": [ 4287.9936, 80.1455, 4455.8413], // on precursor statue north wall, under seem 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4287.9936, 80.1455, 4455.8413, 10],
+      "lump": {
+        "name":"templed-skill-38"
+      }
+    },
+    {
+      "trans": [ 4249.6904, 66.7204, 4470.8159], // among bricks above door to rotator room NW
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4249.6904, 66.7204, 4470.8159, 10],
+      "lump": {
+        "name":"templed-skill-39"
+      }
+    },
+    {
+      "trans": [ 4327.6586, 68.2870, 4551.9711], // on rubble of support on east wall, between bridges
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4327.6586, 68.2870, 4551.9711, 10],
+      "lump": {
+        "name":"templed-skill-40"
+      }
+    },
+    {
+      "trans": [ 4330.0556, 89.6784, 4461.4887], // NE corner, on side of fake doorway 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4330.0556, 89.6784, 4461.4887, 10],
+      "lump": {
+        "name":"templed-skill-41",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 4330.1645, 105.2298, 4470.4975], // NE corner, on top of fake doorway, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4330.1645, 105.2298, 4470.4975, 10],
+      "lump": {
+        "name":"templed-skill-42"
+      }
+    },
+    {
+      "trans": [ 4328.9838, 118.5862, 4455.3437], // NE corner way up high almost oob, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4328.9838, 118.5862, 4455.3437, 10],
+      "lump": {
+        "name":"templed-skill-43"
+      }
+    },
+    {
+      "trans": [ 4321.4125, 132.2780, 4452.8603], // NE corner on bricks way up high, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4321.4125, 132.2780, 4452.8603, 10],
+      "lump": {
+        "name":"templed-skill-44"
+      }
+    },
+    {
+      "trans": [ 4328.1762, 140.2872, 4440.8168], // NE corner on rooftop, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4328.1762, 140.2872, 4440.8168, 10],
+      "lump": {
+        "name":"templed-skill-45"
+      }
+    },
+    {
+      "trans": [ 4249.7993, 140.2868, 4497.5727], // west side rooftop, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4249.7993, 140.2868, 4497.5727, 10],
+      "lump": {
+        "name":"templed-skill-46"
+      }
+    },
+    {
+      "trans": [ 4251.1044, 118.5466, 4456.2104], // NW corner up high 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4251.1044, 118.5466, 4456.2104, 10],
+      "lump": {
+        "name":"templed-skill-47"
+      }
+    },
+    {
+      "trans": [ 4247.5717, 98.7163, 4493.3925], // on top of pillars along west wall, north end
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 4247.5717, 98.7163, 4493.3925, 10],
+      "lump": {
+        "name":"templed-skill-48"
+      }
+    },
 
 
     {

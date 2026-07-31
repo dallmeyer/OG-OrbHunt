@@ -144,7 +144,8 @@
       "quat": [0, 0, 0, 1],
       "bsphere": [ 243.1289, 534.6151, -70.8743, 10],
       "lump": {
-        "name":"factoryd-skill-08"
+        "name":"factoryd-skill-08",
+        "bob-scale": ["float", -1.0] // no bob
       }
     },
     {
