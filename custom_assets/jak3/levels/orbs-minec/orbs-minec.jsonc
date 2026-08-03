@@ -1606,6 +1606,138 @@
         "name":"minec-skill-151"
       }
     },
+    {
+      "trans": [ 105.7761, 107.5566, 87.6683], // small slippery ledge on inner wall opposite first grindrails 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 105.7761, 107.5566, 87.6683, 10],
+      "lump": {
+        "name":"minec-skill-152",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 64.1186, 107.4817, 116.6327], // drop down ledge just past first grindrails 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 64.1186, 107.4817, 116.6327, 10],
+      "lump": {
+        "name":"minec-skill-153"
+      }
+    },
+    {
+      "trans": [ 65.5299, 99.4657, 143.8767], // slippery ledge down near deathplane, next gap after first grindrails 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 65.5299, 99.4657, 143.8767, 10],
+      "lump": {
+        "name":"minec-skill-154"
+      }
+    },
+    {
+      "trans": [ 48.8408, 110.8385, 131.9135], // small slippery ledge over void, next gap after first grindrails 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 48.8408, 110.8385, 131.9135, 10],
+      "lump": {
+        "name":"minec-skill-155"
+      }
+    },
+    {
+      "trans": [ 97.3270, 111.9447, 84.9209], // gap in inner wall (lol ND) just past first grindrails 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 97.3270, 111.9447, 84.9209, 10],
+      "lump": {
+        "name":"minec-skill-156"
+      }
+    },
+    {
+      "trans": [ 101.7154, 126.1558, 85.8604], // up on inner wall just past first grindrails, abah from ^^^^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 101.7154, 126.1558, 85.8604, 10],
+      "lump": {
+        "name":"minec-skill-157"
+      }
+    },
+    {
+      "trans": [ 93.9250, 114.4415, 40.2351], // atop inner wall "peninsula" on other side of train rails from starting steps 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 93.9250, 114.4415, 40.2351, 10],
+      "lump": {
+        "name":"minec-skill-158",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 87.0139, 129.4227, 34.0799], // atop inner wall "peninsula" on other side of train rails from starting steps, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 87.0139, 129.4227, 34.0799, 10],
+      "lump": {
+        "name":"minec-skill-159"
+      }
+    },
+    {
+      "trans": [ 77.5755, 97.6538, 1.2343], // on top of lamp on other side of train rails from starting steps 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 77.5755, 97.6538, 1.2343, 10],
+      "lump": {
+        "name":"minec-skill-160"
+      }
+    },
+    {
+      "trans": [ 22.9829, 114.3190, 127.7054], // triangle crevice in outer wall, jump from train rail past first grindrails 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 22.9829, 114.3190, 127.7054, 10],
+      "lump": {
+        "name":"minea-skill-161"
+      }
+    },
+    {
+      "trans": [ -30.2856, 118.9958, 53.9514], // on train rails stone support, section past first grindrails 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -30.2856, 118.9958, 53.9514, 10],
+      "lump": {
+        "name":"minea-skill-162"
+      }
+    },
+    {
+      "trans": [ -1.1056, 120.1345, 34.3929], // small ledge drop down near in-n-out-plats on inner wall, past first grindrails 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -1.1056, 120.1345, 34.3929, 10],
+      "lump": {
+        "name":"minea-skill-163"
+      }
+    },
+    {
+      "trans": [ -15.7305, 149.5572, 11.3660], // on top of lamp on path past 2nd set of in-n-out plats, center of level 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -15.7305, 149.5572, 11.3660, 10],
+      "lump": {
+        "name":"minea-skill-164"
+      }
+    },
 
     {
       "trans": [ 158.96,  100.23,  23.11 ], // pecker with custom flight path :D

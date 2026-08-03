@@ -1364,6 +1364,12 @@
     
 
     ;; MINEC
+    (('crate-984) (set-vector-meters! (-> arg0 extra trans) -12.3801 124.0048 21.7192)
+      (quaternion-set! (-> arg0 quat) 0.0620  -0.5070  -0.0188  0.8594))
+    (('crate-985) (set-vector-meters! (-> arg0 extra trans) 15.2984 116.6050 56.4461)
+      (quaternion-set! (-> arg0 quat) 0.0143  -0.8678  -0.0632  0.4926))
+    (('crate-986) (set-vector-meters! (-> arg0 extra trans) 54.5747 105.4449 79.9254)
+      (quaternion-set! (-> arg0 quat) -0.0336  -0.0051  0.0600  0.9976))
     (('crate-990) (set-vector-meters! (-> arg0 extra trans) 132.7795 101.8422 122.4474)
       (quaternion-set! (-> arg0 quat) -0.0613  0.9819  -0.0545  0.1702))
 
