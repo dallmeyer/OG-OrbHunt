@@ -2381,7 +2381,7 @@
                         )
                     (set! (-> v1-98 scale) (if (or (= a0-39 (language-enum korean)) (= a0-39 (language-enum russian)))
                                               0.9
-                                              0.7
+                                              0.5
                                               )
                           )
                     )
@@ -2441,7 +2441,7 @@
                         )
                     (set! (-> v1-98 scale) (if (or (= a0-39 (language-enum korean)) (= a0-39 (language-enum russian)))
                                               0.9
-                                              0.7
+                                              0.5
                                               )
                           )
                     )

@@ -1233,6 +1233,379 @@
         "name":"minec-skill-115"
       }
     },
+    {
+      "trans": [ 225.9201, 93.9083, 62.6805], // up on wall in corner before steps along entrance path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 225.9201, 93.9083, 62.6805, 10],
+      "lump": {
+        "name":"minec-skill-116",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 230.2736, 109.5486, 57.6477], // up on wall before steps along entrance path, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 230.2736, 109.5486, 57.6477, 10],
+      "lump": {
+        "name":"minec-skill-117"
+      }
+    },
+    {
+      "trans": [ 233.0222, 122.0108, 60.4755], // up on wall before steps along entrance path, follow from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 233.0222, 122.0108, 60.4755, 10],
+      "lump": {
+        "name":"minec-skill-118"
+      }
+    },
+    {
+      "trans": [ 229.2174, 117.5935, 71.8117], // crevice on wall behind metal building, before steps along entrance path, follow from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 229.2174, 117.5935, 71.8117, 10],
+      "lump": {
+        "name":"minec-skill-119"
+      }
+    },
+    {
+      "trans": [ 223.8204, 114.8884, 77.5675], // crevice on wall behind metal building, before steps along entrance path, follow from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 223.8204, 114.8884, 77.5675, 10],
+      "lump": {
+        "name":"minec-skill-120"
+      }
+    },
+    {
+      "trans": [ 207.6694, 92.7565, 70.2957], // on metal support beam behind metal building/silo near entrance path steps, yolo from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 207.6694, 92.7565, 70.2957, 10],
+      "lump": {
+        "name":"minec-skill-121"
+      }
+    },
+    {
+      "trans": [ -255.4718, 161.2416, -64.6350], // real fake train rail against wall at top (elevator) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -255.4718, 161.2416, -64.6350, 10],
+      "lump": {
+        "name":"minec-skill-122"
+      }
+    },
+    {
+      "trans": [ -261.1070, 161.2915, -62.1098], // real fake train rail against wall at top (elevator)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -261.1070, 161.2915, -62.1098, 10],
+      "lump": {
+        "name":"minec-skill-123"
+      }
+    },
+    {
+      "trans": [ -200.9516, 157.1544, -101.7500], // behind wooden crates at top of train rail (elevator) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -200.9516, 157.1544, -101.7500, 10],
+      "lump": {
+        "name":"minec-skill-124"
+      }
+    },
+    {
+      "trans": [ -197.6486, 174.5879, -184.7583], // under precursor arm (IJ) along outer wall near top of train rail (elevator) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -197.6486, 174.5879, -184.7583, 10],
+      "lump": {
+        "name":"minec-skill-125"
+      }
+    },
+    {
+      "trans": [ -231.8690, 195.8967, -185.6883], // outer wall near top of train rail (elevator), follow from top of metal structure 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -231.8690, 195.8967, -185.6883, 10],
+      "lump": {
+        "name":"minec-skill-126",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -222.6567, 214.5998, -190.5210], // outer wall near top of train rail (elevator), abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -222.6567, 214.5998, -190.5210, 10],
+      "lump": {
+        "name":"minec-skill-127",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -201.5259, 228.9741, -193.3860], // outer wall near top of train rail (elevator), abah from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -201.5259, 228.9741, -193.3860, 10],
+      "lump": {
+        "name":"minec-skill-128"
+      }
+    },
+    {
+      "trans": [ -264.7154, 156.6693, -176.7099], // outer wall near top of train rail (elevator), boosted from rail 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -264.7154, 156.6693, -176.7099, 10],
+      "lump": {
+        "name":"minec-skill-129",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -269.2443, 173.3359, -182.9999], // outer wall near top of train rail (elevator), abah from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -269.2443, 173.3359, -182.9999, 10],
+      "lump": {
+        "name":"minec-skill-130"
+      }
+    },
+    {
+      "trans": [ -288.7843, 172.9631, -158.2902], // outer wall near top of train rail (elevator), follow from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -288.7843, 172.9631, -158.2902, 10],
+      "lump": {
+        "name":"minec-skill-131",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -303.3901, 166.0830, -134.9471], // outer wall near top of train rail (elevator), abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -303.3901, 166.0830, -134.9471, 10],
+      "lump": {
+        "name":"minec-skill-132"
+      }
+    },
+    {
+      "trans": [ -170.2331, 165.8391, -108.9960], // on inner rock wall near elevator top, yolo from right side path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -170.2331, 165.8391, -108.9960, 10],
+      "lump": {
+        "name":"minec-skill-133",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -175.0581, 180.9787, -89.3889], // on inner rock wall near elevator top, abah from ^ (or you can climb collision gap from right side)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -175.0581, 180.9787, -89.3889, 10],
+      "lump": {
+        "name":"minec-skill-134"
+      }
+    },
+    {
+      "trans": [ -144.1919, 186.0169, -103.4329], // on inner rock wall near early train rail, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -144.1919, 186.0169, -103.4329, 10],
+      "lump": {
+        "name":"minec-skill-135"
+      }
+    },
+    {
+      "trans": [ -110.3649, 165.3865, -72.1928], // on top of central/NWish lamp against inner rock wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -110.3649, 165.3865, -72.1928, 10],
+      "lump": {
+        "name":"minec-skill-136"
+      }
+    },
+    {
+      "trans": [ -82.2691, 153.9009, -82.1477], // on edge of central/NWish lamp shade (above elevator to mineb, it sticks out of invis wall barely) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -82.2691, 153.9009, -82.1477, 10],
+      "lump": {
+        "name":"minec-skill-137"
+      }
+    },
+    {
+      "trans": [ 144.8703, 107.2069, 77.3272], // "free" slippery rock troll, before first in-n-out plats 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 144.8703, 107.2069, 77.3272, 10],
+      "lump": {
+        "name":"minec-skill-138"
+      }
+    },
+    {
+      "trans": [ 143.0361, 97.4295, 70.9083], // small slippery ledge down below from path, before first in-n-out plats
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 143.0361, 97.4295, 70.9083, 10],
+      "lump": {
+        "name":"minec-skill-139"
+      }
+    },
+    {
+      "trans": [ 158.6847, 93.9610, 81.2707], // small ledge down in gap below first in-n-out plats 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 158.6847, 93.9610, 81.2707, 10],
+      "lump": {
+        "name":"minec-skill-140"
+      }
+    },
+    {
+      "trans": [ 171.0666, 115.1597, 65.0489], // on outer wall before first in-n-out plats 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 171.0666, 115.1597, 65.0489, 10],
+      "lump": {
+        "name":"minec-skill-141",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 171.5853, 134.1278, 73.2260], // up on outer wall before first in-n-out plats, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 171.5853, 134.1278, 73.2260, 10],
+      "lump": {
+        "name":"minec-skill-142",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 174.3092, 147.8862, 81.3167], // up on outer wall before first in-n-out plats, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 174.3092, 147.8862, 81.3167, 10],
+      "lump": {
+        "name":"minec-skill-143"
+      }
+    },
+    {
+      "trans": [ 168.9602, 154.5080, 96.9925], // up on outer wall before first in-n-out plats, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 168.9602, 154.5080, 96.9925, 10],
+      "lump": {
+        "name":"minec-skill-144",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 167.8639, 164.5614, 113.6889], // up on outer wall before first in-n-out plats, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 167.8639, 164.5614, 113.6889, 10],
+      "lump": {
+        "name":"minec-skill-145"
+      }
+    },
+    {
+      "trans": [ 172.1628, 160.8236, 137.6890], // up on outer wall before first in-n-out plats, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 172.1628, 160.8236, 137.6890, 10],
+      "lump": {
+        "name":"minec-skill-146",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 136.5256, 145.2886, 145.6376], // on metal support beam behind metal building on outer wall after first in-n-out plats, abah yolo from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 136.5256, 145.2886, 145.6376, 10],
+      "lump": {
+        "name":"minec-skill-147",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 133.7792, 165.2704, 146.7359], // up on outer wall behind silo after first in-n-out plats, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 133.7792, 165.2704, 146.7359, 10],
+      "lump": {
+        "name":"minec-skill-148"
+      }
+    },
+    {
+      "trans": [ 95.8838, 124.3776, 144.8529], // outer wall next to first grindrails 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 95.8838, 124.3776, 144.8529, 10],
+      "lump": {
+        "name":"minec-skill-149",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 99.2289, 141.2977, 151.5250], // up on outer wall next to first grindrails, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 99.2289, 141.2977, 151.5250, 10],
+      "lump": {
+        "name":"minec-skill-150",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 83.6615, 161.3015, 145.9609], // up on outer wall next to first grindrails, abah from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 83.6615, 161.3015, 145.9609, 10],
+      "lump": {
+        "name":"minec-skill-151"
+      }
+    },
 
     {
       "trans": [ 158.96,  100.23,  23.11 ], // pecker with custom flight path :D

@@ -707,6 +707,57 @@
         "name":"factoryc-skill-64",
         "alt-actor": "kg-grunt-31"
       }
+    },
+    {
+      "trans": [ 286.5946, 435.9780, -124.2404], // small gap between fence and higher ground, NE path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 286.5946, 435.9780, -124.2404, 10],
+      "lump": {
+        "name":"factoryc-skill-65",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ 309.1692, 452.2689, -153.5240], // up high in corner, NE path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 309.1692, 452.2689, -153.5240, 10],
+      "lump": {
+        "name":"factoryc-skill-66"
+      }
+    },
+    {
+      "trans": [ 331.3746, 434.3122, -181.0047], // around corner over void on vent, NE corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 331.3746, 434.3122, -181.0047, 10],
+      "lump": {
+        "name":"factoryc-skill-67"
+      }
+    },
+    {
+      "trans": [ 106.7555, 430.3523, -201.7335], // in corner behind 2nd breakable grate 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 106.7555, 430.3523, -201.7335, 10],
+      "lump": {
+        "name":"factoryc-skill-68"
+      }
+    },
+    {
+      "trans": [ 126.1892, 454.8676, -164.3747], // up on wall between 2 breakable walls, north(west) path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 126.1892, 454.8676, -164.3747, 10],
+      "lump": {
+        "name":"factoryc-skill-69"
+      }
     }//,
     
   ]

@@ -1361,6 +1361,11 @@
       (set-vector-meters! (res-lump-struct arg0 'spawn-trans vector) 120.11  430.02  -19.50)
       (quaternion-set! (res-lump-struct arg0 'spawn-quat quaternion) 0.0 0.0 0.0 1.0)
       )
+    
+
+    ;; MINEC
+    (('crate-990) (set-vector-meters! (-> arg0 extra trans) 132.7795 101.8422 122.4474)
+      (quaternion-set! (-> arg0 quat) -0.0613  0.9819  -0.0545  0.1702))
 
     )
   (none))
@@ -2304,7 +2309,7 @@
 ;;       )
 ;;     )
   
-  ;; make orb follow grunt/mine
+  ;; make orb follow stuff
   (skill-follow-y-offset "wascitya-skill-04" "dogat-18" (meters 0.7))
   (skill-follow-y-offset "wascitya-skill-05" "tizard-5" (meters 0.7))
 
