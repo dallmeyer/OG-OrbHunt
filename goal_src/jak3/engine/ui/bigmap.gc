@@ -1231,10 +1231,18 @@
           )
         ;; draw target triangle icon
         (let ((target-rot (new 'stack-no-clear 'vector))
+              (camera-quat (new-stack-quaternion0))
               (rel-x-scale (-> *video-params* relative-x-scale))
               (bigmap-scale (/ (the float (- (-> this y1) (-> this y0))) 416.0)) ;; ydelta/416
               )
-          (vector-z-quaternion! target-rot (-> *target* control quat))
+          (cond
+            (*target*
+              (vector-z-quaternion! target-rot (-> *target* control quat)))
+            (else ;; no target, use camera
+              (matrix->quaternion camera-quat (-> *camera-combiner* inv-camera-rot))
+              (vector-z-quaternion! target-rot camera-quat)
+              )
+            )
           (vector-xz-normalize! target-rot -1.0)
           (set! (-> target-rot y) 0.0)
           (set! (-> target-rot w) 0.0)

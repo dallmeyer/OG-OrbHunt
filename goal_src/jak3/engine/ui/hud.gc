@@ -758,12 +758,14 @@
   )
 
 (defun allow-mini-bigmap? ()
-  (and *target*
+  (or (and *debug-segment* (not *target*))
+      (and *target*
       ;;  (-> *pc-settings* baby-mode?)
        (pause-allowed?)
        (not (hud-hidden?))
        (not (have-minimap?))
        )
+      )
   )
 
 (defmethod update-values! ((this hud))
