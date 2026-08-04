@@ -1705,7 +1705,7 @@
       "quat": [0, 0, 0, 1],
       "bsphere": [ 22.9829, 114.3190, 127.7054, 10],
       "lump": {
-        "name":"minea-skill-161"
+        "name":"minec-skill-161"
       }
     },
     {
@@ -1715,7 +1715,7 @@
       "quat": [0, 0, 0, 1],
       "bsphere": [ -30.2856, 118.9958, 53.9514, 10],
       "lump": {
-        "name":"minea-skill-162"
+        "name":"minec-skill-162"
       }
     },
     {
@@ -1725,7 +1725,7 @@
       "quat": [0, 0, 0, 1],
       "bsphere": [ -1.1056, 120.1345, 34.3929, 10],
       "lump": {
-        "name":"minea-skill-163"
+        "name":"minec-skill-163"
       }
     },
     {
@@ -1735,7 +1735,221 @@
       "quat": [0, 0, 0, 1],
       "bsphere": [ -15.7305, 149.5572, 11.3660, 10],
       "lump": {
-        "name":"minea-skill-164"
+        "name":"minec-skill-164"
+      }
+    },
+    {
+      "trans": [ -15.7305, 149.5572, 11.3660], // under falling elevator, near end of bomb train rail
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -15.7305, 149.5572, 11.3660, 10],
+      "lump": {
+        "name":"minec-skill-165",
+        "alt-actor": "min-falling-elevator-1"
+      }
+    },
+    {
+      "trans": [ 218.5437, 96.8203, -42.4834], // on metal support just off path near entrance steps / end of bomb train 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 218.5437, 96.8203, -42.4834, 10],
+      "lump": {
+        "name":"minec-skill-166",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 215.4725, 118.0106, -29.7883], // on top of lamp near entrance steps / end of bomb train, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 215.4725, 118.0106, -29.7883, 10],
+      "lump": {
+        "name":"minec-skill-167"
+      }
+    },
+    {
+      "trans": [ 204.6188, 94.9307, -2.3356], // in metal support off edge of path next to falling bridge by entrance steps 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 204.6188, 94.9307, -2.3356, 10],
+      "lump": {
+        "name":"minec-skill-168"
+      }
+    },
+    {
+      "trans": [ 274.6030, 100.5992, -88.9392], // behind pipe on right of door to boss elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 274.6030, 100.5992, -88.9392, 10],
+      "lump": {
+        "name":"minec-skill-169"
+      }
+    },
+    {
+      "trans": [ 257.2705, 91.2982, -50.0936], // on metal support under path between 2 falling bridges, by boss elevator
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 257.2705, 91.2982, -50.0936, 10],
+      "lump": {
+        "name":"minec-skill-170"
+      }
+    },
+    {
+      "trans": [ 282.8841, 91.2583, -60.5625], // on metal support under path between 2 falling bridges, by boss elevator
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 282.8841, 91.2583, -60.5625, 10],
+      "lump": {
+        "name":"minec-skill-171"
+      }
+    },
+    {
+      "trans": [ 256.2156, 114.2921, -54.6241], // on top of lamp on path between 2 falling bridges, by boss elevator
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 256.2156, 114.2921, -54.6241, 10],
+      "lump": {
+        "name":"minec-skill-172"
+      }
+    },
+    {
+      "trans": [ 257.3789, 98.7918, -131.0430], // down in corner between pipe and left side of door frame to boss elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 257.3789, 98.7918, -131.0430, 10],
+      "lump": {
+        "name":"minec-skill-173"
+      }
+    },
+    {
+      "trans": [ 256.0574, 99.4638, -122.3831], // in rubble by door to boss elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 256.0574, 99.4638, -122.3831, 10],
+      "lump": {
+        "name":"minec-skill-174"
+      }
+    },
+    {
+      "trans": [ 221.7023, 106.6007, -129.6674], // on top of angled lamp by door to boss elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 221.7023, 106.6007, -129.6674, 10],
+      "lump": {
+        "name":"minec-skill-175"
+      }
+    },
+    {
+      "trans": [ 255.9956, 106.2255, -130.9563], // between pipe and left side of door frame to boss elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 255.9956, 106.2255, -130.9563, 10],
+      "lump": {
+        "name":"minec-skill-176",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 245.0982, 125.3220, -137.8737], // on pipe left side of door to boss elevator, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 245.0982, 125.3220, -137.8737, 10],
+      "lump": {
+        "name":"minec-skill-177",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 259.3351, 140.0480, -127.1346], // between pipe and wall above door to boss elevator, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 259.3351, 140.0480, -127.1346, 10],
+      "lump": {
+        "name":"minec-skill-178"
+      }
+    },
+    {
+      "trans": [ 326.7160, 272.2478, -26.3955], // up on city wall, mid right. jetboard from ledge with minec-skill-33
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 326.7160, 272.2478, -26.3955, 10],
+      "lump": {
+        "name":"minec-skill-179"
+      }
+    },
+    {
+      "trans": [ 320.3945, 286.7102, -55.1945], // on next city wall piece left from ^, boosted
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 320.3945, 286.7102, -55.1945, 10],
+      "lump": {
+        "name":"minec-skill-180"
+      }
+    },
+    {
+      "trans": [ 288.2994, 284.5058, -120.4219], // on next city wall piece left from ^, tricky jetboard yolo
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 288.2994, 284.5058, -120.4219, 10],
+      "lump": {
+        "name":"minec-skill-181"
+      }
+    },
+    {
+      "trans": [ 184.0756, 284.0928, -329.3895], // on leftmost city wall piece, continue along from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 184.0756, 284.0928, -329.3895, 10],
+      "lump": {
+        "name":"minec-skill-182"
+      }
+    },
+    {
+      "trans": [ 252.5729, 187.4488, -145.6584], // up high on top left of pipe above door to boss elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 252.5729, 187.4488, -145.6584, 10],
+      "lump": {
+        "name":"minec-skill-183"
+      }
+    },
+    {
+      "trans": [ 207.8663, 95.6902, -82.3141], // inside lights/target for bombtrain rail connection near end of bomb train. good extended up n under 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 207.8663, 95.6902, -82.3141, 10],
+      "lump": {
+        "name":"minec-skill-184"
+      }
+    },
+    {
+      "trans": [ 188.9717, 91.0185, -94.2433], // behind boxes near standing lamp on path by end of bomb train 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 188.9717, 91.0185, -94.2433, 10],
+      "lump": {
+        "name":"minec-skill-185"
       }
     },
 

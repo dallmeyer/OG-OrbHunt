@@ -16,6 +16,16 @@
 ;; index of currently selected orb for placing
 (define *orb-placer-selected-idx* -1)
 
+(defenum op-axis
+  :type int32
+  (y 0)
+  (x 1)
+  (z 2)
+  )
+
+;; which axis we're set to rotate along
+(define *orb-placer-rotate-axis* (op-axis y))
+
 ;; array of handles to orbs that have been spawned by orb-placer
 (define *orb-placer-orbs* (new 'global 'boxed-array handle ORB_PLACER_MAX))
 

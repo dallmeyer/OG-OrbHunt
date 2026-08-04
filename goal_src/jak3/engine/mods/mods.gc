@@ -68,6 +68,10 @@
     (format 0 " Q:  ~f  ~f  ~f  ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
     (format 0 "~m, ~m, ~m  |||  " (-> vec x) (-> vec y) (-> vec z))
     (format 0 " Q:  ~f, ~f, ~f, ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
+
+    (format 0 "~%    (('~S) " (-> pd name))
+    (format 0 "(set-vector-meters! (-> arg0 extra trans) ~m ~m ~m)~%" (-> vec x) (-> vec y) (-> vec z))
+    (format 0 "      (quaternion-set! (-> arg0 quat)  ~f  ~f  ~f  ~f))~%" (-> q x) (-> q y) (-> q z) (-> q w))
     )
   (none)
   )
@@ -1369,7 +1373,11 @@
     (('crate-985) (set-vector-meters! (-> arg0 extra trans) 15.2984 116.6050 56.4461)
       (quaternion-set! (-> arg0 quat) 0.0143  -0.8678  -0.0632  0.4926))
     (('crate-986) (set-vector-meters! (-> arg0 extra trans) 54.5747 105.4449 79.9254)
-      (quaternion-set! (-> arg0 quat) -0.0336  -0.0051  0.0600  0.9976))
+      (quaternion-set! (-> arg0 quat) -0.0336  -0.0051  0.0600  0.9976))    
+    (('crate-988) (set-vector-meters! (-> arg0 extra trans) 252.7617 87.5978 -15.7712)
+      (quaternion-set! (-> arg0 quat)  0.1549  0.8354  0.3877  -0.3571))
+    (('crate-989) (set-vector-meters! (-> arg0 extra trans) 150.6710 87.9820 62.8577)
+      (quaternion-set! (-> arg0 quat) 0.1834  -0.6480  -0.0186  0.7389))
     (('crate-990) (set-vector-meters! (-> arg0 extra trans) 132.7795 101.8422 122.4474)
       (quaternion-set! (-> arg0 quat) -0.0613  0.9819  -0.0545  0.1702))
 
@@ -1449,6 +1457,16 @@
           (when (and (not (name= (-> alt-actor extra process state name) 'retract))
                      (not (name= (-> alt-actor extra process state name) 'retracted)))
             ;; no pickup before its exploded
+            (return #f))
+          (when (and for-pickup? (not (time-elapsed? (-> skill state-time) (seconds 1.0))))
+            ;; visible for a bit before pickup
+            (return #f))
+          )
+        (('min-falling-elevator)
+          (when (or (name= (-> alt-actor extra process state name) 'unstable)
+                    (name= (-> alt-actor extra process state name) 'falling)
+                    (name= (-> alt-actor extra process state name) 'resetting))
+            ;; no pickup if elevator is falling
             (return #f))
           (when (and for-pickup? (not (time-elapsed? (-> skill state-time) (seconds 1.0))))
             ;; visible for a bit before pickup
@@ -1641,7 +1659,7 @@
 ;;   (static-vector-meters 341.6452 -130.8514 -18.8891)
 ;;   ))
 
-(define *tmp-vec* (static-vector-meters 0.0 1.0 -3.0))
+(define *tmp-vec* (static-vector-meters -3.5 -3.0 1.0))
 (define *zoom-sensitivity-scale* 1.0)
 (define *show-mini-bigmap* #f)
 (define *mini-bigmap-toggle-time* (the time-frame #f))
@@ -2332,6 +2350,8 @@
   (skill-follow-y-offset "factoryc-skill-41" "roboguard-26" (meters 0.7))
   (skill-follow-y-offset "factoryc-skill-63" "spydroid-orig-36" (meters 0.7))
   (skill-follow-y-offset "factoryc-skill-64" "kg-grunt-31" (meters 0.7))
+
+  (skill-follow-offset "minec-skill-165" "min-falling-elevator-1" (static-vector-meters -4.5 -4.5 2.275))
 
   (skill-follow-y-offset "sewh-skill-08" "sew-move-plat-2" (meters -4.6))
   (skill-follow-offset "sewi-skill-23" "sew-rove-plat-9" (static-vector-meters 0.0 -7.0 5.3))
