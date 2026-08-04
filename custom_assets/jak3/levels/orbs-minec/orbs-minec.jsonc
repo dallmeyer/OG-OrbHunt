@@ -1952,6 +1952,430 @@
         "name":"minec-skill-185"
       }
     },
+    {
+      "trans": [ 160.1691, 74.0160, -75.7932], // on top of metal support with cables along inner NE path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 160.1691, 74.0160, -75.7932, 10],
+      "lump": {
+        "name":"minec-skill-186"
+      }
+    },
+    {
+      "trans": [ 160.3977, 49.0517, -66.6393], // on extra bit of metal support sticking out side of inner NE path, bottom of elevator
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 160.3977, 49.0517, -66.6393, 10],
+      "lump": {
+        "name":"minec-skill-187"
+      }
+    },
+    {
+      "trans": [ 122.9575, 41.4652, -58.3410], // rock/metal support under inner east path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 122.9575, 41.4652, -58.3410, 10],
+      "lump": {
+        "name":"minec-skill-188"
+      }
+    },
+    {
+      "trans": [ 111.3659, 43.8510, -47.3589], // metal support under inner east path, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 111.3659, 43.8510, -47.3589, 10],
+      "lump": {
+        "name":"minec-skill-189"
+      }
+    },
+    {
+      "trans": [ 113.6796, 64.1587, 5.2437], // back of catapult(?) along inner east path  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 113.6796, 64.1587, 5.2437, 10],
+      "lump": {
+        "name":"minec-skill-190"
+      }
+    },
+    {
+      "trans": [ 99.3997, 61.5845, 4.7865], // mid catapult(?) along inner east path  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 99.3997, 61.5845, 4.7865, 10],
+      "lump": {
+        "name":"minec-skill-191"
+      }
+    },
+    {
+      "trans": [ 109.1786, 71.2828, 5.1967], // top of catapult(?) along inner east path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 109.1786, 71.2828, 5.1967, 10],
+      "lump": {
+        "name":"minec-skill-192"
+      }
+    },
+    {
+      "trans": [ 111.4931, 60.8141, 74.8951], // inner rock wall in SE, just before elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 111.4931, 60.8141, 74.8951, 10],
+      "lump": {
+        "name":"minec-skill-193",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 106.2073, 82.1103, 79.1883], // inner rock wall in SE, abah from ^ (and up to earlier orb + train rail) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 106.2073, 82.1103, 79.1883, 10],
+      "lump": {
+        "name":"minec-skill-194",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 62.0704, 69.5829, 26.7496], // rock wall between metal supports by inner (SE) elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 62.0704, 69.5829, 26.7496, 10],
+      "lump": {
+        "name":"minec-skill-195",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 64.0779, 84.1436, 35.0592], // inside top part of metal support next to lamp by inner (SE) elevator, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 64.0779, 84.1436, 35.0592, 10],
+      "lump": {
+        "name":"minec-skill-196"
+      }
+    },
+    {
+      "trans": [ 51.4260, 90.3187, 42.6624], // top metal support under precursor near inner (SE) elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 51.4260, 90.3187, 42.6624, 10],
+      "lump": {
+        "name":"minec-skill-197"
+      }
+    },
+    {
+      "trans": [ 50.7099, 83.5269, 47.5265], // middle metal support under precursor near inner (SE) elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 50.7099, 83.5269, 47.5265, 10],
+      "lump": {
+        "name":"minec-skill-198"
+      }
+    },
+    {
+      "trans": [ 42.3523, 60.0797, 25.9709], // proxy hint on fence just before bottom of inner (SE) elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 42.3523, 60.0797, 25.9709, 10],
+      "lump": {
+        "name":"minec-skill-199"
+      }
+    },
+    {
+      "trans": [ 38.6095, 88.2891, 10.4210], // on top of metal support right next to inner (SE) elevator, proxy from ^ (or climb wall)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 38.6095, 88.2891, 10.4210, 10],
+      "lump": {
+        "name":"minec-skill-200"
+      }
+    },
+    {
+      "trans": [ 50.2333, 79.0432, 8.6453], // on top of chains next to inner (SE) elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 50.2333, 79.0432, 8.6453, 10],
+      "lump": {
+        "name":"minec-skill-201"
+      }
+    },
+    {
+      "trans": [ 35.7343, 60.2679, 47.5579], // behind boxes at bottom of inner (SE) elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 35.7343, 60.2679, 47.5579, 10],
+      "lump": {
+        "name":"minec-skill-202"
+      }
+    },
+    {
+      "trans": [ 50.9726, 73.7587, 52.1698], // up on angled metal support neat bottom of inner (SE) elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 50.9726, 73.7587, 52.1698, 10],
+      "lump": {
+        "name":"minec-skill-203"
+      }
+    },
+    {
+      "trans": [ 51.5728, 120.3650, -13.2761], // behind boxes at top of inner (SE) elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 51.5728, 120.3650, -13.2761, 10],
+      "lump": {
+        "name":"minec-skill-204"
+      }
+    },
+    {
+      "trans": [ 30.1630, 131.7452, -174.2339], // between pipes over void north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 30.1630, 131.7452, -174.2339, 10],
+      "lump": {
+        "name":"minec-skill-205"
+      }
+    },
+    {
+      "trans": [ 27.7256, 136.8077, -194.6835], // gap between smaller pipe and outer wall, north side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 27.7256, 136.8077, -194.6835, 10],
+      "lump": {
+        "name":"minec-skill-206"
+      }
+    },
+    {
+      "trans": [ 89.6187, 131.2672, -95.8722], // gap in silo metal north/central path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 89.6187, 131.2672, -95.8722, 10],
+      "lump": {
+        "name":"minec-skill-207"
+      }
+    },
+    {
+      "trans": [ -7.0954, 161.8307, -188.1029], // precursor's right elbow, north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -7.0954, 161.8307, -188.1029, 10],
+      "lump": {
+        "name":"minec-skill-208"
+      }
+    },
+    {
+      "trans": [ 7.4260, 190.2114, -182.8148], // behind precursor crown, north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 7.4260, 190.2114, -182.8148, 10],
+      "lump": {
+        "name":"minec-skill-209"
+      }
+    },
+    {
+      "trans": [ -16.9649, 181.6847, -188.8964], // on pipe against north outer wall, central 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -16.9649, 181.6847, -188.8964, 10],
+      "lump": {
+        "name":"minec-skill-210"
+      }
+    },
+    {
+      "trans": [ -3.4423, 156.6452, -150.4910], // left side of double silo on north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -3.4423, 156.6452, -150.4910, 10],
+      "lump": {
+        "name":"minec-skill-211"
+      }
+    },
+    {
+      "trans": [ -7.4118, 156.6233, -148.3242], // around back left side of double silo, north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -7.4118, 156.6233, -148.3242, 10],
+      "lump": {
+        "name":"minec-skill-212"
+      }
+    },
+    {
+      "trans": [ -15.3296, 167.4896, -153.1642], // around back right side of double silo, north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -15.3296, 167.4896, -153.1642, 10],
+      "lump": {
+        "name":"minec-skill-213"
+      }
+    },
+    {
+      "trans": [ -5.6457, 162.4714, -154.7793], // between smaller pipes on front of double silo, north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -5.6457, 162.4714, -154.7793, 10],
+      "lump": {
+        "name":"minec-skill-214"
+      }
+    },
+    {
+      "trans": [ -10.4656, 174.5359, -159.2196], // between hanging pipe and double silo, north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -10.4656, 174.5359, -159.2196, 10],
+      "lump": {
+        "name":"minec-skill-215"
+      }
+    },
+    {
+      "trans": [ -20.1821, 157.1301, -164.1955], // on metal support right side of double silo, north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -20.1821, 157.1301, -164.1955, 10],
+      "lump": {
+        "name":"minec-skill-216"
+      }
+    },
+    {
+      "trans": [ -22.9529, 164.1081, -158.7257], // on metal support right side of double silo, north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -22.9529, 164.1081, -158.7257, 10],
+      "lump": {
+        "name":"minec-skill-217"
+      }
+    },
+    {
+      "trans": [ -16.0487, 170.7106, -144.2593], // on metal I beam by inner wall, right/back of double silo north outer path
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -16.0487, 170.7106, -144.2593, 10],
+      "lump": {
+        "name":"minec-skill-218"
+      }
+    },
+    {
+      "trans": [ -21.1154, 175.1027, -162.1224], // on top of metal support right side of double silo, north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -21.1154, 175.1027, -162.1224, 10],
+      "lump": {
+        "name":"minec-skill-219",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -17.3178, 188.7017, -155.8920], // top of right of double silo north outer path, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -17.3178, 188.7017, -155.8920, 10],
+      "lump": {
+        "name":"minec-skill-220"
+      }
+    },
+    {
+      "trans": [ -15.0047, 181.3398, -139.8051], // on top of pipe against inner wall, behind double silo north outer path
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -15.0047, 181.3398, -139.8051, 10],
+      "lump": {
+        "name":"minec-skill-221"
+      }
+    },
+    {
+      "trans": [ -27.5610, 178.8806, -189.0790], // north outer wall, behind metal support near double silo 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -27.5610, 178.8806, -189.0790, 10],
+      "lump": {
+        "name":"minec-skill-222"
+      }
+    },
+    {
+      "trans": [ -29.6320, 172.0478, -179.1130], // in weird donut thing on metal support sticking out of north outer wall, by double silo 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -29.6320, 172.0478, -179.1130, 10],
+      "lump": {
+        "name":"minec-skill-223"
+      }
+    },
+    {
+      "trans": [ 34.5480, 151.6876, -143.5213], // on top of triple small pipes near double silo north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 34.5480, 151.6876, -143.5213, 10],
+      "lump": {
+        "name":"minec-skill-224"
+      }
+    },
+    {
+      "trans": [ 20.1513, 149.6468, -186.1894], // precursor's left wrist (IJ), north outer wall
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 20.1513, 149.6468, -186.1894, 10],
+      "lump": {
+        "name":"minec-skill-225"
+      }
+    },
+    {
+      "trans": [ 39.9681, 155.6602, -161.3702], // on top of lamp by triple pipes and double silo, north outer path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 39.9681, 155.6602, -161.3702, 10],
+      "lump": {
+        "name":"minec-skill-226"
+      }
+    },
+    {
+      "trans": [ -153.4220, 139.2975, -181.6433], // on metal support under metal support, north (west) path under roof 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -153.4220, 139.2975, -181.6433, 10],
+      "lump": {
+        "name":"minec-skill-227"
+      }
+    },
 
     {
       "trans": [ 158.96,  100.23,  23.11 ], // pecker with custom flight path :D
