@@ -2004,6 +2004,11 @@
 
     )
   :exit (behavior ()
+    ;; misc bullshit on certain orb pickup
+    (case (-> self name) :comp name=
+      (('minec-skill-271)
+        (play-sound-file "robot_orb.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 500.0))))
+      )
     ;; refresh orb-placer list in debug mode
     (when *debug-segment*
       (orb-placer-list-maintenance #t)
