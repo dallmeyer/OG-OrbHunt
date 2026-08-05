@@ -2918,6 +2918,109 @@
         "name":"minec-skill-280"
       }
     },
+    {
+      "trans": [ -79.1661, 182.1306, -191.5727], // on top of precursor statue on north (central) outer wall, above double grindrail 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -79.1661, 182.1306, -191.5727, 10],
+      "lump": {
+        "name":"minec-skill-281"
+      }
+    },
+    {
+      "trans": [ -72.2271, 154.4873, -192.0636], // left arm of precursor statue on north (central) outer wall, above double grindrail 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -72.2271, 154.4873, -192.0636, 10],
+      "lump": {
+        "name":"minec-skill-282"
+      }
+    },
+    {
+      "trans": [ -141.5471, 158.1229, -175.0549], // on top of awning over north (central/west) path
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -141.5471, 158.1229, -175.0549, 10],
+      "lump": {
+        "name":"minec-skill-283"
+      }
+    },
+    {
+      "trans": [ -119.8242, 140.0569, -190.8237], // down in crevice along north outer wall, before double grindrail 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -119.8242, 140.0569, -190.8237, 10],
+      "lump": {
+        "name":"minec-skill-284"
+      }
+    },
+    {
+      "trans": [ -42.5739, 140.3702, -157.4025], // under trainrail where it meets path along north outer wall / double silo 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -42.5739, 140.3702, -157.4025, 10],
+      "lump": {
+        "name":"minec-skill-285"
+      }
+    },
+    {
+      "trans": [ -99.7492, 84.5090, -100.9324], // MH grunt near elevator to mineb
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -99.7492, 84.5090, -100.9324, 10],
+      "lump": {
+        "name":"minec-skill-286",
+        "alt-actor": "grunt-302"
+      }
+    },
+    {
+      "trans": [ 270.0335, 115.3545, -14.1011 ], // MH gekko near end of bomb train rail
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 270.0335, 115.3545, -14.1011 , 10],
+      "lump": {
+        "name":"minec-skill-287",
+        "alt-actor": "gekko-8"
+      }
+    },
+    {
+      "trans": [ 8.3307, 129.0412, -29.1776], // MH manta in central path
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ 8.3307, 129.0412, -29.1776, 10],
+      "lump": {
+        "name":"minec-skill-288",
+        "alt-actor": "manta-12"
+      }
+    },
+    {
+      "trans": [ -90.0213, 84.2982, -131.3375], // behind boxes near elevator to mineb (ledgegrab) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -90.0213, 84.2982, -131.3375, 10],
+      "lump": {
+        "name":"minec-skill-289"
+      }
+    },
+    {
+      "trans": [ -114.1998, 181.1357, -28.9338], // side panel on big building w 4 silos above mineb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -114.1998, 181.1357, -28.9338, 10],
+      "lump": {
+        "name":"minea-skill-290"
+      }
+    },
 
     {
       "trans": [ 158.96,  100.23,  23.11 ], // pecker with custom flight path :D

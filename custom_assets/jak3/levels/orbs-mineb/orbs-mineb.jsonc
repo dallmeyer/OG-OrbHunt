@@ -58,11 +58,11 @@
     },
     
     {
-      "trans": [   -94.3486, 37.7549, -92.1289], // up in crevice next do doorway from elevator down at start
+      "trans": [ -66.3981, 33.8996, 98.8735], // up on pipe, between 2nd and 3rd hamster wheels. L2 extended ff, pretty tight. can probably abah up here too 
       "etype": "skill",
       "game_task": 0, 
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   -94.3486, 37.7549, -92.1289, 10],
+      "bsphere": [ -66.3981, 33.8996, 98.8735, 10],
       "lump": {
         "name":"mineb-skill-01"
       }
@@ -199,16 +199,6 @@
       "lump": {
         "name":"mineb-skill-14",
         "bob-scale": ["float", 0.25]
-      }
-    },
-    {
-      "trans": [ -66.3981, 33.8996, 98.8735], // up on pipe, between 2nd and 3rd hamster wheels. L2 extended ff, pretty tight. can probably abah up here too 
-      "etype": "skill",
-      "game_task": 0, 
-      "quat" : [0, 0, 0, 1],
-      "bsphere": [ -66.3981, 33.8996, 98.8735, 10],
-      "lump": {
-        "name":"mineb-skill-15"
       }
     }
     //,
