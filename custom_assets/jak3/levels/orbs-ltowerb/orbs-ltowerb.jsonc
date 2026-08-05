@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ -144.5056, 433.7116, 420.7778], // oob around outside over entrance side 
+      "trans": [ -144.5056, 433.7116, 420.7778], // oob around outside over entrance side
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -59,7 +59,7 @@
     {
       "trans": [ -102.3640, 437.3388, 490.6380], // hellcat to lfacrm1
       "etype": "desoasis-hellcat",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0000, 0.4569, 0.0000, 0.8894 ],
       "bsphere": [ -102.3640, 437.3388, 490.6380, 10],
       "lump": {
@@ -67,11 +67,11 @@
       }
     },
     {
-      "trans": [ -101.76,  431.97,  490.24 ], // warp to lfacrm1
+      "trans": [ -101.76, 431.97, 490.24 ], // warp to lfacrm1
       "etype": "warp-gate",
-      "game_task": 0, 
-      "quat" : [ 0.0000,      1.0,       0.0000,       0.0],
-      "bsphere": [ -101.76,  431.97,  490.24 , 10],
+      "game_task": 0,
+      "quat" : [ 0.0000, 1.0, 0.0000, 0.0],
+      "bsphere": [ -101.76, 431.97, 490.24 , 10],
       "lump": {
         "name":"ltowerb-warp-gate-1"
       }
@@ -80,7 +80,7 @@
     {
       "trans": [ -145.9824, 447.5057, 462.6603], // on side of "door" left from portal
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ -145.9824, 447.5057, 462.6603, 10],
       "lump": {
@@ -89,35 +89,35 @@
       }
     },
     {
-      "trans": [   -106.7109, 454.5085, 412.1259], // proxy hint on top of portal
+      "trans": [ -106.7109, 454.5085, 412.1259], // proxy hint on top of portal
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   -106.7109, 454.5085, 412.1259, 10],
+      "bsphere": [ -106.7109, 454.5085, 412.1259, 10],
       "lump": {
         "name":"ltowerb-skill-02"
       }
     },
     {
-      "trans": [   -108.4268, 487.7480, 431.3145], // up on high beams, proxy from ^
+      "trans": [ -108.4268, 487.7480, 431.3145], // up on high beams, proxy from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   -108.4268, 487.7480, 431.3145, 10],
+      "bsphere": [ -108.4268, 487.7480, 431.3145, 10],
       "lump": {
         "name":"ltowerb-skill-03"
       }
     },
     {
-      "trans": [   -96.1938, 490.8017, 461.1326], // up on high beams, cross from ^
+      "trans": [ -96.1938, 490.8017, 461.1326], // up on high beams, cross from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   -96.1938, 490.8017, 461.1326, 10],
+      "bsphere": [ -96.1938, 490.8017, 461.1326, 10],
       "lump": {
         "name":"ltowerb-skill-04"
       }
     }//,
-    
+
   ]
 }

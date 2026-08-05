@@ -47,18 +47,18 @@
 
   "actors" : [
     {
-      "trans": [  340.0960, 20.3611, 1204.6052], // IJ beam oob in center
+      "trans": [ 340.0960, 20.3611, 1204.6052], // IJ beam oob in center
       "etype": "tape",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  340.0960, 20.3611, 1204.6052, 10],
+      "bsphere": [ 340.0960, 20.3611, 1204.6052, 10],
       "lump": {
         "name":"wascitya-tape-1"
       }
     },
-    
+
     {
-      "trans": [ 390.1036, 23.1345, 1251.3376], // up in corner of lobby, behind beam on ceiling 
+      "trans": [ 390.1036, 23.1345, 1251.3376], // up in corner of lobby, behind beam on ceiling
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -68,7 +68,7 @@
       }
     },
     {
-      "trans": [ 365.5348, 21.2056, 1272.1596], // on top of lamp in lobby 
+      "trans": [ 365.5348, 21.2056, 1272.1596], // on top of lamp in lobby
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -77,13 +77,13 @@
         "name":"gungame-skill-02"
       }
     },
-    
+
     {
-      "trans": [  354.1975, 12.2186, 1254.1358], // 
+      "trans": [ 354.1975, 12.2186, 1254.1358], //
       "etype": "fuel-cell",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0, 0.11317040771245956, 0.0, 0.9935755729675293],
-      "bsphere": [  354.1975, 12.2186, 1254.1358, 6.928219795227051],
+      "bsphere": [ 354.1975, 12.2186, 1254.1358, 6.928219795227051],
       "lump": {
         "name": "gungame-fuel-cell",
         "level-idx": ["int32", 19],
@@ -91,6 +91,6 @@
         "vag": "tess139"
       }
     }//,
-    
+
   ]
 }

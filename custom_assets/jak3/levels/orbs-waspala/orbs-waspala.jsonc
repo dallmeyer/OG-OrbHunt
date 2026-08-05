@@ -47,52 +47,52 @@
 
   "actors" : [
     {
-      "trans": [ 2153.62,  197.72,  406.53 ], // way oob on mountains in desert background, long ass hover out the top of throne room
+      "trans": [ 2153.62, 197.72, 406.53 ], // way oob on mountains in desert background, long ass hover out the top of throne room
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
-      "bsphere": [ 2153.62,  197.72,  406.53 , 10],
+      "bsphere": [ 2153.62, 197.72, 406.53 , 10],
       "lump": {
         "name":"waspala-tape-01"
       }
     },
 
     {
-      "trans": [  1979.0856, 253.1992, -427.3380], // IJ pillar, hint for next orb
+      "trans": [ 1979.0856, 253.1992, -427.3380], // IJ pillar, hint for next orb
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  1979.0856, 253.1992, -427.3380, 10],
+      "bsphere": [ 1979.0856, 253.1992, -427.3380, 10],
       "lump": {
         "name":"waspala-skill-01"
       }
     },
     {
-      "trans": [  1993.5583, 263.6470, -441.6374], // in drainage hole of center water feature, uppercut from IJ wall^
+      "trans": [ 1993.5583, 263.6470, -441.6374], // in drainage hole of center water feature, uppercut from IJ wall^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  1993.5583, 263.6470, -441.6374, 10],
+      "bsphere": [ 1993.5583, 263.6470, -441.6374, 10],
       "lump": {
         "name":"waspala-skill-02"
       }
     },
     {
-      "trans": [  2031.4676, 269.0754, -502.3874], // up on IJ wall
+      "trans": [ 2031.4676, 269.0754, -502.3874], // up on IJ wall
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2031.4676, 269.0754, -502.3874, 10],
+      "bsphere": [ 2031.4676, 269.0754, -502.3874, 10],
       "lump": {
         "name":"waspala-skill-03"
       }
     },
     {
-      "trans": [  2063.0305, 240.3232, -445.3686], // in drainage hole of center water feature, uppercut from IJ wall^
+      "trans": [ 2063.0305, 240.3232, -445.3686], // in drainage hole of center water feature, uppercut from IJ wall^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2063.0305, 240.3232, -445.3686, 10],
+      "bsphere": [ 2063.0305, 240.3232, -445.3686, 10],
       "lump": {
         "name":"waspala-skill-04"
       }
@@ -101,7 +101,7 @@
     {
       "trans": [ 2001.0955810546875, 238.13099670410156, -430.2882995605469 ], // damus on throne
       "etype": "damus-npc",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0, 0.0, 0.0, 1.0],
       "bsphere": [ 2001.0955810546875, 238.13099670410156, -430.2882995605469, 6.9282331466674805 ],
       "lump": {
@@ -110,11 +110,11 @@
       }
     },
     {
-      "trans": [  2001.09,  249.99,  -415.41 ], // 
+      "trans": [ 2001.09, 249.99, -415.41 ], //
       "etype": "fuel-cell",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
-      "bsphere": [ 2001.09,  249.99,  -415.41 , 6.928203105926514],
+      "bsphere": [ 2001.09, 249.99, -415.41 , 6.928203105926514],
       "lump": {
         "name": "waspala-fuel-cell",
         "level-idx": ["int32", 63],
@@ -122,6 +122,6 @@
         "vag": "dam124"
       }
     }//,
-    
+
   ]
 }

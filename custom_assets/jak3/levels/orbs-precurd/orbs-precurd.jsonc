@@ -49,103 +49,103 @@
     {
       "trans": [8.6700, 201.00, 575.8497 ], // behind far side fake door
       "etype": "tape",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0000, 0.7065, 0.0000, 0.7077],
       "bsphere": [ 8.6700, 201.00, 575.8497 , 10],
       "lump": {
         "name":"precurd-tape-01"
       }
-    },  
+    },
     {
       "trans": [8.6700, 201.00, 575.8497 ], // warp to factoryb
       "etype": "warp-gate",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0000, 0.7065, 0.0000, 0.7077],
       "bsphere": [ 8.6700, 201.00, 575.8497 , 10],
       "lump": {
         "name":"precurd-warp-gate-1",
         "scale": ["float", 2.0]
       }
-    },  
+    },
 
     {
-      "trans": [ -145.66,  216.48,  287.02 ], // green lamp on fake door side
+      "trans": [ -145.66, 216.48, 287.02 ], // green lamp on fake door side
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ -145.66,  216.48,  287.02 , 10],
+      "bsphere": [ -145.66, 216.48, 287.02 , 10],
       "lump": {
         "name":"precurd-skill-01"
         // "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [ -150.00,  223.31,  284.11 ], // up above fake door from ^
+      "trans": [ -150.00, 223.31, 284.11 ], // up above fake door from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ -150.00,  223.31,  284.11 , 10],
+      "bsphere": [ -150.00, 223.31, 284.11 , 10],
       "lump": {
         "name":"precurd-skill-02"
       }
     },
     {
-      "trans": [-155.77,  218.73,  274.79  ], // up above fake door from ^^
+      "trans": [-155.77, 218.73, 274.79 ], // up above fake door from ^^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ -155.77,  218.73,  274.79  , 10],
+      "bsphere": [ -155.77, 218.73, 274.79 , 10],
       "lump": {
         "name":"precurd-skill-03"
       }
     },
     {
-      "trans": [  -141.8650, 229.9752, 271.6652], // extended from ^^ (or maybe shitty abah)
+      "trans": [ -141.8650, 229.9752, 271.6652], // extended from ^^ (or maybe shitty abah)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -141.8650, 229.9752, 271.6652, 10],
+      "bsphere": [ -141.8650, 229.9752, 271.6652, 10],
       "lump": {
         "name":"precurd-skill-04"
       }
     },
     {
-      "trans": [  171.1500, 202.5166, 264.6708], // corner right next to entrance door
+      "trans": [ 171.1500, 202.5166, 264.6708], // corner right next to entrance door
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  171.1500, 202.5166, 264.6708, 10],
+      "bsphere": [ 171.1500, 202.5166, 264.6708, 10],
       "lump": {
         "name":"precurd-skill-05",
         "bob-scale": ["float", 0.4]
       }
     },
     {
-      "trans": [ 160.75,  214.84,  278.50 ], // green lamp at entrance door
+      "trans": [ 160.75, 214.84, 278.50 ], // green lamp at entrance door
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 160.75,  214.84,  278.50 , 10],
+      "bsphere": [ 160.75, 214.84, 278.50 , 10],
       "lump": {
         "name":"precurd-skill-06"
       }
     },
     {
-      "trans": [ 171.04,  223.59,  264.38 ], // up from ^
+      "trans": [ 171.04, 223.59, 264.38 ], // up from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  171.04,  223.59,  264.38 , 10],
+      "bsphere": [ 171.04, 223.59, 264.38 , 10],
       "lump": {
         "name":"precurd-skill-07"
       }
     },
     {
-      "trans": [ -19.88,  203.81,  618.92 ], // lil precur ledge behind warp
+      "trans": [ -19.88, 203.81, 618.92 ], // lil precur ledge behind warp
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ -19.88,  203.81,  618.92  , 10],
+      "bsphere": [ -19.88, 203.81, 618.92 , 10],
       "lump": {
         "name":"precurd-skill-08",
         "pickup-amount": ["float", 2.0] // abah hint
@@ -154,7 +154,7 @@
     {
       "trans": [ -20.1322, 222.8086, 615.3251], // abah from ^, up between cables behind warp
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ -20.1322, 222.8086, 615.3251, 10],
       "lump": {
@@ -162,11 +162,11 @@
       }
     },
     {
-      "trans": [15.72,  202.09,  575.80 ], // lol corner just behind warp
+      "trans": [15.72, 202.09, 575.80 ], // lol corner just behind warp
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 15.72,  202.09,  575.80 , 10],
+      "bsphere": [ 15.72, 202.09, 575.80 , 10],
       "lump": {
         "name":"precurd-skill-10"
       }
@@ -174,7 +174,7 @@
     {
       "trans": [ 31.0013, 214.8136, 572.2695], // green bulbs around warp gate
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 31.0013, 214.8136, 572.2695, 10],
       "lump": {
@@ -185,7 +185,7 @@
     {
       "trans": [ 21.2736, 228.7852, 572.5061], // green bulbs around warp gate, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 21.2736, 228.7852, 572.5061, 10],
       "lump": {
@@ -195,7 +195,7 @@
     {
       "trans": [ 4.9627, 233.4160, 572.3522], // green bulbs around warp gate
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 4.9627, 233.4160, 572.3522, 10],
       "lump": {
@@ -205,7 +205,7 @@
     {
       "trans": [ -12.7309, 219.8242, 572.0300], // green bulbs around warp gate
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ -12.7309, 219.8242, 572.0300, 10],
       "lump": {
@@ -213,11 +213,11 @@
       }
     },
     {
-      "trans": [ 7.06,  199.8306,  560.60 ], // shoutout jord
+      "trans": [ 7.06, 199.8306, 560.60 ], // shoutout jord
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 7.06,  199.8306,  560.60 , 10],
+      "bsphere": [ 7.06, 199.8306, 560.60 , 10],
       "lump": {
         "name":"precurd-skill-15"
       }
@@ -225,7 +225,7 @@
     {
       "trans": [ 166.8959, 199.2430, 240.5120], // lol under invisible floor near starting elevator. spin -> ledge grab
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 166.8959, 199.2430, 240.5120 , 10],
       "lump": {
@@ -235,7 +235,7 @@
     {
       "trans": [ 172.6945, 201.6097, 233.1705], // slippery ledge around corner from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 172.6945, 201.6097, 233.1705 , 10],
       "lump": {
@@ -255,27 +255,27 @@
 
 
     {
-      "trans": [ -132.70,  241.38,  265.75 ], // green bulb above fake door
+      "trans": [ -132.70, 241.38, 265.75 ], // green bulb above fake door
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ -132.70,  241.38,  265.75 , 10],
+      "bsphere": [ -132.70, 241.38, 265.75 , 10],
       "lump": {
         "name":"precurd-skill-hover-01",
         "pickup-amount": ["float", 3.0] // hover
       }
     },
     {
-      "trans": [ 146.49,  241.10,  257.73  ], // green bulb above entrance door
+      "trans": [ 146.49, 241.10, 257.73 ], // green bulb above entrance door
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 146.49,  241.10,  257.73 , 10],
+      "bsphere": [ 146.49, 241.10, 257.73 , 10],
       "lump": {
         "name":"precurd-skill-hover-02",
         "pickup-amount": ["float", 3.0] // hover
       }
     }
-    
+
   ]
 }

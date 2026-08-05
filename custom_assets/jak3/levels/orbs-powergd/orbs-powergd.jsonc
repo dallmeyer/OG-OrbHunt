@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 967.0237, -203.7053, 1217.5235], // under map in corner 
+      "trans": [ 967.0237, -203.7053, 1217.5235], // under map in corner
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -57,30 +57,30 @@
       }
     },
     {
-      "trans": [ 1172.46,  -200.00,  1108.14 ], // 
+      "trans": [ 1172.46, -200.00, 1108.14 ], //
       "etype": "warp-gate",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0000, 0.0, 0.0000, 1.0],
-      "bsphere": [ 1172.46,  -200.00,  1108.14 , 10],
+      "bsphere": [ 1172.46, -200.00, 1108.14 , 10],
       "lump": {
         "name": "powergd-warp-gate-1"
       }
     },
 
     {
-      "trans": [  1120.0261, -198.6893, 1120.0101], // dead center
+      "trans": [ 1120.0261, -198.6893, 1120.0101], // dead center
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  1120.0261, -198.6893, 1120.0101, 10],
+      "bsphere": [ 1120.0261, -198.6893, 1120.0101, 10],
       "lump": {
         "name":"powergd-skill-01"
       }
     },
     {
-      "trans": [  1135.4073, -199.9361, 1166.2866], // near random triangle with collision and concrete texture
+      "trans": [ 1135.4073, -199.9361, 1166.2866], // near random triangle with collision and concrete texture
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 1135.4073, -199.9361, 1166.2866, 10],
       "lump": {
@@ -89,15 +89,15 @@
       }
     },
     {
-      "trans": [  1055.2021, -199.6976, 1058.2708], // behind far corner
+      "trans": [ 1055.2021, -199.6976, 1058.2708], // behind far corner
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  1055.2021, -199.6976, 1058.2708, 10],
+      "bsphere": [ 1055.2021, -199.6976, 1058.2708, 10],
       "lump": {
         "name":"powergd-skill-03"
       }
     }//,
-    
+
   ]
 }

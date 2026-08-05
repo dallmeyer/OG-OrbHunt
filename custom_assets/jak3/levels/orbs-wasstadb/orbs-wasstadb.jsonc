@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 2324.3581, 26.7058, -416.7525], // under/inside final platform 
+      "trans": [ 2324.3581, 26.7058, -416.7525], // under/inside final platform
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -58,60 +58,60 @@
     },
 
     {
-      "trans": [  2378.6196, 48.6402, -445.3172], // on small standpt on side of course near ground pound spot
+      "trans": [ 2378.6196, 48.6402, -445.3172], // on small standpt on side of course near ground pound spot
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2378.6196, 48.6402, -445.3172, 10],
+      "bsphere": [ 2378.6196, 48.6402, -445.3172, 10],
       "lump": {
         "name":"wasstadb-skill-01"
       }
     },
     {
-      "trans": [  2348.34,  41.60,  -458.75], // inside training dummy on small ledge prob nobody notices
+      "trans": [ 2348.34, 41.60, -458.75], // inside training dummy on small ledge prob nobody notices
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2348.34,  41.60,  -458.75, 10],
+      "bsphere": [ 2348.34, 41.60, -458.75, 10],
       "lump": {
         "name":"wasstadb-skill-02",
         "alt-actor": "wstd-training-dummy-1"
       }
     },
     {
-      "trans": [  2318.08,  11.37,  -498.78 ], // bottom of support near lava, under platforms
+      "trans": [ 2318.08, 11.37, -498.78 ], // bottom of support near lava, under platforms
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 2318.08,  11.37,  -498.78 , 10],
+      "bsphere": [ 2318.08, 11.37, -498.78 , 10],
       "lump": {
         "name":"wasstadb-skill-03"
       }
     },
     {
-      "trans": [   2289.0207, 49.3570, -515.2686 ], // bottom of flagpole in NW corner
+      "trans": [ 2289.0207, 49.3570, -515.2686 ], // bottom of flagpole in NW corner
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2289.0207, 49.3570, -515.2686, 10],
+      "bsphere": [ 2289.0207, 49.3570, -515.2686, 10],
       "lump": {
         "name":"wasstadb-skill-04",
         "pickup-amount": ["float", 2.0]
       }
     },
     {
-      "trans": [   2288.9084, 68.6649, -513.4479], // top of flagpole in NW corner, abah from^
+      "trans": [ 2288.9084, 68.6649, -513.4479], // top of flagpole in NW corner, abah from^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2288.9084, 68.6649, -513.4479, 10],
+      "bsphere": [ 2288.9084, 68.6649, -513.4479, 10],
       "lump": {
         "name":"wasstadb-skill-05",
         "bob-scale": ["float", -1.0]
       }
     },
     {
-      "trans": [ 2358.6955, 49.4779, -447.5401], // after groundpound panel, jump back up inside structure 
+      "trans": [ 2358.6955, 49.4779, -447.5401], // after groundpound panel, jump back up inside structure
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -120,6 +120,6 @@
         "name":"wasstadb-skill-06"
       }
     }//,
-    
+
   ]
 }

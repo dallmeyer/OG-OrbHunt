@@ -1412,6 +1412,8 @@
       (quaternion-set! (-> arg0 quat)  0.0173  0.9667  0.0356  0.2525))
     (('crate-1060) (set-vector-meters! (-> arg0 extra trans) 243.2285 104.6948 -140.0344)
       (quaternion-set! (-> arg0 quat)  -0.0000  -0.5209  0.0000  0.8535))
+    (('light-eco-vent-29) (set-vector-meters! (-> arg0 extra trans) -87.7718 156.6684 -185.1001)
+      (quaternion-set! (-> arg0 quat)  0.2347  0.0212  -0.0207  0.9716))
     )
   (none))
 
@@ -1510,6 +1512,7 @@
         (else
           (when (not (or (name= (-> alt-actor extra process state name) 'die)
                          (name= (-> alt-actor extra process state name) 'die-hidden)
+                         (name= (-> alt-actor extra process state name) 'die-falling)
                          (name= (-> alt-actor extra process state name) 'joint-exploder-shatter)
                          ))
             ;; alt-actor is not dead/triggered, prevent pickup/hide

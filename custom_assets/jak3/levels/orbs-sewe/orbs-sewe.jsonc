@@ -47,11 +47,11 @@
 
   "actors" : [
     {
-      "trans": [ -347.86,  -150.99,  -52.07 ], // between oob enclosures where robot is trapped, dive under water
+      "trans": [ -347.86, -150.99, -52.07 ], // between oob enclosures where robot is trapped, dive under water
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
-      "bsphere": [ -347.86,  -150.99,  -52.07 , 10],
+      "bsphere": [ -347.86, -150.99, -52.07 , 10],
       "lump": {
         "name":"sewe-tape-01"
       }
@@ -60,15 +60,15 @@
     {
       "trans": [ -255.7750, -175.6342, -20.1535], // left corner underwater where you dive under fence
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -255.7750, -175.6342, -20.1535, 10],
+      "bsphere": [ -255.7750, -175.6342, -20.1535, 10],
       "lump": {
         "name":"sewe-skill-01"
       }
     },
     {
-      "trans": [ -262.5164, -167.7772, 10.9353], // behind twin pipes on first level of waterfalls 
+      "trans": [ -262.5164, -167.7772, 10.9353], // behind twin pipes on first level of waterfalls
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -78,7 +78,7 @@
       }
     },
     {
-      "trans": [ -362.2338, -128.1501, -45.7437], // up above lamp in corner at top of waterfalls 
+      "trans": [ -362.2338, -128.1501, -45.7437], // up above lamp in corner at top of waterfalls
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -88,7 +88,7 @@
       }
     },
     {
-      "trans": [ -330.3847, -124.0729, -38.4754], // up on pipe above top waterfall (similar climb as ^) 
+      "trans": [ -330.3847, -124.0729, -38.4754], // up on pipe above top waterfall (similar climb as ^)
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -138,6 +138,6 @@
         "name":"sewe-skill-08"
       }
     }//,
-    
+
   ]
 }

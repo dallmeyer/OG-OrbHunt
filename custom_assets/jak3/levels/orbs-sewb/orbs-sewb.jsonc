@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 286.7774, -109.0989, -0.7289], // in middle, up inside pipe (no collision just hover up) 
+      "trans": [ 286.7774, -109.0989, -0.7289], // in middle, up inside pipe (no collision just hover up)
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -58,7 +58,7 @@
     },
 
     {
-      "trans": [ 315.6992, -128.2622, 53.5209], // on lip of pipe near poision gas platforms 
+      "trans": [ 315.6992, -128.2622, 53.5209], // on lip of pipe near poision gas platforms
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -68,7 +68,7 @@
       }
     },
     {
-      "trans": [ 260.9297, -73.4969, -34.3535], // way up on top of pipe, use switch + platform to go up 
+      "trans": [ 260.9297, -73.4969, -34.3535], // way up on top of pipe, use switch + platform to go up
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -77,6 +77,6 @@
         "name":"sewb-skill-02"
       }
     }//,
-    
+
   ]
 }

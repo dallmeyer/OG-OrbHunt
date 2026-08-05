@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ -60.2615, 5.2248, -57.9878], // oob corner, hover up from elevator or single hole in ceiling on opposite side 
+      "trans": [ -60.2615, 5.2248, -57.9878], // oob corner, hover up from elevator or single hole in ceiling on opposite side
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -59,34 +59,34 @@
     {
       "trans": [7.6240, 1.9173, 114.7593 ], // elevator back to templed
       "etype": "warp-gate",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0000, 0.9479, 0.0000, -0.3183],
-      "bsphere": [7.6240, 1.9173, 114.7593,  10],
+      "bsphere": [7.6240, 1.9173, 114.7593, 10],
       "lump": {
         "name": "comba-warp-gate-1"
       }
     },
 
     {
-      "trans": [  65.3619, 30.7446, 10.1567], // on top of lamp thing in center near ceiling (jetboard-faster proxy off lip of QP)
+      "trans": [ 65.3619, 30.7446, 10.1567], // on top of lamp thing in center near ceiling (jetboard-faster proxy off lip of QP)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  65.3619, 30.7446, 10.1567, 10],
+      "bsphere": [ 65.3619, 30.7446, 10.1567, 10],
       "lump": {
         "name":"comba-skill-01"
       }
     },
     {
-      "trans": [ -25.5316, 20.9246, -11.3236], // up among cables 
+      "trans": [ -25.5316, 20.9246, -11.3236], // up among cables
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ -25.5316, 20.9246, -11.3236, 10],
       "lump": {
         "name":"comba-skill-02"
       }
     }//,
-        
+
   ]
 }

@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 423.9182, 3.1830, -204.8644], // oob kinda near ctygen 
+      "trans": [ 423.9182, 3.1830, -204.8644], // oob kinda near ctygen
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -58,53 +58,53 @@
     },
 
     {
-      "trans": [  548.8572, 16.9844, -259.3113], // support beam for grind rail
+      "trans": [ 548.8572, 16.9844, -259.3113], // support beam for grind rail
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  548.8572, 16.9844, -259.3113, 10],
+      "bsphere": [ 548.8572, 16.9844, -259.3113, 10],
       "lump": {
         "name":"ctyslumb-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  549.7073, 36.4378, -261.6217], // abah from ^ up over sign to next orb
+      "trans": [ 549.7073, 36.4378, -261.6217], // abah from ^ up over sign to next orb
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  549.7073, 36.4378, -261.6217, 10],
+      "bsphere": [ 549.7073, 36.4378, -261.6217, 10],
       "lump": {
         "name":"ctyslumb-skill-02"
       }
     },
     {
-      "trans": [   540.9146, 31.2421, -277.2693], // behind bushes up on windowsill, abah from ^^ to concussor bullshit
+      "trans": [ 540.9146, 31.2421, -277.2693], // behind bushes up on windowsill, abah from ^^ to concussor bullshit
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  540.9146, 31.2421, -277.2693, 10],
+      "bsphere": [ 540.9146, 31.2421, -277.2693, 10],
       "lump": {
         "name":"ctyslumb-skill-03"
       }
     },
     {
-      "trans": [  395.9884,  37.2598,  -11.5370], // more up on ledge behind billboard near ctygenb, concussor up from skill-205
+      "trans": [ 395.9884, 37.2598, -11.5370], // more up on ledge behind billboard near ctygenb, concussor up from skill-205
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  395.9884,  37.2598,  -11.5370, 10],
+      "bsphere": [ 395.9884, 37.2598, -11.5370, 10],
       "lump": {
         "name":"ctyslumb-skill-04",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  464.0697, 53.4630, -3.3176], // up on top of buildings, abah from ^ and sliiiiiide
+      "trans": [ 464.0697, 53.4630, -3.3176], // up on top of buildings, abah from ^ and sliiiiiide
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   464.0697, 53.4630, -3.3176, 10],
+      "bsphere": [ 464.0697, 53.4630, -3.3176, 10],
       "lump": {
         "name":"ctyslumb-skill-05"
       }
@@ -151,11 +151,11 @@
       }
     },
     {
-      "trans": [  615.1626, 43.7958, -97.1635], // up on high ledge in middle tall buildings, kinda SE, follow from ^
+      "trans": [ 615.1626, 43.7958, -97.1635], // up on high ledge in middle tall buildings, kinda SE, follow from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  615.1626, 43.7958, -97.1635, 10],
+      "bsphere": [ 615.1626, 43.7958, -97.1635, 10],
       "lump": {
         "name":"ctyslumb-skill-10"
       }
@@ -303,14 +303,14 @@
         "name":"ctyslumb-skill-24"
       }
     },
-    
+
 
 
     {
       "trans": [ 393.6899, 7.9418, -53.9724 ], // samos by white barrier
       "etype": "samos-npc",
-      "game_task": 0, 
-      "quat" : [  0.0000, 0.6918, 0.0000, -0.7220],
+      "game_task": 0,
+      "quat" : [ 0.0000, 0.6918, 0.0000, -0.7220],
       "bsphere": [ 393.6899, 7.9418, -53.9724 , 6.928242206573486 ],
       "lump": {
         "name": "ctyslumb-samos-npc",
@@ -318,9 +318,9 @@
       }
     },
     {
-      "trans": [ 393.6899, 10.9418, -53.9724 ], // 
+      "trans": [ 393.6899, 10.9418, -53.9724 ], //
       "etype": "fuel-cell",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
       "bsphere": [ 393.6899, 10.9418, -53.9724 , 6.928242206573486 ],
       "lump": {
@@ -329,6 +329,6 @@
         "alt-actor": "ctyslumb-samos-npc"
       }
     }//,
-    
+
   ]
 }

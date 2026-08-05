@@ -49,61 +49,61 @@
     {
       "trans": [ 40.8100, 548.8240, -180.4511], // oob near windows
       "etype": "tape",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 40.8100, 548.8240, -180.4511, 10],
       "lump": {
         "name":"precura-tape-01"
       }
     },
-    
+
     {
-      "trans": [  -46.1136, 554.7822, -151.8924], // on thing on wall of first room
+      "trans": [ -46.1136, 554.7822, -151.8924], // on thing on wall of first room
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -46.1136, 554.7822, -151.8924, 10],
+      "bsphere": [ -46.1136, 554.7822, -151.8924, 10],
       "lump": {
         "name":"precura-skill-01"
       }
     },
     {
-      "trans": [  -52.1220, 561.5046, -141.9591], // on light up on wall of first room, jump from ^
+      "trans": [ -52.1220, 561.5046, -141.9591], // on light up on wall of first room, jump from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -52.1220, 561.5046, -141.9591, 10],
+      "bsphere": [ -52.1220, 561.5046, -141.9591, 10],
       "lump": {
         "name":"precura-skill-02",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  -31.0884, 577.7247, -164.9638], // way up on wall of first room, abah from ^ and extendo around to other side
+      "trans": [ -31.0884, 577.7247, -164.9638], // way up on wall of first room, abah from ^ and extendo around to other side
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -31.0884, 577.7247, -164.9638, 10],
+      "bsphere": [ -31.0884, 577.7247, -164.9638, 10],
       "lump": {
         "name":"precura-skill-03"
       }
     },
     {
-      "trans": [  51.5525, 568.4065, -164.0498], // on thing on wall of first room
+      "trans": [ 51.5525, 568.4065, -164.0498], // on thing on wall of first room
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  51.5525, 568.4065, -164.0498, 10],
+      "bsphere": [ 51.5525, 568.4065, -164.0498, 10],
       "lump": {
         "name":"precura-skill-04"
       }
     },
     {
-      "trans": [  65.4943, 590.8187, -151.2150], // way up on wall of first room, climb up from ^ bunch of concussors and extendos
+      "trans": [ 65.4943, 590.8187, -151.2150], // way up on wall of first room, climb up from ^ bunch of concussors and extendos
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  65.4943, 590.8187, -151.2150, 10],
+      "bsphere": [ 65.4943, 590.8187, -151.2150, 10],
       "lump": {
         "name":"precura-skill-05"
       }
@@ -111,7 +111,7 @@
     {
       "trans": [ 71.3763, 548.6918, -101.8235], // behind totem thing before jak section
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 71.3763, 548.6918, -101.8235, 10],
       "lump": {
@@ -121,7 +121,7 @@
     {
       "trans": [ -49.6178, 565.2846, -80.9171], // up on light(?) above door to mech section
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ -49.6178, 565.2846, -80.9171, 10],
       "lump": {
@@ -131,7 +131,7 @@
     {
       "trans": [ -65.8064, 566.7640, -98.6597], // up above totem thing before mech section
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ -65.8064, 566.7640, -98.6597, 10],
       "lump": {
@@ -141,7 +141,7 @@
     {
       "trans": [ 7.9921, 573.6067, -156.2079], // jetboard go brr
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 7.9921, 573.6067, -156.2079, 10],
       "lump": {
@@ -149,26 +149,26 @@
       }
     },
     {
-      "trans": [  37.1536, 549.1796, -115.3424], // in crevice next to center stage area
+      "trans": [ 37.1536, 549.1796, -115.3424], // in crevice next to center stage area
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  37.1536, 549.1796, -115.3424, 10],
+      "bsphere": [ 37.1536, 549.1796, -115.3424, 10],
       "lump": {
         "name":"precura-skill-10",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  38.8519, 570.3037, -113.6109], // up in rafters, abah from ^
+      "trans": [ 38.8519, 570.3037, -113.6109], // up in rafters, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  38.8519, 570.3037, -113.6109, 10],
+      "bsphere": [ 38.8519, 570.3037, -113.6109, 10],
       "lump": {
         "name":"precura-skill-11"
       }
     }//,
-    
+
   ]
 }

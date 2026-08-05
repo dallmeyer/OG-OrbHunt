@@ -60,7 +60,7 @@
     {
       "trans": [ 165.0544, -134.6385, 18.2494], // behind pipe at end of hallway with lasers
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 165.0544, -134.6385, 18.2494, 10],
       "lump": {
@@ -68,7 +68,7 @@
       }
     },
     {
-      "trans": [ 129.3405, -116.1964, 36.6240], // up on pipe running down middle of first room over water, super extended ff, then concussor to neutralize momentum 
+      "trans": [ 129.3405, -116.1964, 36.6240], // up on pipe running down middle of first room over water, super extended ff, then concussor to neutralize momentum
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -98,7 +98,7 @@
       }
     },
     {
-      "trans": [ 145.9297, -132.7796, 42.3290], // on mid seam ledge of mid pipe on wall over void 
+      "trans": [ 145.9297, -132.7796, 42.3290], // on mid seam ledge of mid pipe on wall over void
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -108,7 +108,7 @@
       }
     },
     {
-      "trans": [ 146.3253, -143.9353, 32.2893], // on lower seam ledge of first pipe on wall over void 
+      "trans": [ 146.3253, -143.9353, 32.2893], // on lower seam ledge of first pipe on wall over void
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -118,7 +118,7 @@
       }
     },
     {
-      "trans": [ 152.0787, -126.0509, 8.4390], // on lip of door frame coming out of first hallway 
+      "trans": [ 152.0787, -126.0509, 8.4390], // on lip of door frame coming out of first hallway
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -128,7 +128,7 @@
       }
     },
     {
-      "trans": [ 87.7730, -118.0026, 33.2933], // up on wall above pipes along path between first and second rooms 
+      "trans": [ 87.7730, -118.0026, 33.2933], // up on wall above pipes along path between first and second rooms
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -169,12 +169,12 @@
         "name":"sewc-skill-11"
       }
     },
-    
+
     // CRATES
     {
       "trans": [ 23.2982, -135.4979, -4.0721], // water ledge below pipe (who knew this was here???)
       "etype": "skill-crate",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0, 0.0, 0.0, 1.0],
       "bsphere": [ 23.2982, -135.4979, -4.0721, 10],
       "lump": {
@@ -187,6 +187,6 @@
         ]
       }
     }//,
-    
+
   ]
 }

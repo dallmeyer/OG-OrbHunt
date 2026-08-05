@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 276.5724, 532.9877, -134.6134], // inside pipe under erol 
+      "trans": [ 276.5724, 532.9877, -134.6134], // inside pipe under erol
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -57,22 +57,22 @@
       }
     },
     {
-      "trans": [ 249.97,  524.59,  -155.17  ], // warp to vinroom
+      "trans": [ 249.97, 524.59, -155.17 ], // warp to vinroom
       "etype": "warp-gate",
-      "game_task": 0, 
-      "quat" : [ 0.0000,      0.0,       0.0000,      1.0],
-      "bsphere": [  249.97,  524.59,  -155.17  , 10],
+      "game_task": 0,
+      "quat" : [ 0.0000, 0.0, 0.0000, 1.0],
+      "bsphere": [ 249.97, 524.59, -155.17 , 10],
       "lump": {
         "name":"factoryd-warp-gate-1"
       }
     },
 
     {
-      "trans": [   219.5393, 521.3468, -97.7271], // in corner under floor, ledge grab ez
+      "trans": [ 219.5393, 521.3468, -97.7271], // in corner under floor, ledge grab ez
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  219.5393, 521.3468, -97.7271, 10],
+      "bsphere": [ 219.5393, 521.3468, -97.7271, 10],
       "lump": {
         "name":"factoryd-skill-01"
       }
@@ -80,7 +80,7 @@
     {
       "trans": [ 249.9272, 523.9019, -161.7850], // "in" portal
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 249.9272, 523.9019, -161.7850, 10],
       "lump": {
@@ -138,7 +138,7 @@
       }
     },
     {
-      "trans": [ 243.1289, 534.6151, -70.8743], // in gap in ceiling just before entering erol arena 
+      "trans": [ 243.1289, 534.6151, -70.8743], // in gap in ceiling just before entering erol arena
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -149,7 +149,7 @@
       }
     },
     {
-      "trans": [ 194.6011, 537.5416, -51.4162], // in corner on left in hallway leading to erol arena 
+      "trans": [ 194.6011, 537.5416, -51.4162], // in corner on left in hallway leading to erol arena
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -159,7 +159,7 @@
       }
     },
     {
-      "trans": [ 249.1953, 542.5162, -40.6340], // near lamp in ceiling of hallway leading to erol arena 
+      "trans": [ 249.1953, 542.5162, -40.6340], // near lamp in ceiling of hallway leading to erol arena
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -169,7 +169,7 @@
       }
     },
     {
-      "trans": [ 283.4140, 526.6027, -108.5288], // behind cables against wall on right side of arena 
+      "trans": [ 283.4140, 526.6027, -108.5288], // behind cables against wall on right side of arena
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -178,11 +178,11 @@
         "name":"factoryd-skill-11"
       }
     },
-    
+
     {
       "trans": [ 270.3602, 537.9456, -128.5513 ], // erol in factoryd
       "etype": "erol-npc",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0000, -0.3719, 0.0000, 0.9282],
       "bsphere": [ 270.3602, 537.9456, -128.5513 , 6.928238391876221],
       "lump": {
@@ -191,9 +191,9 @@
       }
     },
     {
-      "trans": [ 270.3602, 542.3456, -128.5513 ], // 
+      "trans": [ 270.3602, 542.3456, -128.5513 ], //
       "etype": "fuel-cell",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
       "bsphere": [ 270.3602, 542.3456, -128.5513 , 6.928203105926514],
       "lump": {
@@ -203,6 +203,6 @@
         "vag": "ero070"
       }
     }//,
-    
+
   ]
 }

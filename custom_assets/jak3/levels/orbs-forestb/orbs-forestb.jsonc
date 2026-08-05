@@ -47,11 +47,11 @@
 
   "actors" : [
     {
-      "trans": [ -526.51,  21.62,  1223.16 ], // oob in water volume in SE
+      "trans": [ -526.51, 21.62, 1223.16 ], // oob in water volume in SE
       "etype": "tape",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ -526.51,  21.62,  1223.16 , 10],
+      "bsphere": [ -526.51, 21.62, 1223.16 , 10],
       "lump": {
         "name":"forestb-tape-01"
       }
@@ -60,7 +60,7 @@
     {
       "trans": [ -833.0523, 48.8423, 1259.5634], // up on rocks climbing cliffside
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ -833.0523, 48.8423, 1259.5634, 10],
       "lump": {
@@ -70,7 +70,7 @@
     {
       "trans": [ -869.4017, 57.4159, 1256.4667], // up on rocks climbing cliffside, follow from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ -869.4017, 57.4159, 1256.4667, 10],
       "lump": {
@@ -80,13 +80,13 @@
     {
       "trans": [ -882.8098, 64.1031, 1244.3394], // up on rocks climbing cliffside, follow from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ -882.8098, 64.1031, 1244.3394, 10],
       "lump": {
         "name":"forestb-skill-03"
       }
     }//,
-    
+
   ]
 }

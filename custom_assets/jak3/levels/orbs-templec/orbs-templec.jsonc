@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 3902.2324, 36.8756, 4608.9282], // do old token skip oob thru the bricks, jump down into water, swim around clockwise and dive under rock 
+      "trans": [ 3902.2324, 36.8756, 4608.9282], // do old token skip oob thru the bricks, jump down into water, swim around clockwise and dive under rock
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -60,7 +60,7 @@
     {
       "trans": [ 3921.9111, 35.7830, 4739.4184], // dive in water tucked into corner by tidepod section exit
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 3921.9111, 35.7830, 4739.4184, 10],
       "lump": {
@@ -69,22 +69,22 @@
       }
     },
       {
-      "trans": [  3903.1574, 76.7650, 4396.7333], // on upper edge near starting side of tidepod room
+      "trans": [ 3903.1574, 76.7650, 4396.7333], // on upper edge near starting side of tidepod room
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  3903.1574, 76.7650, 4396.7333, 10],
+      "bsphere": [ 3903.1574, 76.7650, 4396.7333, 10],
       "lump": {
         "name":"templec-skill-02",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  3903.1879, 98.5888, 4396.8911], // abah from ^, up in arch on starting side of tidepod room
+      "trans": [ 3903.1879, 98.5888, 4396.8911], // abah from ^, up in arch on starting side of tidepod room
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  3903.1879, 98.5888, 4396.8911, 10],
+      "bsphere": [ 3903.1879, 98.5888, 4396.8911, 10],
       "lump": {
         "name":"templec-skill-03"
       }
@@ -92,7 +92,7 @@
     {
       "trans": [ 4005.9716, 54.7602, 4434.7958], // behind slabs near first tide pod (might need gun/darkjak hitbox?)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 4005.9716, 54.7602, 4434.7958, 10],
       "lump": {
@@ -181,7 +181,7 @@
       }
     },
     {
-      "trans": [ 3874.4191, 72.9847, 4622.9262], // bricks in corner in gap on upper west path 
+      "trans": [ 3874.4191, 72.9847, 4622.9262], // bricks in corner in gap on upper west path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -191,7 +191,7 @@
       }
     },
     {
-      "trans": [ 4018.5502, 60.5971, 4630.5458], // torbch lower east path 
+      "trans": [ 4018.5502, 60.5971, 4630.5458], // torbch lower east path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -201,7 +201,7 @@
       }
     },
     {
-      "trans": [ 3867.5981, 50.2352, 4613.4794], // bricks down in gap near deathplane on lower west path 
+      "trans": [ 3867.5981, 50.2352, 4613.4794], // bricks down in gap near deathplane on lower west path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -211,7 +211,7 @@
       }
     },
     {
-      "trans": [ 3978.8403, 71.0276, 4397.1503], // on top of precursor statue on east wall, north end 
+      "trans": [ 3978.8403, 71.0276, 4397.1503], // on top of precursor statue on east wall, north end
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -231,7 +231,7 @@
       }
     },
     {
-      "trans": [ 3900.4523, 69.0482, 4439.5820], // behind bigger precursor statue on lower west wall, north end 
+      "trans": [ 3900.4523, 69.0482, 4439.5820], // behind bigger precursor statue on lower west wall, north end
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -241,7 +241,7 @@
       }
     },
     {
-      "trans": [ 3976.1054, 62.8035, 4580.5927], // behind precursor statue on east wall, midway 
+      "trans": [ 3976.1054, 62.8035, 4580.5927], // behind precursor statue on east wall, midway
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -251,7 +251,7 @@
       }
     },
     {
-      "trans": [ 3810.1127, 79.3208, 4547.2075], // in corner next to grindrail on outer west path 
+      "trans": [ 3810.1127, 79.3208, 4547.2075], // in corner next to grindrail on outer west path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -261,7 +261,7 @@
       }
     },
     {
-      "trans": [ 4044.4460, 94.4457, 4662.3725], // up near ceiling above torch in entrance hallway from triangle room 
+      "trans": [ 4044.4460, 94.4457, 4662.3725], // up near ceiling above torch in entrance hallway from triangle room
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -271,7 +271,7 @@
       }
     },
     {
-      "trans": [ 3964.3515, 56.3206, 4792.0722], // in crevice along wall in exit hallway to triangle room 
+      "trans": [ 3964.3515, 56.3206, 4792.0722], // in crevice along wall in exit hallway to triangle room
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -281,7 +281,7 @@
       }
     },
     {
-      "trans": [ 3977.5407, 66.0664, 4722.0019], // in precursor statue's hands SE corner 
+      "trans": [ 3977.5407, 66.0664, 4722.0019], // in precursor statue's hands SE corner
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -290,6 +290,6 @@
         "name":"templec-skill-23"
       }
     }//,
-    
+
   ]
 }

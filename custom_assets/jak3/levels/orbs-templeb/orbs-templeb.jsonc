@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 4076.3881, 80.1531, 4416.3320], // oob near rotator room exit to jetboard tests 
+      "trans": [ 4076.3881, 80.1531, 4416.3320], // oob near rotator room exit to jetboard tests
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -60,7 +60,7 @@
     {
       "trans": [ 4157.8002, 59.8996, 4613.1987], // torch in northern bit of triangle room. before hallway to rotator room
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 4157.8002, 59.8996, 4613.1987, 10],
       "lump": {
@@ -70,7 +70,7 @@
     {
       "trans": [ 4289.5922, 59.5856, 4777.0620], // torch in eastern bit of triangle room. before hallway to lower templed
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 4289.5922, 59.5856, 4777.0620, 10],
       "lump": {
@@ -168,7 +168,7 @@
       }
     },
     {
-      "trans": [  4159.7138, 67.7620, 4815.9785], // up on torch in treasure room
+      "trans": [ 4159.7138, 67.7620, 4815.9785], // up on torch in treasure room
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -178,24 +178,24 @@
       }
     },
     // {
-    //   "trans": [   4121.2294,  64.0372,  4728.5834], // 
-    //   "etype": "skill",
-    //   "game_task": 0,
-    //   "quat": [0, 0, 0, 1],
-    //   "bsphere": [ 4121.2294,  64.0372,  4728.5834, 10],
-    //   "lump": {
-    //     "name":"templeb-skill-13"
-    //   }
+    // "trans": [ 4121.2294, 64.0372, 4728.5834], //
+    // "etype": "skill",
+    // "game_task": 0,
+    // "quat": [0, 0, 0, 1],
+    // "bsphere": [ 4121.2294, 64.0372, 4728.5834, 10],
+    // "lump": {
+    // "name":"templeb-skill-13"
+    // }
     // },
     // {
-    //   "trans": [    4210.1816,  75.7331,  4704.5761], // 
-    //   "etype": "skill",
-    //   "game_task": 0,
-    //   "quat": [0, 0, 0, 1],
-    //   "bsphere": [ 4210.1816,  75.7331,  4704.5761, 10],
-    //   "lump": {
-    //     "name":"templeb-skill-14"
-    //   }
+    // "trans": [ 4210.1816, 75.7331, 4704.5761], //
+    // "etype": "skill",
+    // "game_task": 0,
+    // "quat": [0, 0, 0, 1],
+    // "bsphere": [ 4210.1816, 75.7331, 4704.5761, 10],
+    // "lump": {
+    // "name":"templeb-skill-14"
+    // }
     // },
 
 
@@ -215,6 +215,6 @@
         "pickup-amount": ["float", 3.0] // hover
       }
     }
-    
+
   ]
 }

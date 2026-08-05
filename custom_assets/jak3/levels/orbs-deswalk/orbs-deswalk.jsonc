@@ -60,7 +60,7 @@
     {
       "trans": [2411.1528, 108.9567, 575.1330], // inside tentacle closest to erol
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 2411.1528, 108.9567, 575.1330, 10],
       "lump": {
@@ -71,7 +71,7 @@
     {
       "trans": [ 2469.7207, 96.5300, 549.8059 ], // just right of final snake-stump, next to urchin
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 2469.7207, 96.5300, 549.8059 , 10],
       "lump": {
@@ -79,21 +79,21 @@
       }
     },
     {
-      "trans": [  2494.8410, 67.7981, 538.1599], // "oob" on lowest level, right of start
+      "trans": [ 2494.8410, 67.7981, 538.1599], // "oob" on lowest level, right of start
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2494.8410, 67.7981, 538.1599 , 10],
+      "bsphere": [ 2494.8410, 67.7981, 538.1599 , 10],
       "lump": {
         "name":"deswalk-skill-03"
       }
     },
     {
-      "trans": [  2345.2338, 59.1124, 539.8345], // on edge of platform lowest level around back
+      "trans": [ 2345.2338, 59.1124, 539.8345], // on edge of platform lowest level around back
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2345.2338, 59.1124, 539.8345, 10],
+      "bsphere": [ 2345.2338, 59.1124, 539.8345, 10],
       "lump": {
         "name":"deswalk-skill-04"
       }
@@ -101,7 +101,7 @@
     {
       "trans": [ 2374.1384, 72.979, 600.7272], // inside urchin around back
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 2374.1384, 72.979, 600.7272, 10],
       "lump": {
@@ -110,56 +110,56 @@
       }
     },
     {
-      "trans": [  2473.8383, 93.7569, 595.6881], // up under awning "oob" on left side, 3rd level
+      "trans": [ 2473.8383, 93.7569, 595.6881], // up under awning "oob" on left side, 3rd level
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2473.8383, 93.7569, 595.6881, 10],
+      "bsphere": [ 2473.8383, 93.7569, 595.6881, 10],
       "lump": {
         "name":"deswalk-skill-06"
       }
     },
     {
-      "trans": [ 2424.35,  96.64,  544.48 ], // inside eco tank on right
+      "trans": [ 2424.35, 96.64, 544.48 ], // inside eco tank on right
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 2424.35,  96.64,  544.48 , 10],
+      "bsphere": [ 2424.35, 96.64, 544.48 , 10],
       "lump": {
         "name":"deswalk-skill-07",
         "alt-actor": "desw-eco-tank-26"
       }
     },
     {
-      "trans": [  2458.1589, 97.1606, 592.0377 ], // in corner behind tanks and urchins on left
+      "trans": [ 2458.1589, 97.1606, 592.0377 ], // in corner behind tanks and urchins on left
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2458.1589, 97.1606, 592.0377 , 10],
+      "bsphere": [ 2458.1589, 97.1606, 592.0377 , 10],
       "lump": {
         "name":"deswalk-skill-08"
       }
     },
     {
-      "trans": [  2397.9455, 67.6878, 573.9019], // in very back
+      "trans": [ 2397.9455, 67.6878, 573.9019], // in very back
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2397.9455, 67.6878, 573.9019, 10],
+      "bsphere": [ 2397.9455, 67.6878, 573.9019, 10],
       "lump": {
         "name":"deswalk-skill-09"
       }
     }//,
     // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"wascitya-skill-2"
-    //   }
+    // "trans": [ 2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
+    // "etype": "skill",
+    // "game_task": 0,
+    // "quat" : [0, 0, 0, 1],
+    // "bsphere": [ 2430.0915, 72.5804, -96.9893, 10],
+    // "lump": {
+    // "name":"wascitya-skill-2"
+    // }
     // },
-    
+
   ]
 }

@@ -59,9 +59,9 @@
       }
     },
     {
-      "trans": [ 1128.9082, 25.5000, 1124.1481 ], // 
+      "trans": [ 1128.9082, 25.5000, 1124.1481 ], //
       "etype": "arcade",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0000, 0.9812, 0.0000, 0.1925],
       "bsphere": [ 1128.9082, 25.5000, 1124.1481 , 10],
       "lump": {
@@ -70,11 +70,11 @@
       }
     },
     {
-      "trans": [ 1129.89,  25.50,  1120.49 ], // 
+      "trans": [ 1129.89, 25.50, 1120.49 ], //
       "etype": "warp-gate",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0000, 0.9479, 0.0000, -0.3183],
-      "bsphere": [ 1129.89,  25.50,  1120.49 , 10],
+      "bsphere": [ 1129.89, 25.50, 1120.49 , 10],
       "lump": {
         "name": "vinroom-warp-gate-1",
         "distance": ["float", 8096.0] // 2m
@@ -82,11 +82,11 @@
     },
 
     {
-      "trans": [ 1120.5,   31.05,   1120.6  ], // in center hologram (jetboard lulz)
+      "trans": [ 1120.5, 31.05, 1120.6 ], // in center hologram (jetboard lulz)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [1120.5,   31.05,   1120.6, 10],
+      "bsphere": [1120.5, 31.05, 1120.6, 10],
       "lump": {
         "name": "vinroom-skill-1",
         "bob-scale": ["float", -1.0] // no bob
@@ -97,9 +97,9 @@
     {
       "trans": [ 1123.1926, 25.4899, 1147.2973 ], // near warp gate (beam reflexor, nuke, etc)
       "etype": "skill-crate",
-      "game_task": 0, 
-      "quat" : [  -0.0001, -0.7142, -0.0000, 0.6999],
-      "bsphere": [  1123.1926, 25.4899, 1147.2973 , 10],
+      "game_task": 0,
+      "quat" : [ -0.0001, -0.7142, -0.0000, 0.6999],
+      "bsphere": [ 1123.1926, 25.4899, 1147.2973 , 10],
       "lump": {
         "name": "vinroom-crate-01",
         "crate-type": "iron",
@@ -111,11 +111,11 @@
         ]
       }
     },
-        
+
     {
       "trans": [ 1110.3145, 20.2299, 1124.9311], // vin hologhost
       "etype": "vin-npc",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0000, 0.8341, 0.0000, 0.5515],
       "bsphere": [ 1110.3145, 20.2299, 1124.9311, 6.928242206573486 ],
       "lump": {
@@ -125,17 +125,17 @@
       }
     },
     {
-      "trans": [  1110.4700, 31.4199, 1124.8675], // 
+      "trans": [ 1110.4700, 31.4199, 1124.8675], //
       "etype": "fuel-cell",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
-      "bsphere": [  1110.4700, 31.4199, 1124.8675, 6.928242206573486 ],
+      "bsphere": [ 1110.4700, 31.4199, 1124.8675, 6.928242206573486 ],
       "lump": {
         "name": "vinroom-fuel-cell",
         "level-idx": ["int32", 44],
         "alt-actor": "vinroom-vin-npc",
         "vag": "vin116"
       }
-    }    
+    }
   ]
 }

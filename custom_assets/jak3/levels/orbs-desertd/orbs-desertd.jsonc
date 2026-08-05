@@ -58,33 +58,33 @@
     },
 
     {
-      "trans": [  2183.8264, 45.4986, 1701.8399], // rock wall climb near rainbow
+      "trans": [ 2183.8264, 45.4986, 1701.8399], // rock wall climb near rainbow
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2183.8264, 45.4986, 1701.8399, 10],
+      "bsphere": [ 2183.8264, 45.4986, 1701.8399, 10],
       "lump": {
         "name":"desertd-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  2176.0043, 56.0242, 1692.8797], // rock wall climb near rainbow, abah from ^
+      "trans": [ 2176.0043, 56.0242, 1692.8797], // rock wall climb near rainbow, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2176.0043, 56.0242, 1692.8797, 10],
+      "bsphere": [ 2176.0043, 56.0242, 1692.8797, 10],
       "lump": {
         "name":"desertd-skill-02",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  2172.5407, 73.6631, 1683.3210], // rock wall climb near rainbow, abah from ^
+      "trans": [ 2172.5407, 73.6631, 1683.3210], // rock wall climb near rainbow, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2172.5407, 73.6631, 1683.3210, 10],
+      "bsphere": [ 2172.5407, 73.6631, 1683.3210, 10],
       "lump": {
         "name":"desertd-skill-03"
       }
@@ -92,7 +92,7 @@
     {
       "trans": [ 2112.1166, 6.8296, 1611.0053], // crevice in water bottom of waterfall by rainbow
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 2112.1166, 6.8296, 1611.0053, 10],
       "lump": {
@@ -110,7 +110,7 @@
       }
     },
     {
-      "trans": [ 2228.8964, 79.9616, 1981.6539], // in small gap behind pillars against main mountain, left/south of cave entrance 
+      "trans": [ 2228.8964, 79.9616, 1981.6539], // in small gap behind pillars against main mountain, left/south of cave entrance
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -120,7 +120,7 @@
       }
     },
     {
-      "trans": [ 2232.5781, 108.9045, 1989.1829], // on top of rock pillar against main mountain, left/south of cave entrance 
+      "trans": [ 2232.5781, 108.9045, 1989.1829], // on top of rock pillar against main mountain, left/south of cave entrance
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -131,7 +131,7 @@
       }
     },
     {
-      "trans": [ 3509.3422, 8.4305, 1646.8979], // under metal ramp east, almost to ocean 
+      "trans": [ 3509.3422, 8.4305, 1646.8979], // under metal ramp east, almost to ocean
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -140,6 +140,6 @@
         "name":"desertd-skill-08"
       }
     }//,
-    
+
   ]
 }

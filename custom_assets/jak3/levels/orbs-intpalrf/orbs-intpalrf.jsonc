@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 75.3154, 57.8590, 714.2145], // palace at ground level, in corner 
+      "trans": [ 75.3154, 57.8590, 714.2145], // palace at ground level, in corner
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -58,22 +58,22 @@
     },
 
     {
-      "trans": [119.5500, 409.3380, 514.8099  ], // 
+      "trans": [119.5500, 409.3380, 514.8099 ], //
       "etype": "air-train",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0.0000, 0.8609, 0.0000, 0.5086],
-      "bsphere": [119.5500, 409.3380, 514.8099  , 10],
+      "bsphere": [119.5500, 409.3380, 514.8099 , 10],
       "lump": {
         "name":"intpalrf-air-train-01",
         "distance": ["meters", 15.0]
       }
     },
     {
-      "trans": [119.5500, 409.3380, 514.8099  ], // 
+      "trans": [119.5500, 409.3380, 514.8099 ], //
       "etype": "warp-gate",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0.6314, 0, 0.7754],
-      "bsphere": [119.5500, 409.3380, 514.8099  , 10],
+      "bsphere": [119.5500, 409.3380, 514.8099 , 10],
       "lump": {
         "name":"intpalrf-warp-gate-01",
         "distance": ["meters", 10.0]
@@ -81,7 +81,7 @@
     },
 
     {
-      "trans": [ 154.9162, 416.3580, 537.1399], // climb 
+      "trans": [ 154.9162, 416.3580, 537.1399], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -92,7 +92,7 @@
       }
     },
     {
-      "trans": [ 160.5001, 426.0343, 538.4947], // climb 
+      "trans": [ 160.5001, 426.0343, 538.4947], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -103,7 +103,7 @@
       }
     },
     {
-      "trans": [ 159.3141, 444.3914, 548.2531], // climb 
+      "trans": [ 159.3141, 444.3914, 548.2531], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -113,7 +113,7 @@
       }
     },
     {
-      "trans": [ 165.3647, 450.4535, 566.9895], // climb 
+      "trans": [ 165.3647, 450.4535, 566.9895], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -123,7 +123,7 @@
       }
     },
     {
-      "trans": [ 169.4298, 463.3547, 566.2781], // climb 
+      "trans": [ 169.4298, 463.3547, 566.2781], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -133,7 +133,7 @@
       }
     },
     {
-      "trans": [ 139.7921, 448.8493, 541.2302], // climb 
+      "trans": [ 139.7921, 448.8493, 541.2302], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -143,7 +143,7 @@
       }
     },
     {
-      "trans": [ 145.8922, 459.4296, 557.8309], // climb 
+      "trans": [ 145.8922, 459.4296, 557.8309], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -153,7 +153,7 @@
       }
     },
     {
-      "trans": [ 128.4678, 459.8937, 560.5485], // climb 
+      "trans": [ 128.4678, 459.8937, 560.5485], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -163,7 +163,7 @@
       }
     },
     {
-      "trans": [ 145.0483, 437.5135, 545.4950], // climb 
+      "trans": [ 145.0483, 437.5135, 545.4950], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -173,7 +173,7 @@
       }
     },
     {
-      "trans": [ 192.0695, 444.9824, 560.1259], // climb 
+      "trans": [ 192.0695, 444.9824, 560.1259], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -183,7 +183,7 @@
       }
     },
     {
-      "trans": [ 186.9561, 469.0311, 558.4827], // climb 
+      "trans": [ 186.9561, 469.0311, 558.4827], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -193,7 +193,7 @@
       }
     },
     {
-      "trans": [ 199.0278, 468.6048, 519.1823], // climb 
+      "trans": [ 199.0278, 468.6048, 519.1823], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -203,7 +203,7 @@
       }
     },
     {
-      "trans": [ 234.6408, 456.1007, 530.6983], // climb 
+      "trans": [ 234.6408, 456.1007, 530.6983], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -213,7 +213,7 @@
       }
     },
     {
-      "trans": [ 256.6980, 466.1418, 533.4478], // climb 
+      "trans": [ 256.6980, 466.1418, 533.4478], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -223,7 +223,7 @@
       }
     },
     {
-      "trans": [ 248.6192, 481.9034, 537.7763], // climb 
+      "trans": [ 248.6192, 481.9034, 537.7763], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -233,7 +233,7 @@
       }
     },
     {
-      "trans": [ 255.6025, 481.4930, 539.9450], // climb 
+      "trans": [ 255.6025, 481.4930, 539.9450], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -243,7 +243,7 @@
       }
     },
     {
-      "trans": [ 267.4656, 444.6620, 523.2819], // climb 
+      "trans": [ 267.4656, 444.6620, 523.2819], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -253,7 +253,7 @@
       }
     },
     {
-      "trans": [ 256.0321, 440.1531, 531.7768], // climb 
+      "trans": [ 256.0321, 440.1531, 531.7768], // climb
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -261,9 +261,9 @@
       "lump": {
         "name":"intpalrf-skill-18"
       }
-    },    
+    },
     {
-      "trans": [ 268.5747, 418.7457, 522.3914], // climb (drop down) 
+      "trans": [ 268.5747, 418.7457, 522.3914], // climb (drop down)
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -273,7 +273,7 @@
       }
     },
     {
-      "trans": [ 189.0001, 409.1014, 505.1313], // in corner where roof ends, like if you were continuing to 2nd section of baron fight 
+      "trans": [ 189.0001, 409.1014, 505.1313], // in corner where roof ends, like if you were continuing to 2nd section of baron fight
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -293,7 +293,7 @@
       }
     },
     {
-      "trans": [ 160.3425, 408.5005, 482.1289], // on tiny ledge outside fence/wall 
+      "trans": [ 160.3425, 408.5005, 482.1289], // on tiny ledge outside fence/wall
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -305,7 +305,7 @@
 
     // hover orbs
     {
-      "trans": [ 202.7295, 501.0392, 571.1366], // way up top 
+      "trans": [ 202.7295, 501.0392, 571.1366], // way up top
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -316,7 +316,7 @@
       }
     },
     {
-      "trans": [ 178.9346, 497.2899, 568.7037], // way up top 
+      "trans": [ 178.9346, 497.2899, 568.7037], // way up top
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -327,7 +327,7 @@
       }
     },
     {
-      "trans": [ 157.6591, 497.2899, 582.0892], // way up top 
+      "trans": [ 157.6591, 497.2899, 582.0892], // way up top
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -338,7 +338,7 @@
       }
     },
     {
-      "trans": [ 157.2427, 497.2899, 595.6444], // way up top 
+      "trans": [ 157.2427, 497.2899, 595.6444], // way up top
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -348,6 +348,6 @@
         "pickup-amount": ["float", 3.0] // hover
       }
     }
-    
+
   ]
 }

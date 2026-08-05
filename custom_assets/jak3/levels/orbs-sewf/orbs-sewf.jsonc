@@ -59,85 +59,85 @@
     {
       "trans": [ -490.8584, -128.8874, 71.7643], // warp gate to sewk
       "etype": "warp-gate",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0000, 0.8279, 0.0000, -0.5608],
-      "bsphere": [  -490.8584, -128.8874, 71.7643, 10],
+      "bsphere": [ -490.8584, -128.8874, 71.7643, 10],
       "lump": {
         "name":"sewf-warp-gate-1"
       }
     },
 
     {
-      "trans": [   -521.6514, -127.9911, -24.2447], // ledge grab in corner gap near stinky pipes
+      "trans": [ -521.6514, -127.9911, -24.2447], // ledge grab in corner gap near stinky pipes
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   -521.6514, -127.9911, -24.2447, 10],
+      "bsphere": [ -521.6514, -127.9911, -24.2447, 10],
       "lump": {
         "name":"sewf-skill-01"
       }
     },
     {
-      "trans": [  -525.6568, -115.1519, 39.9169], // left pipe on wall above stinky pipes
+      "trans": [ -525.6568, -115.1519, 39.9169], // left pipe on wall above stinky pipes
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -525.6568, -115.1519, 39.9169, 10],
+      "bsphere": [ -525.6568, -115.1519, 39.9169, 10],
       "lump": {
         "name":"sewf-skill-02"
       }
     },
     {
-      "trans": [  -519.5316, -110.5725, 39.8915], // lip of pipe, up from ^
+      "trans": [ -519.5316, -110.5725, 39.8915], // lip of pipe, up from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -519.5316, -110.5725, 39.8915, 10],
+      "bsphere": [ -519.5316, -110.5725, 39.8915, 10],
       "lump": {
         "name":"sewf-skill-03",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  -512.8589, -96.5020, 57.7958], // up on bolt on wall, abah from ^
+      "trans": [ -512.8589, -96.5020, 57.7958], // up on bolt on wall, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   -512.8589, -96.5020, 57.7958, 10],
+      "bsphere": [ -512.8589, -96.5020, 57.7958, 10],
       "lump": {
         "name":"sewf-skill-04"
       }
     },
     {
-      "trans": [ -414.08,  -123.90,  9.49 ], // on pipes near airlock to sewe
+      "trans": [ -414.08, -123.90, 9.49 ], // on pipes near airlock to sewe
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ -414.08,  -123.90,  9.49 , 10],
+      "bsphere": [ -414.08, -123.90, 9.49 , 10],
       "lump": {
         "name":"sewf-skill-05"
       }
     },
     {
-      "trans": [  -452.5729, -142.0636, 11.2656], // lip of pipe very close to deathplane, sewe side
+      "trans": [ -452.5729, -142.0636, 11.2656], // lip of pipe very close to deathplane, sewe side
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -452.5729, -142.0636, 11.2656, 10],
+      "bsphere": [ -452.5729, -142.0636, 11.2656, 10],
       "lump": {
         "name":"sewf-skill-06"
       }
     },
     {
-      "trans": [   -493.1290, -142.0789, 20.9209], // lip of pipe very close to deathplane, dead end side
+      "trans": [ -493.1290, -142.0789, 20.9209], // lip of pipe very close to deathplane, dead end side
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -493.1290, -142.0789, 20.9209, 10],
+      "bsphere": [ -493.1290, -142.0789, 20.9209, 10],
       "lump": {
         "name":"sewf-skill-07"
       }
     }
-    
+
   ]
 }

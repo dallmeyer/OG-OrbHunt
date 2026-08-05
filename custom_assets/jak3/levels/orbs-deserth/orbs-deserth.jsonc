@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 3148.0566, 37.3260, 3357.9956], // inside/behind rightmost staircase/temple 
+      "trans": [ 3148.0566, 37.3260, 3357.9956], // inside/behind rightmost staircase/temple
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -58,32 +58,32 @@
     },
 
     {
-      "trans": [  2610.1918, 82.3485, 3212.7746], // up on top of stone sentinels on right (facing temple)
+      "trans": [ 2610.1918, 82.3485, 3212.7746], // up on top of stone sentinels on right (facing temple)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2610.1918, 82.3485, 3212.7746, 10],
+      "bsphere": [ 2610.1918, 82.3485, 3212.7746, 10],
       "lump": {
         "name":"deserth-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  2414.7385, 88.7723, 3242.9313], // up on top of stone sentinels on right (facing temple)
+      "trans": [ 2414.7385, 88.7723, 3242.9313], // up on top of stone sentinels on right (facing temple)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2414.7385, 88.7723, 3242.9313, 10],
+      "bsphere": [ 2414.7385, 88.7723, 3242.9313, 10],
       "lump": {
         "name":"deserth-skill-02"
       }
     },
     {
-      "trans": [  2356.3666, 75.7526, 3321.5380], // up on top of stone sentinels on right (facing temple)
+      "trans": [ 2356.3666, 75.7526, 3321.5380], // up on top of stone sentinels on right (facing temple)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2356.3666, 75.7526, 3321.5380, 10],
+      "bsphere": [ 2356.3666, 75.7526, 3321.5380, 10],
       "lump": {
         "name":"deserth-skill-03"
       }
@@ -345,7 +345,7 @@
       }
     },
     {
-      "trans": [ 3718.3981, 49.5514, 3863.0932], // rock climb on 2nd to last island before templex 
+      "trans": [ 3718.3981, 49.5514, 3863.0932], // rock climb on 2nd to last island before templex
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -355,7 +355,7 @@
       }
     },
     {
-      "trans": [ 3352.4516, 45.3285, 3963.3525], // rock climb on 4th to last island before templex 
+      "trans": [ 3352.4516, 45.3285, 3963.3525], // rock climb on 4th to last island before templex
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -366,7 +366,7 @@
       }
     },
     {
-      "trans": [ 3345.7517, 65.3691, 3956.6186], // rock climb on 4th to last island before templex, abah from ^ 
+      "trans": [ 3345.7517, 65.3691, 3956.6186], // rock climb on 4th to last island before templex, abah from ^
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -377,7 +377,7 @@
       }
     },
     {
-      "trans": [ 3340.8852, 79.4993, 3964.8132], // rock climb on 4th to last island before templex, abah from ^ 
+      "trans": [ 3340.8852, 79.4993, 3964.8132], // rock climb on 4th to last island before templex, abah from ^
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -448,6 +448,6 @@
       }
     }
     //,
-    
+
   ]
 }

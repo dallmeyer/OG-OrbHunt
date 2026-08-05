@@ -45,11 +45,11 @@
   // by setting "save_texture_pngs" to true in the decompiler config.
   "textures": [],
 
-  "actors" : [    
+  "actors" : [
     {
       "trans": [ 2446.2639, 21.4491, 17.2760], // get onto rooftops old leaper any% strat, then go left and around back of building
       "etype": "tape",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 2446.2639, 21.4491, 17.2760, 10],
       "lump": {
@@ -58,22 +58,22 @@
     },
 
     {
-      "trans": [  2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
+      "trans": [ 2429.1813, 56.9144, -110.1102], // slippery ledge out from building w tall windmill
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2429.1813, 56.9144, -110.1102, 10],
+      "bsphere": [ 2429.1813, 56.9144, -110.1102, 10],
       "lump": {
         "name":"wascitya-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
+      "trans": [ 2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
+      "bsphere": [ 2430.0915, 72.5804, -96.9893, 10],
       "lump": {
         "name":"wascitya-skill-02"
       }
@@ -81,7 +81,7 @@
     {
       "trans": [ 2368.9460, 17.2882, -282.3383], // in cactus outside wasstada
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 2368.9460, 17.2882, -282.3383, 10],
       "lump": {
@@ -92,7 +92,7 @@
     {
       "trans": [ 2390.5595, 15.2575, -101.5452], // in dogat near light eco vent
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 2390.5595, 15.2575, -101.5452, 10],
       "lump": {
@@ -103,7 +103,7 @@
     {
       "trans": [ 2275.5957, 31.4207, 11.0294], // in tizard towards garage
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 2275.5957, 31.4207, 11.0294, 10],
       "lump": {
@@ -112,18 +112,18 @@
       }
     },
     {
-      "trans": [ 2265.53,  55.60,  124.97 ], // archway above door to garage, leaper jumps from right side is ez
+      "trans": [ 2265.53, 55.60, 124.97 ], // archway above door to garage, leaper jumps from right side is ez
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 2265.53,  55.60,  124.97 , 10],
+      "bsphere": [ 2265.53, 55.60, 124.97 , 10],
       "lump": {
         "name":"wascitya-skill-06",
         "author": "TheGuy"
       }
     },
     {
-      "trans": [ 2426.0673, 64.9158, -133.6934], // on spike at top of building with spinning windmill 
+      "trans": [ 2426.0673, 64.9158, -133.6934], // on spike at top of building with spinning windmill
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -134,7 +134,7 @@
       }
     },
     {
-      "trans": [ 2424.5375, 83.5734, -143.7800], // up high by spinning windmill, abah concussor from ^ 
+      "trans": [ 2424.5375, 83.5734, -143.7800], // up high by spinning windmill, abah concussor from ^
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],

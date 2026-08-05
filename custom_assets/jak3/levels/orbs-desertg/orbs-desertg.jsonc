@@ -58,11 +58,11 @@
     },
 
     {
-      "trans": [  2257.7849, 23.1451, 2203.8393], // under lip of rock wall just outside cave, near sig
+      "trans": [ 2257.7849, 23.1451, 2203.8393], // under lip of rock wall just outside cave, near sig
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  2257.7849, 23.1451, 2203.8393, 10],
+      "bsphere": [ 2257.7849, 23.1451, 2203.8393, 10],
       "lump": {
         "name":"desertg-skill-01",
         "bob-scale": ["float", 0.25]
@@ -169,12 +169,12 @@
         "name":"desertg-skill-11"
       }
     },
-    
+
     {
       "trans": [ 2296.5859, 17.8694, 2222.8425], // sig by nest cave
       "etype": "sig-npc",
-      "game_task": 0, 
-      "quat" : [  0.0, 0.0, 0.0, -1.0],
+      "game_task": 0,
+      "quat" : [ 0.0, 0.0, 0.0, -1.0],
       "bsphere": [ 2296.5859, 17.8694, 2222.8425 , 6.928242206573486 ],
       "lump": {
         "name": "desertg-sig-npc",
@@ -182,9 +182,9 @@
       }
     },
     {
-      "trans": [ 2296.5859, 22.2694, 2222.8425], // 
+      "trans": [ 2296.5859, 22.2694, 2222.8425], //
       "etype": "fuel-cell",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
       "bsphere": [ 2296.5859, 22.2694, 2222.8425, 6.928242206573486 ],
       "lump": {
@@ -194,6 +194,6 @@
         "vag": "sig148"
       }
     }//,
-    
+
   ]
 }

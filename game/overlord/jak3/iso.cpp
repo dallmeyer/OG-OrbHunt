@@ -633,7 +633,7 @@ void IsoPlayVagStream(ISO_VAGCommand* user_cmd) {
           stereo_cmd->flags.paused = 0;
         }
       } else {
-        ovrld_log(LogCategory::VAG_SETUP, "IsoPlayVagStream is unpausing {}", internal_cmd->name);
+        // ovrld_log(LogCategory::VAG_SETUP, "IsoPlayVagStream is unpausing {}", internal_cmd->name);
         UnPauseVAG(internal_cmd);
       }
       if (user_cmd->priority_pq < 3) {
@@ -665,8 +665,8 @@ void IsoStopVagStream(ISO_VAGCommand* cmd) {
 
       // terminate all with this name.
       while (internal_cmd = FindMusicStreamName(cmd->name), internal_cmd) {
-        ovrld_log(LogCategory::VAG_SETUP, "IsoStopVagStream is terminating {} (1)",
-                  internal_cmd->name);
+        // ovrld_log(LogCategory::VAG_SETUP, "IsoStopVagStream is terminating {} (1)",
+        //           internal_cmd->name);
         TerminateVAG(internal_cmd);
       }
       return;
@@ -677,7 +677,7 @@ void IsoStopVagStream(ISO_VAGCommand* cmd) {
     if (!internal_cmd) {
       return;
     }
-    ovrld_log(LogCategory::VAG_SETUP, "IsoStopVagStream is terminating {} (2)", internal_cmd->name);
+    // ovrld_log(LogCategory::VAG_SETUP, "IsoStopVagStream is terminating {} (2)", internal_cmd->name);
     TerminateVAG(internal_cmd);
     return;
   }
@@ -692,8 +692,8 @@ void IsoStopVagStream(ISO_VAGCommand* cmd) {
     }
     while (internal_cmd = FindVagStreamName(cmd->name), internal_cmd) {
       flag = true;
-      ovrld_log(LogCategory::VAG_SETUP, "IsoStopVagStream is terminating {} (3)",
-                internal_cmd->name);
+      // ovrld_log(LogCategory::VAG_SETUP, "IsoStopVagStream is terminating {} (3)",
+      //           internal_cmd->name);
       TerminateVAG(internal_cmd);
     }
 
@@ -705,7 +705,7 @@ void IsoStopVagStream(ISO_VAGCommand* cmd) {
     if (!internal_cmd) {
       return;
     }
-    ovrld_log(LogCategory::VAG_SETUP, "IsoStopVagStream is terminating {} (4)", internal_cmd->name);
+    // ovrld_log(LogCategory::VAG_SETUP, "IsoStopVagStream is terminating {} (4)", internal_cmd->name);
     TerminateVAG(internal_cmd);
   }
 
@@ -786,7 +786,7 @@ void ProcessMusic() {
       vsd.art_load = 0;
       vsd.movie_art_load = 0;
       vsd.sound_handler = 0;
-      ovrld_log(LogCategory::VAG_SETUP, "ProcessMusic is changing the music to {}", vsd.name);
+      // ovrld_log(LogCategory::VAG_SETUP, "ProcessMusic is changing the music to {}", vsd.name);
       PlayMusicStream(&vsd);
     }
   }
@@ -1132,8 +1132,8 @@ u32 ISOThread() {
     for (int i = 0; i < 4; i++) {
       ISO_VAGCommand* vc = &g_aVagCmds[i];
       if (!vc->music_flag && !vc->flags.stereo_secondary && !vc->flags.scanned && vc->id) {
-        ovrld_log(LogCategory::ISO_QUEUE, "ISO thread: stopping {} since it is no longer requested",
-                  vc->name);
+        // ovrld_log(LogCategory::ISO_QUEUE, "ISO thread: stopping {} since it is no longer requested",
+        //           vc->name);
         IsoStopVagStream(vc);
       }
     }

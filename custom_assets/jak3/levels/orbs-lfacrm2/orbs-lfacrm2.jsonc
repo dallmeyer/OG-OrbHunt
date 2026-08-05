@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 247.2009, 484.4620, 87.7264], // where else could it be 
+      "trans": [ 247.2009, 484.4620, 87.7264], // where else could it be
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -57,46 +57,46 @@
       }
     },
     {
-      "trans": [ 245.92,  485.25,  49.13 ], // warp to factoryb
+      "trans": [ 245.92, 485.25, 49.13 ], // warp to factoryb
       "etype": "warp-gate",
-      "game_task": 0, 
-      "quat" : [ 0.0000,      0.0,       0.0000,       1.0],
-      "bsphere": [  245.92,  485.25,  49.13 , 10],
+      "game_task": 0,
+      "quat" : [ 0.0000, 0.0, 0.0000, 1.0],
+      "bsphere": [ 245.92, 485.25, 49.13 , 10],
       "lump": {
         "name":"lfacrm2-warp-gate-1"
       }
-    },    
+    },
     {
       "trans": [245.8070, 483.9104, 49.2262 ], // door to factoryb (factory exterior)
       "etype": "cty-door",
-      "game_task": 0, 
-      "quat" : [ 0.0000,      0.0,       0.0000,       -1.0],
-      "bsphere": [ 245.8070, 483.9104, 49.2262  , 10],
+      "game_task": 0,
+      "quat" : [ 0.0000, 0.0, 0.0000, -1.0],
+      "bsphere": [ 245.8070, 483.9104, 49.2262 , 10],
       "lump": {
         "name":"lfacrm2-cty-door-1",
         "scale": ["float", 1.6]
       }
     },
     {
-      "trans": [  233.6113, 494.8557, 61.1541], // vent on wall, concussor hj up to standpoint, then zoomwalk sideways so you can uppercut off for vvv
+      "trans": [ 233.6113, 494.8557, 61.1541], // vent on wall, concussor hj up to standpoint, then zoomwalk sideways so you can uppercut off for vvv
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  233.6113, 494.8557, 61.1541, 10],
+      "bsphere": [ 233.6113, 494.8557, 61.1541, 10],
       "lump": {
         "name":"lfacrm2-skill-01"
       }
     },
     {
-      "trans": [  247.1938, 505.8463, 68.0417], // up in middle of room near ceiling, uppercut concussor yolo from ^
+      "trans": [ 247.1938, 505.8463, 68.0417], // up in middle of room near ceiling, uppercut concussor yolo from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  247.1938, 505.8463, 68.0417, 10],
+      "bsphere": [ 247.1938, 505.8463, 68.0417, 10],
       "lump": {
         "name":"lfacrm2-skill-02"
       }
     }//,
-    
+
   ]
 }

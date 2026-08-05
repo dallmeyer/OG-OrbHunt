@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ -369.8558, 29.2578, 349.6042], // on oob corner, hover over from mhcityb 
+      "trans": [ -369.8558, 29.2578, 349.6042], // on oob corner, hover over from mhcityb
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -58,36 +58,36 @@
     },
 
     {
-      "trans": [  -297.5769, 21.3038, 524.6527], // up on arch at start
+      "trans": [ -297.5769, 21.3038, 524.6527], // up on arch at start
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   -297.5769, 21.3038, 524.6527, 10],
+      "bsphere": [ -297.5769, 21.3038, 524.6527, 10],
       "lump": {
         "name":"ltowera-skill-01"
         // "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  -307.9273, 26.0891, 533.6545], // on vine thing, follow from ^
+      "trans": [ -307.9273, 26.0891, 533.6545], // on vine thing, follow from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   -307.9273, 26.0891, 533.6545, 10],
+      "bsphere": [ -307.9273, 26.0891, 533.6545, 10],
       "lump": {
         "name":"ltowera-skill-02"
       }
     },
     {
-      "trans": [ -299.60,  33.38,  545.20 ], // further up vine thing, follow from ^
+      "trans": [ -299.60, 33.38, 545.20 ], // further up vine thing, follow from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ -299.60,  33.38,  545.20 , 10],
+      "bsphere": [ -299.60, 33.38, 545.20 , 10],
       "lump": {
         "name":"ltowera-skill-03"
       }
     }//,
-    
+
   ]
 }

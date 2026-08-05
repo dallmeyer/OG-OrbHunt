@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ -250.6479, 13.3534, 600.8015], // oob near sewers 
+      "trans": [ -250.6479, 13.3534, 600.8015], // oob near sewers
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -58,36 +58,36 @@
     },
 
     {
-      "trans": [    -257.7600, 12.2174, 822.7756 ], // in pocket of vines just around corner from tower
+      "trans": [ -257.7600, 12.2174, 822.7756 ], // in pocket of vines just around corner from tower
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   -257.7600, 12.2174, 822.7756, 10],
+      "bsphere": [ -257.7600, 12.2174, 822.7756, 10],
       "lump": {
         "name":"mhcityb-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  -255.2890, 35.9348, 830.5214], // abah from ^, up on wall in invisible crevice, can standpoint here to next orb or just abah to that too
+      "trans": [ -255.2890, 35.9348, 830.5214], // abah from ^, up on wall in invisible crevice, can standpoint here to next orb or just abah to that too
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -255.2890, 35.9348, 830.5214, 10],
+      "bsphere": [ -255.2890, 35.9348, 830.5214, 10],
       "lump": {
         "name":"mhcityb-skill-02"
       }
     },
     {
-      "trans": [    -256.7965, 37.9736, 818.5160 ], // up on vines from ^^
+      "trans": [ -256.7965, 37.9736, 818.5160 ], // up on vines from ^^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   -256.7965, 37.9736, 818.5160, 10],
+      "bsphere": [ -256.7965, 37.9736, 818.5160, 10],
       "lump": {
         "name":"mhcityb-skill-03"
       }
     }//,
-    
+
   ]
 }

@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 16.3209, -3495.1811, -1329.8588], // on top of precursor head, hover straight up from collision 
+      "trans": [ 16.3209, -3495.1811, -1329.8588], // on top of precursor head, hover straight up from collision
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -57,10 +57,10 @@
       }
     },
     {
-      "trans": [  16.4961, -3549.5139, -1144.6785 ], // warp to precurd
+      "trans": [ 16.4961, -3549.5139, -1144.6785 ], // warp to precurd
       "etype": "warp-gate",
-      "game_task": 0, 
-      "quat" : [  0.0000,  0.5568,  0.0000,  0.8306],
+      "game_task": 0,
+      "quat" : [ 0.0000, 0.5568, 0.0000, 0.8306],
       "bsphere": [ 16.4961, -3549.5139, -1144.6785, 10],
       "lump": {
         "name":"railx-warp-gate-1",
@@ -70,7 +70,7 @@
     {
       "trans": [ 13.7699, -3543.6296, -1336.6304 ], // on red/orange screen border
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 13.7699, -3543.6296, -1336.6304, 10],
       "lump": {
@@ -78,15 +78,15 @@
       }
     },
     {
-      "trans": [  20.4993, -3536.6462, -1340.0930], // up on smaller screen between cables (no collision)
+      "trans": [ 20.4993, -3536.6462, -1340.0930], // up on smaller screen between cables (no collision)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  20.4993, -3536.6462, -1340.0930, 10],
+      "bsphere": [ 20.4993, -3536.6462, -1340.0930, 10],
       "lump": {
         "name":"railx-skill-02"
       }
     }//,
-    
+
   ]
 }

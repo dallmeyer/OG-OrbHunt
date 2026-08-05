@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 871.3792, 32.0190, 2488.6606], // just out of oasis pool oob 
+      "trans": [ 871.3792, 32.0190, 2488.6606], // just out of oasis pool oob
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -58,18 +58,18 @@
     },
 
     {
-      "trans": [  198.4892, 99.6640, 2929.7810], // top of rocks near trees and water, tricky abah or concussor bs can work too
+      "trans": [ 198.4892, 99.6640, 2929.7810], // top of rocks near trees and water, tricky abah or concussor bs can work too
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  198.4892, 99.6640, 2929.7810, 10],
+      "bsphere": [ 198.4892, 99.6640, 2929.7810, 10],
       "lump": {
         "name":"deserte-skill-01"//,
         // "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [ 192.4979, 37.1695, 2824.9582], // top of smaller tree/plant on western shore 
+      "trans": [ 192.4979, 37.1695, 2824.9582], // top of smaller tree/plant on western shore
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -79,7 +79,7 @@
       }
     },
     {
-      "trans": [ 832.8792, 54.6469, 2706.9689], // on top/behind rocks along wall just right of oasis pond 
+      "trans": [ 832.8792, 54.6469, 2706.9689], // on top/behind rocks along wall just right of oasis pond
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -110,7 +110,7 @@
       }
     },
     {
-      "trans": [ 811.5823, 19.0814, 2525.3256], // behind rocks along wall of oasis pond 
+      "trans": [ 811.5823, 19.0814, 2525.3256], // behind rocks along wall of oasis pond
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -123,7 +123,7 @@
     {
       "trans": [ 620.0590209960938, 18.11319923400879, 2534.6298828125], // ashelin at oasis
       "etype": "ashelin-npc",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0, -0.6223673224449158, 0.0, 0.7827253341674805],
       "bsphere": [ 620.0590209960938, 18.11319923400879, 2534.6298828125, 6.928283214569092],
       "lump": {
@@ -134,7 +134,7 @@
     {
       "trans": [ 620.0590209960938, 22.51319923400879, 2534.6298828125], // ashelin at oasis
       "etype": "fuel-cell",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
       "bsphere": [ 620.0590209960938, 22.51319923400879, 2534.6298828125, 6.928283214569092],
       "lump": {
@@ -144,6 +144,6 @@
         "vag": "asha034"
       }
     }//,
-    
+
   ]
 }

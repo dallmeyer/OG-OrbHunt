@@ -47,60 +47,60 @@
 
   "actors" : [
     {
-      "trans": [ -362.60,  -53.93,  162.79], // on OOB halfpipe, you can hover out of room with turret
+      "trans": [ -362.60, -53.93, 162.79], // on OOB halfpipe, you can hover out of room with turret
       "etype": "tape",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ -362.60,  -53.93,  162.79, 10],
+      "bsphere": [ -362.60, -53.93, 162.79, 10],
       "lump": {
         "name":"sewh-tape-01"
       }
     },
 
     {
-      "trans": [  -23.2945, -118.5666, 184.3938], // small ledge near laser on track leading to halfpipe
+      "trans": [ -23.2945, -118.5666, 184.3938], // small ledge near laser on track leading to halfpipe
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -23.2945, -118.5666, 184.3938, 10],
+      "bsphere": [ -23.2945, -118.5666, 184.3938, 10],
       "lump": {
         "name":"sewh-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  -20.1699, -98.5661, 182.3578], // way up on ledge, abah from ^
+      "trans": [ -20.1699, -98.5661, 182.3578], // way up on ledge, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -20.1699, -98.5661, 182.3578, 10],
+      "bsphere": [ -20.1699, -98.5661, 182.3578, 10],
       "lump": {
         "name":"sewh-skill-02"
       }
     },
     {
-      "trans": [  4.9759, -119.5546, 206.4721], // around corner after the last elec gate, missing collision troll
+      "trans": [ 4.9759, -119.5546, 206.4721], // around corner after the last elec gate, missing collision troll
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  4.9759, -119.5546, 206.4721, 10],
+      "bsphere": [ 4.9759, -119.5546, 206.4721, 10],
       "lump": {
         "name":"sewh-skill-03"
       }
     },
     {
-      "trans": [  99.1514, -109.5979, 222.0334], // elec gate, hint for crate above
+      "trans": [ 99.1514, -109.5979, 222.0334], // elec gate, hint for crate above
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  99.1514, -109.5979, 222.0334, 10],
+      "bsphere": [ 99.1514, -109.5979, 222.0334, 10],
       "lump": {
         "name":"sewh-skill-04",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [ -208.1498, -116.4898, 88.1483], // left corner at end of halfpipe 
+      "trans": [ -208.1498, -116.4898, 88.1483], // left corner at end of halfpipe
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -111,7 +111,7 @@
       }
     },
     {
-      "trans": [ -208.5717, -98.4894, 87.9739], // up in ceiling in left corner at end of halfpipe, abah from ^ 
+      "trans": [ -208.5717, -98.4894, 87.9739], // up in ceiling in left corner at end of halfpipe, abah from ^
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -140,6 +140,6 @@
         "name":"sewh-skill-08"
       }
     }//,
-    
+
   ]
 }

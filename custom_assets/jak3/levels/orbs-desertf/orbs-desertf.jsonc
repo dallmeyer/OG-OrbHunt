@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 1781.1860, 8.9943, 3299.1726], // in water inside/under middle bridge, desert side 
+      "trans": [ 1781.1860, 8.9943, 3299.1726], // in water inside/under middle bridge, desert side
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -58,62 +58,62 @@
     },
 
     {
-      "trans": [  1575.0048, 35.1262, 2973.4003], // in lower torch inside stronghold
+      "trans": [ 1575.0048, 35.1262, 2973.4003], // in lower torch inside stronghold
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  1575.0048, 35.1262, 2973.4003, 10],
+      "bsphere": [ 1575.0048, 35.1262, 2973.4003, 10],
       "lump": {
         "name":"desertf-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [ 1573.93,  46.03,  2985.06 ], // on top of stronghold, abah from ^
+      "trans": [ 1573.93, 46.03, 2985.06 ], // on top of stronghold, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 1573.93,  46.03,  2985.06 , 10],
+      "bsphere": [ 1573.93, 46.03, 2985.06 , 10],
       "lump": {
         "name":"desertf-skill-02"
       }
     },
     {
-      "trans": [  1579.4179, 58.6700, 2955.0148], // on top of stronghold, concussor and whatnot from ^
+      "trans": [ 1579.4179, 58.6700, 2955.0148], // on top of stronghold, concussor and whatnot from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  1579.4179, 58.6700, 2955.0148 , 10],
+      "bsphere": [ 1579.4179, 58.6700, 2955.0148 , 10],
       "lump": {
         "name":"desertf-skill-03"
       }
     },
     {
-      "trans": [  1544.4381, 52.6898, 2920.6826], // on top of stronghold, concussor and whatnot from ^
+      "trans": [ 1544.4381, 52.6898, 2920.6826], // on top of stronghold, concussor and whatnot from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  1544.4381, 52.6898, 2920.6826 , 10],
+      "bsphere": [ 1544.4381, 52.6898, 2920.6826 , 10],
       "lump": {
         "name":"desertf-skill-04"
       }
     },
     {
-      "trans": [ 1515.62,  46.90,  2922.41 ], // on top of stronghold, concussor and whatnot from ^
+      "trans": [ 1515.62, 46.90, 2922.41 ], // on top of stronghold, concussor and whatnot from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 1515.62,  46.90,  2922.41 , 10],
+      "bsphere": [ 1515.62, 46.90, 2922.41 , 10],
       "lump": {
         "name":"desertf-skill-05"
       }
     },
     {
-      "trans": [ 1375.32,  10.76,  3446.74 ], // gap under/side of bridge on ocean side
+      "trans": [ 1375.32, 10.76, 3446.74 ], // gap under/side of bridge on ocean side
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 1375.32,  10.76,  3446.74 , 10],
+      "bsphere": [ 1375.32, 10.76, 3446.74 , 10],
       "lump": {
         "name":"desertf-skill-06"
       }
@@ -138,6 +138,6 @@
         "name":"desertf-skill-08"
       }
     }//,
-    
+
   ]
 }

@@ -58,26 +58,26 @@
     },
 
     {
-      "trans": [  -466.7996, -127.3362, -241.2692], // on pipe near wall with missing collision
+      "trans": [ -466.7996, -127.3362, -241.2692], // on pipe near wall with missing collision
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   -466.7996, -127.3362, -241.2692, 10],
+      "bsphere": [ -466.7996, -127.3362, -241.2692, 10],
       "lump": {
         "name":"sewo-skill-01",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  -464.6316, -108.9651, -243.4651], // up among pipes, abah from ^
+      "trans": [ -464.6316, -108.9651, -243.4651], // up among pipes, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   -464.6316, -108.9651, -243.4651, 10],
+      "bsphere": [ -464.6316, -108.9651, -243.4651, 10],
       "lump": {
         "name":"sewo-skill-02"
       }
     }//,
-    
+
   ]
 }

@@ -57,22 +57,22 @@
       }
     },
     {
-      "trans": [250.9007, 20.6472, -626.4159 ], // 
+      "trans": [250.9007, 20.6472, -626.4159 ], //
       "etype": "air-train",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0.0000, 0.9789, 0.0000, 0.2042],
-      "bsphere": [250.9007, 20.6472, -626.4159  , 10],
+      "bsphere": [250.9007, 20.6472, -626.4159 , 10],
       "lump": {
         "name":"stadium-air-train-01",
         "distance": ["meters", 15.0]
       }
     },
     {
-      "trans": [250.9007, 20.6472, -626.4159 ], // 
+      "trans": [250.9007, 20.6472, -626.4159 ], //
       "etype": "warp-gate",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0.6314, 0, 0.7754],
-      "bsphere": [250.9007, 20.6472, -626.4159  , 10],
+      "bsphere": [250.9007, 20.6472, -626.4159 , 10],
       "lump": {
         "name":"stadium-warp-gate-01",
         "distance": ["meters", 10.0]
@@ -80,73 +80,73 @@
     },
 
     {
-      "trans": [  217.4010, 6.0714, -390.3011], // far corner of first side area from start, jump over from skill-237
+      "trans": [ 217.4010, 6.0714, -390.3011], // far corner of first side area from start, jump over from skill-237
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  217.4010, 6.0714, -390.3011, 10],
+      "bsphere": [ 217.4010, 6.0714, -390.3011, 10],
       "lump": {
         "name":"stadium-skill-01"
         // "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  288.9834, -8.8791, -438.6476], // almost at death plane, on ledge near pipes in first side area
+      "trans": [ 288.9834, -8.8791, -438.6476], // almost at death plane, on ledge near pipes in first side area
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  288.9834, -8.8791, -438.6476, 10],
+      "bsphere": [ 288.9834, -8.8791, -438.6476, 10],
       "lump": {
         "name":"stadium-skill-02"
       }
     },
     {
-      "trans": [   259.4631, -3.3135, -472.9496], // upturned tile in first section, proxy hint for next orbs
+      "trans": [ 259.4631, -3.3135, -472.9496], // upturned tile in first section, proxy hint for next orbs
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  259.4631, -3.3135, -472.9496, 10],
+      "bsphere": [ 259.4631, -3.3135, -472.9496, 10],
       "lump": {
         "name":"stadium-skill-03",
         "bob-scale": ["float", -1.0] // no bob
       }
     },
     {
-      "trans": [  254.5367, 58.0586, -459.2250], // random ass IJ/standpoint on big wall in first section, proxy from ^
+      "trans": [ 254.5367, 58.0586, -459.2250], // random ass IJ/standpoint on big wall in first section, proxy from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  254.5367, 58.0586, -459.2250, 10],
+      "bsphere": [ 254.5367, 58.0586, -459.2250, 10],
       "lump": {
         "name":"stadium-skill-04"
       }
     },
     {
-      "trans": [ 266.07,  62.39,  -481.10 ], // up on rooftop of first section, like where you'd hover over in runs
+      "trans": [ 266.07, 62.39, -481.10 ], // up on rooftop of first section, like where you'd hover over in runs
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 266.07,  62.39,  -481.10 , 10],
+      "bsphere": [ 266.07, 62.39, -481.10 , 10],
       "lump": {
         "name":"stadium-skill-05"
       }
     },
     {
-      "trans": [  225.38,  69.10,  -541.29 ], // further along rooftop between first two sections
+      "trans": [ 225.38, 69.10, -541.29 ], // further along rooftop between first two sections
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  225.38,  69.10,  -541.29 , 10],
+      "bsphere": [ 225.38, 69.10, -541.29 , 10],
       "lump": {
         "name":"stadium-skill-06"
       }
     },
     {
-      "trans": [ 277.87,  34.51,  -679.21 ], // further along rooftop on exposed beams, just before turn
+      "trans": [ 277.87, 34.51, -679.21 ], // further along rooftop on exposed beams, just before turn
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 277.87,  34.51,  -679.21 , 10],
+      "bsphere": [ 277.87, 34.51, -679.21 , 10],
       "lump": {
         "name":"stadium-skill-07"
       }
@@ -192,7 +192,7 @@
       }
     },
     {
-      "trans": [ 242.0357, 34.2889, -760.4403], // on exposed bar above turnaround slab from no oob, abah or maybe just concussor/jetboard up here 
+      "trans": [ 242.0357, 34.2889, -760.4403], // on exposed bar above turnaround slab from no oob, abah or maybe just concussor/jetboard up here
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -202,7 +202,7 @@
       }
     },
     {
-      "trans": [ 329.5907, -0.4175, -702.1572], // behind rubble on stairs near jak 2 vanilla computer 
+      "trans": [ 329.5907, -0.4175, -702.1572], // behind rubble on stairs near jak 2 vanilla computer
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -212,7 +212,7 @@
       }
     },
     {
-      "trans": [ 278.7970, -10.2035, -714.2351], // under hanging shrubs near turnaround slab from no oob 
+      "trans": [ 278.7970, -10.2035, -714.2351], // under hanging shrubs near turnaround slab from no oob
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -221,6 +221,6 @@
         "name":"stadium-skill-14"
       }
     }//,
-    
+
   ]
 }

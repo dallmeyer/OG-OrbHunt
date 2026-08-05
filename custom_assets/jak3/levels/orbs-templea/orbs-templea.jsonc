@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 4239.7280, 45.8754, 4291.7338], // classic temple oob but far side 
+      "trans": [ 4239.7280, 45.8754, 4291.7338], // classic temple oob but far side
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -58,43 +58,43 @@
     },
 
     {
-      "trans": [  4250.9179, 80.2286, 4212.0996], // behind bricks in exposed waterfall in hallway
+      "trans": [ 4250.9179, 80.2286, 4212.0996], // behind bricks in exposed waterfall in hallway
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  4250.9179, 80.2286, 4212.0996, 10],
+      "bsphere": [ 4250.9179, 80.2286, 4212.0996, 10],
       "lump": {
         "name":"templea-skill-01"//,
         // "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  4244.7314, 64.7744, 4217.2700], // behind bricks on ground near exposed waterfall
+      "trans": [ 4244.7314, 64.7744, 4217.2700], // behind bricks on ground near exposed waterfall
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  4244.7314, 64.7744, 4217.2700, 10],
+      "bsphere": [ 4244.7314, 64.7744, 4217.2700, 10],
       "lump": {
         "name":"templea-skill-02",
         "bob-scale": ["float", 0.4375]
       }
     },
     {
-      "trans": [  4222.5356, 67.8810, 4281.4160], // up near ceiling above torch before circle room
+      "trans": [ 4222.5356, 67.8810, 4281.4160], // up near ceiling above torch before circle room
       "etype": "skill",
-      "game_task": 0, 
-      "quat" : [0.5102,       0.0024,       0.8599,       0.0041], // upside down
-      "bsphere": [  4222.5356, 67.8810, 4281.4160, 10],
+      "game_task": 0,
+      "quat" : [0.5102, 0.0024, 0.8599, 0.0041], // upside down
+      "bsphere": [ 4222.5356, 67.8810, 4281.4160, 10],
       "lump": {
         "name":"templea-skill-03"
       }
     },
     {
-      "trans": [  4243.7226, 131.3170, 4078.4936], // in torch at start
+      "trans": [ 4243.7226, 131.3170, 4078.4936], // in torch at start
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   4243.7226, 131.3170, 4078.4936, 10],
+      "bsphere": [ 4243.7226, 131.3170, 4078.4936, 10],
       "lump": {
         "name":"templea-skill-04"
       }
@@ -102,7 +102,7 @@
     {
       "trans": [ 4113.9697, 43.6101, 4341.4614], // watcher room void circle crack
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 4113.9697, 43.6101, 4341.4614, 10],
       "lump": {
@@ -111,9 +111,9 @@
       }
     },
     {
-      "trans": [  4124.4975, 69.3022, 4337.5498], // up in center of watcher room, abah from ^ (or just jetboard triangle cancel launch)
+      "trans": [ 4124.4975, 69.3022, 4337.5498], // up in center of watcher room, abah from ^ (or just jetboard triangle cancel launch)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 4124.4975, 69.3022, 4337.5498, 10],
       "lump": {
@@ -141,6 +141,6 @@
         "bob-scale": ["float", 0.25]
       }
     }//,
-    
+
   ]
 }

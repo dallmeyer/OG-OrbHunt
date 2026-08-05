@@ -47,25 +47,25 @@
 
   "actors" : [
     {
-      "trans": [  -171.9693, 19.5849, 974.3408], // at top of loop at very start (on foot IJ ceiling)
+      "trans": [ -171.9693, 19.5849, 974.3408], // at top of loop at very start (on foot IJ ceiling)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  -171.9693, 19.5849, 974.3408, 10],
+      "bsphere": [ -171.9693, 19.5849, 974.3408, 10],
       "lump": {
         "name":"railb-skill-01"
       }
     }//,
     // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"railb-skill-02"
-    //   }
+    // "trans": [ 2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
+    // "etype": "skill",
+    // "game_task": 0,
+    // "quat" : [0, 0, 0, 1],
+    // "bsphere": [ 2430.0915, 72.5804, -96.9893, 10],
+    // "lump": {
+    // "name":"railb-skill-02"
+    // }
     // },
-    
+
   ]
 }

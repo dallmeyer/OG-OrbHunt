@@ -48,7 +48,7 @@
     {
       "trans": [ 677.9180, 2.1027, -526.9862], // in water oob outside
       "etype": "tape",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0.0000, 0.8419, 0.0000, 0.5395],
       "bsphere": [ 677.9180, 2.1027, -526.9862, 10],
       "lump": {
@@ -58,7 +58,7 @@
     {
       "trans": [ 681.2431, 4.6399, -507.4433], // hellcat to factoryb
       "etype": "desoasis-hellcat",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0.0000, 0.8419, 0.0000, 0.5395],
       "bsphere": [ 681.2431, 4.6399, -507.4433, 10],
       "lump": {
@@ -68,18 +68,18 @@
     {
       "trans": [ 681.2431, 4.6399, -507.4433], // warp to factoryb
       "etype": "warp-gate",
-      "game_task": 0, 
-      "quat" : [ 0.0000,      -0.8683,       0.0000,       0.4959],
-      "bsphere": [  681.2431, 4.6399, -507.4433, 10],
+      "game_task": 0,
+      "quat" : [ 0.0000, -0.8683, 0.0000, 0.4959],
+      "bsphere": [ 681.2431, 4.6399, -507.4433, 10],
       "lump": {
         "name":"lfacrm1-warp-gate-1"
       }
     },
-    
+
     {
-      "trans": [  672.0440, 2.9398, -481.2869], // behind coils/boxes 
+      "trans": [ 672.0440, 2.9398, -481.2869], // behind coils/boxes
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 672.0440, 2.9398, -481.2869, 10],
       "lump": {
@@ -87,56 +87,56 @@
       }
     },
     {
-      "trans": [  671.1990, 4.0236, -517.5745], // in half open chest
+      "trans": [ 671.1990, 4.0236, -517.5745], // in half open chest
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  671.1990, 4.0236, -517.5745, 10],
+      "bsphere": [ 671.1990, 4.0236, -517.5745, 10],
       "lump": {
         "name":"lfacrm1-skill-02"
       }
     },
     {
-      "trans": [   691.3646, 11.4783, -488.8078], // on top of wall panel with button
+      "trans": [ 691.3646, 11.4783, -488.8078], // on top of wall panel with button
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  691.3646, 11.4783, -488.8078, 10],
+      "bsphere": [ 691.3646, 11.4783, -488.8078, 10],
       "lump": {
         "name":"lfacrm1-skill-03",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  690.5697, 29.9617, -483.7754], // top of pipe in corner, abah from ^ (IJ hint)
+      "trans": [ 690.5697, 29.9617, -483.7754], // top of pipe in corner, abah from ^ (IJ hint)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  690.5697, 29.9617, -483.7754, 10],
+      "bsphere": [ 690.5697, 29.9617, -483.7754, 10],
       "lump": {
         "name":"lfacrm1-skill-04"
       }
     },
     {
-      "trans": [  662.5319, 32.5127, -498.8061], // up near ceiling, IJ around from ^
+      "trans": [ 662.5319, 32.5127, -498.8061], // up near ceiling, IJ around from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  662.5319, 32.5127, -498.8061, 10],
+      "bsphere": [ 662.5319, 32.5127, -498.8061, 10],
       "lump": {
         "name":"lfacrm1-skill-05"
       }
     },
     {
-      "trans": [   692.2802, 22.8543, -520.2703], // behind pipes above entrance
+      "trans": [ 692.2802, 22.8543, -520.2703], // behind pipes above entrance
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   692.2802, 22.8543, -520.2703, 10],
+      "bsphere": [ 692.2802, 22.8543, -520.2703, 10],
       "lump": {
         "name":"lfacrm1-skill-06"
       }
     }//,
-    
+
   ]
 }

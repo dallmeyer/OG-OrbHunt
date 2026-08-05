@@ -38,17 +38,17 @@
   // "base_region_id": 0,
 
   // "region_trees": {
-  //   // camera regions are activated when the camera enters their bounds
-  //   "camera": {},
-  //   // target regions are activated when Jak enters their bounds
-  //   "target": {},
-  //   // water regions are used to define water volumes
-  //   "water": {},
-  //   "data": {},
-  //   "city_vis": {},
-  //   "sample": {},
-  //   "light": {},
-  //   "entity": {}
+  // // camera regions are activated when the camera enters their bounds
+  // "camera": {},
+  // // target regions are activated when Jak enters their bounds
+  // "target": {},
+  // // water regions are used to define water volumes
+  // "water": {},
+  // "data": {},
+  // "city_vis": {},
+  // "sample": {},
+  // "light": {},
+  // "entity": {}
   // },
 
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
@@ -64,7 +64,7 @@
 
   "actors" : [
     {
-      "trans": [ 2049.2819, 25.2082, 1846.8833], // near east side cave entrance, hover oob 
+      "trans": [ 2049.2819, 25.2082, 1846.8833], // near east side cave entrance, hover oob
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -75,26 +75,26 @@
     },
 
     {
-      "trans": [  1958.2836, 45.6546, 1987.6072], // slippery ledge out from building w tall windmill
+      "trans": [ 1958.2836, 45.6546, 1987.6072], // slippery ledge out from building w tall windmill
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  1958.2836, 45.6546, 1987.6072, 10],
+      "bsphere": [ 1958.2836, 45.6546, 1987.6072, 10],
       "lump": {
         "name":"desert-skill-01"//,
         // "pickup-amount": ["float", 2.0] // abah hint
       }
     }//,
     // {
-    //   "trans": [  2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    //   "etype": "skill",
-    //   "game_task": 0, 
-    //   "quat" : [0, 0, 0, 1],
-    //   "bsphere": [  2430.0915, 72.5804, -96.9893, 10],
-    //   "lump": {
-    //     "name":"desert-skill-02"
-    //   }
+    // "trans": [ 2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
+    // "etype": "skill",
+    // "game_task": 0,
+    // "quat" : [0, 0, 0, 1],
+    // "bsphere": [ 2430.0915, 72.5804, -96.9893, 10],
+    // "lump": {
+    // "name":"desert-skill-02"
+    // }
     // },
-    
+
   ]
 }

@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 145.5682, 419.7258, -161.0949], // inside oob "room" (hover over wall) 
+      "trans": [ 145.5682, 419.7258, -161.0949], // inside oob "room" (hover over wall)
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -58,11 +58,11 @@
     },
 
     {
-      "trans": [  256.3369, 438.5318, 40.9540 ], // on top of pipe normally for dax section 1
+      "trans": [ 256.3369, 438.5318, 40.9540 ], // on top of pipe normally for dax section 1
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  256.3369, 438.5318, 40.9540 , 10],
+      "bsphere": [ 256.3369, 438.5318, 40.9540 , 10],
       "lump": {
         "name":"factoryc-skill-01"
       }
@@ -70,7 +70,7 @@
     {
       "trans": [ 246.8089, 443.8191, 29.2461], // up on wall near daxter section 1, abah from somewhere below prob (no hint)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 246.8089, 443.8191, 29.2461, 10],
       "lump": {
@@ -78,11 +78,11 @@
       }
     },
     {
-      "trans": [  237.6888, 443.7457, -9.4690 ], // up on other fence, extended concussor from ^ or maybe yolo from further in
+      "trans": [ 237.6888, 443.7457, -9.4690 ], // up on other fence, extended concussor from ^ or maybe yolo from further in
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  237.6888, 443.7457, -9.4690 , 10],
+      "bsphere": [ 237.6888, 443.7457, -9.4690 , 10],
       "lump": {
         "name":"factoryc-skill-03"
       }
@@ -90,7 +90,7 @@
     {
       "trans": [ 284.7176, 438.5527, 20.6536 ], // robot dispenser
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 284.7176, 438.5527, 20.6536, 10],
       "lump": {
@@ -99,144 +99,144 @@
       }
     },
     {
-      "trans": [  288.5544, 462.1465, 26.7624], // up near light in ceiling, abah from ^
+      "trans": [ 288.5544, 462.1465, 26.7624], // up near light in ceiling, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   288.5544, 462.1465, 26.7624, 10],
+      "bsphere": [ 288.5544, 462.1465, 26.7624, 10],
       "lump": {
         "name":"factoryc-skill-05"
       }
     },
     {
-      "trans": [  278.4325, 419.0000, -23.4446], // down on small ledge, in gap where you ramp back with faccar
+      "trans": [ 278.4325, 419.0000, -23.4446], // down on small ledge, in gap where you ramp back with faccar
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  278.4325, 419.0000, -23.4446, 10],
+      "bsphere": [ 278.4325, 419.0000, -23.4446, 10],
       "lump": {
         "name":"factoryc-skill-06"
       }
     },
     {
-      "trans": [  279.9868, 440.2846, -172.8056 ], // daxter section 2 pipe
+      "trans": [ 279.9868, 440.2846, -172.8056 ], // daxter section 2 pipe
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  279.9868, 440.2846, -172.8056, 10],
+      "bsphere": [ 279.9868, 440.2846, -172.8056, 10],
       "lump": {
         "name":"factoryc-skill-07",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  271.0295, 453.9122, -175.2046], // up on fence above dax section 2 pipe, abah from ^
+      "trans": [ 271.0295, 453.9122, -175.2046], // up on fence above dax section 2 pipe, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  271.0295, 453.9122, -175.2046, 10],
+      "bsphere": [ 271.0295, 453.9122, -175.2046, 10],
       "lump": {
         "name":"factoryc-skill-08"
       }
     },
     {
-      "trans": [  280.0260, 452.3353, -190.2418], // other end of pipe for dax section 2, extended from ^
+      "trans": [ 280.0260, 452.3353, -190.2418], // other end of pipe for dax section 2, extended from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  280.0260, 452.3353, -190.2418, 10],
+      "bsphere": [ 280.0260, 452.3353, -190.2418, 10],
       "lump": {
         "name":"factoryc-skill-09"
       }
     },
     {
-      "trans": [  281.6166, 457.5547, -196.5325], // up on top of electric things in daxter hanging section 2
+      "trans": [ 281.6166, 457.5547, -196.5325], // up on top of electric things in daxter hanging section 2
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  281.6166, 457.5547, -196.5325, 10],
+      "bsphere": [ 281.6166, 457.5547, -196.5325, 10],
       "lump": {
         "name":"factoryc-skill-10"
       }
     },
     {
-      "trans": [  281.6166, 457.5547, -211.4410], // up on top of electric things in daxter hanging section 2
+      "trans": [ 281.6166, 457.5547, -211.4410], // up on top of electric things in daxter hanging section 2
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  281.6166, 457.5547, -211.4410, 10],
+      "bsphere": [ 281.6166, 457.5547, -211.4410, 10],
       "lump": {
         "name":"factoryc-skill-11"
       }
     },
     {
-      "trans": [  290.7455, 457.5547, -211.4410], // up on top of electric things in daxter hanging section 2
+      "trans": [ 290.7455, 457.5547, -211.4410], // up on top of electric things in daxter hanging section 2
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  290.7455, 457.5547, -211.4410, 10],
+      "bsphere": [ 290.7455, 457.5547, -211.4410, 10],
       "lump": {
         "name":"factoryc-skill-12"
       }
     },
     {
-      "trans": [  290.7455, 457.5547, -196.5557], // up on top of electric things in daxter hanging section 2
+      "trans": [ 290.7455, 457.5547, -196.5557], // up on top of electric things in daxter hanging section 2
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  290.7455, 457.5547, -196.5557, 10],
+      "bsphere": [ 290.7455, 457.5547, -196.5557, 10],
       "lump": {
         "name":"factoryc-skill-13"
       }
     },
     {
-      "trans": [   65.7096, 424.9984, -179.9402], // on small ledge in big open corner with 2 moving plats and escalator
+      "trans": [ 65.7096, 424.9984, -179.9402], // on small ledge in big open corner with 2 moving plats and escalator
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  65.7096, 424.9984, -179.9402, 10],
+      "bsphere": [ 65.7096, 424.9984, -179.9402, 10],
       "lump": {
         "name":"factoryc-skill-14"
       }
     },
     {
-      "trans": [   39.4344, 451.6003, -127.6152 ], // daxter section 3 light above starting pipe
+      "trans": [ 39.4344, 451.6003, -127.6152 ], // daxter section 3 light above starting pipe
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  39.4344, 451.6003, -127.6152, 10],
+      "bsphere": [ 39.4344, 451.6003, -127.6152, 10],
       "lump": {
         "name":"factoryc-skill-15",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [   38.9129, 459.8749, -129.8307 ], // up on fence above dax section 3 pipe, abah from ^
+      "trans": [ 38.9129, 459.8749, -129.8307 ], // up on fence above dax section 3 pipe, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  38.9129, 459.8749, -129.8307, 10],
+      "bsphere": [ 38.9129, 459.8749, -129.8307, 10],
       "lump": {
         "name":"factoryc-skill-16",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [   24.2453, 470.3955, -130.0340 ], // other end of pipe for dax section 3, abah from ^
+      "trans": [ 24.2453, 470.3955, -130.0340 ], // other end of pipe for dax section 3, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  24.2453, 470.3955, -130.0340, 10],
+      "bsphere": [ 24.2453, 470.3955, -130.0340, 10],
       "lump": {
         "name":"factoryc-skill-17"
       }
     },
     {
-      "trans": [  55.8535, 454.6456, -127.9178], // up in donut on ceiling, near middle dax section
+      "trans": [ 55.8535, 454.6456, -127.9178], // up in donut on ceiling, near middle dax section
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  55.8535, 454.6456, -127.9178, 10],
+      "bsphere": [ 55.8535, 454.6456, -127.9178, 10],
       "lump": {
         "name":"factoryc-skill-18"
       }
@@ -244,7 +244,7 @@
     {
       "trans": [ 67.1393, 460.7115, -147.5545], // up in ceiling near middle dax section. abah+concussor from conveyor crevice
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 67.1393, 460.7115, -147.5545, 10],
       "lump": {
@@ -252,11 +252,11 @@
       }
     },
     {
-      "trans": [  38.4698, 456.3773, 33.2961], // up on fence near final dax section
+      "trans": [ 38.4698, 456.3773, 33.2961], // up on fence near final dax section
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
-      "bsphere": [  38.4698, 456.3773, 33.2961, 10],
+      "bsphere": [ 38.4698, 456.3773, 33.2961, 10],
       "lump": {
         "name":"factoryc-skill-20"
       }
@@ -322,7 +322,7 @@
       }
     },
     {
-      "trans": [ 186.7476, 450.4912, 47.3704], // up by pipes/ceiling in south central section 
+      "trans": [ 186.7476, 450.4912, 47.3704], // up by pipes/ceiling in south central section
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -332,7 +332,7 @@
       }
     },
     {
-      "trans": [ 169.5034, 433.5309, 111.1881], // on vent over big void in south central section 
+      "trans": [ 169.5034, 433.5309, 111.1881], // on vent over big void in south central section
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -342,7 +342,7 @@
       }
     },
     {
-      "trans": [ 194.8339, 450.5958, 109.7111], // in rafters (?) in south central section 
+      "trans": [ 194.8339, 450.5958, 109.7111], // in rafters (?) in south central section
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -352,7 +352,7 @@
       }
     },
     {
-      "trans": [ 222.7769, 447.4962, 122.5526], // on top of pipe "above" ceiling in south central section, near opening to city 
+      "trans": [ 222.7769, 447.4962, 122.5526], // on top of pipe "above" ceiling in south central section, near opening to city
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -362,7 +362,7 @@
       }
     },
     {
-      "trans": [ 267.9855, 449.7734, 122.3979], // on ledge "above" ceiling in south central section, just across small gap 
+      "trans": [ 267.9855, 449.7734, 122.3979], // on ledge "above" ceiling in south central section, just across small gap
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -372,7 +372,7 @@
       }
     },
     {
-      "trans": [ 276.6588, 458.0299, -21.8561], // tall ledge in corner in eastern path, just after first dax section 
+      "trans": [ 276.6588, 458.0299, -21.8561], // tall ledge in corner in eastern path, just after first dax section
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -382,7 +382,7 @@
       }
     },
     {
-      "trans": [ 325.0246, 451.4543, 40.5840], // tall ledge in eastern path, just after first dax section 
+      "trans": [ 325.0246, 451.4543, 40.5840], // tall ledge in eastern path, just after first dax section
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -392,7 +392,7 @@
       }
     },
     {
-      "trans": [ 301.6173, 432.4227, -83.9335], // vent standpoint thing on side of higher part of eastern path 
+      "trans": [ 301.6173, 432.4227, -83.9335], // vent standpoint thing on side of higher part of eastern path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -402,7 +402,7 @@
       }
     },
     {
-      "trans": [ 334.6787, 420.6147, -84.2868], // ledgegrab by conveyor after first dax section 
+      "trans": [ 334.6787, 420.6147, -84.2868], // ledgegrab by conveyor after first dax section
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -412,7 +412,7 @@
       }
     },
     {
-      "trans": [ 344.6574, 451.1698, -145.7259], // tall ledge in corner by window in (north) eastern section 
+      "trans": [ 344.6574, 451.1698, -145.7259], // tall ledge in corner by window in (north) eastern section
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -422,7 +422,7 @@
       }
     },
     {
-      "trans": [ 308.7323, 462.9797, -111.4693], // up high between pipes in eastern section 
+      "trans": [ 308.7323, 462.9797, -111.4693], // up high between pipes in eastern section
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -432,7 +432,7 @@
       }
     },
     {
-      "trans": [ 252.9438, 456.0021, -177.9386], // up high between pipes in north (eastern) path, after 2nd dax section 
+      "trans": [ 252.9438, 456.0021, -177.9386], // up high between pipes in north (eastern) path, after 2nd dax section
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -442,7 +442,7 @@
       }
     },
     {
-      "trans": [ 226.9219, 453.6378, -193.4471], // on top of glass breakable wall 
+      "trans": [ 226.9219, 453.6378, -193.4471], // on top of glass breakable wall
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -474,7 +474,7 @@
       }
     },
     {
-      "trans": [ 172.2248, 457.4342, -169.6070], // above pipes by island robopod on north path 
+      "trans": [ 172.2248, 457.4342, -169.6070], // above pipes by island robopod on north path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -484,7 +484,7 @@
       }
     },
     {
-      "trans": [ 70.3238, 418.8334, -169.2610], // down on grate standpoint near deathplane in NW path 
+      "trans": [ 70.3238, 418.8334, -169.2610], // down on grate standpoint near deathplane in NW path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -494,7 +494,7 @@
       }
     },
     {
-      "trans": [ 23.4625, 453.8965, -208.8522], // way up by light in ceiling in NW by moving plats 
+      "trans": [ 23.4625, 453.8965, -208.8522], // way up by light in ceiling in NW by moving plats
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -504,7 +504,7 @@
       }
     },
     {
-      "trans": [ 16.0748, 450.4665, -66.3805], // secret ledge below lever on west mid path 
+      "trans": [ 16.0748, 450.4665, -66.3805], // secret ledge below lever on west mid path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -514,7 +514,7 @@
       }
     },
     {
-      "trans": [ 4.7583, 464.7958, -65.8010], // lamp in corner on west mid path 
+      "trans": [ 4.7583, 464.7958, -65.8010], // lamp in corner on west mid path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -535,7 +535,7 @@
       }
     },
     {
-      "trans": [ 2.8249, 460.6734, -117.4933], // small ledge over void by dax hang section on west (north/mid) path 
+      "trans": [ 2.8249, 460.6734, -117.4933], // small ledge over void by dax hang section on west (north/mid) path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -596,7 +596,7 @@
       }
     },
     {
-      "trans": [ 273.5839, 435.9178, 42.9055], // around corner wall near first dax section, southeast path 
+      "trans": [ 273.5839, 435.9178, 42.9055], // around corner wall near first dax section, southeast path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -616,7 +616,7 @@
       }
     },
     {
-      "trans": [ -4.9731, 455.4920, 8.8580], // between window and wall on west (south) path 
+      "trans": [ -4.9731, 455.4920, 8.8580], // between window and wall on west (south) path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -626,7 +626,7 @@
       }
     },
     {
-      "trans": [ 3.9204, 425.4913, 15.9295], // down near deathplane, window side of conveyor on west (south) path 
+      "trans": [ 3.9204, 425.4913, 15.9295], // down near deathplane, window side of conveyor on west (south) path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -636,7 +636,7 @@
       }
     },
     {
-      "trans": [ 28.1675, 446.0651, 14.9382], // inner corner of wall near conveyor on west (south) path 
+      "trans": [ 28.1675, 446.0651, 14.9382], // inner corner of wall near conveyor on west (south) path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -646,7 +646,7 @@
       }
     },
     {
-      "trans": [ -1.2641, 424.2991, 111.9093], // under SW corner of path, extended around 
+      "trans": [ -1.2641, 424.2991, 111.9093], // under SW corner of path, extended around
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -656,7 +656,7 @@
       }
     },
     {
-      "trans": [ 140.4063, 435.9501, 151.3396], // corner over void in south (central) path, jetboard yolo 
+      "trans": [ 140.4063, 435.9501, 151.3396], // corner over void in south (central) path, jetboard yolo
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -667,7 +667,7 @@
       }
     },
     {
-      "trans": [ 144.7824, 455.8406, 153.5316], // up in corner over void in south (central) path, abah from ^ 
+      "trans": [ 144.7824, 455.8406, 153.5316], // up in corner over void in south (central) path, abah from ^
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -709,7 +709,7 @@
       }
     },
     {
-      "trans": [ 286.5946, 435.9780, -124.2404], // small gap between fence and higher ground, NE path 
+      "trans": [ 286.5946, 435.9780, -124.2404], // small gap between fence and higher ground, NE path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -720,7 +720,7 @@
       }
     },
     {
-      "trans": [ 309.1692, 452.2689, -153.5240], // up high in corner, NE path 
+      "trans": [ 309.1692, 452.2689, -153.5240], // up high in corner, NE path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -730,7 +730,7 @@
       }
     },
     {
-      "trans": [ 331.3746, 434.3122, -181.0047], // around corner over void on vent, NE corner 
+      "trans": [ 331.3746, 434.3122, -181.0047], // around corner over void on vent, NE corner
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -740,7 +740,7 @@
       }
     },
     {
-      "trans": [ 106.7555, 430.3523, -201.7335], // in corner behind 2nd breakable grate 
+      "trans": [ 106.7555, 430.3523, -201.7335], // in corner behind 2nd breakable grate
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -750,7 +750,7 @@
       }
     },
     {
-      "trans": [ 126.1892, 454.8676, -164.3747], // up on wall between 2 breakable walls, north(west) path 
+      "trans": [ 126.1892, 454.8676, -164.3747], // up on wall between 2 breakable walls, north(west) path
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -759,6 +759,6 @@
         "name":"factoryc-skill-69"
       }
     }//,
-    
+
   ]
 }

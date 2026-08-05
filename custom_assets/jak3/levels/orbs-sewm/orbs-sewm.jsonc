@@ -47,7 +47,7 @@
 
   "actors" : [
     {
-      "trans": [ 263.1611, -160.9043, -238.3322], // oob in room with water ramp 
+      "trans": [ 263.1611, -160.9043, -238.3322], // oob in room with water ramp
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -58,11 +58,11 @@
     },
 
     {
-      "trans": [  168.0182, -135.0716, -293.2614], // slippery ledge out from building w tall windmill
+      "trans": [ 168.0182, -135.0716, -293.2614], // slippery ledge out from building w tall windmill
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  168.0182, -135.0716, -293.2614, 10],
+      "bsphere": [ 168.0182, -135.0716, -293.2614, 10],
       "lump": {
         "name":"sewm-skill-01"
       }
@@ -70,7 +70,7 @@
     {
       "trans": [ 165.4551, -136.2346, -250.6547], // corner of room with jetboard launcher to vanilla orbs, go over small invis wall
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 165.4551, -136.2346, -250.6547, 10],
       "lump": {
@@ -80,7 +80,7 @@
     {
       "trans": [ 364.6199, -127.2673, -302.1334], // in claw thing on right at very start of forced jetboard tube
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 364.6199, -127.2673, -302.1334, 10],
       "lump": {
@@ -90,7 +90,7 @@
     {
       "trans": [ 100.0873, -127.9002, -302.4685], // in corner near end toilet flush, before sewn
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 100.0873, -127.9002, -302.4685, 10],
       "lump": {
@@ -118,7 +118,7 @@
       }
     },
     {
-      "trans": [ 221.1679, -146.3393, -294.0773], // on outside of jetboard tube, double sideflip extended no flip concussor save backside fakie 
+      "trans": [ 221.1679, -146.3393, -294.0773], // on outside of jetboard tube, double sideflip extended no flip concussor save backside fakie
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -127,6 +127,6 @@
         "name":"sewm-skill-07"
       }
     }//,
-    
+
   ]
 }

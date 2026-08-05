@@ -45,9 +45,9 @@
    // by setting "save_texture_pngs" to true in the decompiler config.
    "textures": [],
 
-  "actors" : [    
+  "actors" : [
     {
-      "trans": [ 4257.3847, 9.9286, 4234.8496], // bottom of waterfall, come from desert with ocean loaded, go around oob and under 
+      "trans": [ 4257.3847, 9.9286, 4234.8496], // bottom of waterfall, come from desert with ocean loaded, go around oob and under
       "etype": "tape",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
@@ -59,7 +59,7 @@
     {
       "trans": [ 4125.5527, 283.7266, 4079.9328], // hidden warp gate on glider
       "etype": "warp-gate",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [ 0.0000, 0.9479, 0.0000, -0.3183],
       "bsphere": [ 4125.5527, 283.7266, 4079.9328, 10],
       "lump": {
@@ -68,11 +68,11 @@
     },
 
     {
-      "trans": [   4389.9326, 35.7684, 3993.7333], // around left/back of wall as you first get to temple from desert
+      "trans": [ 4389.9326, 35.7684, 3993.7333], // around left/back of wall as you first get to temple from desert
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   4389.9326, 35.7684, 3993.7333, 10],
+      "bsphere": [ 4389.9326, 35.7684, 3993.7333, 10],
       "lump": {
         "name":"templex-skill-01",
         "bob-scale": ["float", 0.4] // less bob
@@ -81,7 +81,7 @@
     {
       "trans": [ 4241.5029, 66.0604, 3896.4008 ], // crevice in rocks on right before right turn towards temple
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 4241.5029, 66.0604, 3896.4008 , 10],
       "lump": {
@@ -89,124 +89,124 @@
       }
     },
     {
-      "trans": [ 4234.88,  74.14,  3897.64 ], // crevice in rocks up from ^
+      "trans": [ 4234.88, 74.14, 3897.64 ], // crevice in rocks up from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 4234.88,  74.14,  3897.64 , 10],
+      "bsphere": [ 4234.88, 74.14, 3897.64 , 10],
       "lump": {
         "name":"templex-skill-03",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [ 4231.62,  98.05,  3909.96 ], // atop rock pillar on right before right turn towards temple, abah from ^
+      "trans": [ 4231.62, 98.05, 3909.96 ], // atop rock pillar on right before right turn towards temple, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 4231.62,  98.05,  3909.96 , 10],
+      "bsphere": [ 4231.62, 98.05, 3909.96 , 10],
       "lump": {
         "name":"templex-skill-04"
       }
     },
     {
-      "trans": [  4277.0952, 110.1016, 4188.1010 ], // right wall approaching temple, crevice near waterfall
+      "trans": [ 4277.0952, 110.1016, 4188.1010 ], // right wall approaching temple, crevice near waterfall
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  4277.0952, 110.1016, 4188.1010, 10],
+      "bsphere": [ 4277.0952, 110.1016, 4188.1010, 10],
       "lump": {
         "name":"templex-skill-05"
       }
     },
     {
-      "trans": [  4268.7207, 100.6715, 4201.1850 ], // right wall approaching temple, behind tree near waterfall
+      "trans": [ 4268.7207, 100.6715, 4201.1850 ], // right wall approaching temple, behind tree near waterfall
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  4268.7207, 100.6715, 4201.1850, 10],
+      "bsphere": [ 4268.7207, 100.6715, 4201.1850, 10],
       "lump": {
         "name":"templex-skill-06",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  4263.5532, 110.9937, 4200.6694 ], // right wall approaching temple, behind tree near waterfall, abah from ^
+      "trans": [ 4263.5532, 110.9937, 4200.6694 ], // right wall approaching temple, behind tree near waterfall, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  4263.5532, 110.9937, 4200.6694, 10],
+      "bsphere": [ 4263.5532, 110.9937, 4200.6694, 10],
       "lump": {
         "name":"templex-skill-07",
         "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [  4255.9785, 124.4804, 4202.7192 ], // right wall approaching temple, behind tree near waterfall, abah from ^
+      "trans": [ 4255.9785, 124.4804, 4202.7192 ], // right wall approaching temple, behind tree near waterfall, abah from ^
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  4255.9785, 124.4804, 4202.7192, 10],
+      "bsphere": [ 4255.9785, 124.4804, 4202.7192, 10],
       "lump": {
         "name":"templex-skill-08"
       }
     },
     {
-      "trans": [ 4098.31,  188.69,  4298.36 ], // top most part of 'fence' outside temple
+      "trans": [ 4098.31, 188.69, 4298.36 ], // top most part of 'fence' outside temple
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  4098.31,  188.69,  4298.36 , 10],
+      "bsphere": [ 4098.31, 188.69, 4298.36 , 10],
       "lump": {
         "name":"templex-skill-09"
       }
     },
     {
-      "trans": [  4101.6684, 138.4788, 4342.5336 ], // crevice between left wall and 'fence' outside temple (come from top to get over invis wall)
+      "trans": [ 4101.6684, 138.4788, 4342.5336 ], // crevice between left wall and 'fence' outside temple (come from top to get over invis wall)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   4101.6684, 138.4788, 4342.5336 , 10],
+      "bsphere": [ 4101.6684, 138.4788, 4342.5336 , 10],
       "lump": {
         "name":"templex-skill-10"
       }
     },
     {
-      "trans": [  4129.7895, 119.9127, 4147.3691], // in courtyard, in corner on left as soon as you enter
+      "trans": [ 4129.7895, 119.9127, 4147.3691], // in courtyard, in corner on left as soon as you enter
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   4129.7895, 119.9127, 4147.3691 , 10],
+      "bsphere": [ 4129.7895, 119.9127, 4147.3691 , 10],
       "lump": {
         "name":"templex-skill-11"
       }
     },
     {
-      "trans": [  4128.2548, 155.1060, 4135.6748], // up on precur statue from ^, have to go over invis wall (urn-b-4 hint) SNOW
+      "trans": [ 4128.2548, 155.1060, 4135.6748], // up on precur statue from ^, have to go over invis wall (urn-b-4 hint) SNOW
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   4128.2548, 155.1060, 4135.6748 , 10],
+      "bsphere": [ 4128.2548, 155.1060, 4135.6748 , 10],
       "lump": {
         "name":"templex-skill-12"
       }
     },
     {
-      "trans": [  4129.2412, 136.6728, 4117.9506], // in courtyard, behind torch on precur statue on left SNOW
+      "trans": [ 4129.2412, 136.6728, 4117.9506], // in courtyard, behind torch on precur statue on left SNOW
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   4129.2412, 136.6728, 4117.9506 , 10],
+      "bsphere": [ 4129.2412, 136.6728, 4117.9506 , 10],
       "lump": {
         "name":"templex-skill-13"
       }
     },
     {
-      "trans": [  4151.5942, 180.2676, 4176.7622], // in courtyard, on last lil ledge above right precur statue
+      "trans": [ 4151.5942, 180.2676, 4176.7622], // in courtyard, on last lil ledge above right precur statue
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  4151.5942, 180.2676, 4176.7622, 10],
+      "bsphere": [ 4151.5942, 180.2676, 4176.7622, 10],
       "lump": {
         "name":"templex-skill-14"
       }
@@ -214,7 +214,7 @@
     {
       "trans": [ 4129.0893, 163.7996, 4130.8588 ], // in courtyard, up behind precur statue head on left
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 4129.0893, 163.7996, 4130.8588 , 10],
       "lump": {
@@ -222,62 +222,62 @@
       }
     },
     {
-      "trans": [ 4144.02,  270.2202,  4170.23 ], // in courtyard, way up near very top on SNOW
+      "trans": [ 4144.02, 270.2202, 4170.23 ], // in courtyard, way up near very top on SNOW
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 4144.02,  270.2202,  4170.23 , 10],
+      "bsphere": [ 4144.02, 270.2202, 4170.23 , 10],
       "lump": {
         "name":"templex-skill-16"
       }
     },
     {
-      "trans": [  4208.8002, 170.8165, 4098.3720], // top of arch over spikes before temple entrance door
+      "trans": [ 4208.8002, 170.8165, 4098.3720], // top of arch over spikes before temple entrance door
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  4208.8002, 170.8165, 4098.3720 , 10],
+      "bsphere": [ 4208.8002, 170.8165, 4098.3720 , 10],
       "lump": {
         "name":"templex-skill-17"
       }
     },
     {
-      "trans": [ 4219.14,  142.4101,  4089.59 ], // in hanging torch over spikes before temple entrance door (above door is an IJ you can extendo from)
+      "trans": [ 4219.14, 142.4101, 4089.59 ], // in hanging torch over spikes before temple entrance door (above door is an IJ you can extendo from)
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 4219.14,  142.4101,  4089.59 , 10],
+      "bsphere": [ 4219.14, 142.4101, 4089.59 , 10],
       "lump": {
         "name":"templex-skill-18"
       }
     },
     {
-      "trans": [  4052.7001, 205.6919, 4341.4072], // before courtyard, jetboard extended ff from highest pillar to concussor spam on rock wall
+      "trans": [ 4052.7001, 205.6919, 4341.4072], // before courtyard, jetboard extended ff from highest pillar to concussor spam on rock wall
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   4052.7001, 205.6919, 4341.4072, 10],
+      "bsphere": [ 4052.7001, 205.6919, 4341.4072, 10],
       "lump": {
         "name":"templex-skill-19",
         "pickup-amount":["float", 2.0] // abah hint
       }
     },
     {
-      "trans": [   4019.1250, 208.8977, 4325.5458], // abah from ^ around back of tall rock pillar to crevice
+      "trans": [ 4019.1250, 208.8977, 4325.5458], // abah from ^ around back of tall rock pillar to crevice
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [  4019.1250, 208.8977, 4325.5458, 10],
+      "bsphere": [ 4019.1250, 208.8977, 4325.5458, 10],
       "lump": {
         "name":"templex-skill-20"
       }
     },
     {
-      "trans": [  4017.0720, 201.2888, 4296.1933], // abah or concussor jump from ^ up and over, behind trees way up on rock wall, outside courtyard
+      "trans": [ 4017.0720, 201.2888, 4296.1933], // abah or concussor jump from ^ up and over, behind trees way up on rock wall, outside courtyard
       "etype": "skill",
-      "game_task": 0, 
+      "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [   4017.0720, 201.2888, 4296.1933, 10],
+      "bsphere": [ 4017.0720, 201.2888, 4296.1933, 10],
       "lump": {
         "name":"templex-skill-21"
       }
@@ -322,7 +322,7 @@
       "bsphere": [ 4134.9316, 170.1201, 4214.1333, 10],
       "lump": {
         "name":"templex-skill-25",
-        "pickup-amount": ["float", 2.0] // abah hint   
+        "pickup-amount": ["float", 2.0] // abah hint
       }
     },
     {
@@ -499,6 +499,6 @@
         "name":"templex-skill-42"
       }
     }//,
-    
+
   ]
 }
