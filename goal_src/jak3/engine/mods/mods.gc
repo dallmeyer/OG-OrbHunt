@@ -57,21 +57,23 @@
     (none)))
 
 (defun print-pd ((pd process-drawable))
-  (let ((vec (cond
-              ((type-type? (-> pd type) skill)
-                (-> (the skill pd) base))
-              (else
-                (-> pd root trans))))
-        (q (-> pd root quat)))
-    (format 0 "~%~S:~%" (-> pd name))
-    (format 0 "~m ~m ~m  |||  " (-> vec x) (-> vec y) (-> vec z))
-    (format 0 " Q:  ~f  ~f  ~f  ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
-    (format 0 "~m, ~m, ~m  |||  " (-> vec x) (-> vec y) (-> vec z))
-    (format 0 " Q:  ~f, ~f, ~f, ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
+  (when pd
+    (let ((vec (cond
+                ((type-type? (-> pd type) skill)
+                  (-> (the skill pd) base))
+                (else
+                  (-> pd root trans))))
+          (q (-> pd root quat)))
+      (format 0 "~%~S:~%" (-> pd name))
+      (format 0 "~m ~m ~m  |||  " (-> vec x) (-> vec y) (-> vec z))
+      (format 0 " Q:  ~f  ~f  ~f  ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
+      (format 0 "~m, ~m, ~m  |||  " (-> vec x) (-> vec y) (-> vec z))
+      (format 0 " Q:  ~f, ~f, ~f, ~f~%" (-> q x) (-> q y) (-> q z) (-> q w))
 
-    (format 0 "~%    (('~S) " (-> pd name))
-    (format 0 "(set-vector-meters! (-> arg0 extra trans) ~m ~m ~m)~%" (-> vec x) (-> vec y) (-> vec z))
-    (format 0 "      (quaternion-set! (-> arg0 quat)  ~f  ~f  ~f  ~f))~%" (-> q x) (-> q y) (-> q z) (-> q w))
+      (format 0 "~%    (('~S) " (-> pd name))
+      (format 0 "(set-vector-meters! (-> arg0 extra trans) ~m ~m ~m)~%" (-> vec x) (-> vec y) (-> vec z))
+      (format 0 "      (quaternion-set! (-> arg0 quat)  ~f  ~f  ~f  ~f))~%" (-> q x) (-> q y) (-> q z) (-> q w))
+      )
     )
   (none)
   )
@@ -1365,7 +1367,34 @@
       (set-vector-meters! (res-lump-struct arg0 'spawn-trans vector) 120.11  430.02  -19.50)
       (quaternion-set! (res-lump-struct arg0 'spawn-quat quaternion) 0.0 0.0 0.0 1.0)
       )
-    
+
+    ;; MINEB
+    (('crate-993) (set-vector-meters! (-> arg0 extra trans) -79.9558 11.4624 38.8622)
+      (quaternion-set! (-> arg0 quat)  0.0174  -0.5846  0.0125  0.8110))
+    (('crate-994) (set-vector-meters! (-> arg0 extra trans) -111.6456 -0.0074 -3.1695)
+      (quaternion-set! (-> arg0 quat)  -0.0075  -0.4725  -0.0040  0.8812))
+    (('crate-995) (set-vector-meters! (-> arg0 extra trans) -148.7352 -6.9117 68.0875)
+      (quaternion-set! (-> arg0 quat)  0.1067  0.9394  -0.0722  0.3174))
+    (('crate-996) (set-vector-meters! (-> arg0 extra trans) -86.4153 -18.8699 98.0944)
+      (quaternion-set! (-> arg0 quat)  -0.0187  0.7659  0.0012  0.6426))
+    (('crate-997) (set-vector-meters! (-> arg0 extra trans) -69.9209 -12.0899 53.8223)
+      (quaternion-set! (-> arg0 quat)  0.0433  -0.5371  0.0995  0.8364))
+    (('crate-998) (set-vector-meters! (-> arg0 extra trans) -57.4678 -31.8500 112.0755)
+      (quaternion-set! (-> arg0 quat)  -0.0032  0.6435  -0.0194  -0.7651))
+    (('crate-999) (set-vector-meters! (-> arg0 extra trans) -77.7258 -26.1002 139.0265)
+      (quaternion-set! (-> arg0 quat)  -0.0538  0.9827  0.0279  -0.1745))
+    (('crate-1000) (set-vector-meters! (-> arg0 extra trans) -88.1958 -2.9625 168.9729)
+      (quaternion-set! (-> arg0 quat)  0.0082  0.4170  0.0537  0.9072))
+    (('crate-1001) (set-vector-meters! (-> arg0 extra trans) -170.9166 33.9075 162.3372)
+      (quaternion-set! (-> arg0 quat)  0.0522  0.3636  -0.0204  0.9298))
+    (('crate-1002) (set-vector-meters! (-> arg0 extra trans) -160.6252 39.1780 141.0550)
+      (quaternion-set! (-> arg0 quat)  0.0086  0.5990  -0.0172  0.8004))
+    (('crate-1013) (set-vector-meters! (-> arg0 extra trans) -107.6375 18.6681 -4.5151)
+      (quaternion-set! (-> arg0 quat)  -0.0070  0.9378  0.0570  0.3421))    
+    (('crate-1014) (set-vector-meters! (-> arg0 extra trans) -135.2238 8.6016 43.9442)
+      (quaternion-set! (-> arg0 quat)  0.0522  0.7621  0.0586  0.6426))
+    (('crate-1015) (set-vector-meters! (-> arg0 extra trans) -92.1687 -25.0099 43.4133)
+      (quaternion-set! (-> arg0 quat)  0.1667  0.0652  0.0138  0.9837))
 
     ;; MINEC
     (('crate-968) (set-vector-meters! (-> arg0 extra trans) 216.4153 79.9967 70.2387)

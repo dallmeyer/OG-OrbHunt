@@ -963,7 +963,7 @@ u32 ISOThread() {
               }
               break;
             case ISO_Hdr::MsgType::VAG_PAUSE:
-              ovrld_log(LogCategory::ISO_QUEUE, "VagPause (all of them)");
+              // ovrld_log(LogCategory::ISO_QUEUE, "VagPause (all of them)");
               if (g_bExtPause == 0) {
                 SetVagStreamsNoStart(1);
                 int iVar3 = AnyVagRunning();
@@ -976,7 +976,7 @@ u32 ISOThread() {
               ReturnMessage(mbx_cmd);
               break;
             case ISO_Hdr::MsgType::VAG_UNPAUSE:
-              ovrld_log(LogCategory::ISO_QUEUE, "VagUnPause (all of them)");
+              // ovrld_log(LogCategory::ISO_QUEUE, "VagUnPause (all of them)");
               if (g_bExtPause != 0) {
                 if (g_bExtResume != false) {
                   UnPauseVagStreams(0);

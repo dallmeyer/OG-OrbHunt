@@ -276,7 +276,10 @@
              (t (get-op-trans orb)))
         ;; (format 0 " ~2m, ~2m, ~2m ~%" (-> orb base x) (-> orb base y) (-> orb base z))
         (format 0 "    {~%      \"trans\": [ ~2m, ~2m, ~2m], // orba~3,'0D ~%      \"etype\": \"~S\",~%      \"game_task\": 0,~%" (-> t x) (-> t y) (-> t z) i (-> orb type symbol))
-        (format 0 "      \"quat\": [0, 0, 0, 1],~%      \"bsphere\": [ ~2m, ~2m, ~2m, 10],~%" (-> t x) (-> t y) (-> t z))
+        (if (or (not (type? orb skill)) (nonzero? (-> orb root quat z)))
+          (format 0 "      \"quat\": [ ~2f, ~2f, ~2f, ~2f],~%" (-> orb root quat x) (-> orb root quat y) (-> orb root quat z) (-> orb root quat w))
+          (format 0 "      \"quat\": [ 0, 0, 0, 1],~%"))
+        (format 0 "      \"bsphere\": [ ~2m, ~2m, ~2m, 10],~%" (-> t x) (-> t y) (-> t z))
         (cond
           ((type? orb skill)
             (case (-> orb fact pickup-amount)
@@ -291,6 +294,14 @@
               (else
                 (format 0 "      \"lump\": {~%        \"name\":\"~A-skill-YYY\"" lvl)
                 )
+              )
+            (case (-> (the skill orb) bob-amount)
+              ((1024.0) 
+                ) ;; default, do nothing
+              ((0.0)
+                (format 0 ",~%        \"bob-scale\": [\"float\", -1.0] // no bob"))
+              (else 
+                (format 0 ",~%        \"bob-scale\": [\"float\", ~2f]" (/ (-> (the skill orb) bob-amount) 1024.0)))
               )
             )
           (else

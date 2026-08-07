@@ -155,20 +155,20 @@
 (defenum sp-group-flag
   :bitfield #t
   :type uint16
-  (sp0)
-  (sp1)
-  (sp2)
-  (sp3)
-  (sp4)
-  (sp5)
-  (sp6)
-  (sp7)
+  (sp0) ;; local clock something
+  (sp1) ;; always draw
+  (sp2) ;; screen space ?
+  (sp3) ;; beach-part ?
+  (sp4) ;; if set, uses process's quat for origin matrix
+  (sp5) ;; if set, uses camera matrix for offset (e.g. rain/snow effects?)
+  (sp6) ;; if set, rotates origin matrix based on group
+  (sp7) ;; if set, scales origin matrix based on group
   (sp8)
   (sp9)
   (sp10)
   (sp11)
-  (sp12)
-  (sp13)
+  (sp12) ;; local-space-binding ?
+  (sp13) ;; part-tracker-subsampler ?
   (sp14)
   (sp15)
   )

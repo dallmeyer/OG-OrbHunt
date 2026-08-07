@@ -200,6 +200,450 @@
         "name":"mineb-skill-14",
         "bob-scale": ["float", 0.25]
       }
+    },
+    {
+      "trans": [ -97.7222, 33.4054, -85.4021], // on side slant of doorframe at starting elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -97.7222, 33.4054, -85.4021, 10],
+      "lump": {
+        "name":"mineb-skill-15",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -98.4242, 47.3321, -80.2574], // top of doorframe at starting elevator, tricky abah from^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -98.4242, 47.3321, -80.2574, 10],
+      "lump": {
+        "name":"mineb-skill-16"
+      }
+    },
+    {
+      "trans": [ -92.1735, 11.5008, -30.9879], // back left side of first archway, bottom of railing 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -92.1735, 11.5008, -30.9879, 10],
+      "lump": {
+        "name":"mineb-skill-17"
+      }
+    },
+    {
+      "trans": [ -108.8469, 2.0703, -2.7463], // crevice between rock and first pipe that rats come out of 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -108.8469, 2.0703, -2.7463, 10],
+      "lump": {
+        "name":"mineb-skill-18"
+      }
+    },
+    {
+      "trans": [ -91.5782, -5.8021, 29.5439], // behind/below first hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -91.5782, -5.8021, 29.5439, 10],
+      "lump": {
+        "name":"mineb-skill-19"
+      }
+    },
+    {
+      "trans": [ -108.0124, -5.1869, 8.7338], // 2nd pullout step, while retracted 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -108.0124, -5.1869, 8.7338, 10],
+      "lump": {
+        "name":"mineb-skill-20"
+      }
+    },
+    {
+      "trans": [ -99.5680, -9.0620, 14.8474], // 3rd pullout step, while retracted 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -99.5680, -9.0620, 14.8474, 10],
+      "lump": {
+        "name":"mineb-skill-21"
+      }
+    },
+    {
+      "trans": [ -152.5769, -22.4334, 63.5920], // pipe lip under path, in west corner just after first rat/hamster wheel area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -152.5769, -22.4334, 63.5920, 10],
+      "lump": {
+        "name":"mineb-skill-22"
+      }
+    },
+    {
+      "trans": [ -118.6959, -11.4200, -4.7890], // pipe lip under path, right next to first rat dispenser 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -118.6959, -11.4200, -4.7890, 10],
+      "lump": {
+        "name":"mineb-skill-23"
+      }
+    },
+    {
+      "trans": [ -151.4176, -14.7461, 30.2710], // rock wall near pipe under path, just after first rat/hamster wheel area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -151.4176, -14.7461, 30.2710, 10],
+      "lump": {
+        "name":"mineb-skill-24"
+      }
+    },
+    {
+      "trans": [ -75.2870, -14.6486, 27.5000], // pipe under path, below first hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -75.2870, -14.6486, 27.5000, 10],
+      "lump": {
+        "name":"mineb-skill-25"
+      }
+    },
+    {
+      "trans": [ -158.0820, -4.2656, 59.0382], // crevice between pipe and wall in west corner, just after first rat/hamster wheel area
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -158.0820, -4.2656, 59.0382, 10],
+      "lump": {
+        "name":"mineb-skill-26"
+      }
+    },
+    {
+      "trans": [ -158.4343, 9.8824, 50.9235], // behind pipe in west corner, just after first rat/hamster wheel area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -158.4343, 9.8824, 50.9235, 10],
+      "lump": {
+        "name":"mineb-skill-27"
+      }
+    },
+    {
+      "trans": [ -148.8753, 15.9588, 39.8075], // rock wall on right just after first rat/hamster wheel area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -148.8753, 15.9588, 39.8075, 10],
+      "lump": {
+        "name":"mineb-skill-28",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -137.3339, 34.5157, 51.5120], // way up on pipe after first rat/hamster wheel area, abah+concussor from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -137.3339, 34.5157, 51.5120, 10],
+      "lump": {
+        "name":"mineb-skill-29"
+      }
+    },
+    {
+      "trans": [ -103.2952, -1.1628, 41.0793], // corner over void by center stone support, next to first hamster wheel
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -103.2952, -1.1628, 41.0793, 10],
+      "lump": {
+        "name":"mineb-skill-30"
+      }
+    },
+    {
+      "trans": [ -153.1087, 19.4333, 63.4575], // up in corner of rock wall just after first hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -153.1087, 19.4333, 63.4575, 10],
+      "lump": {
+        "name":"mineb-skill-31"
+      }
+    },
+    {
+      "trans": [ -66.3039, -10.9725, 58.7539], // behind gear on 2nd hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -66.3039, -10.9725, 58.7539, 10],
+      "lump": {
+        "name":"mineb-skill-32"
+      }
+    },
+    {
+      "trans": [ -64.5634, -8.0524, 78.5354], // between 2nd rat dispenser and wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -64.5634, -8.0524, 78.5354, 10],
+      "lump": {
+        "name":"mineb-skill-33"
+      }
+    },
+    {
+      "trans": [ -57.0431, -15.0448, 98.1594], // lip of pipe over void near 2nd rat/hamster wheel area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -57.0431, -15.0448, 98.1594, 10],
+      "lump": {
+        "name":"mineb-skill-34"
+      }
+    },
+    {
+      "trans": [ -60.6607, 9.5745, 91.9562], // higher lip of pipe near 2nd rat/hamster wheel area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -60.6607, 9.5745, 91.9562, 10],
+      "lump": {
+        "name":"mineb-skill-35"
+      }
+    },
+    {
+      "trans": [ -106.3296, 6.7734, 80.8760], // on corner wall near 2nd rat/hamster wheel area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -106.3296, 6.7734, 80.8760, 10],
+      "lump": {
+        "name":"mineb-skill-36",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -113.4593, 28.0500, 79.9213], // way up on corner wall near 2nd rat/hamster wheel area, tough abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -113.4593, 28.0500, 79.9213, 10],
+      "lump": {
+        "name":"mineb-skill-37"
+      }
+    },
+    {
+      "trans": [ -91.4331, -16.0879, 87.3535], // metal support at bottom of steps after 2nd rat/hamster wheel area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -91.4331, -16.0879, 87.3535, 10],
+      "lump": {
+        "name":"mineb-skill-38"
+      }
+    },
+    {
+      "trans": [ -49.1995, 7.0267, 106.6485], // rock wall behind pipe near 2nd rat/hamster wheel area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -49.1995, 7.0267, 106.6485, 10],
+      "lump": {
+        "name":"mineb-skill-39"
+      }
+    },
+    {
+      "trans": [ -55.4219, 16.2142, 104.1862], // rock wall behind pipe near 2nd rat/hamster wheel area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -55.4219, 16.2142, 104.1862, 10],
+      "lump": {
+        "name":"mineb-skill-40"
+      }
+    },
+    {
+      "trans": [ -53.9850, -7.1539, 118.8170], // slippery ledge on wall under path, just after 2nd rat/hamster wheel area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -53.9850, -7.1539, 118.8170, 10],
+      "lump": {
+        "name":"mineb-skill-41"
+      }
+    },
+    {
+      "trans": [ -68.3587, -7.4408, 128.4060], // slippery ledge on wall under path, just after 2nd rat/hamster wheel area  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -68.3587, -7.4408, 128.4060, 10],
+      "lump": {
+        "name":"mineb-skill-42"
+      }
+    },
+    {
+      "trans": [ -81.4957, -5.1060, 119.1281], // IJ under path just after 2nd rat/hamster wheel area  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 1, 0],
+      "bsphere": [ -81.4957, -5.1060, 119.1281, 10],
+      "lump": {
+        "name":"mineb-skill-43"
+      }
+    },
+    {
+      "trans": [ -87.6391, -3.6060, 131.6690], // IJ under path just after 2nd rat/hamster wheel area   
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 1, 0],
+      "bsphere": [ -87.6391, -3.6060, 131.6690, 10],
+      "lump": {
+        "name":"mineb-skill-44"
+      }
+    },
+    {
+      "trans": [ -14.4426, 19.0341, 161.9245], // behind/under 3rd rat spawner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -14.4426, 19.0341, 161.9245, 10],
+      "lump": {
+        "name":"mineb-skill-45"
+      }
+    },
+    {
+      "trans": [ -53.3026, 18.5730, 159.7227], // on side of 3rd hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -53.3026, 18.5730, 159.7227, 10],
+      "lump": {
+        "name":"mineb-skill-46"
+      }
+    },
+    {
+      "trans": [ -55.8093, 17.0803, 194.2262], // around left corner in room with 3 left and right plats, after 3rd hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -55.8093, 17.0803, 194.2262, 10],
+      "lump": {
+        "name":"mineb-skill-47"
+      }
+    },
+    {
+      "trans": [ -69.0699, 32.0439, 151.0815], // up on wall to right in room with 3 left and right plats, after 3rd hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -69.0699, 32.0439, 151.0815, 10],
+      "lump": {
+        "name":"mineb-skill-48"
+      }
+    },
+    {
+      "trans": [ -112.9431, 24.1994, 178.9866], // IJ under path at end of room with 3 left and right plats, after 3rd hamster wheel  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 1, 0],
+      "bsphere": [ -112.9431, 24.1994, 178.9866, 10],
+      "lump": {
+        "name":"mineb-skill-49"
+      }
+    },
+    {
+      "trans": [ -116.0940, 30.7962, 163.0824], // small gap in bottom right when entering room with 4th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -116.0940, 30.7962, 163.0824, 10],
+      "lump": {
+        "name":"mineb-skill-50",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ -113.4679, 48.5651, 180.6429], // up in left corner when entering room with 4th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -113.4679, 48.5651, 180.6429, 10],
+      "lump": {
+        "name":"mineb-skill-51"
+      }
+    },
+    {
+      "trans": [ -147.2339, 51.1408, 180.9468], // up on rock wall on left when entering room with 4th hamster wheel
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -147.2339, 51.1408, 180.9468, 10],
+      "lump": {
+        "name":"mineb-skill-52"
+      }
+    },
+    {
+      "trans": [ -170.7644, 38.8314, 155.8306], // behind stack of stone cubes next to 4th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -170.7644, 38.8314, 155.8306, 10],
+      "lump": {
+        "name":"mineb-skill-53"
+      }
+    },
+    {
+      "trans": [ -169.3085, 30.2892, 144.8079], // behind 4th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -169.3085, 30.2892, 144.8079, 10],
+      "lump": {
+        "name":"mineb-skill-54"
+      }
+    },
+    {
+      "trans": [ -162.8717, 30.2901, 138.2199], // behind smaller stack of stone cubes next to 4th hamster wheel
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -162.8717, 30.2901, 138.2199, 10],
+      "lump": {
+        "name":"mineb-skill-55"
+      }
+    },
+    {
+      "trans": [ -118.4174, 41.3643, 119.1491], // up on top of big brick block holding 1st rotating wheel platform, just after 4th hamster wheel
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -118.4174, 41.3643, 119.1491, 10],
+      "lump": {
+        "name":"mineb-skill-56"
+      }
+    },
+    {
+      "trans": [ -168.8525, 57.3315, 83.3232], // up on cable box on wall, after 4th hamster wheel, above 2nd rotating wheel plat 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -168.8525, 57.3315, 83.3232, 10],
+      "lump": {
+        "name":"mineb-skill-57"
+      }
+    },
+    {
+      "trans": [ -285.9078, 77.9752, 76.1019], // up on brick blocks above 5th hamster wheels 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [0, 0, 0, 1],
+      "bsphere": [ -285.9078, 77.9752, 76.1019, 10],
+      "lump": {
+        "name":"mineb-skill-58"
+      }
     }
     //,
 
