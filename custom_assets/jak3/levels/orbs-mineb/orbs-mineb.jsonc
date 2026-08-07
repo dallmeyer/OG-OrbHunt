@@ -644,6 +644,452 @@
       "lump": {
         "name":"mineb-skill-58"
       }
+    },
+    {
+      "trans": [ -139.3312, 34.4743, 118.9673], // behind 1st rotating wheel plat after 4th hamster 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -139.3312, 34.4743, 118.9673, 10],
+      "lump": {
+        "name":"mineb-skill-59"
+      }
+    },
+    {
+      "trans": [ -168.8045, 43.3903, 86.5491], // behind 2nd rotating wheel plat after 4th hamster 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -168.8045, 43.3903, 86.5491, 10],
+      "lump": {
+        "name":"mineb-skill-60"
+      }
+    },
+    {
+      "trans": [ -232.1399, 48.0475, 107.8167], // slanted ledge on left just past 5th rat dispenser 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -232.1399, 48.0475, 107.8167, 10],
+      "lump": {
+        "name":"mineb-skill-61",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -232.1170, 72.5307, 108.2284], // up on ledge in small crevice near ceiling, just past 5th rat dispenser, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -232.1170, 72.5307, 108.2284, 10],
+      "lump": {
+        "name":"mineb-skill-62",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ -271.8638, 51.8292, 50.6083], // behind pillar on left before plats, by 5th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -271.8638, 51.8292, 50.6083, 10],
+      "lump": {
+        "name":"mineb-skill-63"
+      }
+    },
+    {
+      "trans": [ -291.6556, 55.0527, 67.8045], // left corner just behind 5th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -291.6556, 55.0527, 67.8045, 10],
+      "lump": {
+        "name":"mineb-skill-64"
+      }
+    },
+    {
+      "trans": [ -279.5458, 53.9644, 56.9074], // right corner just behind 5th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -279.5458, 53.9644, 56.9074, 10],
+      "lump": {
+        "name":"mineb-skill-65"
+      }
+    },
+    {
+      "trans": [ -283.5643, 79.2367, 48.1424], // up on big blocks on left behind pillar, by 5th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -283.5643, 79.2367, 48.1424, 10],
+      "lump": {
+        "name":"mineb-skill-66"
+      }
+    },
+    {
+      "trans": [ -247.7765, 52.7686, 46.8611], // down along lower ledge on right before plats, just after 5th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -247.7765, 52.7686, 46.8611, 10],
+      "lump": {
+        "name":"mineb-skill-67"
+      }
+    },
+    {
+      "trans": [ -242.4114, 60.9735, 40.3063], // small grounded pt behind blocks on right before plats, just after 5th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -242.4114, 60.9735, 40.3063, 10],
+      "lump": {
+        "name":"mineb-skill-68"
+      }
+    },
+    {
+      "trans": [ -272.4913, 66.2341, 14.7709], // behind block on left after plats after 5th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -272.4913, 66.2341, 14.7709, 10],
+      "lump": {
+        "name":"mineb-skill-69"
+      }
+    },
+    {
+      "trans": [ -275.9583, 66.7154, 19.4030], // around pillar against wall left of plats after 5th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -275.9583, 66.7154, 19.4030, 10],
+      "lump": {
+        "name":"mineb-skill-70"
+      }
+    },
+    {
+      "trans": [ -257.0021, 58.9556, 11.9648], // on ledge under double pullout plats after 5th hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -257.0021, 58.9556, 11.9648, 10],
+      "lump": {
+        "name":"mineb-skill-71"
+      }
+    },
+    {
+      "trans": [ -265.7081, 68.7481, -7.5088], // behind block on left near ankle weights or whatever 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -265.7081, 68.7481, -7.5088, 10],
+      "lump": {
+        "name":"mineb-skill-72"
+      }
+    },
+    {
+      "trans": [ -239.5854, 65.1211, -5.9148], // gap in blocks on left just before entering last room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -239.5854, 65.1211, -5.9148, 10],
+      "lump": {
+        "name":"mineb-skill-73"
+      }
+    },
+    {
+      "trans": [ -182.5549, 77.6045, 10.0969], // on backside of crane near exit elevator
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -182.5549, 77.6045, 10.0969, 10],
+      "lump": {
+        "name":"mineb-skill-74"
+      }
+    },
+    {
+      "trans": [ -183.8174, 81.6125, 2.7501], // on ledge above crane near exit elevator
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -183.8174, 81.6125, 2.7501, 10],
+      "lump": {
+        "name":"mineb-skill-75"
+      }
+    },
+    {
+      "trans": [ -189.3996, 73.0686, 13.0906], // on arm of crane near exit elevator  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -189.3996, 73.0686, 13.0906, 10],
+      "lump": {
+        "name":"mineb-skill-76"
+      }
+    },
+    {
+      "trans": [ -172.1843, 87.6552, -0.7152], // on top left of 2nd arch next crane / exit elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -172.1843, 87.6552, -0.7152, 10],
+      "lump": {
+        "name":"mineb-skill-77"
+      }
+    },
+    {
+      "trans": [ -149.4489, 89.9677, -26.5719], // on top of 3rd arch, above exit elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -149.4489, 89.9677, -26.5719, 10],
+      "lump": {
+        "name":"mineb-skill-78",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -151.5345, 108.8759, -20.9927], // on metal support above exit elevator, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -151.5345, 108.8759, -20.9927, 10],
+      "lump": {
+        "name":"mineb-skill-79"
+      }
+    },
+    {
+      "trans": [ -196.2552, 117.4768, -5.7617], // on end of metal support above exit elevator, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -196.2552, 117.4768, -5.7617, 10],
+      "lump": {
+        "name":"mineb-skill-80"
+      }
+    },
+    {
+      "trans": [ -190.5627, 107.9111, -80.3131], // on metal support against wall, above exit elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -190.5627, 107.9111, -80.3131, 10],
+      "lump": {
+        "name":"mineb-skill-81"
+      }
+    },
+    {
+      "trans": [ -135.0547, 92.7383, -54.3346], // on far corner above exit elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -135.0547, 92.7383, -54.3346, 10],
+      "lump": {
+        "name":"mineb-skill-82"
+      }
+    },
+    {
+      "trans": [ -231.9687, 73.2104, -25.5604], // left bolt on machine/silo near exit elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -231.9687, 73.2104, -25.5604, 10],
+      "lump": {
+        "name":"mineb-skill-83"
+      }
+    },
+    {
+      "trans": [ -227.6372, 78.1427, -32.1510], // metal prong on machine/silo near exit elevator, up from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -227.6372, 78.1427, -32.1510, 10],
+      "lump": {
+        "name":"mineb-skill-84"
+      }
+    },
+    {
+      "trans": [ -228.9149, 88.7825, -26.1542], // metal prong on machine/silo near exit elevator, up from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -228.9149, 88.7825, -26.1542, 10],
+      "lump": {
+        "name":"mineb-skill-85"
+      }
+    },
+    {
+      "trans": [ -225.8396, 97.2096, -33.8282], // metal prong on machine/silo near exit elevator, up from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -225.8396, 97.2096, -33.8282, 10],
+      "lump": {
+        "name":"mineb-skill-86"
+      }
+    },
+    {
+      "trans": [ -235.8649, 98.3026, -30.9230], // on top of machine/silo near exit elevator, up from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -235.8649, 98.3026, -30.9230, 10],
+      "lump": {
+        "name":"mineb-skill-87"
+      }
+    },
+    {
+      "trans": [ -210.2185, 77.3098, -44.4840], // between fence and metal support near exit elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -210.2185, 77.3098, -44.4840, 10],
+      "lump": {
+        "name":"mineb-skill-88"
+      }
+    },
+    {
+      "trans": [ -240.7944, 84.7387, -1.6851], // hidden standpoint on left rock wall just as you enter last room, abah from ledge below (no hint)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -240.7944, 84.7387, -1.6851, 10],
+      "lump": {
+        "name":"mineb-skill-89"
+      }
+    },
+    {
+      "trans": [ -241.4270, 92.1029, -4.7907], // up on metal support overhead as you enter last room, extended from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -241.4270, 92.1029, -4.7907, 10],
+      "lump": {
+        "name":"mineb-skill-90"
+      }
+    },
+    {
+      "trans": [ -242.7340, 93.9855, -12.1678], // behind stone pillar at start of last room, yolo from top of machine/silo 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -242.7340, 93.9855, -12.1678, 10],
+      "lump": {
+        "name":"mineb-skill-91"
+      }
+    },
+    {
+      "trans": [ -231.9947, 62.3214, -58.2467], // left end of boxes near exit elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -231.9947, 62.3214, -58.2467, 10],
+      "lump": {
+        "name":"mineb-skill-92"
+      }
+    },
+    {
+      "trans": [ -203.1048, 62.3054, -86.1958], // back corner behind boxes near exit elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -203.1048, 62.3054, -86.1958, 10],
+      "lump": {
+        "name":"mineb-skill-93"
+      }
+    },
+    {
+      "trans": [ -209.6800, 62.3056, 14.8192], // jetboard proxy hint on side of rightmost arch by crane/exit elevator 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -209.6800, 62.3056, 14.8192, 10],
+      "lump": {
+        "name":"mineb-skill-94"
+      }
+    },
+    {
+      "trans": [ -157.3640, 148.7350, -18.6859], // IJ hint on beam near ceiling, in final room
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 1, 0],
+      "bsphere": [ -157.3640, 148.7350, -18.6859, 10],
+      "lump": {
+        "name":"mineb-skill-95"
+      }
+    },
+    {
+      "trans": [ -218.5921, 140.1932, -79.9195], // way up above precursor statue in final room, above boxes, IJ from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -218.5921, 140.1932, -79.9195, 10],
+      "lump": {
+        "name":"mineb-skill-96"
+      }
+    },
+    {
+      "trans": [ -144.7328, 140.4110, -61.0004], // way up on precursor statue in final room, above elevator, IJ or slide around from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -144.7328, 140.4110, -61.0004, 10],
+      "lump": {
+        "name":"mineb-skill-97"
+      }
+    },
+    {
+      "trans": [ -179.5971, 139.8191, 24.6102], // way up on precursor statue in final room, above crane, jetboard proxy from ^^^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -179.5971, 139.8191, 24.6102, 10],
+      "lump": {
+        "name":"mineb-skill-98",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -179.5971, 155.5596, 24.6335], // IJ hint on ceiling of final room, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 1, 0],
+      "bsphere": [ -179.5971, 155.5596, 24.6335, 10],
+      "lump": {
+        "name":"mineb-skill-99"
+      }
+    },
+    {
+      "trans": [ -237.0493, 136.1920, -11.4734], // on top of stone pillar way up in final room, IJ from ^ and fall down 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -237.0493, 136.1920, -11.4734, 10],
+      "lump": {
+        "name":"mineb-skill-100"
+      }
+    },
+    {
+      "trans": [ -249.6483, 54.1084, 77.6863 ], // in monster-frog near 5th rat dispenser
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -249.6483, 54.1084, 77.6863 , 10],
+      "lump": {
+        "name":"mineb-skill-101",
+        "alt-actor": "monster-frog-80"
+      }
+    },
+    {
+      "trans": [ -91.7602, 0.4764, 5.1778], // in manta near 1st rat dispenser
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -91.7602, 0.4764, 5.1778, 10],
+      "lump": {
+        "name":"mineb-skill-102",
+        "alt-actor": "manta-32"
+      }
     }
     //,
 
