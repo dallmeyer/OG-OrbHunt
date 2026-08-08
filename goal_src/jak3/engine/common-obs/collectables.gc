@@ -1464,7 +1464,7 @@
   )
 
 (defmethod common-post ((this money))
-  (quaternion-rotate-y! (-> this root quat) (-> this root quat) (* 40049.777 (seconds-per-frame)))
+  (quaternion-rotate-y! (-> this root quat) (-> this root quat) (* (if (= (-> this type symbol) 'tape) 20480.0 40049.777) (seconds-per-frame)))
   (let ((f30-0 (-> this bob-amount)))
     (when (< 0.0 f30-0)
       (set! (-> this root trans y)

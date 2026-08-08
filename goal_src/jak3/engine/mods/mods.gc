@@ -1548,6 +1548,14 @@
             ;; visible for a bit before pickup
             (return #f))
           )
+        (('min-crane-switch)
+          (when (< (-> alt-actor extra perm user-int8 0) 5)
+            ;; no pickup if haven't smacked it 5 times
+            (return #f))
+          (when (and for-pickup? (not (time-elapsed? (-> skill state-time) (seconds 1.0))))
+            ;; visible for a bit before pickup
+            (return #f))
+          )
         (('tow-spawner 'sew-power-switch)
           (when (not (logtest? (-> alt-actor extra perm status) (entity-perm-status subtask-complete)))
             (return #f))
