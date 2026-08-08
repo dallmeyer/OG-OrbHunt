@@ -236,7 +236,59 @@
       "lump": {
         "name":"rubblea2-skill-18"
       }
-    }//,
+    },
+    {
+      "trans": [ -461.6384, 24.2267, -247.9527], // crevice near fallen wall you hover over from rubblea in any% 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -461.6384, 24.2267, -247.9527, 10],
+      "lump": {
+        "name":"rubblea2-skill-19"
+      }
+    },
+    {
+      "trans": [ -365.2510, 35.8986, -151.9755], // on lower ledge of inner city wall in first "room" 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -365.2510, 35.8986, -151.9755, 10],
+      "lump": {
+        "name":"rubblea2-skill-20"
+      }
+    },
+    {
+      "trans": [ -357.6349, 62.3789, -123.6546], // up on ornament on inner city wall in first "room", follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -357.6349, 62.3789, -123.6546, 10],
+      "lump": {
+        "name":"rubblea2-skill-21"
+      }
+    },
+    {
+      "trans": [ -534.2522, 37.2373, -133.2118], // outer rock wall in first "room", concussor up from fallen metal beam 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -534.2522, 37.2373, -133.2118, 10],
+      "lump": {
+        "name":"rubblea2-skill-22",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -549.0238, 68.0419, -114.7888], // way up on outer rock wall in first "room", abah (maybe not needed?) from ^ and do timed spin concussor shots to slide up wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -549.0238, 68.0419, -114.7888, 10],
+      "lump": {
+        "name":"rubblea2-skill-23"
+      }
+    }
+    //,
 
   ]
 }
