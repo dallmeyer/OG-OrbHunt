@@ -287,6 +287,190 @@
       "lump": {
         "name":"rubblea2-skill-23"
       }
+    },
+    
+    {
+      "trans": [ -535.6207, 44.9425, -227.3102], // small standpoint on outer rock wall in NW corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -535.6207, 44.9425, -227.3102, 10],
+      "lump": {
+        "name":"rubblea2-skill-24"
+      }
+    },
+    {
+      "trans": [ -374.4179, 26.3614, -90.4006], // weird hole straight thru wall between first and second "rooms", behind invis wall (go up, around, under)  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -374.4179, 26.3614, -90.4006, 10],
+      "lump": {
+        "name":"rubblea2-skill-25"
+      }
+    },
+    {
+      "trans": [ -392.2210, 18.5274, -93.8721], // under big strip of fallen metal, near wall between first and second "rooms" 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -392.2210, 18.5274, -93.8721, 10],
+      "lump": {
+        "name":"rubblea2-skill-26",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ -496.2315, 61.6432, -64.6912], // standpoint on west rock wall near first (elec) barrier 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -496.2315, 61.6432, -64.6912, 10],
+      "lump": {
+        "name":"rubblea2-skill-27"
+      }
+    },
+    {
+      "trans": [ -534.6585, 29.7265, 70.4518], // on rebar on west wall in second "room", behind invis wall (go under) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -534.6585, 29.7265, 70.4518, 10],
+      "lump": {
+        "name":"rubblea2-skill-28"
+      }
+    },
+    {
+      "trans": [ -399.9389, -0.0109, 48.4690], // on edge of water / weird waterbottom surface in second room, kinda at bottom of ramp out of water
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -399.9389, -0.0109, 48.4690, 10],
+      "lump": {
+        "name":"rubblea2-skill-29"
+      }
+    },
+    {
+      "trans": [ -336.0603, 0.1975, -36.1746], // near water, small gap in rocks under 2nd falling bridge (second room) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -336.0603, 0.1975, -36.1746, 10],
+      "lump": {
+        "name":"rubblea2-skill-30"
+      }
+    },
+    {
+      "trans": [ -351.9058, 17.0508, -17.2923], // under metal sheets just before 2nd falling bridge (second room) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -351.9058, 17.0508, -17.2923, 10],
+      "lump": {
+        "name":"rubblea2-skill-31",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ -252.5420, 19.4946, -58.1273], // behind wall near lamp and tunnel to rubbleb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -252.5420, 19.4946, -58.1273, 10],
+      "lump": {
+        "name":"rubblea2-skill-32"
+      }
+    },
+    {
+      "trans": [ -283.9814, 14.7431, -51.2354], // between metal stuff sticking out near end of water 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -283.9814, 14.7431, -51.2354, 10],
+      "lump": {
+        "name":"rubblea2-skill-33",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ -338.0752, 42.5936, -202.1299], // along wall behind metal sheets in northern tip of second room, left of tunnel to rubbleb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -338.0752, 42.5936, -202.1299, 10],
+      "lump": {
+        "name":"rubblea2-skill-34"
+      }
+    },
+    {
+      "trans": [ -307.5389, 41.5563, -186.1640], // on top of lamp in northern tip of second room, left of tunnel to rubbleb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -307.5389, 41.5563, -186.1640, 10],
+      "lump": {
+        "name":"rubblea2-skill-35"
+      }
+    },
+    {
+      "trans": [ -342.7739, 40.4698, -158.7886], // in corner along citywall in northern tip of second room, left of tunnel to rubbleb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -342.7739, 40.4698, -158.7886, 10],
+      "lump": {
+        "name":"rubblea2-skill-36"
+      }
+    },
+    {
+      "trans": [ -355.8006, 30.7107, -84.7369], // among rubble at corner between first and second rooms, second room side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -355.8006, 30.7107, -84.7369, 10],
+      "lump": {
+        "name":"rubblea2-skill-37"
+      }
+    },
+    {
+      "trans": [ -388.6047, 20.4403, 149.0955], // under floor, in gap in collision, SE corner of second room
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -388.6047, 20.4403, 149.0955, 10],
+      "lump": {
+        "name":"rubblea2-skill-38"
+      }
+    },
+    {
+      "trans": [ -376.7107, 36.1323, 151.1987], // along bottom of rock wall in SE corner of second room, behind invis wall (go left and under invis wall, then jump behind it to orb) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -376.7107, 36.1323, 151.1987, 10],
+      "lump": {
+        "name":"rubblea2-skill-39"
+      }
+    },
+    {
+      "trans": [ -358.9732, 54.9440, 128.2662], // along east (south) citywall in second room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -358.9732, 54.9440, 128.2662, 10],
+      "lump": {
+        "name":"rubblea2-skill-40"
+      }
+    },
+    {
+      "trans": [ -359.8711, 47.0598, 145.2463], // between citywall and rocks in SE corner of second room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -359.8711, 47.0598, 145.2463, 10],
+      "lump": {
+        "name":"rubblea2-skill-41"
+      }
     }
     //,
 
