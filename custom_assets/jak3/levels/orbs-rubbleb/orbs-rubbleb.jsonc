@@ -481,6 +481,157 @@
       "lump": {
         "name":"rubbleb-skill-41"
       }
+    },
+    {
+      "trans": [ 15.6295, 18.6240, -282.7151], // in pile of rubble by bridge 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 15.6295, 18.6240, -282.7151, 10],
+      "lump": {
+        "name":"rubbleb-skill-42"
+      }
+    },
+    {
+      "trans": [ 7.7175, 18.2198, -140.3847], // lower SE corner of first "room", along building 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 7.7175, 18.2198, -140.3847, 10],
+      "lump": {
+        "name":"rubbleb-skill-43"
+      }
+    },
+    {
+      "trans": [ 31.6512, 16.2855, -243.0099], // "oob" in gap in collision/visuals between buildings, east side of hairpin turn 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 31.6512, 16.2855, -243.0099, 10],
+      "lump": {
+        "name":"rubbleb-skill-44"
+      }
+    },
+    {
+      "trans": [ -32.7667, 18.1361, -281.2996], // top/side of bridge 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -32.7667, 18.1361, -281.2996, 10],
+      "lump": {
+        "name":"rubbleb-skill-45"
+      }
+    },
+    {
+      "trans": [ 106.9446, 32.7375, -280.4209], // mid level building by lamp along east (north) wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 106.9446, 32.7375, -280.4209, 10],
+      "lump": {
+        "name":"rubbleb-skill-46"
+      }
+    },
+    {
+      "trans": [ 44.2065, 35.6909, -193.6568], // mid level building along inner building wall, just before breakable wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 44.2065, 35.6909, -193.6568, 10],
+      "lump": {
+        "name":"rubbleb-skill-47",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 47.2090, 56.9384, -193.3006], // top/edge of inner building wall, just before breakable wall, abah concussor, double jump, concussor, ez 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 47.2090, 56.9384, -193.3006, 10],
+      "lump": {
+        "name":"rubbleb-skill-48"
+      }
+    },
+    {
+      "trans": [ 33.3162, 57.5799, -219.9205], // top/back of inner building wall, just before breakable wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 33.3162, 57.5799, -219.9205, 10],
+      "lump": {
+        "name":"rubbleb-skill-49"
+      }
+    },
+    {
+      "trans": [ 48.6239, 54.2967, -254.1309], // standpoint on top of inner building wall at hairpin turn, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 48.6239, 54.2967, -254.1309, 10],
+      "lump": {
+        "name":"rubbleb-skill-50"
+      }
+    },
+    {
+      "trans": [ 22.7848, 56.4231, -274.0191], // standpoint on top of inner building wall at hairpin turn, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 22.7848, 56.4231, -274.0191, 10],
+      "lump": {
+        "name":"rubbleb-skill-51"
+      }
+    },
+    {
+      "trans": [ 6.9575, 56.4404, -254.1433], // standpoint on top of inner building wall at hairpin turn, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 6.9575, 56.4404, -254.1433, 10],
+      "lump": {
+        "name":"rubbleb-skill-52"
+      }
+    },
+    {
+      "trans": [ 15.3841, 58.5653, -200.1243], // top of inner building wall, east side before bridge, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 15.3841, 58.5653, -200.1243, 10],
+      "lump": {
+        "name":"rubbleb-skill-53"
+      }
+    },
+    {
+      "trans": [ 24.3668, 70.2991, -162.1212], // top of inner building wall, east side before bridge, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 24.3668, 70.2991, -162.1212, 10],
+      "lump": {
+        "name":"rubbleb-skill-54"
+      }
+    },
+    {
+      "trans": [ 3.7805, 57.4395, -134.3100], // top corner of inner building wall, between bridge and shortcut, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3.7805, 57.4395, -134.3100, 10],
+      "lump": {
+        "name":"rubbleb-skill-55"
+      }
+    },
+    {
+      "trans": [ 13.4681, 38.0876, -169.0825], // mid level building, behind metal sheet, between bridge and shortcut, drop down from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 13.4681, 38.0876, -169.0825, 10],
+      "lump": {
+        "name":"rubbleb-skill-56"
+      }
     }//,
 
 

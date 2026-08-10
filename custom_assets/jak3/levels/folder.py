@@ -3,7 +3,7 @@ import os
 
 levels = [
     ["orbs-rubblea", "01"],
-    ["orbs-rubblea2", "02"],
+    ["o-rubblea2", "02"],
     ["orbs-rubbleb", "03"],
     ["orbs-rubblec", "04"],
     ["orbs-rublcst", "05"],
