@@ -4,5 +4,5 @@
 ;; the actual file name still needs to be 8.3
 ("O02.DGO"
  (
-  "orbs-rubblea2.go"
+  "o-rubblea2.go"
   ))

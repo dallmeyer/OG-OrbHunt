@@ -23,6 +23,7 @@
     *orb-placer-entity-type*
    
     (debug-menu-append-item orb-placer-menu (new-dm-func "Toggle Orb Marking" #f orb-placer-toggle-marking))
+    (debug-menu-append-item orb-placer-menu (new-dm-func "Flip Orb" #f orb-placer-flip))
     (let ((select-orb-menu (new 'debug 'debug-menu ctx "Select Actor")))
       (set! *orb-placer-select-menu* select-orb-menu)
       ;; populated on orb add

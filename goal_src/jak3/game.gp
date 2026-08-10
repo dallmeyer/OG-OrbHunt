@@ -413,8 +413,8 @@
 (build-custom-level "orbs-rubblea")
 (custom-level-cgo "O01.DGO" "orbs-rubblea/orbs-rubblea.gd")
 
-(build-custom-level "orbs-rubblea2")
-(custom-level-cgo "O02.DGO" "orbs-rubblea2/orbs-rubblea2.gd")
+(build-custom-level "o-rubblea2")
+(custom-level-cgo "O02.DGO" "o-rubblea2/o-rubblea2.gd")
 
 (build-custom-level "orbs-rubbleb")
 (custom-level-cgo "O03.DGO" "orbs-rubbleb/orbs-rubbleb.gd")

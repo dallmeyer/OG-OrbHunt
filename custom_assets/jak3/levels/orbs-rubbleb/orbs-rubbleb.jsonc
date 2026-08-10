@@ -371,6 +371,116 @@
       "lump": {
         "name":"rubbleb-skill-30"
       }
+    },
+    {
+      "trans": [ -172.0795, -1.2877, -148.5135], // underwater below "ladder", right at beginning of water 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -172.0795, -1.2877, -148.5135, 10],
+      "lump": {
+        "name":"rubbleb-skill-31"
+      }
+    },
+    {
+      "trans": [ -135.1240, 21.7950, -128.9731], // midway up building on right in tunnel entrance 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -135.1240, 21.7950, -128.9731, 10],
+      "lump": {
+        "name":"rubbleb-skill-32"
+      }
+    },
+    {
+      "trans": [ -162.5648, 30.7987, -125.0559], // up another level from ^ on building on right in tunnel entrance
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -162.5648, 30.7987, -125.0559, 10],
+      "lump": {
+        "name":"rubbleb-skill-33"
+      }
+    },
+    {
+      "trans": [ -76.8735, 43.0394, -131.6721], // top corner of last building on right in tunnel entrance, just before shortcut gap 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -76.8735, 43.0394, -131.6721, 10],
+      "lump": {
+        "name":"rubbleb-skill-34"
+      }
+    },
+    {
+      "trans": [ -78.3576, 77.9602, -154.8333], // way up on metal framing under roof, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -78.3576, 77.9602, -154.8333, 10],
+      "lump": {
+        "name":"rubbleb-skill-35"
+      }
+    },
+    {
+      "trans": [ -85.5106, 42.8750, -163.3071], // IJ tunnel entrance roof, follow from ^^ - gotta make sure camera doesn't hit region and deload rubblea2 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ -0.7532, -0.0035, -0.6577, -0.0031],
+      "bsphere": [ -85.5106, 42.8750, -163.3071, 10],
+      "lump": {
+        "name":"rubbleb-skill-36"
+      }
+    },
+    {
+      "trans": [ -125.6324, 27.3245, -179.2980], // on top of lamp along tunnel entrance, IJ along from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -125.6324, 27.3245, -179.2980, 10],
+      "lump": {
+        "name":"rubbleb-skill-37"
+      }
+    },
+    {
+      "trans": [ -123.2218, 52.7162, -102.3888], // rooftop on right just past elec barrier after shortcut
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -123.2218, 52.7162, -102.3888, 10],
+      "lump": {
+        "name":"rubbleb-skill-38"
+      }
+    },
+    {
+      "trans": [ -117.7199, 46.0336, -65.2385], // on top of rooftop rebar over path, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -117.7199, 46.0336, -65.2385, 10],
+      "lump": {
+        "name":"rubbleb-skill-39"
+      }
+    },
+    {
+      "trans": [ -161.4136, 75.1352, -130.5595], // up on metal framing in the back from ^, concussor boosted or maybe jetboard gets u across 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -161.4136, 75.1352, -130.5595, 10],
+      "lump": {
+        "name":"rubbleb-skill-40"
+      }
+    },
+    {
+      "trans": [ -78.8255, 97.7128, -54.1316], // up on metal framing above path, follow from ^^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -78.8255, 97.7128, -54.1316, 10],
+      "lump": {
+        "name":"rubbleb-skill-41"
+      }
     }//,
 
 

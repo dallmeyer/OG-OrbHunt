@@ -663,6 +663,7 @@
   )
 
 (defun-extern hover-need-to-cooldown? symbol)
+(defun-extern lightjak-flight-need-to-cooldown? symbol)
 (define-extern *last-hover-time* time-frame)
 (define-extern *hover-collected-grace-time* time-frame)
 (define-extern try-play-no-hover-zone-audio (function none))
@@ -684,10 +685,11 @@
              )
     (when (and (= (-> self type symbol) 'skill)
                (= (-> self pickup-amount) (-> *FACT-bank* super-skill-inc))
-               (hover-need-to-cooldown?)
+               (or (hover-need-to-cooldown?) (lightjak-flight-need-to-cooldown?))
                )
       ;; hover orb collected, reset cooldown
       (set! *last-hover-time* (the time-frame #f))
+      (set! *last-lightjak-flight-glitch-time* (the time-frame #f))
       (set! *hover-collected-grace-time* (get-current-time))
       )
     (cond
@@ -700,7 +702,7 @@
       ;; if this is a non-hover orb and you've hovered in the past X minutes, frick you
       ((and (= (-> self type symbol) 'skill)
             (!= (-> self pickup-amount) (-> *FACT-bank* super-skill-inc))
-            (hover-need-to-cooldown?)
+            (or (hover-need-to-cooldown?) (lightjak-flight-need-to-cooldown?))
             )
         (try-play-no-hover-zone-audio)
         ;; no pickup

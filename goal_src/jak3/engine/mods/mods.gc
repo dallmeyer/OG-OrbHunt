@@ -1744,6 +1744,7 @@
 ;;   (static-vector-meters 341.6452 -130.8514 -18.8891)
 ;;   ))
 
+(define *got-trolled* #f)
 (define *tmp-vec* (static-vector-meters -3.5 -3.0 1.0))
 (define *zoom-sensitivity-scale* 1.0)
 (define *show-mini-bigmap* #f)
@@ -1981,6 +1982,12 @@
       (set! (-> r1796 on-exit) '(begin (send-event *task-manager* 'missile-spawners 0) (want-display 'stadiumb 'display))))
     (when r1823
       (set! (-> r1796 on-enter) '(begin (none)))) ;; no talker-spawn
+    )
+
+  ;; rubblea2 play funni sound if you get trolled
+  (when (and (not *got-trolled*) (in-bubble-m? -409.11  11.83  186.62 10.0))
+    (true! *got-trolled*)
+    (play-sound-file "gotem.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 175.0)))
     )
 
   ;; precura/b

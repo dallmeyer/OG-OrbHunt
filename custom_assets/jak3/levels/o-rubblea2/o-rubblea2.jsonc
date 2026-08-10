@@ -1,7 +1,7 @@
 {
   // The "in-game" name of the level. Should be lower case, with dashes (GOAL symbol name)
   // the name of this file, and the folder this file is in must have the same name.
-  "long_name": "orbs-rubblea2",
+  "long_name": "o-rubblea2",
   // The file name, should be upper case and 8 characters or less.
   "iso_name": "O02",
   // The nickname, should be exactly 3 characters
@@ -10,7 +10,7 @@
   // Must have vertex colors. Use the blender cycles renderer, bake, diffuse, uncheck color,
   // and bake to vertex colors. For now, only the first vertex color group is used, so make sure you
   // only have 1.
-  "gltf_file": "custom_assets/jak3/levels/orbs-rubblea2/orbs-rubblea2.glb", // wascitya
+  "gltf_file": "custom_assets/jak3/levels/o-rubblea2/o-rubblea2.glb", // wascitya
 
   // automatically set wall vs. ground based on angle. Useful if you don't want to assign this yourself
   "automatic_wall_detection": true,
@@ -288,7 +288,6 @@
         "name":"rubblea2-skill-23"
       }
     },
-    
     {
       "trans": [ -535.6207, 44.9425, -227.3102], // small standpoint on outer rock wall in NW corner 
       "etype": "skill",
@@ -470,6 +469,67 @@
       "bsphere": [ -359.8711, 47.0598, 145.2463, 10],
       "lump": {
         "name":"rubblea2-skill-41"
+      }
+    },
+    {
+      "trans": [ -359.1853, 33.4644, 108.4484], // behind metal rubble along bottom of citywall, in right-most cavity 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -359.1853, 33.4644, 108.4484, 10],
+      "lump": {
+        "name":"rubblea2-skill-42"
+      }
+    },
+    {
+      "trans": [ -352.3690, 54.9387, 32.2579], // small ledge midway up exposed/broken outer citywall, between falling tower->bridges
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -352.3690, 54.9387, 32.2579, 10],
+      "lump": {
+        "name":"rubblea2-skill-43"
+      }
+    },
+    {
+      "trans": [ -346.0821, 35.3142, 36.6449], // down in corner near exposed/broken outer citywall, between falling tower->bridges
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -346.0821, 35.3142, 36.6449, 10],
+      "lump": {
+        "name":"rubblea2-skill-44"
+      }
+    },
+    {
+      "trans": [ -406.6350, 31.5023, 192.6836], // in small gap in collision near southern tip of second room, plays funny sound if you listen to png and fall thru 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -406.6350, 31.5023, 192.6836, 10],
+      "lump": {
+        "name":"rubblea2-skill-45",
+        "bob-scale": ["float", 0.7]
+      }
+    },
+    {
+      "trans": [ -320.9649, 25.4197, -198.1373], // between metal sheets in northern corner before rubbleb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -320.9649, 25.4197, -198.1373, 10],
+      "lump": {
+        "name":"rubblea2-skill-46"
+      }
+    },
+    {
+      "trans": [ -256.0542, 29.7880, -101.4843], // IJ in ceiling between beams in tunnel to rubbleb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0.9628, 0.0045, 0.2701, 0.0012],
+      "bsphere": [ -256.0542, 29.7880, -101.4843, 10],
+      "lump": {
+        "name":"rubblea2-skill-47"
       }
     }
     //,
