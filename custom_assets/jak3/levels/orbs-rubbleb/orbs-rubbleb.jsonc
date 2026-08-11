@@ -632,6 +632,218 @@
       "lump": {
         "name":"rubbleb-skill-56"
       }
+    },
+    {
+      "trans": [ 85.4333, 1.3927, -328.5331], // lower NW corner down in gap in collision 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 85.4333, 1.3927, -328.5331, 10],
+      "lump": {
+        "name":"rubbleb-skill-57"
+      }
+    },
+    {
+      "trans": [ 104.7186, 26.4597, -244.9458], // mid level building on east wall of eastern loop 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 104.7186, 26.4597, -244.9458, 10],
+      "lump": {
+        "name":"rubbleb-skill-58"
+      }
+    },
+    {
+      "trans": [ 90.1305, 31.2948, -161.8320], // gap in collision on left side of first breakable wall
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 90.1305, 31.2948, -161.8320, 10],
+      "lump": {
+        "name":"rubbleb-skill-59"
+      }
+    },
+    {
+      "trans": [ 47.7480, 19.1159, -163.6830], // gap in collision on right side of first breakable wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 47.7480, 19.1159, -163.6830, 10],
+      "lump": {
+        "name":"rubbleb-skill-60"
+      }
+    },
+    {
+      "trans": [ 48.9700, 36.5379, -162.1441], // mid level building to the right of first breakable wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 48.9700, 36.5379, -162.1441, 10],
+      "lump": {
+        "name":"rubbleb-skill-61",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 58.6820, 47.8880, -162.3978], // on top of first breakable wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 58.6820, 47.8880, -162.3978, 10],
+      "lump": {
+        "name":"rubbleb-skill-62"
+      }
+    },
+    {
+      "trans": [ 100.3409, 51.0332, -170.2086], // top of building behind lamp east of first breakable wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 100.3409, 51.0332, -170.2086, 10],
+      "lump": {
+        "name":"rubbleb-skill-63"
+      }
+    },
+    {
+      "trans": [ 40.4526, 41.3917, -118.5433], // between rebar and inner wall of eastern loop, after first breakable wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 40.4526, 41.3917, -118.5433, 10],
+      "lump": {
+        "name":"rubbleb-skill-64"
+      }
+    },
+    {
+      "trans": [ 98.7549, 28.9407, -140.1729], // lower standpoint on weird outer wall just past first breakable wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 98.7549, 28.9407, -140.1729, 10],
+      "lump": {
+        "name":"rubbleb-skill-65"
+      }
+    },
+    {
+      "trans": [ 100.2792, 38.7512, -138.6016], // mid standpoint on weird outer wall just past first breakable wall  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 100.2792, 38.7512, -138.6016, 10],
+      "lump": {
+        "name":"rubbleb-skill-66"
+      }
+    },
+    {
+      "trans": [ 93.9260, 48.9464, -145.2527], // high standpoint on weird outer wall just past first breakable wall  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 93.9260, 48.9464, -145.2527, 10],
+      "lump": {
+        "name":"rubbleb-skill-67"
+      }
+    },
+    {
+      "trans": [ 103.2393, 62.5449, -127.6067], // on top of building on outer wall of eastern loop, above lamp, just past first breakable wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 103.2393, 62.5449, -127.6067, 10],
+      "lump": {
+        "name":"rubbleb-skill-68"
+      }
+    },
+    {
+      "trans": [ 97.9883, 38.0049, -78.1049], // mid level building on outer wall of eastern (south) loop, past first breakable wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 97.9883, 38.0049, -78.1049, 10],
+      "lump": {
+        "name":"rubbleb-skill-69",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 107.8607, 57.2384, -98.0041], // on top of building ground collision on outer wall of eastern (south) loop, abah from^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 107.8607, 57.2384, -98.0041, 10],
+      "lump": {
+        "name":"rubbleb-skill-70"
+      }
+    },
+    {
+      "trans": [ 100.9312, 59.6926, -49.5315], // on top of building ground collision on outer wall of eastern (south) loop, follow from^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 100.9312, 59.6926, -49.5315, 10],
+      "lump": {
+        "name":"rubbleb-skill-71"
+      }
+    },
+    {
+      "trans": [ 103.8067, 44.6466, -28.1652], // mid level building in outer SE corner of loop, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 103.8067, 44.6466, -28.1652, 10],
+      "lump": {
+        "name":"rubbleb-skill-72"
+      }
+    },
+    {
+      "trans": [ 105.4772, 34.0222, -49.3253], // in crevice along outer wall of eastern (south) loop, between building where wall has no collision 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 105.4772, 34.0222, -49.3253, 10],
+      "lump": {
+        "name":"rubbleb-skill-73"
+      }
+    },
+    {
+      "trans": [ 103.8055, 23.7102, -107.1481], // crevice along outer wall under building on eastern (south) loop 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 103.8055, 23.7102, -107.1481, 10],
+      "lump": {
+        "name":"rubbleb-skill-74"
+      }
+    },
+    {
+      "trans": [ 101.3972, 24.1432, -46.3150], // crevice along outer wall on eastern (south) loop, behind rebar 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 101.3972, 24.1432, -46.3150, 10],
+      "lump": {
+        "name":"rubbleb-skill-75"
+      }
+    },
+    {
+      "trans": [ 83.3373, 23.4232, -1.0664], // under fallen metal sheet in outer SE corner of loop 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 83.3373, 23.4232, -1.0664, 10],
+      "lump": {
+        "name":"rubbleb-skill-76"
+      }
+    },
+    {
+      "trans": [ -72.5498, 23.9398, -1.0266], // gap between buildings outer SW corner of loop 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -72.5498, 23.9398, -1.0266, 10],
+      "lump": {
+        "name":"rubbleb-skill-77"
+      }
     }//,
 
 
