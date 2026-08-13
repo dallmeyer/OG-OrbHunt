@@ -844,6 +844,106 @@
       "lump": {
         "name":"rubbleb-skill-77"
       }
+    },
+    {
+      "trans": [ 7.3343, 27.9252, -105.0869], // against inner wall on southern loop, under misaligned layers 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 7.3343, 27.9252, -105.0869, 10],
+      "lump": {
+        "name":"rubbleb-skill-78"
+      }
+    },
+    {
+      "trans": [ -57.6603, 42.5018, -47.8998], // on rebar sticking out from overhead, on left side before electric barrier
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -57.6603, 42.5018, -47.8998, 10],
+      "lump": {
+        "name":"rubbleb-skill-79"
+      }
+    },
+    {
+      "trans": [ -53.1466, 43.9896, -16.4739], // on rebar sticking out from overhead, on left side before electric barrier, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -53.1466, 43.9896, -16.4739, 10],
+      "lump": {
+        "name":"rubbleb-skill-80"
+      }
+    },
+    {
+      "trans": [ -25.9302, 53.1804, -10.8842], // rooftop along outer wall, southern loop, follow from ^ (careful to not get eaten by building) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -25.9302, 53.1804, -10.8842, 10],
+      "lump": {
+        "name":"rubbleb-skill-81"
+      }
+    },
+    {
+      "trans": [ 13.8701, 60.8338, 6.3970], // rooftop along outer wall, southern loop, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 13.8701, 60.8338, 6.3970, 10],
+      "lump": {
+        "name":"rubbleb-skill-82"
+      }
+    },
+    {
+      "trans": [ 68.3186, 54.9753, -0.0939], // ground collision rooftop along outer wall, southern loop, follow from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 68.3186, 54.9753, -0.0939, 10],
+      "lump": {
+        "name":"rubbleb-skill-83"
+      }
+    },
+    {
+      "trans": [ -62.9551, 49.3747, -50.1268], // along metal framing overhead just before electric barrier, behind metal sheet (drop down from above or yolo from other metal framing) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -62.9551, 49.3747, -50.1268, 10],
+      "lump": {
+        "name":"rubbleb-skill-84"
+      }
+    },
+    {
+      "trans": [ -63.6831, 54.6109, -6.9095], // in corner of metal framing overhead just before electric barrier, on outer wall side
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -63.6831, 54.6109, -6.9095, 10],
+      "lump": {
+        "name":"rubbleb-skill-85"
+      }
+    },
+    {
+      "trans": [ -111.6815, 62.1404, -53.2865], // in corner crevice between sections of metal framing overhead, just past electric barrier 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -111.6815, 62.1404, -53.2865, 10],
+      "lump": {
+        "name":"rubbleb-skill-86"
+      }
+    },
+    {
+      "trans": [ -143.4147, 41.4366, -81.8972], // along rebar sticking out overhead, just past electric barrier, drop down from above and crawl along 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -143.4147, 41.4366, -81.8972, 10],
+      "lump": {
+        "name":"rubbleb-skill-87"
+      }
     }//,
 
 
