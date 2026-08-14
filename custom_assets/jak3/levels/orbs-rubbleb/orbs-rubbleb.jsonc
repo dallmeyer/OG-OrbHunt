@@ -944,6 +944,218 @@
       "lump": {
         "name":"rubbleb-skill-87"
       }
+    },
+    {
+      "trans": [ 19.0308, 16.3497, -169.0668], // aginst inner wall, west loop over void 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 19.0308, 16.3497, -169.0668, 10],
+      "lump": {
+        "name":"rubbleb-skill-88"
+      }
+    },
+    {
+      "trans": [ -134.0109, 29.7165, -103.5772], // on building with no collision on right after electric barrier 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -134.0109, 29.7165, -103.5772, 10],
+      "lump": {
+        "name":"rubbleb-skill-89"
+      }
+    },
+    {
+      "trans": [ -184.5756, 28.4035, -74.5036], // behind angled metal sheet on north wall at top of "S" 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -184.5756, 28.4035, -74.5036, 10],
+      "lump": {
+        "name":"rubbleb-skill-90"
+      }
+    },
+    {
+      "trans": [ -228.9252, 38.0861, -24.7835], // on rebar along NW wall of "S", jump from lower exposed collision 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -228.9252, 38.0861, -24.7835, 10],
+      "lump": {
+        "name":"rubbleb-skill-91"
+      }
+    },
+    {
+      "trans": [ -245.4061, 39.7092, 17.2923], // in smoky triangle between buildings along west wall of "S" 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -245.4061, 39.7092, 17.2923, 10],
+      "lump": {
+        "name":"rubbleb-skill-92"
+      }
+    },    
+    {
+      "trans": [ -173.5828, 47.4555, -80.7289], // up in ceiling along northern wall of "S", standpoints along wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -173.5828, 47.4555, -80.7289, 10],
+      "lump": {
+        "name":"rubbleb-skill-93"
+      }
+    },
+    {
+      "trans": [ -244.0773, 39.4817, 42.1746], // mid level building in SW corner halfway along "S" 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -244.0773, 39.4817, 42.1746, 10],
+      "lump": {
+        "name":"rubbleb-skill-94",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -250.9605, 51.0792, 55.0694], // upper level building in SW corner halfway along "S", abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -250.9605, 51.0792, 55.0694, 10],
+      "lump": {
+        "name":"rubbleb-skill-95"
+      }
+    },
+    {
+      "trans": [ -247.9847, 65.0786, 61.0908], // top of building in SW corner halfway along "S", concussor jump concussor jump spin up from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -247.9847, 65.0786, 61.0908, 10],
+      "lump": {
+        "name":"rubbleb-skill-96"
+      }
+    },
+    {
+      "trans": [ -236.3624, 66.6134, 30.0061], // top of building in SW corner halfway along "S", follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -236.3624, 66.6134, 30.0061, 10],
+      "lump": {
+        "name":"rubbleb-skill-97"
+      }
+    },
+    {
+      "trans": [ -256.6003, 58.4320, 0.2409], // top of building in west side of "S", follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -256.6003, 58.4320, 0.2409, 10],
+      "lump": {
+        "name":"rubbleb-skill-98"
+      }
+    },
+    {
+      "trans": [ -198.2855, 59.5438, 68.1525], // top of building on southern side of middle part of "S" 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -198.2855, 59.5438, 68.1525, 10],
+      "lump": {
+        "name":"rubbleb-skill-99"
+      }
+    },
+    {
+      "trans": [ -174.3380, 37.8794, 65.4468], // mid level building along southern side of middle part of "S", drop down from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -174.3380, 37.8794, 65.4468, 10],
+      "lump": {
+        "name":"rubbleb-skill-100"
+      }
+    },
+    {
+      "trans": [ -163.4501, 54.5514, 70.2400], // top of building along southern side of middle part of "S", follow from ^^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -163.4501, 54.5514, 70.2400, 10],
+      "lump": {
+        "name":"rubbleb-skill-101"
+      }
+    },
+    {
+      "trans": [ -140.3749, 56.3918, 60.9960], // top of building under ceiling along southern side of middle part of "S", follow from ^^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -140.3749, 56.3918, 60.9960, 10],
+      "lump": {
+        "name":"rubbleb-skill-102"
+      }
+    },
+    {
+      "trans": [ -121.4106, 56.0306, 60.0182], // top of building under ceiling along southern side of middle part of "S", follow from ^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -121.4106, 56.0306, 60.0182, 10],
+      "lump": {
+        "name":"rubbleb-skill-103"
+      }
+    },
+    {
+      "trans": [ -132.5616, 43.9487, 60.8651], // on top of lamp in middle part of "S", drop from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -132.5616, 43.9487, 60.8651, 10],
+      "lump": {
+        "name":"rubbleb-skill-104"
+      }
+    },
+    {
+      "trans": [ -117.5318, 43.0940, 17.9419], // mid level building on north side of middle part of "S" 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -117.5318, 43.0940, 17.9419, 10],
+      "lump": {
+        "name":"rubbleb-skill-105"
+      }
+    },
+    {
+      "trans": [ -116.6517, 53.2834, 27.5881], // small ledge on top of building on north side of middle part of "S" 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -116.6517, 53.2834, 27.5881, 10],
+      "lump": {
+        "name":"rubbleb-skill-106"
+      }
+    },
+    {
+      "trans": [ -211.5957, 17.7792, 212.3321], // proxy hint in SE corner of room before 2nd electric barrier 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -211.5957, 17.7792, 212.3321, 10],
+      "lump": {
+        "name":"rubbleb-skill-107",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ -219.3256, 81.0152, 222.7940], // way up on pipe in SE corner of room before 2nd electric barrier, controlled proxy from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 1, 0, 0, 0],
+      "bsphere": [ -219.3256, 81.0152, 222.7940, 10],
+      "lump": {
+        "name":"rubbleb-skill-108"
+      }
     }//,
 
 
