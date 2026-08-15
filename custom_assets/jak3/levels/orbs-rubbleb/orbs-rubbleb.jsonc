@@ -1471,6 +1471,117 @@
       "lump": {
         "name":"rubbleb-skill-139"
       }
+    },
+    {
+      "trans": [ -152.5443, 53.5345, 188.1351], // between buildings up high on south wall of lower S, between skill-128/129 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -152.5443, 53.5345, 188.1351, 10],
+      "lump": {
+        "name":"rubbleb-skill-140"
+      }
+    },
+    {
+      "trans": [ -334.0030, 55.5613, 45.3657], // on lamp in NW corner of last room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -334.0030, 55.5613, 45.3657, 10],
+      "lump": {
+        "name":"rubbleb-skill-141",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -338.2605, 70.7753, 32.7288], // ground collision broken wall on side of citywall, NW corner of last room, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -338.2605, 70.7753, 32.7288, 10],
+      "lump": {
+        "name":"rubbleb-skill-142"
+      }
+    },
+    {
+      "trans": [ -342.9611, 94.7627, 32.2490], // further up broken wall on side of citywall from ^, NW corner of last room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -342.9611, 94.7627, 32.2490, 10],
+      "lump": {
+        "name":"rubbleb-skill-143"
+      }
+    },
+    {
+      "trans": [ -352.0510, 34.8453, 9.6200], // bottom "oob" corner on broken wall on side of citywall down from ^, NW corner of last room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -352.0510, 34.8453, 9.6200, 10],
+      "lump": {
+        "name":"rubbleb-skill-144"
+      }
+    },
+    {
+      "trans": [ -345.3118, 101.0599, 42.3276], // top of city wall, NW corner of last room, follow from ^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -345.3118, 101.0599, 42.3276, 10],
+      "lump": {
+        "name":"rubbleb-skill-145"
+      }
+    },
+    {
+      "trans": [ -354.7833, 102.3313, 169.8151], // top of city wall, west (north) side of last room, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -354.7833, 102.3313, 169.8151, 10],
+      "lump": {
+        "name":"rubbleb-skill-146"
+      }
+    },
+    {
+      "trans": [ -346.8725, 102.5792, 324.0207], // top of city wall, west side of last room, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -346.8725, 102.5792, 324.0207, 10],
+      "lump": {
+        "name":"rubbleb-skill-147"
+      }
+    },
+    {
+      "trans": [ -348.7864, 105.3140, 479.0677], // top of city wall, west (south) side of last room, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -348.7864, 105.3140, 479.0677, 10],
+      "lump": {
+        "name":"rubbleb-skill-148"
+      }
+    },
+    {
+      "trans": [ -342.7687, 40.4569, 410.1267], // lower ledge along citywall on west (south) side of last room, past bounds 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -342.7687, 40.4569, 410.1267, 10],
+      "lump": {
+        "name":"rubbleb-skill-149"
+      }
+    },
+    {
+      "trans": [ -338.1825, 35.9761, 424.0296], // lower ledge along citywall on west (south) side of last room, further around from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -338.1825, 35.9761, 424.0296, 10],
+      "lump": {
+        "name":"rubbleb-skill-150"
+      }
     }//,
 
 
