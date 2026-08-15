@@ -3397,10 +3397,19 @@
                  ((or (= v1-112 1) (= v1-112 2))
                   (cond
                     ((logtest? (-> s3-0 flags) (secret-item-option-flags sf1))
-                     (set! (-> *game-info* secrets)
-                           (logclear (logxor (-> *game-info* secrets) (the-as uint (-> s3-0 secret))) (-> s3-0 mask-secrets))
-                           )
-                     (sound-play "generic-beep")
+                     (cond
+                      ((!= (-> s3-0 og-secret) (pc-cheats))
+                        ;; opengoal cheat
+                        (logxor! (-> *pc-settings* cheats) (-> s3-0 og-secret))
+                        (sound-play "generic-beep"))
+                      (else
+                        ;; vanilla
+                        (set! (-> *game-info* secrets)
+                              (logclear (logxor (-> *game-info* secrets) (the-as uint (-> s3-0 secret))) (-> s3-0 mask-secrets))
+                              )
+                        (sound-play "generic-beep")
+                        )
+                      )
                      )
                     ((and (= (-> s3-0 secret) 1) (not (logtest? (-> *game-info* secrets) (game-secrets hero-mode))))
                      (set! (-> *progress-work* hero-mode-save) #t)

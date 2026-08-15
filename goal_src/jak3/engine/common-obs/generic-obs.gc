@@ -1929,6 +1929,17 @@
   (sphere-in-view-frustum? (-> this world-sphere))
   )
 
+(defun check-disable-no-smoking ((this part-spawner))
+  (when (and (pc-cheats? (-> *pc-settings* cheats) no-smoking) (nonzero? (-> this mode 0)))
+    (case (-> this mode 0 name) :comp name=
+      (('group-rubble-rubble-smoke 'group-rubble-huge-smoke 'group-rubble-rubble-crater-smoke 'group-rubble-wispy-smoke)
+        (return (false! (-> this enable)))
+        )
+      )
+    )
+  (true! (-> this enable))
+  )
+
 (defstate active (part-spawner)
   :virtual #t
   :event (behavior ((proc process) (argc int) (message symbol) (block event-message-block))
@@ -1952,6 +1963,8 @@
       )
     )
   :trans (behavior ()
+    ;; orbhunt added secret
+    (check-disable-no-smoking self)
     (when (-> self enable)
       (when (nonzero? (-> self path))
         (debug-draw (-> self path))

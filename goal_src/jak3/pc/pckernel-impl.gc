@@ -41,6 +41,7 @@
   (weather-bad)
   (weather-good)
   (desert-peace)
+  (no-smoking)
   )
 
 (defun pc-cheats->string ((cheats pc-cheats) (buf object))

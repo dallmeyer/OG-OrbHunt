@@ -3417,6 +3417,7 @@
              (flag "weather-bad" 32768 dm-game-opengoal-cheat-toggle-pick-func)
              (flag "weather-good" 65536 dm-game-opengoal-cheat-toggle-pick-func)
              (flag "desert-peace" 131072 dm-game-opengoal-cheat-toggle-pick-func)
+             (flag "no-smoking" 262144 dm-game-opengoal-cheat-toggle-pick-func)
              )
            (function "Print Load State" #f ,(lambda ((arg0 int) (arg1 debug-menu-msg) (arg2 float))
                                               (dotimes (gp-0 11)

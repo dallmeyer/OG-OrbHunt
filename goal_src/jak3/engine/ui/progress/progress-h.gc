@@ -602,6 +602,7 @@
    (required-secrets  game-secrets)
    (mask-secrets      game-secrets)
    (flags             secret-item-option-flags)
+   (og-secret         pc-cheats)
    )
   (:methods
     (secret-item-option-method-12 (_type_) int)

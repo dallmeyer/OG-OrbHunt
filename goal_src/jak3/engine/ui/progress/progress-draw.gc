@@ -3956,63 +3956,100 @@
     )
   )
 
+;; check secret status
 (defmethod secret-item-option-method-12 ((this secret-item-option))
   (cond
     ((logtest? (-> this flags) (secret-item-option-flags sf0))
-     5
+     5 ;; section heading
      )
+    ((!= (-> this og-secret) (pc-cheats))
+      ;; opengoal cheat
+      (cond
+        ((logtest? (-> *pc-settings* cheats-purchased) (-> this og-secret))
+          ;; purchased already
+          (if (logtest? (-> *pc-settings* cheats) (-> this og-secret))
+            1 ;; enabled
+            2 ;; disabled
+            )
+          )
+        ((and (not (task-node-closed? (-> this avail-after)))
+              (not (logtest? (-> *game-info* secrets) (game-secrets hero-mode)))
+              )
+          4 ;; req task not closed yet
+          )
+        ((!= (logand (-> *game-info* purchase-secrets) (-> this required-secrets)) (-> this required-secrets))
+          3 ;; missing req secrets
+          )
+        (else
+          0 ;; not purchased
+          )
+        )
+      )
+    ;; vanilla cheats below here
     ((logtest? (-> *game-info* purchase-secrets) (-> this secret))
      (if (logtest? (-> *game-info* secrets) (-> this secret))
-         1
-         2
+         1 ;; enabled
+         2 ;; disabled
          )
      )
     ((and (not (task-node-closed? (-> this avail-after)))
           (not (logtest? (-> *game-info* secrets) (game-secrets hero-mode)))
           )
-     4
+     4 ;; req task not closed yet
      )
     ((!= (logand (-> *game-info* purchase-secrets) (-> this required-secrets)) (-> this required-secrets))
-     3
+     3 ;; missing req secrets
      )
     (else
-      0
+      0 ;; not purchased
       )
     )
   )
 
+;; try unlock secret
 (defmethod secret-item-option-method-13 ((this secret-item-option))
   (local-vars (v0-1 game-vehicles))
   (when (zero? (secret-item-option-method-12 this))
-    (case (-> this secret)
-      (((game-secrets hero-mode))
-       (logior! (-> *game-info* purchase-secrets) (-> this secret))
-       )
+    (cond
+      ((!= (-> this og-secret) (pc-cheats))
+        ;; opengoal
+        (logior! (-> *pc-settings* cheats-purchased) (-> this og-secret))
+        (logior! (-> *pc-settings* cheats) (-> this og-secret))
+        )
       (else
-        (logior! (-> *game-info* purchase-secrets) (-> this secret))
-        (set! (-> *game-info* secrets)
-              (logclear (logior (-> *game-info* secrets) (-> this secret)) (-> this mask-secrets))
-              )
+        ;; vanilla
+        (case (-> this secret)
+          (((game-secrets hero-mode))
+          (logior! (-> *game-info* purchase-secrets) (-> this secret))
+          )
+          (else
+            (logior! (-> *game-info* purchase-secrets) (-> this secret))
+            (set! (-> *game-info* secrets)
+                  (logclear (logior (-> *game-info* secrets) (-> this secret)) (-> this mask-secrets))
+                  )
+            )
+          )
+        (case (-> this secret)
+          (((game-secrets vehicle-fox))
+            (set! v0-1 (logior (-> *game-info* vehicles) (game-vehicles v-fox)))
+            (set! (-> *game-info* vehicles) v0-1)
+            v0-1
+            )
+          (((game-secrets vehicle-mirage))
+            (set! v0-1 (logior (-> *game-info* vehicles) (game-vehicles v-mirage)))
+            (set! (-> *game-info* vehicles) v0-1)
+            v0-1
+            )
+          (((game-secrets vehicle-x-ride))
+            (set! v0-1 (logior (-> *game-info* vehicles) (game-vehicles v-x-ride)))
+            (set! (-> *game-info* vehicles) v0-1)
+            v0-1
+            )
+          )
         )
       )
-    (case (-> this secret)
-      (((game-secrets vehicle-fox))
-       (set! v0-1 (logior (-> *game-info* vehicles) (game-vehicles v-fox)))
-       (set! (-> *game-info* vehicles) v0-1)
-       v0-1
-       )
-      (((game-secrets vehicle-mirage))
-       (set! v0-1 (logior (-> *game-info* vehicles) (game-vehicles v-mirage)))
-       (set! (-> *game-info* vehicles) v0-1)
-       v0-1
-       )
-      (((game-secrets vehicle-x-ride))
-       (set! v0-1 (logior (-> *game-info* vehicles) (game-vehicles v-x-ride)))
-       (set! (-> *game-info* vehicles) v0-1)
-       v0-1
-       )
-      )
     )
+  (-> *game-info* vehicles) ;; not used for anything but okay
   )
 
 (defmethod draw-option ((this menu-secret-option) (arg0 progress) (arg1 font-context) (arg2 int) (arg3 symbol))
