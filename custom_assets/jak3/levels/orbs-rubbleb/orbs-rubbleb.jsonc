@@ -1584,7 +1584,7 @@
       }
     },
     {
-      "trans": [ -329.2835, 21.4234, 248.0075], // orba000 
+      "trans": [ -329.2835, 21.4234, 248.0075], // behind rubble right side of 2nd electric barrier 
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0, 0, 0, 1],
@@ -1594,7 +1594,7 @@
       }
     },
     {
-      "trans": [ -341.3178, 87.8054, 232.1955], // orba001 
+      "trans": [ -341.3178, 87.8054, 232.1955], // IJ up on city wall west side of last room 
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0.4204, 0.0020, 0.9073, 0.0043],
@@ -1604,7 +1604,7 @@
       }
     },
     {
-      "trans": [ -334.2887, 16.2927, 267.4457], // orba002 
+      "trans": [ -334.2887, 16.2927, 267.4457], // under misaligned floor right side past 2nd electric barrier 
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0, 0, 0, 1],
@@ -1614,7 +1614,7 @@
       }
     },
     {
-      "trans": [ -248.3574, 28.1842, 387.7037], // orba003 
+      "trans": [ -248.3574, 28.1842, 387.7037], // small corner behind rebar along southern wall of last room 
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0, 0, 0, 1],
@@ -1624,7 +1624,7 @@
       }
     },
     {
-      "trans": [ -275.7687, 19.7200, 485.9770], // orba004 
+      "trans": [ -275.7687, 19.7200, 485.9770], // on metal support "oob", yolo from city wall
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0, 0, 0, 1],
@@ -1634,7 +1634,7 @@
       }
     },
     {
-      "trans": [ -230.4518, 57.2092, 424.3610], // orba005 
+      "trans": [ -230.4518, 57.2092, 424.3610], // upper corner of metal support "oob", follow from ^ 
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0, 0, 0, 1],
@@ -1644,7 +1644,7 @@
       }
     },
     {
-      "trans": [ -233.4899, 14.7097, 392.9219], // orba006 
+      "trans": [ -233.4899, 14.7097, 392.9219], // lower metal support mid "oob", follow from ^ 
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0, 0, 0, 1],
@@ -1654,33 +1654,44 @@
       }
     },
     {
-      "trans": [ -198.3603, 50.3139, 402.1207], // orba007 
+      "trans": [ -202.7772, 11.5130, 258.9472], // between wall and rubble on left at very end, ramp to rubblec 
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0, 0, 0, 1],
-      "bsphere": [ -198.3603, 50.3139, 402.1207, 10],
+      "bsphere": [ -202.7772, 11.5130, 258.9472, 10],
       "lump": {
         "name":"rubbleb-skill-158"
       }
     },
     {
-      "trans": [ -173.8461, 38.1323, 367.8308], // orba008 
+      "trans": [ -255.9161, 52.3194, 255.5337], // top of inner city wall (no collision) above 2nd electric barrier, concussor up 
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0, 0, 0, 1],
-      "bsphere": [ -173.8461, 38.1323, 367.8308, 10],
+      "bsphere": [ -255.9161, 52.3194, 255.5337, 10],
       "lump": {
         "name":"rubbleb-skill-159"
       }
     },
     {
-      "trans": [ -139.4286, 59.4835, 333.9133], // orba009 should these be rubblec?
+      "trans": [ -342.7788, 40.4567, 129.2057], // mid level city wall, west side of last room, dark jak or jump behind invis wall from above 
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0, 0, 0, 1],
-      "bsphere": [ -139.4286, 59.4835, 333.9133, 10],
+      "bsphere": [ -342.7788, 40.4567, 129.2057, 10],
       "lump": {
         "name":"rubbleb-skill-160"
+      }
+    },
+    {
+      "trans": [ -224.1547, 6.1463, 160.8101], // between rocks in water in last room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -224.1547, 6.1463, 160.8101, 10],
+      "lump": {
+        "name":"rubbleb-skill-161",
+        "bob-scale": ["float", 0.4375]
       }
     }//,
 

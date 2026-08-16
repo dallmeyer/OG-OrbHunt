@@ -230,6 +230,36 @@
       "lump": {
         "name":"rubblec-skill-17"
       }
+    },
+    {
+      "trans": [ -198.3603, 50.3139, 402.1207], // edge of ground behind invis wall on right near start, follow from rubbleb-skill-157 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -198.3603, 50.3139, 402.1207, 10],
+      "lump": {
+        "name":"rubblec-skill-18"
+      }
+    },
+    {
+      "trans": [ -173.8461, 38.1323, 367.8308], // behind square block rubble behind invis wall on right near start, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -173.8461, 38.1323, 367.8308, 10],
+      "lump": {
+        "name":"rubblec-skill-19"
+      }
+    },
+    {
+      "trans": [ -139.4286, 59.4835, 333.9133], // up on corner of metal support behind invis wall on right near start, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -139.4286, 59.4835, 333.9133, 10],
+      "lump": {
+        "name":"rubblec-skill-20"
+      }
     }//,
 
   ]

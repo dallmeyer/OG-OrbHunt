@@ -7034,6 +7034,21 @@
                               )
               )
         )
+      (menu "Secrets"
+        ;; opengoal
+        (flag "city-peace" 8192 dm-game-opengoal-cheat-toggle-pick-func)
+        (flag "board-tricks" 16384 dm-game-opengoal-cheat-toggle-pick-func)
+        (flag "desert-peace" 131072 dm-game-opengoal-cheat-toggle-pick-func)
+        (flag "no-smoking" 262144 dm-game-opengoal-cheat-toggle-pick-func)
+        ;; vanilla
+        (flag "endless-ammo" 16 dm-game-secret-toggle-pick-func)
+        (flag "invulnerable" 17 dm-game-secret-toggle-pick-func)
+        (flag "endless-dark" 18 dm-game-secret-toggle-pick-func)
+        (flag "endless-light" 19 dm-game-secret-toggle-pick-func)
+        (flag "unlimited-turbos" 27 dm-game-secret-toggle-pick-func)
+        (flag "vehicle-hit-points" 28 dm-game-secret-toggle-pick-func)
+        (flag "board-fast" 29 dm-game-secret-toggle-pick-func)
+        )
       ;;  (function "Start" #f ,(lambda () (start 'play (-> *game-info* current-continue))))
       ;;  (function
       ;;    "Editor"
