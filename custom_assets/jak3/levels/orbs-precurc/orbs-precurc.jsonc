@@ -104,7 +104,8 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 72.0423, 553.0865, 45.4202, 10],
       "lump": {
-        "name":"precurc-skill-05"
+        "name":"precurc-skill-05",
+        "proxy-hint":["float", 1.0]
       }
     },
     {
@@ -195,6 +196,16 @@
       "bsphere": [ 194.9335, 532.3231, -96.2678, 10],
       "lump": {
         "name":"precurc-skill-14"
+      }
+    },
+    {
+      "trans": [ 131.6063, 565.5136, -68.8437], // in middle of room after ice slide, jetboard yolo 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 131.6063, 565.5136, -68.8437, 10],
+      "lump": {
+        "name":"precurc-skill-15"
       }
     }//,
 

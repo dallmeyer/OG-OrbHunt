@@ -1144,7 +1144,8 @@
       "bsphere": [ -211.5957, 17.7792, 212.3321, 10],
       "lump": {
         "name":"rubbleb-skill-107",
-        "bob-scale": ["float", -1.0] // no bob
+        "bob-scale": ["float", -1.0], // no bob
+        "proxy-hint":["float", 1.0]
       }
     },
     {
