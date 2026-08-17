@@ -4060,7 +4060,7 @@
                   :packages '()
                   :run-packages '("common")
                   :memory-mode (level-memory-mode small-edge)
-                  :music-bank #f
+                  :music-bank 'ruins
                   :sound-reverb 0.08
                   :extra-sound-bank #f
                   :mood-func 'update-mood-stadiuma
@@ -4139,7 +4139,7 @@
                    :packages '()
                    :run-packages '("common")
                    :memory-mode (level-memory-mode small-edge)
-                   :music-bank #f
+                   :music-bank 'ruins
                    :sound-reverb 0.08
                    :extra-sound-bank #f
                    :mood-func 'update-mood-stadiuma
@@ -4197,7 +4197,7 @@
                   :packages '()
                   :run-packages '("common")
                   :memory-mode (level-memory-mode small-edge)
-                  :music-bank #f
+                  :music-bank 'ruins
                   :sound-reverb 0.08
                   :extra-sound-bank #f
                   :mood-func 'update-mood-stadiuma
@@ -4276,7 +4276,7 @@
                   :packages '()
                   :run-packages '("common")
                   :memory-mode (level-memory-mode small-edge)
-                  :music-bank #f
+                  :music-bank 'ruins
                   :sound-reverb 0.08
                   :extra-sound-bank #f
                   :mood-func 'update-mood-stadiuma
@@ -4335,7 +4335,7 @@
                   :packages '("rublcst")
                   :run-packages '("common")
                   :memory-mode (level-memory-mode small-edge)
-                  :music-bank #f
+                  :music-bank 'ruins
                   :sound-reverb 0.08
                   :extra-sound-bank #f
                   :mood-func 'update-mood-stadiuma

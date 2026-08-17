@@ -64,26 +64,25 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 279.4039, 6.5397, 326.6859, 10],
       "lump": {
-        "name":"rubblec-skill-01",
-        "pickup-amount": ["float", 2.0] // abah hint
+        "name":"rubblec-skill-01"
       }
     },
     {
-      "trans": [ 244.97, 46.62, 391.98 ], // up on top of wall leading to subrails, follow from ^
+      "trans": [ 243.3390, 46.3100, 396.1494], // up on top of wall leading to subrails, follow from ^
       "etype": "skill",
       "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 244.97, 46.62, 391.98 , 10],
+      "bsphere": [ 243.3390, 46.3100, 396.1494, 10],
       "lump": {
         "name":"rubblec-skill-02"
       }
     },
     {
-      "trans": [ 345.45, 10.49, 311.77 ], // in gap on wall in corner left of final barrier
+      "trans": [ 345.45, 10.79, 311.77 ], // in gap on wall in corner left of final barrier
       "etype": "skill",
       "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 345.45, 10.49, 311.77 , 10],
+      "bsphere": [ 345.45, 10.79, 311.77 , 10],
       "lump": {
         "name":"rubblec-skill-03"
       }
@@ -903,6 +902,434 @@
       "bsphere": [ 285.3193, 67.8544, -11.2516, 10],
       "lump": {
         "name":"rubblec-skill-84"
+      }
+    },
+    {
+      "trans": [ -70.1112, 48.8451, 200.5313], // metal beam sticking out top back right of rectangle tube at hairpin turn 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -70.1112, 48.8451, 200.5313, 10],
+      "lump": {
+        "name":"rubblec-skill-85"
+      }
+    },
+    {
+      "trans": [ -60.2931, 35.5254, 200.1879], // on left lamp north wall just after hairpin turn 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -60.2931, 35.5254, 200.1879, 10],
+      "lump": {
+        "name":"rubblec-skill-86"
+      }
+    },
+    {
+      "trans": [ -40.0291, 37.0366, 187.0310], // on mid lamp north wall just after hairpin turn 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -40.0291, 37.0366, 187.0310, 10],
+      "lump": {
+        "name":"rubblec-skill-87"
+      }
+    },
+    {
+      "trans": [ -12.3273, 37.6079, 175.2224], // on right lamp north wall just after hairpin turn 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -12.3273, 37.6079, 175.2224, 10],
+      "lump": {
+        "name":"rubblec-skill-88"
+      }
+    },
+    {
+      "trans": [ 49.7365, 7.1460, 220.5574], // ground level (near void) right tower of elec barrier before main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 49.7365, 7.1460, 220.5574, 10],
+      "lump": {
+        "name":"rubblec-skill-89",
+        "bob-scale": ["float", 0.4687]
+      }
+    },
+    {
+      "trans": [ 52.4769, 14.9150, 224.2058], // on slippery pillar rubble near electric barrier right tower before main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 52.4769, 14.9150, 224.2058, 10],
+      "lump": {
+        "name":"rubblec-skill-90",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ 61.9687, 15.2933, 165.8102], // metal beam ground level next to left tower electric barrier before main room, drop down behind invis wall from above
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 61.9687, 15.2933, 165.8102, 10],
+      "lump": {
+        "name":"rubblec-skill-91"
+      }
+    },
+    {
+      "trans": [ 73.1242, 38.8403, 68.7313], // left lamp NW corner of main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 73.1242, 38.8403, 68.7313, 10],
+      "lump": {
+        "name":"rubblec-skill-92"
+      }
+    },
+    {
+      "trans": [ 83.9988, 43.5548, 59.9513], // right lamp NW corner of main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 83.9988, 43.5548, 59.9513, 10],
+      "lump": {
+        "name":"rubblec-skill-93",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 93.4670, 42.8582, 37.2637], // top of building north (west) wall of main room, abah concussor over invis wall from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 93.4670, 42.8582, 37.2637, 10],
+      "lump": {
+        "name":"rubblec-skill-94"
+      }
+    },
+    {
+      "trans": [ 132.9469, 49.7910, 51.8117], // top of building north wall of main room, behind invis wall, slide along from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 132.9469, 49.7910, 51.8117, 10],
+      "lump": {
+        "name":"rubblec-skill-95"
+      }
+    },
+    {
+      "trans": [ 182.6212, 50.4863, 70.0872], // ground collision top of building north wall of main room, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 182.6212, 50.4863, 70.0872, 10],
+      "lump": {
+        "name":"rubblec-skill-96"
+      }
+    },
+    {
+      "trans": [ 233.7809, 40.2863, 47.6660], // top of buildings north wall main room, slide along from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 233.7809, 40.2863, 47.6660, 10],
+      "lump": {
+        "name":"rubblec-skill-97"
+      }
+    },
+    {
+      "trans": [ 277.3623, 18.4091, 52.3635], // low level building over gap, north wall of main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 277.3623, 18.4091, 52.3635, 10],
+      "lump": {
+        "name":"rubblec-skill-98"
+      }
+    },
+    {
+      "trans": [ 290.0976, -23.2777, 67.4024], // in water under triple stack of proxy slabs, crawl under from right side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 290.0976, -23.2777, 67.4024, 10],
+      "lump": {
+        "name":"rubblec-skill-99"
+      }
+    },
+    {
+      "trans": [ 278.4845, -17.0544, 61.1951], // proxy hint on middle of triple stack of proxy slabs 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 278.4845, -17.0544, 61.1951, 10],
+      "lump": {
+        "name":"rubblec-skill-100",
+        "proxy-hint":["float", 1.0]
+      }
+    },
+    {
+      "trans": [ 344.2729, 107.7553, 142.5533], // on top of metal beam sticking out from structure in NE corner of main room, maybe you can IJ here, or you can giga proxy from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 344.2729, 107.7553, 142.5533, 10],
+      "lump": {
+        "name":"rubblec-skill-101"
+      }
+    },
+    {
+      "trans": [ 221.6083, -21.2617, 302.8021], // inside breakable wall in front of final barrier 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 221.6083, -21.2617, 302.8021, 10],
+      "lump": {
+        "name":"rubblec-skill-102",
+        "alt-actor": "rub-rhino-door-7"
+      }
+    },
+    {
+      "trans": [ 75.5387, 12.9886, 283.6452], // ground collision in between bleachers west side of main room, jetboard yolo from south "oob" section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 75.5387, 12.9886, 283.6452, 10],
+      "lump": {
+        "name":"rubblec-skill-103"
+      }
+    },
+    {
+      "trans": [ 41.2496, 8.7349, 235.9846], // ground collision in between bleachers west side of main room, jetboard yolo from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 41.2496, 8.7349, 235.9846, 10],
+      "lump": {
+        "name":"rubblec-skill-104"
+      }
+    },
+    {
+      "trans": [ 227.0783, 22.8113, 395.9817], // between wall and left tower of final barrier 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 227.0783, 22.8113, 395.9817, 10],
+      "lump": {
+        "name":"rubblec-skill-105"
+      }
+    },
+    {
+      "trans": [ 136.6789, 1.2598, 368.1214], // among cube rubble right+down before final barrier 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 136.6789, 1.2598, 368.1214, 10],
+      "lump": {
+        "name":"rubblec-skill-106"
+      }
+    },
+    {
+      "trans": [ 316.5976, 43.6772, 355.6408], // up and turnback from roof on top of skill-1, left of final barrier 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 316.5976, 43.6772, 355.6408, 10],
+      "lump": {
+        "name":"rubblec-skill-107"
+      }
+    },
+    {
+      "trans": [ 315.0012, 53.9632, 342.2871], // metal beams inside structure east (south) side main room, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 315.0012, 53.9632, 342.2871, 10],
+      "lump": {
+        "name":"rubblec-skill-108"
+      }
+    },
+    {
+      "trans": [ 377.3376, 54.7325, 396.2184], // metal beams inside structure east (south) side main room, follow from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 377.3376, 54.7325, 396.2184, 10],
+      "lump": {
+        "name":"rubblec-skill-109"
+      }
+    },
+    {
+      "trans": [ 377.1024, 96.4823, 325.5250], // IJ ceiling metal beams inside structure east (south) side main room, follow from ^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0.9912, 0.0047, 0.1320, 0.0006],
+      "bsphere": [ 377.1024, 96.4823, 325.5250, 10],
+      "lump": {
+        "name":"rubblec-skill-110"
+      }
+    },
+    {
+      "trans": [ 404.1777, 63.9024, 290.4726], // metal beams inside structure east (south) side main room, follow from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 404.1777, 63.9024, 290.4726, 10],
+      "lump": {
+        "name":"rubblec-skill-111"
+      }
+    },
+    {
+      "trans": [ 373.4293, 98.8121, 240.7835], // on top of metal beams inside structure east (south) side main room, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 373.4293, 98.8121, 240.7835, 10],
+      "lump": {
+        "name":"rubblec-skill-112"
+      }
+    },
+    {
+      "trans": [ 228.1266, -17.1478, 110.1947], // between wall and breakable wall north side of main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 228.1266, -17.1478, 110.1947, 10],
+      "lump": {
+        "name":"rubblec-skill-113"
+      }
+    },
+    {
+      "trans": [ 308.3703, 23.1928, 32.4341], // corner mid level building behind smoke, north wall main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 308.3703, 23.1928, 32.4341, 10],
+      "lump": {
+        "name":"rubblec-skill-114"
+      }
+    },
+    {
+      "trans": [ 387.2596, 24.3573, 353.4120], // behind rebar SE corner of main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 387.2596, 24.3573, 353.4120, 10],
+      "lump": {
+        "name":"rubblec-skill-115"
+      }
+    },
+    {
+      "trans": [ 363.9881, 26.0087, 391.6460], // side of fallen lamp, SE corner of main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 363.9881, 26.0087, 391.6460, 10],
+      "lump": {
+        "name":"rubblec-skill-116"
+      }
+    },
+    {
+      "trans": [ 369.3990, 39.7194, 385.7915], // top of fallen lamp, SE corner of main room (can get up to metal beams from here if u want) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 369.3990, 39.7194, 385.7915, 10],
+      "lump": {
+        "name":"rubblec-skill-117"
+      }
+    },
+    {
+      "trans": [ 318.0846, 22.9589, 390.8630], // behind lamp in SW corner of SE corner of main room
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 318.0846, 22.9589, 390.8630, 10],
+      "lump": {
+        "name":"rubblec-skill-118"
+      }
+    },
+    {
+      "trans": [ 391.8487, 21.7776, 283.6814], // between wall and breakable wall on east side of main room  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 391.8487, 21.7776, 283.6814, 10],
+      "lump": {
+        "name":"rubblec-skill-119"
+      }
+    },
+    {
+      "trans": [ 272.2300, 33.4821, 396.4822], // rebar sticking out of wall behind smoke just before rublcst, left of final barrier 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 272.2300, 33.4821, 396.4822, 10],
+      "lump": {
+        "name":"rubblec-skill-120"
+      }
+    },
+    {
+      "trans": [ 320.4248, 9.6535, 191.5027], // breakable bridge on east (mid) side of main room
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 320.4248, 9.6535, 191.5027, 10],
+      "lump": {
+        "name":"rubblec-skill-121",
+        "alt-actor": "rub-tower-4"
+      }
+    },
+    {
+      "trans": [ 244.0144, 48.3181, 268.1319], // on top of falling bridge, south side of main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 244.0144, 48.3181, 268.1319, 10],
+      "lump": {
+        "name":"rubblec-skill-122"
+      }
+    },
+    {
+      "trans": [ 330.4891, -11.9282, 255.3760], // between rebar lower path east side main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 330.4891, -11.9282, 255.3760, 10],
+      "lump": {
+        "name":"rubblec-skill-123",
+        "bob-scale": ["float", 0.7500]
+      }
+    },
+    {
+      "trans": [ 298.1325, 20.5656, 328.0585], // ceiling IJ in rectangle tube left of final barrier 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ -0.6916, -0.0032, 0.7221, 0.0034],
+      "bsphere": [ 298.1325, 20.5656, 328.0585, 10],
+      "lump": {
+        "name":"rubblec-skill-124"
+      }
+    },
+    {
+      "trans": [ 141.4321, -18.0980, 194.0704], // under rebar lower path west side main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 141.4321, -18.0980, 194.0704, 10],
+      "lump": {
+        "name":"rubblec-skill-125",
+        "bob-scale": ["float", 0.3437]
+      }
+    },
+    {
+      "trans": [ 215.7555, -18.8058, 320.8984], // behind rebar lower path by breakable wall, south side main room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 215.7555, -18.8058, 320.8984, 10],
+      "lump": {
+        "name":"rubblec-skill-126"
       }
     }//,
 

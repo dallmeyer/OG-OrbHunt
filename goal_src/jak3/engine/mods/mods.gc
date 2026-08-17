@@ -1529,6 +1529,23 @@
             ;; visible for a bit before pickup
             (return #f))
           )
+        (('rub-rhino-door)
+          (when (and (not (name= (-> alt-actor extra process state name) 'explode)))
+            ;; no pickup before its exploded
+            (return #f))
+          (when (and for-pickup? (not (time-elapsed? (-> skill state-time) (seconds 1.0))))
+            ;; visible for a bit before pickup
+            (return #f))
+          )
+        (('rub-tower)
+          (when (and (not (name= (-> alt-actor extra process state name) 'fall))
+                     (not (name= (-> alt-actor extra process state name) 'fallen)))
+            ;; no pickup before its exploded
+            (return #f))
+          (when (and for-pickup? (not (time-elapsed? (-> skill state-time) (seconds 1.0))))
+            ;; visible for a bit before pickup
+            (return #f))
+          )
         (('fac-target)
           (when (and (not (name= (-> alt-actor extra process state name) 'retract))
                      (not (name= (-> alt-actor extra process state name) 'retracted)))
