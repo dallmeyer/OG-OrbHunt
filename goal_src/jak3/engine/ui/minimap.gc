@@ -3608,7 +3608,7 @@
           ;; orb hunt - only draw orba connections if the setting is on
           (when 
             (case (-> (the-as connection-minimap a2-5) class class)
-              (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold) (minimap-class tape))
+              (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold) (minimap-class orba-green) (minimap-class tape))
                 (dbg-format 0 "minimap trying to draw orbs~%")
                 (let ((proc (handle->process (-> (the-as connection-minimap a2-5) handle))))
                   (or (and proc (!= (-> proc type) tape) 

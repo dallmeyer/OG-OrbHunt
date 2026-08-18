@@ -589,7 +589,7 @@
                     ;; orb hunt - only draw orba connections if the setting is on
                     (when
                       (case (-> a2-11 class class)
-                        (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold) (minimap-class tape))
+                        (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold) (minimap-class orba-green) (minimap-class tape))
                           (let ((proc (handle->process (-> a2-11 handle))))
                             (or (and proc
                                      (!= (-> proc type) tape)
@@ -1201,7 +1201,7 @@
                   ;; orb hunt - only draw orba connections if the setting is on
                   (when
                     (case (-> a2-11 class class)
-                      (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold) (minimap-class tape))
+                      (((minimap-class orba) (minimap-class orba-blue) (minimap-class orba-gold) (minimap-class orba-green) (minimap-class tape))
                         (let ((proc (handle->process (-> a2-11 handle))))
                           (or (and proc
                                    (!= (-> proc type) tape) 
@@ -1359,7 +1359,7 @@
             )
           )
       ;; )
-    (dma-buffer-add-gs-set s2-0 (scissor-1 (new 'static 'gs-scissor :scax1 #x1ff :scay1 #x19f)))
+    ;; (dma-buffer-add-gs-set s2-0 (scissor-1 (new 'static 'gs-scissor :scax1 #x1ff :scay1 #x19f)))
     )
   ;; (when (= (-> this load-index) (bigmap-id none))
   ;;   (let ((s3-1
