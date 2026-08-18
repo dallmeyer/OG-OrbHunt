@@ -2157,7 +2157,7 @@
       ((>= (-> this pickup-amount) (-> *FACT-bank* super-skill-inc))
         (set! map-class (minimap-class orba-gold))
         (set-vector! (-> this draw color-mult) 0.8 0.8 0.0 1.0)
-        (set-vector! (-> this draw color-emissive) 0.0 1.0 0.2 1.0)
+        (set-vector! (-> this draw color-emissive) 0.2 1.0 0.2 1.0)
         (set! (-> this part) (create-launch-control group-skill-glow-yellow this))
         )
       (else

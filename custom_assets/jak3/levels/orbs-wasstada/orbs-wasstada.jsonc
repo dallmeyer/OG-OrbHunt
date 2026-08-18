@@ -175,7 +175,20 @@
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 2244.6235, 10.0058, -421.4608, 10],
       "lump": {
-        "name":"wasstada-skill-12"
+        "name":"wasstada-skill-12",
+        "proxy-hint":["float", 1.0]
+      }
+    },
+    {
+      "trans": [ 2333.0983, 59.4005, -394.7487], // arch proxy 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2333.0983, 59.4005, -394.7487, 10],
+      "lump": {
+        "name":"orbs-wasstada-skill-YYY",
+        "proxy-hint":["float", 1.0],
+        "bob-scale": ["float", 0.5937]
       }
     }//,
 

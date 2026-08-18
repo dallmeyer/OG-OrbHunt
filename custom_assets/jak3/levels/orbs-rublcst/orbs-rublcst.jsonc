@@ -140,11 +140,11 @@
       }
     },
     {
-      "trans": [ -2.76, 53.60, 725.29 ], // up from ^ on west/south wall
+      "trans": [ -2.76, 53.8599, 725.29 ], // up from ^ on west/south wall
       "etype": "skill",
       "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ -2.76, 53.60, 725.29 , 10],
+      "bsphere": [ -2.76, 53.8599, 725.29 , 10],
       "lump": {
         "name":"rublcst-skill-07"
       }
@@ -607,6 +607,16 @@
       "bsphere": [ 162.9894, 16.5038, 451.8679, 10],
       "lump": {
         "name":"rubblec-skill-53"
+      }
+    },
+    {
+      "trans": [ 102.0308, -3.9230, 706.8804], // SW ish, crawl under tile on exposed rock 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 102.0308, -3.9230, 706.8804, 10],
+      "lump": {
+        "name":"rublcst-skill-54"
       }
     }//,
 

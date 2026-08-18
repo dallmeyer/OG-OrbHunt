@@ -863,6 +863,7 @@
   (set! (-> obj collision-renderer-toggle?) #f)
   (set! (-> obj hover-restriction?) #t)
   (set! (-> obj slip-assist) (slip-assist-mode normal))
+  (set! (-> obj difficulty) (difficulty-preset normal))
 
   0)
 
@@ -933,6 +934,7 @@
     (("collision-renderer-toggle?") (set! (-> obj collision-renderer-toggle?) (file-stream-read-symbol file)))
     (("hover-restriction?") (set! (-> obj hover-restriction?) (file-stream-read-symbol file)))
     (("slip-assist") (set! (-> obj slip-assist) (the-as slip-assist-mode (file-stream-read-int file))))
+    (("difficulty") (set! (-> obj difficulty) (the-as difficulty-preset (file-stream-read-int file))))
 
     (else
       (format 0 "Unrecognized field ~S when trying to parse mod-settings~%" *pc-temp-string*)
@@ -954,6 +956,7 @@
   (format file "  (collision-renderer-toggle? ~A)~%" (-> obj collision-renderer-toggle?))
   (format file "  (hover-restriction? ~A)~%" (-> obj hover-restriction?))
   (format file "  (slip-assist ~D)~%" (-> obj slip-assist))
+  (format file "  (difficulty ~D)~%" (-> obj difficulty))
 
   0)
 

@@ -635,8 +635,8 @@
 (build-custom-level "orbs-deswalk")
 (custom-level-cgo "O77.DGO" "orbs-deswalk/orbs-deswalk.gd")
 
-(build-custom-level "orbs-wasstadb")
-(custom-level-cgo "O78.DGO" "orbs-wasstadb/orbs-wasstadb.gd")
+(build-custom-level "o-wstadb")
+(custom-level-cgo "O78.DGO" "o-wstadb/o-wstadb.gd")
 
 (build-custom-level "orbs-volcanoa")
 (custom-level-cgo "O79.DGO" "orbs-volcanoa/orbs-volcanoa.gd")

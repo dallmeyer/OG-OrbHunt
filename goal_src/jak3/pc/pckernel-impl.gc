@@ -401,6 +401,14 @@
   (spiderman)
   )
 
+(defenum difficulty-preset
+  :type uint8
+  (easy)
+  (normal)
+  (hard)
+  (custom)
+  )
+
 ;; ;; Overall settings file for the mod, contains an array of 4 mod-save-files for per-save data
 (deftype mod-settings-jak3 (basic)
   (
@@ -415,6 +423,7 @@
     (collision-renderer-toggle?   symbol)
     (hover-restriction?           symbol)
     (slip-assist                  slip-assist-mode)
+    (difficulty                   difficulty-preset)
     )
   (:methods
     (new (symbol type) _type_)

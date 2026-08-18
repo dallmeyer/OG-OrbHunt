@@ -495,7 +495,7 @@
   )
 
 ;; modbase - offset for offset for levels without a bigmap image
-(define *off-off* (new 'static 'vector :x 344064.0000 :y 278528.0000 :w 0.00075))
+(define *off-off* (new 'static 'vector :x 1292640.0000 :y 1025696.0000 :w 0.0002))
 
 (defmethod draw! ((this bigmap) (arg0 int) (arg1 int) (arg2 int) (arg3 int))
   (local-vars
@@ -552,7 +552,7 @@
         )
       (set! (-> this y0) arg1)
       (set! (-> this y1) arg3)
-      (bigmap-method-20 this s2-0)      
+      (bigmap-method-20 this s2-0)
       ;; use target-pos as relative offset if no preset map
       (when (= (-> this load-index) (bigmap-id none))
         (set! (-> this offset x) (- (-> (target-pos 0) x) (-> *off-off* x)))
@@ -1127,18 +1127,36 @@
   (with-dma-buffer-add-bucket ((s2-0 (-> *display* frames (-> *display* on-screen) global-buf))
                                (bucket-id tex-hud-pris2)
                                )
-    (dma-buffer-add-gs-set s2-0
-                            (scissor-1 (new 'static 'gs-scissor
-                                        :scax0 (+ arg0 -1792)
-                                        :scay0 (+ arg1 -1840)
-                                        :scax1 (+ arg2 -1792)
-                                        :scay1 (+ arg3 -1840)
+    (case (-> this load-index)
+      (((bigmap-id none))
+        (dma-buffer-add-gs-set s2-0
+                              (scissor-1 (new 'static 'gs-scissor
+                                          :scax0 (+ arg0 -1792)
+                                          :scay0 (+ arg1 -1840)
+                                          :scax1 (+ arg2 -1792)
+                                          :scay1 (+ arg3 -1840)
+                                          )
                                         )
-                                      )
-                            (test-1 (new 'static 'gs-test :ate #x1 :afail #x3 :zte #x1 :ztst (gs-ztest always)))
-                            (alpha-1 (new 'static 'gs-alpha :b #x1 :d #x1))
-                            (clamp-1 (new 'static 'gs-clamp :wms (gs-tex-wrap-mode clamp) :wmt (gs-tex-wrap-mode clamp)))
-                            )
+                              (test-1 (new 'static 'gs-test :ate #x1 :afail #x3 :zte #x1 :ztst (gs-ztest always)))
+                              (alpha-1 (new 'static 'gs-alpha :b #x1 :d #x1))
+                              (clamp-1 (new 'static 'gs-clamp :wms (gs-tex-wrap-mode clamp) :wmt (gs-tex-wrap-mode clamp)))
+                              )
+        )
+      (else
+        (dma-buffer-add-gs-set s2-0
+                              ;; (scissor-1 (new 'static 'gs-scissor
+                              ;;             :scax0 (+ arg0 -1792)
+                              ;;             :scay0 (+ arg1 -1840)
+                              ;;             :scax1 (+ arg2 -1792)
+                              ;;             :scay1 (+ arg3 -1840)
+                              ;;             )
+                              ;;           )
+                              (test-1 (new 'static 'gs-test :ate #x1 :afail #x3 :zte #x1 :ztst (gs-ztest always)))
+                              (alpha-1 (new 'static 'gs-alpha :b #x1 :d #x1))
+                              (clamp-1 (new 'static 'gs-clamp :wms (gs-tex-wrap-mode clamp) :wmt (gs-tex-wrap-mode clamp)))
+                              )
+        )
+      )
     (let ((v1-14 (the-as object (-> this bigmap-images (-> this load-index) art-group)))
           (f0-0 (-> *video-params* relative-x-scale))
           )
@@ -1359,7 +1377,8 @@
             )
           )
       ;; )
-    ;; (dma-buffer-add-gs-set s2-0 (scissor-1 (new 'static 'gs-scissor :scax1 #x1ff :scay1 #x19f)))
+    (when (= (-> this load-index) (bigmap-id none))
+      (dma-buffer-add-gs-set s2-0 (scissor-1 (new 'static 'gs-scissor :scax1 #x1ff :scay1 #x19f))))
     )
   ;; (when (= (-> this load-index) (bigmap-id none))
   ;;   (let ((s3-1

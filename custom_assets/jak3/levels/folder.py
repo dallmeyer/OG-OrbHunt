@@ -77,7 +77,7 @@ levels = [
     ["orbs-raile", "75"],
     ["orbs-railf", "76"],
     ["orbs-deswalk", "77"],
-    ["orbs-wasstadb", "78"],
+    ["o-wstadb", "78"],
     ["orbs-volcanoa", "79"],
     ["orbs-volcanox", "80"],
     ["orbs-lfacrm2", "81"],

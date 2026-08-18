@@ -1980,6 +1980,11 @@
       ;; turn on some palettes so not dark
       (set! (-> *time-of-day-context* mode) (time-of-day-palette-id palette-0 palette-1 palette-2 palette-3 palette-4 palette-5 palette-6 palette-7))
       )
+    (('wasstada 'wasstadb 'orbs-wasstada 'orbs-wasstadb)
+      ;; always 7pm so tutorial colors are good
+      (when (and *time-of-day* (nonzero? *time-of-day*))
+        (send-event (ppointer->process *time-of-day*) 'change 'hour 19))
+      )
     (else
       ;; default palette
       (time-of-day-setup #t)
