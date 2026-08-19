@@ -139,11 +139,11 @@
       }
     },
     {
-      "trans": [ 7.9921, 573.6067, -156.2079], // jetboard go brr
+      "trans": [ 7.9921, 578.4373, -156.2079], // jetboard go brr
       "etype": "skill",
       "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ 7.9921, 573.6067, -156.2079, 10],
+      "bsphere": [ 7.9921, 578.4373, -156.2079, 10],
       "lump": {
         "name":"precura-skill-09"
       }
@@ -168,7 +168,59 @@
       "lump": {
         "name":"precura-skill-11"
       }
-    }//,
+    },
+    {
+      "trans": [ 43.4528, 561.9379, -93.8242], // on lamp next to jak-side door 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 43.4528, 561.9379, -93.8242, 10],
+      "lump": {
+        "name":"precura-skill-12"
+      }
+    },
+    {
+      "trans": [ 8.3537, 568.8630, -96.9421], // center stage up against south wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 8.3537, 568.8630, -96.9421, 10],
+      "lump": {
+        "name":"precura-skill-13"
+      }
+    },
+    {
+      "trans": [ 17.2273, 557.2337, -179.1752], // bulge thing between windows 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 17.2273, 557.2337, -179.1752, 10],
+      "lump": {
+        "name":"precura-skill-14",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 17.5473, 573.7472, -179.1519], // bulge thing between windows, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 17.5473, 573.7472, -179.1519, 10],
+      "lump": {
+        "name":"precura-skill-15",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 19.7707, 590.9743, -176.6399], // up near ceiling above windows, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 19.7707, 590.9743, -176.6399, 10],
+      "lump": {
+        "name":"precura-skill-16"
+      }
+    },//,
 
   ]
 }
