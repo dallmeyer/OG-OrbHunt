@@ -440,28 +440,35 @@
         "name":"rubblea-skill-38"
       }
     },
-
-    // HOVER
     {
-      "trans": [ -79.2730, 80.5949, -167.2519], // way up on wall dead ahead from start, on exposed beams (left)
+      "trans": [ -293.9486, 15.7244, -264.7020], // proxy hint on "books" on left a bit before weird cutscene camera during btr skip 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -293.9486, 15.7244, -264.7020, 10],
+      "lump": {
+        "name":"rubblea-skill-39",
+        "proxy-hint": ["float", 1.0]
+      }
+    },
+    {
+      "trans": [ -79.2730, 80.5949, -167.2519], // way up on wall dead ahead from start, on exposed beams (left), proxy from ^
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
       "bsphere": [ -79.2730, 80.5949, -167.2519, 10],
       "lump": {
-        "name":"rubblea-skill-hover-01",
-        "pickup-amount": ["float", 3.0] // hover
+        "name":"rubblea-skill-40"
       }
     },
     {
-      "trans": [ -184.6193, 81.2349, -146.4904], // way up on wall dead ahead from start, on exposed beams (right)
+      "trans": [ -184.6193, 81.2349, -146.4904], // way up on wall dead ahead from start, on exposed beams (right), proxy from ^^
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
       "bsphere": [ -184.6193, 81.2349, -146.4904, 10],
       "lump": {
-        "name":"rubblea-skill-hover-02",
-        "pickup-amount": ["float", 3.0] // hover
+        "name":"rubblea-skill-41"
       }
     }
     //,

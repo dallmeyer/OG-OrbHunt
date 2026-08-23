@@ -500,28 +500,116 @@
         "name":"stadiumb-skill-44"
       }
     },
-
-    // HOVER
     {
-      "trans": [ -3.74, 48.57, -434.66 ], // up on top of H towers at U bend at start of stadiumb
+      "trans": [ -48.1893, 25.2283, -399.1595], // exposed rebar up on wall around early hairpin turn 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -48.1893, 25.2283, -399.1595, 10],
+      "lump": {
+        "name":"stadiumb-skill-45"
+      }
+    },
+    {
+      "trans": [ -58.1395, 13.9731, -439.8153], // exposed rebar up on wall around early hairpin turn 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -58.1395, 13.9731, -439.8153, 10],
+      "lump": {
+        "name":"stadiumb-skill-46"
+      }
+    },
+    {
+      "trans": [ -2.1995, -1.1868, -464.5079], // under fallen walkway in rubble just after early hairpin turn 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -2.1995, -1.1868, -464.5079, 10],
+      "lump": {
+        "name":"stadiumb-skill-47"
+      }
+    },
+    {
+      "trans": [ 1.4990, 3.0926, -370.7043], // proxy hint along wall left before early hairpin turn
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1.4990, 3.0926, -370.7043, 10],
+      "lump": {
+        "name":"stadiumb-skill-48",
+        "bob-scale": ["float", 0.3750]
+      }
+    },
+    {
+      "trans": [ -3.74, 48.57, -434.66 ], // up on top of H towers at U bend at start of stadiumb, proxy from ^
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
       "bsphere": [ -3.74, 48.57, -434.66 , 10],
       "lump": {
-        "name":"stadiumb-skill-hover-01",
-        "pickup-amount": ["float", 3.0]
+        "name":"stadiumb-skill-49"
       }
     },
     {
-      "trans": [ 40.60, 22.72, -450.43 ], // drop down from ^ onto rubble near walkway around stadium seating
+      "trans": [ 40.60, 22.72, -450.43 ], // drop down from ^ onto rubble near walkway around stadium seating, proxy from ^
       "etype": "skill",
       "game_task": 0,
       "quat": [0, 0, 0, 1],
       "bsphere": [ 40.60, 22.72, -450.43 , 10],
       "lump": {
-        "name":"stadiumb-skill-hover-02",
-        "pickup-amount": ["float", 3.0]
+        "name":"stadiumb-skill-50"
+      }
+    },
+    {
+      "trans": [ 96.6735, 12.3103, -475.7283], // inset ledge on walkway below bleachers, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 96.6735, 12.3103, -475.7283, 10],
+      "lump": {
+        "name":"stadiumb-skill-51"
+      }
+    },
+    {
+      "trans": [ 135.3105, 13.4338, -531.0080], // corner ledge on walkway below bleachers, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 135.3105, 13.4338, -531.0080, 10],
+      "lump": {
+        "name":"stadiumb-skill-52"
+      }
+    },
+    {
+      "trans": [ 141.5454, 14.1838, -556.9364], // behind rubble along walkway below bleachers, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 141.5454, 14.1838, -556.9364, 10],
+      "lump": {
+        "name":"stadiumb-skill-53"
+      }
+    },
+    {
+      "trans": [ 138.7348, 22.3525, -565.0130], // between rubble and fallen beams along walkway below bleachers, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 138.7348, 22.3525, -565.0130, 10],
+      "lump": {
+        "name":"stadiumb-skill-54",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 168.3878, 49.5274, -555.7815], // up on rebar at top of bleachers wall, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 168.3878, 49.5274, -555.7815, 10],
+      "lump": {
+        "name":"stadiumb-skill-55"
       }
     }//,
 
