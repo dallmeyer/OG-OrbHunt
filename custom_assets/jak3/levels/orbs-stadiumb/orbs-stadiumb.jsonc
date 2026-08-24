@@ -598,18 +598,381 @@
       "quat": [ 0, 0, 0, 1],
       "bsphere": [ 138.7348, 22.3525, -565.0130, 10],
       "lump": {
-        "name":"stadiumb-skill-54",
-        "pickup-amount": ["float", 2.0] // abah hint
+        "name":"stadiumb-skill-54"
       }
     },
     {
-      "trans": [ 168.3878, 49.5274, -555.7815], // up on rebar at top of bleachers wall, abah from ^ 
+      "trans": [ 144.2333, 30.1614, -571.7363], // small standpoint sticking out of fallen beams, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 144.2333, 30.1614, -571.7363, 10],
+      "lump": {
+        "name":"stadiumb-skill-55"
+      }
+    },
+    {
+      "trans": [ 168.3878, 49.5274, -555.7815], // up on rebar at top of bleachers wall, follow from ^ 
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0, 0, 0, 1],
       "bsphere": [ 168.3878, 49.5274, -555.7815, 10],
       "lump": {
-        "name":"stadiumb-skill-55"
+        "name":"stadiumb-skill-56"
+      }
+    },
+    {
+      "trans": [ 170.4702, 40.2752, -592.9582], // behind rebar on far back wall top of bleachers by fallen beams, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 170.4702, 40.2752, -592.9582, 10],
+      "lump": {
+        "name":"stadiumb-skill-57"
+      }
+    },
+    {
+      "trans": [ 131.7251, 12.8165, -578.5895], // under fallen beams along walkway below bleachers, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 131.7251, 12.8165, -578.5895, 10],
+      "lump": {
+        "name":"stadiumb-skill-58"
+      }
+    },
+    {
+      "trans": [ 123.5544, 11.7739, -613.5197], // in corner along walkway behind invis wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 123.5544, 11.7739, -613.5197, 10],
+      "lump": {
+        "name":"stadiumb-skill-59"
+      }
+    },
+    {
+      "trans": [ 87.4122, 12.2916, -683.4833], // small inset ledge along walkway under bleachers, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 87.4122, 12.2916, -683.4833, 10],
+      "lump": {
+        "name":"stadiumb-skill-60"
+      }
+    },
+    {
+      "trans": [ 119.3456, 20.2752, -576.8596], // up in rebar sticking out of fallen beams, east side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 119.3456, 20.2752, -576.8596, 10],
+      "lump": {
+        "name":"stadiumb-skill-61"
+      }
+    },
+    {
+      "trans": [ 120.8374, -5.7740, -604.3159], // between cube rubble left of fallen beams, east side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 120.8374, -5.7740, -604.3159, 10],
+      "lump": {
+        "name":"stadiumb-skill-62",
+        "bob-scale": ["float", 0.5625]
+      }
+    },
+    {
+      "trans": [ 81.4548, -19.0755, -569.0781], // ledge down from main path by fallen beams, east side
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 81.4548, -19.0755, -569.0781, 10],
+      "lump": {
+        "name":"stadiumb-skill-63"
+      }
+    },
+    {
+      "trans": [ 47.1665, -20.0777, -505.4927], // ledge down from main path between grindrails, SE circle 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 47.1665, -20.0777, -505.4927, 10],
+      "lump": {
+        "name":"stadiumb-skill-64"
+      }
+    },
+    {
+      "trans": [ 60.8584, -19.6542, -531.8742], // slippery ledge along bottom of island, SEish 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 60.8584, -19.6542, -531.8742, 10],
+      "lump": {
+        "name":"stadiumb-skill-65"
+      }
+    },
+    {
+      "trans": [ 38.1229, -20.7514, -541.0100], // standpoint ledge along bottom of island, SEish 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 38.1229, -20.7514, -541.0100, 10],
+      "lump": {
+        "name":"stadiumb-skill-66"
+      }
+    },
+    {
+      "trans": [ 0.5764, -19.8854, -504.7751], // ledge down from main path, south circle by flaming trash can 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 0.5764, -19.8854, -504.7751, 10],
+      "lump": {
+        "name":"stadiumb-skill-67"
+      }
+    },
+    {
+      "trans": [ 60.0882, -1.8867, -603.7902], // between rebar sticking out from not-island with invis walls, NE circle
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 60.0882, -1.8867, -603.7902, 10],
+      "lump": {
+        "name":"stadiumb-skill-68"
+      }
+    },
+    {
+      "trans": [ -96.4336, 8.2913, -555.7029], // on blocks on not-island in west/center 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -96.4336, 8.2913, -555.7029, 10],
+      "lump": {
+        "name":"stadiumb-skill-69"
+      }
+    },
+    {
+      "trans": [ -76.8697, 4.0482, -576.2158], // inside broken glass on not-island in west/center  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -76.8697, 4.0482, -576.2158, 10],
+      "lump": {
+        "name":"stadiumb-skill-70"
+      }
+    },
+    {
+      "trans": [ -75.6267, 0.6945, -564.7174], // between lights(?) on not-island in west/center  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -75.6267, 0.6945, -564.7174, 10],
+      "lump": {
+        "name":"stadiumb-skill-71"
+      }
+    },
+    {
+      "trans": [ -49.5718, -2.7988, -559.0217], // rebar next to pipe on back of not-island on west/center 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -49.5718, -2.7988, -559.0217, 10],
+      "lump": {
+        "name":"stadiumb-skill-72"
+      }
+    },
+    {
+      "trans": [ -130.6467, -8.6556, -566.1228], // torbch trash can on west/center path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -130.6467, -8.6556, -566.1228, 10],
+      "lump": {
+        "name":"stadiumb-skill-73",
+        "bob-scale": ["float", 0.3125]
+      }
+    },
+    {
+      "trans": [ -82.1770, -14.2886, -630.4215], // ledge down from path, NW circle 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -82.1770, -14.2886, -630.4215, 10],
+      "lump": {
+        "name":"stadiumb-skill-74"
+      }
+    },
+    {
+      "trans": [ 8.6107, -4.9020, -640.7545], // behind cube rubble on north path, by checkpoint 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 8.6107, -4.9020, -640.7545, 10],
+      "lump": {
+        "name":"stadiumb-skill-75"
+      }
+    },
+    {
+      "trans": [ 53.1790, -11.5175, -667.4257], // pipe along side of north path, by checkpoint 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 53.1790, -11.5175, -667.4257, 10],
+      "lump": {
+        "name":"stadiumb-skill-76"
+      }
+    },
+    {
+      "trans": [ -4.3969, 17.3017, -668.1382], // rebar overhead along north path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -4.3969, 17.3017, -668.1382, 10],
+      "lump": {
+        "name":"stadiumb-skill-77"
+      }
+    },
+    {
+      "trans": [ -125.6609, -19.4849, -627.1488], // rocky ledge down around corner from path along west/center (NWish) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -125.6609, -19.4849, -627.1488, 10],
+      "lump": {
+        "name":"stadiumb-skill-78"
+      }
+    },
+    {
+      "trans": [ -125.4695, -12.7228, -667.0285], // slipper ledge around corner from path along west/center (NWish), follow from ^ or go other way around 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -125.4695, -12.7228, -667.0285, 10],
+      "lump": {
+        "name":"stadiumb-skill-79"
+      }
+    },
+    {
+      "trans": [ -149.7379, -7.6313, -690.3734], // corner of outer wall under walkway/bleachers, NWish
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -149.7379, -7.6313, -690.3734, 10],
+      "lump": {
+        "name":"stadiumb-skill-80"
+      }
+    },
+    {
+      "trans": [ -183.5216, -24.2104, -676.6449], // rocky buttcrack ledge along wall under walkway/bleachers, NWish 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -183.5216, -24.2104, -676.6449, 10],
+      "lump": {
+        "name":"stadiumb-skill-81"
+      }
+    },
+    {
+      "trans": [ -253.6296, -11.3532, -583.2677], // under rubble near flaming trash can west path
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -253.6296, -11.3532, -583.2677, 10],
+      "lump": {
+        "name":"stadiumb-skill-82"
+      }
+    },
+    {
+      "trans": [ -242.6626, -4.6538, -525.7192], // behind rebar and cube rubble along SW path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -242.6626, -4.6538, -525.7192, 10],
+      "lump": {
+        "name":"stadiumb-skill-83"
+      }
+    },
+    {
+      "trans": [ -209.8892, 3.3482, -491.5679], // rebar sticking out from under walkway/bleachers, SW path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -209.8892, 3.3482, -491.5679, 10],
+      "lump": {
+        "name":"stadiumb-skill-84"
+      }
+    },
+    {
+      "trans": [ -195.9267, -9.2987, -478.2819], // rebar sticking out from under walkway/bleachers, SW path, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -195.9267, -9.2987, -478.2819, 10],
+      "lump": {
+        "name":"stadiumb-skill-85"
+      }
+    },
+    {
+      "trans": [ -97.0017, -6.9139, -419.0154], // proxy hint for no particular reason at start of last section before BTR 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -97.0017, -6.9139, -419.0154, 10],
+      "lump": {
+        "name":"stadiumb-skill-86",
+        "proxy-hint": ["float", 1.0]
+      }
+    },
+    {
+      "trans": [ -85.9072, 5.4838, -377.2178], // proxy hint for no particular reason at mid corner of last section before BTR 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -85.9072, 5.4838, -377.2178, 10],
+      "lump": {
+        "name":"stadiumb-skill-87",
+        "proxy-hint": ["float", 1.0]
+      }
+    },
+    {
+      "trans": [ -183.3740, 14.5407, -376.5783], // between rubble/rebar on right looking at door to BTR 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -183.3740, 14.5407, -376.5783, 10],
+      "lump": {
+        "name":"stadiumb-skill-88"
+      }
+    },
+    {
+      "trans": [ -141.6200, -1.2139, -520.8354], // on back of triple tower near exit to BTR 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -141.6200, -1.2139, -520.8354, 10],
+      "lump": {
+        "name":"stadiumb-skill-89"
+      }
+    },
+    {
+      "trans": [ -122.5286, 36.2937, -519.0423], // on top of triple tower section before last area and exit to BTR 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -122.5286, 36.2937, -519.0423, 10],
+      "lump": {
+        "name":"stadiumb-skill-90"
+      }
+    },
+    {
+      "trans": [ -134.0448, -12.0861, -499.3819], // under cube rubble along path at triple tower section before last area and exit to BTR 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -134.0448, -12.0861, -499.3819, 10],
+      "lump": {
+        "name":"stadiumb-skill-91"
       }
     }//,
 
