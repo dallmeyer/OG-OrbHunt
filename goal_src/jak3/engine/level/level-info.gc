@@ -2812,11 +2812,11 @@
                       :on-goto #f
                       :vis-nick 'ctyfarma
                       :vehicle-type #x1b
-                      :want-count 1
+                      :want-count 2
                       :want (new 'static 'inline-array level-buffer-state-small 4
+                        (new 'static 'level-buffer-state-small :name 'ctywide-kg  :display? 'special)
                         (new 'static 'level-buffer-state-small :name 'ctyfarma :display? 'display)
                         (new 'static 'level-buffer-state-small) ;; :name 'ctyfarmb :display? 'display)
-                        (new 'static 'level-buffer-state-small) ;; :name 'ctywide-kg  :display? 'display)
                         (new 'static 'level-buffer-state-small)
                         )
                       :want-sound (new 'static 'array symbol 3 #f #f #f)
@@ -2871,9 +2871,9 @@
                       :vehicle-type #x1b
                       :want-count 1
                       :want (new 'static 'inline-array level-buffer-state-small 4
+                        (new 'static 'level-buffer-state-small :name 'ctywide-kg  :display? 'special)
                         (new 'static 'level-buffer-state-small :name 'ctyfarmb :display? 'display)
                         (new 'static 'level-buffer-state-small) ;; :name 'ctyfarma :display? 'display)
-                        (new 'static 'level-buffer-state-small) ;; :name 'ctywide-kg  :display? 'display)
                         (new 'static 'level-buffer-state-small)
                         )
                       :want-sound (new 'static 'array symbol 3 #f #f #f)
