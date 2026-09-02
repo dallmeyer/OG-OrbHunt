@@ -222,6 +222,243 @@
       "lump": {
         "name":"stadium-skill-14"
       }
+    },
+    {
+      "trans": [ 332.8601, -1.1725, -490.1069], // rubble on right near bottom of stairs at start 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 332.8601, -1.1725, -490.1069, 10],
+      "lump": {
+        "name":"stadium-skill-15"
+      }
+    },
+    {
+      "trans": [ 365.7105, 9.7159, -488.8100], // gap against wall on right, right before rubble/stairs at start 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 365.7105, 9.7159, -488.8100, 10],
+      "lump": {
+        "name":"stadium-skill-16",
+        "bob-scale": ["float", 0.3750]
+      }
+    },
+    {
+      "trans": [ 287.9952, 35.3719, -395.7839], // on top of pillar along outer wall, hard left from starting stairs (jetboard yolo from IJ above stairs or something) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 287.9952, 35.3719, -395.7839, 10],
+      "lump": {
+        "name":"stadium-skill-17"
+      }
+    },
+    {
+      "trans": [ 231.9611, 36.3146, -382.8377], // further along outer wall from ^ into corner, another jetboard yolo 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 231.9611, 36.3146, -382.8377, 10],
+      "lump": {
+        "name":"stadium-skill-18"
+      }
+    },
+    {
+      "trans": [ 226.5111, 26.1598, -384.5408], // drop down one level to broken bit of outer wall from ^, behind invis wall  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 226.5111, 26.1598, -384.5408, 10],
+      "lump": {
+        "name":"stadium-skill-19"
+      }
+    },
+    {
+      "trans": [ 147.6419, 5.3649, -647.7709], // ledge below dugout over void, kind towards vanilla orb hallway
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 147.6419, 5.3649, -647.7709, 10],
+      "lump": {
+        "name":"stadium-skill-20"
+      }
+    },
+    {
+      "trans": [ 169.7834, 9.4577, -641.9367], // on rebar over void, come from wall side of (concussor?) boosted from main path
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 169.7834, 9.4577, -641.9367, 10],
+      "lump": {
+        "name":"stadium-skill-21"
+      }
+    },
+    {
+      "trans": [ 81.7857, 12.7942, -709.5596], // in trashcan halfway along vanilla orb hallway 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 81.7857, 12.7942, -709.5596, 10],
+      "lump": {
+        "name":"stadium-skill-22",
+        "bob-scale": ["float", 0.1562]
+      }
+    },
+    {
+      "trans": [ 31.0670, 14.1496, -731.8168], // behind cube rubble at end of vanilla orb hallway 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 31.0670, 14.1496, -731.8168, 10],
+      "lump": {
+        "name":"stadium-skill-23"
+      }
+    },
+    {
+      "trans": [ 56.6734, 13.6431, -712.8801], // on left near end of vanilla orb hallway, by skulls and bones 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 56.6734, 13.6431, -712.8801, 10],
+      "lump": {
+        "name":"stadium-skill-24"
+      }
+    },
+    {
+      "trans": [ 225.9523, 11.6913, -648.7638], // proxy hint along main path, to get on top of fallen structure where air train is 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 225.9523, 11.6913, -648.7638, 10],
+      "lump": {
+        "name":"stadium-skill-25",
+        "bob-scale": ["float", 0.5937],
+        "proxy-hint": ["float", 1.0]
+      }
+    },
+    {
+      "trans": [ 239.1601, 57.9172, -663.6828], // on top of fallen structure containing air train, proxy from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 239.1601, 57.9172, -663.6828, 10],
+      "lump": {
+        "name":"stadium-skill-26"
+      }
+    },
+    {
+      "trans": [ 204.9000, -3.4027, -687.7048], // stair rubble close to void, opposite turnaround slab in no oob, alt proxy hint for ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 204.9000, -3.4027, -687.7048, 10],
+      "lump": {
+        "name":"stadium-skill-27",
+        "bob-scale": ["float", 0.6562],
+        "proxy-hint": ["float", 1.0]
+      }
+    },
+    {
+      "trans": [ 219.3690, -2.8728, -678.5899], // under stair rubble, opposite turnaround slab in no oob 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 219.3690, -2.8728, -678.5899, 10],
+      "lump": {
+        "name":"stadium-skill-28",
+        "bob-scale": ["float", -1.0] // no bob
+      }
+    },
+    {
+      "trans": [ 236.9325, 2.7393, -662.6837], // between fallen screen and dish near opening of fallen structure 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 236.9325, 2.7393, -662.6837, 10],
+      "lump": {
+        "name":"stadium-skill-29"
+      }
+    },
+    {
+      "trans": [ 235.9436, 25.8110, -679.5674], // on right side rebar sticking out of fallen structure 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 235.9436, 25.8110, -679.5674, 10],
+      "lump": {
+        "name":"stadium-skill-30"
+      }
+    },
+    {
+      "trans": [ 250.2663, 0.0073, -678.9237], // left side lower rebar sticking out of fallen structure 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 250.2663, 0.0073, -678.9237, 10],
+      "lump": {
+        "name":"stadium-skill-31"
+      }
+    },
+    {
+      "trans": [ 265.5619, 1.4894, -666.4814], // left side lower rebar sticking out of fallen structure, awkward crouch+Walk from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 265.5619, 1.4894, -666.4814, 10],
+      "lump": {
+        "name":"stadium-skill-32"
+      }
+    },
+    {
+      "trans": [ 229.1716, 35.9637, -588.4786], // top of corner rubble near triple pipe and before final room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 229.1716, 35.9637, -588.4786, 10],
+      "lump": {
+        "name":"stadium-skill-33"
+      }
+    },
+    {
+      "trans": [ 176.6128, 4.7405, -597.2473], // slippery ledge below rebar sticking out from path, by hallway to last room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 176.6128, 4.7405, -597.2473, 10],
+      "lump": {
+        "name":"stadium-skill-34"
+      }
+    },
+    {
+      "trans": [ 205.9409, 10.1161, -604.2182], // on slippery pipe just before hallway to last room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 205.9409, 10.1161, -604.2182, 10],
+      "lump": {
+        "name":"stadium-skill-35"
+      }
+    },
+    {
+      "trans": [ 200.7971, 8.5731, -592.3700], // stuck between triple pipe before hallway to last room, keep gun out to survive 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 200.7971, 8.5731, -592.3700, 10],
+      "lump": {
+        "name":"stadium-skill-36"
+      }
+    },
+    {
+      "trans": [ 295.6164, 13.6864, -417.9322], // random blue tile along top of lower wall, hard left after starting stairs 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 295.6164, 13.6864, -417.9322, 10],
+      "lump": {
+        "name":"stadium-skill-37"
+      }
     }//,
 
   ]

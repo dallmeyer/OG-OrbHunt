@@ -172,6 +172,27 @@
       "lump": {
         "name":"ctygenb-skill-10"
       }
+    },
+    {
+      "trans": [ 288.8341, 8.1305, -296.4010], // under rubble on north wall by flaming trashcan, before grindrail to ruins
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 288.8341, 8.1305, -296.4010, 10],
+      "lump": {
+        "name":"ctygenb-skill-11",
+        "bob-scale": ["float", 0.3750]
+      }
+    },
+    {
+      "trans": [ 134.2629, 17.2505, -259.6548], // in pipe open at top above vanilla position, small corner near blocked canal tunnel west side
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 134.2629, 17.2505, -259.6548, 10],
+      "lump": {
+        "name":"ctygenb-skill-12"
+      }
     }//,
 
   ]

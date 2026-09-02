@@ -1264,7 +1264,8 @@
       (quaternion-set! (-> arg0 quat) -0.0050  -0.9368  -0.2658  0.2271))
     (('crate-1216) (set-vector-meters! (-> arg0 extra trans) 370.92  36.52  -490.88 )) ;; on edge of wall near start, jump over invis wall from skill-236
     (('crate-1217) (set-vector-meters! (-> arg0 extra trans) 207.75  48.73  -468.10 )) ;; on lower part of rooftop, have to go close to left edge to drop from invis floor (double orb!)
-    
+    (('light-eco-vent-46) (set-vector-meters! (-> arg0 extra trans) 194.7971 10.9197 -680.9932)) ;; in trash can middle of path
+
     ;; ====== WASSTADB (training course) ======
     (('wstd-training-dummy-1) (set-vector-meters! (-> arg0 extra trans) 2348.34  41.00  -458.75 ) ;; on small side ledge probably nobody notices
       (quaternion-set! (-> arg0 quat) 0.0000       0.7088       0.0000      -0.7053))
@@ -2107,12 +2108,16 @@
     (when bridge  
       (set! (-> bridge extra perm task) (game-task none)))
     )
-  ;; let you return from ctygenb -> mined JK decided not to
-  (let ((door (entity-by-name "com-airlock-outer-15")))
-    (when door 
-      (set! (cdr (res-lump-struct door 'on-deactivate pair)) '((want-display 'minee #f) (when (and (send-event self 'front) (level-status? 'minee)) (want-sound 'genbtsk1))))
-      (set! (car (res-lump-struct door 'on-notice pair)) 'begin)
-      (set! (cdr (res-lump-struct door 'on-notice pair)) '((want-load 'ctywide-ff 'ctygenb 'minee) '(minee)))
+  ;; let you return from ctygenb -> minee
+  (let ((door15 (entity-by-name "com-airlock-outer-15"))
+        (door103 (entity-by-name "com-airlock-inner-103")))
+    (when door15 
+      (set! (cdr (res-lump-struct door15 'on-deactivate pair)) '((want-display 'minee #f) (when (and (send-event self 'front) (level-status? 'minee)) (want-sound 'genbtsk1))))
+      (set! (car (res-lump-struct door15 'on-notice pair)) 'begin)
+      (set! (cdr (res-lump-struct door15 'on-notice pair)) '((want-load 'ctywide-ff 'ctygenb 'minee) '(minee)))
+      )
+    (when door103
+      (set! (cdr (res-lump-struct door103 'on-exit pair)) '()) ;; avoid deloading ctygenb in corner around from door
       )
     )
 
