@@ -278,6 +278,7 @@
     )
   )
 
+(define *last-side-mish-time* (the-as time-frame #f))
 (defun side-mish-active? ()
   (let ((tm (process-by-type task-manager *active-pool*)))
     (when tm
@@ -286,6 +287,7 @@
           (return #f)
           )
         )
+      (set-g-time! *last-side-mish-time*)
       (return #t)
       )
     )
@@ -296,6 +298,10 @@
   ;;     (return #t)
   ;;     )
   ;;   )
+
+  ;; 1s cooldown after side mish
+  (when (and *last-side-mish-time* (not (time-elapsed? *last-side-mish-time* (seconds 1))))
+    (return #t))
 
   ;; made it here -> no side mission
   #f

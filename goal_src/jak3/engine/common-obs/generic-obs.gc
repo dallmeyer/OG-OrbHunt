@@ -1932,7 +1932,20 @@
 (defun check-disable-no-smoking ((this part-spawner))
   (when (and (pc-cheats? (-> *pc-settings* cheats) no-smoking) (nonzero? (-> this mode 0)))
     (case (-> this mode 0 name) :comp name=
-      (('group-rubble-rubble-smoke 'group-rubble-huge-smoke 'group-rubble-rubble-crater-smoke 'group-rubble-wispy-smoke)
+      (('group-rubble-rubble-smoke 'group-rubble-huge-smoke 'group-rubble-rubble-crater-smoke 'group-rubble-wispy-smoke
+        'group-stadium-rubble-smoke 'group-stadium-rubble-crater-smoke 
+        'group-ctyslum-rubble-crater-smoke 'group-ctyslum-rubble-smoke 'group-ctyslum-rubble-smoke-lit 'group-ctyslum-steam-vent
+        'group-ctysluma-chimney 'group-ctysluma-chimney-smoke
+        'group-ctysluma-steamvent 'group-ctysluma-steam-drift 'group-ctysluma-steamescape 'group-ctyslumb-steamescape
+        'group-ctyind-rubble-smoke 'group-ctyind-rubble-crater-smoke
+        'group-ctyindb-rubble-smoke 'group-ctyindb-tubes-smoke 'group-ctyindb-chimney-smoke 'group-ctyindb-smokestack
+        'group-ctyindb-fast-steam 'group-ctyindb-rising-steam 'group-ctyindb-steam-drift
+        'group-ctyinda-fast-steam 'group-ctyinda-rising-steam 'group-ctyinda-steam-drift
+        'group-ctyport-rubble-crater-smoke 'group-ctyport-low-vent 'group-ctyport-rubble-fire 'group-ctyport-roundvent 'group-ctyport-wreckage-smoke
+        'group-ctywide-chimney-smoke
+        'group-ctygenb-rubble-smoke 'group-ctygenb-rubble-crater-smoke
+        'group-waswide-chimney-smoke 'group-waswide-chimney-long-smoke 'group-waswide-chimney-double-smoke
+        'group-fac-steam)
         (return (false! (-> this enable)))
         )
       )

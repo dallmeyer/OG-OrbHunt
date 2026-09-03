@@ -40,7 +40,7 @@
 (defun orb-placer-blink-cleanup ()
   (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
     (let ((orb (the process-drawable (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
-      (when orb
+      (when (and orb (nonzero? (-> orb draw)))
         (logclear! (-> orb draw status) (draw-control-status force-fade))
         (set! (-> orb draw force-fade) (the-as uint 128))
         )
@@ -62,6 +62,10 @@
         ((type? orb tape)
           (vector-copy! vec (-> (the tape orb) base))
           (set! orb-handle (spawn-tape vec 1.0 0.0))
+          )
+        ((type? orb dummy-ring)
+          (vector-copy! vec (-> (the dummy-ring orb) root trans))
+          (set! orb-handle (spawn-dummy-ring vec))
           )
         (else
           (format 0 "ORBPLACER ERROR - unsupported type to dupe ~A ~A ~%" (-> orb type))
@@ -87,6 +91,7 @@
   (cond
     ((type? proc skill) (-> (the skill proc) base))
     ((type? proc tape) (-> (the tape proc) base))
+    ((type? proc dummy-ring) (-> (the dummy-ring proc) root trans))
     (else (-> proc root trans))
     )
   )
@@ -129,7 +134,7 @@
           (is-selected? (and *entity-placer-active?* (= i *orb-placer-selected-idx*))))
       (when (and (nonzero? orb-handle) (handle->process orb-handle))
         (let ((orb-proc (the process-drawable (handle->process orb-handle))))
-          (when (and orb-proc (!= (-> orb-proc next-state name) 'dead-state))
+          (when (and orb-proc (-> orb-proc next-state) (!= (-> orb-proc next-state name) 'dead-state))
             ;; ensure correct highlighting
             ;; (orb-placer-highlight 
             ;;   orb-proc
@@ -210,6 +215,7 @@
       (case *orb-placer-entity-type*
         (('skill) (set! orb-handle (spawn-skill vec 1.0 0.0)))
         (('tape) (set! orb-handle (spawn-tape vec 1.0 0.0)))
+        (('dummy-ring) (set! orb-handle (spawn-dummy-ring vec)))
         )
 
       (when (nonzero? orb-handle)
@@ -262,6 +268,51 @@
     (let ((orb (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*))))
       (when (and orb (type? orb skill))
         (orb-placer-set-marking (the skill orb) (the float (+ (mod (the int (-> (the skill orb) pickup-amount)) 3) 1)))
+        )
+      )
+    )
+  (none)
+  )
+
+(defun orb-rotate-x ()
+  (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
+    (let ((orb (the process-drawable (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
+      (when orb
+        (quaternion-rotate-x! (-> orb root quat) (-> orb root quat) (degrees 90))
+        (when (type-type? (-> orb type) dummy-ring)
+          (quaternion->matrix (-> (the dummy-ring orb) mat) (-> orb root quat))
+          (vector-copy! (-> (the dummy-ring orb) mat trans) (-> orb root trans))
+          )
+        )
+      )
+    )
+  (none)
+  )
+
+(defun orb-rotate-y ()
+  (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
+    (let ((orb (the process-drawable (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
+      (when orb
+        (quaternion-rotate-y! (-> orb root quat) (-> orb root quat) (degrees 90))
+        (when (type-type? (-> orb type) dummy-ring)
+          (quaternion->matrix (-> (the dummy-ring orb) mat) (-> orb root quat))
+          (vector-copy! (-> (the dummy-ring orb) mat trans) (-> orb root trans))
+          )
+        )
+      )
+    )
+  (none)
+  )
+
+(defun orb-rotate-z ()
+  (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
+    (let ((orb (the process-drawable (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))
+      (when orb
+        (quaternion-rotate-z! (-> orb root quat) (-> orb root quat) (degrees 90))
+        (when (type-type? (-> orb type) dummy-ring)
+          (quaternion->matrix (-> (the dummy-ring orb) mat) (-> orb root quat))
+          (vector-copy! (-> (the dummy-ring orb) mat trans) (-> orb root trans))
+          )
         )
       )
     )
@@ -506,6 +557,10 @@
       (reset-orb-state proc)
       ;; un sleep 
       (logclear! (-> proc mask) (process-mask sleep))
+      (when (type-type? (-> proc type) dummy-ring)
+        (quaternion->matrix (-> (the dummy-ring proc) mat) (-> proc root quat))
+        (vector-copy! (-> (the dummy-ring proc) mat trans) (-> proc root trans))
+        )
       ;; force update transforms
       (when (type-type? (-> proc root type) collide-shape)
         (update-transforms (the collide-shape (-> proc root)))))
@@ -613,7 +668,7 @@
                               ;; respond to controller input
                               (debug-check-process-drawable-move orb)
                               ;; cycle alpha every so often to indicate edit mode
-                              (when (= (mod (get-current-time) 90) 0)
+                              (when (and (= (mod (get-current-time) 90) 0) (nonzero? (-> orb draw)))
                                 (logior! (-> orb draw status) (draw-control-status force-fade))
                                 (if (< (-> orb draw force-fade) (the-as uint 64))
                                   (set! (-> orb draw force-fade) (the-as uint 100))

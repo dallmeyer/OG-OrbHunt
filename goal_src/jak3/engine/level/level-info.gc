@@ -664,7 +664,7 @@
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
                     :borrow-size (new 'static 'array uint16 5 #x1a4 #x1a4 #x1a4 #x30c #x32a)
-                    :borrow-info (new 'static 'array object 5 #f #f #f #f #f)
+                    :borrow-info (new 'static 'array object 5 #f #f #f #f #f) ;; '(lbbring6 #f))
                     )
                   :bottom-height (meters -15)
                   :fog-height (meters 80)
@@ -2957,10 +2957,10 @@
                       :name "ctyinda-bbush-1"
                       :level 'ctyinda
                       :flags (continue-flags no-auto)
-                      :trans (new 'static 'vector :x 3980182.0 :y 32741.785 :z 4033910.2 :w 1.0)
-                      :camera-trans (new 'static 'vector :x 3975056.2 :y 51175.016 :z 3992964.2 :w 1.0)
-                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x7380 0 #x371d))
-                      :camera-rot (new 'static 'array int16 9 #x7c9a 0 -7490 #x443 #x7ea0 #x1226 #x1cf0 -4774 #x7b45)
+                      :trans (new 'static 'vector :x (meters 756.7554) :y (meters 7.9936) :z (meters 1126.9682) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 759.5088) :y (meters 13.0795) :z (meters 1115.0227) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 12261 0 -30386))
+                      :camera-rot (new 'static 'array int16 9 31914 0 7427 -893 32529 3836 -7373 -3939 31682)
                       :on-goto #f
                       :vis-nick 'ctyinda
                       :vehicle-type #x1b
@@ -2997,10 +2997,10 @@
                       :name "ctyinda-bbush-3"
                       :level 'ctyinda
                       :flags (continue-flags no-auto)
-                      :trans (new 'static 'vector :x 4197982.5 :y 32741.785 :z 4539440.0 :w 1.0)
-                      :camera-trans (new 'static 'vector :x 4243572.5 :y 53587.56 :z 4560590.5 :w 1.0)
-                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 -3 -32072 0 -6697))
-                      :camera-rot (new 'static 'array int16 9 -17241 0 #x6cd5 -3319 #x7f13 -2054 -27661 -3902 -17120)
+                      :trans (new 'static 'vector :x (meters 1041.0909) :y (meters 7.9936) :z (meters 1154.3704) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 1053.5185) :y (meters 13.1438) :z (meters 1155.7863) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -20332 0 25695))
+                      :camera-rot (new 'static 'array int16 9 -3663 0 32561 -3929 32527 -442 -32323 -3954 -3636)
                       :on-goto #f
                       :vis-nick 'ctyinda
                       :vehicle-type #x1b
@@ -11050,7 +11050,7 @@
                    :priority 100
                    :draw-priority 10.0
                    :base-task-mask (task-mask task0)
-                   :bigmap-id (bigmap-id wascity)
+                   :bigmap-id (bigmap-id none)
                    :continues '((new 'static 'continue-point
                        :name "wasstada-start"
                        :level 'wasstada
@@ -11106,7 +11106,7 @@
                          (new 'static 'level-buffer-state-small :name 'wasall :display? 'special)
                          (new 'static 'level-buffer-state-small :name 'waswide :display? 'display)
                          (new 'static 'level-buffer-state-small :name 'wasstada :display? 'display)
-                         (new 'static 'level-buffer-state-small :name 'arenacst :display? 'special)
+                         (new 'static 'level-buffer-state-small :name 'wascitya :display? #f)
                          )
                        :want-sound (new 'static 'array symbol 3 'wascity1 'wasstad1 'wasstad2)
                        )
@@ -11387,7 +11387,7 @@
                    :priority 100
                    :draw-priority 10.0
                    :base-task-mask (task-mask task0)
-                   :bigmap-id (bigmap-id wascity)
+                   :bigmap-id (bigmap-id none)
                    :continues '()
                    :callback-list '()
                    :borrow #f
@@ -11421,7 +11421,7 @@
                    :priority 100
                    :draw-priority 10.0
                    :base-task-mask (task-mask task0)
-                   :bigmap-id (bigmap-id wascity)
+                   :bigmap-id (bigmap-id none)
                    :continues '()
                    :callback-list '()
                    :borrow #f

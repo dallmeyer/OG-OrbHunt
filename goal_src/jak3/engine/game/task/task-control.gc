@@ -223,8 +223,16 @@
                          (set! (-> (the-as level-load-info v1-1) borrow alias) a0-11)
                          )
                         (else
-                          ;; orb hunt - TODO figure out if this broke anything lol
-                          ;; (set! (-> (the-as level-load-info v1-1) borrow borrow-info (/ (the-as int s5-0) 8)) a0-11)
+                          (case (-> (the-as pair a0-11) car)
+                            (('lbbring6)
+                              ;; allowlisted side mission
+                              (set! (-> (the-as level-load-info v1-1) borrow borrow-info (/ (the-as int s5-0) 8)) a0-11)
+                              )
+                            (else
+                              ;; orb hunt - TODO figure out if this broke anything lol
+                              (dbg-format 0 "TODO: skipping updating borrow for ~A to ~A --- sidemish? ~A~%" (-> (the-as level-load-info v1-1) name) a0-11 (side-mish-active?))    
+                              )
+                            )
                           )
                         )
                       )

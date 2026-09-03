@@ -16,6 +16,7 @@
     (let ((orb-type-menu (new 'debug 'debug-menu ctx "Select Actor Type")))
       (debug-menu-append-item orb-type-menu (new 'debug 'debug-menu-item-flag "Skill (orb)" 'skill orbs-set-entity-type))
       (debug-menu-append-item orb-type-menu (new 'debug 'debug-menu-item-flag "Tape" 'tape orbs-set-entity-type))
+      (debug-menu-append-item orb-type-menu (new 'debug 'debug-menu-item-flag "Ring" 'dummy-ring orbs-set-entity-type))
 
       (debug-menu-append-item orb-placer-menu (new-dm-submenu "Select Actor Type" orb-type-menu))
       )
@@ -23,7 +24,14 @@
     *orb-placer-entity-type*
    
     (debug-menu-append-item orb-placer-menu (new-dm-func "Toggle Orb Marking" #f orb-placer-toggle-marking))
-    (debug-menu-append-item orb-placer-menu (new-dm-func "Flip Orb" #f orb-placer-flip))
+    
+    (let ((orb-rotate-menu (new 'debug 'debug-menu ctx "Rotate 90")))
+      (debug-menu-append-item orb-rotate-menu (new-dm-func "X" #f orb-rotate-x))
+      (debug-menu-append-item orb-rotate-menu (new-dm-func "Y" #f orb-rotate-y))
+      (debug-menu-append-item orb-rotate-menu (new-dm-func "Z" #f orb-rotate-z))
+      (debug-menu-append-item orb-placer-menu (new-dm-submenu "Rotate 90" orb-rotate-menu))
+      )
+
     (let ((select-orb-menu (new 'debug 'debug-menu ctx "Select Actor")))
       (set! *orb-placer-select-menu* select-orb-menu)
       ;; populated on orb add

@@ -19,9 +19,9 @@
 
 ;; DECOMP BEGINS
 
-(define *tex-level-list*
-  (new 'static 'boxed-array :type symbol 'lbbring1 'lbbring2 'lbbring3 'lbbring4 'lbbring5 'lbbring6)
-  )
+;; (define *tex-level-list*
+;;   (new 'static 'boxed-array :type symbol 'lbbring1 'lbbring2 'lbbring3 'lbbring4 'lbbring5 'lbbring6)
+;;   )
 
 (defpartgroup group-desert-ring
   :id 1547
@@ -291,37 +291,37 @@
     )
   )
 
-(defun find-level-name ()
-  (dotimes (gp-0 (-> *tex-level-list* length))
-    (let ((v1-3 (level-get *level* (-> *tex-level-list* gp-0))))
-      (if v1-3
-          (return v1-3)
-          )
-      )
-    )
-  (the-as level #f)
-  )
+;; (defun find-level-name ()
+;;   (dotimes (gp-0 (-> *tex-level-list* length))
+;;     (let ((v1-3 (level-get *level* (-> *tex-level-list* gp-0))))
+;;       (if v1-3
+;;           (return v1-3)
+;;           )
+;;       )
+;;     )
+;;   (the-as level #f)
+;;   )
 
-;; WARN: Return type mismatch texture-id vs none.
-(defun set-ring-particle-texture ()
-  (let ((gp-0 (find-level-name)))
-    (when gp-0
-      (set! (-> *part-id-table* 5143 init-specs 0 initial-valuef)
-            (the-as float (lookup-level-texture-id-by-name "racegate" gp-0 7))
-            )
-      (set! (-> *part-id-table* 5146 init-specs 0 initial-valuef)
-            (the-as float (lookup-level-texture-id-by-name "racegate" gp-0 7))
-            )
-      (set! (-> *part-id-table* 5153 init-specs 0 initial-valuef)
-            (the-as float (lookup-level-texture-id-by-name "racegate" gp-0 7))
-            )
-      (set! (-> *part-id-table* 5154 init-specs 0 initial-valuef)
-            (the-as float (lookup-level-texture-id-by-name "racegate" gp-0 7))
-            )
-      )
-    )
-  (none)
-  )
+;; ;; WARN: Return type mismatch texture-id vs none.
+;; (defun set-ring-particle-texture ()
+;;   (let ((gp-0 (find-level-name)))
+;;     (when gp-0
+;;       (set! (-> *part-id-table* 5143 init-specs 0 initial-valuef)
+;;             (the-as float (lookup-level-texture-id-by-name "racegate" gp-0 7))
+;;             )
+;;       (set! (-> *part-id-table* 5146 init-specs 0 initial-valuef)
+;;             (the-as float (lookup-level-texture-id-by-name "racegate" gp-0 7))
+;;             )
+;;       (set! (-> *part-id-table* 5153 init-specs 0 initial-valuef)
+;;             (the-as float (lookup-level-texture-id-by-name "racegate" gp-0 7))
+;;             )
+;;       (set! (-> *part-id-table* 5154 init-specs 0 initial-valuef)
+;;             (the-as float (lookup-level-texture-id-by-name "racegate" gp-0 7))
+;;             )
+;;       )
+;;     )
+;;   (none)
+;;   )
 
 (define *des-ring-times*
   (the-as (array (array float))

@@ -715,6 +715,7 @@
                    (logtest? (-> (the-as process-drawable v1-7) draw status) (draw-control-status on-screen))
                    )
           (set! *current-eye-merc-ctrl-name* (-> (the process-drawable v1-7) draw mgeo name))
+          ;; (format 0 "eye-ctrl-name ~A~%" *current-eye-merc-ctrl-name*)
           (when (-> s5-0 shaders)
             (when (not (paused?))
               (cond

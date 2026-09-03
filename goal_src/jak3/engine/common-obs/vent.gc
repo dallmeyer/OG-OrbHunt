@@ -46,7 +46,7 @@
       )
     (set! (-> this root) s3-0)
     )
-  (when (not *entity-placer-active?*) (mod-override-init-position this arg0))
+  (when (or (not *debug-segment*) (not *entity-placer-active?*)) (mod-override-init-position this arg0))
   (vector-copy! (-> this root trans) (-> arg0 extra trans))
   (update-transforms (-> this root))
   (set! (-> this root pause-adjust-distance) 409600.0)

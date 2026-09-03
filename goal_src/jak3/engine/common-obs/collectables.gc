@@ -360,7 +360,7 @@
   (set! (-> this pickup-amount) arg2)
   (set! (-> this pickup-type) arg1)
   (initialize-allocations this)
-  (when (not *entity-placer-active?*) (mod-override-init-position this arg0))
+  (when (or (not *debug-segment*) (not *entity-placer-active?*)) (mod-override-init-position this arg0))
   (vector-copy! (-> this root trans) (-> arg0 extra trans))
   (initialize-effects this (-> this fact pickup-type))
   (initialize-options this 0 1024.0 (the-as fact-info #f))
@@ -3591,4 +3591,203 @@
                            )
             )
     )
+  )
+
+(define *tex-level-list*
+  (new 'static 'boxed-array :type symbol 'lbbring1 'lbbring2 'lbbring3 'lbbring4 'lbbring5 'lbbring6)
+  )
+
+(defpartgroup group-dummy-ring
+  :id 1602
+  :duration (seconds 218.45)
+  :linger-duration (seconds 0)
+  :bounds (static-bspherem 0 0 0 8)
+  :parts (
+    ;; (sp-item 5202 :flags (is-3d sp3 sp6 sp7))
+    ;; (sp-item 5202 :flags (is-3d sp3 sp6 sp7))
+    ;; (sp-item 5202 :flags (is-3d sp3 sp6 sp7))
+    ;; (sp-item 5202 :flags (is-3d sp3 sp6 sp7))
+    ;; (sp-item 5202 :flags (is-3d sp3 sp6 sp7))
+    ;; (sp-item 5202 :flags (is-3d sp3 sp6 sp7))
+    (sp-item 5203 :flags (is-3d sp7))
+    (sp-item 5203 :flags (is-3d sp7))
+    )
+  )
+
+(defpart 5202
+  :init-specs ((:texture (racegate lbbring6-sprite))
+    (:num 1.0)
+    (:scale-x (meters 12))
+    (:scale-y :copy scale-x)
+    (:r 40.0)
+    (:g 80.0)
+    (:b 255.0)
+    (:a 64.0)
+    (:rotvel-y (degrees 0.026666665) (degrees 0.033333335))
+    (:timer (seconds -0.005))
+    (:flags (sp-cpuinfo-flag-2 sp-cpuinfo-flag-3 sp-cpuinfo-flag-14))
+    (:rotate-x (degrees -90) 1 (degrees 180))
+    (:rotate-z (degrees -90) (degrees 180))
+    )
+  )
+
+(defpart 5203
+  :init-specs ((:texture (splash-foam level-default-sprite))
+    (:num 0.0 0.5)
+    (:scale-x (meters 12) (meters 1))
+    (:scale-y :copy scale-x)
+    (:r 10.0)
+    (:g 0.0 64.0)
+    (:b 255.0)
+    (:a 0.0)
+    (:scalevel-x (meters -0.093333334))
+    (:scalevel-y :copy scalevel-x)
+    (:fade-a 6.4)
+    (:timer (seconds 0.5))
+    (:flags (sp-cpuinfo-flag-2 sp-cpuinfo-flag-3 sp-cpuinfo-flag-14 left-multiply-quat))
+    (:next-time (seconds 0.067))
+    (:next-launcher 5204)
+    (:rotate-x (degrees -90))
+    (:rotate-z (degrees -90) (degrees 180))
+    )
+  )
+
+(defpart 5204
+  :init-specs ((:fade-a -1.28))
+  )
+
+(defun find-level-name ()
+  (dotimes (gp-0 (-> *tex-level-list* length))
+    (let ((v1-3 (level-get *level* (-> *tex-level-list* gp-0))))
+      (if v1-3
+          (return v1-3)
+          )
+      )
+    )
+  (the-as level #f)
+  )
+
+;; WARN: Return type mismatch texture-id vs none.
+(defun set-ring-particle-texture ()
+  (let ((gp-0 (find-level-name)))
+    (when gp-0
+      (set! (-> *part-id-table* 5143 init-specs 0 initial-valuef)
+            (the-as float (lookup-level-texture-id-by-name "racegate" gp-0 7))
+            )
+      (set! (-> *part-id-table* 5146 init-specs 0 initial-valuef)
+            (the-as float (lookup-level-texture-id-by-name "racegate" gp-0 7))
+            )
+      (set! (-> *part-id-table* 5153 init-specs 0 initial-valuef)
+            (the-as float (lookup-level-texture-id-by-name "racegate" gp-0 7))
+            )
+      (set! (-> *part-id-table* 5154 init-specs 0 initial-valuef)
+            (the-as float (lookup-level-texture-id-by-name "racegate" gp-0 7))
+            )
+      )
+    )
+  (none)
+  )
+
+(deftype dummy-ring (process-drawable)
+  ((mat           matrix  :inline)
+   (ring-radius   float)
+   )
+  (:state-methods
+    idle
+    )
+  (:methods
+    )
+  )
+
+(defun dummy-ring-cleared? ((arg0 vector) (arg1 vector) (arg2 dummy-ring))
+  (let ((s5-0 (new 'stack-no-clear 'vector)))
+    (and (< (fabs (vector-dot (vector-x-quaternion! s5-0 (the-as quaternion arg0)) arg1)) (-> arg2 ring-radius))
+         (< (fabs (vector-dot (vector-y-quaternion! s5-0 (the-as quaternion arg0)) arg1)) (-> arg2 ring-radius))
+         (< (fabs (vector-dot (vector-z-quaternion! s5-0 (the-as quaternion arg0)) arg1)) 4096.0)
+         )
+    )
+  )
+
+(defstate idle (dummy-ring)
+  :virtual #t
+  :enter (behavior ()
+    (sound-play "ring-create")
+    (set-time! (-> self state-time))
+    )
+  :trans (behavior ()
+    (let ((v1-0 *target*)
+          (a1-0 (new 'stack-no-clear 'vector))
+          )
+      (when v1-0
+        (cond
+          ;; ((focus-test? v1-0 pilot)
+          ;;  (let ((a2-1 (handle->process (-> v1-0 pilot vehicle))))
+          ;;    (vector-copy! a1-0 (-> (the-as vehicle a2-1) root root-prim prim-core world-sphere))
+          ;;    )
+          ;;  )
+          (else
+            (vector-copy! a1-0 (-> v1-0 control trans))
+            (+! (-> a1-0 y) 12288.0)
+            )
+          )
+        (vector-! a1-0 a1-0 (-> self root trans))
+        (let ((a0-12 (-> self root quat)))
+          (when (dummy-ring-cleared? (-> a0-12 vec) a1-0 self)
+            (sound-play "pill-pickup")
+            ;; (cond
+            ;;   ((logtest? (-> group-desert-ring-explode flags) (sp-group-flag sp13))
+            ;;    (part-tracker-spawn
+            ;;      part-tracker-subsampler
+            ;;      :to self
+            ;;      :group group-desert-ring-explode
+            ;;      :mat-joint (-> self mat)
+            ;;      )
+            ;;    )
+            ;;   (else
+            ;;     (part-tracker-spawn part-tracker :to self :group group-desert-ring-explode :mat-joint (-> self mat))
+            ;;     )
+            ;;   )
+            ;; (go-virtual die)
+            )
+          )
+        )
+      )
+    )
+  :code sleep-code
+  :post (behavior ()
+    (when (time-elapsed? (-> self state-time) (seconds 0.4))
+      (cond
+        (else
+          (if (nonzero? (-> self part))
+              (spawn-from-mat (-> self part) (-> self mat))
+              )
+          )
+        )
+      )
+    )
+  )
+
+(defbehavior ring-init-by-other dummy-ring ((arg0 vector))
+  (set-ring-particle-texture)
+  (set! (-> self root) (new 'process 'trsqv))
+  (set! (-> self ring-radius) 24576.0)
+  (vector-copy! (-> self root trans) arg0)
+  (quaternion-identity! (-> self root quat))
+  (quaternion->matrix (-> self mat) (-> self root quat))
+  (vector-copy! (-> self mat trans) (-> self root trans))
+  (set! (-> self part) (create-launch-control group-dummy-ring self))
+  (logclear! (-> self mask) (process-mask actor-pause))
+  (format 0 "ring-init-by-other~%")
+  (go (method-of-object self idle))
+  )
+
+(defun spawn-dummy-ring ((arg0 vector))
+  (ppointer->handle (process-spawn
+                       dummy-ring
+                       :init ring-init-by-other
+                       arg0
+                       :name "b-ring"
+                       :from *pickup-dead-pool*
+                       :to *active-pool*
+                       ))
   )
