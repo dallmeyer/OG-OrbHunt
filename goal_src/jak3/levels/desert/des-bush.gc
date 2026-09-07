@@ -326,6 +326,7 @@
 (define *des-ring-times*
   (the-as (array (array float))
     (new 'static 'boxed-array :type array
+      ;; desert-bbush-ring-1 / lbbring1
       (new 'static 'boxed-array :type float
         11.0
         9.0
@@ -374,6 +375,7 @@
         8.0
         7.0
         )
+      ;; desert-bbush-ring-2 / lbbring2
       (new 'static 'boxed-array :type float
         11.0
         5.2133
@@ -396,6 +398,7 @@
         11.0
         10.0
         )
+      ;; 3
       (new 'static 'boxed-array :type float
         11.0
         4.0
@@ -422,7 +425,9 @@
         5.0
         9.0
         )
+      ;; 4
       (new 'static 'boxed-array :type float 11.0 6.0 7.0 8.0 5.0 5.0 7.0 6.0 5.0 5.0 5.0 6.0 8.0 7.0 6.0 6.0 8.0)
+      ;; 5
       (new 'static 'boxed-array :type float
         11.0
         5.0
@@ -453,21 +458,22 @@
         5.0
         4.0
         )
+      ;; 6
       (new 'static 'boxed-array :type float
         11.0
+        5.0
+        5.0
+        6.0
         6.0
         5.0
-        7.0
+        5.0 ;; diag up grindrail towards sewers
+        4.0 ;; above camera thing (hover)
+        5.0 ;; skinny ledge left of sewers ramp
+        6.0 ;; corner back the way we came
+        5.5 ;; above broken fence on left wall towards ctyinda
+        7.0 ;; launch to side onto ramp
+        8.0 ;; curve right then big hover between pipe over walkway
         8.0
-        4.0
-        3.0
-        4.0
-        5.0
-        5.0
-        5.0
-        5.0
-        5.0
-        6.0
         5.0
         7.0
         7.0

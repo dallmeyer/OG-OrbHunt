@@ -48,7 +48,7 @@
   "actors" : [
     {
       "trans": [ 313.60, 52.34, -293.83 ], // oob under exit plat, can loop around from top left/right rail track area
-      "etype": "tape",
+      "etype": "eco-pill", // "tape",
       "game_task": 0,
       "quat" : [0, 0, 0, 1],
       "bsphere": [ 313.60, 52.34, -293.83 , 10],

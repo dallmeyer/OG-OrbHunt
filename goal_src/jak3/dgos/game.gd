@@ -446,7 +446,7 @@
   "tpage-12.go"
   "texture-finish.o"
   "collectables-ag.go"
-  "secret-tape-ag.go" ;; added orbhunt
+;;   "secret-tape-ag.go" ;; added orbhunt
   "pre-artifact-d-ag.go" ;; added orbhunt
   "crate-ag.go"
   "talk-box-ag.go"

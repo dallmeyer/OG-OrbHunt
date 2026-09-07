@@ -521,7 +521,7 @@
           (false! *orb-count-updated?*)
           )
 
-        (when (not (movie?))
+        (when (and (not (movie?)) (not (side-mish-active?)))
           ;; print orb counts
           (clear *tmp-orb-hunt-str*)
           (let ((save-idx (-> *game-info* auto-save-which))
@@ -695,66 +695,9 @@
       (quaternion-set! (-> arg0 quat) 0.0 -1.0 0.0 0.0))
     
     ;; burning-bush-inda-1 / city-bbush-ring-6 / lbbring6
-    ;; (('burning-bush-28) (set-vector-meters! (-> arg0 extra trans) 752.2625 8.0136 1129.6243) ;; TODO - something about moving this makes the rings not spawn?
-    ;;   (quaternion-set! (-> arg0 quat)  0.0000  0.7339  -0.0000  0.6792))
-    (('desert-chase-ring-108) (set-vector-meters! (-> arg0 extra trans) 847.7819 15.5553 1122.1824)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.7065 0.0000 0.7077))
-    (('desert-chase-ring-146) (set-vector-meters! (-> arg0 extra trans) 955.9342 29.3548 1133.5762)
-      (quaternion-set! (-> arg0 quat) 0.0000 -0.2559 0.0000 0.9666))
-    (('desert-chase-ring-109) (set-vector-meters! (-> arg0 extra trans) 950.9916 48.6050 1001.8315)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.0000 0.0000 1.0000))
-    (('desert-chase-ring-110) (set-vector-meters! (-> arg0 extra trans) 978.5586 27.7931 913.5758)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.0000 0.0000 1.0000))
-    (('desert-chase-ring-111) (set-vector-meters! (-> arg0 extra trans) 928.0787 32.9510 828.4453)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.0172 0.0000 0.9998))
-    (('desert-chase-ring-112) (set-vector-meters! (-> arg0 extra trans) 937.4512 15.2725 884.8667)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.8819 0.0000 -0.4713))
-    (('desert-chase-ring-230) (set-vector-meters! (-> arg0 extra trans) 1021.3961 14.0829 919.8443)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.3706 0.0000 0.9287))
-    (('desert-chase-ring-113) (set-vector-meters! (-> arg0 extra trans) 1059.8599 45.4114 962.9694)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.3706 0.0000 0.9287))
-    (('desert-chase-ring-114) (set-vector-meters! (-> arg0 extra trans) 1060.3990 13.0445 1029.6746)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.6494 0.0000 0.7603))
-    (('desert-chase-ring-115) (set-vector-meters! (-> arg0 extra trans) 1045.1611 14.0109 898.5717)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.4376 0.0000 0.8991))
-    (('desert-chase-ring-116) (set-vector-meters! (-> arg0 extra trans) 892.2361 25.5839 865.7072)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.7065 0.0000 0.7077))
-    (('desert-chase-ring-117) (set-vector-meters! (-> arg0 extra trans) 829.3425 22.5749 728.5861)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.5355 0.0000 0.8444))
-    (('desert-chase-ring-118) (set-vector-meters! (-> arg0 extra trans) 888.5910 48.6521 639.7147)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.7065 0.0000 0.7077))
-    (('desert-chase-ring-119) (set-vector-meters! (-> arg0 extra trans) 1088.5391 13.5703 677.3322)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.7450 0.0000 0.6669))
-    (('desert-chase-ring-120) (set-vector-meters! (-> arg0 extra trans) 1087.9035 13.3026 604.6926)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.3625 0.0000 0.9319))
-    (('desert-chase-ring-121) (set-vector-meters! (-> arg0 extra trans) 1010.2516 34.1195 549.8825)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.7592 0.0000 0.6507))
-    (('desert-chase-ring-122) (set-vector-meters! (-> arg0 extra trans) 971.5905 56.7826 524.1354)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.0000 0.0000 1.0000))
-    (('desert-chase-ring-123) (set-vector-meters! (-> arg0 extra trans) 963.2947 26.0007 390.6275)
-      (quaternion-set! (-> arg0 quat) 0.0000 0.0000 0.0000 1.0000))
-    ;; ;; desert-chase-ring-124 ;; unused ring!
-    ;; ;; desert-chase-ring-125 ;; unused ring!
-    ;; desert-chase-ring-126 
-    ;; desert-chase-ring-127
-    ;; desert-chase-ring-128
-    ;; desert-chase-ring-129
-    ;; desert-chase-ring-130
-    ;; desert-chase-ring-131
-    ;; desert-chase-ring-132
-    ;; desert-chase-ring-133
-    ;; desert-chase-ring-134
-    ;; desert-chase-ring-135
-    ;; desert-chase-ring-136
-    ;; desert-chase-ring-137
-    ;; desert-chase-ring-138
-    ;; desert-chase-ring-139
-    ;; desert-chase-ring-140
-    ;; desert-chase-ring-141
-    ;; desert-chase-ring-142
-    ;; desert-chase-ring-143
-    ;; desert-chase-ring-144
-    ;; desert-chase-ring-145
+    (('burning-bush-28) (set-vector-meters! (-> arg0 extra trans) 752.2625 8.0136 1129.6243) ;; TODO - something about moving this makes the rings not spawn?
+      (quaternion-set! (-> arg0 quat)  0.0000  0.7339  -0.0000  0.6792))
+    ;; rings moved in add-to-level!
 
     ;; burning-bush-inda-3 / city-bbush-get-to-39
     (('burning-bush-41) (set-vector-meters! (-> arg0 extra trans) 1040.1009 7.9687 1156.8247) ;; between walkway ramp and wall near vinroom
