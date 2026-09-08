@@ -667,69 +667,6 @@
 
 ;; WARN: Return type mismatch entity-actor vs none.
 (defmethod add-to-level! ((this entity-actor) (arg0 level-group) (arg1 level) (arg2 actor-id))
-  ;; orb hunt - modify positions early for birth stuff (race rings)
-  (case (res-lump-struct this 'name string) :comp name=
-    ;; lbbring6
-    (('desert-chase-ring-108) (set-vector-meters! (-> this trans) 847.7819 15.5553 1122.1824)
-      (quaternion-set! (-> this quat) 0.0000 0.7065 0.0000 0.7077))
-    (('desert-chase-ring-146) (set-vector-meters! (-> this trans) 955.9342 29.3548 1133.5762)
-      (quaternion-set! (-> this quat) 0.0000 -0.2559 0.0000 0.9666))
-    (('desert-chase-ring-109) (set-vector-meters! (-> this trans) 950.9916 48.6050 1001.8315)
-      (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
-    (('desert-chase-ring-110) (set-vector-meters! (-> this trans) 978.5586 27.7931 913.5758)
-      (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
-    (('desert-chase-ring-111) (set-vector-meters! (-> this trans) 928.0787 32.9510 828.4453)
-      (quaternion-set! (-> this quat) 0.0000 0.0172 0.0000 0.9998))
-    (('desert-chase-ring-112) (set-vector-meters! (-> this trans) 937.4512 15.2725 884.8667)
-      (quaternion-set! (-> this quat) 0.0000 0.8819 0.0000 -0.4713))
-    (('desert-chase-ring-230) (set-vector-meters! (-> this trans) 1021.3961 14.0829 919.8443)
-      (quaternion-set! (-> this quat) 0.0000 0.3706 0.0000 0.9287))
-    (('desert-chase-ring-113) (set-vector-meters! (-> this trans) 1059.8599 45.4114 962.9694)
-      (quaternion-set! (-> this quat) 0.0000 0.3706 0.0000 0.9287))
-    (('desert-chase-ring-114) (set-vector-meters! (-> this trans) 1060.3990 13.0445 1029.6746)
-      (quaternion-set! (-> this quat) 0.0000 0.6494 0.0000 0.7603))
-    (('desert-chase-ring-115) (set-vector-meters! (-> this trans) 1045.1611 14.0109 898.5717)
-      (quaternion-set! (-> this quat) 0.0000 0.4376 0.0000 0.8991))
-    (('desert-chase-ring-116) (set-vector-meters! (-> this trans) 892.2361 25.5839 865.7072)
-      (quaternion-set! (-> this quat) 0.0000 0.7065 0.0000 0.7077))
-    (('desert-chase-ring-117) (set-vector-meters! (-> this trans) 839.7014 29.7619 732.0256)
-      (quaternion-set! (-> this quat) 0.0000 0.4103 0.0000 0.9119))
-    (('desert-chase-ring-118) (set-vector-meters! (-> this trans) 888.5910 48.6521 639.7147)
-      (quaternion-set! (-> this quat) 0.0000 0.7065 0.0000 0.7077))
-    (('desert-chase-ring-119) (set-vector-meters! (-> this trans) 1088.5391 13.5703 677.3322)
-      (quaternion-set! (-> this quat) 0.0000 0.7450 0.0000 0.6669))
-    (('desert-chase-ring-120) (set-vector-meters! (-> this trans) 1087.9035 13.3026 604.6926)
-      (quaternion-set! (-> this quat) 0.0000 0.3625 0.0000 0.9319))
-    (('desert-chase-ring-121) (set-vector-meters! (-> this trans) 1010.2516 34.1195 549.8825)
-      (quaternion-set! (-> this quat) 0.0000 0.7592 0.0000 0.6507))
-    (('desert-chase-ring-122) (set-vector-meters! (-> this trans) 971.5905 56.7826 524.1354)
-      (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
-    (('desert-chase-ring-123) (set-vector-meters! (-> this trans) 963.2947 26.0007 390.6275)
-      (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
-    ;; ;; desert-chase-ring-124 ;; unused ring!
-    ;; ;; desert-chase-ring-125 ;; unused ring!
-    ;; desert-chase-ring-126 
-    ;; desert-chase-ring-127
-    ;; desert-chase-ring-128
-    ;; desert-chase-ring-129
-    ;; desert-chase-ring-130
-    ;; desert-chase-ring-131
-    ;; desert-chase-ring-132
-    ;; desert-chase-ring-133
-    ;; desert-chase-ring-134
-    ;; desert-chase-ring-135
-    ;; desert-chase-ring-136
-    ;; desert-chase-ring-137
-    ;; desert-chase-ring-138
-    ;; desert-chase-ring-139
-    ;; desert-chase-ring-140
-    ;; desert-chase-ring-141
-    ;; desert-chase-ring-142
-    ;; desert-chase-ring-143
-    ;; desert-chase-ring-144
-    ;; desert-chase-ring-145
-    )
-
   (let ((v1-4 (-> arg1 entity data (-> arg1 entity length))))
     (+! (-> arg1 entity length) 1)
     (set! (-> v1-4 process) #f)
@@ -752,6 +689,92 @@
         )
       )
     (set! (-> arg0 entity-link) v1-4)
+
+    ;; orb hunt - modify positions early for birth stuff (race rings)
+    (case (res-lump-struct this 'name string) :comp name=
+      ;; lbbring6
+      (('desert-chase-ring-108)
+        (format 0 "ring108XXXX ~A ~m ~m ~m~%" this (-> this trans x) (-> this trans y) (-> this trans z))
+        (set-vector-meters! (-> this trans) 847.7819 15.5553 1122.1824)
+        (quaternion-set! (-> this quat) 0.0000 0.7065 0.0000 0.7077))
+      (('desert-chase-ring-146) (set-vector-meters! (-> this trans) 955.9342 29.3548 1133.5762)
+        (quaternion-set! (-> this quat) 0.0000 -0.2559 0.0000 0.9666))
+      (('desert-chase-ring-109) (set-vector-meters! (-> this trans) 950.9916 48.6050 1001.8315)
+        (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
+      (('desert-chase-ring-110) (set-vector-meters! (-> this trans) 978.5586 27.7931 913.5758)
+        (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
+      (('desert-chase-ring-111) (set-vector-meters! (-> this trans) 928.0787 32.9510 828.4453)
+        (quaternion-set! (-> this quat) 0.0000 0.0172 0.0000 0.9998))
+      (('desert-chase-ring-112) (set-vector-meters! (-> this trans) 937.4512 15.2725 884.8667)
+        (quaternion-set! (-> this quat) 0.0000 0.8819 0.0000 -0.4713))
+      (('desert-chase-ring-230) (set-vector-meters! (-> this trans) 1021.3961 14.0829 919.8443)
+        (quaternion-set! (-> this quat) 0.0000 0.3706 0.0000 0.9287))
+      (('desert-chase-ring-113) (set-vector-meters! (-> this trans) 1059.8599 45.4114 962.9694)
+        (quaternion-set! (-> this quat) 0.0000 0.3706 0.0000 0.9287))
+      (('desert-chase-ring-114) (set-vector-meters! (-> this trans) 1060.3990 13.0445 1029.6746)
+        (quaternion-set! (-> this quat) 0.0000 0.6494 0.0000 0.7603))
+      (('desert-chase-ring-115) (set-vector-meters! (-> this trans) 1045.1611 14.0109 898.5717)
+        (quaternion-set! (-> this quat) 0.0000 0.4376 0.0000 0.8991))
+      (('desert-chase-ring-116) (set-vector-meters! (-> this trans) 892.2361 25.5839 865.7072)
+        (quaternion-set! (-> this quat) 0.0000 0.7065 0.0000 0.7077))
+      (('desert-chase-ring-117) (set-vector-meters! (-> this trans) 839.7014 29.7619 732.0256)
+        (quaternion-set! (-> this quat) 0.0000 0.4103 0.0000 0.9119))
+      (('desert-chase-ring-118) (set-vector-meters! (-> this trans) 888.5910 48.6521 639.7147)
+        (quaternion-set! (-> this quat) 0.0000 0.7065 0.0000 0.7077))
+      (('desert-chase-ring-119) (set-vector-meters! (-> this trans) 1088.5391 13.5703 677.3322)
+        (quaternion-set! (-> this quat) 0.0000 0.7450 0.0000 0.6669))
+      (('desert-chase-ring-120) (set-vector-meters! (-> this trans) 1087.9035 13.3026 604.6926)
+        (quaternion-set! (-> this quat) 0.0000 0.3625 0.0000 0.9319))
+      (('desert-chase-ring-121) (set-vector-meters! (-> this trans) 1010.2516 34.1195 549.8825)
+        (quaternion-set! (-> this quat) 0.0000 0.7592 0.0000 0.6507))
+      (('desert-chase-ring-122) (set-vector-meters! (-> this trans) 971.5905 56.7826 524.1354)
+        (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
+      (('desert-chase-ring-123) (set-vector-meters! (-> this trans) 963.2947 26.0007 390.6275)
+        (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
+      ;; ;; desert-chase-ring-124 ;; unused ring!
+      ;; ;; desert-chase-ring-125 ;; unused ring!
+      (('desert-chase-ring-126) (set-vector-meters! (-> this trans) 971.1740 18.7875 478.8413)
+        (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
+      (('desert-chase-ring-127) (set-vector-meters! (-> this trans) 1015.3269 18.7875 514.0803)
+        (quaternion-set! (-> this quat) 0.0000 0.7065 0.0000 0.7077))
+      (('desert-chase-ring-128) (set-vector-meters! (-> this trans) 1063.4202 18.7875 560.2189)
+        (quaternion-set! (-> this quat) 0.0000 0.7065 0.0000 0.7077))
+      (('desert-chase-ring-129) (set-vector-meters! (-> this trans) 1081.7033 29.8486 618.4439)
+        (quaternion-set! (-> this quat) 0.0000 -0.3825 0.0000 0.9239))
+      (('desert-chase-ring-130) (set-vector-meters! (-> this trans) 900.6927 30.9858 644.6342)
+        (quaternion-set! (-> this quat) 0.0000 0.7065 0.0000 0.7077))
+      (('desert-chase-ring-131) (set-vector-meters! (-> this trans) 776.3723 16.8783 690.2064)
+        (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
+      (('desert-chase-ring-132) (set-vector-meters! (-> this trans) 858.4088 29.4407 722.7527)
+        (quaternion-set! (-> this quat) 0.0000 -0.3585 0.0000 0.9335))
+      (('desert-chase-ring-133) (set-vector-meters! (-> this trans) 862.8636 38.4477 625.6771)
+        (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
+      (('desert-chase-ring-134) (set-vector-meters! (-> this trans) 845.1624 30.5768 772.3502)
+        (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
+      (('desert-chase-ring-135) (set-vector-meters! (-> this trans) 990.5905 46.2590 902.9523)
+        (quaternion-set! (-> this quat) 0.0000 -0.7041 0.0000 -0.7100))
+      (('desert-chase-ring-136) (set-vector-meters! (-> this trans) 1044.1160 28.8007 1012.0386)
+        (quaternion-set! (-> this quat) 0.0000 0.3786 0.0000 0.9255))
+      (('desert-chase-ring-137) (set-vector-meters! (-> this trans) 1134.6596 18.7875 992.0640)
+        (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
+      (('desert-chase-ring-138) (set-vector-meters! (-> this trans) 1063.7957 18.1794 1006.2066)
+        (quaternion-set! (-> this quat) 0.0000 0.7065 0.0000 0.7077))
+      (('desert-chase-ring-139) (set-vector-meters! (-> this trans) 1027.5762 31.7538 916.7997)
+        (quaternion-set! (-> this quat) 0.0000 0.3905 0.0000 0.9205))
+      (('desert-chase-ring-140) (set-vector-meters! (-> this trans) 955.2545 31.7538 915.9683)
+        (quaternion-set! (-> this quat) 0.0000 -0.3825 0.0000 0.9239))
+      (('desert-chase-ring-141) (set-vector-meters! (-> this trans) 967.7952 14.3944 1032.6971)
+        (quaternion-set! (-> this quat) 0.0000 0.0000 0.0000 1.0000))
+      (('desert-chase-ring-142) (set-vector-meters! (-> this trans) 939.3382 27.7936 1113.9417)
+        (quaternion-set! (-> this quat) 0.0000 0.7065 0.0000 0.7077))
+      (('desert-chase-ring-143) (set-vector-meters! (-> this trans) 847.4854 39.3587 1117.1042)
+        (quaternion-set! (-> this quat) 0.0000 -0.5282 0.0000 0.8490))
+      (('desert-chase-ring-144) (set-vector-meters! (-> this trans) 767.1384 24.9776 1239.0434)
+        (quaternion-set! (-> this quat) 0.0000 -0.1759 0.0000 0.9843))
+      (('desert-chase-ring-145) (set-vector-meters! (-> this trans) 726.2301 45.1308 1415.6062)
+        (quaternion-set! (-> this quat) 0.0000 -0.1033 0.0000 0.9946))
+      )
+
     (vector-copy! (-> v1-4 trans) (-> this trans))
     )
   (set! (-> this extra perm aid) arg2)
