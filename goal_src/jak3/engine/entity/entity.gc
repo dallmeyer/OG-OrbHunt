@@ -693,9 +693,7 @@
     ;; orb hunt - modify positions early for birth stuff (race rings)
     (case (res-lump-struct this 'name string) :comp name=
       ;; lbbring6
-      (('desert-chase-ring-108)
-        (format 0 "ring108XXXX ~A ~m ~m ~m~%" this (-> this trans x) (-> this trans y) (-> this trans z))
-        (set-vector-meters! (-> this trans) 847.7819 15.5553 1122.1824)
+      (('desert-chase-ring-108) (set-vector-meters! (-> this trans) 847.7819 15.5553 1122.1824)
         (quaternion-set! (-> this quat) 0.0000 0.7065 0.0000 0.7077))
       (('desert-chase-ring-146) (set-vector-meters! (-> this trans) 955.9342 29.3548 1133.5762)
         (quaternion-set! (-> this quat) 0.0000 -0.2559 0.0000 0.9666))
