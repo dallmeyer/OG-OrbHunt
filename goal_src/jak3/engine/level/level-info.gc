@@ -2954,7 +2954,7 @@
                       :want-sound (new 'static 'array symbol 3 'vinroomh 'ctyindh #f)
                       )
                     (new 'static 'continue-point
-                      :name "ctyinda-bbush-1"
+                      :name "ctyinda-bbush-1" ;; burning-bush-28 / burning-bush-inda-1 / city-bbush-ring-6 / lbbring6
                       :level 'ctyinda
                       :flags (continue-flags no-auto)
                       :trans (new 'static 'vector :x (meters 756.7554) :y (meters 7.9936) :z (meters 1126.9682) :w 1.0)
@@ -2974,13 +2974,13 @@
                       :want-sound (new 'static 'array symbol 3 'ctyindh #f #f)
                       )
                     (new 'static 'continue-point
-                      :name "ctyinda-bbush-2"
+                      :name "ctyinda-bbush-2" ;; burning-bush-43 / burning-bush-inda-2 / city-bbush-get-to-38
                       :level 'ctyinda
                       :flags (continue-flags no-auto)
-                      :trans (new 'static 'vector :x 3712821.8 :y 32741.785 :z 3542859.0 :w 1.0)
-                      :camera-trans (new 'static 'vector :x 3676692.5 :y 52441.496 :z 3514400.0 :w 1.0)
-                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -3755 -3 #x7f23))
-                      :camera-rot (new 'static 'array int16 9 #x558d 0 -24368 #xbf4 #x7ef8 #xabd #x5e6f -4115 #x54df)
+                      :trans (new 'static 'vector :x (meters 925.6804) :y (meters 7.9936) :z (meters 921.7481) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 937.4443) :y (meters 12.9500) :z (meters 921.1366) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 -4 -25045 -3 21128))
+                      :camera-rot (new 'static 'array int16 9 1677 0 32724 -3957 32526 202 -32483 -3963 1664)
                       :on-goto #f
                       :vis-nick 'ctyindb
                       :vehicle-type #x1b
@@ -2994,7 +2994,7 @@
                       :want-sound (new 'static 'array symbol 3 'ctyindh #f #f)
                       )
                     (new 'static 'continue-point
-                      :name "ctyinda-bbush-3"
+                      :name "ctyinda-bbush-3" ;; burning-bush-41 / burning-bush-inda-3 / city-bbush-get-to-39
                       :level 'ctyinda
                       :flags (continue-flags no-auto)
                       :trans (new 'static 'vector :x (meters 1041.0909) :y (meters 7.9936) :z (meters 1154.3704) :w 1.0)
@@ -3014,13 +3014,13 @@
                       :want-sound (new 'static 'array symbol 3 'ctyindh 'vinroomh #f)
                       )
                     (new 'static 'continue-point
-                      :name "ctyinda-bbush-4"
+                      :name "ctyinda-bbush-4" ;; burning-bush-42 / burning-bush-inda-4 / city-bbush-get-to-40
                       :level 'ctyinda
                       :flags (continue-flags no-auto)
-                      :trans (new 'static 'vector :x 4659314.0 :y 32741.785 :z 4298016.5 :w 1.0)
-                      :camera-trans (new 'static 'vector :x 4633664.5 :y 52982.99 :z 4338591.5 :w 1.0)
-                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 -3 -16042 0 -28569))
-                      :camera-rot (new 'static 'array int16 9 -25414 0 -20679 #x9d4 #x7f09 -3093 #x502d -3987 -25227)
+                      :trans (new 'static 'vector :x (meters 1155.7822) :y (meters 7.9936) :z (meters 971.6796) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 1151.2916) :y (meters 12.9459) :z (meters 982.5655) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 6 32503 -49 -4144))
+                      :camera-rot (new 'static 'array int16 9 29100 0 -15061 13950 12350 26953 5677 -30350 10968)
                       :on-goto #f
                       :vis-nick 'ctyinda
                       :vehicle-type #x1b
@@ -3034,13 +3034,13 @@
                       :want-sound (new 'static 'array symbol 3 'ctyindh 'vinroomh #f)
                       )
                     (new 'static 'continue-point
-                      :name "ctyinda-bbush-5"
+                      :name "ctyinda-bbush-5" ;; burning-bush-49 / burning-bush-inda-5 / city-jetboard-bbush
                       :level 'ctyinda
                       :flags (continue-flags no-auto)
-                      :trans (new 'static 'vector :x 3667624.8 :y 32741.785 :z 4704564.5 :w 1.0)
-                      :camera-trans (new 'static 'vector :x 3620053.5 :y 53835.777 :z 4685614.5 :w 1.0)
-                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -8100 0 -31747))
-                      :camera-rot (new 'static 'array int16 9 #x3075 0 -30325 #xe14 #x7f16 #x5c2 #x759d -3895 #x301d)
+                      :trans (new 'static 'vector :x (meters 1058.7148) :y (meters 26.8913) :z (meters 914.8778) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 1052.5673) :y (meters 32.0104) :z (meters 925.6445) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 38 -23858 -36 -22459))
+                      :camera-rot (new 'static 'array int16 9 -27766 0 -17398 2022 32544 -3227 17280 -3808 -27578)
                       :on-goto #f
                       :vis-nick 'ctyinda
                       :vehicle-type #x1b
@@ -3048,7 +3048,7 @@
                       :want (new 'static 'inline-array level-buffer-state-small 4
                         (new 'static 'level-buffer-state-small :name 'ctyinda :display? 'display)
                         (new 'static 'level-buffer-state-small :name 'ctywide-kg :display? 'display)
-                        (new 'static 'level-buffer-state-small :name 'ctyport :display? #f)
+                        (new 'static 'level-buffer-state-small :name 'ctyindb :display? 'display)
                         (new 'static 'level-buffer-state-small)
                         )
                       :want-sound (new 'static 'array symbol 3 'ctyindh 'sewer5 #f)

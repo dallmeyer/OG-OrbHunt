@@ -2103,6 +2103,21 @@
       (set! (-> info camera-rot 3) -0.2264) (set! (-> info camera-rot 4) 0.9514) (set! (-> info camera-rot 5) -0.2082)
       (set! (-> info camera-rot 6) 0.7003) (set! (-> info camera-rot 7) 0.3076) (set! (-> info camera-rot 8) 0.6440)
       (set! (-> info time) 3200.0))
+    (((game-task city-bbush-get-to-40))  ;; burning-bush-42 / burning-bush-inda-4 / city-bbush-get-to-40 - in corner where jinx eco grid mission ends
+      (set-vector-meters! (-> info trans) 1063.9373 13.5018 1074.1735)  ;; on small wall plat opposite vinroom
+      (set-vector! (-> info camera-trans) (meters 1076.0472) (meters 20.1354) (meters 1069.3695) 1.0)
+      (set! (-> info camera-rot 0) 0.2584) (set! (-> info camera-rot 1) 0.0000) (set! (-> info camera-rot 2) 0.9660)
+      (set! (-> info camera-rot 3) -0.2996) (set! (-> info camera-rot 4) 0.9506) (set! (-> info camera-rot 5) 0.0801)
+      (set! (-> info camera-rot 6) -0.9183) (set! (-> info camera-rot 7) -0.3101) (set! (-> info camera-rot 8) 0.2456)
+      (set! (-> info time) 2800.0))
+    (((game-task city-bbush-get-to-38))  ;; burning-bush-43 / burning-bush-inda-2 / city-bbush-get-to-38 - 
+      (set-vector-meters! (-> info trans) 1030.3980 10.4958 1042.6202)  ;; in corner near sewers where vanilla orb
+      (set-vector! (-> info camera-trans) (meters 1026.1668) (meters 24.4876) (meters 1033.1147) 1.0)
+      (set! (-> info camera-rot 0) 0.8881) (set! (-> info camera-rot 1) 0.0000) (set! (-> info camera-rot 2) -0.4596)
+      (set! (-> info camera-rot 3) 0.4257) (set! (-> info camera-rot 4) 0.3769) (set! (-> info camera-rot 5) 0.8225)
+      (set! (-> info camera-rot 6) 0.1732) (set! (-> info camera-rot 7) -0.9262) (set! (-> info camera-rot 8) 0.3347)
+      (set! (-> info time) 3200.0))
+
 
     )
   (none)

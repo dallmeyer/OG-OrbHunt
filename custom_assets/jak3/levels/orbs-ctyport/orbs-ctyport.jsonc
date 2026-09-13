@@ -90,17 +90,40 @@
         "bob-scale": ["float", 0.25]
         // "pickup-amount": ["float", 2.0] // abah hint
       }
-    }//,
-    // {
-    // "trans": [ 2430.0915, 72.5804, -96.9893], // way up on edge of tall building near tall windmill, abah from ^
-    // "etype": "skill",
-    // "game_task": 0,
-    // "quat" : [0, 0, 0, 1],
-    // "bsphere": [ 2430.0915, 72.5804, -96.9893, 10],
-    // "lump": {
-    // "name":"wascitya-skill-2"
-    // }
-    // },
+    },
+    {
+      "trans": [ 724.3588, 4.6221, 1232.3530], // in broken wall panel close to ctyinda 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 724.3588, 4.6221, 1232.3530, 10],
+      "lump": {
+        "name":"ctyport-skill-02"
+      }
+    },
+    {
+      "trans": [ 390.2174, 27.5172, 1300.4212], // in gap in ceiling near broken buildings by gun course 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 390.2174, 27.5172, 1300.4212, 10],
+      "lump": {
+        "name":"ctyport-skill-03"
+      }
+    },
+
+      
+    {
+      "trans": [ 512.1162, 52.4837, 1377.4995], // pipe above grindrails kinda near gun course 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 512.1162, 52.4837, 1377.4995, 10],
+      "lump": {
+        "name":"ctyport-skill-hover-01",
+        "pickup-amount":["float", 3.0] // hover
+      }
+    }
 
   ]
 }

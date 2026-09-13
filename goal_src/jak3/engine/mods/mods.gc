@@ -694,21 +694,26 @@
     (('crate-1139) (set-vector-meters! (-> arg0 extra trans) 1060.56  9.86  1042.28 ) ;; behind pipes near funny collision hole by sewers
       (quaternion-set! (-> arg0 quat) 0.0 -1.0 0.0 0.0))
     
-    ;; burning-bush-inda-1 / city-bbush-ring-6 / lbbring6
-    (('burning-bush-28) (set-vector-meters! (-> arg0 extra trans) 752.2625 8.0136 1129.6243) ;; TODO - something about moving this makes the rings not spawn?
+    ;; burning-bush-28 / burning-bush-inda-1 / city-bbush-ring-6 / lbbring6
+    (('burning-bush-28) (set-vector-meters! (-> arg0 extra trans) 752.2625 8.0136 1129.6243) ;; in corner towards port
       (quaternion-set! (-> arg0 quat)  0.0000  0.7339  -0.0000  0.6792))
     ;; rings moved in add-to-level!
 
-    ;; burning-bush-inda-3 / city-bbush-get-to-39
+    ;; burning-bush-41 / burning-bush-inda-3 / city-bbush-get-to-39
     (('burning-bush-41) (set-vector-meters! (-> arg0 extra trans) 1040.1009 7.9687 1156.8247) ;; between walkway ramp and wall near vinroom
       (quaternion-set! (-> arg0 quat) 0.0 1.0 0.0 0.0))
-    
+
+    ;; burning-bush-42 / burning-bush-inda-4 / city-bbush-get-to-40
     (('burning-bush-42) (set-vector-meters! (-> arg0 extra trans) 1157.0253 7.9987 968.8895) ;; in corner where jinx eco grid mission ends
       (quaternion-set! (-> arg0 quat)  0.0000  -0.6233  0.0000  0.7819))
-    ;; (('burning-bush-43) (set-vector-meters! (-> arg0 extra trans) ) ;; 
-    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
-    ;; (('burning-bush-49) (set-vector-meters! (-> arg0 extra trans) ) ;; 
-    ;;   (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
+
+    ;; burning-bush-43 / burning-bush-inda-2 / city-bbush-get-to-38
+    (('burning-bush-43) (set-vector-meters! (-> arg0 extra trans) 921.2674 8.0022 921.3712) ;; where orb crate normally is along hallway
+      (quaternion-set! (-> arg0 quat)  0.0000  0.7075  0.0000  0.7066))
+
+    ;; burning-bush-49 / burning-bush-inda-5 / city-jetboard-bbush
+    (('burning-bush-49) (set-vector-meters! (-> arg0 extra trans) 1061.8286 26.7779 914.5308) ;; wall plats north of sewers
+      (quaternion-set! (-> arg0 quat)  -0.0001  0.7038  -0.0000  -0.7103))
 
     ;; ====== CTYGENB (main town ruins) ======
     (('skill-184) (set-vector-meters! (-> arg0 extra trans)  142.4263  5.7946  -96.2793)) ;; under rubble at funny oob spot :tf:
@@ -899,8 +904,8 @@
       (quaternion-set! (-> arg0 quat) -0.2641  -0.5464  0.2458  -0.7557))
     (('crate-1326) (set-vector-meters! (-> arg0 extra trans) -407.2276 5.1906 1255.4074) ;; behind big balls near mhcity
       (quaternion-set! (-> arg0 quat)  -0.0000  -0.8427  0.0001  -0.5383))
-    (('crate-1345) (set-vector-meters! (-> arg0 extra trans) 782.4699 5.1906 1249.3962) ;; behind big balls near ctyinda
-      (quaternion-set! (-> arg0 quat) 0.0001  0.6394  -0.0000  -0.7688))
+    (('crate-1345) (set-vector-meters! (-> arg0 extra trans) 782.1095 5.1905 1249.3962) ;; behind big balls near ctyinda
+      (quaternion-set! (-> arg0 quat)  0.0000  0.6878  0.0000  -0.7258))
     (('crate-1344) (set-vector-meters! (-> arg0 extra trans) 725.9799 41.1748 1417.6951) ;; on top of big ball on path to ctyinda
       (quaternion-set! (-> arg0 quat)  -0.0157  -0.9826  0.1555  -0.0998))
 
@@ -2387,6 +2392,18 @@
       )
     )
   
+  ;; ctyinda
+  ;; make orb follow evil lamp
+  (let ((orb (the skill (process-by-ename "ctyinda-skill-12")))
+        (proc (the process-drawable (process-by-ename "ctyinda-evil-streetlamp-8")))
+        (v (new-stack-vector0)))
+    (when (and orb proc)
+      (vector<-cspace! v (-> proc node-list data 7)) ;; lamphead
+      (+! (-> v y) (meters 0.4))
+      (vector-copy! (-> orb root trans) v)
+      (vector-copy! (-> orb base) v)
+      )
+    )
 
   ;; ====== CTYPORT (port) ======
   (move-port-barge-orbs)

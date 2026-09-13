@@ -161,6 +161,57 @@
         "name": "ctyinda-skill-10"
       }
     },
+    {
+      "trans": [ 890.3419, 21.2140, 818.8233], // on top of broken fence before ctyindb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 890.3419, 21.2140, 818.8233, 10],
+      "lump": {
+        "name":"ctyinda-skill-11",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [  881.7133, 36.5129, 826.6319], // following evil lamp just before ctyindb, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [  881.7133, 36.5129, 826.6319, 10],
+      "lump": {
+        "name": "ctyinda-skill-12"
+      }
+    },
+    {
+      "trans": [ 998.3063, 26.6427, 886.1085], // behind pipe on wall, classic oob to deathwarp in any% 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 998.3063, 26.6427, 886.1085, 10],
+      "lump": {
+        "name":"ctyinda-skill-13"
+      }
+    },
+    {
+      "trans": [ 966.9760, 40.9900, 957.4815], // up on support of pipe on wall along hallway 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 966.9760, 40.9900, 957.4815, 10],
+      "lump": {
+        "name":"ctyinda-skill-14"
+      }
+    },
+    {
+      "trans": [ 1033.1789, 39.1476, 1118.6523], // small IJ on overhead building near vinroom 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ -0.0732, 0.0016, -0.9973, -0.0001],
+      "bsphere": [ 1033.1789, 39.1476, 1118.6523, 10],
+      "lump": {
+        "name":"ctyinda-skill-15"
+      }
+    },
 
     {
       "trans": [ 1124.48, 57.9, 1092.02 ], // small standpoint on walls around vinroom, left side
