@@ -220,6 +220,180 @@
       "lump": {
         "name":"precura-skill-16"
       }
+    },
+    {
+      "trans": [ 39.6568, 547.4811, -87.0254], // in first jak-side room, around corner behind invis wall
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 39.6568, 547.4811, -87.0254, 10],
+      "lump": {
+        "name":"precura-skill-17"
+      }
+    },
+    {
+      "trans": [ 43.4144, 561.8943, -80.7886], // in first jak-side room, up on light(?) next to door
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 43.4144, 561.8943, -80.7886, 10],
+      "lump": {
+        "name":"precura-skill-18"
+      }
+    },
+    {
+      "trans": [ 66.3674, 567.3579, -80.7525], // in first jak-side room, way up in corner
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 66.3674, 567.3579, -80.7525, 10],
+      "lump": {
+        "name":"precura-skill-19"
+      }
+    },
+    {
+      "trans": [ 70.5814, 529.0226, 31.0315], // in first jak-side room, IJ near deathplane, down below past "bridge" of rotators
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 70.5814, 529.0226, 31.0315, 10],
+      "lump": {
+        "name":"precura-skill-20"
+      }
+    },
+    {
+      "trans": [ 72.0423, 553.0865, 45.4202], // proxy hint on steps
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 72.0423, 553.0865, 45.4202, 10],
+      "lump": {
+        "name":"precura-skill-21",
+        "proxy-hint":["float", 1.0]
+      }
+    },
+    {
+      "trans": [ 69.4048, 682.9227, 48.5014], // way up high before east
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ 69.4048, 682.9227, 48.5014, 10],
+      "lump": {
+        "name":"precura-skill-22"
+      }
+    },
+        {
+      "trans": [ -13.4090, 548.7030, -10.4130], // light next to first generator
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -13.4090, 548.7030, -10.4130, 10],
+      "lump": {
+        "name":"precura-skill-23",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -6.6034, 567.9819, 12.1698], // in second room, above mech tunnel, abah/concussor from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -6.6034, 567.9819, 12.1698, 10],
+      "lump": {
+        "name":"precura-skill-24"
+      }
+    },
+    {
+      "trans": [ -46.1107, 570.2572, 52.6267], // in second room, further along above mech tunnel, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -46.1107, 570.2572, 52.6267, 10],
+      "lump": {
+        "name":"precura-skill-25"
+      }
+    },
+    {
+      "trans": [ -36.5274, 553.5648, -65.7587], // spike near start
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -36.5274, 553.5648, -65.7587, 10],
+      "lump": {
+        "name":"precura-skill-26",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -45.8674, 573.6398, -67.3327], // up in front of light up high at start, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [ -45.8674, 573.6398, -67.3327, 10],
+      "lump": {
+        "name":"precura-skill-27"
+      }
+    },
+    {
+      "trans": [ -17.7357, 555.4776, 24.2987], // upside down on ceiling (IJ) of mech tunnel
+      "etype": "skill",
+      "game_task": 0,
+      "quat" : [0.5102, 0.0024, 0.8599, 0.0041],
+      "bsphere": [ -17.7357, 555.4776, 24.2987, 10],
+      "lump": {
+        "name":"precura-skill-28"
+      }
+    },
+    {
+      "trans": [ 53.8997, 540.8901, -43.0032], // side of hexagon before 7 rotating plats
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 53.8997, 540.8901, -43.0032, 10],
+      "lump": {
+        "name":"precura-skill-29"
+      }
+    },
+    {
+      "trans": [ 64.5984, 545.7441, -7.9566], // following middle of 7 rotating plats 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 64.5984, 545.7441, -7.9566, 10],
+      "lump": {
+        "name":"precura-skill-30"
+      }
+    },
+    {
+      "trans": [ -62.8044, 545.8303, -61.4369], // between layers of wall, start of mech section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -62.8044, 545.8303, -61.4369, 10],
+      "lump": {
+        "name":"precura-skill-31"
+      }
+    },
+    {
+      "trans": [ -32.6927, 545.7501, -81.7941], // around corner along top wall of big room from start of mech section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -32.6927, 545.7501, -81.7941, 10],
+      "lump": {
+        "name":"precura-skill-32",
+        "bob-scale": ["float", 0.9375]
+      }
+    },
+    {
+      "trans": [ 16.1905, 551.0880, -92.7678], // further along top wall of big room between two sides, jetboard yolo 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 16.1905, 551.0880, -92.7678, 10],
+      "lump": {
+        "name":"precura-skill-33"
+      }
     }//,
 
   ]

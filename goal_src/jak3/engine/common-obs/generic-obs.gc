@@ -1945,7 +1945,8 @@
         'group-ctywide-chimney-smoke
         'group-ctygenb-rubble-smoke 'group-ctygenb-rubble-crater-smoke
         'group-waswide-chimney-smoke 'group-waswide-chimney-long-smoke 'group-waswide-chimney-double-smoke
-        'group-fac-steam)
+        'group-fac-steam
+        'group-precura-green-steam 'group-precurc-green-steam 'group-sewer-green-steam)
         (return (false! (-> this enable)))
         )
       )

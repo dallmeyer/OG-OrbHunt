@@ -58,62 +58,62 @@
     },
 
     {
-      "trans": [ 39.6568, 547.4811, -87.0254], // in first jak-side room, around corner behind invis wall
+      "trans": [ 245.8446, 513.5377, 156.3888], // above archway between big room and hallway to exit elevator 
       "etype": "skill",
       "game_task": 0,
-      "quat" : [0, 0, 0, 1],
-      "bsphere": [ 39.6568, 547.4811, -87.0254, 10],
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 245.8446, 513.5377, 156.3888, 10],
       "lump": {
         "name":"precurc-skill-01"
       }
     },
     {
-      "trans": [ 43.4144, 561.8943, -80.7886], // in first jak-side room, up on light(?) next to door
+      "trans": [ 196.9666, 510.5162, 287.2295], // overhead walking into exit elevator 
       "etype": "skill",
       "game_task": 0,
-      "quat" : [0, 0, 0, 1],
-      "bsphere": [ 43.4144, 561.8943, -80.7886, 10],
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 196.9666, 510.5162, 287.2295, 10],
       "lump": {
         "name":"precurc-skill-02"
       }
     },
     {
-      "trans": [ 66.3674, 567.3579, -80.7525], // in first jak-side room, way up in corner
+      "trans": [ 196.7799, 502.4160, 273.1500], // around corner to right inside exit elevator 
       "etype": "skill",
       "game_task": 0,
-      "quat" : [0, 0, 0, 1],
-      "bsphere": [ 66.3674, 567.3579, -80.7525, 10],
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 196.7799, 502.4160, 273.1500, 10],
       "lump": {
         "name":"precurc-skill-03"
       }
     },
     {
-      "trans": [ 70.5814, 529.0226, 31.0315], // in first jak-side room, IJ near deathplane, down below past "bridge" of rotators
+      "trans": [ 167.7867, 495.6098, 283.5566], // back left corner of exit elevator, down in crevice 
       "etype": "skill",
       "game_task": 0,
-      "quat" : [0, 0, 0, 1],
-      "bsphere": [ 70.5814, 529.0226, 31.0315, 10],
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 167.7867, 495.6098, 283.5566, 10],
       "lump": {
-        "name":"precurc-skill-04"
+        "name":"precurc-skill-04",
+        "bob-scale": ["float", 0.4687]
       }
     },
     {
-      "trans": [ 72.0423, 553.0865, 45.4202], // proxy hint on steps
+      "trans": [ 127.7765, 565.2064, 35.4356], // up along wall of ice slide, spin jump spam back up from bottom 
       "etype": "skill",
       "game_task": 0,
-      "quat" : [0, 0, 0, 1],
-      "bsphere": [ 72.0423, 553.0865, 45.4202, 10],
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 127.7765, 565.2064, 35.4356, 10],
       "lump": {
-        "name":"precurc-skill-05",
-        "proxy-hint":["float", 1.0]
+        "name":"precurc-skill-05"
       }
     },
     {
-      "trans": [ 69.4048, 682.9227, 48.5014], // way up high in
+      "trans": [ 112.4809, 581.2093, -71.6915], // up near ceiling in second room, follow swingpoles 
       "etype": "skill",
       "game_task": 0,
-      "quat" : [0, 0, 0, 1],
-      "bsphere": [ 69.4048, 682.9227, 48.5014, 10],
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 112.4809, 581.2093, -71.6915, 10],
       "lump": {
         "name":"precurc-skill-06"
       }
@@ -207,7 +207,21 @@
       "lump": {
         "name":"precurc-skill-15"
       }
+    },
+
+    
+    {
+      "trans": [ 215.4864, 577.0776, 58.7027], // no oob big room hover 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 215.4864, 577.0776, 58.7027, 10],
+      "lump": {
+        "name":"precurc-skill-hover-01",
+        "pickup-amount": ["float", 3.0] // hover
+      }
     }//,
+
 
   ]
 }

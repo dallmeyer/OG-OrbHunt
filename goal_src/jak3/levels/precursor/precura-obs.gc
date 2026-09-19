@@ -1392,14 +1392,21 @@
     )
   )
 
+(defun get-gem-pos ((p process) (idx int))
+  (let ((this (the precur-generator-d p)))
+    (when (and (< idx 3) (nonzero? (-> this proc-handle idx)) (handle->process (-> this proc-handle idx)))
+      (return (-> (the process-drawable (handle->process (-> this proc-handle idx))) root trans))))
+  (the-as vector #f)
+  )
+
 (defmethod spawn-gems ((this precur-generator-d))
   (let ((s5-0 (new 'stack-no-clear 'vector)))
     (vector-copy! s5-0 (-> this root trans))
     (set! (-> this proc-handle 0) (ppointer->handle (process-spawn
                                                       precur-generator-d-gem
                                                       s5-0
-                                                      14563.556
-                                                      (new 'static 'vector :x 61440.0 :y -40960.0 :w 1.0)
+                                                      14563.556 ;; velocity
+                                                      (new 'static 'vector :x 61440.0 :y -40960.0 :w 1.0) ;; offset
                                                       :name "precur-generator-d-gem"
                                                       :to this
                                                       )
@@ -1409,7 +1416,7 @@
                                                       precur-generator-d-gem
                                                       s5-0
                                                       -6553.6
-                                                      (new 'static 'vector :x 61440.0 :y -32768.0 :w 1.0)
+                                                      (new 'static 'vector :x 61440.0 :y -20480.0 :w 1.0)
                                                       :name "precur-generator-d-gem"
                                                       :to this
                                                       )
@@ -1419,7 +1426,7 @@
                                                       precur-generator-d-gem
                                                       s5-0
                                                       11650.845
-                                                      (new 'static 'vector :x 61440.0 :y -53248.0 :w 1.0)
+                                                      (new 'static 'vector :x 61440.0 :y -61440.0 :w 1.0)
                                                       :name "precur-generator-d-gem"
                                                       :to this
                                                       )

@@ -145,6 +145,128 @@
       "lump": {
         "name":"foresta-skill-08"
       }
+    },
+    {
+      "trans": [ -716.8808, 21.2043, 1022.6203], // lowest precur pillar, jetboard proxy
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -716.8808, 21.2043, 1022.6203, 10],
+      "lump": {
+        "name":"foresta-skill-09",
+        "proxy-hint": ["float", 1]
+      }
+    },
+    {
+      "trans": [ -809.0192, 47.1405, 1118.7636], // behind tree near west path to south 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -809.0192, 47.1405, 1118.7636, 10],
+      "lump": {
+        "name":"foresta-skill-10"
+      }
+    },
+    {
+      "trans": [ -763.3458, 41.0998, 904.4478], // north (west) wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -763.3458, 41.0998, 904.4478, 10],
+      "lump": {
+        "name":"foresta-skill-11",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -764.7316, 61.9912, 894.7759], // behind tree on north (west) wall, abah from ^ (standpt on roots)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -764.7316, 61.9912, 894.7759, 10],
+      "lump": {
+        "name":"foresta-skill-12"
+      }
+    },
+    {
+      "trans": [ -778.1720, 64.0111, 896.5166], // roots of tree on north (west) wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -778.1720, 64.0111, 896.5166, 10],
+      "lump": {
+        "name":"foresta-skill-13"
+      }
+    },
+    {
+      "trans": [ -743.7376, 59.3859, 903.9904], // behind tree on north (slight west) wall, either yolo from ^^ or concussor slide up wall
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -743.7376, 59.3859, 903.9904, 10],
+      "lump": {
+        "name":"foresta-skill-14"
+      }
+    },
+    {
+      "trans": [ -704.1048, 51.8228, 903.9470], // tree roots on north (center) wall, annoying concussor slide up wall
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -704.1048, 51.8228, 903.9470, 10],
+      "lump": {
+        "name":"foresta-skill-15"
+      }
+    },
+    {
+      "trans": [ -701.7133, 67.1531, 901.5964], // tree branches up on north (center) wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -701.7133, 67.1531, 901.5964, 10],
+      "lump": {
+        "name":"foresta-skill-16"
+      }
+    },
+    {
+      "trans": [ -797.7551, 31.1014, 896.7553], // behind pair of trees next to grindrails on north (west) wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -797.7551, 31.1014, 896.7553, 10],
+      "lump": {
+        "name":"foresta-skill-17"
+      }
+    },
+    {
+      "trans": [ -864.5801, 22.7513, 910.0303], // in water near NW waterfall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -864.5801, 22.7513, 910.0303, 10],
+      "lump": {
+        "name":"foresta-skill-18"
+      }
+    },
+    {
+      "trans": [ -863.5203, 19.4244, 1032.6873], // in water behind cattails along west (mid) wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -863.5203, 19.4244, 1032.6873, 10],
+      "lump": {
+        "name":"foresta-skill-19"
+      }
+    },
+    {
+      "trans": [ -836.7795, 27.9819, 1095.4626], // in water behind rocks just before west path to south 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -836.7795, 27.9819, 1095.4626, 10],
+      "lump": {
+        "name":"foresta-skill-20"
+      }
     }//,
 
   ]

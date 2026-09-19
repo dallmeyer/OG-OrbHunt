@@ -1470,6 +1470,22 @@
     (('light-eco-vent-29) (set-vector-meters! (-> arg0 extra trans) -87.7718 156.6684 -185.1001)
       (quaternion-set! (-> arg0 quat)  0.2347  0.0212  -0.0207  0.9716))
 
+    ;; PRECURB
+    (('precur-bomb-spawner-4) (set-vector-meters! (-> arg0 extra trans) -77.5001 540.9896 77.9166)
+      (quaternion-set! (-> arg0 quat)  0.0000  0.0000  0.0000  1.0000))
+
+    ;; PRECURC
+    (('precur-swingpole-pop-1) (set-vector-meters! (-> arg0 extra trans) 96.1261 575.2570 -70.9769)
+      (quaternion-set! (-> arg0 quat)  -0.7683  -0.0000  -0.6400  0.0000))
+    (('precur-swingpole-pop-2) (set-vector-meters! (-> arg0 extra trans) 92.9025 552.7095 -82.8516)
+      (quaternion-set! (-> arg0 quat)  0.7049  0.0000  0.7092  -0.0000))
+    (('precur-swingpole-pop-3) (set-vector-meters! (-> arg0 extra trans) 93.5243 566.7644 -82.7732)
+      (quaternion-set! (-> arg0 quat)  0.7079  0.0000  0.7062  -0.0000))
+    (('light-eco-vent-12) (set-vector-meters! (-> arg0 extra trans) 241.9687 530.0908 56.6041)
+      (quaternion-set! (-> arg0 quat)  -0.0165  0.0000  0.0000  0.9998))
+    (('light-eco-vent-15) (set-vector-meters! (-> arg0 extra trans) 244.9718 530.1024 58.6291)
+      (quaternion-set! (-> arg0 quat)  0.0000  0.9149  0.0000  0.4036))
+
     ;; DESWALK
     (('light-eco-vent-45) (set-vector-meters! (-> arg0 extra trans) 2436.0107 108.5259 560.3179))
     (('dark-eco-vent-18) (set-vector-meters! (-> arg0 extra trans) 2447.9020 108.5351 582.6896))
@@ -1823,7 +1839,7 @@
              (>= (- (-> *display* base-clock frame-counter) (-> *game-info* letterbox-time)) (seconds 0.1))
              (>= (- (-> *display* base-clock frame-counter) (-> *game-info* blackout-time)) (seconds 0.1))
              (not (or (= *master-mode* 'progress) (= *master-mode* 'menu)))
-             (cpad-hold? 0 l3) (cpad-pressed? 0 l3)
+             (or (cpad-hold? 0 l3) (cpad-pressed? 0 l3))
              (or *show-mini-bigmap* (= *mini-bigmap-toggle-time* #f) (g-time-elapsed? *mini-bigmap-toggle-time* (seconds 0.5)))  ;; give time for progress-minimap to unlink before relink
              (not (have-minimap?)) ;; (allow-mini-bigmap?)  ;; not showing hudmap
              )
@@ -2527,22 +2543,61 @@
   (skill-follow-offset "sewi-skill-23" "sew-rove-plat-9" (static-vector-meters 0.0 -7.0 5.3))
   (skill-follow-y-offset "sewi-skill-25" "flyingsaw-3" (meters -0.9))
 
+  ;; make orb follow rhino
   (let ((orb (the skill (process-by-ename "wasdoors-skill-07")))
         (pd (the process-drawable (process-by-type-exact 'v-rhino *active-pool*)))
         (tmp-vec (new-stack-vector0)))
     (when (and orb pd)
-      (set! (-> orb root trans x) (-> pd root trans x))
-      (set! (-> orb root trans y) (-> pd root trans y))
-      (set! (-> orb root trans z) (-> pd root trans z))
+      (vector-copy! (-> orb root trans) (-> pd root trans))
       ;; convert the quaternion to a vector representing rotation around z axis (isnt it the y axis in GOAL tho?)
       (vector-z-quaternion! tmp-vec (-> pd root quat))
       ;; shift orbs's position opposite the pd angle, by 1m
       (vector-! (-> orb root trans) (-> orb root trans) (vector-normalize! tmp-vec (meters 4.7)))
       (+! (-> orb root trans y) (meters 2.0))
+      (vector-copy! (-> orb base) (-> orb root trans)))
+    )
 
-      (set! (-> orb base x) (-> orb root trans x))
-      (set! (-> orb base y) (-> orb root trans y))
-      (set! (-> orb base z) (-> orb root trans z))
+  ;; make orb rotate with platform
+  (let ((orb (the skill (process-by-ename "precura-skill-30")))
+        (pd (the process-drawable (process-by-ename "precur-jump-plate-3")))
+        (tmp-vec (new-stack-vector0)))
+    (when (and orb pd)
+      (vector-copy! (-> orb root trans) (-> pd root trans))
+      (quaternion-copy! (-> orb root quat) (-> pd root quat))
+      (quaternion-rotate-x! (-> orb root quat) (-> orb root quat) (degrees 180))
+      ;; convert the quaternion to a vector representing rotation around x axis
+      (vector-x-quaternion! tmp-vec (-> pd root quat))
+      ;; rotate 270 degrees so orb is at the bottom instead of side
+      (vector-rotate-around-z! tmp-vec tmp-vec (degrees 270))
+      ;; shift orbs's position opposite the pd angle, by 1m
+      (vector+! (-> orb root trans) (-> orb root trans) (vector-normalize! tmp-vec (meters 7.25)))
+      (vector-copy! (-> orb base) (-> orb root trans))
+      )    
+    )
+
+  ;; make orbs follow gems
+  (define-extern get-gem-pos (function process int vector))
+  (when (process-by-ename "precur-generator-d-1")
+    (let* ((pd (process-by-ename "precur-generator-d-1"))
+          (v0 (get-gem-pos pd 0))
+          (v1 (get-gem-pos pd 1))
+          (v2 (get-gem-pos pd 2))
+          (o14 (the skill (process-by-ename "precurb-skill-14")))
+          (o15 (the skill (process-by-ename "precurb-skill-15")))
+          (o16 (the skill (process-by-ename "precurb-skill-16")))
+          )
+      (when (and v0 o14)
+        (vector-copy! (-> o14 root trans) v0)
+        (+! (-> o14 root trans y) (meters 1.85))
+        (vector-copy! (-> o14 base) (-> o14 root trans)))
+      (when (and v1 o15)
+        (vector-copy! (-> o15 root trans) v1)
+        (+! (-> o15 root trans y) (meters 1.85))
+        (vector-copy! (-> o15 base) (-> o15 root trans)))
+      (when (and v2 o16)
+        (vector-copy! (-> o16 root trans) v2)
+        (+! (-> o16 root trans y) (meters 1.85))
+        (vector-copy! (-> o16 base) (-> o16 root trans)))
       )
     )
 

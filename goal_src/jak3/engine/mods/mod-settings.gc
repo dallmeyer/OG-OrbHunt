@@ -38,7 +38,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define ORB_HUNT_DEBUG? #f) ;; when #t, hold L2 for extra debug prints
-(define startingDebugContinuePoint "ctyinda-bbush-1")
+(define startingDebugContinuePoint "precurc-checkpoint")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -450,9 +450,9 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   4 ;; "BTR (South)"	;; 4
   5 ;; "BTR (End)"	;; 5
   6 ;; "Dark Ship (Escape)"	;; 6
-  7 ;; "Dark Ship (Jak Section)"	;; 7
-  8 ;; "Dark Ship (Mech Section)"	;; 8
-  9 ;; "Dark Ship (Start)"	;; 9
+  7 ;; "Dark Ship (East)"	;; 7
+  8 ;; "Dark Ship (West)"	;; 8
+  9 ;; "Dark Ship (Center)"	;; 9
   42 ;; "Eco Grid"	;; 42
   10 ;; "Eco Mine (Bomb Train)"	;; 10
   11 ;; "Eco Mine (Cave)"	;; 11
@@ -550,9 +550,9 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   "BTR (South)"	;; 4
   "BTR (End)"	;; 5
   "Dark Ship (Escape)"	;; 6
-  "Dark Ship (Jak Section)"	;; 7
-  "Dark Ship (Mech Section)"	;; 8
-  "Dark Ship (Start)"	;; 9
+  "Dark Ship (East)"	;; 7
+  "Dark Ship (West)"	;; 8
+  "Dark Ship (Center)"	;; 9
   "Eco Mine (Bomb Train)"	;; 10
   "Eco Mine (Cave)"	;; 11
   "Eco Mine (Elevators)"	;; 12
@@ -650,9 +650,9 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   (game-task none) ;; "BTR (South)"	;; 4
   (game-task none) ;; "BTR (End)"	;; 5
   (game-task none) ;; "Dark Ship (Escape)"	;; 6
-  (game-task none) ;; "Dark Ship (Jak Section)"	;; 7
-  (game-task none) ;; "Dark Ship (Mech Section)"	;; 8
-  (game-task none) ;; "Dark Ship (Start)"	;; 9
+  (game-task none) ;; "Dark Ship (East)"	;; 7
+  (game-task none) ;; "Dark Ship (West)"	;; 8
+  (game-task none) ;; "Dark Ship (Center)"	;; 9
   (game-task pecker-orbhunt) ;; "Eco Mine (Bomb Train)"	;; 10
   (game-task none) ;; "Eco Mine (Cave)"	;; 11
   (game-task none) ;; "Eco Mine (Elevators)"	;; 12
@@ -754,9 +754,9 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   17 ;; "BTR 4"	;; 4
   16 ;; "BTR End"	;; 5
   20 ;; "Dark Ship (Escape)"	;; 6
-  14 ;; "Dark Ship (Jak Section)"	;; 7
-  11 ;; "Dark Ship (Mech Mid)"	;; 8
-  11 ;; "Dark Ship (Start/Mech End)"	;; 9
+  14 ;; "Dark Ship (East)"	;; 7
+  11 ;; "Dark Ship (West)"	;; 8
+  11 ;; "Dark Ship (Center)"	;; 9
   310 ;; "Eco Mine (Bomb Train)"	;; 10
   103 ;; "Eco Mine (Cave)"	;; 11
   20 ;; "Eco Mine (Elevators?)"	;; 12
@@ -846,7 +846,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   26 ;; "Palace (Rooftop)"	;; 96
   ))
 
-(define *total-orbs* 2956)
+(define *total-orbs* 3001)
 ;; TODO: re-enable this
 ;; (dotimes (lvl-idx LEVEL_ID_LEN)
 ;;   (+! *total-orbs* (-> *level-orb-total-counts-fixed* lvl-idx))
