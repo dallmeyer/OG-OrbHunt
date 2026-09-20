@@ -126,12 +126,13 @@
       "lump": {
         "name":"foresta-skill-06"
       }
-    },{
-      "trans": [ -516.6869, 75.8959, 887.0502], // in elbow of support for wall, follow from ^^
+    },
+    {
+      "trans": [ -525.3535, 52.9511, 938.9212], // branches of first tree on left from start
       "etype": "skill",
       "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [ -516.6869, 75.8959, 887.0502, 10],
+      "bsphere": [ -525.3535, 52.9511, 938.9212, 10],
       "lump": {
         "name":"foresta-skill-07"
       }
@@ -266,6 +267,211 @@
       "bsphere": [ -836.7795, 27.9819, 1095.4626, 10],
       "lump": {
         "name":"foresta-skill-20"
+      }
+    },
+    {
+      "trans": [ -532.8455, 41.3694, 897.8145], // behind tree on right at start 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -532.8455, 41.3694, 897.8145, 10],
+      "lump": {
+        "name":"foresta-skill-21",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -530.2774, 63.1940, 888.0730], // between rock wall and metal support on right at start, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -530.2774, 63.1940, 888.0730, 10],
+      "lump": {
+        "name":"foresta-skill-22",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -519.6994, 74.6881, 884.2008], // in crevice between metal support and rock wall on right at start, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -519.6994, 74.6881, 884.2008, 10],
+      "lump": {
+        "name":"foresta-skill-23"
+      }
+    },
+    {
+      "trans": [ -504.8734, 82.7717, 887.1085], // top of slanted beam in metal support, up right from start, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -504.8734, 82.7717, 887.1085, 10],
+      "lump": {
+        "name":"foresta-skill-24",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -499.0891, 93.8020, 892.5831], // gaslight standpoint on corner of city wall, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -499.0891, 93.8020, 892.5831, 10],
+      "lump": {
+        "name":"foresta-skill-25"
+      }
+    },
+    {
+      "trans": [ -499.9131, 68.6196, 927.1646], // middle ornament on wall above entrance door, proxy hint to top of city wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -499.9131, 68.6196, 927.1646, 10],
+      "lump": {
+        "name":"foresta-skill-26",
+        "proxy-hint": ["float", 1]
+      }
+    },
+    {
+      "trans": [ -490.9298, 122.4813, 915.7220], // left tooth at top of city wall, proxy from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -490.9298, 122.4813, 915.7220, 10],
+      "lump": {
+        "name":"foresta-skill-27"
+      }
+    },
+    {
+      "trans": [ -494.0114, 119.7510, 967.0707], // city wall pillar, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -494.0114, 119.7510, 967.0707, 10],
+      "lump": {
+        "name":"foresta-skill-28"
+      }
+    },
+    {
+      "trans": [ -477.6001, 112.5252, 1004.0883], // further south along city wall, almost to forestb
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -477.6001, 112.5252, 1004.0883, 10],
+      "lump": {
+        "name":"foresta-skill-29"
+      }
+    },
+    {
+      "trans": [ -665.8777, 44.9453, 1027.6129], // top of rock in middle of (north) map 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -665.8777, 44.9453, 1027.6129, 10],
+      "lump": {
+        "name":"foresta-skill-30"
+      }
+    },
+    {
+      "trans": [ -668.6654, 46.1231, 1073.7110], // top of rock in middle of (north) map, just south of ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -668.6654, 46.1231, 1073.7110, 10],
+      "lump": {
+        "name":"foresta-skill-31"
+      }
+    },
+    {
+      "trans": [ -669.6949, 55.6177, 1061.4046], // tree branches in middle of (north) map, concussor yolo from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -669.6949, 55.6177, 1061.4046, 10],
+      "lump": {
+        "name":"foresta-skill-32"
+      }
+    },
+    {
+      "trans": [ -572.2090, 43.5316, 980.7391], // under leaves on large rock section on east side
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -572.2090, 43.5316, 980.7391, 10],
+      "lump": {
+        "name":"foresta-skill-33"
+      }
+    },
+    {
+      "trans": [ -554.4727, 41.8257, 1010.6220], // mid southside of large rock section on east side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -554.4727, 41.8257, 1010.6220, 10],
+      "lump": {
+        "name":"foresta-skill-34"
+      }
+    },
+    {
+      "trans": [ -561.5753, 56.7012, 992.0274], // top of large rock section on east side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -561.5753, 56.7012, 992.0274, 10],
+      "lump": {
+        "name":"foresta-skill-35"
+      }
+    },
+    {
+      "trans": [ -552.3598, 27.6946, 963.3782], // in east water close to start, under overhanging shrub/tree 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -552.3598, 27.6946, 963.3782, 10],
+      "lump": {
+        "name":"foresta-skill-36",
+        "bob-scale": ["float", 0.1250]
+      }
+    },
+    {
+      "trans": [ -542.9768, 19.4615, 998.7156], // bottom of rapids east water 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -542.9768, 19.4615, 998.7156, 10],
+      "lump": {
+        "name":"foresta-skill-37"
+      }
+    },
+    {
+      "trans": [ -847.8634, 29.4592, 1013.8986], // among clusterfuck of trees on west (north) side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -847.8634, 29.4592, 1013.8986, 10],
+      "lump": {
+        "name":"foresta-skill-38"
+      }
+    },
+    {
+      "trans": [ -710.8915, 39.1899, 973.4247], // top of rock with a few trees in it, mid north area 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -710.8915, 39.1899, 973.4247, 10],
+      "lump": {
+        "name":"foresta-skill-39"
+      }
+    },
+    {
+      "trans": [ -714.7846, 34.5285, 1133.9221], // behind left of pair of trees in front/right of cinnamon roll south center
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -714.7846, 34.5285, 1133.9221, 10],
+      "lump": {
+        "name":"foresta-skill-40"
       }
     }//,
 
