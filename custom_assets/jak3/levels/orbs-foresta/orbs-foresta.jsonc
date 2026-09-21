@@ -608,6 +608,163 @@
       "lump": {
         "name":"foresta-skill-53"
       }
+    },
+    {
+      "trans": [ -572.5465, 46.4590, 905.5119], // behind tree on north wall right near entrance 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -572.5465, 46.4590, 905.5119, 10],
+      "lump": {
+        "name":"foresta-skill-54",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -571.4412, 60.4685, 893.9658], // behind higher tree on north wall, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -571.4412, 60.4685, 893.9658, 10],
+      "lump": {
+        "name":"foresta-skill-55"
+      }
+    },
+    {
+      "trans": [ -643.4031, 27.2397, 985.4567], // behind tree on lower of 3 rock islands 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -643.4031, 27.2397, 985.4567, 10],
+      "lump": {
+        "name":"foresta-skill-56"
+      }
+    },
+    {
+      "trans": [ -602.2305, 48.8519, 957.3530], // in leaves of tree above right of 3 rock islands 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -602.2305, 48.8519, 957.3530, 10],
+      "lump": {
+        "name":"foresta-skill-57"
+      }
+    },
+    {
+      "trans": [ -662.0932, 26.2677, 959.8477], // behind tree on left of 3 rock islands 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -662.0932, 26.2677, 959.8477, 10],
+      "lump": {
+        "name":"foresta-skill-58",
+        "bob-scale": ["float", 0.6250]
+      }
+    },
+    {
+      "trans": [ -587.7182, 25.9256, 1027.2864], // under overhanging grass on east island facing path to forestb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -587.7182, 25.9256, 1027.2864, 10],
+      "lump": {
+        "name":"foresta-skill-59",
+        "bob-scale": ["float", 0.2187]
+      }
+    },
+    {
+      "trans": [ -823.8334, 19.5323, 954.3104], // in water among cattails one rapids down from waterfall
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -823.8334, 19.5323, 954.3104, 10],
+      "lump": {
+        "name":"foresta-skill-60",
+        "bob-scale": ["float", 0.3125]
+      }
+    },
+    {
+      "trans": [ -528.1354, 61.7418, 992.8656], // bullshit standpoint on east rock wall, above rapids (jetboard yolo from rocks on other side of water) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -528.1354, 61.7418, 992.8656, 10],
+      "lump": {
+        "name":"foresta-skill-61",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -537.8745, 80.3501, 976.9158], // up in tree on east side over rapids, abah yolo from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -537.8745, 80.3501, 976.9158, 10],
+      "lump": {
+        "name":"foresta-skill-62"
+      }
+    },
+    {
+      "trans": [ -806.8480, 60.9058, 1054.2028], // up in tree branches overhead at "island" with three trees, by west path to forestb
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -806.8480, 60.9058, 1054.2028, 10],
+      "lump": {
+        "name":"foresta-skill-63"
+      }
+    },
+    {
+      "trans": [ -881.5939, 36.6654, 957.9699], // base of trio of trees in west-north corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -881.5939, 36.6654, 957.9699, 10],
+      "lump": {
+        "name":"foresta-skill-64",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -882.9489, 58.8859, 962.9201], // between pair of trees in west-north corner, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -882.9489, 58.8859, 962.9201, 10],
+      "lump": {
+        "name":"foresta-skill-65"
+      }
+    },
+    {
+      "trans": [ -892.4488, 65.2156, 971.1065], // up on west (north) rock wall, concussor slide up from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -892.4488, 65.2156, 971.1065, 10],
+      "lump": {
+        "name":"foresta-skill-66"
+      }
+    },
+    {
+      "trans": [ -883.8468, 57.4465, 953.0906], // behind right of trio of trees in west-north corner, abah from ^^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -883.8468, 57.4465, 953.0906, 10],
+      "lump": {
+        "name":"foresta-skill-67",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -899.4682, 78.3270, 933.2044], // up on rock wall in west-north corner, abah concussor slide from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -899.4682, 78.3270, 933.2044, 10],
+      "lump": {
+        "name":"foresta-skill-68"
+      }
     }//,
 
   ]

@@ -86,6 +86,129 @@
       "lump": {
         "name":"forestb-skill-03"
       }
+    },
+    {
+      "trans": [ -541.4253, 28.9170, 1073.0743], // behind tree against wall at entrance east side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -541.4253, 28.9170, 1073.0743, 10],
+      "lump": {
+        "name":"forestb-skill-04",
+        "bob-scale": ["float", 0.5625]
+      }
+    },
+    {
+      "trans": [ -505.7347, 42.3463, 1075.1820], // up behind tree against east rock wall near entrance
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -505.7347, 42.3463, 1075.1820, 10],
+      "lump": {
+        "name":"forestb-skill-05",
+        "bob-scale": ["float", 0.3437]
+      }
+    },
+    {
+      "trans": [ -547.7780, 42.1327, 1075.5397], // up on east rock wall near entrance, tight concussor jump from rock below 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -547.7780, 42.1327, 1075.5397, 10],
+      "lump": {
+        "name":"forestb-skill-06"
+      }
+    },
+    {
+      "trans": [ -535.9299, 42.4227, 1066.8817], // on east rock wall near entrance, slide across from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -535.9299, 42.4227, 1066.8817, 10],
+      "lump": {
+        "name":"forestb-skill-07",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -551.8580, 56.0431, 1075.1558], // atop east rock wall near entrance, abah from^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -551.8580, 56.0431, 1075.1558, 10],
+      "lump": {
+        "name":"forestb-skill-08"
+      }
+    },
+    {
+      "trans": [ -512.3703, 59.8323, 1060.4099], // atop east (north) rock wall near entrance, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -512.3703, 59.8323, 1060.4099, 10],
+      "lump": {
+        "name":"forestb-skill-09"
+      }
+    },
+    {
+      "trans": [ -496.7127, 53.2638, 1082.0220], // in crevice in east (north) rock wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -496.7127, 53.2638, 1082.0220, 10],
+      "lump": {
+        "name":"forestb-skill-10"
+      }
+    },
+    {
+      "trans": [ -483.8083, 50.1902, 1123.7612], // atop east rock wall where it hits city wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -483.8083, 50.1902, 1123.7612, 10],
+      "lump": {
+        "name":"forestb-skill-11"
+      }
+    },
+    {
+      "trans": [ -492.0735, 64.9296, 1158.8195], // tree branch above east rock wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -492.0735, 64.9296, 1158.8195, 10],
+      "lump": {
+        "name":"forestb-skill-12"
+      }
+    },
+    {
+      "trans": [ -514.1677, 80.3865, 1250.4763], // next to tree atop rock wall in SE corner, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -514.1677, 80.3865, 1250.4763, 10],
+      "lump": {
+        "name":"forestb-skill-13"
+      }
+    },
+    {
+      "trans": [ -552.0108, 70.9903, 1268.0048], // in crevice in south (east) rock wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -552.0108, 70.9903, 1268.0048, 10],
+      "lump": {
+        "name":"forestb-skill-14"
+      }
+    },
+    {
+      "trans": [ -566.9520, 64.5807, 1259.8392], // behind tree on south (east) rock wall
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -566.9520, 64.5807, 1259.8392, 10],
+      "lump": {
+        "name":"forestb-skill-15"
+      }
     }//,
 
   ]
