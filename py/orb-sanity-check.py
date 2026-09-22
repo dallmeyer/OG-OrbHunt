@@ -9,6 +9,7 @@ root = "C:/Users/matt/Documents/Projects/OG-OrbHunt/custom_assets/jak3/levels"
 
 orb_names = {}
 orb_pos = {}
+total = 0
 for d in listdir(root):
     path = join(root, d)
     if isdir(path):
@@ -30,6 +31,7 @@ for d in listdir(root):
                                 counts[aa] += 1
                             else:
                                 counts["barg"] += 1
+                            total += 1    
                             
                             # check for reused names or locations
                             name = a["lump"]["name"]
@@ -47,10 +49,10 @@ for d in listdir(root):
                             orb_pos[pos] += 1
                 
                 # hacky reminder about onintent
-                print(f"{f[5:len(f)-6]}    {counts}")
+                print(f"{f[:len(f)-6]}    {counts}")
                 if f == "orbs-ctysluma.jsonc":
                     print("   some of those^^^ are onintent")
 
                 # wait for user input
                 # input("Press Enter to continue...")
-                
+print(f"Total orbs: {total}")
