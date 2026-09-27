@@ -55,4 +55,5 @@ for d in listdir(root):
 
                 # wait for user input
                 # input("Press Enter to continue...")
-print(f"Total orbs: {total}")
+print(f"Total added orbs: {total}")
+print(f"Total (+vanilla) orbs: {total+600}")
