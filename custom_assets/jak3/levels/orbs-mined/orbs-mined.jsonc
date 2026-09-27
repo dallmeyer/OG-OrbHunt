@@ -262,6 +262,47 @@
         "name":"mined-skill-20"
       }
     },
+    {
+      "trans": [ 301.6160, 60.3855, -182.9440], // corner of entrance door 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 301.6160, 60.3855, -182.9440, 10],
+      "lump": {
+        "name":"mined-skill-21"
+      }
+    },
+    {
+      "trans": [ 313.7187, 51.3785, -290.2488], // below center exit plat 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 313.7187, 51.3785, -290.2488, 10],
+      "lump": {
+        "name":"mined-skill-22"
+      }
+    },
+    {
+      "trans": [ 333.6748, 52.2493, -282.7740], // below right exit plat 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 333.6748, 52.2493, -282.7740, 10],
+      "lump": {
+        "name":"mined-skill-23",
+        "bob-scale": ["float", 0.9687]
+      }
+    },
+    {
+      "trans": [ 301.5867, 51.4811, -285.4147], // below left exit plat 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 301.5867, 51.4811, -285.4147, 10],
+      "lump": {
+        "name":"mined-skill-24"
+      }
+    },
 
 
     {
