@@ -1102,6 +1102,36 @@
         "name":"mineb-skill-103",
         "alt-actor": "min-crane-switch-8" // hit it 5 times to spawn orb
       }
+    },
+    {
+      "trans": [ -31.2472, 21.0021, 185.1967], // behind pillar against south wall, near 3rd hamster wheel 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -31.2472, 21.0021, 185.1967, 10],
+      "lump": {
+        "name":"mineb-skill-104"
+      }
+    },
+    {
+      "trans": [ -253.0552, 83.2066, -12.0055], // up near ceiling where u pick up shin guards or whatever 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -253.0552, 83.2066, -12.0055, 10],
+      "lump": {
+        "name":"mineb-skill-105"
+      }
+    },
+    {
+      "trans": [ -200.3798, 80.9329, 19.4490], // between bomb train crane and wall, right side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -200.3798, 80.9329, 19.4490, 10],
+      "lump": {
+        "name":"mineb-skill-106"
+      }
     }
     //,
 
