@@ -87,6 +87,68 @@
       "lump": {
         "name":"ltowera-skill-03"
       }
+    },
+    {
+      "trans": [ -280.2872, 42.5608, 369.9747], // next to first tentacle 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -280.2872, 42.5608, 369.9747, 10],
+      "lump": {
+        "name":"ltowera-skill-04",
+        "proxy-hint": ["float", 1.0] // proxy hint
+      }
+    },
+    {
+      "trans": [ -284.9517, 68.1089, 368.2395], // up in tree ceiling, proxy from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -284.9517, 68.1089, 368.2395, 10],
+      "lump": {
+        "name":"ltowera-skill-05"
+      }
+    },
+    {
+      "trans": [ -273.7388, 43.7884, 365.4360], // between roots on wall between tentacles 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -273.7388, 43.7884, 365.4360, 10],
+      "lump": {
+        "name":"ltowera-skill-06",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ -279.8617, 62.4532, 363.3669], // up in tree ceiling, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -279.8617, 62.4532, 363.3669, 10],
+      "lump": {
+        "name":"ltowera-skill-07"
+      }
+    },
+    {
+      "trans": [ -269.8932, 69.1346, 383.7366], // up on ceiling roots down to lamp by first tentacle 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -269.8932, 69.1346, 383.7366, 10],
+      "lump": {
+        "name":"ltowera-skill-08"
+      }
+    },
+    {
+      "trans": [ -348.0286, 42.9630, 445.8483], // near ceiling above first lowering platform (who knew these were even here?) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -348.0286, 42.9630, 445.8483, 10],
+      "lump": {
+        "name":"ltowera-skill-09"
+      }
     }//,
 
   ]
