@@ -77,6 +77,99 @@
         "name":"gungame-skill-02"
       }
     },
+    {
+      "trans": [ 347.8101, 8.8030, 1271.5728], // behind cabinet near entrance 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 347.8101, 8.8030, 1271.5728, 10],
+      "lump": {
+        "name":"gungame-skill-03"
+      }
+    },
+    {
+      "trans": [ 356.9287, 22.6428, 1278.0853], // behind pipe overhead entrance door
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 356.9287, 22.6428, 1278.0853, 10],
+      "lump": {
+        "name":"gungame-skill-04"
+      }
+    },
+    {
+      "trans": [ 304.2391, 8.8128, 1128.9699], // in NW-most corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 304.2391, 8.8128, 1128.9699, 10],
+      "lump": {
+        "name":"gungame-skill-05"
+      }
+    },
+    {
+      "trans": [ 309.5992, 19.8760, 1203.1231], // above pipe between walls along west path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 309.5992, 19.8760, 1203.1231, 10],
+      "lump": {
+        "name":"gungame-skill-06"
+      }
+    },
+    {
+      "trans": [ 334.2731, 18.4658, 1247.1777], // up in corner near start of yellow course 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 334.2731, 18.4658, 1247.1777, 10],
+      "lump": {
+        "name":"gungame-skill-07"
+      }
+    },
+    {
+      "trans": [ 263.1527, 8.7363, 1214.5728], // in SW-most corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 263.1527, 8.7363, 1214.5728, 10],
+      "lump": {
+        "name":"gungame-skill-08",
+        "bob-scale": ["float", -1.0], // no bob
+        "no-spin": ["float", 1.0] // no spin
+      }
+    },
+    {
+      "trans": [ 373.6839, 19.1481, 1172.0292], // inside one of the rooms, NE-ish 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 373.6839, 19.1481, 1172.0292, 10],
+      "lump": {
+        "name":"gungame-skill-09"
+      }
+    },
+    {
+      "trans": [ 391.0836, 21.4496, 1169.0070], // behind pipe on wall NE-ish 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 391.0836, 21.4496, 1169.0070, 10],
+      "lump": {
+        "name":"gungame-skill-10",
+        "bob-scale": ["float", 0.1562]
+      }
+    },
+    {
+      "trans": [ 369.1183, 18.8606, 1221.8558], // inside pipe along east path
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 369.1183, 18.8606, 1221.8558, 10],
+      "lump": {
+        "name":"gungame-skill-11"
+      }
+    },
 
     {
       "trans": [ 354.1975, 12.2186, 1254.1358], //

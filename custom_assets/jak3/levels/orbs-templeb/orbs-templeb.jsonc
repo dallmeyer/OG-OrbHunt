@@ -177,6 +177,40 @@
         "name":"templeb-skill-12"
       }
     },
+    {
+      "trans": [ 4089.8225, 47.4611, 4791.6054], // proxy hint for urn near ceiling (rolljump->spam x) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 4089.8225, 47.4611, 4791.6054, 10],
+      "lump": {
+        "name":"templeb-skill-13",
+        "proxy-hint": ["float", 1.0] // proxy hint
+      }
+    },
+    {
+      "trans": [ 4144.5156, 47.1935, 4644.8574], // proxy hint for urn near ceiling (rolljump->spam x) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 4144.5156, 47.1935, 4644.8574, 10],
+      "lump": {
+        "name":"templeb-skill-14",
+        "proxy-hint": ["float", 1.0] // proxy hint
+      }
+    },
+    {
+      "trans": [ 4244.0297, 47.1433, 4766.9897], // proxy hint for urn near ceiling (rolljump->spam x) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 4244.0297, 47.1433, 4766.9897, 10],
+      "lump": {
+        "name":"templeb-skill-15",
+        "proxy-hint": ["float", 1.0] // proxy hint
+      }
+    },
+
     // {
     // "trans": [ 4121.2294, 64.0372, 4728.5834], //
     // "etype": "skill",

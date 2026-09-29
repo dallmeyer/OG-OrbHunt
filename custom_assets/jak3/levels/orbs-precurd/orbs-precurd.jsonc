@@ -252,7 +252,16 @@
         "name":"precurd-skill-18"
       }
     },
-
+    {
+      "trans": [ 11.2331, 200.7685, 112.5405], // on starting end of collapsing platform, center of room 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 11.2331, 200.7685, 112.5405, 10],
+      "lump": {
+        "name":"precurd-skill-19"
+      }
+    },
 
     {
       "trans": [ -132.70, 241.38, 265.75 ], // green bulb above fake door
