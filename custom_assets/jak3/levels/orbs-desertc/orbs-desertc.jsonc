@@ -189,6 +189,189 @@
       "lump": {
         "name":"desertc-skill-13"
       }
+    },
+    {
+      "trans": [ 1807.3585, 88.4485, 1178.4807], // NE corner, up on mountain side (low part) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1807.3585, 88.4485, 1178.4807, 10],
+      "lump": {
+        "name":"desertc-skill-14",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1805.7524, 105.4267, 1177.6215], // NE corner, up on top of rock spike on mountain side, abah from ^ (then abah over invis wall from here for vvv)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1805.7524, 105.4267, 1177.6215, 10],
+      "lump": {
+        "name":"desertc-skill-15",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1885.1368, 68.3291, 1191.4158], // NE corner, far east behind invis wall, abah over from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1885.1368, 68.3291, 1191.4158, 10],
+      "lump": {
+        "name":"desertc-skill-16"
+      }
+    },
+    {
+      "trans": [ 1813.3582, 62.9214, 1145.1177], // NE corner behind invis wall, in small crevice near invis wall jump 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1813.3582, 62.9214, 1145.1177, 10],
+      "lump": {
+        "name":"desertc-skill-17"
+      }
+    },
+    {
+      "trans": [ 1814.1339, 100.1477, 1220.5515], // NE corner behind invis wall, under big rock slab just after invis wall jump
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1814.1339, 100.1477, 1220.5515, 10],
+      "lump": {
+        "name":"desertc-skill-18"
+      }
+    },
+    {
+      "trans": [ 1773.2888, 138.8482, 1233.4516], // NE corner behind invis wall, on pillar (abah from below, no hint)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1773.2888, 138.8482, 1233.4516, 10],
+      "lump": {
+        "name":"desertc-skill-19"
+      }
+    },
+    {
+      "trans": [ 1788.4598, 103.2757, 1212.7770], // NE corner behind invis wall, in crevice between pillars 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1788.4598, 103.2757, 1212.7770, 10],
+      "lump": {
+        "name":"desertc-skill-20",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1789.0578, 122.2007, 1207.4366], // NE corner behind invis wall, on pillar, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1789.0578, 122.2007, 1207.4366, 10],
+      "lump": {
+        "name":"desertc-skill-21"
+      }
+    },
+    {
+      "trans": [ 1763.1893, 122.5722, 1229.2603], // NE corner behind invis wall, on pillar 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1763.1893, 122.5722, 1229.2603, 10],
+      "lump": {
+        "name":"desertc-skill-22"
+      }
+    },
+    {
+      "trans": [ 1769.8524, 118.1112, 1218.5349], // NE corner behind invis wall, on pillar, sike you're back in bounds 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1769.8524, 118.1112, 1218.5349, 10],
+      "lump": {
+        "name":"desertc-skill-23"
+      }
+    },
+    {
+      "trans": [ 1805.1456, 64.5836, 1102.2723], // NE corner behind invis wall, small crevice along northern mountain range
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1805.1456, 64.5836, 1102.2723, 10],
+      "lump": {
+        "name":"desertc-skill-24"
+      }
+    },
+    {
+      "trans": [ 1765.0441, 79.4925, 1061.2304], // NE corner, northern mountain behind invis wall, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1765.0441, 79.4925, 1061.2304, 10],
+      "lump": {
+        "name":"desertc-skill-25"
+      }
+    },
+    {
+      "trans": [ 1728.9533, 54.8886, 1032.8918], // NE corner, northern mountain behind invis wall, small crevice, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1728.9533, 54.8886, 1032.8918, 10],
+      "lump": {
+        "name":"desertc-skill-26"
+      }
+    },
+    {
+      "trans": [ 1684.9250, 51.9224, 1030.4135], // NE corner, northern mountain behind invis wall, small crevice, follow from ^  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1684.9250, 51.9224, 1030.4135, 10],
+      "lump": {
+        "name":"desertc-skill-27"
+      }
+    },
+    {
+      "trans": [ 1212.0299, 63.2149, 1109.1140], // cliffside 1 oclock, northern end 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1212.0299, 63.2149, 1109.1140, 10],
+      "lump": {
+        "name":"desertc-skill-28"
+      }
+    },
+    {
+      "trans": [ 1218.4165, 76.8159, 1115.9423], // cliffside 1 oclock, northern end, up from ^ (or slip through from above) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1218.4165, 76.8159, 1115.9423, 10],
+      "lump": {
+        "name":"desertc-skill-29"
+      }
+    },
+    {
+      "trans": [ 1210.3895, 78.0983, 1134.1514], // cliffside 1 oclock, northern end, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1210.3895, 78.0983, 1134.1514, 10],
+      "lump": {
+        "name":"desertc-skill-30"
+      }
+    },
+    {
+      "trans": [ 1234.6140, 119.9983, 1237.9909], // in tree on top of cliff at 1 oclock, grab from top of rock 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1234.6140, 119.9983, 1237.9909, 10],
+      "lump": {
+        "name":"desertc-skill-31"
+      }
     }//,
 
   ]
