@@ -97,6 +97,98 @@
       "lump": {
         "name":"desertc-skill-04"
       }
+    },
+    {
+      "trans": [ 906.8663, 62.1169, 1453.1604], // between rocks north of northern turn in river 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 906.8663, 62.1169, 1453.1604, 10],
+      "lump": {
+        "name":"desertc-skill-05"
+      }
+    },
+    {
+      "trans": [ 907.0269, 71.5274, 1450.8212], // between rocks north of northern turn in river 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 907.0269, 71.5274, 1450.8212, 10],
+      "lump": {
+        "name":"desertc-skill-06",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 897.5628, 92.2139, 1454.7874], // on top of rocks north of northern turn in river 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 897.5628, 92.2139, 1454.7874, 10],
+      "lump": {
+        "name":"desertc-skill-07"
+      }
+    },
+    {
+      "trans": [ 696.6143, 81.1777, 1282.8768], // north (west) side of cliffs north of northern turn in river (north)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 696.6143, 81.1777, 1282.8768, 10],
+      "lump": {
+        "name":"desertc-skill-08"
+      }
+    },
+    {
+      "trans": [ 855.7515, 95.0000, 1274.9083], // north (east) side of rock cliffs north of northern turn in river
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 855.7515, 95.0000, 1274.9083, 10],
+      "lump": {
+        "name":"desertc-skill-09"
+      }
+    },
+    {
+      "trans": [ 881.0704, 79.4155, 1354.2711], // between tree and rocks on small rock range north of northern turn in river 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 881.0704, 79.4155, 1354.2711, 10],
+      "lump": {
+        "name":"desertc-skill-10"
+      }
+    },
+    {
+      "trans": [ 889.9580, 86.2903, 1335.4957], // crevice in smaller rock range north of northern turn in river
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 889.9580, 86.2903, 1335.4957, 10],
+      "lump": {
+        "name":"desertc-skill-11",
+        "bob-scale": ["float", 0.1875]
+      }
+    },
+    {
+      "trans": [ 832.0630, 86.3036, 1631.9482], // corner of cliffside near vehicle jump, SW side of river at northern turn 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 832.0630, 86.3036, 1631.9482, 10],
+      "lump": {
+        "name":"desertc-skill-12"
+      }
+    },
+    {
+      "trans": [ 561.2380, 98.5082, 1571.9058], // crevice near top of cliff southside of river, 1/4 from ocean side
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 561.2380, 98.5082, 1571.9058, 10],
+      "lump": {
+        "name":"desertc-skill-13"
+      }
     }//,
 
   ]
