@@ -372,6 +372,225 @@
       "lump": {
         "name":"desertc-skill-31"
       }
+    },
+    {
+      "trans": [ 158.8400, 55.2060, 1145.0020], // in secret cubby on rock wall, NW corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 158.8400, 55.2060, 1145.0020, 10],
+      "lump": {
+        "name":"desertc-skill-32"
+      }
+    },
+    {
+      "trans": [ 162.7293, 75.2692, 1148.3546], // mid way up rock wall, NW corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 162.7293, 75.2692, 1148.3546, 10],
+      "lump": {
+        "name":"desertc-skill-33"
+      }
+    },
+    {
+      "trans": [ 99.1875, 26.3996, 1149.0477], // far west side of north rock wall, jump out of water up here 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 99.1875, 26.3996, 1149.0477, 10],
+      "lump": {
+        "name":"desertc-skill-34",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 105.5602, 52.0106, 1144.4232], // halfway up far west side of north rock wall, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 105.5602, 52.0106, 1144.4232, 10],
+      "lump": {
+        "name":"desertc-skill-35",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 127.3774, 76.7584, 1139.4055], // 3/4 up rock wall, NW corner, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 127.3774, 76.7584, 1139.4055, 10],
+      "lump": {
+        "name":"desertc-skill-36",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 132.0881, 97.8232, 1144.9703], // top of rock wall, NW corner, abah from ^ and concussor slide bullshit 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 132.0881, 97.8232, 1144.9703, 10],
+      "lump": {
+        "name":"desertc-skill-37"
+      }
+    },
+    {
+      "trans": [ 196.1473, 72.4886, 1144.4442], // NW corner, behind rock wall but in front of invis wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 196.1473, 72.4886, 1144.4442, 10],
+      "lump": {
+        "name":"desertc-skill-38"
+      }
+    },
+    {
+      "trans": [ 167.1969, 106.1505, 1135.4414], // top of rock wall NWish, concussor slide bs from ^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 167.1969, 106.1505, 1135.4414, 10],
+      "lump": {
+        "name":"desertc-skill-39"
+      }
+    },
+    {
+      "trans": [ 214.6281, 101.2747, 1146.4378], // back (north) side of rock wall in NW corner, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 214.6281, 101.2747, 1146.4378, 10],
+      "lump": {
+        "name":"desertc-skill-40",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 210.1270, 118.9729, 1159.9910], // top of rock wall NWish, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 210.1270, 118.9729, 1159.9910, 10],
+      "lump": {
+        "name":"desertc-skill-41"
+      }
+    },
+    {
+      "trans": [ 292.3198, 114.0366, 1123.6518], // midway up rock wall by NW volcano 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 292.3198, 114.0366, 1123.6518, 10],
+      "lump": {
+        "name":"desertc-skill-42",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 263.6341, 132.9535, 1120.7333], // 3/4 up and behind rock wall by NW volcano, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 263.6341, 132.9535, 1120.7333, 10],
+      "lump": {
+        "name":"desertc-skill-43",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 278.3428, 156.3448, 1114.4428], // top of rock wall by NW volcano, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 278.3428, 156.3448, 1114.4428, 10],
+      "lump": {
+        "name":"desertc-skill-44"
+      }
+    },
+    {
+      "trans": [ 332.2846, 183.9497, 1095.4458], // top of rock wall by NW volcano, higher than ^, concussor slide bullshit 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 332.2846, 183.9497, 1095.4458, 10],
+      "lump": {
+        "name":"desertc-skill-45"
+      }
+    },
+    {
+      "trans": [ 383.7708, 100.1433, 1130.3643], // sneaky crevice 1/4 up rock wall by NW volcano (centerish) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 383.7708, 100.1433, 1130.3643, 10],
+      "lump": {
+        "name":"desertc-skill-46"
+      }
+    },
+    {
+      "trans": [ 413.8493, 147.2232, 1111.1978], // up on rock wall by NW volcano, behind rock slab 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 413.8493, 147.2232, 1111.1978, 10],
+      "lump": {
+        "name":"desertc-skill-47",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 414.6647, 173.8482, 1095.9927], // top of rock wall by NW volcano (centerish), abah concussor slide from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 414.6647, 173.8482, 1095.9927, 10],
+      "lump": {
+        "name":"desertc-skill-48"
+      }
+    },
+    {
+      "trans": [ 519.6734, 81.2463, 1090.0382], // crevice in rock wall by NW volcano, right side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 519.6734, 81.2463, 1090.0382, 10],
+      "lump": {
+        "name":"desertc-skill-49"
+      }
+    },
+    {
+      "trans": [ 497.7949, 123.5146, 1092.2282], // midway up rock wall by NW volcano, right side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 497.7949, 123.5146, 1092.2282, 10],
+      "lump": {
+        "name":"desertc-skill-50",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 485.9473, 150.1910, 1093.5305], // midway up rock wall by NW volcano, right side, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 485.9473, 150.1910, 1093.5305, 10],
+      "lump": {
+        "name":"desertc-skill-51",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 518.2075, 82.9265, 1031.5122], // behind invis wall at rock wall by NW volcano, right side, abah concussor slide from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 518.2075, 82.9265, 1031.5122, 10],
+      "lump": {
+        "name":"desertc-skill-52"
+      }
     }//,
 
   ]

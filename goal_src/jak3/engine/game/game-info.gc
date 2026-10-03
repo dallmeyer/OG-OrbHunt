@@ -957,7 +957,7 @@
                   ;; (set! (-> font-ctx color) (font-color transparent))
                   (clear *temp-string*)
                   (clear *pc-encoded-temp-string*)
-                  (format *temp-string* "Collected one of ~S's orbs!~%" a)
+                  (format *temp-string* "You collected one of ~S's orbs!~%" a)
                   
                   (pc-encode-utf8-string *temp-string* *pc-encoded-temp-string*)
                   (draw-string-adv *pc-encoded-temp-string* buf font-ctx)
