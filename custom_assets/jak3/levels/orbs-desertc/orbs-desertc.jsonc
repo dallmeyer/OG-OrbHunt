@@ -816,6 +816,111 @@
         "name":"desertc-skill-74",
         "bob-scale": ["float", 0.6875]
       }
+    },
+    {
+      "trans": [ 1147.5129, 99.3265, 1451.1409], // halfway up rock tower NE of north turn in river 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1147.5129, 99.3265, 1451.1409, 10],
+      "lump": {
+        "name":"desertc-skill-75"
+      }
+    },
+    {
+      "trans": [ 1143.8867, 111.2376, 1453.1850], //  top of rock tower NE of north turn in river, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1143.8867, 111.2376, 1453.1850, 10],
+      "lump": {
+        "name":"desertc-skill-76"
+      }
+    },
+    {
+      "trans": [ 1370.8342, 49.5415, 1507.7845], // buried in sand next to tree and rocks 2/3 from north turn in river toward eastern mountains 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1370.8342, 49.5415, 1507.7845, 10],
+      "lump": {
+        "name":"desertc-skill-77",
+        "bob-scale": ["float", -1.0], // no bob
+        "no-spin": ["float", 1.0] // no spin
+      }
+    },
+    {
+      "trans": [ 1366.5797, 91.7666, 1527.3010], // top of rocks 2/3 from north turn in river toward eastern mountains  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1366.5797, 91.7666, 1527.3010, 10],
+      "lump": {
+        "name":"desertc-skill-78"
+      }
+    },
+    {
+      "trans": [ 1231.5802, 38.6461, 1697.1655], // under smaller ramp north of south section of river 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1231.5802, 38.6461, 1697.1655, 10],
+      "lump": {
+        "name":"desertc-skill-79"
+      }
+    },
+    {
+      "trans": [ 1469.9350, 56.3220, 1372.4334], // between lower rocks 3/4 from NE turn in river towards eastern mountains 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1469.9350, 56.3220, 1372.4334, 10],
+      "lump": {
+        "name":"desertc-skill-80"
+      }
+    },
+    {
+      "trans": [ 1408.7340, 103.5071, 785.2609], // under rocks along wall NE corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1408.7340, 103.5071, 785.2609, 10],
+      "lump": {
+        "name":"desertc-skill-81",
+        "bob-scale": ["float", 0.7812]
+      }
+    },
+    {
+      "trans": [ 1416.6391, 125.4487, 782.5238], // halfway up rock wall NE corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1416.6391, 125.4487, 782.5238, 10],
+      "lump": {
+        "name":"desertc-skill-82",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1415.5361, 139.8130, 791.3129], // top of rock pillar on wall NE corner, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1415.5361, 139.8130, 791.3129, 10],
+      "lump": {
+        "name":"desertc-skill-83",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1440.7960, 105.8383, 785.7534], // behind rock wall and invis wall in NE corner, abah concussor slide BS from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1440.7960, 105.8383, 785.7534, 10],
+      "lump": {
+        "name":"desertc-skill-84"
+      }
     }//,
 
   ]
