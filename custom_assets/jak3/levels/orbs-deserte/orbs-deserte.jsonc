@@ -119,6 +119,48 @@
         "name":"deserte-skill-06"
       }
     },
+    {
+      "trans": [ 538.6384, 61.0551, 3790.5500], // under rocks in SW corner of mainland 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 538.6384, 61.0551, 3790.5500, 10],
+      "lump": {
+        "name":"deserte-skill-07",
+        "bob-scale": ["float", 0.9062]
+      }
+    },
+    {
+      "trans": [ 528.7014, 55.5460, 3773.3210], // base of NW-most tree at SW mainland rocks 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 528.7014, 55.5460, 3773.3210, 10],
+      "lump": {
+        "name":"deserte-skill-08"
+      }
+    },
+    {
+      "trans": [ 571.6148, 48.9956, 3782.4948], // base of NE-most tree at SW mainland rocks  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 571.6148, 48.9956, 3782.4948, 10],
+      "lump": {
+        "name":"deserte-skill-09"
+      }
+    },
+    {
+      "trans": [ 540.1029, 63.9364, 3796.0039], // base of southern-most tree at SW mainland rocks  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 540.1029, 63.9364, 3796.0039, 10],
+      "lump": {
+        "name":"deserte-skill-10",
+        "bob-scale": ["float", 0.6250]
+      }
+    },
 
     {
       "trans": [ 620.0590209960938, 18.11319923400879, 2534.6298828125], // ashelin at oasis
