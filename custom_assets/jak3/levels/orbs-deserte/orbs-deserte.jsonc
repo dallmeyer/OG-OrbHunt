@@ -161,6 +161,191 @@
         "bob-scale": ["float", 0.6250]
       }
     },
+    {
+      "trans": [ 412.6338, 84.7715, 2376.4682], // up in tree leaves, jetboard yolo or hopper
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 412.6338, 84.7715, 2376.4682, 10],
+      "lump": {
+        "name":"deserte-skill-11"
+      }
+    },
+    {
+      "trans": [ 821.8211, 42.9883, 2717.3999], // small crevice in east rock wall, just south of oasis lake
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 821.8211, 42.9883, 2717.3999, 10],
+      "lump": {
+        "name":"deserte-skill-12"
+      }
+    },
+    {
+      "trans": [ 324.8045, 21.1635, 2697.6872], // base of trees along west coast, just south of oasis lake 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 324.8045, 21.1635, 2697.6872, 10],
+      "lump": {
+        "name":"deserte-skill-13"
+      }
+    },
+    {
+      "trans": [ 573.7658, 14.7388, 3257.3740], // under rocks along west coast, about level with the path to marauder stronghold
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 573.7658, 14.7388, 3257.3740, 10],
+      "lump": {
+        "name":"deserte-skill-14"
+      }
+    },
+    {
+      "trans": [ 109.7021, 28.6810, 3386.3039], // base of trees on northern circle island 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 109.7021, 28.6810, 3386.3039, 10],
+      "lump": {
+        "name":"deserte-skill-15",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 114.3048, 53.1455, 3383.6228], // on top of smaller tree on northern circle island 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 114.3048, 53.1455, 3383.6228, 10],
+      "lump": {
+        "name":"deserte-skill-16"
+      }
+    },
+    {
+      "trans": [ 148.8302, 47.2487, 3840.3828], // base of south trees on egg shaped island 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 148.8302, 47.2487, 3840.3828, 10],
+      "lump": {
+        "name":"deserte-skill-17"
+      }
+    },
+    {
+      "trans": [ 162.7966, 28.7356, 3694.8366], // embedded in sand on rock near north end of egg shaped island 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 162.7966, 28.7356, 3694.8366, 10],
+      "lump": {
+        "name":"deserte-skill-18",
+        "bob-scale": ["float", -1.0], // no bob
+        "no-spin": ["float", 1.0] // no spin
+      }
+    },
+    {
+      "trans": [ 998.6932, 21.7006, 3784.0200], // on rocks over water along SE mountain, right where tentacle zone starts (hug wall for the next dozen orbs)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 998.6932, 21.7006, 3784.0200, 10],
+      "lump": {
+        "name":"deserte-skill-19"
+      }
+    },
+    {
+      "trans": [ 1000.0377, 30.5981, 3792.7258], // on rocks over water along SE mountain, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1000.0377, 30.5981, 3792.7258, 10],
+      "lump": {
+        "name":"deserte-skill-20"
+      }
+    },
+    {
+      "trans": [ 1004.7168, 16.5703, 3815.0734], // on rocks over water along SE mountain, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1004.7168, 16.5703, 3815.0734, 10],
+      "lump": {
+        "name":"deserte-skill-21",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1006.5825, 30.4668, 3828.7504], // on rocks over water along SE mountain, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1006.5825, 30.4668, 3828.7504, 10],
+      "lump": {
+        "name":"deserte-skill-22"
+      }
+    },
+    {
+      "trans": [ 1002.1309, 8.2954, 3836.3471], // in pocket of water between rocks along SE mountain, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1002.1309, 8.2954, 3836.3471, 10],
+      "lump": {
+        "name":"deserte-skill-23"
+      }
+    },
+    {
+      "trans": [ 990.7078, 14.2647, 3875.4086], // on rocks over water along SE mountain, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 990.7078, 14.2647, 3875.4086, 10],
+      "lump": {
+        "name":"deserte-skill-24"
+      }
+    },
+    {
+      "trans": [ 1039.1505, 8.5512, 3941.4501], // at SE end of mountain range, before invis wall and tentacle zone meet 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1039.1505, 8.5512, 3941.4501, 10],
+      "lump": {
+        "name":"deserte-skill-25"
+      }
+    },
+    {
+      "trans": [ 1001.5288, 12.1478, 3874.5427], // on backside of SE rock wall secret area, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1001.5288, 12.1478, 3874.5427, 10],
+      "lump": {
+        "name":"deserte-skill-26",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1025.6168, 39.8458, 3893.1630], // on top of rock pillar along SE mountain, abah concussor slide BS from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1025.6168, 39.8458, 3893.1630, 10],
+      "lump": {
+        "name":"deserte-skill-27"
+      }
+    },
+    {
+      "trans": [ 1010.4720, 8.2494, 3843.1911], // deep in secret water area behind SE mountain range, follow from ^^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1010.4720, 8.2494, 3843.1911, 10],
+      "lump": {
+        "name":"deserte-skill-28"
+      }
+    },
 
     {
       "trans": [ 620.0590209960938, 18.11319923400879, 2534.6298828125], // ashelin at oasis
