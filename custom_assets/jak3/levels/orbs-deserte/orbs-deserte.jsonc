@@ -346,6 +346,140 @@
         "name":"deserte-skill-28"
       }
     },
+    {
+      "trans": [ 745.1406, 51.0516, 3003.1940], // base of tree by big rocks in very center of this section 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 745.1406, 51.0516, 3003.1940, 10],
+      "lump": {
+        "name":"deserte-skill-29"
+      }
+    },
+    {
+      "trans": [ 750.1214, 95.8456, 2991.5834], // above tree by big rocks in very center 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 750.1214, 95.8456, 2991.5834, 10],
+      "lump": {
+        "name":"deserte-skill-30"
+      }
+    },
+    {
+      "trans": [ 708.3929, 44.4678, 3629.2893], // behind satellite 2 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 708.3929, 44.4678, 3629.2893, 10],
+      "lump": {
+        "name":"deserte-skill-31",
+        "pickup-amount": ["float", 2.0], // abah hint,
+        "bob-scale": ["float", 0.1875]
+      }
+    },
+    {
+      "trans": [ 693.1176, 67.7837, 3621.2338], // on tree above sat 2, abah concussor slide bs from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 693.1176, 67.7837, 3621.2338, 10],
+      "lump": {
+        "name":"deserte-skill-32"
+      }
+    },
+    {
+      "trans": [ 1050.5675, 9.2071, 3649.0520], // along rock wall at north end of southern inlet, wet abah 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1050.5675, 9.2071, 3649.0520, 10],
+      "lump": {
+        "name":"deserte-skill-33",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 1059.9018, 19.3206, 3656.4877], // crevice in rock wall at north end of southern inlet, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1059.9018, 19.3206, 3656.4877, 10],
+      "lump": {
+        "name":"deserte-skill-34"
+      }
+    },
+    {
+      "trans": [ 1060.4908, 32.0402, 3664.7609], // up on rock wall at north end of southern inlet, abah from ^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1060.4908, 32.0402, 3664.7609, 10],
+      "lump": {
+        "name":"deserte-skill-35"
+      }
+    },
+    {
+      "trans": [ 1080.9638, 30.4908, 3646.6274], // troll orb right near fake rock where you can fall into trap hole, north end of southern inlet, follow from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1080.9638, 30.4908, 3646.6274, 10],
+      "lump": {
+        "name":"deserte-skill-36"
+      }
+    },
+    {
+      "trans": [ 1016.2306, 51.8492, 3466.1645], // crevice in southern rock wall just north of water edge
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1016.2306, 51.8492, 3466.1645, 10],
+      "lump": {
+        "name":"deserte-skill-37"
+      }
+    },
+    {
+      "trans": [ 950.4448, 94.7625, 3355.3369], // behind rocks along north end of southern rock wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 950.4448, 94.7625, 3355.3369, 10],
+      "lump": {
+        "name":"deserte-skill-38"
+      }
+    },
+    {
+      "trans": [ 953.4114, 88.6507, 3363.3725], // behind rocks along north end of southern rock wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 953.4114, 88.6507, 3363.3725, 10],
+      "lump": {
+        "name":"deserte-skill-39"
+      }
+    },
+    {
+      "trans": [ 969.1420, 96.8466, 3362.5415], // behind rocks along north end of southern rock wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 969.1420, 96.8466, 3362.5415, 10],
+      "lump": {
+        "name":"deserte-skill-40"
+      }
+    },
+    {
+      "trans": [ 971.2658, 97.1507, 3383.7028], // behind rocks along north end of southern rock wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 971.2658, 97.1507, 3383.7028, 10],
+      "lump": {
+        "name":"deserte-skill-41",
+        "bob-scale": ["float", 0.5312]
+      }
+    },
 
     {
       "trans": [ 620.0590209960938, 18.11319923400879, 2534.6298828125], // ashelin at oasis
