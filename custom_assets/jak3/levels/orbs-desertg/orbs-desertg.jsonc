@@ -169,6 +169,168 @@
         "name":"desertg-skill-11"
       }
     },
+    {
+      "trans": [ 2604.3063, 50.1035, 2486.2683], // behind weird invis ground collision on NW corner rocks between ruins 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2604.3063, 50.1035, 2486.2683, 10],
+      "lump": {
+        "name":"desertg-skill-12"
+      }
+    },
+    {
+      "trans": [ 2600.0063, 74.4203, 2477.6254], // top of NW corner rocks between ruins 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2600.0063, 74.4203, 2477.6254, 10],
+      "lump": {
+        "name":"desertg-skill-13"
+      }
+    },
+    {
+      "trans": [ 2618.5830, 32.4777, 2434.0246], // crevice between wall and rock in NW corner between ruins
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2618.5830, 32.4777, 2434.0246, 10],
+      "lump": {
+        "name":"desertg-skill-14"
+      }
+    },
+    {
+      "trans": [ 2573.8647, 36.9026, 2537.0568], // behind ruins wall west (northish)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2573.8647, 36.9026, 2537.0568, 10],
+      "lump": {
+        "name":"desertg-skill-15",
+        "bob-scale": ["float", 0.6250]
+      }
+    },
+    {
+      "trans": [ 2561.3366, 24.2536, 2545.9462], // crevice behind ruins wall west (northish) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2561.3366, 24.2536, 2545.9462, 10],
+      "lump": {
+        "name":"desertg-skill-16"
+      }
+    },
+    {
+      "trans": [ 2545.6408, 61.4190, 2531.9201], // top of rocks among ruins west (northish) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2545.6408, 61.4190, 2531.9201, 10],
+      "lump": {
+        "name":"desertg-skill-17"
+      }
+    },
+    {
+      "trans": [ 2702.9460, 89.8011, 2321.6696], // top of rocks among ruins north (westish) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2702.9460, 89.8011, 2321.6696, 10],
+      "lump": {
+        "name":"desertg-skill-18"
+      }
+    },
+    {
+      "trans": [ 2767.3598, 68.9857, 2325.7641], // on ruins wall north (westish)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2767.3598, 68.9857, 2325.7641, 10],
+      "lump": {
+        "name":"desertg-skill-19",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 2786.1933, 63.0254, 2332.1262], // on top of ruins behind invis wall, north (westish)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2786.1933, 63.0254, 2332.1262, 10],
+      "lump": {
+        "name":"desertg-skill-20"
+      }
+    },
+    {
+      "trans": [ 2696.2983, 22.2270, 2438.7158], // corner between ruins buildings in NW 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2696.2983, 22.2270, 2438.7158, 10],
+      "lump": {
+        "name":"desertg-skill-21"
+      }
+    },
+    {
+      "trans": [ 2699.0319, 35.8382, 2352.3769], // in corner of triangle ground between rocks and ruins in NW 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2699.0319, 35.8382, 2352.3769, 10],
+      "lump": {
+        "name":"desertg-skill-22"
+      }
+    },
+    {
+      "trans": [ 2711.7639, 36.8994, 2376.8181], // in center of invis walls between ruins in NW 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2711.7639, 36.8994, 2376.8181, 10],
+      "lump": {
+        "name":"desertg-skill-23"
+      }
+    },
+    {
+      "trans": [ 2716.1970, 40.0764, 2379.9362], // in center of invis walls between ruins in NW 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2716.1970, 40.0764, 2379.9362, 10],
+      "lump": {
+        "name":"desertg-skill-24"
+      }
+    },
+    {
+      "trans": [ 2892.5222, 41.2463, 2381.2490], // corner behind wall and wooden beams north ruins 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2892.5222, 41.2463, 2381.2490, 10],
+      "lump": {
+        "name":"desertg-skill-25"
+      }
+    },
+    {
+      "trans": [ 2878.3129, 34.6516, 2461.5278], // corner behind wall and wooden window frame, south side of north ruins 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2878.3129, 34.6516, 2461.5278, 10],
+      "lump": {
+        "name":"desertg-skill-26"
+      }
+    },
+    {
+      "trans": [ 2842.4714, 29.7891, 2461.5612], // behind rock and wooden beams along ruins wall, south side of north ruins 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2842.4714, 29.7891, 2461.5612, 10],
+      "lump": {
+        "name":"desertg-skill-27"
+      }
+    },
 
     {
       "trans": [ 2296.5859, 17.8694, 2222.8425], // sig by nest cave
