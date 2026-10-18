@@ -459,6 +459,87 @@
       "lump": {
         "name":"stadium-skill-37"
       }
+    },
+    {
+      "trans": [ 282.5235, -3.6957, -568.6394], // IJ under metal beam over void to next orb, gap near start with 2 orbs in vanilla
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0.3774, -0.0015, 0.9260, 0.0006],
+      "bsphere": [ 282.5235, -3.6957, -568.6394, 10],
+      "lump": {
+        "name":"stadium-skill-38"
+      }
+    },
+    {
+      "trans": [ 275.4899, 2.9100, -566.7178], // on metal ledge behind invis wall, IJ under from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 275.4899, 2.9100, -566.7178, 10],
+      "lump": {
+        "name":"stadium-skill-39"
+      }
+    },
+    {
+      "trans": [ 325.6377, -6.9524, -578.1243], // on pipe under shrubs near gap with 2 orbs in vanilla 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 325.6377, -6.9524, -578.1243, 10],
+      "lump": {
+        "name":"stadium-skill-40"
+      }
+    },
+    {
+      "trans": [ 358.9139, 24.1711, -628.5278], // top of metal beams along east wall, northish 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 358.9139, 24.1711, -628.5278, 10],
+      "lump": {
+        "name":"stadium-skill-41",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 364.6364, 40.6725, -637.1139], // city wall floating standpoint along east wall, northish, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 364.6364, 40.6725, -637.1139, 10],
+      "lump": {
+        "name":"stadium-skill-42"
+      }
+    },
+    {
+      "trans": [ 370.7047, 45.3721, -575.2811], // top of east city wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 370.7047, 45.3721, -575.2811, 10],
+      "lump": {
+        "name":"stadium-skill-43"
+      }
+    },
+    {
+      "trans": [ 364.8472, 38.3440, -524.6028], // top of east city wall, southish, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 364.8472, 38.3440, -524.6028, 10],
+      "lump": {
+        "name":"stadium-skill-44"
+      }
+    },
+    {
+      "trans": [ 360.8971, 2.9880, -610.4431], // in crevice between stone blocks along east wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 360.8971, 2.9880, -610.4431, 10],
+      "lump": {
+        "name":"stadium-skill-45"
+      }
     }//,
 
   ]

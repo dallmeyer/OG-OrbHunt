@@ -220,6 +220,307 @@
       "lump": {
         "name":"desertb-skill-14"
       }
+    },
+    {
+      "trans": [ 2768.2272, 48.7932, 513.9240], // mid of rocks on west side of race track 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2768.2272, 48.7932, 513.9240, 10],
+      "lump": {
+        "name":"desertb-skill-15"
+      }
+    },
+    {
+      "trans": [ 2757.0795, 62.0387, 504.5348], // top of rocks on west side of race track 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2757.0795, 62.0387, 504.5348, 10],
+      "lump": {
+        "name":"desertb-skill-16"
+      }
+    },
+    {
+      "trans": [ 2800.4187, 12.5480, 139.6051], // on sand right by water, down behind big rocks kinda near air train 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2800.4187, 12.5480, 139.6051, 10],
+      "lump": {
+        "name":"desertb-skill-17"
+      }
+    },
+    {
+      "trans": [ 3218.3930, 44.5200, 85.6790], // gap where sand meets coast rocks, north side of "lake" 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3218.3930, 44.5200, 85.6790, 10],
+      "lump": {
+        "name":"desertb-skill-18"
+      }
+    },
+    {
+      "trans": [ 3460.0124, 68.7197, 364.2723], // gap in top of rocks south of "lake", abah hint for skill-08 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3460.0124, 68.7197, 364.2723, 10],
+      "lump": {
+        "name":"desertb-skill-19",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3465.4011, 57.2257, 363.0013], // crevice in rocks south of "lake" 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3465.4011, 57.2257, 363.0013, 10],
+      "lump": {
+        "name":"desertb-skill-20",
+        "bob-scale": ["float", 0.1250]
+      }
+    },
+    {
+      "trans": [ 3480.5808, 39.9545, 364.4274], // behind torch against rocks, south of "lake" 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3480.5808, 39.9545, 364.4274, 10],
+      "lump": {
+        "name":"desertb-skill-21"
+      }
+    },
+    {
+      "trans": [ 3394.5668, 38.2292, 335.3109], // gap in sand where it meets coast rock, south side of "lake" 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3394.5668, 38.2292, 335.3109, 10],
+      "lump": {
+        "name":"desertb-skill-22"
+      }
+    },
+    {
+      "trans": [ 3375.1196, 48.2711, 631.3491], // bottom of NW corner of east rock wall
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3375.1196, 48.2711, 631.3491, 10],
+      "lump": {
+        "name":"desertb-skill-23",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3378.9909, 65.1018, 629.1504], // on NW corner of east rock wall, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3378.9909, 65.1018, 629.1504, 10],
+      "lump": {
+        "name":"desertb-skill-24",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3386.3500, 77.1311, 629.5780], // hidden crevice behind rocks on NW corner of east rock wall, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3386.3500, 77.1311, 629.5780, 10],
+      "lump": {
+        "name":"desertb-skill-25",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3392.4223, 90.1458, 646.8067], // on NW corner of east rock wall, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3392.4223, 90.1458, 646.8067, 10],
+      "lump": {
+        "name":"desertb-skill-26",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3392.6811, 103.5152, 634.2105], // on NW corner of east rock wall, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3392.6811, 103.5152, 634.2105, 10],
+      "lump": {
+        "name":"desertb-skill-27",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3394.2739, 114.8761, 627.8566], // top of rock pillar on NW corner of east rock wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3394.2739, 114.8761, 627.8566, 10],
+      "lump": {
+        "name":"desertb-skill-28"
+      }
+    },
+    {
+      "trans": [ 3413.0444, 102.3661, 598.5810], // top of east rock wall, NW corner, yolo from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3413.0444, 102.3661, 598.5810, 10],
+      "lump": {
+        "name":"desertb-skill-29"
+      }
+    },
+    {
+      "trans": [ 3421.6403, 111.5909, 570.9393], // on east rock wall, NW corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3421.6403, 111.5909, 570.9393, 10],
+      "lump": {
+        "name":"desertb-skill-30"
+      }
+    },
+    {
+      "trans": [ 3450.7429, 113.2370, 590.7172], // up on east rock wall, NW corner, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3450.7429, 113.2370, 590.7172, 10],
+      "lump": {
+        "name":"desertb-skill-31",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3431.2089, 133.1840, 590.4221], // up on east rock wall, abah from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3431.2089, 133.1840, 590.4221, 10],
+      "lump": {
+        "name":"desertb-skill-32",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 3426.0317, 144.2737, 590.5908], // top of rock pillar on east rock wall, abah from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3426.0317, 144.2737, 590.5908, 10],
+      "lump": {
+        "name":"desertb-skill-33"
+      }
+    },
+    {
+      "trans": [ 3462.2727, 122.9876, 570.2679], // up on east rock wall above cave exit (following race path), follow from ^^^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3462.2727, 122.9876, 570.2679, 10],
+      "lump": {
+        "name":"desertb-skill-34"
+      }
+    },
+    {
+      "trans": [ 3504.0219, 82.2171, 546.0836], // behind invis wall on east rock wall, V crevice, yolo from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3504.0219, 82.2171, 546.0836, 10],
+      "lump": {
+        "name":"desertb-skill-35"
+      }
+    },
+    {
+      "trans": [ 3515.0017, 52.2431, 540.0408], // behind invis wall on lower level of east rock wall, yolo from ^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3515.0017, 52.2431, 540.0408, 10],
+      "lump": {
+        "name":"desertb-skill-36"
+      }
+    },
+    {
+      "trans": [ 3473.4658, 39.9745, 556.4942], // corner of rock wall on right exiting cave (following race path) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3473.4658, 39.9745, 556.4942, 10],
+      "lump": {
+        "name":"desertb-skill-37"
+      }
+    },
+    {
+      "trans": [ 3658.9902, 48.3535, 503.2562], // crevice on north side of east mountains 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3658.9902, 48.3535, 503.2562, 10],
+      "lump": {
+        "name":"desertb-skill-38"
+      }
+    },
+    {
+      "trans": [ 3876.5339, 2.0371, 341.1875], // underwater on bottom step in NW corner 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 3876.5339, 2.0371, 341.1875, 10],
+      "lump": {
+        "name":"desertb-skill-39"
+      }
+    },
+    {
+      "trans": [ 2137.0339, 57.8884, 378.6149], // under rock plateau at base of NW rock wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2137.0339, 57.8884, 378.6149, 10],
+      "lump": {
+        "name":"desertb-skill-40",
+        "bob-scale": ["float", 0.3125]
+      }
+    },
+    {
+      "trans": [ 2294.8627, 34.5772, 765.6133], // under rock plateau at base of SW rock wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2294.8627, 34.5772, 765.6133, 10],
+      "lump": {
+        "name":"desertb-skill-41"
+      }
+    },
+    {
+      "trans": [ 2334.8120, 45.3866, 779.8110], // under rock plateau on SW rock wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2334.8120, 45.3866, 779.8110, 10],
+      "lump": {
+        "name":"desertb-skill-42",
+        "bob-scale": ["float", 0.4062]
+      }
+    },
+    {
+      "trans": [ 2354.3457, 75.7020, 807.4865], // crevice behind rock pillar on NW corner of SW rock wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2354.3457, 75.7020, 807.4865, 10],
+      "lump": {
+        "name":"desertb-skill-43"
+      }
     }//,
 
   ]
