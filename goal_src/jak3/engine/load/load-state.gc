@@ -283,7 +283,7 @@
   (let ((tm (process-by-type task-manager *active-pool*)))
     (when tm
       (case (-> tm type symbol) :comp name=
-        (('task-manager-desert-interceptors-attack 'gungame-task-manager 'task-manager-wascity-gungame)
+        (('task-manager-desert-interceptors-attack 'gungame-task-manager 'task-manager-wascity-gungame 'task-manager-destroy-darkeco)
           (return #f)
           )
         )

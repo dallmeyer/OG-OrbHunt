@@ -751,7 +751,7 @@
   (process-drawable-from-entity! this arg0)
   (set! (-> this broken-door) (the-as handle #f))
   (cond
-    ((task-node-closed? (game-task-node city-destroy-darkeco-resolution))
+    (#t ;; (task-node-closed? (game-task-node city-destroy-darkeco-resolution))
      (process-entity-status! this (entity-perm-status dead) #t)
      (deactivate this)
      (go empty-state)
@@ -1036,7 +1036,7 @@
   (setup-masks (-> this draw) 0 1)
   (res-lump-value arg0 'behavior-type uint128 :time -1000000000.0)
   (cond
-    ((task-node-closed? (game-task-node city-destroy-darkeco-resolution))
+    (#t ;; (task-node-closed? (game-task-node city-destroy-darkeco-resolution))
      (process-entity-status! this (entity-perm-status dead) #t)
      (deactivate this)
      )

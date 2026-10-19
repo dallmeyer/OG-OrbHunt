@@ -122,6 +122,8 @@
                                        darkjak
                                        darkjak-bomb0
                                        darkjak-bomb1
+                                       darkjak-smack
+                                       darkjak-invinc
                                        lightjak
                                        lightjak-regen
                                        lightjak-freeze
@@ -441,6 +443,16 @@
        '("mhcity-de-tower-grind-strand-long-nocol01.mb"
           "mhcity-ground-lower-wall-gapfiller-strand-nub-01.mb"
           "mhcity-ground-lower-wall-veins-small-02.mb"
+          ;; "mhcity-wall-vine-thin-c-destrand-01.mb"
+          ;; "mhcity-wall-vine-thin-s-destrand-01.mb"
+          )
+       #t ;; (not (task-node-closed? (game-task-node city-destroy-darkeco-resolution)))
+       this
+       )
+      (prototypes-game-visible-set!
+       '(;;"mhcity-de-tower-grind-strand-long-nocol01.mb"
+         ;; "mhcity-ground-lower-wall-gapfiller-strand-nub-01.mb"
+         ;; "mhcity-ground-lower-wall-veins-small-02.mb"
           "mhcity-wall-vine-thin-c-destrand-01.mb"
           "mhcity-wall-vine-thin-s-destrand-01.mb"
           )

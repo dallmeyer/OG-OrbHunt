@@ -93,10 +93,11 @@
       )
     )
   (cond
-    ((task-node-closed? (game-task-node city-destroy-darkeco-resolution))
-     (process-entity-status! this (entity-perm-status dead) #t)
-     (deactivate this)
-     )
+    ;; orbhunt - spawn em
+    ;; ((task-node-closed? (game-task-node city-destroy-darkeco-resolution))
+    ;;  (process-entity-status! this (entity-perm-status dead) #t)
+    ;;  (deactivate this)
+    ;;  )
     (else
       (go (method-of-object this active))
       )

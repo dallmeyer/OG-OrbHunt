@@ -467,6 +467,7 @@
     ;; help prevent crash when developer is dum
     (when *debug-segment*
       (set-entity! *entity-debug-inspect* (the entity #f)))
+    (reset-actors 'debug)
     )
   :exit (behavior ()
     (set! (-> *level* camera-pos 0 quad) (-> (camera-pos) quad))

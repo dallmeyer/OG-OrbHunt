@@ -900,7 +900,7 @@
              )
         (when *debug-segment*
           (if (>= (the-as uint s0-0) (the-as uint s1-1))
-              (format *stdcon* "out of tie memory~%")
+              (format *stdcon* "out of tie memory 1~%")
               )
           )
         (when (< (the-as uint s0-0) (the-as uint s1-1))
@@ -987,7 +987,7 @@
                   )
                 (set! (-> *instance-tie-work* flags) (-> *instance-tie-work-copy* flags))
                 (if (and *debug-segment* (< (the-as int (-> *instance-tie-work* buffer-end)) (the-as int (-> s5-1 base))))
-                    (format *stdcon* "out of tie memory~%")
+                    (format *stdcon* "out of tie memory 2~%")
                     )
                 (when (>= (the-as int (-> *instance-tie-work* buffer-end)) (the-as int (-> s5-1 base)))
                   (set! (-> *prototype-tie-work* wait-to-spr) (the-as uint 0))
@@ -1047,7 +1047,7 @@
           (set! v0-9 (cond
                        ((< (the-as int (-> *instance-tie-work* buffer-end)) (the-as int (-> s5-1 base)))
                         (if *debug-segment*
-                            (format *stdcon* "out of tie memory~%")
+                            (format *stdcon* "out of tie memory 3~%")
                             )
                         (set! v0-9 (-> *instance-tie-work* buffer-start))
                         (set! (-> s5-1 base) (the-as pointer v0-9))

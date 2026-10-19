@@ -664,7 +664,7 @@
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
                     :borrow-size (new 'static 'array uint16 5 #x1a4 #x1a4 #x1a4 #x30c #x32a)
-                    :borrow-info (new 'static 'array object 5 #f #f #f #f #f) ;; '(lbbring6 #f))
+                    :borrow-info (new 'static 'array object 5 #f #f #f #f '(lctydest display)) ;; '(lbbring6 #f))
                     )
                   :bottom-height (meters -15)
                   :fog-height (meters 80)
@@ -2869,7 +2869,7 @@
                       :on-goto #f
                       :vis-nick 'ctyfarmb
                       :vehicle-type #x1b
-                      :want-count 1
+                      :want-count 2
                       :want (new 'static 'inline-array level-buffer-state-small 4
                         (new 'static 'level-buffer-state-small :name 'ctywide-kg  :display? 'special)
                         (new 'static 'level-buffer-state-small :name 'ctyfarmb :display? 'display)

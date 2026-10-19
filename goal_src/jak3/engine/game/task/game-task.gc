@@ -8443,7 +8443,8 @@
               )
             :flags (game-task-node-flag save-on-life act2)
             :parent-node (new 'static 'array game-task-node 4
-              (game-task-node city-destroy-darkeco-resolution)
+              ;; (game-task-node city-destroy-darkeco-resolution)
+              (game-task-node sewer-kg-met-resolution)
               (game-task-node none)
               (game-task-node none)
               (game-task-node none)
