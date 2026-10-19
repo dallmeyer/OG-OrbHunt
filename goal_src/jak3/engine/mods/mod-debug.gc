@@ -24,6 +24,7 @@
     *orb-placer-entity-type*
    
     (debug-menu-append-item orb-placer-menu (new-dm-func "Toggle Orb Marking" #f orb-placer-toggle-marking))
+    (debug-menu-append-item orb-placer-menu (new-dm-func "Toggle Orb Spin" #f orb-placer-toggle-spin))
     
     (let ((orb-rotate-menu (new 'debug 'debug-menu ctx "Rotate 90")))
       (debug-menu-append-item orb-rotate-menu (new-dm-func "X" #f orb-rotate-x))

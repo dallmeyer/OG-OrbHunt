@@ -919,7 +919,7 @@
   )
 
 ;; WARN: Return type mismatch (pointer process) vs (pointer manipy).
-(defun hud-create-icon ((arg0 hud) (arg1 int) (arg2 int))
+(defun hud-create-icon-named ((arg0 hud) (arg1 int) (arg2 int) (name string))
   (let ((s4-0
           (process-spawn
             manipy
@@ -929,7 +929,7 @@
             arg2
             #f
             0
-            :name "manipy"
+            :name name
             :to arg0
             :stack-size #x20000
             )
@@ -949,6 +949,10 @@
         )
       )
     )
+  )
+
+(defun hud-create-icon ((arg0 hud) (arg1 int) (arg2 int))
+  (hud-create-icon-named arg0 arg1 arg2 "manipy")
   )
 
 (defmethod alloc-string-if-needed ((this hud) (arg0 int))

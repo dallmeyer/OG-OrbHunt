@@ -427,6 +427,68 @@
   0
   (none)
   )
+  
+(defmethod draw ((this hud-cell))
+  (set-hud-piece-position!
+    (the-as hud-sprite (-> this icons 0 pos))
+    (the int (+ (* -130.0 (-> this offset)) (* 60.0 (-> *video-params* relative-x-scale))))
+    (if (nonzero? (-> *target* game fuel))
+      125  ;; visible
+      -500 ;; offscreen
+      )
+    )
+  (set-as-offset-from! (-> this sprites 0) (-> this icons 0 pos) -13 -16)
+  (set! (-> this sprites 0 scale-x) 0.4)
+  (set! (-> this sprites 0 scale-y) 1.0)
+  (format (clear (-> this strings 0 text)) "~D" (-> this values 0 current))
+  (set-as-offset-from! (the-as hud-sprite (-> this strings 0 pos)) (-> this icons 0 pos) 0 10)
+  (when (not (paused?))
+    (let ((s5-1 (new 'stack-no-clear 'quaternion)))
+      ;; og:preserve-this changed for high fps
+      (quaternion-axis-angle! s5-1 0.0 1.0 0.0 (* DISPLAY_FPS_RATIO 364.0889))
+      (quaternion*! (-> this icons 0 icon 0 root quat) s5-1 (-> this icons 0 icon 0 root quat))
+      )
+    )
+  ((method-of-type hud draw) this)
+  0
+  (none)
+  )
+
+(defmethod update-values! ((this hud-cell))
+  (set! (-> this values 0 target) (the int (-> *target* game fuel)))
+  ((method-of-type hud update-values!) this)
+  0
+  (none)
+  )
+
+(defmethod init-callback ((this hud-cell))
+  (set! (-> this gui-id)
+        (add-process *gui-control* this (gui-channel hud-upper-left) (gui-action hidden) (-> this name) 81920.0 0)
+        )
+  (hud-create-icon-named this 0 (the-as int (art-group-get-by-name *level* "skel-pre-artifact-d" (the-as (pointer level) #f))) "cell")
+  (set! (-> this icons 0 scale-x) 0.009)
+  (set! (-> this icons 0 scale-y) -0.018)
+  (set! (-> this sprites 0 tid) (the-as texture-id (get-texture hud-egg-glow level-default-minimap)))
+  (set! (-> this sprites 0 scale-x) 0.5)
+  (set! (-> this sprites 0 scale-y) 1.5)
+  (set! (-> this sprites 0 pos z) #xfff9ff)
+  (alloc-string-if-needed this 0)
+  (set! (-> this strings 0 flags) (font-flags kerning middle large))
+  (set! (-> this strings 0 scale) 0.5)
+  (logior! (-> this values 0 flags) 9)
+  (set! (-> this values 0 inc-time) (the-as uint 45))
+  (set! (-> this values 0 inc-unit) (the-as uint 1))
+  0
+  (none)
+  )
+
+(defmethod update-value-callback ((this hud-cell) (arg0 int) (arg1 int))
+  (if (> arg1 0)
+      (sound-play "inc-pickup" :pitch 0.5)
+      )
+  0
+  (none)
+  )
 
 (defmethod draw ((this hud-score))
   (set-hud-piece-position!
@@ -1429,6 +1491,8 @@
   (process-spawn hud-map :init hud-init-by-other :name "hud-map" :to arg0)
   (set! *hud-skullgem* (process-spawn hud-skullgem :init hud-init-by-other :name "hud-skullgem" :to arg0))
   (process-spawn hud-skill :init hud-init-by-other :name "hud-skill" :to arg0)
+  ;; TODO - merc hud?
+  ;; (process-spawn hud-cell :init hud-init-by-other :name "hud-cell" :to arg0)
   (process-spawn hud-gun :init hud-init-by-other :name "hud-gun" :to arg0)
   0
   (none)

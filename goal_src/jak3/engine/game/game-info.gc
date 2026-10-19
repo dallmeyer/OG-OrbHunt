@@ -1228,6 +1228,7 @@
            (set! (-> this task-pickup-time) (-> *display* game-clock frame-counter))
            )
        )
+     (ready-hud 'hud-cell -1)
      (give (-> this process game) 'fuel-cell amount pickup-handle)
      )
     (((pickup-type buzzer))

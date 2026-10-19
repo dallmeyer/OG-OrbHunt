@@ -1396,6 +1396,7 @@
                 )
             (.por a3-4 a3-3 t0-3)
             )
+          ;; (format 0 "~A ~B ~%" arg0 a3-4)
           (set! (-> v1-12 texture-mask a2-1 mask quad) a3-4)
           )
         )

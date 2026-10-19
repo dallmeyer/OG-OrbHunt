@@ -274,6 +274,14 @@
   (none)
   )
 
+(defun orb-placer-toggle-spin ()
+  (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
+    (let ((orb (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*))))
+      (when (and orb (type? orb skill))
+        (not! (-> (the skill orb) no-spin)))))
+  (none)
+  )
+
 (defun orb-rotate-x ()
   (when (and (>= *orb-placer-selected-idx* 0) (nonzero? (-> *orb-placer-orbs* *orb-placer-selected-idx*)))
     (let ((orb (the process-drawable (handle->process (-> *orb-placer-orbs* *orb-placer-selected-idx*)))))

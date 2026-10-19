@@ -1779,6 +1779,7 @@
   )
 
 (defun all-orbs-check? ((idx uint))
+  (if (and *debug-segment* (cpad-hold? 0 l3)) (return #t))
   (= (-> *game-info* skill-per-level idx) (-> *level-orb-total-counts* idx))
   ;; (= (-> *level-orb-collected-counts* idx) (-> *level-orb-total-counts* idx))
   )

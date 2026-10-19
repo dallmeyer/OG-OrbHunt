@@ -1425,7 +1425,8 @@
   )
 
 (deftype money (collectable)
-  ()
+  ((no-spin symbol) ;; added orbhunt
+  )
   )
 
 
@@ -1466,7 +1467,7 @@
   )
 
 (defmethod common-post ((this money))
-  (when (or (not (-> this entity)) (zero? (res-lump-float (-> this entity) 'no-spin)))
+  (when (not (-> this no-spin))
     (quaternion-rotate-y! (-> this root quat) (-> this root quat) (* (if (= (-> this type symbol) 'tape) 20480.0 40049.777) (seconds-per-frame))))
   (let ((f30-0 (-> this bob-amount)))
     (when (< 0.0 f30-0)
@@ -1596,8 +1597,10 @@
   "Set up a newly created process from the entity that created it."
   (let ((entity-pickup-amount (res-lump-float arg0 'pickup-amount))
         (entity-bob-scale (res-lump-float arg0 'bob-scale))
+        (no-spin (res-lump-float (-> this entity) 'no-spin))
         (bob-amount 1024.0)
         )
+    (set! (-> this no-spin) (nonzero? no-spin))
     (when (and entity-pickup-amount (> entity-pickup-amount 0.0))
       (set! (-> this pickup-amount) entity-pickup-amount)
       )
@@ -1627,6 +1630,7 @@
     (set! (-> self fact pickup-type) s2-0)
     (set! (-> self fact pickup-amount) f30-0)
     )
+  (set! (-> self no-spin) #f)
   (set! (-> self fact options) (-> arg2 options))
   (let ((v1-5 (ppointer->process (-> self parent))))
     (set! (-> self notify) (if (logtest? (-> v1-5 mask) (process-mask process-tree))
@@ -1665,6 +1669,7 @@
   (initialize-allocations self)
   (set! (-> self fact pickup-type) (the-as pickup-type arg2))
   (set! (-> self fact pickup-amount) arg3)
+  (set! (-> self no-spin) #f)
   (let ((v1-4 (ppointer->process (-> self parent))))
     (set! (-> self notify) (if (logtest? (-> v1-4 mask) (process-mask process-tree))
                                (the-as handle #f)
@@ -2554,6 +2559,7 @@
   "Set up a newly created process from the entity that created it."
   (initialize-allocations this)
   (process-drawable-from-entity! this (-> this entity))
+  (set! (-> this no-spin) #f)
   (initialize-options this 0 512.0 (the-as fact-info #f))
   (update-transforms (-> this root))
   (set! (-> this entity extra perm task) (game-task complete)) ;; dont spawn again once collected
@@ -2571,6 +2577,7 @@
     (set! (-> self fact pickup-type) s2-0)
     (set! (-> self fact pickup-amount) f30-0)
     )
+  (set! (-> self no-spin) #f)
   (set! (-> self fact options) (-> arg2 options))
   (let ((v1-5 (ppointer->process (-> self parent))))
     (set! (-> self notify) (if (logtest? (-> v1-5 mask) (process-mask process-tree))
