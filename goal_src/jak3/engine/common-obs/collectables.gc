@@ -2194,7 +2194,9 @@
   )
 
 (def-actor secret-tape
-  :bounds (0 0 0 5))
+  :bounds (0 0 0 5)
+  :texture-level 10
+  )
 
 (deftype tape (money)
   ((minimap connection-minimap)  ;; added orbhunt
@@ -2353,6 +2355,7 @@
 (defskelgroup skel-pre-artifact-d pre-artifact-d pre-artifact-d-lod0-jg pre-artifact-d-idle-ja
               ((pre-artifact-d-lod0-mg (meters 999999)))
               :bounds (static-spherem 0 0 0 4)
+              :texture-level 10
               )
 
 (deftype fuel-cell (money)
@@ -2439,17 +2442,17 @@
                           )
                         )
                       )
-                    (when (name= (-> self name) 'fuel-cell-1)
-                      (play-sound-file "hmchyea.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 1000.0)))
-                      (suspend-for (seconds 1.0)))
                     ;; reveal fuel-cell, allow for collision, and wait for suck
                     (logclear! (-> self draw status) (draw-control-status no-draw-bounds))
                     (restore-collide-with-as (-> self root))
-                    (play-sound-file "tpl_proto_win.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 50.0)))
                     (let ((cell-task (-> *level-cell-tasks* (-> self level-index))))
                       (when (!= cell-task (game-task none))
                         ;; (format 0 "marking task ~D (~D) complete!~%" cell-task (-> self level-index))
                         (logior! (-> *game-info* task-perm-list data cell-task status) (entity-perm-status complete))))
+                    (when (name= (-> self name) 'fuel-cell-1)
+                      (play-sound-file "hmchyea.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 1000.0)))
+                      (suspend-for (seconds 1.0)))
+                    (play-sound-file "tpl_proto_win.mp3" (the int (* (-> *setting-control* user-current sfx-volume) 50.0)))
                     (go-virtual wait)
                     )
                   )
@@ -2557,6 +2560,7 @@
 
 (defmethod init-from-entity! ((this fuel-cell) (arg0 entity-actor))
   "Set up a newly created process from the entity that created it."
+  (format 0 "fuel-cell entity init! ~A" arg0)
   (initialize-allocations this)
   (process-drawable-from-entity! this (-> this entity))
   (set! (-> this no-spin) #f)
