@@ -540,6 +540,87 @@
       "lump": {
         "name":"stadium-skill-45"
       }
+    },
+    {
+      "trans": [ 146.9770, 11.1772, -752.8132], // between stone cube rubble along north wall, west ish 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 146.9770, 11.1772, -752.8132, 10],
+      "lump": {
+        "name":"stadium-skill-46",
+        "bob-scale": ["float", 0.3436]
+      }
+    },
+    {
+      "trans": [ 123.0127, 45.2198, -732.8312], // up high along north wall, west side 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 123.0127, 45.2198, -732.8312, 10],
+      "lump": {
+        "name":"stadium-skill-47"
+      }
+    },
+    {
+      "trans": [ 194.8166, 45.6349, -767.0690], // on top of north wall, good jetboard circle launch gets u up here then over invis wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 194.8166, 45.6349, -767.0690, 10],
+      "lump": {
+        "name":"stadium-skill-48"
+      }
+    },
+    {
+      "trans": [ 216.0348, 18.4545, -768.6123], // behind rebar and invis wall along north wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 216.0348, 18.4545, -768.6123, 10],
+      "lump": {
+        "name":"stadium-skill-49"
+      }
+    },
+    {
+      "trans": [ 151.7794, 29.4461, -766.6289], // on rebar behind invis wall along north wall, follow from ^^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 151.7794, 29.4461, -766.6289, 10],
+      "lump": {
+        "name":"stadium-skill-50"
+      }
+    },
+    {
+      "trans": [ 146.4006, 37.6624, -762.1920], // on north wall behind fallen stone beam and invis wall, follow from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 146.4006, 37.6624, -762.1920, 10],
+      "lump": {
+        "name":"stadium-skill-51"
+      }
+    },
+    {
+      "trans": [ 205.2821, 0.7788, -639.6783], // small ledge near void off last "outdoor" part of path 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 205.2821, 0.7788, -639.6783, 10],
+      "lump": {
+        "name":"stadium-skill-52"
+      }
+    },
+    {
+      "trans": [ 326.5393, 34.9395, -721.5233], // on top of rubble/rebar behind invis wall in NE, lots of ways up here 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 326.5393, 34.9395, -721.5233, 10],
+      "lump": {
+        "name":"stadium-skill-53"
+      }
     }//,
 
   ]

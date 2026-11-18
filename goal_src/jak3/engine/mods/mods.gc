@@ -2674,12 +2674,7 @@
     )
 
   ;; dev stuff
-  (when (and *debug-segment* (cpad-pressed? 0 select) (not (cpad-hold? 0 l3)) (not (paused?)) (not (movie?)))
-    (when *target*
-      (format 0 "~,,2M,  ~,,2M,  ~,,2M ~%" (-> *target* root trans x) (-> *target* root trans y) (-> *target* root trans z))
-      (format 0 "~,,2M  ~,,2M  ~,,2M ~%" (-> *target* root trans x) (-> *target* root trans y) (-> *target* root trans z))
-      )
-
+  (when (and (cpad-pressed? 0 select) (not (cpad-hold? 0 l3)) (not (paused?)) (not (movie?)))
     ;; collision renderer, either debug or toggle
     (when (or *debug-segment* (-> *mod-settings* collision-renderer-toggle?))
       (toggleCollisionRenderer)
@@ -2690,6 +2685,10 @@
 
     ;; debug only helper shit
     (when *debug-segment*
+      (when *target*
+        (format 0 "~,,2M,  ~,,2M,  ~,,2M ~%" (-> *target* root trans x) (-> *target* root trans y) (-> *target* root trans z))
+        (format 0 "~,,2M  ~,,2M  ~,,2M ~%" (-> *target* root trans x) (-> *target* root trans y) (-> *target* root trans z))
+        )
       ;; disable camera collision/line of sight
       (if (logtest? (-> *camera* slave-options) 32)
         (send-event *camera* 'clear-slave-option (cam-slave-options COLLIDE))

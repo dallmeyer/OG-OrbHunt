@@ -152,6 +152,17 @@
       "lump": {
         "name":"wascitya-skill-09"
       }
+    },
+    {
+      "trans": [ 2125.8818, 30.2690, -216.5956], // proxy hint on cactus (flut) near path to wascityb 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 2125.8818, 30.2690, -216.5956, 10],
+      "lump": {
+        "name":"wascitya-skill-10",
+        "proxy-hint": ["float", 1.0]
+      }
     }
   ]
 }

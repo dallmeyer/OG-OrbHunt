@@ -361,6 +361,17 @@
         "name":"halfpipe-skill-26"
       }
     },
+    {
+      "trans": [ -8.0080, -40.4820, -49.9970], // proxy hint on corner by kid 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ -8.0080, -40.4820, -49.9970, 10],
+      "lump": {
+        "name":"halfpipe-skill-27",
+        "proxy-hint": ["float", 1.0]
+      }
+    },
 
 
     // CRATES
