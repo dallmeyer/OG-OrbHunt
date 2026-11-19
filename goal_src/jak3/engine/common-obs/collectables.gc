@@ -1972,8 +1972,8 @@
       )
     ;; increment skill-per-level
     (let ((par (ppointer->process (-> self parent))))
-      (format 0 "parent check ~A~%" (-> par type symbol))
-      (case (-> par type symbol) 
+      ;; (format 0 "parent check ~A~%" (-> par type symbol))
+      (case (-> par type symbol) :comp name=
         (('skill-crate 'market-crate 'wascity-market-crate 'crate 'wascity-market-sack-a 'market-sack-a 'market-basket-a 'wascity-market-basket-a 'wascity-market-sack-b 'market-sack-b 'market-basket-b 'wascity-market-basket-b 'urn-a 'urn-b 'urn-c)
           (format 0 "parent increment by ~D~%" (the int (-> self pickup-amount)))
           (increment-skill-per-level (-> (the process-drawable par) entity) (the int (-> self pickup-amount)))
@@ -1983,14 +1983,27 @@
           (+! (-> *game-info* skill-per-level 19) (the int (-> self pickup-amount)))
           (true! *orb-count-updated?*)
           )
-        (('task-manager-ctywide-bbush-get-to)
-          ;; TODO
+        (('power-game)
+          (format 0 "power-game increment by ~D~%" (the int (-> self pickup-amount)))
+          (+! (-> *game-info* skill-per-level 42) (the int (-> self pickup-amount)))
+          (true! *orb-count-updated?*)
           )
-        (('task-manager-desert-bbush-get-to)
-          ;; TODO
-          )
+        ;; (('task-manager-ctywide-bbush-get-to)
+        ;;   ;; TODO
+        ;;   )
+        ;; (('task-manager-desert-bbush-get-to)
+        ;;   ;; TODO
+        ;;   )
         (else
-          (increment-skill-per-level (-> self entity) 1)
+          (cond
+            ((-> self entity)
+              (format 0 "other ~A increment by ~D~%" (-> par type symbol) (the int (-> self pickup-amount)))
+              (increment-skill-per-level (-> self entity) 1)
+              )
+            (else
+              (format 0 "unknown increment ~A with no entity~%" (-> par type symbol))
+              )
+            )
           )
         ))
     (cond
@@ -3040,6 +3053,7 @@
     (if (not (logtest? (actor-option dont-override-fact) (-> sv-56 options)))
         (set! (-> sv-56 pickup-spawn-amount) 1.0)
         )
+    (format 0 "birth pickup at point ~S ~D~%" (enum->string pickup-type arg1) sv-48)
     (while (> sv-48 0)
       (set! sv-48 (+ sv-48 -1))
       (when arg3
