@@ -4,5 +4,6 @@
 ;; the actual file name still needs to be 8.3
 ("O59.DGO"
  (
+  "monk-ag.go"
   "orbs-wascityb.go"
   ))

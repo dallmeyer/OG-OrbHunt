@@ -38,7 +38,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define ORB_HUNT_DEBUG? #f) ;; when #t, hold L2 for extra debug prints
-(define startingDebugContinuePoint "foresta-start")
+(define startingDebugContinuePoint "wascityb-start")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define Custom Settings Variables to use in mods
@@ -708,7 +708,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   (game-task none) ;; "Spargus Arena"	;; 62
   (game-task damus-orbhunt) ;; "Spargus Palace"	;; 63
   (game-task none) ;; "Stadium Ruins East"	;; 64
-  (game-task none) ;; "Stadium Ruins West"	;; 65
+  (game-task monk-orbhunt) ;; "Stadium Ruins West"	;; 65
   (game-task none) ;; "Subrails 1 Entrance"	;; 66
   (game-task none) ;; "Subrails 1 Exit"	;; 67
   (game-task none) ;; "Subrails 1.1"	;; 68

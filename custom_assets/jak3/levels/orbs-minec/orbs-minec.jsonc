@@ -3224,6 +3224,27 @@
         "name":"minec-skill-310"
       }
     },
+    {
+      "trans": [ 232.1039, 86.2421, 21.9782], // rock along right wall just after start 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 232.1039, 86.2421, 21.9782, 10],
+      "lump": {
+        "name":"minec-skill-311",
+        "pickup-amount": ["float", 2.0] // abah hint
+      }
+    },
+    {
+      "trans": [ 251.5186, 97.8346, 21.1042], // on top of lights in front of u at start 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 251.5186, 97.8346, 21.1042, 10],
+      "lump": {
+        "name":"minec-skill-312"
+      }
+    },
 
     {
       "trans": [ 158.96, 100.23, 23.11 ], // pecker with custom flight path :D

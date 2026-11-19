@@ -2942,6 +2942,9 @@
                              *pre-game-fun*
                              )
           )
+    (if (= v1-43 (game-task-actor was-pre-game-wascityb))
+      (set! (-> this task) 
+        (new 'process 'game-task-control (game-task-actor monk-orbhunt))))
     )
   (set! (-> this miss-max) (the int (-> this game miss-max)))
   (set! (-> this point-win) (-> this game point-win))

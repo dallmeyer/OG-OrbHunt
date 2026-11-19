@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["monk-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -300,6 +300,71 @@
       "lump": {
         "name":"wascityb-skill-24",
         "alt-actor": "dogat-9"
+      }
+    },
+    {
+      "trans": [ 1477.7813, 26.9022, -369.6082], // satellite freebie
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1477.7813, 26.9022, -369.6082, 10],
+      "lump": {
+        "name":"wascityb-skill-25",
+        "bob-scale": ["float", 0.3125]
+      }
+    },
+    {
+      "trans": [ 1412.1759, 13.3560, -555.8415], // on last* standpoint on wall in NW corner (not behind invis wall) 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1412.1759, 13.3560, -555.8415, 10],
+      "lump": {
+        "name":"wascityb-skill-26"
+      }
+    },
+    {
+      "trans": [ 1462.3295, 8.4311, -515.9368], // crevice in rocks in NW, where they touch water 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1462.3295, 8.4311, -515.9368, 10],
+      "lump": {
+        "name":"wascityb-skill-27"
+      }
+    },
+    {
+      "trans": [ 1432.7700, 22.0171, -518.2636], // crevice in rocks in NW, midway 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1432.7700, 22.0171, -518.2636, 10],
+      "lump": {
+        "name":"wascityb-skill-28"
+      }
+    },
+
+    {
+      "trans": [ 1484.0156, 26.8003, -367.9952 ],
+      "etype": "monk-npc",
+      "game_task": 0,
+      "quat" : [0.0000, 0.1006, 0.0000, -0.9949],
+      "bsphere": [ 1484.0156, 26.8003, -367.9952  , 6.928242206573486 ],
+      "lump": {
+        "name": "wascityb-monk-npc",
+        "task-actor": ["int32", 71]
+      }
+    },
+    {
+      "trans": [1484.0156, 31.8003, -367.9952 ], //
+      "etype": "fuel-cell",
+      "game_task": 0,
+      "quat" : [ 0.0, 0.21679742634296417, 0.0, 0.9762166142463684],
+      "bsphere": [ 1484.0156, 31.8003, -367.9952 , 6.928242206573486 ],
+      "lump": {
+        "name": "wascityb-fuel-cell",
+        "level-idx": ["int32", 61],
+        "alt-actor": "wascityb-monk-npc"
       }
     }//,
 
