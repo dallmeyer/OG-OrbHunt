@@ -352,6 +352,10 @@
    )
   )
 
+(deftype menu-qr-menu-option (menu-sub-menu-option)
+  ()
+  )
+
 
 (deftype menu-stereo-mode-sound-option (menu-option)
   ()

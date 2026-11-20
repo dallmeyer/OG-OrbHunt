@@ -447,14 +447,42 @@
                            )
         )
 
+(define *warp-options* (progress-new-generic-scrolling-page (text-id progress-warp-to)
+    (new 'static 'menu-generic-confirm-option
+      :name (text-id progress-warp-spargus)
+      :on-confirm (lambda ((val symbol))
+        (when val
+          (initialize! *game-info* 'dead (the-as game-save #f) "wascity-start" (the-as resetter-spec #f)))))
+    (new 'static 'menu-generic-confirm-option
+      :name (text-id progress-warp-temple)
+      :on-confirm (lambda ((val symbol))
+        (when val
+          (initialize! *game-info* 'dead (the-as game-save #f) "templex-start" (the-as resetter-spec #f)))))
+    (new 'static 'menu-generic-confirm-option
+      :name (text-id progress-warp-hiphog)
+      :on-confirm (lambda ((val symbol))
+        (when val
+          (initialize! *game-info* 'dead (the-as game-save #f) "hiphog-start" (the-as resetter-spec #f)))))
+    (new 'static 'menu-generic-confirm-option
+      :name (text-id progress-warp-freehq)
+      :on-confirm (lambda ((val symbol))
+        (when val
+          (initialize! *game-info* 'dead (the-as game-save #f) "freehq-start" (the-as resetter-spec #f)))))
+    )
+  )
+
 (define *quit-restart-options*
   (new 'static 'menu-option-list
     :y-center #xc6
     :y-space 30
-    :scale 0.82
     :options (new 'static 'boxed-array :type menu-option
-      (new 'static 'menu-restart-mission-qr-option :name (text-id progress-restart-mission) :offset-y 0.4)
-      (new 'static 'menu-quit-qr-option :name (text-id progress-quit-game) :offset-y 0.65)
+      (new 'static 'menu-restart-mission-qr-option :name (text-id progress-restart-mission) :offset-y 0.3)
+      (new 'static 'menu-qr-menu-option
+        :name (text-id progress-warp-to)
+        :offset-y 0.5
+        :next-state 'warp-options
+        )
+      (new 'static 'menu-quit-qr-option :name (text-id progress-quit-game) :offset-y 0.7)
       )
     )
   )

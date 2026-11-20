@@ -748,39 +748,39 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
 
 (define *level-orb-total-counts-fixed* (new 'static 'boxed-array :type uint16 :length LEVEL_ID_LEN :allocated-length LEVEL_ID_LEN
   0 ;; "" ;; 0 (none)
-  40 ;; "BTR 1"	;; 1
-  47 ;; "BTR 2"	;; 2
-  108 ;; "BTR 3"	;; 3
-  17 ;; "BTR 4"	;; 4
-  16 ;; "BTR End"	;; 5
-  20 ;; "Dark Ship (Escape)"	;; 6
-  14 ;; "Dark Ship (East)"	;; 7
-  11 ;; "Dark Ship (West)"	;; 8
-  11 ;; "Dark Ship (Center)"	;; 9
-  310 ;; "Eco Mine (Bomb Train)"	;; 10
-  103 ;; "Eco Mine (Cave)"	;; 11
-  20 ;; "Eco Mine (Elevators?)"	;; 12
-  20 ;; "Eco Mine (Robot Fight)"	;; 13
-  2 ;; "Freedom HQ"	;; 14
+  41 ;; "BTR North"	;; 1
+  47 ;; "BTR West"	;; 2
+  161 ;; "BTR Center"	;; 3
+  128 ;; "BTR South"	;; 4
+  61 ;; "BTR End"	;; 5
+  21 ;; "Dark Ship (Escape)"	;; 6
+  16 ;; "Dark Ship (East)"	;; 7
+  16 ;; "Dark Ship (West)"	;; 8
+  33 ;; "Dark Ship (Center)"	;; 9
+  312 ;; "Eco Mine (Bomb Train)"	;; 10
+  106 ;; "Eco Mine (Cave)"	;; 11
+  21 ;; "Eco Mine (Elevators?)"	;; 12
+  24 ;; "Eco Mine (Robot Fight)"	;; 13
+  8 ;; "Freedom HQ"	;; 14
   6 ;; "Freedom HQ (Hanger)"	;; 15
   7 ;; "Garage"	;; 16
   23 ;; "Gardens (North)" ;; 17
   24 ;; "Gardens (South)" ;; 18
-  20 ;; "Gun Course"	;; 19
-  28 ;; "Halfpipe"	;; 20
-  8 ;; "Haven Forest (North)"	;; 21
-  3 ;; "Haven Forest (South)"	;; 22
-  37 ;; "Industrial Zone (North)"	;; 23
-  57 ;; "Industrial Zone (South)"	;; 24
-  30 ;; "Main Town Ruins"	;; 25
+  29 ;; "Gun Course"	;; 19
+  29 ;; "Halfpipe"	;; 20
+  76 ;; "Haven Forest (North)"	;; 21
+  79 ;; "Haven Forest (South)"	;; 22
+  39 ;; "Industrial Zone (North)"	;; 23
+  63 ;; "Industrial Zone (South)"	;; 24
+  32 ;; "Main Town Ruins"	;; 25
   3 ;; "Metal Head City (North)"	;; 26
   15 ;; "Metal Head City (South)"	;; 27
-  19 ;; "Metal Head Tower"	;; 28
-  3 ;; "Metal Head Tower (Entrance)"	;; 29
+  20 ;; "Metal Head Tower"	;; 28
+  9 ;; "Metal Head Tower (Entrance)"	;; 29
   4 ;; "Metal Head Tower (Top)"	;; 30
   19 ;; "Metalhead Nest (North)"	;; 31
   2 ;; "Metalhead Nest (South)"	;; 32
-  26 ;; "Monk Temple (Center)"	;; 33
+  29 ;; "Monk Temple (Center)"	;; 33
   8 ;; "Monk Temple (Entrance)"	;; 34
   45 ;; "Monk Temple (Exterior)"	;; 35
   23 ;; "Monk Temple (Jetboard Test)"	;; 36
@@ -790,7 +790,7 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   47 ;; "New Haven (South)"	;; 40
   2 ;; "Onin's Tent"	;; 41
   12 ;; "Pac Man"	;; 42
-  61 ;; "Port"	;; 43
+  65 ;; "Port"	;; 43
   2 ;; "Power Station"	;; 44
   14 ;; "Sewers 1.1"	;; 45
   9 ;; "Sewers 1.2"	;; 46
@@ -806,13 +806,13 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   9 ;; "Sewers 3.3"	;; 56
   8 ;; "Sewers 3.4"	;; 57
   7 ;; "Sewers 3.5"	;; 58
-  7 ;; "Slums"	;; 59
-  36 ;; "Spargus (East)"	;; 60
-  45 ;; "Spargus (West)"	;; 61
-  15 ;; "Spargus Arena"	;; 62
+  23 ;; "Slums"	;; 59
+  69 ;; "Spargus (East)"	;; 60
+  90 ;; "Spargus (West)"	;; 61
+  16 ;; "Spargus Arena"	;; 62
   9 ;; "Spargus Palace"	;; 63
-  24 ;; "Stadium Ruins East"	;; 64
-  46 ;; "Stadium Ruins West"	;; 65
+  63 ;; "Stadium Ruins East"	;; 64
+  96 ;; "Stadium Ruins West"	;; 65
   2 ;; "Subrails 1 Entrance"	;; 66
   2 ;; "Subrails 1 Exit"	;; 67
   0 ;; "Subrails 1.1"	;; 68
@@ -827,22 +827,22 @@ if the result of rand-vu-int-range is 1, then DANCE! if it is not 1, then Don't 
   0 ;; "Subrails 2.5"	;; 77
   0 ;; "Subrails 2.6"	;; 78
   9 ;; "Terraformer (Final Boss)"	;; 79
-  6 ;; "Training Course"	;; 80
+  10 ;; "Training Course"	;; 80
   344 ;; "Volcano"	;; 81
-  27 ;; "Volcano (Entrance/Exit)"	;; 82
+  28 ;; "Volcano (Entrance/Exit)"	;; 82
   2 ;; "War Factory (Entrance)"	;; 83
   11 ;; "War Factory (Erol Fight)"	;; 84
   97 ;; "War Factory (Exterior)"	;; 85
   69 ;; "War Factory (Interior)"	;; 86
-  1 ;; "Wasteland (Caves)"	;; 87
+  209 ;; "Wasteland (Caves)"	;; 87
   8 ;; "Wasteland (East)"	;; 88
-  10 ;; "Wasteland (Northeast)"	;; 89
+  43 ;; "Wasteland (Northeast)"	;; 89
   12 ;; "Wasteland (Northwest)"	;; 90
   8 ;; "Wasteland (South)"	;; 91
   38 ;; "Wasteland (Southeast but further south)"	;; 92
-  11 ;; "Wasteland (Southeast)"	;; 93
-  6 ;; "Wasteland (Southwest)"	;; 94
-  4 ;; "Wasteland (West)"	;; 95
+  91 ;; "Wasteland (Southeast)"	;; 93
+  53 ;; "Wasteland (Southwest)"	;; 94
+  106 ;; "Wasteland (West)"	;; 95
   26 ;; "Palace (Rooftop)"	;; 96
   ))
 

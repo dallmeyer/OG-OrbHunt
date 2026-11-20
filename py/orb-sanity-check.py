@@ -6,6 +6,7 @@ import json
 from jsmin import jsmin
 
 root = "C:/Users/matt/Documents/Projects/OG-OrbHunt/custom_assets/jak3/levels"
+root = "C:/Users/Matt/Projects/OG-OrbHunt/custom_assets/jak3/levels/"
 
 expected = {
     'orbs-rubblea': {'barg': 41},
@@ -17,7 +18,7 @@ expected = {
     'orbs-precurc': {'barg': 16},
     'orbs-precurb': {'barg': 16},
     'orbs-precura': {'barg': 33},
-    'orbs-minec': {'barg': 310},
+    'orbs-minec': {'barg': 312},
     'orbs-mineb': {'barg': 106},
     'orbs-minea': {'barg': 21},
     'orbs-mined': {'barg': 24},
@@ -49,7 +50,7 @@ expected = {
     'orbs-ctyslumc': {'barg': 6},
     'orbs-ctyslumb': {'barg': 24},
     'orbs-powergd': {'barg': 3},
-    'orbs-ctyport': {'barg': 4},
+    'orbs-ctyport': {'barg': 5},
     'orbs-vinroom': {'barg': 2},
     'orbs-sewl': {'barg': 14},
     'orbs-sewm': {'barg': 7},
@@ -68,7 +69,7 @@ expected = {
     'orbs-ctysluma': {'barg': 6},
     # some of those^^^ are onintent,
     'orbs-wascitya': {'barg': 9, 'TheGuy': 1},
-    'orbs-wascityb': {'barg': 24},
+    'orbs-wascityb': {'barg': 28},
     'orbs-wasstada': {'barg': 13},
     'orbs-waspala': {'barg': 4},
     'orbs-stadium': {'barg': 53},
@@ -150,7 +151,7 @@ for d in listdir(root):
                 
                 # hacky reminder about onintent
                 filename = f[:len(f)-6]
-                print(f"{filename}    {counts}   /   expected: {expected[filename]}")
+                print(f"{filename}    {counts}   /   expected: {expected[filename]} {"DIFFERENT!" if counts != expected[filename] else ""}")
                 if f == "orbs-ctysluma.jsonc":
                     print("   some of those^^^ are onintent")
 
