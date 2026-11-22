@@ -343,25 +343,148 @@
         "name":"wascityb-skill-28"
       }
     },
-    // TODO
     {
-      "trans": [ 1578.7039, 27.0817, -360.8959], // orba000 
+      "trans": [ 1578.7039, 27.0817, -360.8959], // small crevice in building wall facing ladder up to turret 
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0, 0, 0, 1],
       "bsphere": [ 1578.7039, 27.0817, -360.8959, 10],
       "lump": {
-        "name":"wascityb-skill-YYY"
+        "name":"wascityb-skill-29"
       }
     },
     {
-      "trans": [ 1692.8714, 98.8769, -180.5377], // orba002 
+      "trans": [ 1692.8714, 98.8769, -180.5377], // small silo rooftop center kinda south
       "etype": "skill",
       "game_task": 0,
       "quat": [ 0, 0, 0, 1],
       "bsphere": [ 1692.8714, 98.8769, -180.5377, 10],
       "lump": {
-        "name":"wascityb-skill-YYY"
+        "name":"wascityb-skill-30"
+      }
+    },
+    {
+      "trans": [ 1710.1905, 13.9993, -386.0987], // gap in rock "steps" on north coast facing sea, eastish
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1710.1905, 13.9993, -386.0987, 10],
+      "lump": {
+        "name":"wascityb-skill-31",
+        "bob-scale": ["float", 0.7811]
+      }
+    },
+    {
+      "trans": [ 1773.5462, 12.5748, -410.3092], // gap in rock "steps" on north coast facing sea, east 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1773.5462, 12.5748, -410.3092, 10],
+      "lump": {
+        "name":"wascityb-skill-32"
+      }
+    },
+    {
+      "trans": [ 1660.4599, 100.1252, -82.2986], // in corner along south wall, behind doorway frame
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1660.4599, 100.1252, -82.2986, 10],
+      "lump": {
+        "name":"wascityb-skill-33"
+      }
+    },
+    {
+      "trans": [ 1775.6158, 20.2831, -404.8100], // corner along rock "steps" on north coast facing sea, east 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1775.6158, 20.2831, -404.8100, 10],
+      "lump": {
+        "name":"wascityb-skill-34"
+      }
+    },
+    {
+      "trans": [ 1763.5607, 32.9344, -393.8568], // crevice near base of trees close to north coast, east 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1763.5607, 32.9344, -393.8568, 10],
+      "lump": {
+        "name":"wascityb-skill-35"
+      }
+    },
+    {
+      "trans": [ 1839.3148, 38.9021, -468.0062], // stuck in sand in corner along NE wall 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1839.3148, 38.9021, -468.0062, 10],
+      "lump": {
+        "name":"wascityb-skill-36",
+        "bob-scale": ["float", -1.0], // no bob
+        "no-spin": ["float", 1.0]
+      }
+    },
+    {
+      "trans": [ 1767.7626, 58.3729, -331.6665], // tree above fruit stands, jetboard launch off awning 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1767.7626, 58.3729, -331.6665, 10],
+      "lump": {
+        "name":"wascityb-skill-37"
+      }
+    },
+    {
+      "trans": [ 1740.0447, 109.3852, -111.2568], // torbch along south wall, east 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1740.0447, 109.3852, -111.2568, 10],
+      "lump": {
+        "name":"wascityb-skill-38",
+        "bob-scale": ["float", 0.2812]
+      }
+    },
+    {
+      "trans": [ 1749.8095, 120.7299, -92.5781], // rooftop (no collision) in corner along south wall, east 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1749.8095, 120.7299, -92.5781, 10],
+      "lump": {
+        "name":"wascityb-skill-39"
+      }
+    },
+    {
+      "trans": [ 1966.1916, 37.1912, -372.3308], // crevice along west wall just outside throne room, jetboard circle attack or dark jak  
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1966.1916, 37.1912, -372.3308, 10],
+      "lump": {
+        "name":"wascityb-skill-40"
+      }
+    },
+    {
+      "trans": [ 1618.5761, 40.6792, -472.2512], // behind tree along side of tower with turret 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1618.5761, 40.6792, -472.2512, 10],
+      "lump": {
+        "name":"wascityb-skill-41"
+      }
+    },
+    {
+      "trans": [ 1800.4171, 63.2780, -194.1189], // between stoops of buildings along east wall, east side
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 1800.4171, 63.2780, -194.1189, 10],
+      "lump": {
+        "name":"wascityb-skill-42"
       }
     },
 

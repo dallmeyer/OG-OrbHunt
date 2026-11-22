@@ -969,7 +969,7 @@
 
 (define *burning-bush-get-on-info*
   (new 'static 'boxed-array :type burning-bush-get-on-info
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 0 (get-to-1)
       :trans (new 'static 'vector :x 15826067.0 :y 294066.6 :z 2348413.8 :w 1.0)
       :quat (new 'static 'quaternion :x 0.0009 :y 0.4808 :z 0.0009 :w -0.8768)
       :camera-trans (new 'static 'vector :x 15828972.0 :y 307578.47 :z 2379081.2 :w 1.0)
@@ -977,7 +977,7 @@
       :time 6000.0
       :fov 10922.667
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 1 (get-to-2)
       :trans (new 'static 'vector :x 3697802.5 :y 412520.44 :z 6895680.5 :w 1.0)
       :quat (new 'static 'quaternion :y 0.9992 :w 0.0389)
       :camera-trans (new 'static 'vector :x 3630403.2 :y 428921.66 :z 6831057.5 :w 1.0)
@@ -985,7 +985,7 @@
       :time 6900.0
       :fov 10922.667
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 2 (get-to-3)
       :trans (new 'static 'vector :x 5819480.5 :y 388060.38 :z 1678595.2 :w 1.0)
       :quat (new 'static 'quaternion :x 0.0013 :y -0.1948 :z -0.0003 :w 0.9808)
       :camera-trans (new 'static 'vector :x 5774928.5 :y 468702.4 :z 1851368.2 :w 1.0)
@@ -993,7 +993,7 @@
       :time 9000.0
       :fov 16384.0
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 3 (get-to-4)
       :trans (new 'static 'vector :x 12843417.0 :y 89547.57 :z 11022830.0 :w 1.0)
       :quat (new 'static 'quaternion :x 0.0015 :y 0.8039 :z 0.0002 :w 0.5946)
       :camera-trans (new 'static 'vector :x 12865863.0 :y 96517.734 :z 11012419.0 :w 1.0)
@@ -1001,7 +1001,7 @@
       :time 5100.0
       :fov 14563.556
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 4 (get-to-5)
       :trans (new 'static 'vector :x 11575935.0 :y 108180.27 :z 14247904.0 :w 1.0)
       :quat (new 'static 'quaternion :y -0.1133 :w 0.9935)
       :camera-trans (new 'static 'vector :x 11535285.0 :y 121128.55 :z 14248524.0 :w 1.0)
@@ -1009,7 +1009,7 @@
       :time 9000.0
       :fov 10922.667
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 5 (get-to-6)
       :trans (new 'static 'vector :x 5470401.5 :y 51780.402 :z 7791442.5 :w 1.0)
       :quat (new 'static 'quaternion :y 0.8257 :z 0.0015 :w 0.5639)
       :camera-trans (new 'static 'vector :x 5550344.5 :y 55626.137 :z 7814714.0 :w 1.0)
@@ -1017,7 +1017,7 @@
       :time 3900.0
       :fov 10922.667
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 6 (get-to-7)
       :trans (new 'static 'vector :x 2951720.2 :y 185922.36 :z 12151224.0 :w 1.0)
       :quat (new 'static 'quaternion :x -0.0014 :y 0.4042 :z 0.0005 :w 0.9146)
       :camera-trans (new 'static 'vector :x 2932693.0 :y 185689.3 :z 12123397.0 :w 1.0)
@@ -1025,7 +1025,7 @@
       :time 6000.0
       :fov 16384.0
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 7 (get-to-8)
       :trans (new 'static 'vector :x 12339974.0 :y 181197.2 :z 1548690.2 :w 1.0)
       :quat (new 'static 'quaternion :y 0.4266 :w 0.9044)
       :camera-trans (new 'static 'vector :x 12309206.0 :y 227872.36 :z 1644105.8 :w 1.0)
@@ -1033,7 +1033,7 @@
       :time 6000.0
       :fov 16384.0
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 8 (get-to-9)
       :trans (new 'static 'vector :x 7752197.0 :y 216207.36 :z 923399.8 :w 1.0)
       :quat (new 'static 'quaternion :y -0.951 :w 0.3089)
       :camera-trans (new 'static 'vector :x 7668311.0 :y 260772.25 :z 917091.56 :w 1.0)
@@ -1041,7 +1041,7 @@
       :time 5100.0
       :fov 16384.0
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 9 (get-to-10)
       :trans (new 'static 'vector :x 1969225.4 :y 140065.6 :z 5292424.5 :w 1.0)
       :quat (new 'static 'quaternion :y 0.788 :w -0.6156)
       :camera-trans (new 'static 'vector :x 2006893.0 :y 160366.19 :z 5227043.0 :w 1.0)
@@ -1049,7 +1049,7 @@
       :time 8400.0
       :fov 16384.0
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 10 (get-to-11)
       :trans (new 'static 'vector :x 12238691.0 :y 98111.9 :z 11890045.0 :w 1.0)
       :quat (new 'static 'quaternion :x -0.0014 :y 0.5531 :z -0.0006 :w 0.833)
       :camera-trans (new 'static 'vector :x 12326140.0 :y 148922.38 :z 11845758.0 :w 1.0)
@@ -1057,7 +1057,7 @@
       :time 6000.0
       :fov 16384.0
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 11 (get-to-12)
       :trans (new 'static 'vector :x 9236149.0 :y 43447.5 :z 6553425.0 :w 1.0)
       :quat (new 'static 'quaternion :y 0.7227 :w 0.6911)
       :camera-trans (new 'static 'vector :x 9367670.0 :y 67202.664 :z 6607653.5 :w 1.0)
@@ -1065,7 +1065,7 @@
       :time 4800.0
       :fov 10922.667
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 12 (get-to-13)
       :trans (new 'static 'vector :x 10618439.0 :y 113487.875 :z 10291461.0 :w 1.0)
       :quat (new 'static 'quaternion :x -0.0008 :y 0.9917 :z -0.0011 :w 0.1277)
       :camera-trans (new 'static 'vector :x 10764415.0 :y 127953.305 :z 10306016.0 :w 1.0)
@@ -1073,7 +1073,7 @@
       :time 7500.0
       :fov 16384.0
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 13 (get-to-14)
       :trans (new 'static 'vector :x 529121.7 :y 98823.375 :z 13884964.0 :w 1.0)
       :quat (new 'static 'quaternion :y -0.9481 :w -0.3177)
       :camera-trans (new 'static 'vector :x 722918.2 :y 101507.07 :z 13901837.0 :w 1.0)
@@ -1081,7 +1081,7 @@
       :time 7200.0
       :fov 16384.0
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 14 (get-to-15)
       :trans (new 'static 'vector :x 2273161.2 :y 250537.17 :z 15519410.0 :w 1.0)
       :quat (new 'static 'quaternion :x -0.0007 :y -0.0731 :z -0.0014 :w 0.9973)
       :camera-trans (new 'static 'vector :x 2312609.5 :y 318328.84 :z 15637414.0 :w 1.0)
@@ -1089,7 +1089,7 @@
       :time 9300.0
       :fov 14563.556
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 15 (get-to-16)
       :trans (new 'static 'vector :x 16549387.0 :y 106001.2 :z 6772071.0 :w 1.0)
       :quat (new 'static 'quaternion :y 0.8949 :w 0.4461)
       :camera-trans (new 'static 'vector :x 16576971.0 :y 121950.21 :z 6763736.0 :w 1.0)
@@ -1097,7 +1097,7 @@
       :time 5400.0
       :fov 14563.556
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 16 (get-to-17)
       :trans (new 'static 'vector :x 15726801.0 :y 114936.22 :z 295390.4 :w 1.0)
       :quat (new 'static 'quaternion :x -0.0014 :y -0.7325 :z 0.0007 :w -0.6807)
       :camera-trans (new 'static 'vector :x 15773588.0 :y 124979.2 :z 296459.88 :w 1.0)
@@ -1105,7 +1105,7 @@
       :time 6300.0
       :fov 10922.667
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 17 (get-to-18)
       :trans (new 'static 'vector :x 9514424.0 :y 84128.56 :z -182453.05 :w 1.0)
       :quat (new 'static 'quaternion :x -0.0015 :y 0.8943 :w 0.4472)
       :camera-trans (new 'static 'vector :x 9527463.0 :y 95552.305 :z -169796.81 :w 1.0)
@@ -1113,7 +1113,7 @@
       :time 6300.0
       :fov 14563.556
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 18 (get-to-19)
       :trans (new 'static 'vector :x 9272824.0 :y 78754.2 :z -690128.9 :w 1.0)
       :quat (new 'static 'quaternion :x 0.0002 :y 0.0607 :z 0.0013 :w 0.9981)
       :camera-trans (new 'static 'vector :x 9232619.0 :y 192907.27 :z -843155.44 :w 1.0)
@@ -1121,7 +1121,7 @@
       :time 7800.0
       :fov 10922.667
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 19 (get-to-20)
       :trans (new 'static 'vector :x 9916865.0 :y 155500.14 :z -484290.56 :w 1.0)
       :quat (new 'static 'quaternion :x -0.0013 :y 0.8336 :z 0.0005 :w -0.5522)
       :camera-trans (new 'static 'vector :x 10009599.0 :y 164922.58 :z -486762.9 :w 1.0)
@@ -1129,7 +1129,7 @@
       :time 7500.0
       :fov 14563.556
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 20 (get-to-21)
       :trans (new 'static 'vector :x 9770632.0 :y 73132.85 :z -612405.7 :w 1.0)
       :quat (new 'static 'quaternion :y 0.0576 :z -0.0015 :w -0.9983)
       :camera-trans (new 'static 'vector :x 9774927.0 :y 94098.64 :z -681817.3 :w 1.0)
@@ -1137,15 +1137,15 @@
       :time 8100.0
       :fov 7281.778
       )
-    (new 'static 'burning-bush-get-on-info
-      :trans (new 'static 'vector :x 6649945.5 :y 156115.36 :z -1471328.6 :w 1.0)
+    (new 'static 'burning-bush-get-on-info ;; index 21 (des-burning-bush-23 / burning-bush-wasb-1 / wascity-bbush-get-to-22 / wascityb-bbush-wasb-1)
+      :trans (new 'static 'vector :x (meters 1697.9476) :y (meters 101.1516) :z (meters -290.2174) :w 1.0)
       :quat (new 'static 'quaternion :x -0.0008 :y -0.731 :z 0.0013 :w -0.6823)
-      :camera-trans (new 'static 'vector :x 6694340.5 :y 174896.75 :z -1490136.6 :w 1.0)
-      :camera-rot (new 'static 'array float 9 0.0245 0.0 0.9996 -0.1697 0.9854 0.0041 -0.9851 -0.1698 0.0241)
-      :time 6900.0
+      :camera-trans (new 'static 'vector :x (meters 1689.8442) :y (meters 105.6686) :z (meters -272.7182) :w 1.0)
+      :camera-rot (new 'static 'array float 9 -0.9986 0.0000 -0.0514 0.0183 0.9339 -0.3570 0.0480 -0.3575 -0.9326)
+      :time 3000.0
       :fov 14563.556
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 22 (get-to-23)
       :trans (new 'static 'vector :x 7562680.5 :y 78961.05 :z -2169692.2 :w 1.0)
       :quat (new 'static 'quaternion :x 0.0007 :y 0.734 :z 0.0012 :w 0.679)
       :camera-trans (new 'static 'vector :x 7570156.5 :y 92349.65 :z -2207594.0 :w 1.0)
@@ -1153,15 +1153,15 @@
       :time 7800.0
       :fov 10922.667
       )
-    (new 'static 'burning-bush-get-on-info
-      :trans (new 'static 'vector :x 6538078.0 :y 288967.88 :z -777354.9 :w 1.0)
+    (new 'static 'burning-bush-get-on-info ;; index 23 (des-burning-bush-25 / burning-bush-wasb-3 / wascity-bbush-get-to-24 / wascity-bbush-wasb-3)
+      :trans (new 'static 'vector :x (meters 1641.4670) :y (meters 91.1007) :z (meters -323.5742) :w 1.0)
       :quat (new 'static 'quaternion :x 0.0011 :y -0.8817 :z 0.0005 :w -0.4716)
-      :camera-trans (new 'static 'vector :x 6568851.5 :y 306831.78 :z -770489.94 :w 1.0)
-      :camera-rot (new 'static 'array float 9 -0.4012 0.0 0.9159 -0.151 0.9863 -0.0661 -0.9034 -0.1648 -0.3957)
-      :time 6600.0
-      :fov 12743.111
+      :camera-trans (new 'static 'vector :x (meters 1628.2707) :y (meters 75.2500) :z (meters -297.4624) :w 1.0)
+      :camera-rot (new 'static 'array float 9 -0.7211 0.0000 -0.6927 -0.3804 0.8357 0.3960 0.5789 0.5491 -0.6026)
+      :time 3500.0
+      :fov 14000.0
       )
-    (new 'static 'burning-bush-get-on-info
+    (new 'static 'burning-bush-get-on-info ;; index 24 (get-to-25)
       :trans (new 'static 'vector :x 6656705.5 :y 123696.74 :z -1911393.5 :w 1.0)
       :quat (new 'static 'quaternion :x 0.0011 :y 0.3455 :z 0.0007 :w 0.9383)
       :camera-trans (new 'static 'vector :x 6681104.0 :y 137490.02 :z -1923000.8 :w 1.0)
@@ -1243,7 +1243,7 @@
       (+! (-> a0-3 y) 4096.0)
       (set! (-> self skill)
             (ppointer->handle
-              (birth-pickup-at-point a0-3 (pickup-type skill) (-> *FACT-bank* super-skill-inc) #t self t1-1)
+              (birth-pickup-at-point a0-3 (pickup-type skill) (-> *FACT-bank* super-skill-inc) #f self t1-1) ;; #t -> #f so it doesn't shift when deploying
               )
             )
       )

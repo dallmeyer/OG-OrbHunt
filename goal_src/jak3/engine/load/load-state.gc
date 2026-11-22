@@ -282,8 +282,9 @@
 (defun side-mish-active? ()
   (let ((tm (process-by-type task-manager *active-pool*)))
     (when tm
+      (dbg-format 0 "side-mish? task manager ~A~%" (-> tm type symbol))
       (case (-> tm type symbol) :comp name=
-        (('task-manager-desert-interceptors-attack 'gungame-task-manager 'task-manager-wascity-gungame 'task-manager-destroy-darkeco)
+        (('task-manager-desert-interceptors-attack 'gungame-task-manager 'task-manager-wascity-gungame 'task-manager-destroy-darkeco 'oasis-defense-intro-manager)
           (return #f)
           )
         )
@@ -324,7 +325,7 @@
          )
         ((and (logtest? (-> s1-0 level-flags) (level-flags orb-hunt)) (side-mish-active?))
          ;; side mish active, skip orb-hunt (borrow) levels
-         (dbg-format 0 "side mission active, skipping level ~A~%" (-> s1-0 name))
+         (format 0 "side mission active, skipping level ~A~%" (-> s1-0 name))
          )
         ((and (-> s1-0 borrow) (-> s1-0 borrow alias))
          (let* ((s0-1 (borrow-city-expansion (the-as pair (-> s1-0 borrow alias))))

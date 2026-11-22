@@ -1219,9 +1219,11 @@
       (set-vector-meters! (-> arg0 extra trans) 1499.68  91.47  -222.95 ) ;; on rooftop kinda west side towards beach, leaper GP climb skill-136
       (quaternion-set! (-> arg0 quat) 0.0 0.0 0.0 1.0))
     (('wascity-market-basket-b-1) (set-vector-meters! (-> arg0 extra trans) 1470.97  70.26  -278.76 )) ;; further along footop from ^
-    (('wascity-market-crate-63) (set-vector-meters! (-> arg0 extra trans) 1494.24  62.48  -225.29 )) ;; crevice along wall, kinda towards west beach
+    (('wascity-market-crate-63) (set-vector-meters! (-> arg0 extra trans) 1494.8505 62.1600 -226.6392) ;; crevice along wall, kinda towards west beach
+      (quaternion-set! (-> arg0 quat)  -0.1026  -0.8636  0.0631  0.4894))
     (('wascity-market-basket-a-3) (set-vector-meters! (-> arg0 extra trans) 1724.57  98.27  -206.53)) ;; on small stone cylinder next to rooftop, with invis wall around it
-    (('wascity-market-sack-a-3) (set-vector-meters! (-> arg0 extra trans) 1695.40  95.55  -235.37 )) ;; on intended rooftop :O
+    (('wascity-market-sack-a-3) (set-vector-meters! (-> arg0 extra trans) 1701.5332 89.7298 -235.2341) ;; on awning over window just off intended rooftop :O
+      (quaternion-set! (-> arg0 quat)  0.0030  -0.7337  -0.0613  -0.6766)) 
     (('wascity-market-basket-a-43) (set-vector-meters! (-> arg0 extra trans) 1726.19  6.86  -449.41 )) ;; on island with vanilla orb, underwater a bit
     (('wascity-market-basket-a-35) 
       (set-vector-meters! (-> arg0 extra trans) 1596.44  20.03  -481.41 ) ;; backside of turret cliff
@@ -1233,6 +1235,11 @@
     (('wascity-cactus-14) (set-vector-meters! (-> arg0 extra trans) 1595.5917 53.8931 -479.3811)) ;; for proxy over invis walls
     (('wascity-cactus-15) (set-vector-meters! (-> arg0 extra trans) 1438.7604 22.2918 -530.9962)) ;; for proxy over invis walls
      
+    (('des-burning-bush-23) (set-vector-meters! (-> arg0 extra trans) 1732.6400 87.3463 -134.7260) ;; top of steps near doorway on SW corner of east side -> open orba hover to top of silo
+      (quaternion-set! (-> arg0 quat)  -0.0000  0.8594  -0.0002  0.5111))
+    (('des-burning-bush-25) (set-vector-meters! (-> arg0 extra trans) 1608.2727 97.3568 -205.6978) ;; on lower mid rooftop -> grind across rails to top of windmill
+      (quaternion-set! (-> arg0 quat)  -0.0015  0.0434  0.0260  -0.9987))
+
     ;; ====== WASSTADA (spargus arena) ======
     (('skill-211) (set-vector-meters! (-> arg0 extra trans) 2322.89  94.74  -392.67 )) ;; straight up from flag proxy 
     (('urn-a-25) (set-vector-meters! (-> arg0 extra trans) 2272.74  98.13  -404.08 ) ;; up over invis wall onto awnings clockwise, flag proxy ofc

@@ -10161,10 +10161,10 @@
                        :name "wascityb-bbush-wasb-1"
                        :level 'wascityb
                        :flags (continue-flags no-auto)
-                       :trans (new 'static 'vector :x 7260632.5 :y 353869.0 :z -430879.53 :w 1.0)
-                       :camera-trans (new 'static 'vector :x 7220779.5 :y 374812.7 :z -462202.47 :w 1.0)
-                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 49 #x255c 0 -31338))
-                       :camera-rot (new 'static 'array int16 9 #x5a53 0 -23212 #xaac #x7f19 #xa9f #x5a0b -3856 #x59b3)
+                       :trans (new 'static 'vector :x (meters 1736.5911) :y (meters 86.5939) :z (meters -137.4010) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 1748.5139) :y (meters 91.6930) :z (meters -140.4634) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -9742 0 31284))
+                       :camera-rot (new 'static 'array int16 9 8495 0 31646 -3773 32533 1013 -31420 -3907 8435)
                        :on-goto #f
                        :vis-nick 'wascityb
                        :vehicle-type #x1b
@@ -10201,10 +10201,10 @@
                        :name "wascityb-bbush-wasb-3"
                        :level 'wascityb
                        :flags (continue-flags no-auto)
-                       :trans (new 'static 'vector :x 6903469.0 :y 378724.34 :z -444082.6 :w 1.0)
-                       :camera-trans (new 'static 'vector :x 6855010.5 :y 399816.72 :z -460632.47 :w 1.0)
-                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 -36 #xfad 19 #x7f05))
-                       :camera-rot (new 'static 'array int16 9 #x2e76 0 -30529 #xdb5 #x7f23 #x556 #x7675 -3768 #x2e27)
+                       :trans (new 'static 'vector :x (meters 1602.5607) :y (meters 97.6420) :z (meters -202.5262) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 1593.1483) :y (meters 102.7457) :z (meters -194.5540) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -22868 0 -23467))
+                       :camera-rot (new 'static 'array int16 9 -20903 0 -25233 2979 32537 -2468 25056 -3869 -20757)
                        :on-goto #f
                        :vis-nick 'wascityb
                        :vehicle-type #x1b
