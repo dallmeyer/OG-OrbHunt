@@ -2578,7 +2578,7 @@
 
 (defmethod init-from-entity! ((this fuel-cell) (arg0 entity-actor))
   "Set up a newly created process from the entity that created it."
-  (format 0 "fuel-cell entity init! ~A" arg0)
+  ;; (format 0 "fuel-cell entity init! ~A~%" arg0)
   (initialize-allocations this)
   (process-drawable-from-entity! this (-> this entity))
   (set! (-> this no-spin) #f)

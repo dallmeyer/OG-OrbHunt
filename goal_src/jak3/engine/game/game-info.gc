@@ -191,7 +191,8 @@
   (dotimes (ii 3)
     (set! (-> this want-sound ii) (-> arg0 want-sound ii name))
     )
-  (vector-copy! (-> this camera-trans) (-> *camera-combiner* trans))
+  (when (and *camera-combiner* (-> *camera-combiner* trans))
+    (vector-copy! (-> this camera-trans) (-> *camera-combiner* trans)))
   (when *camera-combiner*
     (let ((rot (-> *camera-combiner* inv-camera-rot))
           (continue-rot (-> this camera-rot))

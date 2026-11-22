@@ -26,7 +26,17 @@
   )
 
 (defun fnv64-string ((str string))
-  (fnv64 (-> str data) (length str))
+  (the-as uint (case str :comp name=
+    ;; idk why but sometimes we crash trying to hash these, so hardcode some common ones
+    (("jakb-c-lod0") -4975310634801934287)
+    (("daxter-lod0") -6929191758478483379)
+    (else
+      (let ((n (fnv64 (-> str data) (length str))))
+        ;; (format 0 "fnv64-string ~S ~D~%" str n)
+        n
+        )
+      )
+    ))
   )
 
 (define *current-eye-merc-ctrl-name* (the string #f))
