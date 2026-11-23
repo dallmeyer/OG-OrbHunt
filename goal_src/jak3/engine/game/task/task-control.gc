@@ -1003,10 +1003,10 @@
                     )
                   (if (logtest? (-> arg0 flags) (game-task-node-flag close-task))
                       ((lambda ((arg0 game-task-node-info))
-                        ;;  (if *target*
-                        ;;      (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> arg0 task)))
-                        ;;      (give *game-info* 'fuel-cell (the float (-> arg0 task)) (the-as handle #f))
-                        ;;      )
+                         (if *target*
+                             (send-event *target* 'get-pickup (pickup-type fuel-cell) (the float (-> arg0 task)))
+                             (give *game-info* 'fuel-cell (the float (-> arg0 task)) (the-as handle #f))
+                             )
                          )
                        arg0
                        )
@@ -1211,7 +1211,8 @@
 (defun task-node-open! ((arg0 game-task-node) (arg1 symbol))
   (let ((s5-0 (-> *game-info* sub-task-list arg0)))
     (dotimes (s4-0 4)
-      (if (nonzero? (-> s5-0 parent-node s4-0))
+      (when (nonzero? (-> s5-0 parent-node s4-0))
+          (format 0 "task-node-open! ~A~%" (-> *game-info* sub-task-list (-> s5-0 parent-node s4-0)))
           (open! (-> *game-info* sub-task-list (-> s5-0 parent-node s4-0)) arg1)
           )
       )

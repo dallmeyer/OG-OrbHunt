@@ -10221,10 +10221,10 @@
                        :name "wascityb-bbush-wasb-4"
                        :level 'wascityb
                        :flags (continue-flags no-auto)
-                       :trans (new 'static 'vector :x 5857512.0 :y 110613.3 :z -1700287.2 :w 1.0)
-                       :camera-trans (new 'static 'vector :x 5906383.0 :y 131301.38 :z -1709106.4 :w 1.0)
-                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 6 -412 0 #x7ffb))
-                       :camera-rot (new 'static 'array int16 9 #x2395 0 #x7af0 -3624 #x7f23 #x418 -31262 -3771 #x2356)
+                       :trans (new 'static 'vector :x (meters 1717.9985) :y (meters 6.7785) :z (meters -453.5136) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 1706.1790) :y (meters 12.0591) :z (meters -450.5252) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -32765 0 310))
+                       :camera-rot (new 'static 'array int16 9 -11208 0 -30790 3527 32551 -1283 30587 -3753 -11134)
                        :on-goto #f
                        :vis-nick 'wascityb
                        :vehicle-type #x1b
