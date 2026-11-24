@@ -1236,6 +1236,8 @@
     (('wascity-cactus-14) (set-vector-meters! (-> arg0 extra trans) 1595.5917 53.8931 -479.3811)) ;; for proxy over invis walls
     (('wascity-cactus-15) (set-vector-meters! (-> arg0 extra trans) 1438.7604 22.2918 -530.9962)) ;; for proxy over invis walls
      
+    (('des-burning-bush-22) (set-vector-meters! (-> arg0 extra trans) 1858.7227 47.3544 -273.6590) ;; side of building along hallway to wascitya -> awning over near turret
+      (quaternion-set! (-> arg0 quat)  0.0736  0.7839  -0.0736  0.6120))
     (('des-burning-bush-23) (set-vector-meters! (-> arg0 extra trans) 1732.6400 87.3463 -134.7260) ;; top of steps near doorway on SW corner of east side -> open orba hover to top of silo
       (quaternion-set! (-> arg0 quat)  -0.0000  0.8594  -0.0002  0.5111))
     (('des-burning-bush-24) (set-vector-meters! (-> arg0 extra trans) 1719.0806 4.6222 -457.3931) ;; half underwater small island north east side -> crevice in rocks underwater NW
@@ -2104,6 +2106,14 @@
       (set! (-> r1277 on-enter) '(want-display 'towera 'display))) ;; skip task check for display
     (when r1280
       (set! (-> r1280 on-enter) '(want-load 'ctywide-mh 'mhcityb 'towera))) ;; skip task check for load
+    )
+  ;; conditionally load in lctydest
+  (cond 
+    ((or (= (level-status? *level* 'mhcitya #f) 'active)
+         (= (level-status? *level* 'mhcityb #f) 'active))
+      (set! (-> ctywide borrow borrow-info 4) '(lctydest display)))
+    (else
+      (set! (-> ctywide borrow borrow-info 4) #f))
     )
 
   ;; desertf - open marauder stronghold doors when jak in bubble

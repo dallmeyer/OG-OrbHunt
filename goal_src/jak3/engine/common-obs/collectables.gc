@@ -1468,7 +1468,7 @@
 
 (defmethod common-post ((this money))
   (when (not (-> this no-spin))
-    (quaternion-rotate-y! (-> this root quat) (-> this root quat) (* (if (= (-> this type symbol) 'tape) 20480.0 40049.777) (seconds-per-frame))))
+    (quaternion-rotate-y! (-> this root quat) (-> this root quat) (* (if (= (-> this type symbol) 'tape) 5120.0 40049.777) (seconds-per-frame))))
   (let ((f30-0 (-> this bob-amount)))
     (when (< 0.0 f30-0)
       (set! (-> this root trans y)
@@ -2359,6 +2359,7 @@
   (process-drawable-from-entity! this (-> this entity))
   (initialize-options this 0 512.0 (the-as fact-info #f))
   (update-transforms (-> this root))
+  (set! (-> this no-spin) #f)
   (set! (-> this entity extra perm task) (game-task complete)) ;; dont spawn again once collected
   (go (method-of-object this wait))
   )

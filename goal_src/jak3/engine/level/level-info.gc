@@ -664,7 +664,7 @@
                   :borrow (new 'static 'level-borrow-info
                     :alias #f
                     :borrow-size (new 'static 'array uint16 5 #x1a4 #x1a4 #x1a4 #x30c #x32a)
-                    :borrow-info (new 'static 'array object 5 #f #f #f #f '(lctydest display)) ;; '(lbbring6 #f))
+                    :borrow-info (new 'static 'array object 5 #f #f #f #f #f) ;; '(lctydest display)) ;; '(lbbring6 #f))
                     )
                   :bottom-height (meters -15)
                   :fog-height (meters 80)
@@ -10181,10 +10181,10 @@
                        :name "wascityb-bbush-wasb-2"
                        :level 'wascityb
                        :flags (continue-flags no-auto)
-                       :trans (new 'static 'vector :x 7586778.5 :y 109680.64 :z -1434582.2 :w 1.0)
-                       :camera-trans (new 'static 'vector :x 7541024.5 :y 129809.2 :z -1447520.6 :w 1.0)
-                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x7fb6 -3 -2149))
-                       :camera-rot (new 'static 'array int16 9 #x1474 0 -32344 #x105e #x7ee8 #x2a6 #x7d48 -4243 #x1449)
+                       :trans (new 'static 'vector :x (meters 1862.5902) :y (meters 46.6111) :z (meters -273.9428) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 1873.6639) :y (meters 51.3841) :z (meters -274.9132) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 -42 -31179 30 10076))
+                       :camera-rot (new 'static 'array int16 9 1348 0 32739 -4134 32504 170 -32477 -4138 1337)
                        :on-goto #f
                        :vis-nick 'wascityb
                        :vehicle-type #x1b

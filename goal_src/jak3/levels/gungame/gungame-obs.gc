@@ -312,6 +312,6 @@
   (transform-post)
   ;; orbhunt - changed these to stay open
   ;; (go (method-of-object this idle))
-  (set! (-> this want-close?) #t)
+  (set! (-> this want-close?) #f)
   (go (method-of-object this open))
   )

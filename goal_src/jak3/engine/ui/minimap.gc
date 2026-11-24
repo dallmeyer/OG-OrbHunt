@@ -593,9 +593,9 @@
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
                                  )
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 7608729.5 :y 109772.8 :z -1456128.0 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 1858.7227) :y (meters 47.3544) :z (meters -273.6590) :w 1.0)
                                  :flags (minimap-flag bigmap local-only wasall waswide)
-                                 :name "bbush-wasb-2"
+                                 :name "bbush-wasb-2" ;; des-burning-bush-22 / burning-bush-wasb-2 / wascity-bbush-get-to-23 / wascityb-bbush-wasb-2
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x1 #x0))
                                  :scale 1.0
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
