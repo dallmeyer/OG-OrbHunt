@@ -193,6 +193,67 @@
       "lump": {
         "name":"ctygenb-skill-12"
       }
+    },
+    {
+      "trans": [ 255.3422, 28.6376, -309.2779], // overhang over doors under fallen debris just right of sewers entrance (zoomer launch up is easiest)
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 255.3422, 28.6376, -309.2779, 10],
+      "lump": {
+        "name":"ctygenb-skill-13"
+      }
+    },
+    {
+      "trans": [ 262.9908, 35.1787, -292.0233], // higher overhang, up from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 262.9908, 35.1787, -292.0233, 10],
+      "lump": {
+        "name":"ctygenb-skill-14"
+      }
+    },
+    {
+      "trans": [ 346.2195, 10.9333, -272.1163], // behind metal sheet near low end of grindrail into palace ruins 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 346.2195, 10.9333, -272.1163, 10],
+      "lump": {
+        "name":"ctygenb-skill-15"
+      }
+    },
+    {
+      "trans": [ 316.9617, 8.2902, -299.8821], // behind metal sheet along broken wall on left facing palace ruins 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 316.9617, 8.2902, -299.8821, 10],
+      "lump": {
+        "name":"ctygenb-skill-16"
+      }
+    },
+    {
+      "trans": [ 363.0722, 6.8446, -357.8397], // proxy hint in broken panels below entrance to palace ruins 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 363.0722, 6.8446, -357.8397, 10],
+      "lump": {
+        "name":"ctygenb-skill-17",
+        "proxy-hint": ["float", 1.0]
+      }
+    },
+    {
+      "trans": [ 366.4030, 54.6372, -349.0561], // top of building next to palace ruins entrance, proxy from ^ 
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 366.4030, 54.6372, -349.0561, 10],
+      "lump": {
+        "name":"ctygenb-skill-18"
+      }
     }//,
 
   ]

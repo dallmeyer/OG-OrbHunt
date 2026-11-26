@@ -18256,7 +18256,7 @@
               (new 'static 'game-task-event
                 :actor (game-task-actor minimap)
                 :action (game-task-action show)
-                :tex (game-task-icon gaticon-79)
+                :tex (game-task-icon gaticon-79) ;; bbush-genb-2
                 :scene #f
                 )
               )
@@ -18380,7 +18380,7 @@
               (new 'static 'game-task-event
                 :actor (game-task-actor minimap)
                 :action (game-task-action show)
-                :tex (game-task-icon gaticon-80)
+                :tex (game-task-icon gaticon-80) ;; bbush-genb-3
                 :scene #f
                 )
               )

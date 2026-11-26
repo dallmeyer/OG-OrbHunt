@@ -689,9 +689,9 @@
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
                                  )
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 792576.0 :y 33177.6 :z -570982.4 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 334.2557) :y (meters 8.0999) :z (meters -55.3177) :w 1.0)
                                  :flags (minimap-flag bigmap local-only ctywide)
-                                 :name "bbush-genb-1"
+                                 :name "bbush-genb-1" ;; burning-bush-25 / burning-bush-genb-1 / city-bbush-get-to-26
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x1 #x0))
                                  :scale 1.0
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
@@ -793,7 +793,7 @@
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
                                  )
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 1570406.4 :y 45875.2 :z -1356185.6 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 381.4006) :y (meters 8.0999) :z (meters -134.5408) :w 1.0)
                                  :flags (minimap-flag bigmap local-only ctywide)
                                  :name "bbush-genb-2"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x1 #x0))
@@ -801,7 +801,7 @@
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
                                  )
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 1308672.0 :y 45056.0 :z -833536.0 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 278.3242) :y (meters 7.9766) :z (meters -315.7193) :w 1.0)
                                  :flags (minimap-flag bigmap local-only ctywide)
                                  :name "bbush-genb-3"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x1 #x0))
@@ -809,7 +809,7 @@
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
                                  )
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 505036.8 :y 45465.6 :z -144588.8 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 268.3970) :y (meters 8.0664) :z (meters -44.4095) :w 1.0)
                                  :flags (minimap-flag bigmap local-only ctywide)
                                  :name "bbush-genb-4"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x1 #x0))
