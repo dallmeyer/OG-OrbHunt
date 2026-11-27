@@ -860,6 +860,9 @@
     (('skill-170) (set-vector-meters! (-> arg0 extra trans)  746.4497  21.3800  -582.8273)) ;; another ledge above fake door, near hanger
     (('skill-169) (set-vector-meters! (-> arg0 extra trans) 558.4760 32.9201 -556.4490)) ;; fountain outside freedomhq, just moved way up to top of water effect. jetboard triangle turn super jump thing
     (('skill-207) (set-vector-meters! (-> arg0 extra trans) 396.1460 -9.7146 -589.5195)) ;; underwater behind pipes in corner near NW
+    
+    (('burning-bush-35) (set-vector-meters! (-> arg0 extra trans) 699.1033 2.4196 -425.3314) ;; on someone's stoop in SE corner
+      (quaternion-set! (-> arg0 quat)  -0.0001  -1.0000  -0.0000  -0.0003))
 
     ;; ====== CTYSLUMB (new haven south) ======
     (('skill-175) (set-vector-meters! (-> arg0 extra trans)  402.1042  20.9327  -181.6336)) ;; on pipe in corner near speedrun oob to ruins
@@ -1815,6 +1818,7 @@
 (define-extern *credits-rolling?* symbol)
 (define-extern start-credits-yolo (function none))
 (define-extern orb-placer-maintenance (function none))
+(define *hover-follow-cam?* #f)
 (defun mod-run-each-frame ()
   (when *debug-segment*
     (orb-placer-maintenance)
@@ -1825,6 +1829,18 @@
 ;;   (logior! (-> *game-info* features) (game-feature board darkjak darkjak-bomb0 darkjak-bomb1 darkjak-invinc darkjak-giant)) ;; give board and dark jak stuff
 
   (baby-mode-find-closest-orb)
+
+  ;; hover camera, thanks ATB
+  (cond
+    ((board-hovering?)
+      (if (cpad-pressed? 0 r3) (not! *hover-follow-cam?*))
+      )
+    (else (false! *hover-follow-cam?*))
+    )
+  (if *hover-follow-cam?*
+    (set-setting-by-param *setting-control* 'slave-options 'clear 0 16)
+    (remove-setting-by-arg0 *setting-control* 'slave-options)
+    )
 
   ;; debug stuff for jak spawn/despawn
   (when (and *debug-segment*

@@ -2189,10 +2189,10 @@
                        :name "ctyslumc-bbush-1"
                        :level 'ctyslumc
                        :flags (continue-flags no-auto)
-                       :trans (new 'static 'vector :x 2137074.5 :y 7682.867 :z -1974301.9 :w 1.0)
-                       :camera-trans (new 'static 'vector :x 2103978.5 :y 27830.271 :z -1940146.1 :w 1.0)
-                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x459a 0 #x6b66))
-                       :camera-rot (new 'static 'array int16 9 -21613 0 -24624 #xba5 #x7f0c -2618 #x5f7c -3968 -21455)
+                       :trans (new 'static 'vector :x (meters 699.4139) :y (meters 5.4195) :z (meters -425.9718) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 709.9686) :y (meters 10.0714) :z (meters -427.2519) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -18267 0 -27202))
+                       :camera-rot (new 'static 'array int16 9 6008 0 32211 -4588 32432 855 -31882 -4667 5947)
                        :on-goto #f
                        :vis-nick 'ctyslumc
                        :vehicle-type #x1b
