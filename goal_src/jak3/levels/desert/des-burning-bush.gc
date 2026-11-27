@@ -969,7 +969,7 @@
 
 (define *burning-bush-get-on-info*
   (new 'static 'boxed-array :type burning-bush-get-on-info
-    (new 'static 'burning-bush-get-on-info ;; index 0 (first 18 unused?)
+    (new 'static 'burning-bush-get-on-info ;; index 0
       :trans (new 'static 'vector :x 15826067.0 :y 294066.6 :z 2348413.8 :w 1.0)
       :quat (new 'static 'quaternion :x 0.0009 :y 0.4808 :z 0.0009 :w -0.8768)
       :camera-trans (new 'static 'vector :x 15828972.0 :y 307578.47 :z 2379081.2 :w 1.0)
@@ -1113,7 +1113,7 @@
       :time 6300.0
       :fov 14563.556
       )
-    (new 'static 'burning-bush-get-on-info ;; index 18 (here and above unused?)
+    (new 'static 'burning-bush-get-on-info ;; index 18 (here and above wasteland only?)
       :trans (new 'static 'vector :x 9272824.0 :y 78754.2 :z -690128.9 :w 1.0)
       :quat (new 'static 'quaternion :x 0.0002 :y 0.0607 :z 0.0013 :w 0.9981)
       :camera-trans (new 'static 'vector :x 9232619.0 :y 192907.27 :z -843155.44 :w 1.0)

@@ -877,6 +877,11 @@
     (('crate-1132) (set-vector-meters! (-> arg0 extra trans) 540.3664 52.0341 -240.8164) ;; up from ^ on top of building
       (quaternion-set! (-> arg0 quat) 0.0486  0.7096  -0.0681  0.6995))
 
+    (('burning-bush-26) (set-vector-meters! (-> arg0 extra trans) 394.0369 8.1272 -317.5333) ;; on middle pipe in corner near ctyslumc
+      (quaternion-set! (-> arg0 quat)  0.0653  0.8905  -0.1354  0.4292))
+    (('burning-bush-34) (set-vector-meters! (-> arg0 extra trans) 560.8768 1.7256 -14.1186)
+      (quaternion-set! (-> arg0 quat)  0.0000  0.7075  0.0000  -0.7066))
+
     ;; ====== CTYPORT (port) ======
     ;; (('skill-144) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs
     ;; (('skill-145) (set-vector-meters! (-> arg0 extra trans) )) ;; move-port-barge-orbs

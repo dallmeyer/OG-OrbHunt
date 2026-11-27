@@ -1940,10 +1940,10 @@
                        :name "ctyslumb-bbush-1"
                        :level 'ctyslumb
                        :flags (continue-flags no-auto)
-                       :trans (new 'static 'vector :x 1715226.6 :y 7689.421 :z -1564643.4 :w 1.0)
-                       :camera-trans (new 'static 'vector :x 1681187.2 :y 27920.385 :z -1598434.5 :w 1.0)
-                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 3 -15321 3 #x7122))
-                       :camera-rot (new 'static 'array int16 9 #x6487 0 -20279 #x9ca #x7f02 #xc6d #x4e9a -4053 #x63c2)
+                       :trans (new 'static 'vector :x (meters 395.7871) :y (meters 10.6754) :z (meters -318.4132) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 393.3377) :y (meters 15.4635) :z (meters -329.3332) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 -3 -17904 -1 27443))
+                       :camera-rot (new 'static 'array int16 9 32542 0 -3826 483 32504 4113 3795 -4142 32281)
                        :on-goto #f
                        :vis-nick 'ctyslumb
                        :vehicle-type #x1b
@@ -1980,10 +1980,10 @@
                        :name "ctyslumb-bbush-4"
                        :level 'ctyslumb
                        :flags (continue-flags no-auto)
-                       :trans (new 'static 'vector :x 1738849.1 :y 7689.421 :z -766510.3 :w 1.0)
-                       :camera-trans (new 'static 'vector :x 1745295.8 :y 28783.412 :z -715717.44 :w 1.0)
-                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -32763 0 -98))
-                       :camera-rot (new 'static 'array int16 9 -32508 0 #xfff -498 #x7f09 -3961 -4063 -3991 -32265)
+                       :trans (new 'static 'vector :x (meters 559.4463) :y (meters 3.0423) :z (meters -14.5134) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 550.0351) :y (meters 8.0472) :z (meters -7.2037) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 24009 0 22298))
+                       :camera-rot (new 'static 'array int16 9 -19962 0 -25983 3088 32534 -2372 25799 -3894 -19821)
                        :on-goto #f
                        :vis-nick 'ctyslumb
                        :vehicle-type #x1b
@@ -1991,7 +1991,7 @@
                        :want (new 'static 'inline-array level-buffer-state-small 4
                          (new 'static 'level-buffer-state-small :name 'ctyslumb :display? 'display)
                          (new 'static 'level-buffer-state-small :name 'ctywide-ff :display? 'display)
-                         (new 'static 'level-buffer-state-small :name 'ctygenb :display? #f)
+                         (new 'static 'level-buffer-state-small :name 'ctygenb :display? 'display)
                          (new 'static 'level-buffer-state-small)
                          )
                        :want-sound (new 'static 'array symbol 3 'ctyslmbh #f #f)
