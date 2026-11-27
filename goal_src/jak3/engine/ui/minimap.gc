@@ -825,7 +825,7 @@
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
                                  )
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 2141388.8 :y 7782.4 :z -1939865.6 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 699.1033) :y (meters 2.4196) :z (meters -425.3314) :w 1.0)
                                  :flags (minimap-flag bigmap local-only ctywide)
                                  :name "bbush-slumc-1"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x1 #x0))
@@ -849,7 +849,7 @@
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
                                  )
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 2445721.5 :y 20070.4 :z -2903654.5 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 436.5563) :y (meters 20.7656) :z (meters -667.4221) :w 1.0)
                                  :flags (minimap-flag bigmap local-only ctywide)
                                  :name "bbush-slumc-2"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x1 #x0))

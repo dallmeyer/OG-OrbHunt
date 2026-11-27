@@ -863,6 +863,9 @@
     
     (('burning-bush-35) (set-vector-meters! (-> arg0 extra trans) 699.1033 2.4196 -425.3314) ;; on someone's stoop in SE corner
       (quaternion-set! (-> arg0 quat)  -0.0001  -1.0000  -0.0000  -0.0003))
+    (('burning-bush-37) (set-vector-meters! (-> arg0 extra trans) 436.5563 20.7656 -667.4221) ;; 
+      (quaternion-set! (-> arg0 quat)  0.0000  -0.7069  0.0000  0.7072))
+    
 
     ;; ====== CTYSLUMB (new haven south) ======
     (('skill-175) (set-vector-meters! (-> arg0 extra trans)  402.1042  20.9327  -181.6336)) ;; on pipe in corner near speedrun oob to ruins
