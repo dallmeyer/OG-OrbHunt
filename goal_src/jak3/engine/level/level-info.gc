@@ -1784,10 +1784,10 @@
                        :name "ctysluma-bbush-2"
                        :level 'ctysluma
                        :flags (continue-flags no-auto)
-                       :trans (new 'static 'vector :x 4133051.2 :y 33302.117 :z 1112979.5 :w 1.0)
-                       :camera-trans (new 'static 'vector :x 4165872.0 :y 54396.11 :z 1073684.9 :w 1.0)
-                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 3 #x1f3e -6 #x7c1e))
-                       :camera-rot (new 'static 'array int16 9 #x6812 0 #x4a7e -2179 #x7f26 #xbe4 -18945 -3745 #x6765)
+                       :trans (new 'static 'vector :x (meters 977.7359) :y (meters 19.5369) :z (meters 130.1180) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 975.8204) :y (meters 24.4856) :z (meters 141.7074) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 27163 0 18325))
+                       :camera-rot (new 'static 'array int16 9 -32056 0 -6785 803 32536 -3796 6737 -3880 -31831)
                        :on-goto #f
                        :vis-nick 'ctysluma
                        :vehicle-type #x1b
@@ -1795,7 +1795,7 @@
                        :want (new 'static 'inline-array level-buffer-state-small 4
                          (new 'static 'level-buffer-state-small :name 'ctysluma :display? 'display)
                          (new 'static 'level-buffer-state-small :name 'ctywide-ff :display? 'display)
-                         (new 'static 'level-buffer-state-small :name 'ctyindb :display? #f)
+                         (new 'static 'level-buffer-state-small :name 'ctyslumb :display? #f)
                          (new 'static 'level-buffer-state-small)
                          )
                        :want-sound (new 'static 'array symbol 3 'ctyslmah #f #f)
@@ -1804,10 +1804,10 @@
                        :name "ctysluma-bbush-3"
                        :level 'ctysluma
                        :flags (continue-flags no-auto)
-                       :trans (new 'static 'vector :x 3569191.8 :y 32758.58 :z 1398465.4 :w 1.0)
-                       :camera-trans (new 'static 'vector :x 3527535.8 :y 51502.695 :z 1406299.4 :w 1.0)
-                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 3 #x7122 3 -15318))
-                       :camera-rot (new 'static 'array int16 9 -8987 0 -31508 #x115b #x7eb4 -1264 #x79da -4620 -8896)
+                       :trans (new 'static 'vector :x (meters 954.3082) :y (meters 9.2555) :z (meters 371.8605) :w 1.0)
+                       :camera-trans (new 'static 'vector :x (meters 956.7149) :y (meters 14.1831) :z (meters 360.4453) :w 1.0)
+                       :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 9097 0 31478))
+                       :camera-rot (new 'static 'array int16 9 32157 0 6289 -752 32531 3847 -6243 -3920 31926)
                        :on-goto #f
                        :vis-nick 'ctysluma
                        :vehicle-type #x1b
@@ -1815,7 +1815,7 @@
                        :want (new 'static 'inline-array level-buffer-state-small 4
                          (new 'static 'level-buffer-state-small :name 'ctysluma :display? 'display)
                          (new 'static 'level-buffer-state-small :name 'ctywide-ff :display? 'display)
-                         (new 'static 'level-buffer-state-small :name 'ctyindb :display? #f)
+                         (new 'static 'level-buffer-state-small :name 'ctyindb :display? 'display)
                          (new 'static 'level-buffer-state-small)
                          )
                        :want-sound (new 'static 'array symbol 3 'ctyslmah #f #f)

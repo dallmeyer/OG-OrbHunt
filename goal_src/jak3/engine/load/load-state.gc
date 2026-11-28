@@ -278,6 +278,16 @@
     )
   )
 
+(defun orb-hunt-level? ()
+  (dotimes (idx 11)
+    (when (and (-> *level* level idx) 
+               (logtest? (-> *level* level idx info level-flags) (level-flags orb-hunt)))
+      (return #t)
+      )
+    )
+  #f
+  )
+
 (define *last-side-mish-time* (the-as time-frame #f))
 (defun side-mish-active? ()
   (let ((tm (process-by-type task-manager *active-pool*)))

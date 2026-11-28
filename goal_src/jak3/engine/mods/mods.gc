@@ -443,61 +443,158 @@
         (dotimes (lvl-idx LEVEL_ID_LEN)
           (when (-> *level-orb-active* lvl-idx)
             (case lvl-idx
+              ((19) ;; gungame TODO
+                ;; (let ((red-rank (get-cur-rank (game-score gungame-red)))
+                ;;       (yellow-rank (get-cur-rank (game-score gungame-yellow)))
+                ;;       )
+                ;;   (when (< 0 red-rank)
+                ;;     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 red-rank))
+                ;;     )
+                    
+                ;;   (when (< 0 yellow-rank)
+                ;;     (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 yellow-rank))
+                ;;     )
+                ;;   )
+                )
               ((23) ;; ctyindb (industrial north)
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-node-closed? (game-task-node city-bbush-get-to-36-resolution))
-                  (+! (-> *level-orb-collected-counts* lvl-idx) 3)
-                  )
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
 
                 (+! (-> *level-orb-total-counts* lvl-idx) 3)
                 (when (task-node-closed? (game-task-node city-bbush-get-to-37-resolution))
-                  (+! (-> *level-orb-collected-counts* lvl-idx) 3)
-                  )
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
                 )
-            ;;   ((24) ;; "Gardens (South)" ;;  farmb
-            ;;     (+! (-> *level-orb-total-counts* lvl-idx) 3)
-            ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-5))
-            ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
-            ;;       )
-            ;;     )
-            ;;   ((1) ;; "Bazaar (East)" or "Onin's Tent" ;;  ctymarkb
-            ;;     (+! (-> *level-orb-total-counts* lvl-idx) 3)
-            ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-7))
-            ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
-            ;;       )
+              ((24) ;; ctyinda
+                (+! (-> *level-orb-total-counts* lvl-idx) 10)
+                (when (task-node-closed? (game-task-node city-bbush-ring-6-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 10))
+                  
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-39-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
 
-            ;;     (+! (-> *level-orb-total-counts* lvl-idx) 3)
-            ;;     (when (task-complete? *game-info* (game-task city-burning-bush-get-to-6))
-            ;;       (+! (-> *level-orb-collected-counts* lvl-idx) 3)
-            ;;       )
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-40-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
 
-            ;;     (when (task-node-closed? (game-task-node city-play-onin-game-skill))
-            ;;       (+! (-> *level-orb-collected-counts* 45) 3) ;; count towards onin tent instead of ctymarkb
-            ;;       )
-            ;;     )
-            ;;   ((25) ;; "Gun Course" ;;
-            ;;     (let ((red-rank (get-cur-rank (game-score gungame-red)))
-            ;;           (yellow-rank (get-cur-rank (game-score gungame-yellow)))
-            ;;           (blue-rank (get-cur-rank (game-score gungame-blue)))
-            ;;           (dark-rank (get-cur-rank (game-score gungame-dark)))
-            ;;           )
-            ;;       (when (< 0 red-rank)
-            ;;         (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 red-rank))
-            ;;         )
-                    
-            ;;       (when (< 0 yellow-rank)
-            ;;         (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 yellow-rank))
-            ;;         )
-                    
-            ;;       (when (< 0 blue-rank)
-            ;;         (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 blue-rank))
-            ;;         )
-                    
-            ;;       (when (< 0 dark-rank)
-            ;;         (+! (-> *level-orb-collected-counts* lvl-idx) (* 3 dark-rank))
-            ;;         )
-            ;;       )
-            ;;     )
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-38-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+
+                ;; TODO - jetboard bronze/silver/gold
+                )
+              ((25) ;; ctygenb
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-26-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                  
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-28-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                  
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-29-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                  
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-30-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                )
+              ((39) ;; ctyslumc
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-32-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                  
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-33-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                )
+              ((40) ;; ctyslumb
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-27-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-31-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                
+                ;; TODO - ring-5
+                )
+              ((42) ;; powergd
+                ;; TODO - pacman bronze/silver/gold
+                )
+              ((43) ;; ctyport
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-41-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+              
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-42-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-43-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                  
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-44-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+
+                ;; TODO - dax missile port-attack
+                )
+              ((59) ;; ctysluma
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-34-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node city-bbush-get-to-35-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+
+                ;; TODO - spirit-chase-3
+                )
+              ((60) ;; wascitya
+                ;; TODO - lots
+                )
+              ((61) ;; wascityb
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node wascity-bbush-get-to-23-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+              
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node wascity-bbush-get-to-22-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                  
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node wascity-bbush-get-to-25-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                  
+                (+! (-> *level-orb-total-counts* lvl-idx) 3)
+                (when (task-node-closed? (game-task-node wascity-bbush-get-to-24-resolution))
+                  (+! (-> *level-orb-collected-counts* lvl-idx) 3))
+                
+                ;; TODO - spirit chase, timer race, turret bronze/silver/gold
+                )
+              ;; TODO - lots of desert stuff
+              ((87) ;; desert
+                )
+              ((88) ;; desertd
+                )
+              ((89) ;; desertb
+                )
+              ((90) ;; deserta
+                )
+              ((91) ;; desertf
+                )
+              ((92) ;; deserth
+                )
+              ((93) ;; desertg
+                )
+              ((94) ;; deserte
+                )
+              ((95) ;; desertc
+                )
               )
             )
           )
@@ -1169,6 +1266,10 @@
     (('crate-1134) (set-vector-meters! (-> arg0 extra trans) 1127.86  30.61  290.19)) ;; up on mid rooftop near ctyindb, abah from across the street
     (('crate-1133) (set-vector-meters! (-> arg0 extra trans) 795.46  30.60  88.92 )) ;; on mid rooftop corner, near island before new haven
 
+    (('burning-bush-38) (set-vector-meters! (-> arg0 extra trans) 980.3290 20.3328 126.9221) ;; on side of building next to pipe, north middle
+      (quaternion-set! (-> arg0 quat)  -0.0000  0.0345  0.0000  -0.9994))
+    (('burning-bush-48) (set-vector-meters! (-> arg0 extra trans) 954.0673 8.7351 376.7248) ;; inside broken building, south middle
+      (quaternion-set! (-> arg0 quat)  0.0000  0.9571  0.0000  0.2897))
     
     ;; ====== VINROOM (power station) ======
     (('power-game-1) (set-vector-meters! (-> arg0 extra trans) 1126.64  25.49  1127.56  )) ;; shifted over to separate play game as jak vs dax
@@ -1849,7 +1950,7 @@
 
   ;; hover camera, thanks ATB
   (cond
-    ((board-hovering?)
+    ((and *target* (focus-test? *target* board) (focus-test? *target* in-air))
       (if (cpad-pressed? 0 r3) (not! *hover-follow-cam?*))
       )
     (else (false! *hover-follow-cam?*))
@@ -1858,6 +1959,10 @@
     (set-setting-by-param *setting-control* 'slave-options 'clear 0 16)
     (remove-setting-by-arg0 *setting-control* 'slave-options)
     )
+
+  ;; try to reload orb levels after side mission completion
+  (when (and (not (side-mish-active?)) (not (orb-hunt-level?)))
+    (add-borrow-levels *load-state*))
 
   ;; debug stuff for jak spawn/despawn
   (when (and *debug-segment*
