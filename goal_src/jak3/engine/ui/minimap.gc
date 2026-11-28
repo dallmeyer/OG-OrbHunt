@@ -929,7 +929,7 @@
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
                                  )
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 1377894.4 :y 45056.0 :z 7051264.0 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 48.3293) :y (meters 64.6333) :z (meters 1765.6812) :w 1.0)
                                  :flags (minimap-flag bigmap local-only ctywide)
                                  :name "bbush-port-5"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x1 #x0))
@@ -937,7 +937,7 @@
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
                                  )
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x -1053491.2 :y 45056.0 :z 6554419.0 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters -332.0390) :y (meters 4.2479) :z (meters 1246.6142) :w 1.0)
                                  :flags (minimap-flag bigmap local-only ctywide)
                                  :name "bbush-port-6"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x1 #x0))
@@ -945,7 +945,7 @@
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
                                  )
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x -27852.8 :y 43827.2 :z 5318656.0 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 325.5193) :y (meters 43.9731) :z (meters 1766.0454) :w 1.0)
                                  :flags (minimap-flag bigmap local-only ctywide)
                                  :name "bbush-port-7"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x1 #x0))

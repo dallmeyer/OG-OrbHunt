@@ -922,6 +922,10 @@
 
     (('burning-bush-44) (set-vector-meters! (-> arg0 extra trans) 48.3294 64.6333 1765.6813) ;; top of west tower
       (quaternion-set! (-> arg0 quat)  0.0000  0.0000  -0.0000  -1.0000))
+    (('burning-bush-45) (set-vector-meters! (-> arg0 extra trans) -332.0390 4.2479 1246.6142) ;; just outside mhcitya
+      (quaternion-set! (-> arg0 quat)  0.0000  0.7024  0.0000  -0.7117))
+        (('burning-bush-46) (set-vector-meters! (-> arg0 extra trans) 325.5193 43.7431 1766.0454) ;; east tower mid way
+      (quaternion-set! (-> arg0 quat)  0.0000  -0.0018  0.0000  0.9999))
     (('burning-bush-47) (set-vector-meters! (-> arg0 extra trans) 198.5252 1.1949 1202.9273)
       (quaternion-set! (-> arg0 quat)  0.0000  -0.2362  0.0000  0.9716))
 

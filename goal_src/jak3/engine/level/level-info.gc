@@ -2693,17 +2693,18 @@
                       :name "ctyport-bbush-6"
                       :level 'ctyport
                       :flags (continue-flags no-auto)
-                      :trans (new 'static 'vector :x -1019421.5 :y 31576.064 :z 6569721.5 :w 1.0)
-                      :camera-trans (new 'static 'vector :x -1026359.7 :y 51477.3 :z 6615916.0 :w 1.0)
-                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x4e76 0 -25885))
-                      :camera-rot (new 'static 'array int16 9 -32747 0 -1064 #x86 #x7eeb -4217 #x41f -4220 -32475)
+                      :trans (new 'static 'vector :x (meters -336.2250) :y (meters 4.2798) :z (meters 1245.1712) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters -331.2375) :y (meters 8.8418) :z (meters 1236.1901) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 24554 0 21697))
+                      :camera-rot (new 'static 'array int16 9 30111 0 12920 -1845 32431 4300 -12788 -4679 29803)
                       :on-goto #f
                       :vis-nick 'ctyport
                       :vehicle-type #x1b
-                      :want-count 2
-                      :want (new 'static 'inline-array level-buffer-state-small 2
+                      :want-count 3
+                      :want (new 'static 'inline-array level-buffer-state-small 3
                         (new 'static 'level-buffer-state-small :name 'ctywide-ff :display? 'display)
                         (new 'static 'level-buffer-state-small :name 'ctyport :display? 'display)
+                        (new 'static 'level-buffer-state-small :name 'mhcitya :display? 'display)
                         )
                       :want-sound (new 'static 'array symbol 3 'ctyporth #f #f)
                       )
@@ -2711,19 +2712,17 @@
                       :name "ctyport-bbush-7"
                       :level 'ctyport
                       :flags (continue-flags no-auto)
-                      :trans (new 'static 'vector :x -12619.366 :y 31653.068 :z 5341115.0 :w 1.0)
-                      :camera-trans (new 'static 'vector :x 34977.793 :y 52620.492 :z 5323584.0 :w 1.0)
-                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -32137 0 #x18e5))
-                      :camera-rot (new 'static 'array int16 9 #x1d97 0 #x7c83 -3791 #x7f16 #x385 -31649 -3895 #x1d63)
+                      :trans (new 'static 'vector :x (meters 325.0219) :y (meters 43.7747) :z (meters 1768.6040) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 316.0690) :y (meters 48.7541) :z (meters 1776.3928) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -29757 0 -13717))
+                      :camera-rot (new 'static 'array int16 9 -21477 0 -24746 2993 32526 -2597 24564 -3963 -21320)
                       :on-goto #f
                       :vis-nick 'ctyport
                       :vehicle-type #x1b
-                      :want-count 3
-                      :want (new 'static 'inline-array level-buffer-state-small 4
-                        (new 'static 'level-buffer-state-small :name 'hiphog :display? #f)
+                      :want-count 2
+                      :want (new 'static 'inline-array level-buffer-state-small 2
                         (new 'static 'level-buffer-state-small :name 'ctywide-ff :display? 'display)
                         (new 'static 'level-buffer-state-small :name 'ctyport :display? 'display)
-                        (new 'static 'level-buffer-state-small)
                         )
                       :want-sound (new 'static 'array symbol 3 'ctyporth 'ctyprtdh #f)
                       )

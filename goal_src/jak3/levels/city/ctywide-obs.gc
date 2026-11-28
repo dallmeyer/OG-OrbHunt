@@ -2020,21 +2020,21 @@
       :time 5000.0
       :fov 12384.3335
       )
-    (new 'static 'city-burning-bush-get-on-info ;; index 16 ( / city-bbush-get-to-42)
-      :trans (new 'static 'vector :x -942875.9 :y 96113.46 :z 6424137.0 :w 1.0)
+    (new 'static 'city-burning-bush-get-on-info ;; index 16 (burning-bush-45 / burning-bush-port-6 / city-bbush-get-to-42)
+      :trans (new 'static 'vector :x (meters -69.3646) :y (meters 43.3067) :z (meters 1339.8796) :w 1.0)
       :quat (new 'static 'quaternion :x 0.0002 :y 0.9944 :w 0.1048)
-      :camera-trans (new 'static 'vector :x -755284.4 :y 180505.81 :z 6304042.0 :w 1.0)
-      :camera-rot (new 'static 'array float 9 0.6079 0.0 0.7939 -0.329 0.9101 0.2519 -0.7225 -0.4143 0.5533)
-      :time 2100.0
-      :fov 3640.889
+      :camera-trans (new 'static 'vector :x (meters -56.9546) :y (meters 43.8835) :z (meters 1341.0936) :w 1.0)
+      :camera-rot (new 'static 'array float 9 -0.2318 0.0000 0.9727 -0.0603 0.9980 -0.0143 -0.9708 -0.0620 -0.2313)
+      :time 5500.0
+      :fov 13640.889
       )
-    (new 'static 'city-burning-bush-get-on-info ;; index 17 ( / city-bbush-get-to-43)
-      :trans (new 'static 'vector :x -1205959.5 :y 114149.375 :z 5692970.5 :w 1.0)
+    (new 'static 'city-burning-bush-get-on-info ;; index 17 (burning-bush-46 / burning-bush-port-7 / city-bbush-get-to-43)
+      :trans (new 'static 'vector :x (meters 764.7620) :y (meters 13.2669) :z (meters 1362.0975) :w 1.0)
       :quat (new 'static 'quaternion :x -0.0005 :y 0.8807 :z -0.001 :w -0.4736)
-      :camera-trans (new 'static 'vector :x -1230954.9 :y 126642.586 :z 5698481.5 :w 1.0)
-      :camera-rot (new 'static 'array float 9 -0.1203 0.0 -0.9927 0.4576 0.8874 -0.0554 0.8809 -0.4609 -0.1068)
-      :time 6900.0
-      :fov 16384.0
+      :camera-trans (new 'static 'vector :x (meters 751.0435) :y (meters 31.2941) :z (meters 1346.4019) :w 1.0)
+      :camera-rot (new 'static 'array float 9 0.7058 0.0000 -0.7083 0.4192 0.8060 0.4177 0.5709 -0.5918 0.5689)
+      :time 3600.0
+      :fov 14384.0
       )
     (new 'static 'city-burning-bush-get-on-info ;; index 18 ( / city-bbush-get-to-44)
       :trans (new 'static 'vector :x (meters 235.3602) :y (meters 4.2345) :z (meters 1213.1274) :w 1.0)
