@@ -511,6 +511,10 @@
       (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
       (set! (-> this continue) (get-continue-by-name *game-info* "factoryb-warp-2"))
       )
+    (("mhcityb-warp-gate-1") ;; mhcityb -> sewj
+      (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
+      (set! (-> this continue) (get-continue-by-name *game-info* "sewj-warp"))
+      )
     (("factoryd-warp-gate-1") ;; factoryd -> vinroom
       (logior! (-> this draw status) (draw-control-status no-draw)) ;; hide real warp gate
       (set! (-> this continue) (get-continue-by-name *game-info* "vinroom-warp"))
@@ -745,7 +749,7 @@
             (set! (-> gp-0 flags) (font-flags shadow kerning large))
             (print-game-text
               (case-str (-> self name)
-                (("factoryb-warp-gate-2") ;; factoryb -> lfacrm2
+                (("factoryb-warp-gate-2" "mhcityb-warp-gate-1") ;; factoryb -> lfacrm2 / mhcityb -> sewj
                   "Press ~Y~22L<~Z~Y~26L;~Z~Y~1L>~Z~Y~23L[~Z~+26H to enter."
                   )
                 (("lfacrm2-warp-gate-1") ;; lfacrm2 -> factoryb
@@ -863,6 +867,14 @@
         (send-event (process-by-ename "factoryb-cty-door-1") 'untrigger) ;; make sure other door is closed
         (send-event (process-by-ename "lfacrm2-cty-door-1") 'trigger)
         (sound-play "fac-hatch-open") ;; play some other sound so its not weirdly silent
+        (suspend-for (seconds 0.5)) ;; let player see door open for a bit
+        )
+      (("mhcityb-warp-gate-1") ;; real fake door
+        ;; skip target-warp-out, open door and just go to continue
+        (let ((door (the com-airlock (process-by-ename "com-airlock-outer-mhcity-3"))))
+          (when door
+            (set! (-> door level-name) '(when #t '(mhcityb)))))
+        (send-event (process-by-ename "com-airlock-outer-mhcity-3") 'trigger)
         (suspend-for (seconds 0.5)) ;; let player see door open for a bit
         )
       (("rublcst-warp-gate-1") ;; rublcst -> railb; hidden warpgate in h-sled

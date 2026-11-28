@@ -37,7 +37,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Removed so that the release builds don't have to double-decompile the game
   //"art_groups": ["prsn-torture-ag"],
-  "art_groups": [],
+  "art_groups": ["warp-gate-ag"],
 
    // Any textures you want to include in your custom level.
    // This is mainly useful for textures which are not in the common level files and have no art group associated with them.
@@ -54,6 +54,16 @@
       "bsphere": [ -250.6479, 13.3534, 600.8015, 10],
       "lump": {
         "name":"mhcityb-tape-01"
+      }
+    },
+    {
+      "trans": [ -250.01,  11.95,  636.10  ], // warp to sewj (sewers 2.5)
+      "etype": "warp-gate",
+      "game_task": 0,
+      "quat" : [ 0.0000,      -0.8234,       0.0000,       0.5673],
+      "bsphere": [ -250.01,  11.95,  636.10  , 10],
+      "lump": {
+        "name":"mhcityb-warp-gate-1"
       }
     },
 

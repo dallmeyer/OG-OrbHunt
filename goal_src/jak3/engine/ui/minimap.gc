@@ -953,7 +953,7 @@
                                  :color (new 'static 'rgba :r #x80 :g #x80 :b #x80 :a #x80)
                                  )
                                (new 'static 'minimap-class-node
-                                 :default-position (new 'static 'vector :x 1216512.0 :y 45056.0 :z 5433344.0 :w 1.0)
+                                 :default-position (new 'static 'vector :x (meters 198.5252) :y (meters 1.1949) :z (meters 1202.9273) :w 1.0)
                                  :flags (minimap-flag bigmap local-only ctywide)
                                  :name "bbush-port-8"
                                  :icon-xy (new 'static 'vector2ub :data (new 'static 'array uint8 2 #x1 #x0))

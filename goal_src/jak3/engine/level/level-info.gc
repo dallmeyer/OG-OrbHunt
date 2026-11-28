@@ -2675,10 +2675,10 @@
                       :name "ctyport-bbush-5"
                       :level 'ctyport
                       :flags (continue-flags no-auto)
-                      :trans (new 'static 'vector :x 1383519.9 :y 31543.297 :z 7023707.0 :w 1.0)
-                      :camera-trans (new 'static 'vector :x 1355331.6 :y 51962.266 :z 6984032.0 :w 1.0)
-                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 36 #x1c4c 22 -31954))
-                      :camera-rot (new 'static 'array int16 9 #x6c21 0 -17530 #x806 #x7f1c #xcab #x4401 -3840 #x6b60)
+                      :trans (new 'static 'vector :x (meters 48.5812) :y (meters 64.9235) :z (meters 1769.2027) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 56.5517) :y (meters 70.0735) :z (meters 1778.8303) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 32766 0 -31))
+                      :camera-rot (new 'static 'array int16 9 -25412 0 20685 -2461 32534 -3024 -20538 -3899 -25231)
                       :on-goto #f
                       :vis-nick 'ctyport
                       :vehicle-type #x1b
@@ -2731,10 +2731,10 @@
                       :name "ctyport-bbush-8"
                       :level 'ctyport
                       :flags (continue-flags no-auto)
-                      :trans (new 'static 'vector :x 1241827.8 :y 31676.826 :z 5433836.5 :w 1.0)
-                      :camera-trans (new 'static 'vector :x 1230552.6 :y 52649.984 :z 5483244.5 :w 1.0)
-                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 -7048 -9 #x7cfc))
-                      :camera-rot (new 'static 'array int16 9 -32134 0 -6389 #x3c6 #x7e82 -4865 #x18ad -4960 -31764)
+                      :trans (new 'static 'vector :x (meters 195.7589) :y (meters 2.5516) :z (meters 1206.2175) :w 1.0)
+                      :camera-trans (new 'static 'vector :x (meters 185.7978) :y (meters 7.6861) :z (meters 1213.6772) :w 1.0)
+                      :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 28788 0 15649))
+                      :camera-rot (new 'static 'array int16 9 -19669 0 -26206 3185 32524 -2390 26012 -3982 -19523)
                       :on-goto #f
                       :vis-nick 'ctyport
                       :vehicle-type #x1b
@@ -8332,6 +8332,26 @@
                    :camera-trans (new 'static 'vector :x -1858568.6 :y -496532.28 :z 848992.25 :w 1.0)
                    :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 #x515d 0 -25289))
                    :camera-rot (new 'static 'array int16 9 -442 0 #x7ffb -4141 #x7ef5 -55 -32498 -4141 -439)
+                   :on-goto #f
+                   :vis-nick 'sewj
+                   :vehicle-type #x1b
+                   :want-count 3
+                   :want (new 'static 'inline-array level-buffer-state-small 4
+                     (new 'static 'level-buffer-state-small :name 'sewa :display? 'display)
+                     (new 'static 'level-buffer-state-small :name 'sewi :display? #f)
+                     (new 'static 'level-buffer-state-small :name 'sewj :display? 'display)
+                     (new 'static 'level-buffer-state-small)
+                     )
+                   :want-sound (new 'static 'array symbol 3 'sewer4 'sewer5 'sewer6)
+                   )
+                 (new 'static 'continue-point
+                   :name "sewj-warp"
+                   :level 'sewj
+                   :flags (continue-flags no-auto)
+                   :trans (new 'static 'vector :x (meters -470.2247) :y (meters -126.0030) :z (meters 204.5425) :w 1.0)
+                   :camera-trans (new 'static 'vector :x (meters -478.2172) :y (meters -121.8797) :z (meters 201.2354) :w 1.0)
+                   :quat (new 'static 'vector4h :data (new 'static 'array int16 4 0 23815 0 22505))
+                   :camera-rot (new 'static 'array int16 9 12493 0 -30291 5242 32272 2162 29834 -5670 12304)
                    :on-goto #f
                    :vis-nick 'sewj
                    :vehicle-type #x1b

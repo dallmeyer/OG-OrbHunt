@@ -3,6 +3,6 @@
 
 ;; the actual file name still needs to be 8.3
 ("O24.DGO"
- (
+ ("warp-gate-ag.go"
   "orbs-mhcityb.go"
   ))

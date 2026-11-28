@@ -291,8 +291,9 @@
 
 (defmethod want-cross-airlock? ((this com-airlock))
   (case-str (-> this name)
-    (("factoryb-cty-door-1" "lfacrm2-cty-door-1") ;; factoryb <-> lfacrm2 keep open when manually opened
-      (return (= (-> this state name) 'open))
+    (("factoryb-cty-door-1" "lfacrm2-cty-door-1" "com-airlock-outer-mhcity-3") ;; factoryb <-> lfacrm2 keep open when manually opened
+      (if (= (-> this state name) 'open)
+        (return #t))
       )
     )
   (local-vars (a0-22 entity-actor))

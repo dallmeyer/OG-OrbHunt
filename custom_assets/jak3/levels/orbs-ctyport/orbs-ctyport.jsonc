@@ -121,7 +121,27 @@
         "name":"ctyport-skill-04"
       }
     },
-
+    {
+      "trans": [ 619.7958, 4.3931, 1662.6689], // corner of walkway on far east end
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 619.7958, 4.3931, 1662.6689, 10],
+      "lump": {
+        "name":"ctyport-skill-05",
+        "proxy-hint": ["float", 1.0]
+      }
+    },
+    {
+      "trans": [ 637.6364, 51.0734, 1652.8657], // up on broken billboard above far east end of walkway, (jetboard) proxy from^
+      "etype": "skill",
+      "game_task": 0,
+      "quat": [ 0, 0, 0, 1],
+      "bsphere": [ 637.6364, 51.0734, 1652.8657, 10],
+      "lump": {
+        "name":"ctyport-skill-06"
+      }
+    },
       
     {
       "trans": [ 512.1162, 52.4837, 1377.4995], // pipe above grindrails kinda near gun course 
